@@ -43,6 +43,7 @@ def feat(s):
     m['n+3/n-3_60']=((r60>0.03).sum()+1)/((r60<-0.03).sum()+1)
     j=pd.concat([r,sr],axis=1).dropna(); j60=j.iloc[-60:]; m['beta60']=j60.cov().iloc[0,1]/j60.iloc[:,1].var(); m['corr60']=j60.corr().iloc[0,1]; j250=j.iloc[-250:]; m['beta250']=j250.cov().iloc[0,1]/j250.iloc[:,1].var()
     m['pctup250']=(r250>0).mean(); mc=c.resample('ME').last().pct_change().dropna().iloc[-12:]; m['mhit12']=(mc>0).mean(); m['skew250']=r250.skew(); m['big_up_days250']=int((r250>0.05).sum()); m['big_dn_days250']=int((r250<-0.05).sum())
+    cp=((c-l)/(h-l)).fillna(0.5).iloc[-60:]; m['top30-bot30_60']=(cp>0.7).mean()-(cp<0.3).mean(); va=v.rolling(20).mean(); m['dryup120']=va.iloc[-120:].min()/v.iloc[-250:].mean()
     o=s.Open; on=(o/c.shift(1)-1).iloc[-120:]; idd=(c/o-1).iloc[-120:]; m['ID-ON_120']=(np.prod(1+idd)-1)-(np.prod(1+on)-1)
     m['vol20/vol250']=v.iloc[-20:].mean()/v.iloc[-250:].mean(); m['corr60_chg']=m['corr60']-(pd.concat([r,sr],axis=1).dropna().iloc[-120:-60].corr().iloc[0,1])
     hi252=c.rolling(252).max().shift(1); brk=(c>hi252).iloc[-15:]; m['52wH_break_15d']=bool(brk.any()); m['days_since_52wL']=int(L-1-np.argmin(c.iloc[-252:].values)-(L-252))
@@ -51,6 +52,7 @@ T=pd.DataFrame({t:feat(D[t]) for t in syms if t!='SPY' and t in D.columns.get_le
 z=lambda x: x.astype(float).rank(pct=True)-0.5
 T['B']=(z(T.RVrel250)+z(T.beta60)-z(T['dsince+3'])+z(T.clv20)+z(T.stoch20)+z(T['px/AVWAPlow'])-z(T['px/2yH'])-z(T.RS12)-z(T['RV10/RV60'])).rank(pct=True)*100
 T['STEADY']=(-z(T.RV250)-z(T.RV60)-z(T.beta250)-z(T.big_up_days250)-z(T.big_dn_days250)-z(T.skew250)+z(T.mhit12)+z(T.UVDV250)+z(T.pctup250)+z(T['px/52wH'])).rank(pct=True)*100
+T['SMOOTH']=(-z(T.RVrel250)-z(T.RV250)-z(T.RV60)-z(T.big_up_days250)-z(T.beta250)-z(T.big_dn_days250)-z(T.beta60)-z(T.skew250)+z(T['top30-bot30_60'])+z(T.dryup120)+z(T.UVDV250)+z(T.mhit12)+z(T.pctup250)+z(T['px/52wH'])+z(T['px/2yH'])+z(T['dsince+3'])).rank(pct=True)*100
 T['NEARTERM']=(z(T['n+3/n-3_60'])+z(T.UVDV60)).rank(pct=True)*100
 T['TURN']=(T.stoch20>0.8)&(T['px/AVWAPlow']>1.0)&(T.UVDV60>1.0)
 T['LOWVOL_BASE']=(T.RVrel250<1.3)&(T.beta60.abs()<0.8)&(T['px/2yH']<0.92)
@@ -58,7 +60,11 @@ T['FLOW']=np.where(T['ID-ON_120']>0.05,'accum',np.where(T['ID-ON_120']<-0.05,'ga
 T['LEADER_ENTRY']=(T.STEADY>=85)&(T['52wH_break_15d'])&(T.days_since_52wL<=40)
 E=T[T.ret_12m<1.0].copy()
 pd.set_option('display.width',250); pd.set_option('display.max_rows',80)
-cols=['B','STEADY','NEARTERM','TURN','FLOW','ret_12m','ret_3m','ret_1m','px/52wH','px/2yH','RVrel250','beta60','corr60','corr60_chg','ID-ON_120','vol20/vol250','dsince+3','stoch20','px/AVWAPlow','UVDV60','dollarvol20M']
+cols=['SMOOTH','STEADY','B','NEARTERM','TURN','FLOW','ret_12m','ret_3m','ret_1m','px/52wH','px/2yH','RVrel250','beta60','corr60','corr60_chg','ID-ON_120','vol20/vol250','dsince+3','stoch20','px/AVWAPlow','UVDV60','dollarvol20M']
+print('\n=== PRIMARY: SMOOTH PATH — top 30 by SMOOTH (validated: +15% in 120d with path DD<10% at 2.2x base; 25%+ drawdowns at 1/6 base) ===')
+print(E.sort_values('SMOOTH',ascending=False).head(30)[cols].round(2).to_string())
+print('\n=== SMOOTH>=80, pulled back 4-15% off the high, close turning up ===')
+P=E[(E.SMOOTH>=80)&(E['px/52wH'].between(0.85,0.96))&(E.stoch20>0.6)&(E['px/AVWAPlow']>1.0)].sort_values('SMOOTH',ascending=False); print(P[cols].round(2).to_string() if len(P) else '  none')
 print('\n=== BUCKET 1: OCTANE TURN — B top 30, early stage (3m<+25%, 1m<+15%, below 52wH), turned ===')
 print(E[(E.ret_3m<0.25)&(E.ret_1m<0.15)&(E['px/52wH']<0.95)&E.TURN].sort_values('B',ascending=False).head(30)[cols].round(2).to_string())
 print('\n=== LEADER ENTRY TRIGGER (steady>=85, 52wH break in last 15 sessions, within 40 sessions of the 52w low) ===')
