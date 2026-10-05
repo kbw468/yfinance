@@ -1,0 +1,436 @@
+"No.","Ticker","Company","Sector","Industry","Performance (Week)","Performance (Month)","Performance (Quarter)","Performance (YTD)","Performance (Year)","Performance (3 Years)","Change from Open","Relative Volume","Change","Relative Strength Index (14)","Volatility (Week)","Volatility (Month)","Market Cap","Short Float"
+1,"A","Agilent Technologies Inc","Healthcare","Diagnostics & Research",-2.79%,13.56%,29.88%,25.17%,20.25%,54.35%,1.77%,0.37,1.51%,63.88,2.90%,2.98%,48018.12,1.81%
+2,"AAPL","Apple Inc","Technology","Consumer Electronics",-1.23%,1.83%,7.59%,22.94%,29.54%,91.09%,0.43%,0.45,0.16%,55.24,2.02%,2.10%,4877812.84,0.88%
+3,"ABBV","Abbvie Inc","Healthcare","Drug Manufacturers - General",-1.04%,1.27%,3.48%,15.33%,12.66%,78.72%,0.58%,0.49,0.27%,54.93,1.92%,1.90%,465670.73,1.10%
+4,"ABNB","Airbnb Inc","Consumer Cyclical","Travel Services",5.31%,-11.27%,10.47%,21.11%,36.73%,31.51%,1.11%,0.41,1.20%,48.77,2.85%,3.11%,98423.79,3.58%
+5,"ABT","Abbott Laboratories","Healthcare","Medical Devices",-0.63%,-7.77%,4.70%,-19.91%,-25.45%,4.30%,2.34%,0.66,2.91%,41.68,2.14%,2.16%,173626.65,1.16%
+6,"ACGL","Arch Capital Group Ltd","Financial","Insurance - Diversified",-0.18%,-5.11%,-7.90%,-1.25%,4.33%,22.02%,1.36%,0.57,1.20%,44.30,2.05%,1.87%,32322.93,2.19%
+7,"ACN","Accenture plc","Technology","Information Technology Services",11.97%,1.16%,37.44%,-27.19%,-20.37%,-36.91%,-0.49%,0.80,-1.78%,56.55,5.03%,3.87%,119549.02,4.06%
+8,"ADBE","Adobe Inc","Technology","Software - Application",2.36%,-17.25%,6.73%,-32.44%,-31.80%,-54.21%,-0.86%,0.56,-0.52%,40.25,3.26%,3.33%,92030.24,4.76%
+9,"ADI","Analog Devices Inc","Technology","Semiconductors",5.22%,16.71%,9.77%,53.41%,71.93%,141.75%,-0.49%,0.35,-0.26%,71.06,2.22%,2.54%,201605.88,1.78%
+10,"ADM","Archer Daniels Midland Co","Consumer Defensive","Farm Products",2.59%,-2.28%,5.45%,43.43%,35.09%,12.76%,1.68%,0.59,2.50%,50.85,2.21%,2.68%,39742.39,3.05%
+11,"ADP","Automatic Data Processing Inc","Technology","Software - Application",-1.13%,-8.71%,5.39%,0.63%,-11.14%,6.36%,1.18%,0.36,0.45%,39.22,2.25%,1.95%,102567.26,2.66%
+12,"ADSK","Autodesk Inc","Technology","Software - Application",6.69%,-6.93%,4.09%,-25.32%,-30.68%,8.38%,0.84%,1.66,4.27%,50.37,3.24%,3.46%,46201.79,4.01%
+13,"AEE","Ameren Corp","Utilities","Utilities - Regulated Electric",0.74%,-5.90%,-12.50%,0.27%,-3.48%,36.70%,0.06%,0.70,0.19%,33.51,1.53%,1.41%,27720.26,4.40%
+14,"AEP","American Electric Power Company Inc","Utilities","Utilities - Regulated Electric",1.90%,-3.42%,-12.43%,4.45%,5.59%,68.85%,0.90%,0.33,0.73%,46.30,1.79%,1.57%,65567.23,4.71%
+15,"AES","AES Corp","Utilities","Utilities - Diversified",0.27%,0.88%,1.98%,3.97%,2.26%,18.24%,-0.03%,0.85,0.00%,67.06,0.34%,0.30%,10637.37,2.61%
+16,"AFL","Aflac Inc","Financial","Insurance - Life",-1.17%,-5.18%,-7.63%,1.77%,-0.08%,46.81%,0.25%,0.40,0.61%,35.82,1.41%,1.47%,56263.25,2.60%
+17,"AIG","American International Group Inc","Financial","Insurance - Diversified",3.41%,-2.08%,-7.16%,-12.03%,-7.11%,25.12%,0.24%,0.50,0.44%,49.04,2.32%,1.86%,39352.94,2.02%
+18,"AIZ","Assurant Inc","Financial","Insurance - Property & Casualty",1.97%,-6.60%,-4.06%,11.57%,22.15%,84.07%,0.70%,0.38,0.53%,41.66,1.69%,1.94%,13254.53,2.70%
+19,"AJG","Arthur J. Gallagher & Co","Financial","Insurance Brokers",-1.31%,-15.08%,-11.08%,-12.50%,-27.06%,-1.35%,0.64%,0.46,0.15%,35.88,2.33%,2.46%,58039.13,2.54%
+20,"AKAM","Akamai Technologies Inc","Technology","Software - Infrastructure",-1.40%,0.91%,-6.03%,23.17%,38.56%,1.71%,-1.28%,0.88,-1.33%,46.31,5.21%,5.55%,15445.12,13.38%
+21,"ALB","Albemarle Corp","Basic Materials","Specialty Chemicals",-2.45%,-20.73%,-18.80%,-25.93%,18.75%,-32.43%,-0.32%,0.65,0.16%,33.25,2.86%,3.61%,12362.21,9.44%
+22,"ALGN","Align Technology Inc","Healthcare","Medical Instruments & Supplies",-2.38%,-11.45%,-23.58%,-9.35%,7.10%,-49.48%,1.06%,1.24,-1.52%,34.29,2.42%,2.81%,10055.69,5.68%
+23,"ALL","Allstate Corp","Financial","Insurance - Property & Casualty",-1.47%,-14.78%,-10.83%,7.72%,6.35%,99.53%,0.50%,0.61,0.21%,29.12,1.63%,2.16%,56694.55,2.40%
+24,"ALLE","Allegion plc","Industrials","Security & Protection Services",-0.43%,-0.55%,11.05%,-2.83%,-12.74%,50.57%,0.89%,0.25,0.32%,49.89,2.03%,1.91%,13156.04,3.54%
+25,"AMCR","Amcor Plc","Consumer Cyclical","Packaging & Containers",-2.85%,-9.41%,-6.48%,-0.31%,1.64%,-6.90%,0.17%,0.44,-0.69%,36.42,1.99%,2.00%,19219.57,4.67%
+26,"AME","Ametek Inc","Industrials","Specialty Industrial Machinery",0.93%,8.46%,9.63%,23.72%,38.23%,71.15%,0.84%,0.36,0.82%,64.43,1.86%,1.91%,58233.20,1.29%
+27,"AMGN","AMGEN Inc","Healthcare","Drug Manufacturers - General",-3.73%,-9.36%,9.35%,22.98%,35.13%,51.85%,0.88%,0.57,-0.13%,47.39,2.36%,2.36%,217622.50,2.61%
+28,"AMP","Ameriprise Financial Inc","Financial","Asset Management",-0.66%,-12.77%,-2.94%,0.52%,0.18%,52.93%,-0.13%,0.60,0.41%,32.01,1.84%,2.65%,43539.28,3.10%
+29,"AMT","American Tower Corp","Real Estate","REIT - Specialty",-3.60%,-8.89%,-2.00%,-7.76%,-14.86%,2.04%,0.52%,0.51,-0.16%,32.32,2.29%,2.23%,75459.76,1.31%
+30,"AMZN","Amazon.com Inc","Consumer Cyclical","Internet Retail",2.86%,-2.21%,2.93%,9.69%,15.34%,101.00%,1.20%,0.69,0.66%,50.66,1.81%,1.83%,2730933.00,0.83%
+31,"AON","Aon Plc","Financial","Insurance Brokers",-0.42%,-17.14%,-24.69%,-23.21%,-25.52%,-16.84%,0.97%,0.71,0.56%,26.60,2.43%,2.46%,57478.57,1.76%
+32,"AOS","A.O. Smith Corp","Industrials","Specialty Industrial Machinery",-2.31%,-5.78%,-6.98%,-14.73%,-22.25%,-13.68%,1.44%,0.49,0.49%,41.96,2.18%,1.99%,7750.69,9.78%
+33,"APA","APA Corp","Energy","Oil & Gas E&P",4.84%,0.45%,30.53%,81.44%,80.85%,17.63%,1.91%,0.54,1.60%,55.86,3.55%,3.18%,15548.60,7.03%
+34,"APD","Air Products & Chemicals Inc","Basic Materials","Specialty Chemicals",0.97%,-7.48%,-7.73%,13.94%,3.68%,0.57%,0.65%,0.38,1.40%,42.54,1.96%,1.93%,62676.15,1.83%
+35,"APO","Apollo Global Management Inc","Financial","Asset Management",-3.30%,-14.44%,-3.57%,-20.51%,-8.59%,29.91%,1.13%,0.67,0.93%,30.45,3.23%,2.98%,67956.76,5.53%
+36,"APTV","Aptiv Plc","Consumer Cyclical","Auto Parts",1.26%,-5.03%,-24.91%,-31.44%,-40.71%,-44.54%,1.21%,0.45,1.49%,45.26,2.84%,3.15%,9175.20,3.61%
+37,"ARE","Alexandria Real Estate Equities Inc","Real Estate","REIT - Office",-2.08%,-9.57%,-3.57%,-2.64%,-43.14%,-51.38%,2.47%,0.43,0.59%,38.53,3.04%,3.44%,8302.64,3.97%
+38,"ARES","Ares Management Corp","Financial","Asset Management",-0.83%,-17.07%,-2.77%,-27.39%,-22.99%,10.78%,-0.22%,0.54,-0.16%,33.02,3.32%,3.38%,38761.34,7.69%
+39,"ATO","Atmos Energy Corp","Utilities","Utilities - Regulated Gas",0.76%,-6.43%,-10.89%,-5.60%,-7.02%,47.28%,0.59%,0.32,0.68%,37.13,1.27%,1.31%,26740.75,2.56%
+40,"AVY","Avery Dennison Corp","Consumer Cyclical","Packaging & Containers",-1.23%,-1.89%,3.30%,-6.66%,3.87%,-7.12%,0.87%,0.42,-0.06%,45.39,2.16%,2.22%,12866.41,2.82%
+41,"AWK","American Water Works Co Inc","Utilities","Utilities - Regulated Water",-0.91%,-9.32%,-5.24%,-2.10%,-7.26%,7.60%,-2.01%,0.59,-1.92%,33.16,1.99%,1.69%,25388.62,6.65%
+42,"AXON","Axon Enterprise Inc","Industrials","Aerospace & Defense",-3.63%,-23.93%,-36.09%,-27.92%,-42.79%,108.73%,-0.76%,0.67,-0.97%,30.58,4.10%,4.29%,33254.12,4.78%
+43,"AXP","American Express Co","Financial","Credit Services",-0.88%,-7.94%,-13.14%,-17.93%,-8.06%,106.42%,-0.10%,0.61,0.28%,34.27,1.56%,1.77%,205044.32,1.60%
+44,"AZO","Autozone Inc","Consumer Cyclical","Auto Parts",-3.91%,-5.69%,-8.96%,-17.46%,-33.59%,11.01%,0.62%,0.52,0.26%,39.82,2.82%,2.67%,45698.59,3.05%
+45,"BA","Boeing Co","Industrials","Aerospace & Defense",4.97%,-8.06%,-16.46%,-10.86%,-10.52%,3.89%,-0.64%,0.82,-0.01%,41.19,4.10%,3.05%,152972.24,1.80%
+46,"BAC","Bank Of America Corp","Financial","Banks - Diversified",-2.27%,-14.01%,-9.44%,-1.44%,7.05%,108.02%,0.35%,0.86,0.86%,26.49,1.85%,2.10%,379076.89,1.19%
+47,"BALL","Ball Corp","Consumer Cyclical","Packaging & Containers",-0.02%,-9.24%,-8.84%,7.83%,13.67%,19.69%,1.58%,0.65,1.33%,35.91,2.10%,1.98%,15119.28,3.00%
+48,"BAX","Baxter International Inc","Healthcare","Medical Instruments & Supplies",2.58%,-5.77%,5.40%,26.09%,0.98%,-34.91%,2.71%,1.30,2.58%,49.90,2.60%,2.95%,12457.02,4.52%
+49,"BBY","Best Buy Co Inc","Consumer Cyclical","Specialty Retail",-2.65%,0.04%,11.19%,30.77%,13.88%,29.42%,-0.91%,0.48,-0.51%,45.44,2.73%,3.08%,18356.42,8.11%
+50,"BDX","Becton Dickinson & Co","Healthcare","Medical Instruments & Supplies",-2.43%,-4.41%,14.75%,17.60%,17.88%,-12.57%,0.76%,0.46,1.45%,47.41,1.54%,2.02%,48853.94,4.16%
+51,"BEN","Franklin Templeton Inc","Financial","Asset Management",0.72%,-1.89%,-4.21%,37.78%,38.30%,37.72%,0.35%,0.50,0.32%,47.12,2.07%,2.32%,16723.35,6.17%
+52,"BF-B","Brown-Forman Corp","Consumer Defensive","Beverages - Wineries & Distilleries",0.44%,-4.96%,0.91%,0.32%,-6.53%,-54.04%,0.91%,0.82,-0.06%,45.62,2.30%,2.60%,12082.69,11.62%
+53,"BG","Bunge Global SA","Consumer Defensive","Farm Products",-2.41%,-11.39%,-4.03%,19.48%,26.75%,2.50%,0.03%,0.65,-0.27%,34.45,2.39%,3.29%,20448.20,4.20%
+54,"BIIB","Biogen Inc","Healthcare","Drug Manufacturers - General",-4.08%,-2.30%,6.64%,24.64%,37.20%,-15.56%,-0.25%,0.50,-0.24%,48.64,2.14%,2.41%,32409.77,3.97%
+55,"BKR","Baker Hughes Co","Energy","Oil & Gas Equipment & Services",1.30%,-9.08%,6.22%,27.05%,19.30%,73.49%,3.32%,0.52,3.32%,47.49,2.34%,2.91%,57436.12,2.49%
+56,"BLK","Blackrock Inc","Financial","Asset Management",-0.87%,-5.70%,5.20%,-0.78%,-8.51%,65.86%,0.56%,0.53,0.22%,43.60,1.87%,2.04%,172544.84,1.42%
+57,"BMY","Bristol-Myers Squibb Co","Healthcare","Drug Manufacturers - General",-7.73%,-13.44%,1.67%,9.27%,29.68%,4.47%,-0.77%,1.49,-3.61%,30.41,2.48%,2.05%,120397.59,2.06%
+58,"BNY","Bank Of New York Mellon Corp","Financial","Banks - Diversified",-2.94%,-12.33%,-5.78%,24.11%,35.15%,245.59%,-1.05%,0.50,-0.91%,26.37,1.81%,1.94%,97755.48,1.52%
+59,"BR","Broadridge Financial Solutions Inc","Technology","Information Technology Services",-3.04%,-11.71%,6.30%,-29.22%,-32.69%,-11.91%,0.88%,0.35,0.66%,35.35,1.89%,2.32%,17834.25,2.61%
+60,"BRO","Brown & Brown Inc","Financial","Insurance Brokers",0.21%,-16.81%,-12.86%,-24.26%,-36.42%,-14.69%,0.82%,0.46,0.76%,32.88,2.11%,2.53%,20198.76,4.82%
+61,"BSX","Boston Scientific Corp","Healthcare","Medical Devices",-2.95%,-8.82%,-5.50%,-55.10%,-56.01%,-17.17%,0.65%,0.47,0.49%,37.64,2.45%,2.88%,62039.33,3.23%
+62,"BX","Blackstone Inc","Financial","Asset Management",-1.82%,-18.31%,-6.96%,-27.03%,-33.23%,10.33%,2.06%,1.05,0.65%,27.59,2.95%,2.91%,139675.60,2.65%
+63,"BXP","BXP Inc","Real Estate","REIT - Office",-4.52%,-12.64%,-13.10%,-11.67%,-21.16%,9.68%,-1.21%,0.65,-1.39%,29.76,2.37%,2.16%,10403.28,7.79%
+64,"C","Citigroup Inc","Financial","Banks - Diversified",-1.64%,-6.50%,-8.25%,10.69%,32.15%,223.87%,-0.19%,0.37,0.51%,41.23,2.22%,2.60%,216657.73,1.48%
+65,"CAH","Cardinal Health Inc","Healthcare","Medical Distribution",5.73%,-6.31%,-2.83%,13.34%,50.80%,159.32%,1.82%,0.44,2.02%,55.08,2.70%,2.22%,53934.80,2.89%
+66,"CARR","Carrier Global Corp","Industrials","Building Products & Equipment",-0.22%,-5.64%,-18.82%,5.51%,-6.54%,4.19%,1.57%,0.48,1.14%,43.69,2.23%,2.83%,45955.71,2.02%
+67,"CB","Chubb Limited","Financial","Insurance - Property & Casualty",0.30%,-4.56%,-7.50%,6.49%,17.05%,57.70%,0.51%,1.34,0.45%,43.15,1.54%,1.47%,128226.08,0.93%
+68,"CBOE","Cboe Global Markets Inc","Financial","Financial Data & Stock Exchanges",8.94%,-7.57%,6.67%,9.92%,15.18%,72.21%,-0.88%,1.14,1.71%,49.19,4.85%,3.61%,28811.69,2.99%
+69,"CBRE","CBRE Group Inc","Real Estate","Real Estate Services",0.04%,-12.33%,-9.27%,-18.90%,-16.49%,80.38%,0.10%,0.78,0.63%,36.33,2.99%,2.77%,37760.62,1.48%
+70,"CCI","Crown Castle Inc","Real Estate","REIT - Specialty",-0.62%,-13.69%,-13.64%,-24.96%,-30.14%,-25.75%,0.69%,0.52,0.37%,27.91,2.58%,2.64%,28371.49,2.30%
+71,"CDNS","Cadence Design Systems Inc","Technology","Software - Application",8.52%,16.29%,-4.45%,13.43%,2.10%,51.02%,-0.10%,0.61,0.91%,71.88,4.13%,3.57%,97640.58,1.59%
+72,"CDW","CDW Corp","Technology","Information Technology Services",4.14%,-11.82%,-2.52%,-0.35%,-14.79%,-33.16%,1.95%,0.38,1.82%,44.56,3.89%,3.95%,16967.36,7.68%
+73,"CEG","Constellation Energy Corp","Utilities","Utilities - Independent Power Producers",3.35%,-5.57%,12.29%,-23.81%,-25.23%,149.50%,4.03%,1.00,4.53%,51.56,4.92%,3.76%,95365.37,3.47%
+74,"CF","CF Industries Holdings Inc","Basic Materials","Agricultural Inputs",2.05%,-14.46%,2.56%,52.42%,30.85%,45.44%,2.07%,0.54,2.50%,41.72,2.89%,3.46%,17839.74,6.50%
+75,"CFG","Citizens Financial Group Inc","Financial","Banks - Regional",-0.12%,-8.63%,-9.84%,10.80%,20.25%,150.95%,0.59%,0.52,0.61%,37.00,1.82%,2.20%,27258.56,4.07%
+76,"CHD","Church & Dwight Co Inc","Consumer Defensive","Household & Personal Products",-0.17%,-3.18%,-3.53%,13.84%,8.59%,5.79%,0.40%,0.96,1.21%,45.94,1.30%,1.49%,22642.30,4.57%
+77,"CHRW","C.H. Robinson Worldwide Inc","Industrials","Integrated Freight & Logistics",-6.66%,-5.67%,-27.54%,-13.93%,2.19%,64.04%,-3.06%,5.56,-12.27%,36.21,2.82%,2.61%,16168.71,4.38%
+78,"CHTR","Charter Communications Inc","Communication Services","Telecom Services",-3.45%,-28.95%,-22.07%,-48.47%,-61.59%,-75.09%,-1.47%,0.82,-1.58%,27.26,3.56%,4.68%,18835.39,10.83%
+79,"CI","Cigna Group","Healthcare","Healthcare Plans",-0.31%,-5.34%,-5.46%,-1.54%,-12.87%,-5.04%,0.24%,0.54,0.17%,44.66,3.40%,2.49%,71603.89,2.52%
+80,"CINF","Cincinnati Financial Corp","Financial","Insurance - Property & Casualty",0.71%,-6.66%,-13.74%,-0.15%,-0.13%,60.92%,0.99%,0.30,0.69%,39.46,1.40%,1.55%,25028.43,2.50%
+81,"CL","Colgate-Palmolive Co","Consumer Defensive","Household & Personal Products",-0.98%,-4.91%,-9.85%,8.42%,9.83%,23.68%,1.36%,0.78,1.67%,41.79,1.38%,1.58%,68293.79,2.31%
+82,"CLX","Clorox Co","Consumer Defensive","Household & Personal Products",0.05%,-13.61%,-16.37%,-19.21%,-33.87%,-34.80%,0.62%,0.61,1.31%,33.39,2.18%,2.52%,9851.04,7.08%
+83,"CMCSA","Comcast Corp","Communication Services","Telecom Services",-1.10%,-19.13%,-7.94%,-23.04%,-25.55%,-46.53%,-0.27%,0.63,-0.09%,26.95,1.92%,2.85%,76477.02,2.27%
+84,"CME","CME Group Inc","Financial","Financial Data & Stock Exchanges",1.39%,-5.37%,10.87%,-0.34%,2.83%,37.85%,1.10%,0.41,1.43%,46.68,1.90%,1.91%,95975.30,1.64%
+85,"CMG","Chipotle Mexican Grill","Consumer Cyclical","Restaurants",-3.27%,-17.99%,-10.31%,-16.73%,-26.22%,-17.25%,-4.18%,1.52,-4.79%,31.20,3.54%,3.28%,38987.53,3.20%
+86,"CMI","Cummins Inc","Industrials","Specialty Industrial Machinery",2.62%,-2.58%,-19.50%,4.10%,22.78%,135.74%,1.14%,0.47,0.58%,42.02,2.11%,2.33%,73154.98,2.65%
+87,"CMS","CMS Energy Corp","Utilities","Utilities - Regulated Electric",2.98%,-6.01%,-16.30%,-7.81%,-10.89%,24.43%,0.84%,1.14,1.14%,40.55,1.61%,1.49%,20214.75,5.25%
+88,"CNC","Centene Corp","Healthcare","Healthcare Plans",1.90%,-6.32%,-3.63%,54.85%,64.65%,-7.68%,0.91%,0.58,1.16%,48.86,3.27%,3.37%,31477.37,2.91%
+89,"CNP","Centerpoint Energy Inc","Utilities","Utilities - Regulated Electric",4.15%,-4.60%,-14.26%,-0.52%,-1.86%,43.27%,0.79%,0.86,0.92%,47.98,1.67%,1.58%,25123.00,7.10%
+90,"COF","Capital One Financial Corp","Financial","Credit Services",0.02%,-10.88%,-3.15%,-18.92%,-8.35%,113.33%,0.72%,0.43,0.91%,38.70,2.00%,2.19%,120549.02,1.63%
+91,"COIN","Coinbase Global Inc","Financial","Financial Data & Stock Exchanges",-3.84%,-4.30%,12.79%,-18.45%,-51.47%,147.15%,-1.60%,1.02,0.78%,50.34,6.25%,5.65%,48656.81,11.70%
+92,"COO","Cooper Companies Inc","Healthcare","Medical Instruments & Supplies",-0.51%,-20.33%,-21.71%,-31.33%,-20.13%,-27.73%,-0.00%,0.60,-1.11%,35.96,2.41%,3.30%,10701.79,5.30%
+93,"COP","Conoco Phillips","Energy","Oil & Gas E&P",2.12%,-5.17%,18.69%,37.50%,36.69%,14.08%,1.37%,0.56,1.55%,49.12,2.10%,2.32%,154624.16,1.34%
+94,"COR","Cencora Inc","Healthcare","Medical Distribution",3.57%,-6.69%,3.34%,-6.84%,3.93%,70.04%,1.54%,0.33,1.81%,50.64,3.10%,2.42%,60043.77,2.27%
+95,"COST","Costco Wholesale Corp","Consumer Defensive","Discount Stores",0.10%,-0.17%,-2.50%,7.13%,0.92%,65.90%,0.55%,0.59,0.34%,52.91,1.71%,1.53%,409498.00,1.66%
+96,"CPAY","Corpay Inc","Technology","Software - Infrastructure",1.46%,-4.21%,12.57%,33.59%,39.43%,59.48%,2.15%,0.56,1.88%,52.75,2.03%,1.87%,26395.49,4.94%
+97,"CPRT","Copart Inc","Industrials","Specialty Business Services",1.49%,-17.73%,-5.62%,-29.44%,-38.76%,-37.27%,1.64%,0.45,1.49%,35.59,1.97%,3.04%,25590.71,4.03%
+98,"CPT","Camden Property Trust","Real Estate","REIT - Residential",-1.39%,-8.11%,-17.47%,-11.85%,-6.88%,4.28%,0.86%,0.44,1.12%,30.98,1.61%,1.71%,13122.95,4.28%
+99,"CRH","CRH Plc","Basic Materials","Building Materials",-2.14%,-10.95%,-22.83%,-34.33%,-31.68%,48.07%,0.85%,0.53,0.02%,31.34,2.93%,2.63%,54525.05,1.79%
+100,"CRL","Charles River Laboratories International Inc","Healthcare","Diagnostics & Research",3.59%,4.03%,33.45%,52.98%,72.09%,59.65%,4.22%,1.26,5.16%,64.56,2.73%,3.20%,14568.47,4.73%
+101,"CRM","Salesforce Inc","Technology","Software - Application",0.94%,-13.24%,35.33%,-13.40%,-4.55%,13.57%,-2.21%,0.35,-2.25%,47.31,3.43%,3.15%,188808.54,4.06%
+102,"CSCO","Cisco Systems Inc","Technology","Communication Equipment",5.29%,3.48%,0.54%,45.90%,65.47%,111.78%,0.46%,0.48,0.17%,57.67,1.88%,2.17%,443107.31,1.47%
+103,"CSGP","Costar Group Inc","Real Estate","Real Estate Services",1.23%,-13.66%,-8.43%,-59.32%,-67.74%,-65.59%,0.45%,0.41,-0.10%,36.51,3.00%,3.56%,11083.45,3.70%
+104,"CSX","CSX Corp","Industrials","Railroads",1.51%,-3.11%,-2.15%,30.94%,31.81%,56.08%,0.54%,0.33,0.07%,45.18,1.51%,1.80%,87927.72,2.20%
+105,"CTAS","Cintas Corp","Industrials","Specialty Business Services",-3.02%,-3.24%,6.98%,3.43%,-3.99%,61.49%,0.22%,0.35,0.78%,43.41,1.83%,1.91%,77948.39,3.27%
+106,"CTSH","Cognizant Technology Solutions Corp","Technology","Information Technology Services",2.64%,-9.89%,32.57%,-29.82%,-13.91%,-13.96%,0.22%,0.25,-0.44%,47.34,4.03%,3.49%,26238.38,8.04%
+107,"CTVA","Corteva Inc","Basic Materials","Agricultural Inputs",5.62%,-7.35%,-5.35%,22.49%,29.57%,64.77%,4.31%,1.57,3.34%,52.10,7.59%,4.05%,8220.14,3.10%
+108,"CVNA","Carvana Co","Consumer Cyclical","Auto & Truck Dealerships",6.15%,-12.58%,-4.89%,-23.95%,-14.58%,798.01%,0.74%,0.48,0.66%,44.20,5.52%,4.54%,70638.78,9.25%
+109,"CVS","CVS Health Corp","Healthcare","Healthcare Plans",-1.18%,-10.69%,-16.79%,9.39%,12.03%,24.46%,0.20%,0.79,0.40%,38.30,2.18%,2.44%,111027.41,1.26%
+110,"CVX","Chevron Corp","Energy","Oil & Gas Integrated",-0.09%,-2.43%,18.49%,35.28%,34.28%,25.80%,-0.31%,0.62,-0.25%,50.68,1.54%,1.83%,407364.50,1.05%
+111,"D","Dominion Energy Inc","Utilities","Utilities - Regulated Electric",1.67%,-8.24%,-12.24%,4.60%,-0.40%,49.55%,0.19%,0.42,-0.04%,34.26,1.77%,1.63%,53901.75,2.54%
+112,"DAL","Delta Air Lines Inc","Industrials","Airlines",0.00%,6.70%,-5.19%,21.08%,46.75%,130.60%,-0.76%,0.90,-0.07%,54.77,2.62%,2.63%,55260.05,4.01%
+113,"DD","DuPont de Nemours Inc","Basic Materials","Specialty Chemicals",0.10%,-0.02%,-6.09%,8.71%,31.07%,41.88%,-0.11%,0.32,0.87%,48.78,1.37%,1.90%,17705.43,3.63%
+114,"DE","Deere & Co","Industrials","Farm & Heavy Construction Machinery",-0.42%,-1.11%,13.76%,47.49%,48.35%,82.78%,-0.34%,0.38,-0.05%,55.81,2.50%,2.31%,185149.12,2.25%
+115,"DECK","Deckers Outdoor Corp","Consumer Cyclical","Footwear & Accessories",2.03%,-5.38%,-24.63%,-22.88%,-22.42%,-3.39%,0.64%,0.69,1.05%,43.23,1.95%,2.64%,10887.74,7.03%
+116,"DELL","Dell Technologies Inc","Technology","Computer Hardware",2.06%,7.40%,32.91%,340.58%,294.06%,737.89%,-0.72%,0.47,-1.41%,56.12,3.83%,5.14%,352621.74,4.68%
+117,"DG","Dollar General Corp","Consumer Defensive","Discount Stores",-3.60%,-8.66%,3.87%,-9.70%,19.64%,12.70%,0.56%,0.48,0.80%,43.57,2.81%,2.84%,26450.32,2.75%
+118,"DGX","Quest Diagnostics Inc","Healthcare","Diagnostics & Research",-2.42%,-3.15%,9.17%,33.61%,29.29%,88.52%,-0.45%,0.57,-0.63%,43.08,2.13%,2.26%,25591.17,3.28%
+119,"DHI","D.R. Horton Inc","Consumer Cyclical","Residential Construction",-3.88%,-7.20%,-13.94%,-6.95%,-23.40%,29.12%,-0.16%,1.01,-0.73%,37.68,3.09%,2.58%,37484.16,3.95%
+120,"DHR","Danaher Corp","Healthcare","Diagnostics & Research",-3.95%,3.47%,12.44%,-4.62%,1.56%,0.68%,2.12%,0.28,2.00%,54.76,2.93%,2.63%,153491.74,1.31%
+121,"DIS","Walt Disney Co","Communication Services","Entertainment",-2.73%,-4.15%,5.37%,-9.72%,-8.68%,27.10%,0.77%,0.46,0.51%,44.12,1.79%,1.89%,177348.01,1.14%
+122,"DLR","Digital Realty Trust Inc","Real Estate","REIT - Specialty",0.58%,-5.10%,1.89%,15.19%,1.05%,51.41%,-0.59%,0.28,-0.19%,42.07,2.00%,2.29%,66115.68,2.29%
+123,"DLTR","Dollar Tree Inc","Consumer Defensive","Discount Stores",-2.81%,-13.95%,-8.07%,-8.34%,25.31%,5.96%,-0.45%,0.60,0.53%,39.16,2.95%,3.18%,21156.25,3.84%
+124,"DOC","Healthpeak Properties Inc","Real Estate","REIT - Healthcare Facilities",-3.01%,-7.30%,-11.10%,21.24%,0.65%,14.85%,0.33%,0.48,0.03%,30.70,1.98%,1.82%,13773.75,3.69%
+125,"DOV","Dover Corp","Industrials","Specialty Industrial Machinery",0.45%,0.66%,-10.14%,-1.49%,15.44%,39.06%,1.50%,0.30,1.40%,50.66,1.93%,2.01%,25904.14,3.12%
+126,"DOW","Dow Inc","Basic Materials","Chemicals",1.65%,-6.62%,-1.01%,21.26%,19.02%,-43.14%,1.36%,0.43,1.36%,44.24,2.61%,3.04%,20479.23,4.92%
+127,"DPZ","Dominos Pizza Inc","Consumer Cyclical","Restaurants",1.74%,-14.32%,-5.04%,-28.66%,-30.32%,-18.14%,-0.31%,0.49,-0.09%,39.24,2.65%,2.72%,9837.80,9.92%
+128,"DRI","Darden Restaurants Inc","Consumer Cyclical","Restaurants",1.53%,-8.26%,-2.19%,8.70%,3.55%,41.75%,-0.92%,0.49,-0.15%,42.10,2.45%,2.36%,22711.76,5.41%
+129,"DTE","DTE Energy Co","Utilities","Utilities - Regulated Electric",4.41%,-7.96%,-17.99%,-2.19%,-9.89%,33.93%,1.21%,0.59,1.37%,41.88,1.68%,1.67%,26252.20,2.51%
+130,"DUK","Duke Energy Corp","Utilities","Utilities - Regulated Electric",0.72%,-5.91%,-10.91%,-2.54%,-7.54%,33.63%,0.20%,0.56,0.09%,32.90,1.29%,1.26%,89065.38,2.44%
+131,"DVA","DaVita Inc","Healthcare","Medical Care Facilities",0.70%,-1.29%,-23.47%,57.83%,36.71%,96.50%,0.76%,0.25,0.35%,45.79,2.41%,2.84%,11440.01,6.88%
+132,"DVN","Devon Energy Corp","Energy","Oil & Gas E&P",3.77%,-0.61%,14.34%,32.38%,40.31%,16.15%,1.79%,0.67,1.77%,54.03,3.02%,2.76%,53341.75,2.92%
+133,"DXCM","Dexcom Inc","Healthcare","Medical Devices",0.07%,-3.31%,17.90%,30.69%,29.37%,3.26%,2.35%,0.32,1.62%,49.97,2.14%,2.41%,32732.61,4.65%
+134,"EBAY","EBay Inc","Consumer Cyclical","Internet Retail",-0.20%,1.18%,-6.63%,22.97%,16.20%,151.36%,-0.31%,0.31,0.66%,49.74,2.93%,3.19%,47661.73,4.54%
+135,"ECL","Ecolab Inc","Basic Materials","Specialty Chemicals",-1.10%,-0.65%,-2.09%,5.57%,0.20%,64.54%,1.67%,0.36,1.26%,51.15,1.63%,1.77%,77693.07,2.10%
+136,"ED","Consolidated Edison Inc","Utilities","Utilities - Regulated Electric",1.05%,-4.45%,-8.04%,4.62%,5.16%,22.59%,0.35%,0.34,0.50%,44.21,1.73%,1.50%,38293.93,2.87%
+137,"EFX","Equifax Inc","Industrials","Consulting Services",-3.23%,-25.40%,-19.20%,-34.99%,-40.39%,-21.96%,0.71%,1.12,0.76%,26.47,3.67%,3.65%,16573.31,6.65%
+138,"EG","Everest Group Ltd","Financial","Insurance - Reinsurance",0.21%,-4.06%,-0.71%,9.20%,3.85%,-4.26%,0.74%,0.40,0.63%,48.21,1.44%,1.72%,14209.24,6.74%
+139,"EIX","Edison International","Utilities","Utilities - Regulated Electric",4.20%,-4.74%,-29.19%,-10.65%,-3.00%,-11.63%,-0.69%,0.47,-0.48%,36.80,3.23%,3.06%,20637.57,4.04%
+140,"EL","Estee Lauder Cos. Inc","Consumer Defensive","Household & Personal Products",-1.35%,-6.52%,11.66%,-9.97%,7.11%,-33.32%,0.30%,0.68,2.51%,48.21,3.65%,3.13%,34160.52,2.87%
+141,"ELV","Elevance Health Inc","Healthcare","Healthcare Plans",-0.87%,-5.70%,-6.61%,11.58%,11.60%,-11.88%,1.04%,0.30,1.22%,43.63,2.52%,2.46%,84827.34,2.47%
+142,"EMR","Emerson Electric Co","Industrials","Specialty Industrial Machinery",2.54%,8.81%,18.52%,23.15%,21.29%,74.64%,1.15%,0.51,1.14%,65.16,2.68%,2.23%,91169.63,1.51%
+143,"EOG","EOG Resources Inc","Energy","Oil & Gas E&P",3.01%,-0.75%,7.67%,37.95%,30.70%,23.85%,1.88%,0.57,2.46%,52.98,2.13%,2.30%,75983.30,2.96%
+144,"EQIX","Equinix Inc","Real Estate","REIT - Specialty",1.01%,-1.88%,-0.16%,33.30%,31.14%,41.65%,-0.58%,0.41,-0.44%,46.84,2.14%,2.32%,100768.82,1.72%
+145,"EQT","EQT Corp","Energy","Oil & Gas E&P",3.09%,-7.55%,-0.68%,-4.09%,-8.25%,25.12%,2.54%,0.64,2.47%,48.89,2.43%,2.64%,32157.78,3.61%
+146,"ERIE","Erie Indemnity Co","Financial","Insurance Brokers",-1.00%,-14.97%,-14.31%,-23.36%,-31.16%,-27.41%,0.18%,0.17,-0.63%,33.57,1.94%,2.84%,10231.29,9.59%
+147,"ES","Eversource Energy","Utilities","Utilities - Regulated Electric",2.78%,-9.00%,-12.99%,-3.41%,-10.33%,17.80%,0.78%,0.44,0.83%,37.42,1.80%,1.79%,24497.61,2.42%
+148,"ESS","Essex Property Trust Inc","Real Estate","REIT - Residential",-1.06%,-3.06%,-9.45%,3.23%,2.14%,27.20%,0.79%,0.35,0.55%,40.44,1.54%,1.55%,17950.74,3.43%
+149,"ETN","Eaton Corp Plc","Industrials","Specialty Industrial Machinery",1.87%,10.67%,11.07%,37.98%,17.68%,116.30%,1.03%,0.58,0.77%,57.86,3.10%,2.82%,170696.44,2.00%
+150,"ETR","Entergy Corp","Utilities","Utilities - Regulated Electric",3.33%,-5.95%,-12.00%,9.67%,6.27%,120.94%,0.69%,0.42,0.46%,44.48,2.12%,1.88%,48432.02,3.54%
+151,"EVRG","Evergy Inc","Utilities","Utilities - Regulated Electric",2.13%,-2.88%,-8.67%,9.77%,3.85%,64.60%,0.66%,0.33,0.51%,46.62,1.53%,1.44%,18341.93,8.90%
+152,"EW","Edwards Lifesciences Corp","Healthcare","Medical Devices",0.30%,-3.00%,-8.15%,2.16%,13.00%,20.62%,1.61%,0.41,2.28%,48.54,2.39%,2.40%,50198.67,1.60%
+153,"EXC","Exelon Corp","Utilities","Utilities - Regulated Electric",1.72%,-7.90%,-13.78%,-5.91%,-9.54%,9.63%,0.99%,0.61,0.70%,36.88,1.55%,1.55%,42336.24,3.26%
+154,"EXE","Expand Energy Corp","Energy","Oil & Gas E&P",1.81%,-12.32%,-3.03%,-21.30%,-19.16%,4.54%,2.54%,0.43,1.56%,40.10,2.18%,2.56%,20106.10,4.16%
+155,"EXPD","Expeditors International Of Washington Inc","Industrials","Integrated Freight & Logistics",2.69%,3.48%,16.84%,29.95%,56.77%,69.55%,0.64%,1.22,0.61%,59.54,1.72%,2.02%,25172.04,3.44%
+156,"EXR","Extra Space Storage Inc","Real Estate","REIT - Industrial",1.15%,-5.52%,-9.84%,2.28%,-6.74%,14.37%,0.03%,0.37,-0.04%,39.53,2.19%,1.95%,29389.40,2.33%
+157,"F","Ford Motor Co","Consumer Cyclical","Auto Manufacturers",-2.14%,-15.93%,-10.66%,-7.66%,-4.38%,4.95%,-0.29%,0.57,0.12%,32.01,2.81%,3.03%,48309.72,2.90%
+158,"FANG","Diamondback Energy Inc","Energy","Oil & Gas E&P",0.25%,-8.50%,2.84%,23.52%,25.92%,33.25%,1.01%,1.05,0.53%,40.01,1.80%,2.39%,51997.72,3.58%
+159,"FAST","Fastenal Co","Industrials","Industrial Distribution",0.74%,3.32%,7.97%,26.75%,6.23%,86.46%,0.52%,0.36,0.23%,58.19,1.71%,1.97%,58367.47,3.11%
+160,"FCX","Freeport-McMoRan Inc","Basic Materials","Copper",1.50%,0.66%,23.26%,44.32%,85.11%,110.55%,1.14%,0.77,1.39%,54.33,4.20%,3.37%,104886.72,2.40%
+161,"FDS","Factset Research Systems Inc","Financial","Financial Data & Stock Exchanges",0.21%,-14.29%,3.85%,-7.56%,-4.99%,-40.28%,0.69%,0.28,0.84%,44.75,4.64%,4.21%,9540.10,10.84%
+162,"FDX","Fedex Corp","Industrials","Integrated Freight & Logistics",0.00%,-10.68%,-7.42%,24.53%,47.05%,38.80%,-0.16%,0.69,-0.24%,38.37,1.67%,2.10%,68553.49,2.19%
+163,"FDXF","FedEx Freight Holding Company Inc","Industrials","Integrated Freight & Logistics",0.43%,-11.33%,-22.07%,-16.46%,,,0.27%,0.49,-0.09%,34.01,3.08%,3.77%,16863.40,3.25%
+164,"FE","Firstenergy Corp","Utilities","Utilities - Regulated Electric",2.20%,-6.53%,-9.14%,-1.80%,-4.28%,30.15%,1.35%,0.54,1.44%,39.98,1.64%,1.51%,25440.49,5.21%
+165,"FERG","Ferguson Enterprises Inc","Industrials","Industrial Distribution",-1.39%,0.41%,0.43%,0.68%,-3.24%,39.04%,0.61%,0.44,0.36%,49.64,2.53%,2.29%,43359.52,3.03%
+166,"FFIV","F5 Inc","Technology","Software - Infrastructure",5.28%,16.93%,9.94%,79.64%,41.10%,194.74%,1.03%,0.35,0.99%,65.85,2.94%,3.14%,25966.68,2.40%
+167,"FICO","Fair Isaac Corp","Technology","Software - Application",-19.28%,-39.34%,-47.80%,-59.85%,-63.32%,-21.30%,2.54%,2.09,2.65%,28.55,8.41%,5.32%,14660.05,9.29%
+168,"FIS","Fidelity National Information Services Inc","Technology","Information Technology Services",-3.26%,-21.50%,-22.09%,-50.06%,-50.25%,-38.71%,2.12%,0.94,2.31%,29.77,2.80%,3.03%,17116.28,3.66%
+169,"FISV","Fiserv Inc","Technology","Information Technology Services",-0.56%,-13.22%,-13.19%,-31.87%,-64.13%,-59.56%,3.74%,0.58,3.16%,38.43,2.90%,3.43%,24333.64,5.67%
+170,"FITB","Fifth Third Bancorp","Financial","Banks - Regional",-0.78%,-6.91%,-11.65%,9.31%,15.22%,110.49%,0.31%,0.79,0.59%,37.40,1.88%,1.96%,46405.69,3.57%
+171,"FOX","Fox Corp","Communication Services","Entertainment",-1.24%,-7.64%,13.52%,-13.98%,0.18%,99.61%,0.45%,0.31,-0.07%,42.52,2.69%,2.44%,24836.65,7.93%
+172,"FOXA","Fox Corp","Communication Services","Entertainment",-1.24%,-8.02%,13.40%,-14.77%,0.51%,106.22%,0.81%,0.51,-0.00%,41.37,2.67%,2.46%,24853.56,22.96%
+173,"FRT","Federal Realty Investment Trust","Real Estate","REIT - Retail",-3.10%,-9.16%,-12.84%,5.58%,7.06%,22.07%,-0.26%,0.48,-0.25%,17.85,1.93%,1.58%,9303.41,4.28%
+174,"FTNT","Fortinet Inc","Technology","Software - Infrastructure",3.96%,17.24%,15.53%,130.84%,113.67%,215.94%,1.64%,0.42,1.30%,66.28,2.92%,3.54%,134497.04,2.26%
+175,"FTV","Fortive Corp","Technology","Scientific & Technical Instruments",3.72%,0.45%,-7.54%,4.75%,14.72%,2.90%,0.89%,0.62,0.63%,56.28,1.95%,1.83%,17466.13,4.19%
+176,"GD","General Dynamics Corp","Industrials","Aerospace & Defense",-0.59%,-9.21%,-11.33%,-1.33%,-3.33%,53.26%,0.60%,0.59,0.64%,25.32,1.43%,1.79%,89876.39,1.00%
+177,"GDDY","Godaddy Inc","Technology","Software - Infrastructure",5.29%,-4.79%,10.47%,-20.48%,-26.91%,34.30%,2.00%,0.32,1.50%,51.93,2.86%,4.82%,12496.33,6.21%
+178,"GE","GE Aerospace","Industrials","Aerospace & Defense",-3.25%,-7.67%,-16.10%,-0.04%,3.67%,255.10%,-0.39%,0.90,-0.54%,33.67,2.38%,2.46%,319465.48,1.52%
+179,"GEHC","GE HealthCare Technologies Inc","Healthcare","Medical Devices",-2.33%,-6.45%,0.52%,-20.48%,-14.81%,-3.51%,2.80%,0.50,1.45%,43.29,1.91%,2.14%,29461.24,3.76%
+180,"GEN","Gen Digital Inc","Technology","Software - Infrastructure",8.23%,-27.98%,-15.74%,-17.01%,-18.89%,32.81%,2.71%,1.38,2.61%,32.28,5.39%,4.61%,13507.12,6.56%
+181,"GILD","Gilead Sciences Inc","Healthcare","Drug Manufacturers - General",-5.16%,-4.54%,5.86%,17.61%,28.09%,93.24%,0.49%,0.43,-0.27%,43.00,2.13%,2.20%,178987.52,1.48%
+182,"GIS","General Mills Inc","Consumer Defensive","Packaged Foods",-5.86%,-19.43%,-14.74%,-31.98%,-37.19%,-49.28%,-1.06%,0.80,-1.19%,25.28,3.38%,3.12%,16912.15,8.42%
+183,"GL","Globe Life Inc","Financial","Insurance - Life",-0.75%,-6.28%,-6.36%,18.29%,20.25%,50.29%,0.18%,0.29,-0.14%,32.01,1.46%,1.81%,12713.97,2.71%
+184,"GLW","Corning Inc","Technology","Electronic Components",6.32%,10.39%,-13.06%,84.07%,92.88%,443.02%,-2.26%,0.50,-1.84%,54.06,4.63%,4.46%,138828.06,2.23%
+185,"GM","General Motors Company","Consumer Cyclical","Auto Manufacturers",-0.48%,-7.99%,5.55%,-1.32%,33.46%,164.76%,1.60%,0.62,2.53%,44.31,3.21%,3.14%,70415.49,2.37%
+186,"GNRC","Generac Holdings Inc","Industrials","Specialty Industrial Machinery",4.80%,17.50%,-8.80%,57.70%,29.81%,112.65%,-0.21%,0.61,-0.81%,59.27,3.70%,4.05%,12701.70,4.25%
+187,"GPC","Genuine Parts Co","Consumer Cyclical","Auto Parts",-1.60%,-8.39%,-2.02%,2.53%,-9.77%,-11.64%,-0.83%,0.31,-0.92%,39.88,1.92%,2.24%,17380.60,5.80%
+188,"GPN","Global Payments Inc","Technology","Software - Infrastructure",-4.75%,-12.09%,3.98%,4.23%,-8.28%,-29.31%,3.03%,0.37,2.93%,37.63,2.93%,2.87%,21348.09,7.44%
+189,"GRMN","Garmin Ltd","Technology","Scientific & Technical Instruments",-3.09%,2.81%,14.59%,40.48%,10.85%,172.45%,1.35%,0.36,1.35%,50.89,2.57%,2.39%,54955.26,1.87%
+190,"GS","Goldman Sachs Group Inc","Financial","Capital Markets",-2.22%,-13.68%,-14.10%,1.93%,13.41%,188.54%,-0.45%,0.81,-0.73%,30.75,1.90%,2.47%,260869.20,2.39%
+191,"GWW","W.W. Grainger Inc","Industrials","Industrial Distribution",2.56%,-1.91%,-5.06%,27.62%,34.62%,83.30%,0.84%,0.49,0.58%,52.45,1.90%,1.92%,60655.90,2.37%
+192,"HAL","Halliburton Co","Energy","Oil & Gas Equipment & Services",2.02%,-11.28%,-2.09%,17.07%,36.10%,-13.07%,3.63%,0.49,3.88%,45.54,2.13%,2.59%,27564.11,4.20%
+193,"HAS","Hasbro Inc","Consumer Cyclical","Leisure",1.27%,-2.59%,18.06%,10.48%,19.37%,51.21%,1.05%,0.44,1.17%,53.14,3.15%,2.53%,12777.22,5.18%
+194,"HBAN","Huntington Bancshares Inc","Financial","Banks - Regional",0.40%,-9.95%,-14.70%,-11.46%,-10.74%,53.16%,0.01%,0.54,0.21%,34.84,2.03%,2.20%,31037.01,2.61%
+195,"HD","Home Depot Inc","Consumer Cyclical","Home Improvement Retail",-2.67%,-11.30%,-18.27%,-18.01%,-28.58%,-3.28%,-0.21%,0.71,-0.25%,25.39,2.06%,1.98%,281487.16,1.06%
+196,"HIG","Hartford Insurance Group Inc","Financial","Insurance - Diversified",0.70%,-9.34%,-9.11%,-7.90%,-4.90%,79.67%,0.96%,0.65,0.69%,39.67,2.34%,1.81%,34378.56,1.46%
+197,"HII","Huntington Ingalls Industries Inc","Industrials","Aerospace & Defense",4.09%,-7.97%,-7.57%,-21.32%,-5.87%,33.59%,-0.73%,0.63,-0.36%,40.23,2.75%,2.55%,10543.15,3.02%
+198,"HON","Honeywell International Inc","Industrials","Conglomerates",1.15%,3.04%,-4.93%,4.62%,3.63%,20.34%,-0.13%,0.29,-0.02%,52.46,1.76%,1.90%,67809.31,2.34%
+199,"HONA","Honeywell Aerospace Inc","Industrials","Aerospace & Defense",2.03%,0.29%,-34.74%,-47.76%,,,1.00%,0.36,0.51%,42.80,2.82%,3.54%,49258.73,1.68%
+200,"HPE","Hewlett Packard Enterprise Co","Technology","Communication Equipment",9.40%,25.85%,57.61%,185.24%,180.45%,308.07%,-0.72%,0.64,-1.18%,67.29,5.59%,6.39%,90951.24,4.23%
+201,"HPQ","HP Inc","Technology","Computer Hardware",-0.30%,-2.21%,36.00%,40.15%,17.21%,19.04%,-2.30%,0.40,-2.79%,48.10,3.03%,4.51%,28158.43,8.06%
+202,"HRL","Hormel Foods Corp","Consumer Defensive","Packaged Foods",0.98%,-6.99%,-18.36%,-14.92%,-18.16%,-46.01%,-0.52%,0.68,-0.42%,35.01,2.10%,2.05%,11097.82,7.16%
+203,"HSIC","Henry Schein Inc","Healthcare","Medical Distribution",-2.02%,-7.27%,-2.98%,11.47%,25.69%,14.38%,-1.44%,1.16,-0.74%,40.25,2.01%,1.97%,9389.37,8.01%
+204,"HST","Host Hotels & Resorts Inc","Real Estate","REIT - Hotel & Motel",-0.95%,2.07%,-3.87%,30.36%,37.82%,47.58%,-0.31%,0.78,-0.51%,50.32,1.92%,1.75%,15378.17,6.10%
+205,"HSY","Hershey Company","Consumer Defensive","Confectioners",-1.34%,-7.35%,-7.81%,-10.87%,-16.88%,-17.04%,0.97%,0.68,1.26%,35.55,2.20%,1.94%,32590.46,6.34%
+206,"HUBB","Hubbell Inc","Industrials","Electrical Equipment & Parts",3.49%,4.74%,0.65%,8.53%,16.70%,61.09%,1.66%,0.39,1.36%,60.99,3.07%,2.56%,25464.24,5.41%
+207,"HUM","Humana Inc","Healthcare","Healthcare Plans",1.67%,-2.55%,0.38%,54.66%,39.62%,-18.99%,2.04%,0.59,2.00%,55.17,3.33%,3.42%,47568.02,2.38%
+208,"IBM","International Business Machines Corp","Technology","Information Technology Services",0.68%,-5.34%,-27.43%,-25.00%,-22.96%,56.99%,-0.17%,0.31,-0.21%,41.06,2.25%,2.72%,209314.00,2.38%
+209,"ICE","Intercontinental Exchange Inc","Financial","Financial Data & Stock Exchanges",-1.06%,-8.08%,10.88%,-6.59%,-6.97%,37.93%,0.79%,0.46,0.76%,42.03,1.79%,2.08%,84933.37,1.15%
+210,"IEX","Idex Corp","Industrials","Specialty Industrial Machinery",2.19%,5.87%,6.84%,32.74%,41.44%,15.14%,1.25%,0.49,1.38%,64.12,1.95%,1.85%,17412.70,2.85%
+211,"IFF","International Flavors & Fragrances Inc","Basic Materials","Specialty Chemicals",-2.76%,-3.59%,1.86%,23.69%,34.05%,29.15%,0.91%,0.40,1.13%,45.43,2.38%,1.83%,21268.03,6.51%
+212,"ILMN","Illumina Inc","Healthcare","Diagnostics & Research",4.49%,28.18%,48.16%,116.62%,178.22%,109.67%,3.48%,0.99,4.06%,74.11,4.02%,4.79%,42901.32,7.03%
+213,"INTC","Intel Corp","Technology","Semiconductors",1.10%,27.96%,6.26%,217.90%,218.50%,226.85%,1.50%,0.85,-1.70%,57.90,4.85%,4.82%,620086.61,3.49%
+214,"INTU","Intuit Inc","Technology","Software - Application",4.80%,-18.00%,0.42%,-57.38%,-58.48%,-45.31%,0.43%,0.64,0.45%,38.01,3.59%,3.85%,75451.41,2.68%
+215,"INVH","Invitation Homes Inc","Real Estate","REIT - Residential",-1.53%,-8.14%,-13.46%,-5.96%,-8.75%,-17.45%,0.48%,0.62,0.36%,24.00,1.61%,1.59%,15435.94,2.66%
+216,"IP","International Paper Co","Consumer Cyclical","Packaging & Containers",-6.07%,-12.36%,-15.78%,-18.92%,-32.29%,-8.62%,1.18%,0.67,-0.10%,28.28,3.08%,3.19%,16913.25,8.91%
+217,"IQV","IQVIA Holdings Inc","Healthcare","Diagnostics & Research",-2.82%,-3.05%,26.46%,16.82%,27.44%,33.12%,1.40%,0.62,1.98%,51.22,2.58%,2.54%,43344.95,2.53%
+218,"IR","Ingersoll Rand Inc","Industrials","Specialty Industrial Machinery",3.20%,4.54%,0.15%,-0.50%,-6.10%,25.48%,3.77%,0.60,3.62%,60.03,2.52%,2.51%,30584.06,3.50%
+219,"IRM","Iron Mountain Inc","Real Estate","REIT - Specialty",1.81%,-1.67%,-2.33%,36.29%,7.88%,98.38%,-0.23%,0.37,-0.30%,45.02,2.32%,2.43%,33656.79,2.69%
+220,"IT","Gartner Inc","Technology","Information Technology Services",0.28%,-4.71%,32.28%,-26.17%,-27.59%,-47.11%,0.64%,0.21,0.78%,51.49,4.11%,4.41%,11761.50,13.53%
+221,"ITW","Illinois Tool Works Inc","Industrials","Specialty Industrial Machinery",-2.97%,-2.19%,-1.99%,7.87%,2.19%,14.11%,1.44%,0.67,1.05%,44.15,2.32%,1.79%,75668.51,3.09%
+222,"IVZ","Invesco Ltd","Financial","Asset Management",-0.30%,-7.25%,10.72%,15.48%,26.20%,122.25%,-1.08%,0.44,-1.05%,43.07,2.53%,2.63%,13393.91,2.98%
+223,"J","Jacobs Solutions Inc","Industrials","Engineering & Construction",1.11%,-5.18%,7.38%,5.62%,-9.51%,25.96%,1.54%,0.35,1.33%,47.41,2.58%,2.46%,16373.64,2.76%
+224,"JBHT","J.B. Hunt Transport Services Inc","Industrials","Integrated Freight & Logistics",1.72%,-13.64%,-16.38%,18.33%,66.70%,23.57%,-1.50%,0.58,-1.81%,37.57,2.50%,2.76%,21597.09,2.78%
+225,"JBL","Jabil Inc","Technology","Electronic Components",-4.34%,-0.27%,-4.98%,33.80%,50.98%,136.51%,-0.06%,0.54,0.23%,47.78,6.04%,4.00%,31970.54,2.78%
+226,"JCI","Johnson Controls International plc","Industrials","Building Products & Equipment",5.46%,10.40%,11.67%,31.13%,44.34%,205.91%,0.84%,0.51,0.50%,68.78,2.15%,2.14%,95116.56,1.66%
+227,"JKHY","Jack Henry & Associates Inc","Technology","Information Technology Services",-2.79%,-14.65%,-2.05%,-21.25%,-1.75%,-3.28%,0.80%,0.26,0.81%,33.76,2.32%,2.78%,10075.18,6.13%
+228,"JNJ","Johnson & Johnson","Healthcare","Drug Manufacturers - General",-6.60%,-8.78%,-4.96%,22.73%,34.64%,61.63%,-0.77%,1.00,-0.80%,30.21,1.88%,1.80%,612090.11,0.88%
+229,"JPM","JPMorgan Chase & Co","Financial","Banks - Diversified",-0.95%,-7.92%,-1.72%,3.47%,7.54%,133.31%,0.22%,0.46,0.31%,36.11,1.76%,1.95%,886230.53,0.91%
+230,"KDP","Keurig Dr Pepper Inc","Consumer Defensive","Beverages - Non-Alcoholic",-1.89%,-6.13%,-1.98%,10.19%,19.45%,2.17%,2.24%,0.50,1.63%,46.85,2.94%,2.39%,42001.90,6.09%
+231,"KEY","Keycorp","Financial","Banks - Regional",-0.54%,-8.27%,-13.18%,-1.70%,8.91%,96.99%,0.64%,0.67,1.05%,36.78,1.79%,1.97%,21652.04,3.20%
+232,"KEYS","Keysight Technologies Inc","Technology","Scientific & Technical Instruments",7.04%,19.36%,24.57%,89.51%,122.13%,197.86%,-0.47%,0.41,0.11%,74.18,2.62%,2.71%,65556.14,1.40%
+233,"KHC","Kraft Heinz Co","Consumer Defensive","Packaged Foods",-6.98%,-13.79%,-13.38%,-9.63%,-15.91%,-32.19%,-0.84%,0.70,-1.24%,22.28,2.48%,2.50%,25987.33,7.98%
+234,"KIM","Kimco Realty Corp","Real Estate","REIT - Retail",-0.87%,-6.79%,-11.84%,9.99%,3.84%,34.36%,-0.07%,0.57,0.25%,30.24,1.44%,1.50%,14955.25,5.42%
+235,"KKR","KKR & Co Inc","Financial","Asset Management",-3.51%,-18.03%,-5.43%,-29.42%,-29.52%,48.91%,-0.08%,0.90,-0.35%,29.14,3.09%,3.00%,80760.28,1.97%
+236,"KMB","Kimberly-Clark Corp","Consumer Defensive","Household & Personal Products",-3.89%,-12.06%,-17.27%,-5.91%,-22.56%,-19.88%,0.41%,0.61,0.60%,31.09,1.97%,1.90%,31571.73,15.83%
+237,"KMI","Kinder Morgan Inc","Energy","Oil & Gas Midstream",3.30%,0.13%,-2.61%,15.10%,11.18%,95.80%,1.77%,0.55,1.84%,55.04,2.29%,2.27%,70459.13,2.40%
+238,"KO","Coca-Cola Co","Consumer Defensive","Beverages - Non-Alcoholic",-0.84%,-2.66%,2.85%,23.65%,29.70%,65.03%,0.34%,0.65,0.93%,43.43,1.21%,1.25%,371933.83,0.95%
+239,"KR","Kroger Co","Consumer Defensive","Grocery Stores",-1.47%,0.51%,0.46%,-5.87%,-11.30%,33.20%,-0.20%,0.43,-0.37%,49.47,2.79%,2.67%,34732.52,5.04%
+240,"KVUE","Kenvue Inc","Consumer Defensive","Household & Personal Products",-3.22%,-8.68%,-12.51%,0.32%,9.46%,-12.42%,0.38%,0.34,0.61%,33.59,1.69%,1.63%,33238.80,3.01%
+241,"L","Loews Corp","Financial","Insurance - Property & Casualty",1.20%,-3.48%,-9.18%,0.85%,4.46%,69.07%,0.22%,0.56,0.17%,42.01,1.32%,1.42%,21712.27,2.91%
+242,"LDOS","Leidos Holdings Inc","Technology","Information Technology Services",-2.60%,-9.97%,9.76%,-33.94%,-39.07%,31.75%,-0.42%,0.39,1.21%,35.28,2.52%,2.80%,14954.90,4.21%
+243,"LEN","Lennar Corp","Consumer Cyclical","Residential Construction",-8.11%,-10.74%,-13.10%,-26.67%,-42.05%,-27.79%,-4.91%,2.22,-5.55%,35.90,4.51%,3.46%,18126.52,8.79%
+244,"LH","Labcorp Holdings Inc","Healthcare","Diagnostics & Research",-0.57%,-7.15%,8.43%,22.69%,11.14%,53.29%,-0.09%,0.46,-0.22%,42.10,1.70%,2.37%,24962.58,3.03%
+245,"LHX","L3Harris Technologies Inc","Industrials","Aerospace & Defense",0.38%,-8.98%,-19.23%,-18.73%,-19.77%,47.94%,0.66%,0.44,0.84%,31.14,1.84%,2.06%,44429.47,2.42%
+246,"LII","Lennox International Inc","Industrials","Building Products & Equipment",-2.07%,-6.55%,-35.22%,-25.70%,-34.48%,-3.02%,1.42%,0.43,1.26%,38.62,2.75%,2.89%,12469.15,6.92%
+247,"LIN","Linde Plc","Basic Materials","Specialty Chemicals",2.52%,0.37%,-10.08%,13.50%,3.69%,30.85%,0.95%,0.96,0.93%,59.71,1.86%,1.61%,223093.64,1.28%
+248,"LMT","Lockheed Martin Corp","Industrials","Aerospace & Defense",-2.20%,-4.93%,-5.36%,4.76%,0.43%,27.51%,0.23%,0.53,0.25%,32.14,1.72%,2.13%,116936.95,1.05%
+249,"LNT","Alliant Energy Corp","Utilities","Utilities - Regulated Electric",2.31%,-4.90%,-16.72%,-0.52%,-3.19%,35.83%,0.89%,0.63,0.53%,41.89,2.22%,1.68%,16767.95,9.85%
+250,"LOW","Lowe's Cos. Inc","Consumer Cyclical","Home Improvement Retail",-4.02%,-10.79%,-18.47%,-25.32%,-26.89%,-9.85%,0.06%,0.52,-0.38%,24.83,2.26%,2.13%,101051.44,1.68%
+251,"LULU","Lululemon Athletica Inc","Consumer Cyclical","Apparel Retail",-7.74%,-23.79%,-19.35%,-55.34%,-47.15%,-74.25%,-1.09%,1.55,-1.76%,32.12,3.20%,3.61%,10748.66,13.66%
+252,"LUV","Southwest Airlines Co","Industrials","Airlines",-0.18%,8.97%,-14.62%,2.12%,29.78%,54.49%,-0.55%,0.88,-0.62%,55.19,2.90%,2.86%,20647.32,4.56%
+253,"LYB","LyondellBasell Industries NV","Basic Materials","Specialty Chemicals",1.24%,-8.90%,8.05%,36.24%,19.25%,-34.95%,0.59%,0.36,0.71%,41.59,2.83%,2.99%,19057.20,5.18%
+254,"LYV","Live Nation Entertainment Inc","Communication Services","Entertainment",-0.29%,-3.43%,-6.81%,20.28%,9.65%,101.10%,1.88%,0.67,1.56%,47.95,2.26%,2.34%,40387.64,14.46%
+255,"MA","Mastercard Incorporated","Financial","Credit Services",-0.92%,-3.87%,5.91%,-1.37%,-3.00%,42.84%,2.37%,0.63,1.96%,48.35,1.58%,1.51%,493246.16,0.89%
+256,"MAA","Mid-America Apartment Communities Inc","Real Estate","REIT - Residential",-2.14%,-9.92%,-18.28%,-16.63%,-15.29%,-9.73%,0.62%,0.42,0.46%,24.50,1.62%,1.73%,13775.17,3.91%
+257,"MAS","Masco Corp","Industrials","Building Products & Equipment",0.16%,-4.13%,-13.70%,7.89%,-2.71%,31.12%,0.03%,0.30,0.16%,44.80,2.43%,2.52%,13501.42,4.55%
+258,"MCD","McDonald's Corp","Consumer Cyclical","Restaurants",-0.63%,-10.60%,-17.75%,-24.05%,-22.88%,-7.97%,0.34%,1.02,0.10%,24.36,1.53%,1.74%,164257.81,1.72%
+259,"MCHP","Microchip Technology Inc","Technology","Semiconductors",4.41%,11.35%,-3.26%,27.75%,22.34%,5.24%,0.56%,0.29,0.10%,63.33,2.87%,3.08%,44203.62,6.11%
+260,"MCK","Mckesson Corp","Healthcare","Medical Distribution",6.54%,-0.98%,13.00%,11.22%,23.61%,104.65%,1.37%,0.24,1.11%,59.41,2.78%,2.34%,106367.34,2.49%
+261,"MCO","Moody's Corp","Financial","Financial Data & Stock Exchanges",-2.83%,-11.35%,-10.67%,-12.49%,-7.83%,42.38%,1.10%,0.51,1.29%,35.13,2.19%,2.09%,77431.97,1.64%
+262,"MDLZ","Mondelez International Inc","Consumer Defensive","Confectioners",-3.32%,-5.32%,-3.39%,8.08%,-7.16%,-10.59%,0.69%,0.54,-0.02%,32.33,1.65%,1.78%,74255.60,2.19%
+263,"MDT","Medtronic Plc","Healthcare","Medical Devices",-1.78%,-5.58%,4.87%,-8.49%,-10.02%,15.44%,1.83%,3.07,1.77%,43.25,2.33%,2.16%,112447.34,1.35%
+264,"MET","Metlife Inc","Financial","Insurance - Life",0.83%,-2.64%,5.39%,22.39%,17.29%,60.25%,2.17%,0.60,2.31%,52.48,1.95%,1.85%,61396.35,2.31%
+265,"MGM","MGM Resorts International","Consumer Cyclical","Resorts & Casinos",-3.85%,-25.52%,-34.32%,-16.05%,-9.71%,-11.95%,-0.12%,0.95,0.50%,13.26,2.99%,2.71%,7707.27,10.57%
+266,"MKC","McCormick & Co Inc","Consumer Defensive","Packaged Foods",-7.90%,-15.12%,-14.53%,-34.47%,-35.23%,-31.74%,0.03%,0.74,-0.08%,24.98,4.20%,2.77%,12022.40,6.29%
+267,"MLM","Martin Marietta Materials Inc","Basic Materials","Building Materials",-1.10%,-4.63%,-18.31%,-22.05%,-23.53%,15.50%,1.23%,0.58,0.64%,40.57,2.86%,2.65%,34471.84,4.88%
+268,"MMM","3M Co","Industrials","Conglomerates",-3.89%,-3.22%,3.09%,1.74%,2.67%,121.82%,1.05%,0.43,0.62%,39.59,2.16%,2.01%,84006.02,1.94%
+269,"MO","Altria Group Inc","Consumer Defensive","Tobacco",-1.95%,-2.46%,-7.10%,17.55%,3.12%,61.42%,0.96%,0.57,0.64%,45.22,1.78%,1.68%,113173.57,2.34%
+270,"MOS","Mosaic Company","Basic Materials","Agricultural Inputs",-4.38%,-16.54%,0.73%,-11.69%,-38.39%,-37.43%,2.38%,0.96,0.97%,33.58,4.32%,4.31%,6763.23,9.76%
+271,"MPC","Marathon Petroleum Corp","Energy","Oil & Gas Refining & Marketing",11.31%,11.81%,62.77%,166.56%,124.45%,204.68%,3.22%,0.63,2.64%,72.53,4.22%,4.01%,121737.08,2.76%
+272,"MRK","Merck & Co Inc","Healthcare","Drug Manufacturers - General",-5.74%,-8.00%,8.76%,33.15%,57.14%,35.28%,-2.70%,0.82,-2.88%,38.58,2.06%,2.12%,345774.09,1.40%
+273,"MRNA","Moderna Inc","Healthcare","Biotechnology",0.29%,32.90%,148.03%,570.92%,594.47%,92.15%,3.41%,0.99,4.13%,69.03,6.56%,7.05%,78990.82,9.00%
+274,"MRSH","Marsh","Financial","Insurance Brokers",1.05%,-9.37%,-4.04%,-7.93%,-15.08%,-11.00%,0.97%,0.51,0.44%,37.29,1.76%,1.86%,81507.69,1.23%
+275,"MRVL","Marvell Technology Inc","Technology","Semiconductors",7.76%,29.99%,17.66%,219.43%,214.83%,411.21%,-1.75%,0.65,-0.31%,64.39,3.97%,4.48%,238034.53,3.59%
+276,"MS","Morgan Stanley","Financial","Capital Markets",-1.81%,-12.44%,-14.36%,7.11%,20.66%,140.23%,-0.30%,0.66,-0.09%,29.76,1.99%,2.32%,298634.07,1.23%
+277,"MSCI","MSCI Inc","Financial","Financial Data & Stock Exchanges",1.08%,-4.54%,-9.79%,-4.39%,-2.06%,10.13%,1.87%,0.40,2.35%,47.67,1.87%,2.14%,39881.04,1.91%
+278,"MSI","Motorola Solutions Inc","Technology","Communication Equipment",0.98%,-3.32%,7.62%,19.10%,0.80%,67.09%,1.89%,0.59,2.04%,48.55,1.24%,1.76%,75552.87,1.93%
+279,"MTB","M & T Bank Corp","Financial","Banks - Regional",0.10%,-8.09%,-7.97%,9.51%,13.41%,78.87%,0.32%,0.59,0.69%,35.48,1.66%,1.89%,31865.45,3.61%
+280,"MTD","Mettler-Toledo International Inc","Healthcare","Diagnostics & Research",-1.91%,11.77%,17.00%,8.72%,15.35%,40.58%,2.09%,0.38,1.99%,63.53,2.89%,2.92%,30371.62,3.51%
+281,"NCLH","Norwegian Cruise Line Holdings Ltd","Consumer Cyclical","Travel Services",5.03%,-3.59%,-20.18%,-32.66%,-38.20%,-8.58%,-0.66%,0.80,-0.73%,46.79,3.53%,3.62%,6901.54,20.92%
+282,"NDAQ","Nasdaq Inc","Financial","Financial Data & Stock Exchanges",-1.12%,-7.22%,5.96%,-5.71%,4.54%,86.83%,1.57%,0.43,1.39%,43.69,2.04%,2.20%,51193.95,1.71%
+283,"NDSN","Nordson Corp","Industrials","Specialty Industrial Machinery",1.06%,5.46%,17.06%,39.26%,43.42%,50.91%,0.47%,0.44,0.38%,67.89,1.83%,1.61%,18649.27,2.88%
+284,"NEE","NextEra Energy Inc","Utilities","Utilities - Regulated Electric",1.87%,-8.51%,-13.07%,-4.20%,-3.94%,55.52%,0.27%,0.57,0.10%,33.38,1.77%,1.57%,160422.15,2.72%
+285,"NI","NiSource Inc","Utilities","Utilities - Regulated Gas",1.80%,-4.46%,-16.19%,-4.69%,-9.19%,67.03%,0.77%,0.44,0.95%,42.36,1.75%,1.53%,19087.93,3.08%
+286,"NKE","Nike Inc","Consumer Cyclical","Footwear & Accessories",-7.57%,-13.25%,-22.16%,-47.21%,-53.24%,-64.89%,-0.55%,2.58,-0.70%,27.28,3.56%,2.66%,49883.70,7.30%
+287,"NOC","Northrop Grumman Corp","Industrials","Aerospace & Defense",-5.34%,-9.36%,-12.80%,-16.04%,-21.45%,13.98%,-0.25%,1.06,0.16%,25.64,1.74%,2.07%,68016.44,1.59%
+288,"NOW","ServiceNow Inc","Technology","Software - Application",3.18%,-6.84%,22.49%,-11.46%,-25.67%,23.94%,0.22%,0.39,0.93%,51.75,4.26%,3.85%,140246.59,2.81%
+289,"NRG","NRG Energy Inc","Utilities","Utilities - Independent Power Producers",1.13%,-12.29%,-28.92%,-38.39%,-41.00%,153.55%,1.87%,0.71,3.01%,37.83,4.08%,3.60%,20621.64,2.91%
+290,"NSC","Norfolk Southern Corp","Industrials","Railroads",1.55%,-3.03%,-1.50%,10.10%,5.91%,66.71%,0.29%,0.28,0.14%,46.07,1.57%,1.58%,71401.87,3.40%
+291,"NTAP","Netapp Inc","Technology","Software - Infrastructure",7.89%,18.96%,33.03%,105.93%,85.76%,192.02%,-2.15%,0.97,-2.54%,68.59,4.30%,4.55%,43316.70,5.18%
+292,"NTRS","Northern Trust Corp","Financial","Asset Management",-2.08%,-8.81%,-5.77%,25.14%,29.10%,156.37%,-0.36%,0.37,-0.28%,35.72,2.07%,2.21%,31271.30,2.19%
+293,"NUE","Nucor Corp","Basic Materials","Steel",2.51%,-4.52%,10.20%,53.65%,81.56%,60.21%,3.40%,0.55,4.26%,51.69,2.73%,2.72%,56859.40,1.90%
+294,"NVR","NVR Inc","Consumer Cyclical","Residential Construction",-5.04%,-6.62%,-11.08%,-18.39%,-27.22%,0.00%,-1.14%,1.05,-0.70%,35.77,2.75%,2.26%,15860.61,5.17%
+295,"NWS","News Corp","Communication Services","Entertainment",-1.54%,-8.57%,4.18%,7.14%,-1.08%,55.16%,0.43%,0.35,0.30%,42.39,2.57%,2.15%,16086.08,4.43%
+296,"NWSA","News Corp","Communication Services","Entertainment",-1.36%,-7.24%,6.63%,9.90%,1.15%,45.71%,0.26%,0.42,0.05%,43.37,2.77%,2.32%,16046.32,3.29%
+297,"NXPI","NXP Semiconductors NV","Technology","Semiconductors",2.47%,7.63%,-11.35%,11.56%,5.80%,23.90%,0.07%,0.30,-0.62%,57.89,2.52%,2.96%,61064.07,2.89%
+298,"O","Realty Income Corp","Real Estate","REIT - Retail",-2.35%,-12.46%,-15.56%,-4.12%,-10.51%,9.80%,0.02%,1.02,-0.15%,19.99,1.43%,1.52%,51143.19,4.32%
+299,"ODFL","Old Dominion Freight Line Inc","Industrials","Trucking",1.59%,-3.28%,-16.63%,14.58%,27.12%,-10.90%,-0.04%,0.90,-0.45%,43.99,2.57%,2.79%,37254.72,4.50%
+300,"OKE","Oneok Inc","Energy","Oil & Gas Midstream",0.78%,-6.72%,-1.49%,21.52%,22.53%,43.04%,1.00%,0.45,1.63%,44.33,2.61%,2.58%,56305.00,4.34%
+301,"OMC","Omnicom Group Inc","Communication Services","Advertising Agencies",0.01%,-11.35%,-7.09%,-6.98%,-3.22%,3.02%,1.14%,0.32,1.29%,39.61,2.01%,2.41%,20606.12,9.59%
+302,"ON","ON Semiconductor Corp","Technology","Semiconductors",13.05%,16.12%,-6.13%,57.93%,73.57%,-3.01%,0.49%,0.84,0.74%,66.22,3.93%,4.52%,33293.94,7.64%
+303,"ORCL","Oracle Corp","Technology","Software - Infrastructure",8.44%,-6.65%,1.55%,-26.23%,-49.75%,32.71%,0.91%,0.59,1.05%,49.91,4.25%,4.36%,434782.99,2.82%
+304,"OTIS","Otis Worldwide Corp","Industrials","Specialty Industrial Machinery",-0.15%,-7.34%,-9.81%,-24.18%,-27.65%,-16.31%,3.40%,1.10,3.40%,42.95,2.50%,2.20%,25211.73,4.20%
+305,"OXY","Occidental Petroleum Corp","Energy","Oil & Gas E&P",5.56%,-2.29%,14.59%,44.02%,32.04%,-0.34%,2.97%,0.77,1.96%,53.84,2.55%,2.35%,59198.53,2.17%
+306,"PANW","Palo Alto Networks Inc","Technology","Software - Infrastructure",3.32%,22.04%,20.19%,119.92%,95.52%,242.17%,-0.07%,0.39,0.46%,63.18,4.11%,4.46%,331371.80,2.70%
+307,"PAYX","Paychex Inc","Technology","Software - Application",-0.27%,-20.83%,-8.41%,-11.72%,-20.53%,-13.79%,0.60%,0.48,0.09%,25.46,2.28%,2.44%,35252.75,6.21%
+308,"PCAR","Paccar Inc","Industrials","Farm & Heavy Construction Machinery",-1.55%,-11.72%,-11.68%,0.38%,13.49%,37.28%,-0.05%,0.40,0.22%,23.24,2.02%,2.28%,57858.83,2.38%
+309,"PCG","PG&E Corp","Utilities","Utilities - Regulated Electric",3.65%,-11.27%,-27.90%,-22.92%,-22.10%,-19.25%,0.95%,0.45,0.54%,33.80,3.02%,3.41%,27279.66,1.78%
+310,"PEG","Public Service Enterprise Group Inc","Utilities","Utilities - Regulated Electric",2.90%,-6.97%,-16.05%,-14.49%,-16.26%,21.40%,0.79%,0.92,0.87%,39.90,1.74%,1.56%,34224.01,2.16%
+311,"PEP","PepsiCo Inc","Consumer Defensive","Beverages - Non-Alcoholic",-2.51%,-10.53%,-13.59%,-12.71%,-11.76%,-21.75%,-0.39%,0.83,-0.49%,24.37,1.70%,1.55%,170990.88,1.90%
+312,"PFE","Pfizer Inc","Healthcare","Drug Manufacturers - General",-4.68%,-4.98%,13.73%,9.94%,0.02%,-18.21%,-1.17%,0.69,-1.53%,41.46,1.88%,1.65%,156028.55,2.73%
+313,"PFG","Principal Financial Group Inc","Financial","Asset Management",-2.38%,-5.56%,-0.85%,26.87%,32.85%,62.05%,0.26%,0.49,-0.04%,42.57,1.76%,2.15%,23961.53,4.45%
+314,"PG","Procter & Gamble Co","Consumer Defensive","Household & Personal Products",-2.25%,-0.85%,-4.63%,1.65%,-4.33%,1.30%,0.57%,0.51,0.53%,48.88,1.84%,1.39%,338352.75,1.04%
+315,"PGR","Progressive Corp","Financial","Insurance - Property & Casualty",0.43%,-6.03%,-10.25%,-7.61%,-14.38%,51.08%,0.18%,0.71,0.03%,46.97,1.99%,1.96%,122252.16,1.08%
+316,"PH","Parker-Hannifin Corp","Industrials","Specialty Industrial Machinery",1.07%,1.60%,2.35%,11.49%,28.40%,155.41%,0.77%,0.33,0.76%,54.62,1.97%,2.02%,123586.36,1.16%
+317,"PHM","PulteGroup Inc","Consumer Cyclical","Residential Construction",-3.93%,-7.94%,-11.91%,-2.40%,-16.83%,59.24%,-0.72%,0.51,-1.11%,36.32,2.88%,2.49%,21453.04,4.74%
+318,"PKG","Packaging Corp Of America","Consumer Cyclical","Packaging & Containers",-2.35%,-2.37%,-1.46%,11.04%,6.74%,50.12%,1.02%,0.32,0.20%,39.57,1.92%,2.06%,20404.16,3.89%
+319,"PLD","Prologis Inc","Real Estate","REIT - Industrial",-2.45%,-6.62%,-10.04%,1.20%,10.36%,18.49%,0.73%,0.46,0.22%,30.81,1.75%,1.55%,125219.68,1.99%
+320,"PM","Philip Morris International Inc","Consumer Defensive","Tobacco",-2.17%,1.82%,0.94%,18.18%,23.68%,106.09%,1.00%,0.74,1.12%,49.33,2.25%,2.19%,295448.92,0.89%
+321,"PNC","PNC Financial Services Group Inc","Financial","Banks - Regional",-0.84%,-9.54%,-12.68%,6.26%,11.76%,84.25%,-0.40%,0.66,0.35%,29.77,1.83%,1.96%,88483.71,1.94%
+322,"PNR","Pentair plc","Industrials","Specialty Industrial Machinery",-0.77%,-12.33%,-30.01%,-49.47%,-53.11%,-16.22%,-0.38%,0.37,-0.77%,24.75,1.98%,2.36%,8400.08,3.96%
+323,"PNW","Pinnacle West Capital Corp","Utilities","Utilities - Regulated Electric",5.86%,-1.36%,-10.99%,8.98%,7.20%,34.00%,0.30%,0.59,0.78%,55.85,2.36%,1.69%,11716.02,8.55%
+324,"PPG","PPG Industries Inc","Basic Materials","Specialty Chemicals",-1.36%,-4.69%,-12.20%,3.02%,1.08%,-19.63%,0.46%,0.44,0.39%,42.33,2.18%,2.14%,23464.88,2.92%
+325,"PPL","PPL Corp","Utilities","Utilities - Regulated Electric",3.25%,-5.57%,-8.89%,-5.33%,-9.66%,44.40%,1.02%,0.42,1.08%,45.80,1.55%,1.49%,24950.62,4.73%
+326,"PRU","Prudential Wealth Advisors","Financial","Insurance - Life",-1.78%,-7.45%,-1.25%,1.01%,9.62%,24.16%,1.25%,0.61,1.27%,38.72,2.21%,1.98%,39338.56,4.39%
+327,"PSA","Public Storage","Real Estate","REIT - Industrial",-0.65%,-7.46%,-13.92%,9.03%,-3.61%,9.29%,-0.02%,0.55,-0.31%,31.56,1.84%,1.97%,52867.39,3.65%
+328,"PSKY","Paramount Skydance Corp","Communication Services","Entertainment",-5.84%,-12.32%,-2.62%,-27.76%,-49.29%,-17.05%,4.42%,1.38,1.89%,43.89,6.38%,5.40%,10860.44,9.43%
+329,"PSX","Phillips 66","Energy","Oil & Gas Refining & Marketing",6.26%,5.79%,50.65%,108.78%,102.55%,146.09%,1.89%,0.51,1.83%,66.72,3.23%,3.36%,107501.91,1.70%
+330,"PTC","PTC Inc","Technology","Software - Application",38.16%,28.60%,54.35%,10.78%,-4.93%,38.03%,-1.42%,25.09,34.00%,80.63,3.48%,3.46%,20941.25,5.50%
+331,"PYPL","PayPal Holdings Inc","Financial","Credit Services",-0.65%,-5.10%,18.13%,-7.63%,-22.13%,-6.18%,2.77%,0.47,2.13%,49.03,2.26%,2.78%,46130.72,3.43%
+332,"Q","Qnity Electronics Inc","Technology","Semiconductor Equipment & Materials",6.20%,11.98%,-5.61%,62.47%,,,-0.94%,0.96,0.90%,62.01,2.80%,3.40%,27753.61,2.14%
+333,"QCOM","Qualcomm Inc","Technology","Semiconductors",-2.84%,8.06%,-0.44%,6.50%,7.67%,65.90%,-1.54%,0.74,-1.47%,50.04,3.87%,4.76%,191310.61,3.67%
+334,"RDDT","Reddit Inc","Communication Services","Internet Content & Information",5.73%,-3.02%,-24.15%,-34.19%,-26.99%,,0.42%,0.46,2.31%,48.78,5.01%,4.60%,29105.75,14.05%
+335,"REG","Regency Centers Corp","Real Estate","REIT - Retail",-2.30%,-5.64%,-11.27%,3.78%,-0.06%,23.37%,0.17%,0.39,0.06%,28.21,1.45%,1.40%,13118.75,3.36%
+336,"REGN","Regeneron Pharmaceuticals Inc","Healthcare","Biotechnology",-3.81%,-14.21%,7.01%,-6.25%,20.60%,-12.93%,-1.46%,0.54,-1.57%,32.27,3.45%,2.53%,74500.80,2.55%
+337,"RF","Regions Financial Corp","Financial","Banks - Regional",0.06%,-10.40%,-10.84%,0.65%,3.35%,64.70%,0.57%,0.71,0.65%,31.99,1.89%,1.99%,23236.38,6.51%
+338,"RJF","Raymond James Financial Inc","Financial","Asset Management",-1.18%,-12.06%,-4.97%,-0.83%,-4.53%,62.05%,0.36%,0.31,0.67%,36.63,2.04%,2.26%,30636.49,4.38%
+339,"RMD","Resmed Inc","Healthcare","Medical Instruments & Supplies",0.09%,-3.01%,1.16%,-7.71%,-20.21%,52.76%,1.55%,0.35,1.55%,48.36,2.15%,2.21%,32065.85,9.94%
+340,"ROK","Rockwell Automation Inc","Industrials","Specialty Industrial Machinery",5.93%,6.66%,-2.58%,17.40%,30.73%,59.63%,0.61%,0.35,0.54%,68.03,1.97%,2.17%,50725.37,3.41%
+341,"ROST","Ross Stores Inc","Consumer Cyclical","Apparel Retail",-4.39%,-2.15%,5.60%,25.84%,48.51%,102.90%,-0.96%,0.55,-0.81%,40.70,2.07%,2.01%,72415.24,3.03%
+342,"RSG","Republic Services Inc","Industrials","Waste Management",0.26%,-5.17%,-4.04%,0.73%,-4.76%,48.77%,1.98%,0.45,1.87%,46.12,1.64%,1.50%,65370.34,2.62%
+343,"RVTY","Revvity Inc","Healthcare","Diagnostics & Research",1.84%,17.74%,37.26%,58.97%,63.53%,44.28%,1.55%,0.47,1.50%,71.03,3.23%,3.61%,17162.22,5.60%
+344,"SBAC","SBA Communications Corp","Real Estate","REIT - Specialty",-1.39%,-15.85%,-12.05%,-16.69%,-16.10%,-15.75%,2.27%,0.45,1.68%,29.66,2.87%,2.89%,17096.63,3.60%
+345,"SBUX","Starbucks Corp","Consumer Cyclical","Restaurants",-0.79%,-10.68%,-8.77%,12.24%,9.37%,2.33%,-0.28%,0.64,-0.20%,34.44,1.73%,2.07%,107752.80,3.51%
+346,"SCHW","Charles Schwab Corp","Financial","Capital Markets",-0.95%,-11.79%,-4.47%,-2.54%,3.50%,90.70%,0.49%,0.39,0.69%,32.68,1.69%,2.15%,168385.42,1.18%
+347,"SHW","Sherwin-Williams Co","Basic Materials","Specialty Chemicals",-3.97%,-3.81%,-6.62%,-1.37%,-7.79%,25.96%,0.28%,0.43,0.03%,40.66,2.69%,2.29%,77584.03,2.83%
+348,"SJM","J.M. Smucker Co","Consumer Defensive","Packaged Foods",-3.56%,-9.47%,2.74%,18.94%,7.42%,-0.17%,-0.63%,0.31,-0.73%,35.72,2.56%,2.13%,12427.51,4.53%
+349,"SLB","SLB Ltd","Energy","Oil & Gas Equipment & Services",-1.84%,-11.96%,8.88%,31.69%,47.53%,-8.77%,2.56%,0.54,3.70%,42.93,2.73%,3.10%,75012.76,4.09%
+350,"SMCI","Super Micro Computer Inc","Technology","Computer Hardware",4.33%,15.10%,66.05%,48.92%,-16.11%,51.56%,0.12%,0.51,-0.23%,62.56,5.05%,5.37%,28636.14,16.62%
+351,"SNA","Snap-on Inc","Industrials","Tools & Accessories",0.14%,-3.77%,-9.55%,7.29%,6.42%,43.36%,0.72%,0.40,0.22%,39.34,1.49%,1.64%,19124.30,7.13%
+352,"SNPS","Synopsys Inc","Technology","Software - Infrastructure",16.18%,16.54%,11.12%,3.29%,3.41%,5.53%,-2.03%,1.00,-0.96%,71.78,4.89%,3.99%,92979.22,3.14%
+353,"SO","Southern Company","Utilities","Utilities - Regulated Electric",2.39%,-5.02%,-13.34%,-3.31%,-10.82%,30.54%,0.67%,0.52,0.71%,39.54,1.59%,1.42%,96993.09,2.52%
+354,"SOLV","Solventum Corp","Healthcare","Medical Instruments & Supplies",-1.63%,-4.72%,15.47%,11.15%,19.03%,,0.64%,0.50,0.26%,47.30,1.81%,2.08%,14993.16,3.36%
+355,"SPG","Simon Property Group Inc","Real Estate","REIT - Retail",-1.05%,-4.32%,-10.92%,9.34%,9.26%,93.66%,0.89%,0.39,0.72%,35.72,1.44%,1.43%,65485.50,3.08%
+356,"SPGI","S&P Global Inc","Financial","Financial Data & Stock Exchanges",-1.99%,-13.88%,-12.50%,-21.50%,-14.50%,13.55%,0.36%,0.63,0.46%,33.75,2.01%,2.12%,114390.94,2.24%
+357,"SRE","Sempra","Utilities","Utilities - Diversified",2.26%,-7.03%,-16.88%,-10.95%,-14.01%,18.68%,0.39%,0.37,0.31%,37.79,1.68%,1.67%,51413.31,1.68%
+358,"STE","Steris Plc","Healthcare","Medical Devices",-0.16%,-7.12%,-2.19%,-16.90%,-13.13%,-5.30%,1.06%,0.60,1.02%,41.37,1.64%,1.92%,20540.35,2.87%
+359,"STLD","Steel Dynamics Inc","Basic Materials","Steel",5.14%,-1.54%,5.49%,42.95%,66.95%,126.45%,3.96%,0.51,4.41%,55.86,3.15%,2.98%,34718.37,2.83%
+360,"STT","State Street Corp","Financial","Asset Management",-2.07%,-9.25%,-2.18%,36.43%,51.24%,173.86%,-0.40%,0.35,0.03%,34.36,1.87%,2.10%,48349.98,1.92%
+361,"STX","Seagate Technology Holdings Plc","Technology","Computer Hardware",-3.31%,11.57%,7.66%,223.54%,252.47%,1237.44%,1.83%,1.55,4.95%,52.03,5.61%,5.49%,202607.18,4.03%
+362,"STZ","Constellation Brands Inc","Consumer Defensive","Beverages - Brewers",-0.18%,-12.68%,-14.45%,-18.30%,-20.73%,-53.29%,-0.27%,0.82,-0.13%,24.26,1.64%,2.43%,19249.85,5.70%
+363,"SW","Smurfit WestRock plc","Consumer Cyclical","Packaging & Containers",-5.95%,-6.34%,-5.80%,9.62%,0.98%,31.00%,0.59%,0.43,-0.35%,36.40,2.76%,2.88%,22165.28,4.59%
+364,"SWK","Stanley Black & Decker Inc","Industrials","Tools & Accessories",1.87%,-6.33%,1.14%,21.69%,19.85%,16.66%,-0.72%,0.53,-1.04%,45.93,3.02%,2.68%,13650.39,4.75%
+365,"SWKS","Skyworks Solutions Inc","Technology","Semiconductors",-6.87%,14.08%,36.50%,28.64%,5.80%,-15.70%,-3.92%,0.72,-4.07%,49.42,5.05%,6.09%,12274.06,21.83%
+366,"SYF","Synchrony Financial","Financial","Credit Services",0.60%,-9.89%,-4.73%,-13.76%,1.01%,150.61%,0.15%,0.29,0.25%,39.94,1.96%,2.45%,23410.43,5.82%
+367,"SYK","Stryker Corp","Healthcare","Medical Devices",2.99%,-7.94%,-14.01%,-19.33%,-23.47%,7.07%,2.92%,0.86,2.94%,46.44,2.27%,2.81%,108758.30,2.13%
+368,"SYY","Sysco Corp","Consumer Defensive","Food Distribution",-1.85%,-4.89%,-8.87%,4.65%,-6.13%,21.15%,-0.41%,0.59,-0.48%,34.83,1.51%,1.93%,37933.89,2.50%
+369,"T","AT&T Inc","Communication Services","Telecom Services",-3.02%,-7.80%,14.50%,-2.78%,-10.76%,62.83%,-0.66%,0.42,-0.62%,36.42,1.62%,2.13%,165474.15,1.91%
+370,"TDY","Teledyne Technologies Inc","Technology","Scientific & Technical Instruments",1.75%,2.24%,-3.15%,21.69%,5.77%,56.12%,0.68%,0.29,0.70%,54.46,1.66%,1.66%,28810.32,1.95%
+371,"TECH","Bio-Techne Corp","Healthcare","Biotechnology",-0.07%,0.01%,2.62%,23.21%,15.11%,7.01%,0.05%,0.51,0.08%,57.60,0.21%,0.23%,11363.00,4.25%
+372,"TEL","TE Connectivity plc","Technology","Electronic Components",2.65%,5.25%,11.41%,-3.12%,-0.19%,82.26%,0.03%,0.27,0.02%,61.79,2.61%,2.68%,63811.61,2.88%
+373,"TER","Teradyne Inc","Technology","Semiconductor Equipment & Materials",10.70%,31.20%,29.47%,129.51%,205.03%,346.29%,-0.66%,0.43,-1.07%,67.59,4.39%,4.23%,69452.81,5.22%
+374,"TFC","Truist Financial Corp","Financial","Banks - Regional",-0.91%,-9.59%,-9.15%,-5.18%,2.50%,71.04%,0.14%,0.65,0.45%,34.15,1.85%,2.07%,31281.31,2.16%
+375,"TGT","Target Corp","Consumer Defensive","Discount Stores",-3.20%,-6.49%,20.24%,56.89%,72.26%,45.85%,-0.87%,0.80,-1.69%,42.27,2.22%,2.19%,69670.95,3.70%
+376,"TJX","TJX Companies Inc","Consumer Cyclical","Apparel Retail",3.39%,1.88%,-12.61%,-12.33%,-4.71%,53.33%,0.70%,0.70,1.50%,53.26,2.19%,2.11%,148133.49,1.68%
+377,"TMO","Thermo Fisher Scientific Inc","Healthcare","Diagnostics & Research",-1.81%,7.75%,28.98%,14.99%,22.64%,33.80%,2.01%,0.57,1.76%,61.25,2.22%,2.32%,246374.44,1.36%
+378,"TMUS","T-Mobile US Inc","Communication Services","Telecom Services",-1.33%,-12.65%,-11.09%,-19.11%,-28.68%,19.51%,1.28%,0.57,0.37%,38.67,1.76%,2.70%,176175.60,3.79%
+379,"TPL","Texas Pacific Land Corp","Energy","Oil & Gas E&P",3.14%,-4.84%,-13.41%,21.43%,10.62%,79.96%,2.10%,0.48,2.52%,48.10,2.81%,3.69%,24056.12,6.17%
+380,"TRGP","Targa Resources Corp","Energy","Oil & Gas Midstream",3.50%,-2.18%,4.87%,55.63%,76.92%,258.25%,2.01%,0.55,1.92%,54.16,2.79%,2.59%,61571.72,2.68%
+381,"TRMB","Trimble Inc","Technology","Scientific & Technical Instruments",2.13%,-2.27%,9.32%,-25.04%,-27.24%,14.27%,0.64%,0.54,2.11%,54.29,2.38%,2.48%,13695.81,3.85%
+382,"TROW","T. Rowe Price Group Inc","Financial","Asset Management",-0.20%,-6.56%,-13.78%,1.20%,0.32%,1.64%,-0.55%,0.52,-0.97%,39.27,1.95%,1.94%,22100.97,13.10%
+383,"TRV","Travelers Companies Inc","Financial","Insurance - Property & Casualty",-0.44%,-3.42%,5.18%,24.65%,27.06%,120.62%,0.42%,0.20,0.33%,44.20,1.65%,1.76%,75410.79,2.98%
+384,"TSCO","Tractor Supply Co","Consumer Cyclical","Specialty Retail",-3.90%,-10.93%,1.28%,-38.38%,-44.80%,-24.90%,0.26%,0.82,-0.87%,35.46,2.83%,3.11%,16057.68,7.58%
+385,"TSLA","Tesla Inc","Consumer Cyclical","Auto Manufacturers",5.77%,0.46%,-6.16%,-15.93%,-12.04%,45.39%,2.66%,1.14,2.02%,58.50,2.83%,2.97%,1493284.44,2.44%
+386,"TSN","Tyson Foods Inc","Consumer Defensive","Farm Products",1.88%,0.29%,-11.75%,-11.45%,-5.08%,7.76%,-0.19%,0.77,0.04%,43.80,1.84%,2.16%,17898.60,3.46%
+387,"TT","Trane Technologies plc","Industrials","Building Products & Equipment",4.17%,5.78%,-1.01%,21.00%,11.04%,134.50%,2.17%,0.60,1.51%,66.28,2.25%,2.17%,103615.51,1.52%
+388,"TTWO","Take-Two Interactive Software Inc","Communication Services","Electronic Gaming & Multimedia",-0.07%,-5.57%,-21.56%,-21.02%,-21.53%,44.23%,-0.45%,0.56,-0.26%,36.68,2.51%,2.96%,37808.38,5.05%
+389,"TXN","Texas Instruments Inc","Technology","Semiconductors",5.10%,15.23%,-0.28%,68.59%,62.21%,88.57%,0.37%,0.33,-0.45%,68.64,2.02%,2.66%,267117.37,2.17%
+390,"TXT","Textron Inc","Industrials","Aerospace & Defense",-1.83%,-4.30%,-17.06%,-12.87%,-12.54%,0.60%,-1.38%,0.46,-1.69%,34.02,2.31%,2.12%,13063.27,4.30%
+391,"TYL","Tyler Technologies Inc","Technology","Software - Application",1.23%,-13.52%,2.04%,-27.74%,-34.76%,-14.09%,0.90%,0.30,1.61%,45.93,3.29%,3.46%,13432.80,8.27%
+392,"UAL","United Airlines Holdings Inc","Industrials","Airlines",0.72%,3.36%,-12.47%,0.44%,17.82%,171.82%,-0.44%,0.92,-0.17%,50.33,2.93%,3.15%,36455.50,5.66%
+393,"UDR","UDR Inc","Real Estate","REIT - Residential",-0.96%,-7.88%,-18.75%,-8.65%,-7.90%,-5.83%,0.89%,0.56,0.71%,30.66,1.78%,1.68%,17495.47,3.12%
+394,"UHS","Universal Health Services Inc","Healthcare","Medical Care Facilities",0.21%,5.11%,10.29%,-18.42%,-14.18%,41.68%,1.39%,0.26,1.21%,54.98,2.16%,3.11%,10479.65,5.58%
+395,"UNH","Unitedhealth Group Inc","Healthcare","Healthcare Plans",-1.59%,-7.26%,-13.16%,12.64%,3.23%,-27.97%,-0.13%,0.64,-0.02%,40.34,2.09%,2.46%,333757.28,1.48%
+396,"UNP","Union Pacific Corp","Industrials","Railroads",1.44%,-3.84%,-1.79%,20.20%,17.42%,38.58%,0.25%,0.36,-0.08%,43.97,1.51%,1.67%,165180.13,4.63%
+397,"UPS","United Parcel Service Inc","Industrials","Integrated Freight & Logistics",-1.22%,-10.05%,-16.85%,-6.14%,7.28%,-39.30%,-0.25%,0.87,0.09%,34.43,1.55%,2.01%,79207.85,3.43%
+398,"URI","United Rentals Inc","Industrials","Rental & Leasing Services",4.19%,9.44%,3.00%,34.39%,10.90%,158.39%,0.52%,0.48,0.61%,60.65,4.05%,3.03%,67698.66,2.50%
+399,"USB","U.S. Bancorp","Financial","Banks - Regional",-1.79%,-9.14%,-8.21%,8.18%,20.09%,81.13%,0.05%,0.48,0.37%,33.40,1.69%,1.89%,89938.37,1.54%
+400,"V","Visa Inc","Financial","Credit Services",-0.05%,-2.95%,4.36%,4.80%,5.07%,57.43%,2.24%,0.42,1.91%,50.65,1.30%,1.41%,686251.93,1.09%
+401,"VEEV","Veeva Systems Inc","Healthcare","Health Information Services",-1.33%,-2.87%,43.64%,23.74%,-6.77%,37.15%,0.15%,0.46,1.06%,57.99,3.77%,2.96%,44723.56,3.36%
+402,"VICI","VICI Properties Inc","Real Estate","REIT - Diversified",-1.83%,-11.25%,-14.96%,-19.04%,-30.23%,-19.13%,0.51%,0.54,0.51%,25.62,1.66%,1.58%,25066.03,2.46%
+403,"VLO","Valero Energy Corp","Energy","Oil & Gas Refining & Marketing",7.53%,13.01%,57.36%,157.33%,161.17%,228.61%,3.06%,0.69,3.10%,70.00,4.07%,4.31%,120617.30,3.38%
+404,"VLTO","Veralto Corp","Industrials","Pollution & Treatment Controls",-0.19%,-1.90%,3.13%,-3.77%,-10.38%,28.97%,1.87%,0.48,1.41%,51.00,1.62%,1.59%,23408.16,2.73%
+405,"VMC","Vulcan Materials Co","Basic Materials","Building Materials",-0.61%,-5.99%,-18.43%,-14.23%,-19.71%,18.21%,1.19%,0.53,0.65%,39.67,2.88%,2.48%,31700.14,4.29%
+406,"VMRK","Vivmark Residential","Real Estate","REIT - Residential",-3.18%,-8.53%,-15.30%,-5.74%,-6.13%,3.38%,1.26%,0.47,-0.62%,28.93,1.64%,1.91%,45977.95,2.33%
+407,"VRSK","Verisk Analytics Inc","Industrials","Consulting Services",-3.22%,-14.81%,-15.54%,-27.41%,-34.80%,-31.96%,-0.77%,0.43,-0.92%,31.96,2.56%,2.97%,21133.43,3.58%
+408,"VRTX","Vertex Pharmaceuticals Inc","Healthcare","Biotechnology",-4.41%,-9.60%,-3.42%,11.26%,25.07%,42.03%,0.16%,0.38,-0.06%,38.86,2.10%,2.16%,127849.49,1.87%
+409,"VTR","Ventas Inc","Real Estate","REIT - Healthcare Facilities",-4.84%,-10.07%,-11.95%,7.04%,18.74%,106.02%,-1.33%,1.31,-1.40%,24.05,1.85%,1.81%,43432.03,3.88%
+410,"VTRS","Viatris Inc","Healthcare","Drug Manufacturers - Specialty & Generic",-3.01%,4.60%,4.48%,42.33%,73.90%,82.87%,-0.45%,0.47,0.68%,59.11,2.92%,2.47%,20353.03,3.63%
+411,"VYLR","Vylor Inc","Financial","Shell Companies",,,,6.20%,,,5.24%,0.55,4.21%,,,,,
+412,"VZ","Verizon Communications Inc","Communication Services","Telecom Services",-2.02%,-9.60%,7.38%,12.29%,4.73%,43.73%,-0.44%,0.58,-0.40%,33.46,1.40%,1.88%,190018.66,2.02%
+413,"WAB","Westinghouse Air Brake Technologies Corp","Industrials","Railroads",0.20%,4.32%,13.03%,37.25%,46.42%,186.92%,1.68%,0.65,1.88%,57.96,1.98%,2.01%,49482.44,2.17%
+414,"WAT","Waters Corp","Healthcare","Diagnostics & Research",-1.93%,5.04%,15.86%,14.37%,32.28%,63.32%,1.00%,1.19,2.16%,58.77,2.82%,2.55%,42679.96,3.37%
+415,"WBD","Warner Bros. Discovery Inc","Communication Services","Entertainment",0.22%,9.16%,18.56%,7.46%,63.08%,206.93%,0.06%,1.90,0.09%,75.39,0.23%,0.89%,77754.12,2.47%
+416,"WDAY","Workday Inc","Technology","Software - Application",-1.00%,-9.77%,29.98%,-13.07%,-21.05%,-8.98%,0.26%,0.41,0.31%,47.71,3.82%,3.65%,44997.11,7.29%
+417,"WDC","Western Digital Corp","Technology","Computer Hardware",-2.53%,0.04%,-16.98%,156.44%,236.43%,1167.92%,2.89%,1.90,6.38%,46.92,5.57%,5.35%,159274.36,4.83%
+418,"WEC","WEC Energy Group Inc","Utilities","Utilities - Regulated Electric",0.67%,-4.28%,-13.21%,-3.16%,-9.85%,28.79%,0.70%,0.42,0.53%,41.50,1.90%,1.52%,33279.00,4.21%
+419,"WFC","Wells Fargo & Co","Financial","Banks - Diversified",1.26%,-8.25%,-6.14%,-12.20%,1.44%,108.22%,-0.10%,0.80,1.72%,40.43,1.92%,2.30%,247457.25,1.05%
+420,"WM","Waste Management Inc","Industrials","Waste Management",0.23%,-6.68%,-12.77%,-5.83%,-5.85%,33.73%,1.17%,0.76,1.20%,39.15,1.65%,1.47%,82705.07,1.45%
+421,"WMB","Williams Cos Inc","Energy","Oil & Gas Midstream",3.81%,-3.30%,-4.62%,19.13%,11.06%,114.66%,1.53%,0.43,1.52%,51.39,2.38%,2.45%,87591.03,1.97%
+422,"WMT","Walmart Inc","Consumer Defensive","Discount Stores",-3.84%,-3.56%,-6.26%,-6.15%,2.44%,97.18%,0.71%,0.55,0.29%,41.22,2.03%,1.81%,829552.47,1.82%
+423,"WRB","W.R. Berkley Corp","Financial","Insurance - Property & Casualty",3.27%,0.54%,-2.33%,0.40%,-7.07%,72.36%,1.46%,0.38,1.30%,55.31,2.04%,1.98%,25939.53,7.01%
+424,"WSM","Williams-Sonoma Inc","Consumer Cyclical","Specialty Retail",2.25%,6.04%,6.17%,32.27%,18.45%,212.67%,1.67%,0.47,1.69%,57.98,2.87%,2.79%,27821.75,4.97%
+425,"WST","West Pharmaceutical Services Inc","Healthcare","Medical Instruments & Supplies",-0.51%,9.05%,4.96%,35.84%,37.12%,0.27%,2.48%,0.85,2.40%,61.02,2.06%,2.27%,26302.59,3.40%
+426,"WTW","Willis Towers Watson Public Limited Co","Financial","Insurance Brokers",-2.01%,-16.32%,-2.61%,-12.89%,-17.55%,37.23%,0.19%,0.60,-0.82%,27.88,1.56%,2.14%,26582.74,2.65%
+427,"WY","Weyerhaeuser Co","Real Estate","REIT - Specialty",-5.45%,-19.07%,-19.94%,-21.29%,-25.77%,-37.63%,1.28%,0.82,0.95%,19.18,2.72%,2.40%,13438.48,3.83%
+428,"XEL","Xcel Energy Inc","Utilities","Utilities - Regulated Electric",3.57%,-5.86%,-10.91%,-2.70%,-10.46%,27.25%,0.92%,0.48,0.66%,43.49,1.72%,1.71%,44891.22,6.64%
+429,"XOM","ExxonMobil Holdings Corp","Energy","Oil & Gas Integrated",0.85%,1.04%,15.67%,36.19%,44.71%,50.38%,0.02%,0.58,-0.07%,54.68,1.75%,2.06%,673921.85,0.97%
+430,"XYL","Xylem Inc","Industrials","Specialty Industrial Machinery",2.35%,-4.27%,-14.40%,-24.16%,-31.08%,14.58%,2.31%,0.57,1.46%,39.10,1.82%,2.33%,24114.51,4.68%
+431,"XYZ","Block Inc","Technology","Software - Infrastructure",3.94%,-8.60%,-1.75%,17.07%,-0.97%,78.71%,2.72%,0.71,2.52%,46.95,2.53%,2.68%,45780.67,2.52%
+432,"YUM","Yum Brands Inc","Consumer Cyclical","Restaurants",-0.70%,-9.99%,-18.02%,-9.24%,-8.88%,12.69%,0.49%,0.87,0.87%,40.19,1.47%,2.39%,37470.93,3.62%
+433,"ZBH","Zimmer Biomet Holdings Inc","Healthcare","Medical Devices",-0.53%,-7.88%,1.92%,1.35%,-9.58%,-16.62%,2.37%,0.64,3.22%,44.21,1.86%,2.76%,17381.92,4.50%
+434,"ZBRA","Zebra Technologies Corp","Technology","Communication Equipment",0.78%,4.83%,41.61%,54.34%,22.87%,68.40%,-0.12%,0.40,-0.29%,62.65,2.64%,2.88%,17730.36,3.95%
+435,"ZTS","Zoetis Inc","Healthcare","Drug Manufacturers - Specialty & Generic",-0.76%,-7.08%,-7.08%,-43.66%,-51.59%,-58.79%,2.07%,0.41,1.71%,43.51,2.26%,2.31%,29291.35,4.22%
