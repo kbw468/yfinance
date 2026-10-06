@@ -1,0 +1,498 @@
+ticker,n_signatures,best_p_top_q_42,best_signature,best_signature_n,all_signatures
+NVDA,65,0.6155555555555555,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,450,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.62) | beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & dist_52w_high:TOP & z_rs_lead_126:BOT (0.47) | beta_252:TOP & dist_52w_high:TOP & rv_ratio_20_60:BOT (0.34) | beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP (0.47)
+FLEX,175,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | beta_252:TOP & sharpe_126:TOP & z_dist_52w_high:BOT (0.41) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
+AMAT,134,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
+LRCX,99,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
+LYB,12,0.5715622076707203,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP,1069,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP (0.57) | days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | base_depth_126:BOT & capture_spread_63:TOP & vol_of_vol_63:BOT (0.44) | days_since_20pct_dd:BOT & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.47) | base_depth_126:BOT & capture_spread_63:TOP & z_vol_dry_20_250:BOT (0.49)
+QCOM,44,0.559322033898305,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50%,177,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50% (0.56) | dist_52w_high:BOT & dvol_trend_21_126:BOT & volROC21>+50% (0.52) | beta_252:TOP & dvol_trend_21_126:BOT & volROC21>+50% (0.55) | base_depth_126:BOT & dvol_trend_21_126:BOT & volROC21>+50% (0.52) | dn_vol_63:TOP & dvol_trend_21_126:BOT & volROC21>+50% (0.53)
+SNDK,182,0.5369458128078818,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,812,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.54) | dist_52w_high:BOT & rvROC21<-20% & sharpe_126:TOP (0.47) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & rvROC21<-20% & sharpe_126:TOP (0.47)
+PLTR,197,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & parkinson_cc_20:TOP & skew_63:TOP (0.41) | dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & parkinson_cc_20:TOP (0.46)
+ANET,159,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP (0.51)
+MRVL,148,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | gap_share_21:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48)
+EXPE,15,0.5275459098497496,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT,1198,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.53) | idio_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.50) | idio_vol_63:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36)
+FDX,9,0.5209888059701493,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT,2144,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT (0.52) | accum_dist_50:BOT & dist_52w_low:TOP & dvol_trend_21_126:BOT (0.49) | dist_52w_low:TOP & updown_vol_ratio_50:BOT (0.41) | dist_52w_low:TOP & dvol_trend_21_126:BOT & rv_ratio_20_60:TOP (0.41) | ret_21:BOT & dist_52w_low:TOP (0.38)
+PTC,54,0.5202702702702703,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT,296,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT (0.52) | dist_52w_low:TOP & log_dvol_63:BOT & mom_12_1:BOT (0.44) | dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.41) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | gap_share_21:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.35)
+HAL,40,0.5194805194805194,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT,154,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT (0.52) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.52) | dist_52w_low:TOP & net_vol_flow_63:BOT & range_comp_10_252:BOT (0.38) | dist_52w_low:TOP & net_vol_flow_63:BOT & rvROC21<-20% (0.40) | base_depth_126:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.49)
+FCX,77,0.5194216395049627,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP,8161,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP (0.42) | beta_252:TOP & z_mom_12_1:TOP & z_obv_price_div_63:BOT (0.43) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_mom_12_1:TOP (0.45) | bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP (0.47)
+VRT,140,0.5176848874598071,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,311,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.37) | capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.48) | dist_52w_high:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.44)
+MPWR,62,0.5176848874598071,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,311,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.52) | dvol_trend_21_126:BOT & idio_vol_63:TOP & volROC21>+25% (0.47) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | beta_252:TOP & net_vol_flow_63:TOP & z_log_dvol_63:TOP (0.49)
+ETN,39,0.5149402390438247,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP,1004,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP (0.51) | dist_52w_high:TOP & dn_vol_63:TOP & net_vol_flow_63:TOP (0.52) | base_depth_126:TOP & dn_vol_63:TOP & vol_dry_10_50:BOT (0.41) | base_depth_126:TOP & dn_vol_63:TOP & net_vol_flow_63:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:TOP & dn_vol_63:TOP (0.44)
+ALGN,33,0.5147584973166368,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP,2236,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP (0.51) | beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.51) | base_depth_126:BOT & beta_252:TOP & z_mom_12_1:TOP (0.50) | dist_52w_high:BOT & range_comp_10_252:BOT & z_mom_12_1:TOP (0.49) | dist_52w_high:BOT & dvol_trend_21_126:BOT & z_mom_12_1:TOP (0.42)
+PANW,45,0.5136443661971831,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP,2272,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | dn_vol_63:TOP & rvROC21<-20% & skew_63:TOP (0.39) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | base_depth_126:TOP & dn_vol_63:TOP & skew_63:TOP (0.43) | dn_vol_63:TOP & higher_low_cadence:TOP & skew_63:TOP (0.44)
+EL,128,0.5110062893081762,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP,2544,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.51) | days_since_20pct_dd:BOT & sharpe_126:TOP & z_mom_12_1:TOP (0.56) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | clv_21:BOT & days_since_20pct_dd:BOT & sharpe_126:TOP (0.59) | beta_252:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.35)
+MU,131,0.5044722719141324,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,559,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50) | beta_252:TOP & z_mom_12_1:TOP & z_rs_lead_126:BOT (0.59) | gap_share_21:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53)
+GLW,82,0.4982027318475917,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT,2782,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT (0.50) | base_depth_126:BOT & beta_252:TOP & z_vol_dry_20_250:BOT (0.47) | corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48) | days_since_20pct_dd:BOT & mom_12_1:TOP & up_capture_63:TOP (0.50)
+HOOD,179,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | clv_21:BOT & dn_vol_63:TOP & sharpe_126:TOP (0.51) | clv_21:BOT & days_since_20pct_dd:BOT & sharpe_126:TOP (0.59) | capture_spread_63:BOT & dn_vol_63:TOP & sharpe_126:TOP (0.44)
+SMCI,103,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | days_since_20pct_dd:BOT & idio_vol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.47) | dn_vol_63:TOP & skew_63:TOP & up_day_frac_63:TOP (0.43)
+INTC,93,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | dn_vol_63:TOP & gap_share_21:TOP & skew_63:TOP (0.43) | days_since_20pct_dd:BOT & idio_vol_63:TOP & sharpe_126:TOP (0.50)
+PNR,24,0.49130434782608695,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP,230,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP (0.49) | dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP (0.38) | accum_dist_50:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.45) | dvol_trend_21_126:BOT & up_day_frac_63:BOT & vol_dry_20_250:TOP (0.40) | capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38)
+DDOG,76,0.49083063646170444,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP,927,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP (0.49) | dn_vol_63:TOP & rv20_pct_252:BOT & z_dist_52w_high:TOP (0.45) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | dist_52w_high:TOP & dn_vol_63:TOP & vol_of_vol_63:TOP (0.34)
+C,3,0.4876434245366284,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT,2266,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.49) | mom_12_1:TOP & beta_252:TOP (0.43) | range_comp_10_252:BOT & beta_252:TOP (0.38)
+UAL,9,0.4873035066505441,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP,827,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP (0.49) | beta_252:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.50) | beta_252:TOP & dvol_trend_21_126:BOT & pullback_vol_21:BOT (0.38) | beta_252:TOP & dvol_trend_21_126:BOT & rs_spy_63:BOT (0.44) | beta_252:TOP & dvol_trend_21_126:BOT & ret_63:BOT (0.44)
+ECHO,28,0.4842840512223516,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT,859,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.48) | base_depth_126:BOT & beta_252:TOP & skew_63:TOP (0.40) | beta_252:TOP & sharpe_126:BOT & skew_63:TOP (0.38) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | base_depth_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.47)
+STX,142,0.4823943661971831,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP,284,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP (0.48) | dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.54) | dist_52w_high:BOT & gap_share_21:TOP & sharpe_126:TOP (0.63) | base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | dist_52w_high:BOT & net_vol_flow_63:TOP & sharpe_126:TOP (0.46)
+ORCL,32,0.48204960835509136,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,3064,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.48) | pullback_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.41) | beta_252:TOP & pullback_21:BOT & rvROC21<-10% (0.40) | corr_spy_63:TOP & idio_vol_63:TOP & rvROC21<-10% (0.41) | beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45)
+CAT,19,0.4819512195121951,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1025,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.48) | dist_52w_low:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:TOP (0.41) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.42) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | beta_252:TOP & dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.43)
+AMD,136,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | beta_252:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.50) | beta_252:TOP & dn_vol_63:TOP & z_mom_12_1:TOP (0.51) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52)
+KEYS,42,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & skew_63:BOT & z_dist_52w_high:TOP (0.40) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & rs_spy_63:TOP & z_mom_12_1:TOP (0.47) | beta_252:TOP & ret_63:TOP & z_mom_12_1:TOP (0.47)
+ADI,32,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.46)
+TXN,21,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42)
+CTSH,26,0.47690655209452204,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP,1862,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP (0.48) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & pullback_21:BOT (0.39) | dist_52w_high:BOT & dist_52w_low:TOP & dn_up_vol_asym_63:BOT (0.32) | days_since_20pct_dd:BOT & dist_52w_low:TOP & dn_up_vol_asym_63:BOT (0.33) | capture_spread_63:TOP & dist_52w_low:TOP & pullback_21:BOT (0.47)
+DLR,3,0.47634408602150535,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP,1860,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP (0.48) | days_since_20pct_dd:TOP & higher_low_cadence:BOT & up_capture_63:TOP (0.56) | higher_low_cadence:BOT & up_capture_63:TOP (0.44)
+LDOS,4,0.4732510288065844,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP,486,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP (0.47) | base_depth_126:BOT & dn_up_vol_asym_63:BOT & updown_vol_ratio_50:TOP (0.46) | accum_dist_50:TOP & base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.47) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
+NCLH,80,0.4716885743174924,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,1978,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP (0.47) | base_depth_126:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT (0.45) | bbw_pct_252:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.42) | idio_vol_63:TOP & net_vol_flow_63:BOT & up_capture_63:TOP (0.44) | higher_low_cadence:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.47)
+CCL,46,0.4716885743174924,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,1978,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP (0.47) | higher_low_cadence:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.47) | higher_low_cadence:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | beta_252:TOP & days_since_20pct_dd:BOT & dn_up_vol_asym_63:BOT (0.34) | accum_dist_50:BOT & beta_252:TOP & dn_up_vol_asym_63:BOT (0.41)
+COF,17,0.47139588100686497,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP,874,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP (0.47) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | ret_21:BOT & rv20_pct_252:BOT & up_capture_63:TOP (0.34) | beta_252:TOP & pullback_vol_21:BOT & ret_21:BOT (0.47) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36)
+P,179,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dist_52w_high:TOP & dn_vol_63:TOP & vol_dry_20_250:TOP (0.53) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & vol_dry_20_250:TOP (0.47)
+DELL,158,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_vol_63:TOP & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.53) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51)
+HPE,141,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48)
+NTAP,64,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & gap_share_21:BOT & z_mom_12_1:TOP (0.56) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52)
+META,62,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | beta_252:TOP & net_vol_flow_63:TOP & z_log_dvol_63:TOP (0.49) | beta_252:TOP & idio_vol_63:TOP & up_day_frac_63:TOP (0.48)
+FSLR,49,0.4671717171717172,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP,1980,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP (0.47) | dist_52w_low:BOT & higher_low_cadence:BOT & up_capture_63:TOP (0.42) | higher_low_cadence:BOT & pullback_21:BOT & up_capture_63:TOP (0.48) | higher_low_cadence:BOT & rs_spy_63:BOT & up_capture_63:TOP (0.53) | higher_low_cadence:BOT & ret_63:BOT & up_capture_63:TOP (0.53)
+EMR,19,0.4662670427832628,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP,8508,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP (0.47) | beta_252:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.46) | beta_252:TOP & rs_spy_63:TOP & up_day_frac_63:TOP (0.43) | beta_252:TOP & ret_63:TOP & up_day_frac_63:TOP (0.43) | beta_252:TOP & capture_spread_63:TOP & vol_of_vol_63:BOT (0.47)
+SWK,6,0.4651927098894532,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP,3347,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP (0.47) | beta_252:TOP & log_dvol_63:BOT & z_mom_12_1:TOP (0.46) | beta_252:TOP & z_mom_12_1:TOP (0.46) | sharpe_126:TOP & beta_252:TOP (0.42) | log_dvol_63:BOT & beta_252:TOP (0.38)
+ON,122,0.4650602409638554,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP,415,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP (0.47) | dist_52w_high:BOT & up_capture_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP (0.51) | dist_52w_high:BOT & px21>+8% & z_mom_12_1:TOP (0.64) | dist_52w_high:BOT & updown_vol_ratio_50:TOP & z_mom_12_1:TOP (0.55)
+ABNB,68,0.4627720504009164,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP,1746,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP (0.46) | ret_21:BOT & rs_spy_63:TOP & z_vol_dry_20_250:TOP (0.33) | ret_21:BOT & ret_63:TOP & z_vol_dry_20_250:TOP (0.33) | ret_21:BOT & rs_spy_63:TOP & z_log_dvol_63:TOP (0.35) | ret_21:BOT & ret_63:TOP & z_log_dvol_63:TOP (0.35)
+ROK,10,0.46172248803827753,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP,418,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP (0.46) | beta_252:TOP & higher_low_cadence:BOT & up_day_frac_63:TOP (0.33) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & sharpe_126:TOP & up_day_frac_63:TOP (0.46) | beta_252:TOP & dist_52w_high:TOP & vol_dry_10_50:BOT (0.35)
+HWM,24,0.46171045276690886,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20%,1789,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20% (0.46) | days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-10% (0.49) | dn_vol_63:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.47) | dn_vol_63:TOP & up_day_frac_63:TOP & z_rs_lead_126:BOT (0.32) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & mom_12_1:TOP (0.46)
+NRG,48,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & days_since_ignition:BOT & ret_21:BOT (0.36) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41)
+APP,44,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & dvol_trend_21_126:BOT & sharpe_126:BOT (0.38) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41) | beta_252:TOP & dvol_trend_21_126:BOT & pullback_21:BOT (0.42)
+LULU,38,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & gap_share_21:BOT & rvROC21<-20% (0.37) | beta_252:TOP & obv_price_div_63:BOT & rv_ratio_20_60:BOT (0.36) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41) | dn_vol_63:TOP & px5<-3% & rvROC21<-20% (0.37)
+GNRC,91,0.4596456692913386,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1016,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & vol_dry_20_250:TOP (0.47)
+COHR,79,0.4596456692913386,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1016,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.44) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48)
+MCHP,84,0.45294117647058824,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP,1190,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP (0.45) | dn_vol_63:TOP & gap_share_21:TOP & skew_63:TOP (0.43) | base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT (0.50) | beta_252:TOP & dn_vol_63:TOP & skew_63:TOP (0.44) | base_depth_126:BOT & dist_52w_low:TOP & range_comp_10_252:BOT (0.54)
+MGM,7,0.4515576857240671,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP,2921,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP (0.45) | days_since_20pct_dd:BOT & log_dvol_63:BOT & z_mom_12_1:TOP (0.44) | dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32) | dist_52w_high:BOT & z_mom_12_1:TOP (0.42) | dn_vol_63:TOP & z_mom_12_1:TOP (0.45)
+CDNS,7,0.44849537037037035,net_vol_flow_63:TOP & dn_vol_63:TOP,8640,net_vol_flow_63:TOP & dn_vol_63:TOP (0.45) | net_vol_flow_63:TOP & beta_252:TOP (0.41) | dn_vol_63:TOP & beta_252:TOP (0.43) | dn_vol_63:TOP & up_capture_63:TOP (0.45) | updown_vol_ratio_50:TOP & dn_vol_63:TOP (0.43)
+GOOGL,3,0.44796035074342355,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,5246,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45) | mom_12_1:TOP & beta_252:TOP (0.43) | updown_vol_ratio_50:TOP & beta_252:TOP (0.41)
+GOOG,2,0.44796035074342355,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,5246,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45) | updown_vol_ratio_50:TOP & beta_252:TOP (0.41)
+CPRT,2,0.4426229508196721,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT,183,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT (0.44) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
+BE,89,0.4411764705882353,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,884,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP (0.44) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | bbw_pct_252:BOT & idio_vol_63:TOP & parkinson_cc_20:BOT (0.37) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_rv20_pct_252:BOT (0.44) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dist_52w_high:TOP (0.43)
+AKAM,38,0.4395909169700121,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP,5769,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP (0.44) | beta_252:TOP & capture_spread_63:BOT & skew_63:TOP (0.32) | base_depth_126:BOT & beta_252:TOP & skew_63:TOP (0.40) | rs_spy_63:BOT & up_capture_63:TOP & volROC10>+50% (0.55) | ret_63:BOT & up_capture_63:TOP & volROC10>+50% (0.55)
+CF,11,0.43805309734513276,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT,2034,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT (0.44) | capture_spread_63:TOP & dist_52w_low:TOP & pullback_21:BOT (0.47) | dist_52w_low:TOP & pullback_21:BOT & rvROC21<-20% (0.41) | capture_spread_63:TOP & mom_12_1:TOP & pullback_21:BOT (0.47) | capture_spread_63:TOP & mom_12_1:TOP & ret_21:BOT (0.40)
+BEN,7,0.4375,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT,1920,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT (0.44) | accum_dist_50:BOT & dist_52w_low:TOP & rvROC10<-20% (0.44) | accum_dist_50:BOT & dist_52w_low:TOP & up_day_frac_63:BOT (0.49) | accum_dist_50:BOT & bbw_pct_252:BOT & dist_52w_low:TOP (0.43) | accum_dist_50:BOT & dist_52w_low:TOP & rvROC21<-10% (0.43)
+WDC,114,0.4374537379718727,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,1351,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | dist_52w_low:TOP & gap_share_21:TOP & rs_spy_63:BOT (0.49) | dist_52w_low:TOP & gap_share_21:TOP & ret_63:BOT (0.49) | accum_dist_50:BOT & dist_52w_low:TOP & rs_spy_63:BOT (0.55) | accum_dist_50:BOT & dist_52w_low:TOP & ret_63:BOT (0.55)
+NOW,75,0.4374537379718727,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,1351,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | dn_vol_63:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:BOT (0.44)
+JBL,38,0.43673012318029114,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50%,893,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50% (0.44) | gap_share_21:TOP & idio_vol_63:TOP & mom_12_1:TOP (0.48) | dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.48) | beta_252:TOP & mom_12_1:TOP & vol_dry_20_250:TOP (0.47) | base_depth_126:BOT & mom_12_1:TOP & up_capture_63:TOP (0.51)
+JBHT,62,0.4339171974522293,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT,1256,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT (0.43) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.52) | dist_52w_low:TOP & ret_21:BOT & volROC21>+50% (0.39) | dist_52w_low:TOP & higher_low_cadence:BOT & pullback_21:BOT (0.45) | base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50% (0.44)
+CBOE,2,0.4320809248554913,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT,692,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT (0.43) | base_depth_126:BOT & capture_spread_63:TOP (0.47)
+VST,47,0.4319880418535127,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP,669,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP (0.43) | beta_252:TOP & net_vol_flow_63:TOP & rs_lead_126:BOT (0.37) | base_depth_126:TOP & dn_vol_63:TOP & vol_dry_20_250:TOP (0.50) | dn_vol_63:TOP & pullback_vol_21:BOT & up_day_frac_63:TOP (0.42) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32)
+PWR,45,0.43099273607748184,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,4956,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & skew_63:TOP & up_day_frac_63:TOP (0.42) | corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & mom_12_1:TOP (0.40) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45)
+CEG,40,0.43099273607748184,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,4956,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & skew_63:TOP & up_day_frac_63:TOP (0.42) | beta_252:TOP & up_day_frac_63:TOP & z_dn_up_vol_asym_63:BOT (0.43) | beta_252:TOP & days_since_20pct_dd:BOT & dn_up_vol_asym_63:BOT (0.34) | beta_252:TOP & clv_21:BOT & up_day_frac_63:TOP (0.34)
+MRNA,339,0.43028229255774164,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,1169,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.43) | beta_252:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.42) | dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41)
+ACN,105,0.43028229255774164,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,1169,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.43) | dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.43) | accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35)
+NXPI,11,0.4269098598995506,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT,7566,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT (0.43) | beta_252:TOP & dvol_trend_21_126:BOT & rs_spy_63:BOT (0.44) | beta_252:TOP & dvol_trend_21_126:BOT & ret_63:BOT (0.44) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | range_comp_10_252:BOT & dn_vol_63:TOP (0.39)
+FIX,48,0.4268142681426814,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT,2439,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | dn_vol_63:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.47) | gap_share_21:TOP & idio_vol_63:TOP & mom_12_1:TOP (0.48) | dn_vol_63:TOP & gap_share_21:TOP & z_vol_dry_20_250:BOT (0.43)
+ALB,16,0.42495784148397975,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT,593,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT (0.42) | beta_252:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.49) | beta_252:TOP & dist_52w_high:BOT & mom_12_1:TOP (0.50) | dist_52w_high:BOT & mom_12_1:TOP & nr7_count_20:TOP (0.47) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40)
+FTNT,17,0.42325319043925824,idio_vol_63:TOP & sharpe_126:TOP,14183,idio_vol_63:TOP & sharpe_126:TOP (0.42) | dn_up_vol_asym_63:BOT & idio_vol_63:TOP & z_log_dvol_63:TOP (0.43) | dist_52w_high:TOP & idio_vol_63:TOP & vol_dry_20_250:BOT (0.34) | idio_vol_63:TOP & rs_lead_126:TOP & vol_dry_20_250:BOT (0.36) | idio_vol_63:TOP & z_mom_12_1:TOP (0.43)
+DOW,18,0.4217687074829932,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP,441,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP (0.42) | dist_52w_high:BOT & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.46) | dist_52w_high:BOT & z_mom_12_1:TOP & z_rv20_pct_252:BOT (0.41) | dist_52w_high:BOT & range_comp_10_252:BOT & z_mom_12_1:TOP (0.49) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.45)
+GPN,25,0.4211267605633803,pullback_21:BOT & rs_spy_63:TOP & sharpe_126:TOP,3550,pullback_21:BOT & rs_spy_63:TOP & sharpe_126:TOP (0.42) | pullback_21:BOT & ret_63:TOP & sharpe_126:TOP (0.42) | capture_spread_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.46) | pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & ret_21:BOT & rs_spy_63:TOP (0.35)
+SW,24,0.42110960757780785,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP,3695,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP (0.42) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & skew_63:TOP & z_mom_12_1:TOP (0.44) | net_vol_flow_63:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT (0.43) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36)
+HII,3,0.4196969696969697,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT,660,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT (0.42) | base_depth_126:BOT & dn_up_vol_asym_63:BOT & volROC21>+25% (0.52) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
+XYZ,29,0.41967621419676215,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP,2409,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & sharpe_126:TOP & vol_of_vol_63:BOT (0.45) | beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & rvROC21<-20% & sharpe_126:TOP (0.41) | beta_252:TOP & sharpe_126:TOP & z_obv_price_div_63:BOT (0.36)
+BBY,8,0.41967458387881057,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP,5347,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP (0.42) | pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & sharpe_126:TOP & z_dist_52w_high:TOP (0.42) | pullback_21:BOT & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.47) | dist_52w_low:TOP & pullback_21:BOT (0.41)
+TSLA,49,0.4191082802547771,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP,785,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.42) | days_since_ignition:BOT & dn_up_vol_asym_63:TOP & up_capture_63:TOP (0.41) | rvROC21<-20% & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.45) | rvROC10<-20% & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.47) | dn_up_vol_asym_63:TOP & rvROC10<-20% & up_capture_63:TOP (0.46)
+VTRS,5,0.41823899371069184,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3%,954,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3% (0.42) | accum_dist_50:BOT & dist_52w_low:TOP & px5<-3% (0.47) | dist_52w_low:TOP & log_dvol_63:BOT (0.35) | dist_52w_low:TOP & px5<-3% (0.39) | dist_52w_low:TOP & accum_dist_50:BOT (0.46)
+LITE,120,0.4170522141440846,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,1513,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | base_depth_126:TOP & dn_vol_63:TOP & range_comp_10_252:BOT (0.40) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_rv20_pct_252:BOT (0.44) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dist_52w_high:TOP (0.43) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49)
+CMI,6,0.4170522141440846,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,1513,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & z_dist_52w_high:BOT (0.41) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | base_depth_126:BOT & beta_252:TOP (0.41)
+KLAC,94,0.416195856873823,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,531,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.42) | dist_52w_low:TOP & gap_share_21:TOP & rs_spy_63:BOT (0.49) | dist_52w_low:TOP & gap_share_21:TOP & ret_63:BOT (0.49) | dist_52w_low:TOP & parkinson_cc_20:BOT & rs_spy_63:BOT (0.45) | dist_52w_low:TOP & parkinson_cc_20:BOT & ret_63:BOT (0.45)
+CIEN,64,0.416195856873823,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,531,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.42) | dist_52w_high:BOT & mom_12_1:TOP & vol_of_vol_63:BOT (0.45) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48) | days_since_20pct_dd:BOT & mom_12_1:TOP & up_capture_63:TOP (0.50) | days_since_20pct_dd:BOT & mom_12_1:TOP & pullback_21:TOP (0.48)
+CDW,26,0.4148471615720524,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP,458,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP (0.41) | idio_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP (0.35) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_vol_dry_20_250:BOT (0.45) | idio_vol_63:TOP & ret_21:BOT & up_capture_63:TOP (0.43) | idio_vol_63:TOP & pullback_21:BOT & z_dist_52w_high:TOP (0.41)
+IVZ,64,0.4117336152219873,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT,1892,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & log_dvol_63:BOT & z_log_dvol_63:TOP (0.49) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42)
+ZBRA,57,0.4099960952752831,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,2561,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & dist_52w_high:TOP & rv_ratio_20_60:BOT (0.34) | beta_252:TOP & rv_ratio_20_60:BOT & skew_63:TOP (0.33) | corr_spy_63:TOP & idio_vol_63:TOP & vol_dry_20_250:BOT (0.37)
+BX,18,0.4086886564762671,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,1243,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.41) | base_depth_126:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.46) | dist_52w_high:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.45) | ret_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.37) | pullback_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.41)
+MPC,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
+PSX,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
+RVTY,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
+VLO,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
+IT,44,0.40767519466073415,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT,1798,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | dn_vol_63:TOP & skew_63:TOP & z_obv_price_div_63:BOT (0.39) | dn_vol_63:TOP & obv_price_div_63:BOT & skew_63:TOP (0.40) | dist_52w_high:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.36)
+SWKS,180,0.4072191154041688,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,1967,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP (0.41) | beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.40) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & pullback_vol_21:TOP (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47)
+NEM,68,0.4072191154041688,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,1967,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP (0.41) | beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.40) | beta_252:TOP & dn_up_vol_asym_63:BOT & pullback_vol_21:TOP (0.37) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37)
+DASH,7,0.4069926053557326,up_day_frac_63:TOP & beta_252:TOP,13929,up_day_frac_63:TOP & beta_252:TOP (0.41) | up_day_frac_63:TOP & dn_vol_63:TOP (0.42) | dn_vol_63:TOP & beta_252:TOP (0.43) | dn_vol_63:TOP & up_capture_63:TOP (0.45) | dist_52w_high:BOT & up_capture_63:TOP (0.40)
+DVA,48,0.4069017823284035,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT,2637,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.41) | dist_52w_low:TOP & parkinson_cc_20:BOT & rs_spy_63:BOT (0.45) | dist_52w_low:TOP & parkinson_cc_20:BOT & ret_63:BOT (0.45) | days_since_20pct_dd:BOT & dist_52w_low:TOP & log_dvol_63:BOT (0.55) | dist_52w_low:TOP & log_dvol_63:BOT & z_dn_up_vol_asym_63:TOP (0.58)
+DAL,6,0.40501005668312307,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP,5469,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & days_since_ignition:BOT & rvROC21<-10% (0.37) | sharpe_126:TOP & beta_252:TOP (0.42) | mom_12_1:TOP & beta_252:TOP (0.43) | days_since_ignition:BOT & beta_252:TOP (0.36)
+EXPD,4,0.4036047634373994,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP,3107,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP (0.40) | dist_52w_low:TOP & log_dvol_63:BOT (0.35) | sharpe_126:TOP & up_capture_63:TOP (0.39) | dist_52w_low:TOP & up_capture_63:TOP (0.41)
+CRL,17,0.40330838912957856,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT,5078,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT (0.40) | idio_vol_63:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.39) | idio_vol_63:TOP & sharpe_126:TOP (0.42) | dn_up_vol_asym_63:BOT & idio_vol_63:TOP & z_log_dvol_63:TOP (0.43) | idio_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.41)
+MS,7,0.4028098879601636,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT,5623,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT (0.40) | beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.49) | mom_12_1:TOP & beta_252:TOP (0.43) | pullback_21:BOT & beta_252:TOP (0.39) | ret_21:BOT & beta_252:TOP (0.37)
+CRM,63,0.4,dist_52w_low:TOP & ret_21:BOT & rs_spy_63:TOP,2350,dist_52w_low:TOP & ret_21:BOT & rs_spy_63:TOP (0.40) | dist_52w_low:TOP & ret_21:BOT & ret_63:TOP (0.40) | capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT (0.44) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & ret_21:BOT & rs_spy_63:TOP (0.38)
+APH,44,0.3965060878771837,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1889,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40) | beta_252:TOP & updown_vol_ratio_50:TOP & z_obv_price_div_63:BOT (0.39) | beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.62) | accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34)
+KKR,36,0.39568345323741005,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP,1251,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP (0.40) | beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36)
+CARR,5,0.3953875416072278,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT,4206,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & vol_of_vol_63:TOP (0.36) | base_depth_126:BOT & beta_252:TOP (0.41) | range_comp_10_252:BOT & beta_252:TOP (0.38)
+VEEV,23,0.3931818181818182,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,1320,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP (0.39) | idio_vol_63:TOP & rv20_pct_252:BOT & z_dist_52w_high:TOP (0.38) | days_since_ignition:BOT & idio_vol_63:TOP & up_day_frac_63:TOP (0.40) | idio_vol_63:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.43) | idio_vol_63:TOP & sharpe_126:TOP (0.42)
+CNC,6,0.3926553672316384,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP,1416,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP (0.39) | dist_52w_low:TOP & net_vol_flow_63:BOT & range_comp_10_252:BOT (0.38) | dist_52w_low:TOP & higher_low_cadence:BOT & z_mom_12_1:TOP (0.38) | dist_52w_low:TOP & higher_low_cadence:BOT & z_log_dvol_63:BOT (0.41) | dist_52w_low:TOP & net_vol_flow_63:BOT (0.43)
+CVNA,74,0.39250990277277636,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,5554,beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | base_depth_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.47) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | beta_252:TOP & clv_21:BOT & up_day_frac_63:TOP (0.34) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40)
+AXON,34,0.39250990277277636,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,5554,beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & pullback_21:BOT & rvROC10<-20% (0.39)
+WDAY,76,0.3923076923076923,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,1170,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP (0.39) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | dn_vol_63:TOP & skew_63:TOP & z_rv20_pct_252:BOT (0.42) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40)
+PYPL,51,0.3923076923076923,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,1170,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP (0.39) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & rvROC21<-20% & skew_63:TOP (0.39) | dn_vol_63:TOP & higher_low_cadence:TOP & skew_63:TOP (0.44) | dn_vol_63:TOP & rv_ratio_20_60:BOT & z_dn_up_vol_asym_63:BOT (0.33)
+LII,67,0.39209225700164746,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,1821,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39) | dn_vol_63:TOP & gap_share_21:TOP & log_dvol_63:BOT (0.36) | idio_vol_63:TOP & log_dvol_63:BOT & net_vol_flow_63:BOT (0.35) | gap_share_21:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.35) | beta_252:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.43)
+CSGP,24,0.39209225700164746,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,1821,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39) | idio_vol_63:TOP & log_dvol_63:BOT & net_vol_flow_63:BOT (0.35) | idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & up_day_frac_63:BOT (0.31) | higher_low_cadence:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.32)
+DLTR,5,0.3889943074003795,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,1054,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & volROC21>+25% & z_dist_52w_high:TOP (0.43) | mom_12_1:TOP & pullback_21:BOT & z_dist_52w_high:TOP (0.42) | pullback_21:BOT & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.47) | pullback_21:BOT & z_dist_52w_high:TOP (0.37)
+FFIV,2,0.3889138644128754,sharpe_126:TOP & up_capture_63:TOP,22244,sharpe_126:TOP & up_capture_63:TOP (0.39) | dist_52w_low:TOP & up_capture_63:TOP (0.41)
+WSM,1,0.3889138644128754,sharpe_126:TOP & up_capture_63:TOP,22244,sharpe_126:TOP & up_capture_63:TOP (0.39)
+A,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
+DXCM,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
+IQV,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
+MRK,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
+GDDY,33,0.3877159309021113,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT,1042,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT (0.39) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | capture_spread_63:TOP & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.51) | dist_52w_high:BOT & dvol_trend_21_126:TOP & rs_spy_63:TOP (0.40) | dist_52w_high:BOT & dvol_trend_21_126:TOP & ret_63:TOP (0.40)
+IBM,11,0.3875075195508322,range_comp_10_252:BOT & dn_vol_63:TOP,9974,range_comp_10_252:BOT & dn_vol_63:TOP (0.39) | range_comp_10_252:BOT & idio_vol_63:TOP (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | clv_21:BOT & idio_vol_63:TOP (0.34) | dvol_trend_21_126:BOT & dn_vol_63:TOP (0.36)
+TMUS,1,0.3875075195508322,range_comp_10_252:BOT & dn_vol_63:TOP,9974,range_comp_10_252:BOT & dn_vol_63:TOP (0.39)
+BNY,3,0.3864734299516908,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT,828,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT (0.39) | net_vol_flow_63:BOT & pullback_21:BOT & sharpe_126:TOP (0.42) | pullback_21:BOT & sharpe_126:TOP (0.38)
+APTV,24,0.38471502590673573,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP,772,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38) | dvol_trend_21_126:BOT & rs_spy_63:BOT & vol_dry_20_250:TOP (0.40) | dvol_trend_21_126:BOT & ret_63:BOT & vol_dry_20_250:TOP (0.40) | vol_dry_20_250:TOP & dvol_trend_21_126:BOT (0.40) | idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39)
+DG,3,0.38461538461538464,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,442,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | days_since_20pct_dd:BOT & z_dist_52w_high:TOP & z_mom_12_1:TOP (0.57) | days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.42)
+JKHY,3,0.38461538461538464,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,442,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | days_since_20pct_dd:BOT & log_dvol_63:BOT & z_mom_12_1:TOP (0.44) | days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.42)
+IBKR,25,0.3838120104438642,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20%,383,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20% (0.38) | beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & sharpe_126:TOP & vol_of_vol_63:BOT (0.45) | beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & dist_52w_high:TOP & range_comp_10_252:BOT (0.33)
+STLD,3,0.37993010484273587,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP,2003,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP (0.38) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.39) | dist_52w_low:TOP & dvol_trend_21_126:BOT (0.38)
+TPL,10,0.3797752808988764,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT,1335,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT (0.38) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.30)
+MSFT,6,0.37964361220175175,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,3311,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.38) | net_vol_flow_63:TOP & up_capture_63:TOP & z_obv_price_div_63:BOT (0.37) | sharpe_126:TOP & up_capture_63:TOP & z_obv_price_div_63:BOT (0.33) | rv_ratio_20_60:BOT & up_capture_63:TOP & z_obv_price_div_63:BOT (0.32) | sharpe_126:TOP & up_capture_63:TOP (0.39)
+CRWD,185,0.3793103448275862,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1160,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40)
+SNPS,110,0.3793103448275862,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1160,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40) | dn_vol_63:TOP & skew_63:TOP & z_obv_price_div_63:BOT (0.39)
+CHTR,27,0.3782696177062374,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP,497,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP (0.38) | accum_dist_50:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.45) | capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38) | dvol_trend_21_126:BOT & rs_spy_63:BOT & vol_dry_20_250:TOP (0.40) | dvol_trend_21_126:BOT & ret_63:BOT & vol_dry_20_250:TOP (0.40)
+ADSK,30,0.37616279069767444,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,1720,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.38) | dn_vol_63:TOP & obv_price_div_63:BOT & z_dn_up_vol_asym_63:BOT (0.38) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36) | days_since_ignition:BOT & dist_52w_high:BOT & up_capture_63:TOP (0.36) | days_since_ignition:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.37)
+RCL,9,0.37597765363128494,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,3580,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & dvol_trend_21_126:TOP & z_obv_price_div_63:BOT (0.39) | beta_252:TOP & days_since_ignition:BOT & obv_price_div_63:BOT (0.37) | beta_252:TOP & vol_dry_20_250:TOP & z_obv_price_div_63:BOT (0.43) | beta_252:TOP & dvol_trend_21_126:TOP & obv_price_div_63:BOT (0.39)
+BXP,3,0.37567567567567567,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT,1110,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT (0.38) | clv_21:BOT & pullback_21:BOT & sharpe_126:TOP (0.38) | pullback_21:BOT & sharpe_126:TOP (0.38)
+HST,6,0.37471264367816093,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20%,870,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20% (0.37) | dist_52w_low:TOP & rvROC10<-20% & z_dn_up_vol_asym_63:TOP (0.40) | dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP (0.38) | dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC21<-20% (0.37) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.39)
+TRMB,6,0.3708756345177665,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP,3152,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.38) | accum_dist_50:TOP & obv_price_div_63:BOT & up_capture_63:TOP (0.33) | log_dvol_63:BOT & up_capture_63:TOP & z_obv_price_div_63:BOT (0.32) | obv_price_div_63:BOT & up_capture_63:TOP (0.33)
+AVGO,7,0.3696763202725724,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT,2935,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT (0.37) | base_depth_126:BOT & range_comp_10_252:BOT & up_capture_63:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & up_capture_63:TOP (0.41) | base_depth_126:BOT & up_capture_63:TOP (0.45)
+RDDT,82,0.3681462140992167,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT,383,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT (0.37) | bbw_pct_252:BOT & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.37) | beta_252:TOP & days_since_ignition:BOT & vol_dry_10_50:BOT (0.38) | beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & gap_share_21:BOT & rvROC21<-20% (0.37)
+ZTS,1,0.3677581863979849,base_depth_126:BOT & z_vol_dry_20_250:BOT,7543,base_depth_126:BOT & z_vol_dry_20_250:BOT (0.37)
+REGN,6,0.36666666666666664,ret_21:BOT & rs_spy_63:TOP & z_obv_price_div_63:TOP,450,ret_21:BOT & rs_spy_63:TOP & z_obv_price_div_63:TOP (0.37) | ret_21:BOT & ret_63:TOP & z_obv_price_div_63:TOP (0.37) | mom_12_1:TOP & ret_21:BOT & rs_spy_63:TOP (0.38) | mom_12_1:TOP & ret_21:BOT & ret_63:TOP (0.38) | ret_21:BOT & rs_spy_63:TOP (0.32)
+GEV,77,0.36606546426185704,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT,1497,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.37) | dist_52w_low:TOP & px21>+8% & z_dn_up_vol_asym_63:TOP (0.44) | dist_52w_low:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:TOP (0.41) | up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_vol_dry_20_250:BOT (0.50) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43)
+ADBE,29,0.3654753877275792,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT,1483,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT (0.37) | dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT (0.32) | dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.53) | idio_vol_63:TOP & net_vol_flow_63:TOP & ret_21:BOT (0.37) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36)
+ILMN,96,0.3643122676579926,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,538,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP (0.36) | pullback_21:BOT & vol_dry_20_250:TOP & z_dist_52w_high:TOP (0.42) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | pullback_21:BOT & sharpe_126:TOP & vol_dry_20_250:TOP (0.43) | idio_vol_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.45)
+HPQ,83,0.3643122676579926,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,538,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP (0.36) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | idio_vol_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.45)
+MAS,3,0.3642478211443729,bbw_pct_252:BOT & dn_vol_63:TOP,10556,bbw_pct_252:BOT & dn_vol_63:TOP (0.36) | log_dvol_63:BOT & dn_vol_63:TOP (0.32) | vol_dry_10_50:BOT & dn_vol_63:TOP (0.36)
+TPR,10,0.3618579723090665,bbw_pct_252:BOT & idio_vol_63:TOP,11195,bbw_pct_252:BOT & idio_vol_63:TOP (0.36) | range_comp_10_252:BOT & dn_vol_63:TOP (0.39) | range_comp_10_252:BOT & idio_vol_63:TOP (0.36) | bbw_pct_252:BOT & dn_vol_63:TOP (0.36) | dn_vol_63:TOP & rvROC21<-20% (0.34)
+AMZN,43,0.3597037037037037,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP,3375,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | dvol_trend_21_126:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & range_comp_10_252:BOT & z_dn_up_vol_asym_63:BOT (0.34) | bbw_pct_252:BOT & beta_252:TOP & skew_63:TOP (0.33)
+TER,65,0.3590561224489796,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT,1568,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.40) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_vol_dry_20_250:BOT (0.45) | dn_vol_63:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.41)
+APO,15,0.358695652173913,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP,2944,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40) | parkinson_cc_20:TOP & ret_21:BOT & up_capture_63:TOP (0.35) | ret_21:BOT & rv20_pct_252:BOT & up_capture_63:TOP (0.34) | parkinson_cc_20:TOP & pullback_21:BOT & up_capture_63:TOP (0.40)
+VRSK,9,0.357059136920618,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10%,9385,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & mom_12_1:BOT & vol_dry_20_250:BOT (0.34) | base_depth_126:BOT & pullback_21:BOT & z_vol_dry_20_250:BOT (0.41) | base_depth_126:BOT & parkinson_cc_20:BOT & z_vol_dry_20_250:BOT (0.47) | dn_vol_63:TOP & z_vol_dry_20_250:BOT (0.40)
+EIX,11,0.35637065637065635,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20%,2590,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20% (0.36) | idio_vol_63:TOP & obv_price_div_63:TOP & rvROC21<-10% (0.34) | clv_21:BOT & idio_vol_63:TOP (0.34) | dn_vol_63:TOP & rvROC21<-20% (0.34) | idio_vol_63:TOP & rvROC21<-10% (0.35)
+CRH,9,0.35577162802293694,beta_252:TOP & ret_21:BOT & rvROC21<-20%,4011,beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36) | beta_252:TOP & ret_21:BOT & rvROC21<-10% (0.37) | base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & mom_12_1:BOT & ret_21:BOT (0.34) | beta_252:TOP & ret_21:BOT & z_rv20_pct_252:BOT (0.35)
+CASY,8,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | ret_21:BOT & idio_vol_63:TOP (0.35) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
+FICO,7,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | ret_21:BOT & idio_vol_63:TOP (0.35) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
+CHRW,6,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | idio_vol_63:TOP & px5<-3% (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | dn_vol_63:TOP & idio_vol_63:TOP (0.38)
+EFX,6,0.3545878693623639,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20%,7073,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & ret_21:BOT & rvROC21<-20% (0.32) | dn_vol_63:TOP & rvROC21<-20% (0.34) | dn_vol_63:TOP & rvROC21<-10% (0.35)
+FDS,38,0.35309278350515466,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT,1552,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35) | bbw_pct_252:BOT & idio_vol_63:TOP & rv_ratio_20_60:TOP (0.34) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & ret_21:BOT & rs_spy_63:TOP (0.42) | dn_vol_63:TOP & ret_21:BOT & ret_63:TOP (0.42)
+CMG,5,0.3485323305129009,ret_21:BOT & idio_vol_63:TOP,19146,ret_21:BOT & idio_vol_63:TOP (0.35) | idio_vol_63:TOP & px5<-3% (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33) | dn_vol_63:TOP & idio_vol_63:TOP (0.38)
+BAX,1,0.3478943611705924,dist_52w_low:TOP & log_dvol_63:BOT,7005,dist_52w_low:TOP & log_dvol_63:BOT (0.35)
+GRMN,18,0.3463414634146341,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP,205,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP (0.35) | idio_vol_63:TOP & net_vol_flow_63:BOT & rs_spy_63:TOP (0.37) | idio_vol_63:TOP & net_vol_flow_63:BOT & ret_63:TOP (0.37) | net_vol_flow_63:BOT & rs_lead_126:TOP & rs_spy_63:TOP (0.35) | net_vol_flow_63:BOT & ret_63:TOP & rs_lead_126:TOP (0.35)
+TYL,4,0.3418776033322653,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT,3121,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT (0.34) | obv_price_div_63:BOT & idio_vol_63:TOP (0.34) | idio_vol_63:TOP & z_obv_price_div_63:BOT (0.34) | idio_vol_63:TOP & z_log_dvol_63:TOP (0.42)
+TEL,25,0.3340172343044727,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,2437,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | beta_252:TOP & higher_low_cadence:TOP & rs_lead_126:BOT (0.32) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | beta_252:TOP & rs_lead_126:BOT & rs_spy_63:TOP (0.39) | beta_252:TOP & ret_63:TOP & rs_lead_126:BOT (0.39)
+EME,23,0.3340172343044727,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,2437,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & dn_up_vol_asym_63:BOT & obv_price_div_63:BOT (0.37) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.34)
+ARE,20,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | clv_21:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.31) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | idio_vol_63:TOP & px5<-3% & rvROC21<-10% (0.36)
+ERIE,18,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_spy_63:BOT (0.34) | idio_vol_63:TOP & log_dvol_63:BOT & ret_63:BOT (0.34) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34)
+SKYD,18,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34) | idio_vol_63:TOP & ret_21:BOT & updown_vol_ratio_50:TOP (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32)
+GEN,16,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | clv_21:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.31) | idio_vol_63:TOP & log_dvol_63:BOT & rs_spy_63:BOT (0.34) | idio_vol_63:TOP & log_dvol_63:BOT & ret_63:BOT (0.34) | capture_spread_63:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.34)
+SLB,5,0.33281972265023113,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT,1298,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.33) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & pullback_21:BOT (0.39) | dist_52w_low:TOP & pullback_21:BOT & rvROC21<-20% (0.41) | ret_21:BOT & dist_52w_low:TOP (0.38) | dist_52w_low:TOP & pullback_21:BOT (0.41)
+BLK,2,0.3326932650593841,obv_price_div_63:BOT & up_capture_63:TOP,14061,obv_price_div_63:BOT & up_capture_63:TOP (0.33) | up_capture_63:TOP & z_obv_price_div_63:BOT (0.33)
+ARES,62,0.33141592920353985,beta_252:TOP & ret_21:BOT & skew_63:TOP,2260,beta_252:TOP & ret_21:BOT & skew_63:TOP (0.33) | beta_252:TOP & parkinson_cc_20:TOP & skew_63:TOP (0.38) | ret_21:BOT & skew_63:TOP & up_capture_63:TOP (0.31) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39)
+GS,52,0.33141592920353985,beta_252:TOP & ret_21:BOT & skew_63:TOP,2260,beta_252:TOP & ret_21:BOT & skew_63:TOP (0.33) | beta_252:TOP & capture_spread_63:BOT & skew_63:TOP (0.32) | ret_21:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | ret_21:BOT & skew_63:TOP & up_capture_63:TOP (0.31) | range_comp_10_252:BOT & up_capture_63:TOP & z_dist_52w_high:BOT (0.44)
+LUV,27,0.3308641975308642,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP,405,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP (0.33) | dn_up_vol_asym_63:TOP & rvROC21<-20% & up_capture_63:TOP (0.44) | dn_up_vol_asym_63:TOP & parkinson_cc_20:TOP & up_capture_63:TOP (0.40) | dn_up_vol_asym_63:TOP & rvROC21<-10% & up_capture_63:TOP (0.43) | rs_spy_63:BOT & rvROC21<-20% & up_capture_63:TOP (0.46)
+PCG,23,0.3294491525423729,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP,2832,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP (0.33) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | idio_vol_63:TOP & up_day_frac_63:TOP & vol_dry_20_250:TOP (0.42) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | idio_vol_63:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49)
+ISRG,11,0.32661290322580644,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP,992,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP (0.33) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32) | idio_vol_63:TOP & log_dvol_63:TOP & net_vol_flow_63:TOP (0.43) | net_vol_flow_63:TOP & dn_vol_63:TOP (0.45) | idio_vol_63:TOP & z_rs_lead_126:BOT (0.32)
+COIN,40,0.3229426433915212,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT,802,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32) | dn_vol_63:TOP & rs_spy_63:TOP & z_rs_lead_126:BOT (0.35) | dn_vol_63:TOP & ret_63:TOP & z_rs_lead_126:BOT (0.35) | beta_252:TOP & days_since_ignition:BOT & vol_dry_10_50:BOT (0.38) | clv_21:BOT & dist_52w_high:BOT & rs_spy_63:TOP (0.43)
+SYK,1,0.3216035634743875,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,2245,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT (0.32)
+INTU,13,0.3193548387096774,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT,620,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT (0.32) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.39)
+COO,2,0.3184865900383142,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP,2088,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32) | log_dvol_63:BOT & dn_vol_63:TOP (0.32)
+PODD,8,0.3055056852184321,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT,3342,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT (0.31) | idio_vol_63:TOP & obv_price_div_63:TOP & rvROC21<-10% (0.34) | idio_vol_63:TOP & z_rs_lead_126:BOT (0.32) | idio_vol_63:TOP & rvROC21<-10% (0.35) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
+AAPL,0,0.2511737452933976,,0,
+ABBV,0,0.2511737452933976,,0,
+ABT,0,0.2511737452933976,,0,
+ACGL,0,0.2511737452933976,,0,
+ADM,0,0.2511737452933976,,0,
+ADP,0,0.2511737452933976,,0,
+AEE,0,0.2511737452933976,,0,
+AEP,0,0.2511737452933976,,0,
+AES,0,0.2511737452933976,,0,
+AFL,0,0.2511737452933976,,0,
+AIG,0,0.2511737452933976,,0,
+AIZ,0,0.2511737452933976,,0,
+AJG,0,0.2511737452933976,,0,
+ALL,0,0.2511737452933976,,0,
+ALLE,0,0.2511737452933976,,0,
+AMCR,0,0.2511737452933976,,0,
+AME,0,0.2511737452933976,,0,
+AMGN,0,0.2511737452933976,,0,
+AMP,0,0.2511737452933976,,0,
+AMT,0,0.2511737452933976,,0,
+AON,0,0.2511737452933976,,0,
+AOS,0,0.2511737452933976,,0,
+APA,0,0.2511737452933976,,0,
+APD,0,0.2511737452933976,,0,
+ATO,0,0.2511737452933976,,0,
+AVY,0,0.2511737452933976,,0,
+AWK,0,0.2511737452933976,,0,
+AXP,0,0.2511737452933976,,0,
+AZO,0,0.2511737452933976,,0,
+BA,0,0.2511737452933976,,0,
+BAC,0,0.2511737452933976,,0,
+BALL,0,0.2511737452933976,,0,
+BDX,0,0.2511737452933976,,0,
+BF-B,0,0.2511737452933976,,0,
+BG,0,0.2511737452933976,,0,
+BIIB,0,0.2511737452933976,,0,
+BKNG,0,0.2511737452933976,,0,
+BKR,0,0.2511737452933976,,0,
+BMY,0,0.2511737452933976,,0,
+BR,0,0.2511737452933976,,0,
+BRK-B,0,0.2511737452933976,,0,
+BRO,0,0.2511737452933976,,0,
+BSX,0,0.2511737452933976,,0,
+CAH,0,0.2511737452933976,,0,
+CB,0,0.2511737452933976,,0,
+CBRE,0,0.2511737452933976,,0,
+CCI,0,0.2511737452933976,,0,
+CFG,0,0.2511737452933976,,0,
+CHD,0,0.2511737452933976,,0,
+CI,0,0.2511737452933976,,0,
+CINF,0,0.2511737452933976,,0,
+CL,0,0.2511737452933976,,0,
+CLX,0,0.2511737452933976,,0,
+CMCSA,0,0.2511737452933976,,0,
+CME,0,0.2511737452933976,,0,
+CMS,0,0.2511737452933976,,0,
+CNP,0,0.2511737452933976,,0,
+COP,0,0.2511737452933976,,0,
+COR,0,0.2511737452933976,,0,
+COST,0,0.2511737452933976,,0,
+CPAY,0,0.2511737452933976,,0,
+CPT,0,0.2511737452933976,,0,
+CSCO,0,0.2511737452933976,,0,
+CSX,0,0.2511737452933976,,0,
+CTAS,0,0.2511737452933976,,0,
+CVS,0,0.2511737452933976,,0,
+CVX,0,0.2511737452933976,,0,
+D,0,0.2511737452933976,,0,
+DD,0,0.2511737452933976,,0,
+DE,0,0.2511737452933976,,0,
+DECK,0,0.2511737452933976,,0,
+DGX,0,0.2511737452933976,,0,
+DHI,0,0.2511737452933976,,0,
+DHR,0,0.2511737452933976,,0,
+DIS,0,0.2511737452933976,,0,
+DOC,0,0.2511737452933976,,0,
+DOV,0,0.2511737452933976,,0,
+DPZ,0,0.2511737452933976,,0,
+DRI,0,0.2511737452933976,,0,
+DTE,0,0.2511737452933976,,0,
+DUK,0,0.2511737452933976,,0,
+DVN,0,0.2511737452933976,,0,
+EBAY,0,0.2511737452933976,,0,
+ECL,0,0.2511737452933976,,0,
+ED,0,0.2511737452933976,,0,
+EG,0,0.2511737452933976,,0,
+ELV,0,0.2511737452933976,,0,
+EOG,0,0.2511737452933976,,0,
+EQIX,0,0.2511737452933976,,0,
+EQT,0,0.2511737452933976,,0,
+ES,0,0.2511737452933976,,0,
+ESS,0,0.2511737452933976,,0,
+ETR,0,0.2511737452933976,,0,
+EVRG,0,0.2511737452933976,,0,
+EW,0,0.2511737452933976,,0,
+EXC,0,0.2511737452933976,,0,
+EXE,0,0.2511737452933976,,0,
+EXR,0,0.2511737452933976,,0,
+F,0,0.2511737452933976,,0,
+FANG,0,0.2511737452933976,,0,
+FAST,0,0.2511737452933976,,0,
+FE,0,0.2511737452933976,,0,
+FERG,0,0.2511737452933976,,0,
+FIS,0,0.2511737452933976,,0,
+FISV,0,0.2511737452933976,,0,
+FITB,0,0.2511737452933976,,0,
+FOX,0,0.2511737452933976,,0,
+FOXA,0,0.2511737452933976,,0,
+FRT,0,0.2511737452933976,,0,
+FTV,0,0.2511737452933976,,0,
+GD,0,0.2511737452933976,,0,
+GE,0,0.2511737452933976,,0,
+GEHC,0,0.2511737452933976,,0,
+GILD,0,0.2511737452933976,,0,
+GIS,0,0.2511737452933976,,0,
+GL,0,0.2511737452933976,,0,
+GM,0,0.2511737452933976,,0,
+GPC,0,0.2511737452933976,,0,
+GWW,0,0.2511737452933976,,0,
+HAS,0,0.2511737452933976,,0,
+HBAN,0,0.2511737452933976,,0,
+HCA,0,0.2511737452933976,,0,
+HD,0,0.2511737452933976,,0,
+HIG,0,0.2511737452933976,,0,
+HLT,0,0.2511737452933976,,0,
+HON,0,0.2511737452933976,,0,
+HRL,0,0.2511737452933976,,0,
+HSIC,0,0.2511737452933976,,0,
+HSY,0,0.2511737452933976,,0,
+HUBB,0,0.2511737452933976,,0,
+HUM,0,0.2511737452933976,,0,
+ICE,0,0.2511737452933976,,0,
+IDXX,0,0.2511737452933976,,0,
+IEX,0,0.2511737452933976,,0,
+IFF,0,0.2511737452933976,,0,
+INCY,0,0.2511737452933976,,0,
+INVH,0,0.2511737452933976,,0,
+IP,0,0.2511737452933976,,0,
+IR,0,0.2511737452933976,,0,
+IRM,0,0.2511737452933976,,0,
+ITW,0,0.2511737452933976,,0,
+J,0,0.2511737452933976,,0,
+JCI,0,0.2511737452933976,,0,
+JNJ,0,0.2511737452933976,,0,
+JPM,0,0.2511737452933976,,0,
+KDP,0,0.2511737452933976,,0,
+KEY,0,0.2511737452933976,,0,
+KHC,0,0.2511737452933976,,0,
+KIM,0,0.2511737452933976,,0,
+KMB,0,0.2511737452933976,,0,
+KMI,0,0.2511737452933976,,0,
+KO,0,0.2511737452933976,,0,
+KR,0,0.2511737452933976,,0,
+KVUE,0,0.2511737452933976,,0,
+L,0,0.2511737452933976,,0,
+LEN,0,0.2511737452933976,,0,
+LH,0,0.2511737452933976,,0,
+LHX,0,0.2511737452933976,,0,
+LIN,0,0.2511737452933976,,0,
+LLY,0,0.2511737452933976,,0,
+LMT,0,0.2511737452933976,,0,
+LNT,0,0.2511737452933976,,0,
+LOW,0,0.2511737452933976,,0,
+LVS,0,0.2511737452933976,,0,
+LYV,0,0.2511737452933976,,0,
+MA,0,0.2511737452933976,,0,
+MAA,0,0.2511737452933976,,0,
+MAR,0,0.2511737452933976,,0,
+MCD,0,0.2511737452933976,,0,
+MCK,0,0.2511737452933976,,0,
+MCO,0,0.2511737452933976,,0,
+MDLZ,0,0.2511737452933976,,0,
+MDT,0,0.2511737452933976,,0,
+MET,0,0.2511737452933976,,0,
+MKC,0,0.2511737452933976,,0,
+MLM,0,0.2511737452933976,,0,
+MMM,0,0.2511737452933976,,0,
+MNST,0,0.2511737452933976,,0,
+MO,0,0.2511737452933976,,0,
+MOS,0,0.2511737452933976,,0,
+MRSH,0,0.2511737452933976,,0,
+MSCI,0,0.2511737452933976,,0,
+MSI,0,0.2511737452933976,,0,
+MTB,0,0.2511737452933976,,0,
+MTD,0,0.2511737452933976,,0,
+NDAQ,0,0.2511737452933976,,0,
+NDSN,0,0.2511737452933976,,0,
+NEE,0,0.2511737452933976,,0,
+NFLX,0,0.2511737452933976,,0,
+NI,0,0.2511737452933976,,0,
+NKE,0,0.2511737452933976,,0,
+NOC,0,0.2511737452933976,,0,
+NSC,0,0.2511737452933976,,0,
+NTRS,0,0.2511737452933976,,0,
+NUE,0,0.2511737452933976,,0,
+NVR,0,0.2511737452933976,,0,
+NWS,0,0.2511737452933976,,0,
+NWSA,0,0.2511737452933976,,0,
+O,0,0.2511737452933976,,0,
+ODFL,0,0.2511737452933976,,0,
+OKE,0,0.2511737452933976,,0,
+OMC,0,0.2511737452933976,,0,
+ORLY,0,0.2511737452933976,,0,
+OTIS,0,0.2511737452933976,,0,
+OXY,0,0.2511737452933976,,0,
+PAYX,0,0.2511737452933976,,0,
+PCAR,0,0.2511737452933976,,0,
+PEG,0,0.2511737452933976,,0,
+PEP,0,0.2511737452933976,,0,
+PFE,0,0.2511737452933976,,0,
+PFG,0,0.2511737452933976,,0,
+PG,0,0.2511737452933976,,0,
+PGR,0,0.2511737452933976,,0,
+PH,0,0.2511737452933976,,0,
+PHM,0,0.2511737452933976,,0,
+PKG,0,0.2511737452933976,,0,
+PLD,0,0.2511737452933976,,0,
+PM,0,0.2511737452933976,,0,
+PNC,0,0.2511737452933976,,0,
+PNW,0,0.2511737452933976,,0,
+PPG,0,0.2511737452933976,,0,
+PPL,0,0.2511737452933976,,0,
+PRU,0,0.2511737452933976,,0,
+PSA,0,0.2511737452933976,,0,
+REG,0,0.2511737452933976,,0,
+RF,0,0.2511737452933976,,0,
+RJF,0,0.2511737452933976,,0,
+RL,0,0.2511737452933976,,0,
+RMD,0,0.2511737452933976,,0,
+ROL,0,0.2511737452933976,,0,
+ROST,0,0.2511737452933976,,0,
+RSG,0,0.2511737452933976,,0,
+RTX,0,0.2511737452933976,,0,
+SBAC,0,0.2511737452933976,,0,
+SBUX,0,0.2511737452933976,,0,
+SCHW,0,0.2511737452933976,,0,
+SHW,0,0.2511737452933976,,0,
+SJM,0,0.2511737452933976,,0,
+SNA,0,0.2511737452933976,,0,
+SO,0,0.2511737452933976,,0,
+SOLV,0,0.2511737452933976,,0,
+SPG,0,0.2511737452933976,,0,
+SPGI,0,0.2511737452933976,,0,
+SRE,0,0.2511737452933976,,0,
+STE,0,0.2511737452933976,,0,
+STT,0,0.2511737452933976,,0,
+STZ,0,0.2511737452933976,,0,
+SYF,0,0.2511737452933976,,0,
+SYY,0,0.2511737452933976,,0,
+T,0,0.2511737452933976,,0,
+TDG,0,0.2511737452933976,,0,
+TDY,0,0.2511737452933976,,0,
+TECH,0,0.2511737452933976,,0,
+TFC,0,0.2511737452933976,,0,
+TGT,0,0.2511737452933976,,0,
+TJX,0,0.2511737452933976,,0,
+TKO,0,0.2511737452933976,,0,
+TMO,0,0.2511737452933976,,0,
+TRGP,0,0.2511737452933976,,0,
+TROW,0,0.2511737452933976,,0,
+TRV,0,0.2511737452933976,,0,
+TSCO,0,0.2511737452933976,,0,
+TSN,0,0.2511737452933976,,0,
+TT,0,0.2511737452933976,,0,
+TTWO,0,0.2511737452933976,,0,
+TXT,0,0.2511737452933976,,0,
+UBER,0,0.2511737452933976,,0,
+UDR,0,0.2511737452933976,,0,
+UHS,0,0.2511737452933976,,0,
+ULTA,0,0.2511737452933976,,0,
+UNH,0,0.2511737452933976,,0,
+UNP,0,0.2511737452933976,,0,
+UPS,0,0.2511737452933976,,0,
+URI,0,0.2511737452933976,,0,
+USB,0,0.2511737452933976,,0,
+V,0,0.2511737452933976,,0,
+VICI,0,0.2511737452933976,,0,
+VLTO,0,0.2511737452933976,,0,
+VMC,0,0.2511737452933976,,0,
+VMRK,0,0.2511737452933976,,0,
+VRSN,0,0.2511737452933976,,0,
+VRTX,0,0.2511737452933976,,0,
+VTR,0,0.2511737452933976,,0,
+VZ,0,0.2511737452933976,,0,
+WAB,0,0.2511737452933976,,0,
+WAT,0,0.2511737452933976,,0,
+WEC,0,0.2511737452933976,,0,
+WELL,0,0.2511737452933976,,0,
+WFC,0,0.2511737452933976,,0,
+WM,0,0.2511737452933976,,0,
+WMB,0,0.2511737452933976,,0,
+WMT,0,0.2511737452933976,,0,
+WRB,0,0.2511737452933976,,0,
+WST,0,0.2511737452933976,,0,
+WTW,0,0.2511737452933976,,0,
+WY,0,0.2511737452933976,,0,
+WYNN,0,0.2511737452933976,,0,
+XEL,0,0.2511737452933976,,0,
+XOM,0,0.2511737452933976,,0,
+XYL,0,0.2511737452933976,,0,
+YUM,0,0.2511737452933976,,0,
+ZBH,0,0.2511737452933976,,0,
