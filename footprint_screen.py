@@ -47,6 +47,7 @@ def feat(s):
     for n in [60,120,250]:
         y=lc[-n:]; x=np.arange(n); b_,a_=np.polyfit(x,y,1); m[f'slope_{n}']=b_*252; m[f'resid_{n}']=np.std(y-(a_+b_*x)); cn=c.iloc[-n:]; ddn=cn/cn.cummax()-1; m[f'maxDD_{n}']=ddn.min(); m[f'within5_{n}']=(ddn>-0.05).mean()
     wk=s.iloc[-130:].resample('W-FRI').agg({'Low':'min'}); m['wkHL_26']=(wk.Low.iloc[-26:].diff()>0).mean(); dd250=c.iloc[-250:]/c.iloc[-250:].cummax()-1; m['maxDD_days_ago']=L-1-c.index.get_loc(dd250.idxmin())
+    m['days_since_60dlow']=L-1-c.index.get_loc(c.iloc[-60:].idxmin()); m['dd_from_20dH']=c.iloc[-1]/h.iloc[-20:].max()-1
     cp=((c-l)/(h-l)).fillna(0.5).iloc[-60:]; m['top30-bot30_60']=(cp>0.7).mean()-(cp<0.3).mean(); va=v.rolling(20).mean(); m['dryup120']=va.iloc[-120:].min()/v.iloc[-250:].mean()
     o=s.Open; on=(o/c.shift(1)-1).iloc[-120:]; idd=(c/o-1).iloc[-120:]; m['ID-ON_120']=(np.prod(1+idd)-1)-(np.prod(1+on)-1)
     m['vol20/vol250']=v.iloc[-20:].mean()/v.iloc[-250:].mean(); m['corr60_chg']=m['corr60']-(pd.concat([r,sr],axis=1).dropna().iloc[-120:-60].corr().iloc[0,1])
@@ -57,7 +58,7 @@ z=lambda x: x.astype(float).rank(pct=True)-0.5
 T['B']=(z(T.RVrel250)+z(T.beta60)-z(T['dsince+3'])+z(T.clv20)+z(T.stoch20)+z(T['px/AVWAPlow'])-z(T['px/2yH'])-z(T.RS12)-z(T['RV10/RV60'])).rank(pct=True)*100
 T['STEADY']=(-z(T.RV250)-z(T.RV60)-z(T.beta250)-z(T.big_up_days250)-z(T.big_dn_days250)-z(T.skew250)+z(T.mhit12)+z(T.UVDV250)+z(T.pctup250)+z(T['px/52wH'])).rank(pct=True)*100
 T['PATH']=(z(T.maxDD_60)+z(T.maxDD_120)+z(T.maxDD_250)+z(T.within5_120)+z(T.within5_250)-z(T.resid_120)-z(T.resid_250)-z(T.RV250)-z(T.big_dn_days250)+z(T['px/52wH'])+z(T.wkHL_26)+z(T.maxDD_days_ago)).rank(pct=True)*100
-T['GATE']=(T.slope_60>0.03)&(T.slope_120>0)&(T.ret_12m>=0.15)&(T['px/52wH']>=0.85)&((T.maxDD_250>-0.15)|(T.maxDD_days_ago>100))
+T['GATE']=(T.slope_60>0.03)&(T.slope_120>0)&(T.ret_12m>=0.15)&(T['px/52wH']>=0.85)&((T.maxDD_250>-0.15)|(T.maxDD_days_ago>100))&(T.stoch20>0.5)&(T.days_since_60dlow>=5)&(T.dd_from_20dH>-0.06)
 T['SMOOTH']=(-z(T.RVrel250)-z(T.RV250)-z(T.RV60)-z(T.big_up_days250)-z(T.beta250)-z(T.big_dn_days250)-z(T.beta60)-z(T.skew250)+z(T['top30-bot30_60'])+z(T.dryup120)+z(T.UVDV250)+z(T.mhit12)+z(T.pctup250)+z(T['px/52wH'])+z(T['px/2yH'])+z(T['dsince+3'])).rank(pct=True)*100
 T['NEARTERM']=(z(T['n+3/n-3_60'])+z(T.UVDV60)).rank(pct=True)*100
 T['TURN']=(T.stoch20>0.8)&(T['px/AVWAPlow']>1.0)&(T.UVDV60>1.0)
