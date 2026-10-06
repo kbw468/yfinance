@@ -9,6 +9,7 @@ All statistics are out-of-sample where labelled OOS. Nothing here uses fundament
 * Two readings carry out-of-sample signal for 21-63d forward Sharpe in this universe in the current regime: relative-strength leadership (`rs_lead_126`: RS line nearer its 6-month high than price is to its own) and 12-1 momentum. Both survive beta-neutralisation (recent-window 42d IC 0.03-0.05, NW t 2.1-2.4). Both were dead 2014-2021.
 * The setup that works depends on beta. High-beta names: buy persistence (momentum, trailing Sharpe, proximity to highs, recent 2x-off-low crossings; the 100%-off-low ceiling is the wrong sign there). Low-beta names: price-structure factors die and quiet volume-led accumulation takes over (volume dry-up vs 250d, falling dollar volume, OBV leading price, shallow drawdowns, low idiosyncratic vol, and the dry-up x tight-range x near-high interaction).
 * The live ranking (`current_rankings.csv`) is the within-beta-bucket walk-forward composite built from those weights: recent-window OOS 42d IC 0.047, 63d 0.065, top-vs-bottom decile 42d Sharpe spread +0.29 annualised, 57% of windows positive. A pooled (beta-blind) composite has no edge.
+* Roughly half to two thirds of the ranking is ticker identity (names that are chronically near highs, drawdown-free and high-Sharpe) rather than a current state change; the state-change half is weaker (IC 0.035) and is led by momentum and RS leadership that are unusual for the name (section 7).
 * Compression / NR7 / Bollinger squeeze, ignition-day volume multiples, accumulation-day counts, gap behaviour, streaks and close-location factors showed no 1-3 month signal in S&P 500 names, pooled. The LightGBM case-study model, in five configurations, did not beat the two single factors out of sample (recent 42d IC 0.00-0.02) and is reported but not used in the ranking.
 
 ## 2. Method
@@ -304,7 +305,44 @@ LightGBM 42d IC by year: 2017: -0.011, 2018: +0.037, 2019: +0.141, 2020: +0.006,
 | CRL      | Healthcare             | high          |          0.95 |       0.54 |         0.55 |         0.57 |              0.46 |       0.67 |           -0    |           1.13 |          0    |       1.25 |           0.95 |             1.07 |              -1.08 |
 | VEEV     | Healthcare             | mid           |          0.95 |       0.45 |         0.63 |         0.83 |              0.46 |      -0.05 |           -0.09 |           0.91 |         -0.01 |       0.56 |           0.74 |             0.71 |               0.13 |
 
-## 7. What to trust, what not to
+## 7. Ticker identity vs. behaviour: how much of the signal generalises across tickers
+
+Each reading is split, point-in-time, into **persistent** (the ticker's own expanding-window mean up to t-1: "this ticker is usually like this") and **deviation** (today's reading as a z-score against the ticker's own history: "this ticker is currently unusual"). IC of each component vs 42d SPY-excess Sharpe:
+
+| factor              |   recent|raw |   recent|persistent |   recent|deviation |   full|raw |   full|persistent |   full|deviation |
+|:--------------------|-------------:|--------------------:|-------------------:|-----------:|------------------:|-----------------:|
+| comp_bucketed       |        0.047 |               0.053 |              0.035 |      0.015 |             0.017 |            0.016 |
+| corr_spy_63         |        0.077 |               0.055 |              0.058 |      0.028 |             0.033 |            0.007 |
+| days_since_20pct_dd |       -0.008 |              -0.043 |              0.021 |      0.009 |             0.006 |            0.008 |
+| dist_52w_high       |       -0.004 |              -0.032 |              0.005 |      0.009 |             0.015 |           -0     |
+| dryup_x_tight       |       -0.003 |              -0.015 |              0.001 |      0.006 |             0.018 |            0.001 |
+| idio_vol_63         |        0.006 |               0.028 |             -0.018 |     -0.024 |            -0.008 |           -0.017 |
+| mom_12_1            |        0.039 |               0.019 |              0.044 |      0.007 |             0.022 |            0.003 |
+| obv_price_div_63    |        0.01  |               0.023 |              0.007 |      0.006 |             0.01  |            0.004 |
+| rs_lead_126         |        0.068 |               0.067 |              0.031 |      0.004 |             0.032 |           -0.013 |
+| sharpe_126          |        0.016 |               0.009 |              0.012 |      0.003 |             0.021 |           -0.006 |
+| up_capture_63       |        0.073 |               0.064 |              0.028 |      0.014 |             0.021 |           -0.007 |
+| vol_dry_20_250      |       -0.01  |              -0.021 |             -0.009 |      0.001 |            -0.018 |           -0     |
+
+Pure ticker-identity predictors (long trailing Sharpe; the ticker's own trailing-year mean realised excess Sharpe):
+
+| predictor       |   ic|full |   ic|recent |   t_nw|full |   t_nw|recent |
+|:----------------|----------:|------------:|------------:|--------------:|
+| past_xs_1y_mean |     0.015 |       0.044 |       0.927 |         1.699 |
+| sharpe_252      |     0.013 |       0.042 |       0.758 |         1.615 |
+| sharpe_504      |     0.013 |       0.026 |       0.651 |         0.865 |
+| sharpe_756      |     0.024 |       0.034 |       1.266 |         1.303 |
+
+Reading:
+
+* The out-of-sample composite's recent IC (0.047) is matched by its persistent component alone (0.053); the deviation component carries 0.035. Today's composite rank correlates 0.580 with the ticker's own historical-average composite rank. **Roughly half to two thirds of what the ranking expresses is which tickers are chronically strong and stable, not a current state change.**
+* A ticker's own trailing-year mean realised excess Sharpe predicts its next 42 days with IC 0.044 (t 1.7) in the recent window, about the same as the whole system. In 2022-10 to 2026 leadership persisted at the ticker level; much of the system's recent edge is that persistence.
+* The persistent component is the part most exposed to survivorship bias (today's constituents are disproportionately the names that were chronically strong). Treat the identity half of the score as regime- and universe-dependent.
+* The deviation component is the cleaner "behaviour predicts across tickers" evidence. It is weaker but real: 12-1 momentum unusually high for the name (IC 0.044, t 2.0, the only reading where the state component beats the identity component), RS-line leadership unusual for the name (0.031), correlation to SPY unusually high (0.058), idiosyncratic vol unusually low (-0.018). Proximity to 52w high, time since 20% drawdown and the dry-up interaction have no deviation signal pooled: they work only as identity, and only inside beta buckets.
+* Volume factors: `obv_price_div_63` and `vol_dry_20_250` show up as identity, not state, pooled. The names that habitually have volume leading price, or habitually dry up, do better; a dry-up that is unusual for the name does not.
+
+
+## 8. What to trust, what not to
 
 Direct read of the evidence, in order of reliability.
 
@@ -326,6 +364,8 @@ Direct read of the evidence, in order of reliability.
 
 **3. Statistical honesty**
 
+* Identity vs behaviour (section 7): about half of the composite's recent IC is reproduced by the ticker's own historical average of the score. That half is regime- and survivorship-exposed. The generalising half is led by momentum / RS leadership unusual for the name.
+
 * No single factor passes a 5% false-discovery-rate test across the 86-factor zoo in either window. The recent window has roughly 24 independent 42-day periods; |t| of 2-2.7 is the ceiling a true IC of 0.05-0.08 can reach there. The claims above rest on (a) coherent clusters pointing the same way, (b) survival after beta-neutralisation, (c) walk-forward reproduction, not on any one t-stat.
 * Multiple-testing in the conditional tables: 860 bucket tests (expected max |t| under the null about 3.2) and 946 per-sector tests. Cells near 3 are suggestive only.
 * Survivorship: today's constituents. Ranks are robust to it; absolute forward-Sharpe levels (the deciles all sit near -1.1 in the recent window because SPY's own realised Sharpe was high) are not the point.
@@ -338,7 +378,7 @@ Direct read of the evidence, in order of reliability.
 * Refit cadence: the factors turn over slowly (21d rank autocorrelation 0.7-0.9 for the ones that matter), so re-scoring weekly is sufficient; the walk-forward re-estimates weights annually and that was enough.
 
 
-## 8. Files
+## 9. Files
 
 | file | content |
 |---|---|
@@ -351,10 +391,11 @@ Direct read of the evidence, in order of reliability.
 | `ml_oos_evaluation.csv`, `ml_variants_oos_evaluation.csv`, `ml_oos_ic42_by_year.csv` | walk-forward model results |
 | `composite_oos_evaluation.csv`, `composite_weights_by_fold.csv` | walk-forward composite results and the factors it chose each year |
 | `composite_final_weights.csv`, `ml_final_feature_importance.csv` | what the live score is built from |
+| `identity_decomposition.csv`, `identity_pure_predictors.csv` | ticker-identity vs own-history-deviation split of the signal |
 | `current_rankings.csv` | the live ranking with analog evidence |
 
 
-## 9. Reproduce
+## 10. Reproduce
 
 ```
 pip install -e . scikit-learn lightgbm pyarrow scipy statsmodels tabulate
@@ -366,5 +407,6 @@ python -m pvv_score.model            # walk-forward ML
 python -m pvv_score.run_model_variants
 python -m pvv_score.composite        # walk-forward composite
 python -m pvv_score.score_now        # live ranking
+python -m pvv_score.run_identity     # identity vs behaviour decomposition
 python -m pvv_score.report
 ```

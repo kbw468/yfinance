@@ -34,6 +34,7 @@ def main():
     L.append("""* Two readings carry out-of-sample signal for 21-63d forward Sharpe in this universe in the current regime: relative-strength leadership (`rs_lead_126`: RS line nearer its 6-month high than price is to its own) and 12-1 momentum. Both survive beta-neutralisation (recent-window 42d IC 0.03-0.05, NW t 2.1-2.4). Both were dead 2014-2021.
 * The setup that works depends on beta. High-beta names: buy persistence (momentum, trailing Sharpe, proximity to highs, recent 2x-off-low crossings; the 100%-off-low ceiling is the wrong sign there). Low-beta names: price-structure factors die and quiet volume-led accumulation takes over (volume dry-up vs 250d, falling dollar volume, OBV leading price, shallow drawdowns, low idiosyncratic vol, and the dry-up x tight-range x near-high interaction).
 * The live ranking (`current_rankings.csv`) is the within-beta-bucket walk-forward composite built from those weights: recent-window OOS 42d IC 0.047, 63d 0.065, top-vs-bottom decile 42d Sharpe spread +0.29 annualised, 57% of windows positive. A pooled (beta-blind) composite has no edge.
+* Roughly half to two thirds of the ranking is ticker identity (names that are chronically near highs, drawdown-free and high-Sharpe) rather than a current state change; the state-change half is weaker (IC 0.035) and is led by momentum and RS leadership that are unusual for the name (section 7).
 * Compression / NR7 / Bollinger squeeze, ignition-day volume multiples, accumulation-day counts, gap behaviour, streaks and close-location factors showed no 1-3 month signal in S&P 500 names, pooled. The LightGBM case-study model, in five configurations, did not beat the two single factors out of sample (recent 42d IC 0.00-0.02) and is reported but not used in the ranking.
 """)
 
@@ -111,10 +112,31 @@ Multiple-testing note: 86 factors x 10 buckets = 860 tests; the expected maximum
             "mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "beta_252", "rv20_pct_252", "vol_dry_20_250", "obv_price_div_63"]
     L.append(md(rank[show].head(30).set_index("ticker"), 2))
 
-    L.append("\n## 7. What to trust, what not to\n")
+    L.append("\n## 7. Ticker identity vs. behaviour: how much of the signal generalises across tickers\n")
+    L.append("""Each reading is split, point-in-time, into **persistent** (the ticker's own expanding-window mean up to t-1: "this ticker is usually like this") and **deviation** (today's reading as a z-score against the ticker's own history: "this ticker is currently unusual"). IC of each component vs 42d SPY-excess Sharpe:
+""")
+    dec = pd.read_csv(RESULTS_DIR / "identity_decomposition.csv")
+    piv = dec.pivot_table(index="factor", columns=["window", "component"], values="ic")[[("recent", "raw"), ("recent", "persistent"), ("recent", "deviation"), ("full", "raw"), ("full", "persistent"), ("full", "deviation")]]
+    piv.columns = [f"{w}|{c}" for w, c in piv.columns]
+    L.append(md(piv, 3))
+    pure = pd.read_csv(RESULTS_DIR / "identity_pure_predictors.csv").pivot(index="predictor", columns="window", values=["ic", "t_nw"])
+    pure.columns = [f"{a}|{b}" for a, b in pure.columns]
+    overlap = (RESULTS_DIR / "identity_rank_overlap.txt").read_text().strip()
+    L.append("\nPure ticker-identity predictors (long trailing Sharpe; the ticker's own trailing-year mean realised excess Sharpe):\n")
+    L.append(md(pure, 3))
+    L.append(f"""
+Reading:
+
+* The out-of-sample composite's recent IC (0.047) is matched by its persistent component alone (0.053); the deviation component carries 0.035. Today's composite rank correlates {overlap} with the ticker's own historical-average composite rank. **Roughly half to two thirds of what the ranking expresses is which tickers are chronically strong and stable, not a current state change.**
+* A ticker's own trailing-year mean realised excess Sharpe predicts its next 42 days with IC 0.044 (t 1.7) in the recent window, about the same as the whole system. In 2022-10 to 2026 leadership persisted at the ticker level; much of the system's recent edge is that persistence.
+* The persistent component is the part most exposed to survivorship bias (today's constituents are disproportionately the names that were chronically strong). Treat the identity half of the score as regime- and universe-dependent.
+* The deviation component is the cleaner "behaviour predicts across tickers" evidence. It is weaker but real: 12-1 momentum unusually high for the name (IC 0.044, t 2.0, the only reading where the state component beats the identity component), RS-line leadership unusual for the name (0.031), correlation to SPY unusually high (0.058), idiosyncratic vol unusually low (-0.018). Proximity to 52w high, time since 20% drawdown and the dry-up interaction have no deviation signal pooled: they work only as identity, and only inside beta buckets.
+* Volume factors: `obv_price_div_63` and `vol_dry_20_250` show up as identity, not state, pooled. The names that habitually have volume leading price, or habitually dry up, do better; a dry-up that is unusual for the name does not.
+""")
+    L.append("\n## 8. What to trust, what not to\n")
     L.append(open(RESULTS_DIR / "_assessment.md").read() if (RESULTS_DIR / "_assessment.md").exists() else "(assessment pending)\n")
 
-    L.append("\n## 8. Files\n")
+    L.append("\n## 9. Files\n")
     L.append("""| file | content |
 |---|---|
 | `factor_ic_summary.csv` / `factor_ic_detail.csv` | single-factor IC, NW t, FDR flags, decile spreads, autocorrelation, all horizons / benchmarks / windows |
@@ -126,10 +148,11 @@ Multiple-testing note: 86 factors x 10 buckets = 860 tests; the expected maximum
 | `ml_oos_evaluation.csv`, `ml_variants_oos_evaluation.csv`, `ml_oos_ic42_by_year.csv` | walk-forward model results |
 | `composite_oos_evaluation.csv`, `composite_weights_by_fold.csv` | walk-forward composite results and the factors it chose each year |
 | `composite_final_weights.csv`, `ml_final_feature_importance.csv` | what the live score is built from |
+| `identity_decomposition.csv`, `identity_pure_predictors.csv` | ticker-identity vs own-history-deviation split of the signal |
 | `current_rankings.csv` | the live ranking with analog evidence |
 """)
-    L.append("\n## 9. Reproduce\n")
-    L.append("```\npip install -e . scikit-learn lightgbm pyarrow scipy statsmodels tabulate\npython -m pvv_score.data_io          # download\npython -m pvv_score.build            # features + targets\npython -m pvv_score.run_eval         # single-factor\npython -m pvv_score.run_conditional  # conditional\npython -m pvv_score.model            # walk-forward ML\npython -m pvv_score.run_model_variants\npython -m pvv_score.composite        # walk-forward composite\npython -m pvv_score.score_now        # live ranking\npython -m pvv_score.report\n```\n")
+    L.append("\n## 10. Reproduce\n")
+    L.append("```\npip install -e . scikit-learn lightgbm pyarrow scipy statsmodels tabulate\npython -m pvv_score.data_io          # download\npython -m pvv_score.build            # features + targets\npython -m pvv_score.run_eval         # single-factor\npython -m pvv_score.run_conditional  # conditional\npython -m pvv_score.model            # walk-forward ML\npython -m pvv_score.run_model_variants\npython -m pvv_score.composite        # walk-forward composite\npython -m pvv_score.score_now        # live ranking\npython -m pvv_score.run_identity     # identity vs behaviour decomposition\npython -m pvv_score.report\n```\n")
     (RESULTS_DIR / "REPORT.md").write_text("\n".join(L))
     print("wrote", RESULTS_DIR / "REPORT.md")
 

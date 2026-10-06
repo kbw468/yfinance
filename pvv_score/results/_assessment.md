@@ -18,6 +18,8 @@ Direct read of the evidence, in order of reliability.
 
 **3. Statistical honesty**
 
+* Identity vs behaviour (section 7): about half of the composite's recent IC is reproduced by the ticker's own historical average of the score. That half is regime- and survivorship-exposed. The generalising half is led by momentum / RS leadership unusual for the name.
+
 * No single factor passes a 5% false-discovery-rate test across the 86-factor zoo in either window. The recent window has roughly 24 independent 42-day periods; |t| of 2-2.7 is the ceiling a true IC of 0.05-0.08 can reach there. The claims above rest on (a) coherent clusters pointing the same way, (b) survival after beta-neutralisation, (c) walk-forward reproduction, not on any one t-stat.
 * Multiple-testing in the conditional tables: 860 bucket tests (expected max |t| under the null about 3.2) and 946 per-sector tests. Cells near 3 are suggestive only.
 * Survivorship: today's constituents. Ranks are robust to it; absolute forward-Sharpe levels (the deciles all sit near -1.1 in the recent window because SPY's own realised Sharpe was high) are not the point.
