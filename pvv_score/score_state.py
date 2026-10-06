@@ -38,6 +38,7 @@ def main():
     full = pq.read_table(CACHE_DIR / "research_long.parquet", columns=need).to_pandas()
     asof = full.date.max()
     last = full[full.date == asof]
+    hist_all = full.groupby("ticker").size()
     df = full[full.eligible & (full.date >= SAMPLE_START)].reset_index(drop=True)
     for c in df.columns:
         if df[c].dtype == "float64":
@@ -114,7 +115,7 @@ def main():
     # whole universe, including ineligible / short-history names, with reason
     out = uni[["Company", "Sector", "SectorETF"]].copy()
     out.index.name = "ticker"
-    hist = full.groupby("ticker").size()
+    hist = hist_all
     last = last.set_index("ticker")
     out["sessions_of_history"] = hist.reindex(out.index).fillna(0).astype(int)
     out["eligible_today"] = last["eligible"].reindex(out.index).fillna(False).astype(bool)

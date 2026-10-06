@@ -14,6 +14,7 @@ from .composite import tercile_series
 from .regime import tag, today_regime
 
 TIERS = [0, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0]
+MIN_CELL_N = 500   # a (bucket, tier) cell thinner than this is replaced by the pooled "this tier and above" cell
 TIER_LABELS = ["<50", "50-70", "70-80", "80-90", "90-95", "95-100"]
 
 
@@ -45,6 +46,22 @@ def main():
     print(f"regime today: {reg}; cells measured on {rec.date.nunique()} same-regime sessions since {RECENT_START}")
     tab = rec.groupby(["beta_bucket", "tier"], observed=True).agg(n=("u_top_q_42", "size"), p_top_q_42=("u_top_q_42", "mean"), p_top_half_42=("u_top_half_42", "mean"),
                                                                    p_top_q_63=("u_top_q_63", "mean"), p_top_half_63=("u_top_half_63", "mean"))
+    # thin cells -> pooled downward within the bucket: widen the tier's lower edge until the pool holds MIN_CELL_N rows
+    cols_p = ["p_top_q_42", "p_top_half_42", "p_top_q_63", "p_top_half_63"]
+    src = {"p_top_q_42": "u_top_q_42", "p_top_half_42": "u_top_half_42", "p_top_q_63": "u_top_q_63", "p_top_half_63": "u_top_half_63"}
+    tab["pooled_from"] = ""
+    for (b_, lab), row in tab.iterrows():
+        if row["n"] >= MIN_CELL_N:
+            continue
+        i = TIER_LABELS.index(lab)
+        hi = TIERS[i + 1] if lab != TIER_LABELS[-1] else 1.01
+        for j in range(i, -1, -1):
+            pool = rec[(rec.beta_bucket == b_) & (rec.avg_p >= TIERS[j]) & (rec.avg_p < hi)]
+            if len(pool) >= MIN_CELL_N or j == 0:
+                for c in cols_p:
+                    tab.loc[(b_, lab), c] = pool[src[c]].mean()
+                tab.loc[(b_, lab), "pooled_from"] = f"{TIER_LABELS[j]}..{lab} (n={len(pool)})"
+                break
     tab.to_csv(RESULTS_DIR / "buylist_probability_table.csv")
     # joint cells: (bucket, tier, signature) -> realised probability; fall back to the (bucket, tier) cell when the joint cell is thin
     jt = rec.groupby(["beta_bucket", "tier", "sig"], observed=True).agg(n=("u_top_q_42", "size"), p_top_q_42=("u_top_q_42", "mean"), p_top_half_42=("u_top_half_42", "mean"),
