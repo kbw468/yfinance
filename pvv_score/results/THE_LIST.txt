@@ -4,263 +4,263 @@ smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-da
 basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight; 'composite <tier>' = multi-factor score tier.
 
   # tkr    sector                 beta    P42   P63 basis            sigs  strongest confirmed signature firing tonight
-  1 MRNA   Healthcare             high   0.39  0.41 signatures x391   391  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
-  2 PLTR   Technology             high   0.39  0.41 signatures x308   308  downside vol top 20% AND range compression bottom 20% AND downside/upside vol vs own norm bottom 20%
-  3 ANET   Technology             high   0.39  0.41 signatures x271   271  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
-  4 SNDK   Technology             high   0.39  0.41 signatures x268   268  distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
-  5 MU     Technology             high   0.39  0.41 signatures x238   238  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
-  6 AMD    Technology             high   0.39  0.41 signatures x228   228  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
-  7 FLEX   Technology             high   0.39  0.41 signatures x227   227  depth below 126d high bottom 20% AND beta top 20% AND 126d Sharpe top 20%
-  8 CRWD   Technology             high   0.39  0.41 signatures x226   226  downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%
-  9 SWKS   Technology             high   0.39  0.41 signatures x218   218  beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
- 10 HOOD   Financial              high   0.39  0.41 signatures x202   202  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 11 DELL   Technology             high   0.39  0.41 signatures x201   201  Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 12 BE     Industrials            high   0.39  0.41 signatures x197   197  Bollinger width vs norm bottom 20% AND downside vol top 20% AND 63d RS vs SPY top 20%
- 13 MRVL   Technology             high   0.39  0.41 signatures x193   193  downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%
- 14 LITE   Technology             high   0.39  0.41 signatures x191   191  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
- 15 ACN    Technology             low    0.39  0.41 signatures x176   176  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
- 16 STX    Technology             high   0.39  0.41 signatures x170   170  distance to 52w high bottom 20% AND net volume flow top 20% AND 126d Sharpe top 20%
- 17 HPE    Technology             high   0.39  0.41 signatures x167   167  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
- 18 VRT    Industrials            high   0.39  0.41 signatures x167   167  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
- 19 AMAT   Technology             high   0.39  0.41 signatures x166   166  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 20 EL     Consumer Defensive     high   0.39  0.41 signatures x164   164  close location in range bottom 20% AND time since 20% drawdown bottom 20% AND 126d Sharpe top 20%
- 21 P      Technology             high   0.39  0.41 signatures x157   157  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
- 22 WDC    Technology             high   0.39  0.41 signatures x146   146  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
- 23 WDAY   Technology             mid    0.39  0.41 signatures x145   145  Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%
- 24 SMCI   Technology             high   0.39  0.41 signatures x142   142  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 25 LRCX   Technology             high   0.39  0.41 signatures x132   132  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 26 DDOG   Technology             high   0.39  0.41 signatures x129   129  distance to 52w high top 20% AND downside vol top 20% AND 20d RV vs norm bottom 20%
- 27 ON     Technology             high   0.39  0.41 signatures x126   126  distance to 52w high bottom 20% AND net volume flow top 20% AND 12-1m momentum vs own norm top 20%
- 28 ILMN   Healthcare             mid    0.39  0.41 signatures x125   125  pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%
- 29 NEM    Basic Materials        high   0.39  0.41 signatures x120   120  beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
- 30 NOW    Technology             mid    0.39  0.41 signatures x118   118  Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 31 INTC   Technology             high   0.39  0.41 signatures x117   117  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 32 GNRC   Industrials            high   0.39  0.41 signatures x117   117  depth below 126d high bottom 20% AND beta top 20% AND downside/upside vol bottom 20%
- 33 TER    Technology             high   0.39  0.41 signatures x114   114  accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%
- 34 FCX    Basic Materials        high   0.39  0.41 signatures x111   111  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
- 35 HPQ    Technology             mid    0.39  0.41 signatures x102   102  pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%
- 36 KLAC   Technology             high   0.39  0.41 signatures x101   101  depth below 126d high bottom 20% AND gain off 52w low top 20% AND range compression bottom 20%
- 37 SNPS   Technology             high   0.39  0.41 signatures x100   100  downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%
- 38 CRM    Technology             mid    0.39  0.41 signatures x96     96  up minus down capture top 20% AND 21d return bottom 20% AND up-capture top 20%
- 39 ZBRA   Technology             high   0.39  0.41 signatures x94     94  corr to SPY top 20% AND idiosyncratic vol top 20% AND 20d RV vs norm bottom 20%
- 40 GEV    Industrials            high   0.39  0.41 signatures x92     92  gain off 52w low top 20% AND downside/upside vol vs own norm top 20% AND RS line leading price vs own norm bottom 20%
- 41 NVDA   Technology             high   0.39  0.41 signatures x89     89  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
- 42 NCLH   Consumer Cyclical      high   0.39  0.41 signatures x89     89  Bollinger width vs norm bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
- 43 MCHP   Technology             high   0.39  0.41 signatures x88     88  downside vol top 20% AND range compression bottom 20% AND skew top 20%
- 44 PTC    Technology             mid    0.39  0.41 signatures x86     86  gain off 52w low top 20% AND dollar volume bottom 20% AND 12-1m momentum bottom 20%
- 45 GLW    Technology             high   0.39  0.41 signatures x85     85  corr to SPY top 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%
- 46 PYPL   Financial              high   0.39  0.41 signatures x82     82  Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%
- 47 IT     Technology             mid    0.39  0.41 signatures x77     77  downside/upside vol bottom 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%
- 48 ARES   Financial              high   0.39  0.41 signatures x76     76  beta top 20% AND volume on pullbacks top 20% AND downside/upside vol vs own norm bottom 20%
- 49 COHR   Technology             high   0.39  0.41 signatures x74     74  depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%
- 50 ABNB   Consumer Cyclical      high   0.39  0.41 signatures x73     73  21d return bottom 20% AND 63d RS vs SPY top 20% AND up-capture top 20%
- 51 FIX    Industrials            high   0.39  0.41 signatures x72     72  gain off 52w low top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%
- 52 MPWR   Technology             high   0.39  0.41 signatures x70     70  gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%
- 53 PANW   Technology             high   0.39  0.41 signatures x68     68  downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume vs own norm top 20%
- 54 PWR    Industrials            high   0.39  0.41 signatures x67     67  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
- 55 IVZ    Financial              high   0.39  0.41 signatures x66     66  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
- 56 META   Communication Services high   0.39  0.41 signatures x65     65  beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%
- 57 VEEV   Healthcare             mid    0.39  0.41 signatures x64     64  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
- 58 APH    Technology             high   0.39  0.41 signatures x60     60  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
- 59 COIN   Financial              high   0.39  0.41 signatures x59     59  close location in range bottom 20% AND distance to 52w high bottom 20% AND 63d return top 20%
- 60 XYZ    Technology             high   0.39  0.41 signatures x55     55  beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%
- 61 JBHT   Industrials            mid    0.39  0.41 signatures x54     54  gain off 52w low top 20% AND higher-low cadence bottom 20% AND 21d return bottom 20%
- 62 RDDT   Communication Services high   0.39  0.41 signatures x54     54  Bollinger width vs norm bottom 20% AND beta top 20% AND idiosyncratic vol top 20%
- 63 CEG    Utilities              high   0.39  0.41 signatures x52     52  beta top 20% AND time since 20% drawdown bottom 20% AND downside/upside vol bottom 20%
- 64 GS     Financial              high   0.39  0.41 signatures x51     51  range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
- 65 AMZN   Consumer Cyclical      high   0.31  0.31 signatures x50     50  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
- 66 ADI    Technology             high   0.31  0.31 signatures x49     49  beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
- 67 CTSH   Technology             low    0.31  0.31 signatures x49     49  up minus down capture top 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
- 68 FDS    Financial              low    0.31  0.31 signatures x46     46  Bollinger width vs norm bottom 20% AND downside vol top 20% AND downside/upside vol vs own norm bottom 20%
- 69 NTAP   Technology             high   0.31  0.31 signatures x45     45  beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%
- 70 CIEN   Technology             high   0.31  0.31 signatures x44     44  depth below 126d high bottom 20% AND gain off 52w low top 20% AND vol of vol bottom 20%
- 71 ADSK   Technology             mid    0.31  0.31 signatures x44     44  downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%
- 72 CAT    Industrials            high   0.31  0.31 signatures x43     43  gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%
- 73 FTNT   Technology             high   0.31  0.31 signatures x42     42  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
- 74 AKAM   Technology             high   0.31  0.31 signatures x42     42  downside vol top 20% AND dollar-volume trend top 20% AND skew top 20%
- 75 CCL    Consumer Cyclical      high   0.31  0.31 signatures x42     42  accumulation-distribution days bottom 20% AND beta top 20% AND downside/upside vol bottom 20%
- 76 CRL    Healthcare             high   0.31  0.31 signatures x41     41  idiosyncratic vol top 20% AND 12-1m momentum top 20% AND OBV leading price vs own norm bottom 20%
- 77 QCOM   Technology             high   0.31  0.31 signatures x39     39  distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
- 78 LII    Industrials            high   0.31  0.31 signatures x39     39  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
- 79 KEYS   Technology             high   0.31  0.31 signatures x38     38  beta top 20% AND skew bottom 20% AND distance to 52w high vs own norm top 20%
- 80 TXN    Technology             high   0.31  0.31 signatures x38     38  beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
- 81 TSLA   Consumer Cyclical      high   0.31  0.31 signatures x38     38  time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%
- 82 HAL    Energy                 mid    0.31  0.31 signatures x37     37  gain off 52w low top 20% AND 21d return bottom 20% AND 126d Sharpe bottom 20%
- 83 DVA    Healthcare             low    0.31  0.31 signatures x36     36  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND dollar volume bottom 20%
- 84 ETN    Industrials            high   0.31  0.31 signatures x36     36  distance to 52w high top 20% AND downside vol top 20% AND overnight share of moves top 20%
- 85 EME    Industrials            high   0.31  0.31 signatures x36     36  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
- 86 SW     Consumer Cyclical      high   0.31  0.31 signatures x35     35  range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
- 87 CVNA   Consumer Cyclical      high   0.31  0.31 signatures x35     35  beta top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
- 88 GRMN   Technology             high   0.31  0.31 signatures x33     33  up minus down capture top 20% AND net volume flow bottom 20% AND RS line leading price top 20%
- 89 JBL    Technology             high   0.31  0.31 signatures x32     32  gain off 52w low top 20% AND px5<-3% AND volume vs 250d top 20%
- 90 TEL    Technology             high   0.31  0.31 signatures x32     32  beta top 20% AND higher-low cadence top 20% AND OBV leading price vs own norm bottom 20%
- 91 KKR    Financial              high   0.31  0.31 signatures x32     32  range compression bottom 20% AND 21d return bottom 20% AND up-capture top 20%
- 92 CDW    Technology             mid    0.31  0.31 signatures x30     30  downside vol top 20% AND 21d return bottom 20% AND distance to 52w high vs own norm top 20%
- 93 GDDY   Technology             low    0.31  0.31 signatures x30     30  up minus down capture top 20% AND distance to 52w high bottom 20% AND volume vs 250d top 20%
- 94 ORCL   Technology             high   0.31  0.31 signatures x29     29  accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%
- 95 GPN    Technology             high   0.31  0.31 signatures x28     28  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
- 96 HWM    Industrials            high   0.31  0.31 signatures x27     27  12-1m momentum top 20% AND distance to 52w high vs own norm bottom 20% AND RS line leading price vs own norm bottom 20%
- 97 CSGP   Real Estate            mid    0.31  0.31 signatures x26     26  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
- 98 ECHO   Communication Services high   0.31  0.31 signatures x26     26  depth below 126d high bottom 20% AND beta top 20% AND skew top 20%
- 99 VST    Utilities              high   0.31  0.31 signatures x25     25  depth below 126d high top 20% AND downside vol top 20% AND net volume flow top 20%
-100 ADBE   Technology             mid    0.31  0.31 signatures x24     24  downside vol top 20% AND rvROC21<-20% AND downside/upside vol vs own norm bottom 20%
-101 NRG    Utilities              high   0.31  0.31 signatures x24     24  beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%
-102 IQV    Healthcare             mid    0.31  0.31 signatures x22     22  gain off 52w low top 20% AND volROC21>+25% AND 20d RV vs norm vs own norm bottom 20%
-103 FSLR   Technology             high   0.31  0.31 signatures x22     22  12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%
-104 LUV    Industrials            high   0.31  0.31 signatures x22     22  overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%
-105 APP    Communication Services high   0.31  0.31 signatures x22     22  downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%
-106 COF    Financial              high   0.31  0.31 signatures x22     22  21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%
-107 IBKR   Financial              high   0.31  0.31 signatures x21     21  beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%
-108 APO    Financial              high   0.31  0.31 signatures x21     21  21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%
-109 NUE    Basic Materials        high   0.31  0.32 composite 70-80     0  
-110 CSCO   Technology             high   0.31  0.32 composite 70-80     0  
-111 BIIB   Healthcare             mid    0.29  0.29 signatures x20     20  volROC21>+50% AND 12-1m momentum vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%
-112 DXCM   Healthcare             mid    0.29  0.29 signatures x19     19  gain off 52w low top 20% AND px5<-3% AND range compression bottom 20%
-113 DAL    Industrials            high   0.29  0.29 signatures x19     19  20d RV vs norm bottom 20% AND up-capture top 20% AND volROC21>+50%
-114 BAX    Healthcare             high   0.29  0.29 signatures x19     19  gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%
-115 ALGN   Healthcare             high   0.29  0.29 signatures x19     19  beta top 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%
-116 BEN    Financial              high   0.29  0.29 signatures x18     18  gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%
-117 BX     Financial              high   0.29  0.29 signatures x17     17  12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%
-118 DOW    Basic Materials        low    0.29  0.29 signatures x16     16  distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
-119 CF     Basic Materials        low    0.29  0.29 signatures x15     15  up minus down capture top 20% AND gain off 52w low top 20% AND 21d return bottom 20%
-120 GEN    Technology             mid    0.29  0.29 signatures x15     15  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
-121 INTU   Technology             mid    0.29  0.29 signatures x15     15  downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%
-122 LULU   Consumer Cyclical      high   0.29  0.29 signatures x15     15  beta top 20% AND OBV leading price bottom 20% AND 20d/60d RV bottom 20%
-123 A      Healthcare             mid    0.29  0.29 signatures x14     14  gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%
-124 PCG    Utilities              low    0.29  0.29 signatures x13     13  idiosyncratic vol top 20% AND share of up days 63d top 20% AND dollar volume vs own norm top 20%
-125 EMR    Industrials            high   0.29  0.29 signatures x13     13  beta top 20% AND up minus down capture top 20% AND vol of vol bottom 20%
-126 AXON   Industrials            high   0.29  0.29 signatures x13     13  beta top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%
-127 EXPD   Industrials            mid    0.29  0.29 signatures x12     12  gain off 52w low top 20% AND dollar volume bottom 20% AND up-capture top 20%
-128 ALB    Basic Materials        high   0.29  0.29 signatures x12     12  beta top 20% AND 12-1m momentum top 20% AND 126d Sharpe bottom 20%
-129 DLTR   Consumer Defensive     mid    0.29  0.29 signatures x11     11  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
-130 SKYD   Communication Services mid    0.29  0.29 signatures x11     11  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
-131 GOOGL  Communication Services high   0.29  0.29 signatures x11     11  accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%
-132 SWK    Industrials            high   0.29  0.29 signatures x11     11  Bollinger width vs norm bottom 20% AND beta top 20% AND 12-1m momentum vs own norm top 20%
-133 PSX    Energy                 low    0.29  0.29 signatures x11     11  gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%
-134 IBM    Technology             high   0.29  0.29 signatures x11     11  downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%
-135 TRMB   Technology             high   0.29  0.29 signatures x11     11  OBV leading price bottom 20% AND up-capture top 20% AND share of up days 63d top 20%
-136 AME    Industrials            high   0.27  0.27 composite 50-70     0  
-137 JCI    Industrials            high   0.27  0.27 composite 50-70     0  
-138 STT    Financial              high   0.27  0.27 composite 50-70     0  
-139 NTRS   Financial              high   0.26  0.25 composite <50       0  
-140 DOV    Industrials            high   0.26  0.25 composite <50       0  
-141 TROW   Financial              high   0.26  0.25 composite <50       0  
-142 RL     Consumer Cyclical      high   0.26  0.25 composite <50       0  
-143 IRM    Real Estate            high   0.26  0.25 composite <50       0  
-144 IR     Industrials            high   0.26  0.25 composite <50       0  
-145 PPG    Basic Materials        high   0.26  0.25 composite <50       0  
-146 GE     Industrials            high   0.26  0.25 composite <50       0  
-147 TDY    Technology             high   0.26  0.25 composite <50       0  
-148 F      Consumer Cyclical      high   0.26  0.25 composite <50       0  
-149 CFG    Financial              high   0.26  0.25 composite <50       0  
-150 TT     Industrials            high   0.26  0.25 composite <50       0  
-151 HUBB   Industrials            high   0.26  0.25 composite <50       0  
-152 DD     Basic Materials        high   0.26  0.25 composite <50       0  
-153 SYF    Financial              high   0.26  0.25 composite <50       0  
-154 PCAR   Industrials            high   0.26  0.25 composite <50       0  
-155 ODFL   Industrials            high   0.26  0.25 composite <50       0  
-156 LEN    Consumer Cyclical      high   0.26  0.25 composite <50       0  
-157 J      Industrials            high   0.26  0.25 composite <50       0  
-158 FERG   Industrials            high   0.26  0.25 composite <50       0  
-159 BA     Industrials            high   0.26  0.25 composite <50       0  
-160 BKNG   Consumer Cyclical      high   0.26  0.25 composite <50       0  
-161 IDXX   Healthcare             high   0.26  0.25 composite <50       0  
-162 PHM    Consumer Cyclical      high   0.26  0.25 composite <50       0  
-163 DECK   Consumer Cyclical      high   0.26  0.25 composite <50       0  
-164 AXP    Financial              high   0.26  0.25 composite <50       0  
-165 CBRE   Real Estate            high   0.26  0.25 composite <50       0  
-166 UBER   Technology             high   0.26  0.25 composite <50       0  
-167 MRK    Healthcare             low    0.26  0.26 signatures x10     10  gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%
-168 AVGO   Technology             high   0.26  0.26 signatures x10     10  depth below 126d high bottom 20% AND range compression bottom 20% AND up-capture top 20%
-169 MS     Financial              high   0.26  0.26 signatures x10     10  12-1m momentum top 20% AND up/down volume bottom 20% AND RS line leading price vs own norm bottom 20%
-170 ARE    Real Estate            mid    0.26  0.26 signatures x10     10  time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%
-171 APTV   Consumer Cyclical      high   0.26  0.26 signatures x10     10  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
-172 HST    Real Estate            mid    0.26  0.26 signatures x9       9  gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
-173 LYB    Basic Materials        low    0.26  0.26 signatures x9       9  depth below 126d high bottom 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%
-174 SLB    Energy                 mid    0.26  0.26 signatures x9       9  gain off 52w low top 20% AND downside/upside vol bottom 20% AND 21d return bottom 20%
-175 CARR   Industrials            high   0.26  0.26 signatures x9       9  beta top 20% AND range compression bottom 20% AND vol of vol top 20%
-176 BBY    Consumer Cyclical      mid    0.26  0.26 signatures x8       8  pullback from 21d high bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
-177 RVTY   Healthcare             high   0.26  0.26 signatures x8       8  gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%
-178 BSX    Healthcare             low    0.26  0.26 signatures x8       8  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND pullback from 21d high bottom 20%
-179 EXPE   Consumer Cyclical      high   0.26  0.26 signatures x8       8  downside vol top 20% AND share of up days 63d top 20% AND vol of vol bottom 20%
-180 TECH   Healthcare             mid    0.26  0.26 signatures x8       8  gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
-181 RCL    Consumer Cyclical      high   0.26  0.26 signatures x8       8  beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%
-182 ISRG   Healthcare             high   0.26  0.26 signatures x8       8  downside vol top 20% AND dollar volume top 20% AND net volume flow top 20%
-183 MGM    Consumer Cyclical      mid    0.26  0.26 signatures x8       8  time since 20% drawdown bottom 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
-184 HII    Industrials            mid    0.26  0.26 signatures x8       8  depth below 126d high bottom 20% AND time since ignition day bottom 20% AND downside/upside vol bottom 20%
-185 CPRT   Industrials            low    0.26  0.26 signatures x7       7  distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%
-186 ROK    Industrials            high   0.26  0.26 signatures x7       7  beta top 20% AND higher-low cadence bottom 20% AND 126d Sharpe top 20%
-187 CMI    Industrials            high   0.26  0.26 signatures x7       7  beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
-188 UAL    Industrials            high   0.26  0.26 signatures x7       7  overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%
-189 MSFT   Technology             high   0.26  0.26 signatures x7       7  up-capture top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
-190 DASH   Consumer Cyclical      high   0.26  0.26 signatures x7       7  distance to 52w high bottom 20% AND RS line leading price top 20% AND up-capture top 20%
-191 VTRS   Healthcare             mid    0.26  0.26 signatures x6       6  gain off 52w low top 20% AND dollar volume bottom 20% AND 20d RV vs norm bottom 20%
-192 CNC    Healthcare             mid    0.26  0.26 signatures x6       6  gain off 52w low top 20% AND net volume flow bottom 20% AND range compression bottom 20%
-193 CASY   Consumer Cyclical      low    0.26  0.26 signatures x6       6  idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%
-194 PFE    Healthcare             mid    0.26  0.26 signatures x6       6  dollar volume top 20% AND px5<-3% AND 63d return top 20%
-195 ERIE   Financial              low    0.26  0.26 signatures x6       6  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
-196 CDNS   Technology             high   0.26  0.26 signatures x6       6  accumulation-distribution days top 20% AND beta top 20% AND close location in range top 20%
-197 CME    Financial              low    0.26  0.26 signatures x6       6  NR7 count bottom 20% AND 63d RS vs SPY top 20% AND distance to 52w high vs own norm bottom 20%
-198 TPR    Consumer Cyclical      high   0.26  0.26 signatures x6       6  Bollinger width vs norm bottom 20% AND downside vol top 20% AND range compression bottom 20%
-199 FDX    Industrials            high   0.26  0.26 signatures x6       6  accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND net volume flow bottom 20%
-200 CRH    Basic Materials        high   0.26  0.26 signatures x6       6  beta top 20% AND RS line leading price bottom 20% AND 20d RV vs norm vs own norm bottom 20%
-201 CBOE   Financial              low    0.25  0.25 signatures x5       5  depth below 126d high bottom 20% AND up minus down capture top 20% AND ignition-day volume top 20%
-202 TYL    Technology             low    0.25  0.25 signatures x5       5  accumulation-distribution days top 20% AND idiosyncratic vol top 20% AND OBV leading price bottom 20%
-203 CPAY   Technology             high   0.25  0.25 signatures x5       5  gain off 52w low top 20% AND range compression bottom 20% AND 20d RV vs norm bottom 20%
-204 LDOS   Technology             mid    0.25  0.25 signatures x5       5  distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%
-205 C      Financial              high   0.25  0.25 signatures x5       5  beta top 20% AND 12-1m momentum top 20% AND RS line leading price vs own norm bottom 20%
-206 TSCO   Consumer Cyclical      mid    0.25  0.25 signatures x5       5  depth below 126d high bottom 20% AND up/down volume top 20% AND downside/upside vol vs own norm bottom 20%
-207 IP     Consumer Cyclical      high   0.25  0.25 signatures x5       5  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%
-208 AMGN   Healthcare             mid    0.25  0.25 signatures x4       4  dollar volume top 20% AND px5<-3% AND 63d return top 20%
-209 JKHY   Technology             low    0.25  0.25 signatures x4       4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-210 TPL    Energy                 mid    0.25  0.25 signatures x4       4  idiosyncratic vol top 20% AND dollar volume bottom 20% AND vol of vol bottom 20%
-211 DG     Consumer Defensive     mid    0.25  0.25 signatures x4       4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-212 REGN   Healthcare             mid    0.25  0.25 signatures x4       4  21d return bottom 20% AND 63d return top 20% AND OBV leading price vs own norm top 20%
-213 GOOG   Communication Services high   0.25  0.25 signatures x4       4  Bollinger width vs norm bottom 20% AND beta top 20% AND up/down volume top 20%
-214 NXPI   Technology             high   0.25  0.25 signatures x4       4  downside vol top 20% AND dollar-volume trend bottom 20% AND range compression bottom 20%
-215 TMO    Healthcare             mid    0.25  0.25 signatures x4       4  dollar volume top 20% AND px5<-3% AND 63d return top 20%
-216 DGX    Healthcare             low    0.25  0.25 signatures x4       4  up minus down capture top 20% AND up/down volume bottom 20% AND volROC21>+25%
-217 INVH   Real Estate            low    0.25  0.25 signatures x4       4  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
-218 EG     Financial              low    0.25  0.25 signatures x4       4  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
-219 CMG    Consumer Cyclical      mid    0.25  0.25 signatures x4       4  21d return bottom 20% AND idiosyncratic vol top 20%
-220 CHTR   Communication Services mid    0.25  0.25 signatures x4       4  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%
-221 WY     Real Estate            mid    0.25  0.25 signatures x4       4  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+50%
-222 DLR    Real Estate            mid    0.25  0.25 signatures x3       3  higher-low cadence bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
-223 STLD   Basic Materials        high   0.25  0.25 signatures x3       3  gain off 52w low top 20% AND rvROC21<-20% AND downside/upside vol vs own norm top 20%
-224 EIX    Utilities              low    0.25  0.25 signatures x3       3  idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%
-225 DPZ    Consumer Cyclical      low    0.25  0.25 signatures x3       3  distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%
-226 DE     Industrials            mid    0.25  0.25 signatures x3       3  gain off 52w low top 20% AND dollar-volume trend top 20% AND 20d RV vs norm vs own norm bottom 20%
-227 CINF   Financial              low    0.25  0.25 signatures x3       3  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
-228 SBAC   Real Estate            low    0.25  0.25 signatures x3       3  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%
-229 BMY    Healthcare             low    0.25  0.25 signatures x3       3  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
-230 CHRW   Industrials            mid    0.25  0.25 signatures x3       3  idiosyncratic vol top 20% AND px5<-3%
-231 APA    Energy                 low    0.25  0.25 signatures x3       3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
-232 L      Financial              low    0.25  0.25 signatures x3       3  volROC21>+50% AND dollar volume vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%
-233 GM     Consumer Cyclical      high   0.25  0.25 signatures x3       3  12-1m momentum top 20% AND volROC21>+50% AND RS line leading price vs own norm bottom 20%
-234 MPC    Energy                 low    0.25  0.25 signatures x3       3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
-235 URI    Industrials            high   0.25  0.25 signatures x3       3  gain off 52w low top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
-236 FICO   Technology             mid    0.25  0.25 signatures x3       3  21d return bottom 20% AND idiosyncratic vol top 20%
-237 DVN    Energy                 low    0.25  0.25 signatures x3       3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
-238 COP    Energy                 low    0.25  0.25 signatures x3       3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
-239 BXP    Real Estate            mid    0.25  0.25 signatures x3       3  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND vol of vol bottom 20%
-240 BLK    Financial              high   0.25  0.25 signatures x3       3  OBV leading price bottom 20% AND up-capture top 20%
-241 VRSK   Industrials            low    0.24  0.23 signatures x2       2  downside vol top 20% AND volume vs 250d vs own norm bottom 20%
-242 FFIV   Technology             high   0.24  0.23 signatures x2       2  gain off 52w low top 20% AND up-capture top 20%
-243 DHR    Healthcare             mid    0.24  0.23 signatures x2       2  63d RS vs SPY top 20% AND px5<-3%
-244 WAB    Industrials            high   0.24  0.23 signatures x2       2  gain off 52w low top 20% AND overnight share of moves top 20% AND NR7 count bottom 20%
-245 MOS    Basic Materials        mid    0.24  0.23 signatures x2       2  distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%
-246 BNY    Financial              mid    0.24  0.23 signatures x2       2  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND up/down volume bottom 20%
-247 EFX    Industrials            mid    0.24  0.23 signatures x2       2  downside vol top 20% AND range vol / close vol top 20% AND OBV leading price vs own norm bottom 20%
-248 TGT    Consumer Defensive     mid    0.24  0.23 signatures x1       1  gain off 52w low top 20% AND Bollinger width vs norm bottom 20%
-249 BR     Technology             low    0.24  0.23 signatures x1       1  distance to 52w high bottom 20% AND RS line leading price top 20% AND skew top 20%
-250 HUM    Healthcare             mid    0.24  0.23 signatures x1       1  gain off 52w low top 20% AND Bollinger width vs norm bottom 20%
-251 TMUS   Communication Services low    0.24  0.23 signatures x1       1  range compression bottom 20% AND downside vol top 20%
-252 PODD   Healthcare             mid    0.24  0.23 signatures x1       1  idiosyncratic vol top 20% AND RS line leading price vs own norm bottom 20%
-253 MAS    Industrials            high   0.24  0.23 signatures x1       1  Bollinger width vs norm bottom 20% AND downside vol top 20%
-254 WSM    Consumer Cyclical      high   0.24  0.23 signatures x1       1  126d Sharpe top 20% AND up-capture top 20%
-255 VLO    Energy                 low    0.24  0.23 signatures x1       1  gain off 52w low top 20% AND volume vs 250d top 20%
-256 DHI    Consumer Cyclical      high   0.24  0.23 signatures x1       1  rvROC21<-20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
-257 PNR    Industrials            high   0.24  0.23 signatures x1       1  20d RV vs norm bottom 20% AND downside vol top 20%
+  1 MRNA   Healthcare             high   0.49  0.52 composite 95-100 (+signatures)  391  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
+  2 DELL   Technology             high   0.49  0.52 composite 95-100 (+signatures)  201  Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+  3 MRVL   Technology             high   0.49  0.52 composite 95-100 (+signatures)  193  downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%
+  4 LITE   Technology             high   0.49  0.52 composite 95-100 (+signatures)  191  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
+  5 HPE    Technology             high   0.49  0.52 composite 95-100 (+signatures)  167  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
+  6 P      Technology             high   0.49  0.52 composite 95-100 (+signatures)  157  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
+  7 AMD    Technology             high   0.40  0.42 composite 90-95 (+signatures)  228  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
+  8 BE     Industrials            high   0.40  0.42 composite 90-95 (+signatures)  197  Bollinger width vs norm bottom 20% AND downside vol top 20% AND 63d RS vs SPY top 20%
+  9 AMAT   Technology             high   0.40  0.42 composite 90-95 (+signatures)  166  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 10 ON     Technology             high   0.40  0.42 composite 90-95 (+signatures)  126  distance to 52w high bottom 20% AND net volume flow top 20% AND 12-1m momentum vs own norm top 20%
+ 11 INTC   Technology             high   0.40  0.42 composite 90-95 (+signatures)  117  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 12 TER    Technology             high   0.40  0.42 composite 90-95 (+signatures)  114  accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%
+ 13 GLW    Technology             high   0.40  0.42 composite 90-95 (+signatures)   85  corr to SPY top 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%
+ 14 NTAP   Technology             high   0.40  0.42 composite 90-95 (+signatures)   45  beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%
+ 15 KEYS   Technology             high   0.40  0.42 composite 90-95 (+signatures)   38  beta top 20% AND skew bottom 20% AND distance to 52w high vs own norm top 20%
+ 16 PLTR   Technology             high   0.39  0.41 signatures x308 (+composite)  308  downside vol top 20% AND range compression bottom 20% AND downside/upside vol vs own norm bottom 20%
+ 17 ANET   Technology             high   0.39  0.41 signatures x271 (+composite)  271  depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%
+ 18 SNDK   Technology             high   0.39  0.41 signatures x268 (+composite)  268  distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 19 MU     Technology             high   0.39  0.41 signatures x238 (+composite)  238  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
+ 20 FLEX   Technology             high   0.39  0.41 signatures x227 (+composite)  227  depth below 126d high bottom 20% AND beta top 20% AND 126d Sharpe top 20%
+ 21 CRWD   Technology             high   0.39  0.41 signatures x226 (+composite)  226  downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%
+ 22 SWKS   Technology             high   0.39  0.41 signatures x218 (+composite)  218  beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
+ 23 HOOD   Financial              high   0.39  0.41 signatures x202 (+composite)  202  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 24 ACN    Technology             low    0.39  0.41 signatures x176 (+composite)  176  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
+ 25 STX    Technology             high   0.39  0.41 signatures x170 (+composite)  170  distance to 52w high bottom 20% AND net volume flow top 20% AND 126d Sharpe top 20%
+ 26 VRT    Industrials            high   0.39  0.41 signatures x167 (+composite)  167  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
+ 27 EL     Consumer Defensive     high   0.39  0.41 signatures x164 (+composite)  164  close location in range bottom 20% AND time since 20% drawdown bottom 20% AND 126d Sharpe top 20%
+ 28 WDC    Technology             high   0.39  0.41 signatures x146 (+composite)  146  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
+ 29 WDAY   Technology             mid    0.39  0.41 signatures x145 (+composite)  145  Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%
+ 30 SMCI   Technology             high   0.39  0.41 signatures x142 (+composite)  142  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 31 LRCX   Technology             high   0.39  0.41 signatures x132 (+composite)  132  time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 32 DDOG   Technology             high   0.39  0.41 signatures x129 (+composite)  129  distance to 52w high top 20% AND downside vol top 20% AND 20d RV vs norm bottom 20%
+ 33 ILMN   Healthcare             mid    0.39  0.41 signatures x125   125  pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%
+ 34 NEM    Basic Materials        high   0.39  0.41 signatures x120 (+composite)  120  beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
+ 35 NOW    Technology             mid    0.39  0.41 signatures x118 (+composite)  118  Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 36 GNRC   Industrials            high   0.39  0.41 signatures x117 (+composite)  117  depth below 126d high bottom 20% AND beta top 20% AND downside/upside vol bottom 20%
+ 37 FCX    Basic Materials        high   0.39  0.41 signatures x111 (+composite)  111  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
+ 38 HPQ    Technology             mid    0.39  0.41 signatures x102   102  pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%
+ 39 KLAC   Technology             high   0.39  0.41 signatures x101 (+composite)  101  depth below 126d high bottom 20% AND gain off 52w low top 20% AND range compression bottom 20%
+ 40 SNPS   Technology             high   0.39  0.41 signatures x100 (+composite)  100  downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%
+ 41 CRM    Technology             mid    0.39  0.41 signatures x96 (+composite)   96  up minus down capture top 20% AND 21d return bottom 20% AND up-capture top 20%
+ 42 ZBRA   Technology             high   0.39  0.41 signatures x94 (+composite)   94  corr to SPY top 20% AND idiosyncratic vol top 20% AND 20d RV vs norm bottom 20%
+ 43 GEV    Industrials            high   0.39  0.41 signatures x92 (+composite)   92  gain off 52w low top 20% AND downside/upside vol vs own norm top 20% AND RS line leading price vs own norm bottom 20%
+ 44 NVDA   Technology             high   0.39  0.41 signatures x89 (+composite)   89  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
+ 45 NCLH   Consumer Cyclical      high   0.39  0.41 signatures x89 (+composite)   89  Bollinger width vs norm bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
+ 46 MCHP   Technology             high   0.39  0.41 signatures x88 (+composite)   88  downside vol top 20% AND range compression bottom 20% AND skew top 20%
+ 47 PTC    Technology             mid    0.39  0.41 signatures x86 (+composite)   86  gain off 52w low top 20% AND dollar volume bottom 20% AND 12-1m momentum bottom 20%
+ 48 PYPL   Financial              high   0.39  0.41 signatures x82 (+composite)   82  Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%
+ 49 IT     Technology             mid    0.39  0.41 signatures x77 (+composite)   77  downside/upside vol bottom 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%
+ 50 ARES   Financial              high   0.39  0.41 signatures x76 (+composite)   76  beta top 20% AND volume on pullbacks top 20% AND downside/upside vol vs own norm bottom 20%
+ 51 COHR   Technology             high   0.39  0.41 signatures x74 (+composite)   74  depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%
+ 52 ABNB   Consumer Cyclical      high   0.39  0.41 signatures x73 (+composite)   73  21d return bottom 20% AND 63d RS vs SPY top 20% AND up-capture top 20%
+ 53 FIX    Industrials            high   0.39  0.41 signatures x72 (+composite)   72  gain off 52w low top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%
+ 54 MPWR   Technology             high   0.39  0.41 signatures x70 (+composite)   70  gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%
+ 55 PANW   Technology             high   0.39  0.41 signatures x68 (+composite)   68  downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume vs own norm top 20%
+ 56 PWR    Industrials            high   0.39  0.41 signatures x67 (+composite)   67  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
+ 57 IVZ    Financial              high   0.39  0.41 signatures x66 (+composite)   66  beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%
+ 58 META   Communication Services high   0.39  0.41 signatures x65 (+composite)   65  beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%
+ 59 VEEV   Healthcare             mid    0.39  0.41 signatures x64 (+composite)   64  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
+ 60 APH    Technology             high   0.39  0.41 signatures x60 (+composite)   60  beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
+ 61 COIN   Financial              high   0.39  0.41 signatures x59 (+composite)   59  close location in range bottom 20% AND distance to 52w high bottom 20% AND 63d return top 20%
+ 62 XYZ    Technology             high   0.39  0.41 signatures x55 (+composite)   55  beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%
+ 63 JBHT   Industrials            mid    0.39  0.41 signatures x54 (+composite)   54  gain off 52w low top 20% AND higher-low cadence bottom 20% AND 21d return bottom 20%
+ 64 RDDT   Communication Services high   0.39  0.41 signatures x54 (+composite)   54  Bollinger width vs norm bottom 20% AND beta top 20% AND idiosyncratic vol top 20%
+ 65 CEG    Utilities              high   0.39  0.41 signatures x52 (+composite)   52  beta top 20% AND time since 20% drawdown bottom 20% AND downside/upside vol bottom 20%
+ 66 GS     Financial              high   0.39  0.41 signatures x51 (+composite)   51  range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
+ 67 FTNT   Technology             high   0.33  0.34 composite 80-90 (+signatures)   42  distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%
+ 68 RVTY   Healthcare             high   0.33  0.34 composite 80-90 (+signatures)    8  gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%
+ 69 AMZN   Consumer Cyclical      high   0.31  0.31 signatures x50 (+composite)   50  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
+ 70 ADI    Technology             high   0.31  0.31 signatures x49 (+composite)   49  beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
+ 71 CTSH   Technology             low    0.31  0.31 signatures x49 (+composite)   49  up minus down capture top 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%
+ 72 FDS    Financial              low    0.31  0.31 signatures x46 (+composite)   46  Bollinger width vs norm bottom 20% AND downside vol top 20% AND downside/upside vol vs own norm bottom 20%
+ 73 CIEN   Technology             high   0.31  0.31 signatures x44 (+composite)   44  depth below 126d high bottom 20% AND gain off 52w low top 20% AND vol of vol bottom 20%
+ 74 ADSK   Technology             mid    0.31  0.31 signatures x44 (+composite)   44  downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%
+ 75 CAT    Industrials            high   0.31  0.31 signatures x43 (+composite)   43  gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%
+ 76 AKAM   Technology             high   0.31  0.31 signatures x42 (+composite)   42  downside vol top 20% AND dollar-volume trend top 20% AND skew top 20%
+ 77 CCL    Consumer Cyclical      high   0.31  0.31 signatures x42 (+composite)   42  accumulation-distribution days bottom 20% AND beta top 20% AND downside/upside vol bottom 20%
+ 78 CRL    Healthcare             high   0.31  0.31 signatures x41 (+composite)   41  idiosyncratic vol top 20% AND 12-1m momentum top 20% AND OBV leading price vs own norm bottom 20%
+ 79 QCOM   Technology             high   0.31  0.31 signatures x39 (+composite)   39  distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+ 80 LII    Industrials            high   0.31  0.31 signatures x39 (+composite)   39  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
+ 81 TXN    Technology             high   0.31  0.31 signatures x38 (+composite)   38  beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
+ 82 TSLA   Consumer Cyclical      high   0.31  0.31 signatures x38 (+composite)   38  time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%
+ 83 HAL    Energy                 mid    0.31  0.31 signatures x37 (+composite)   37  gain off 52w low top 20% AND 21d return bottom 20% AND 126d Sharpe bottom 20%
+ 84 DVA    Healthcare             low    0.31  0.31 signatures x36 (+composite)   36  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND dollar volume bottom 20%
+ 85 ETN    Industrials            high   0.31  0.31 signatures x36 (+composite)   36  distance to 52w high top 20% AND downside vol top 20% AND overnight share of moves top 20%
+ 86 EME    Industrials            high   0.31  0.31 signatures x36 (+composite)   36  beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%
+ 87 SW     Consumer Cyclical      high   0.31  0.31 signatures x35 (+composite)   35  range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%
+ 88 CVNA   Consumer Cyclical      high   0.31  0.31 signatures x35 (+composite)   35  beta top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
+ 89 GRMN   Technology             high   0.31  0.31 signatures x33 (+composite)   33  up minus down capture top 20% AND net volume flow bottom 20% AND RS line leading price top 20%
+ 90 JBL    Technology             high   0.31  0.31 signatures x32 (+composite)   32  gain off 52w low top 20% AND px5<-3% AND volume vs 250d top 20%
+ 91 TEL    Technology             high   0.31  0.31 signatures x32 (+composite)   32  beta top 20% AND higher-low cadence top 20% AND OBV leading price vs own norm bottom 20%
+ 92 KKR    Financial              high   0.31  0.31 signatures x32 (+composite)   32  range compression bottom 20% AND 21d return bottom 20% AND up-capture top 20%
+ 93 CDW    Technology             mid    0.31  0.31 signatures x30 (+composite)   30  downside vol top 20% AND 21d return bottom 20% AND distance to 52w high vs own norm top 20%
+ 94 GDDY   Technology             low    0.31  0.31 signatures x30 (+composite)   30  up minus down capture top 20% AND distance to 52w high bottom 20% AND volume vs 250d top 20%
+ 95 ORCL   Technology             high   0.31  0.31 signatures x29 (+composite)   29  accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%
+ 96 GPN    Technology             high   0.31  0.31 signatures x28 (+composite)   28  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
+ 97 HWM    Industrials            high   0.31  0.31 signatures x27 (+composite)   27  12-1m momentum top 20% AND distance to 52w high vs own norm bottom 20% AND RS line leading price vs own norm bottom 20%
+ 98 CSGP   Real Estate            mid    0.31  0.31 signatures x26 (+composite)   26  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
+ 99 ECHO   Communication Services high   0.31  0.31 signatures x26 (+composite)   26  depth below 126d high bottom 20% AND beta top 20% AND skew top 20%
+100 VST    Utilities              high   0.31  0.31 signatures x25 (+composite)   25  depth below 126d high top 20% AND downside vol top 20% AND net volume flow top 20%
+101 ADBE   Technology             mid    0.31  0.31 signatures x24 (+composite)   24  downside vol top 20% AND rvROC21<-20% AND downside/upside vol vs own norm bottom 20%
+102 NRG    Utilities              high   0.31  0.31 signatures x24 (+composite)   24  beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%
+103 IQV    Healthcare             mid    0.31  0.31 signatures x22 (+composite)   22  gain off 52w low top 20% AND volROC21>+25% AND 20d RV vs norm vs own norm bottom 20%
+104 FSLR   Technology             high   0.31  0.31 signatures x22 (+composite)   22  12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%
+105 LUV    Industrials            high   0.31  0.31 signatures x22 (+composite)   22  overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%
+106 APP    Communication Services high   0.31  0.31 signatures x22 (+composite)   22  downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%
+107 COF    Financial              high   0.31  0.31 signatures x22 (+composite)   22  21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%
+108 IBKR   Financial              high   0.31  0.31 signatures x21 (+composite)   21  beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%
+109 APO    Financial              high   0.31  0.31 signatures x21 (+composite)   21  21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%
+110 STLD   Basic Materials        high   0.31  0.32 composite 70-80 (+signatures)    3  gain off 52w low top 20% AND rvROC21<-20% AND downside/upside vol vs own norm top 20%
+111 FFIV   Technology             high   0.31  0.32 composite 70-80 (+signatures)    2  gain off 52w low top 20% AND up-capture top 20%
+112 NUE    Basic Materials        high   0.31  0.32 composite 70-80     0  
+113 CSCO   Technology             high   0.31  0.32 composite 70-80     0  
+114 BIIB   Healthcare             mid    0.29  0.29 signatures x20 (+composite)   20  volROC21>+50% AND 12-1m momentum vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%
+115 DXCM   Healthcare             mid    0.29  0.29 signatures x19 (+composite)   19  gain off 52w low top 20% AND px5<-3% AND range compression bottom 20%
+116 DAL    Industrials            high   0.29  0.29 signatures x19 (+composite)   19  20d RV vs norm bottom 20% AND up-capture top 20% AND volROC21>+50%
+117 BAX    Healthcare             high   0.29  0.29 signatures x19 (+composite)   19  gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%
+118 ALGN   Healthcare             high   0.29  0.29 signatures x19 (+composite)   19  beta top 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%
+119 BEN    Financial              high   0.29  0.29 signatures x18 (+composite)   18  gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%
+120 BX     Financial              high   0.29  0.29 signatures x17 (+composite)   17  12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%
+121 DOW    Basic Materials        low    0.29  0.29 signatures x16 (+composite)   16  distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%
+122 CF     Basic Materials        low    0.29  0.29 signatures x15 (+composite)   15  up minus down capture top 20% AND gain off 52w low top 20% AND 21d return bottom 20%
+123 GEN    Technology             mid    0.29  0.29 signatures x15 (+composite)   15  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
+124 INTU   Technology             mid    0.29  0.29 signatures x15 (+composite)   15  downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%
+125 LULU   Consumer Cyclical      high   0.29  0.29 signatures x15 (+composite)   15  beta top 20% AND OBV leading price bottom 20% AND 20d/60d RV bottom 20%
+126 A      Healthcare             mid    0.29  0.29 signatures x14     14  gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%
+127 PCG    Utilities              low    0.29  0.29 signatures x13 (+composite)   13  idiosyncratic vol top 20% AND share of up days 63d top 20% AND dollar volume vs own norm top 20%
+128 EMR    Industrials            high   0.29  0.29 signatures x13 (+composite)   13  beta top 20% AND up minus down capture top 20% AND vol of vol bottom 20%
+129 AXON   Industrials            high   0.29  0.29 signatures x13 (+composite)   13  beta top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%
+130 EXPD   Industrials            mid    0.29  0.29 signatures x12 (+composite)   12  gain off 52w low top 20% AND dollar volume bottom 20% AND up-capture top 20%
+131 ALB    Basic Materials        high   0.29  0.29 signatures x12 (+composite)   12  beta top 20% AND 12-1m momentum top 20% AND 126d Sharpe bottom 20%
+132 DLTR   Consumer Defensive     mid    0.29  0.29 signatures x11 (+composite)   11  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
+133 SKYD   Communication Services mid    0.29  0.29 signatures x11 (+composite)   11  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
+134 GOOGL  Communication Services high   0.29  0.29 signatures x11 (+composite)   11  accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%
+135 SWK    Industrials            high   0.29  0.29 signatures x11 (+composite)   11  Bollinger width vs norm bottom 20% AND beta top 20% AND 12-1m momentum vs own norm top 20%
+136 PSX    Energy                 low    0.29  0.29 signatures x11 (+composite)   11  gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%
+137 IBM    Technology             high   0.29  0.29 signatures x11 (+composite)   11  downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%
+138 TRMB   Technology             high   0.29  0.29 signatures x11 (+composite)   11  OBV leading price bottom 20% AND up-capture top 20% AND share of up days 63d top 20%
+139 EXPE   Consumer Cyclical      high   0.27  0.27 composite 50-70 (+signatures)    8  downside vol top 20% AND share of up days 63d top 20% AND vol of vol bottom 20%
+140 ROK    Industrials            high   0.27  0.27 composite 50-70 (+signatures)    7  beta top 20% AND higher-low cadence bottom 20% AND 126d Sharpe top 20%
+141 CDNS   Technology             high   0.27  0.27 composite 50-70 (+signatures)    6  accumulation-distribution days top 20% AND beta top 20% AND close location in range top 20%
+142 CPAY   Technology             high   0.27  0.27 composite 50-70 (+signatures)    5  gain off 52w low top 20% AND range compression bottom 20% AND 20d RV vs norm bottom 20%
+143 GOOG   Communication Services high   0.27  0.27 composite 50-70 (+signatures)    4  Bollinger width vs norm bottom 20% AND beta top 20% AND up/down volume top 20%
+144 NXPI   Technology             high   0.27  0.27 composite 50-70 (+signatures)    4  downside vol top 20% AND dollar-volume trend bottom 20% AND range compression bottom 20%
+145 AME    Industrials            high   0.27  0.27 composite 50-70     0  
+146 JCI    Industrials            high   0.27  0.27 composite 50-70     0  
+147 STT    Financial              high   0.27  0.27 composite 50-70     0  
+148 AVGO   Technology             high   0.26  0.25 composite <50 (+signatures)   10  depth below 126d high bottom 20% AND range compression bottom 20% AND up-capture top 20%
+149 MS     Financial              high   0.26  0.25 composite <50 (+signatures)   10  12-1m momentum top 20% AND up/down volume bottom 20% AND RS line leading price vs own norm bottom 20%
+150 APTV   Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)   10  idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%
+151 CARR   Industrials            high   0.26  0.25 composite <50 (+signatures)    9  beta top 20% AND range compression bottom 20% AND vol of vol top 20%
+152 RCL    Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    8  beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%
+153 ISRG   Healthcare             high   0.26  0.25 composite <50 (+signatures)    8  downside vol top 20% AND dollar volume top 20% AND net volume flow top 20%
+154 CMI    Industrials            high   0.26  0.25 composite <50 (+signatures)    7  beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
+155 UAL    Industrials            high   0.26  0.25 composite <50 (+signatures)    7  overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%
+156 MSFT   Technology             high   0.26  0.25 composite <50 (+signatures)    7  up-capture top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%
+157 DASH   Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    7  distance to 52w high bottom 20% AND RS line leading price top 20% AND up-capture top 20%
+158 TPR    Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    6  Bollinger width vs norm bottom 20% AND downside vol top 20% AND range compression bottom 20%
+159 FDX    Industrials            high   0.26  0.25 composite <50 (+signatures)    6  accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND net volume flow bottom 20%
+160 CRH    Basic Materials        high   0.26  0.25 composite <50 (+signatures)    6  beta top 20% AND RS line leading price bottom 20% AND 20d RV vs norm vs own norm bottom 20%
+161 C      Financial              high   0.26  0.25 composite <50 (+signatures)    5  beta top 20% AND 12-1m momentum top 20% AND RS line leading price vs own norm bottom 20%
+162 IP     Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    5  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%
+163 GM     Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    3  12-1m momentum top 20% AND volROC21>+50% AND RS line leading price vs own norm bottom 20%
+164 URI    Industrials            high   0.26  0.25 composite <50 (+signatures)    3  gain off 52w low top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%
+165 BLK    Financial              high   0.26  0.25 composite <50 (+signatures)    3  OBV leading price bottom 20% AND up-capture top 20%
+166 WAB    Industrials            high   0.26  0.25 composite <50 (+signatures)    2  gain off 52w low top 20% AND overnight share of moves top 20% AND NR7 count bottom 20%
+167 MAS    Industrials            high   0.26  0.25 composite <50 (+signatures)    1  Bollinger width vs norm bottom 20% AND downside vol top 20%
+168 WSM    Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    1  126d Sharpe top 20% AND up-capture top 20%
+169 DHI    Consumer Cyclical      high   0.26  0.25 composite <50 (+signatures)    1  rvROC21<-20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
+170 PNR    Industrials            high   0.26  0.25 composite <50 (+signatures)    1  20d RV vs norm bottom 20% AND downside vol top 20%
+171 NTRS   Financial              high   0.26  0.25 composite <50       0  
+172 DOV    Industrials            high   0.26  0.25 composite <50       0  
+173 TROW   Financial              high   0.26  0.25 composite <50       0  
+174 RL     Consumer Cyclical      high   0.26  0.25 composite <50       0  
+175 IRM    Real Estate            high   0.26  0.25 composite <50       0  
+176 IR     Industrials            high   0.26  0.25 composite <50       0  
+177 PPG    Basic Materials        high   0.26  0.25 composite <50       0  
+178 GE     Industrials            high   0.26  0.25 composite <50       0  
+179 TDY    Technology             high   0.26  0.25 composite <50       0  
+180 F      Consumer Cyclical      high   0.26  0.25 composite <50       0  
+181 CFG    Financial              high   0.26  0.25 composite <50       0  
+182 TT     Industrials            high   0.26  0.25 composite <50       0  
+183 HUBB   Industrials            high   0.26  0.25 composite <50       0  
+184 DD     Basic Materials        high   0.26  0.25 composite <50       0  
+185 SYF    Financial              high   0.26  0.25 composite <50       0  
+186 PCAR   Industrials            high   0.26  0.25 composite <50       0  
+187 ODFL   Industrials            high   0.26  0.25 composite <50       0  
+188 LEN    Consumer Cyclical      high   0.26  0.25 composite <50       0  
+189 J      Industrials            high   0.26  0.25 composite <50       0  
+190 FERG   Industrials            high   0.26  0.25 composite <50       0  
+191 BA     Industrials            high   0.26  0.25 composite <50       0  
+192 BKNG   Consumer Cyclical      high   0.26  0.25 composite <50       0  
+193 IDXX   Healthcare             high   0.26  0.25 composite <50       0  
+194 PHM    Consumer Cyclical      high   0.26  0.25 composite <50       0  
+195 DECK   Consumer Cyclical      high   0.26  0.25 composite <50       0  
+196 AXP    Financial              high   0.26  0.25 composite <50       0  
+197 CBRE   Real Estate            high   0.26  0.25 composite <50       0  
+198 UBER   Technology             high   0.26  0.25 composite <50       0  
+199 MRK    Healthcare             low    0.26  0.26 signatures x10 (+composite)   10  gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%
+200 ARE    Real Estate            mid    0.26  0.26 signatures x10 (+composite)   10  time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%
+201 HST    Real Estate            mid    0.26  0.26 signatures x9 (+composite)    9  gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
+202 LYB    Basic Materials        low    0.26  0.26 signatures x9 (+composite)    9  depth below 126d high bottom 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%
+203 SLB    Energy                 mid    0.26  0.26 signatures x9 (+composite)    9  gain off 52w low top 20% AND downside/upside vol bottom 20% AND 21d return bottom 20%
+204 BBY    Consumer Cyclical      mid    0.26  0.26 signatures x8       8  pullback from 21d high bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
+205 BSX    Healthcare             low    0.26  0.26 signatures x8 (+composite)    8  Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND pullback from 21d high bottom 20%
+206 TECH   Healthcare             mid    0.26  0.26 signatures x8 (+composite)    8  gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%
+207 MGM    Consumer Cyclical      mid    0.26  0.26 signatures x8 (+composite)    8  time since 20% drawdown bottom 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
+208 HII    Industrials            mid    0.26  0.26 signatures x8 (+composite)    8  depth below 126d high bottom 20% AND time since ignition day bottom 20% AND downside/upside vol bottom 20%
+209 CPRT   Industrials            low    0.26  0.26 signatures x7 (+composite)    7  distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%
+210 VTRS   Healthcare             mid    0.26  0.26 signatures x6       6  gain off 52w low top 20% AND dollar volume bottom 20% AND 20d RV vs norm bottom 20%
+211 CNC    Healthcare             mid    0.26  0.26 signatures x6       6  gain off 52w low top 20% AND net volume flow bottom 20% AND range compression bottom 20%
+212 CASY   Consumer Cyclical      low    0.26  0.26 signatures x6 (+composite)    6  idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%
+213 PFE    Healthcare             mid    0.26  0.26 signatures x6 (+composite)    6  dollar volume top 20% AND px5<-3% AND 63d return top 20%
+214 ERIE   Financial              low    0.26  0.26 signatures x6 (+composite)    6  idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%
+215 CME    Financial              low    0.26  0.26 signatures x6 (+composite)    6  NR7 count bottom 20% AND 63d RS vs SPY top 20% AND distance to 52w high vs own norm bottom 20%
+216 CBOE   Financial              low    0.25  0.25 signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up minus down capture top 20% AND ignition-day volume top 20%
+217 TYL    Technology             low    0.25  0.25 signatures x5 (+composite)    5  accumulation-distribution days top 20% AND idiosyncratic vol top 20% AND OBV leading price bottom 20%
+218 LDOS   Technology             mid    0.25  0.25 signatures x5 (+composite)    5  distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%
+219 TSCO   Consumer Cyclical      mid    0.25  0.25 signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up/down volume top 20% AND downside/upside vol vs own norm bottom 20%
+220 AMGN   Healthcare             mid    0.25  0.25 signatures x4       4  dollar volume top 20% AND px5<-3% AND 63d return top 20%
+221 JKHY   Technology             low    0.25  0.25 signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+222 TPL    Energy                 mid    0.25  0.25 signatures x4 (+composite)    4  idiosyncratic vol top 20% AND dollar volume bottom 20% AND vol of vol bottom 20%
+223 DG     Consumer Defensive     mid    0.25  0.25 signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+224 REGN   Healthcare             mid    0.25  0.25 signatures x4 (+composite)    4  21d return bottom 20% AND 63d return top 20% AND OBV leading price vs own norm top 20%
+225 TMO    Healthcare             mid    0.25  0.25 signatures x4 (+composite)    4  dollar volume top 20% AND px5<-3% AND 63d return top 20%
+226 DGX    Healthcare             low    0.25  0.25 signatures x4 (+composite)    4  up minus down capture top 20% AND up/down volume bottom 20% AND volROC21>+25%
+227 INVH   Real Estate            low    0.25  0.25 signatures x4 (+composite)    4  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
+228 EG     Financial              low    0.25  0.25 signatures x4 (+composite)    4  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
+229 CMG    Consumer Cyclical      mid    0.25  0.25 signatures x4 (+composite)    4  21d return bottom 20% AND idiosyncratic vol top 20%
+230 CHTR   Communication Services mid    0.25  0.25 signatures x4 (+composite)    4  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%
+231 WY     Real Estate            mid    0.25  0.25 signatures x4 (+composite)    4  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+50%
+232 DLR    Real Estate            mid    0.25  0.25 signatures x3 (+composite)    3  higher-low cadence bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
+233 EIX    Utilities              low    0.25  0.25 signatures x3 (+composite)    3  idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%
+234 DPZ    Consumer Cyclical      low    0.25  0.25 signatures x3 (+composite)    3  distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%
+235 DE     Industrials            mid    0.25  0.25 signatures x3 (+composite)    3  gain off 52w low top 20% AND dollar-volume trend top 20% AND 20d RV vs norm vs own norm bottom 20%
+236 CINF   Financial              low    0.25  0.25 signatures x3 (+composite)    3  volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%
+237 SBAC   Real Estate            low    0.25  0.25 signatures x3 (+composite)    3  depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%
+238 BMY    Healthcare             low    0.25  0.25 signatures x3 (+composite)    3  21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%
+239 CHRW   Industrials            mid    0.25  0.25 signatures x3 (+composite)    3  idiosyncratic vol top 20% AND px5<-3%
+240 APA    Energy                 low    0.25  0.25 signatures x3 (+composite)    3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
+241 L      Financial              low    0.25  0.25 signatures x3 (+composite)    3  volROC21>+50% AND dollar volume vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%
+242 MPC    Energy                 low    0.25  0.25 signatures x3 (+composite)    3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
+243 FICO   Technology             mid    0.25  0.25 signatures x3 (+composite)    3  21d return bottom 20% AND idiosyncratic vol top 20%
+244 DVN    Energy                 low    0.25  0.25 signatures x3 (+composite)    3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
+245 COP    Energy                 low    0.25  0.25 signatures x3 (+composite)    3  corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%
+246 BXP    Real Estate            mid    0.25  0.25 signatures x3 (+composite)    3  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND vol of vol bottom 20%
+247 VRSK   Industrials            low    0.24  0.23 signatures x2       2  downside vol top 20% AND volume vs 250d vs own norm bottom 20%
+248 DHR    Healthcare             mid    0.24  0.23 signatures x2 (+composite)    2  63d RS vs SPY top 20% AND px5<-3%
+249 MOS    Basic Materials        mid    0.24  0.23 signatures x2 (+composite)    2  distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%
+250 BNY    Financial              mid    0.24  0.23 signatures x2 (+composite)    2  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND up/down volume bottom 20%
+251 EFX    Industrials            mid    0.24  0.23 signatures x2 (+composite)    2  downside vol top 20% AND range vol / close vol top 20% AND OBV leading price vs own norm bottom 20%
+252 TGT    Consumer Defensive     mid    0.24  0.23 signatures x1 (+composite)    1  gain off 52w low top 20% AND Bollinger width vs norm bottom 20%
+253 BR     Technology             low    0.24  0.23 signatures x1 (+composite)    1  distance to 52w high bottom 20% AND RS line leading price top 20% AND skew top 20%
+254 HUM    Healthcare             mid    0.24  0.23 signatures x1 (+composite)    1  gain off 52w low top 20% AND Bollinger width vs norm bottom 20%
+255 TMUS   Communication Services low    0.24  0.23 signatures x1 (+composite)    1  range compression bottom 20% AND downside vol top 20%
+256 PODD   Healthcare             mid    0.24  0.23 signatures x1 (+composite)    1  idiosyncratic vol top 20% AND RS line leading price vs own norm bottom 20%
+257 VLO    Energy                 low    0.24  0.23 signatures x1 (+composite)    1  gain off 52w low top 20% AND volume vs 250d top 20%
 258 JNJ    Healthcare             low    0.23  0.25 composite 70-80     0  
 259 FRT    Real Estate            low    0.23  0.25 composite 70-80     0  
 260 MKC    Consumer Defensive     low    0.23  0.25 composite 70-80     0  

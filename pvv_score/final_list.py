@@ -29,11 +29,18 @@ def main():
     for _, r in u.iterrows():
         if pd.isna(r.state_score):
             p42.append(np.nan); p63.append(np.nan); basis.append("unscored"); continue
+        cands = []
+        c = comp_cell.get((r.beta_bucket, r.tier))
+        if c is not None and pd.notna(c.p_top_q_42):
+            cands.append((c.p_top_q_42, c.p_top_q_63, f"composite {r.tier}"))
         if r.n_signatures > 0 and r.depth_bin in depth.index:
-            p42.append(depth.loc[r.depth_bin, "P_topq42"]); p63.append(depth.loc[r.depth_bin, "P_topq63"]); basis.append(f"signatures x{r.n_signatures}")
-        else:
-            c = comp_cell.get((r.beta_bucket, r.tier))
-            p42.append(c.p_top_q_42 if c is not None else np.nan); p63.append(c.p_top_q_63 if c is not None else np.nan); basis.append(f"composite {r.tier}")
+            cands.append((depth.loc[r.depth_bin, "P_topq42"], depth.loc[r.depth_bin, "P_topq63"], f"signatures x{r.n_signatures}"))
+        if not cands:
+            p42.append(np.nan); p63.append(np.nan); basis.append("no cell"); continue
+        # both rules are realised frequencies on the same outcome; the name gets the stronger applicable rule, and the basis names both when both apply
+        best = max(cands, key=lambda x: x[0])
+        p42.append(best[0]); p63.append(best[1])
+        basis.append(best[2] + (" (+" + [x[2] for x in cands if x is not best][0].split(" ")[0] + ")" if len(cands) > 1 else ""))
     u["P_topq_42d"] = np.round(p42, 3); u["P_topq_63d"] = np.round(p63, 3); u["basis"] = basis
     ranked = u[u.P_topq_42d.notna()].sort_values(["P_topq_42d", "P_topq_63d", "n_signatures", "avg_score"], ascending=False).reset_index(drop=True)
     ranked.insert(0, "rank", ranked.index + 1)
