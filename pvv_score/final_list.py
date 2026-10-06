@@ -43,8 +43,10 @@ def main():
         basis.append(best[2] + (" (+" + [x[2] for x in cands if x is not best][0].split(" ")[0] + ")" if len(cands) > 1 else ""))
     u["P_topq_42d"] = np.round(p42, 3); u["P_topq_63d"] = np.round(p63, 3); u["basis"] = basis
     ranked = u[u.P_topq_42d.notna()].sort_values(["P_topq_42d", "P_topq_63d", "n_signatures", "avg_score"], ascending=False).reset_index(drop=True)
+    ranked = ranked.rename(columns={"tier": "score_tier"})
     ranked.insert(0, "rank", ranked.index + 1)
-    cols = ["rank", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "P_topq_42d", "P_topq_63d", "basis", "n_signatures", "best_signature", "avg_score", "top_states"]
+    ranked.insert(1, "tier", pd.cut(ranked.P_topq_42d, [-1, .25, .30, .35, .40, .45, 2], labels=[6, 5, 4, 3, 2, 1]).astype(int))
+    cols = ["rank", "tier", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "P_topq_42d", "P_topq_63d", "basis", "n_signatures", "best_signature", "avg_score", "top_states"]
     ranked[cols].to_csv(RESULTS_DIR / "THE_LIST.csv", index=False)
     from .regime import today_regime
     reg = today_regime()
@@ -52,9 +54,10 @@ def main():
              f" P42 / P63 = probability (realised out of sample, 2024 onward, same regime) that the next 42 / 63 sessions are a top-quartile",
              "smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.",
              "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight; 'composite <tier>' = multi-factor score tier.", "",
-             f"{'#':>3} {'tkr':<6} {'sector':<22} {'beta':<5} {'P42':>5} {'P63':>5} {'basis':<16} {'sigs':>4}  strongest confirmed signature firing tonight"]
+             "Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.", "",
+             f"{'#':>3} tier {'tkr':<6} {'sector':<22} {'beta':<5} {'P42':>5} {'P63':>5} {'basis':<16} {'sigs':>4}  strongest confirmed signature firing tonight"]
     for _, r in ranked.iterrows():
-        lines.append(f"{int(r['rank']):>3} {r.ticker:<6} {str(r.Sector)[:22]:<22} {str(r.beta_bucket):<5} {r.P_topq_42d:>5.2f} {r.P_topq_63d:>5.2f} {r.basis:<16} {int(r.n_signatures):>4}  {r.best_signature}")
+        lines.append(f"{int(r['rank']):>3}   {int(r.tier)}  {r.ticker:<6} {str(r.Sector)[:22]:<22} {str(r.beta_bucket):<5} {r.P_topq_42d:>5.2f} {r.P_topq_63d:>5.2f} {r.basis:<16} {int(r.n_signatures):>4}  {r.best_signature}")
     unsc = u[u.P_topq_42d.isna()]
     lines += ["", "not ranked:"] + [f"    {r.ticker:<6} {r.note if isinstance(r.note, str) else ''}" for _, r in unsc.iterrows()]
     (RESULTS_DIR / "THE_LIST.txt").write_text("\n".join(lines))

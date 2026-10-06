@@ -71,7 +71,9 @@ th{{background:var(--th);text-align:left;padding:7px 9px;cursor:pointer;position
 td{{padding:5px 9px;border-top:1px solid var(--rule);vertical-align:top}}
 tr.main{{cursor:pointer}} tr.main:hover td{{background:var(--row)}}
 td.p{{font-family:var(--mono);font-weight:600;text-align:right}}
-.tier1{{background:var(--t1);color:#fff}} .tier2{{background:var(--t2);color:#fff}} .tier3{{background:var(--t3)}} .tier4{{background:var(--t4)}} .tier5{{background:var(--t5)}}
+.tier1{{background:var(--t1);color:#fff}} .tier2{{background:var(--t2);color:#fff}} .tier3{{background:var(--t3)}} .tier4{{background:var(--t4)}} .tier5{{background:var(--t5)}} .tier6{{color:var(--muted)}}
+tr.tier1row td{{background:color-mix(in srgb,var(--t1) 22%,var(--bg))}} tr.tier2row td{{background:color-mix(in srgb,var(--t2) 18%,var(--bg))}} tr.tier3row td{{background:color-mix(in srgb,var(--t3) 22%,var(--bg))}} tr.tier4row td{{background:color-mix(in srgb,var(--t4) 35%,var(--bg))}} tr.tier5row td{{background:color-mix(in srgb,var(--t5) 60%,var(--bg))}}
+tr.main.tier1row:hover td,tr.main.tier2row:hover td,tr.main.tier3row:hover td,tr.main.tier4row:hover td,tr.main.tier5row:hover td{{filter:brightness(0.93)}}
 tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 .sigline{{margin:3px 0}} .sigp{{font-family:var(--mono);color:var(--muted);margin-right:8px}}
 .states{{color:var(--muted);font-size:.78rem;white-space:normal}}
@@ -80,32 +82,35 @@ tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 <h1>THE LIST</h1>
 <p class="sub">{asof} close. Every name ranked by the probability that its next 42 / 63 sessions trace a top-quartile smooth climb against the whole universe (Sharpe, max drawdown, straightness, up-day share). Probabilities are realised out-of-sample frequencies, 2024 onward, same market regime as today. Baseline 25%. Click a row to see the confirmed signatures firing on it; each signature is three conditions that must all hold, colored by what they measure.</p>
 <div class="legend"><b>Condition family:</b> <span class="chip price">price / trend / structure</span> <span class="chip volume">volume / participation</span> <span class="chip volatility">volatility</span> <span class="chip relative">relative to market (beta, correlation, capture, RS)</span>
-<span style="margin-left:14px"><b>Probability tiers:</b></span> <span class="chip tier1">&ge; 45%</span> <span class="chip tier2">40–45%</span> <span class="chip tier3" style="color:var(--fg)">35–40%</span> <span class="chip tier4" style="color:var(--fg)">30–35%</span> <span class="chip tier5" style="color:var(--fg)">25–30%</span> <span style="color:var(--muted)">unshaded &lt; 25%</span></div>
-<div class="bar"><input id="q" placeholder="filter ticker / sector" size="28"><select id="bb"><option value="">all beta</option><option>low</option><option>mid</option><option>high</option></select><select id="sg"><option value="">all names</option><option value="1">signatures firing</option><option value="50">50+ signatures</option></select><span class="count" id="n"></span></div>
+</div>
+<div class="legend"><b>Tiers (P 42d):</b> <span class="chip tier1">Tier 1 &ge; 45%</span> <span class="chip tier2">Tier 2 40–45%</span> <span class="chip tier3" style="color:var(--fg)">Tier 3 35–40%</span> <span class="chip tier4" style="color:var(--fg)">Tier 4 30–35%</span> <span class="chip tier5" style="color:var(--fg)">Tier 5 25–30%</span> <span style="color:var(--muted)">Tier 6 &lt; 25% (below baseline)</span></div>
+<div class="bar"><input id="q" placeholder="filter ticker / sector" size="28"><select id="bb"><option value="">all beta</option><option>low</option><option>mid</option><option>high</option></select><select id="tf"><option value="">all tiers</option><option value="1">Tier 1</option><option value="2">Tiers 1–2</option><option value="3">Tiers 1–3</option></select><select id="sg"><option value="">all names</option><option value="1">signatures firing</option><option value="50">50+ signatures</option></select><span class="count" id="n"></span></div>
 <div class="tw"><table><thead><tr id="h"></tr></thead><tbody id="b"></tbody></table></div>
 <script>
 const D={data};
-const COLS=[["rank","#","n"],["t","Ticker","s"],["sec","Sector","s"],["bb","Beta","s"],["b","b252","n"],["p42","P 42d","n"],["p63","P 63d","n"],["ns","# signatures","n"],["basis","Basis","s"],["best","Strongest signature firing","x"]];
+const COLS=[["rank","#","n"],["tier","Tier","n"],["t","Ticker","s"],["sec","Sector","s"],["bb","Beta","s"],["b","b252","n"],["p42","P 42d","n"],["p63","P 63d","n"],["ns","# signatures","n"],["basis","Basis","s"],["best","Strongest signature firing","x"]];
 let sortCol=0,sortDir=1,open=new Set();
-const h=document.getElementById('h'),b=document.getElementById('b'),q=document.getElementById('q'),bb=document.getElementById('bb'),sg=document.getElementById('sg'),n=document.getElementById('n');
+const h=document.getElementById('h'),b=document.getElementById('b'),q=document.getElementById('q'),bb=document.getElementById('bb'),sg=document.getElementById('sg'),tf=document.getElementById('tf'),n=document.getElementById('n');
 COLS.forEach((c,i)=>{{const th=document.createElement('th');th.textContent=c[1];th.onclick=()=>{{if(c[2]==='x')return;if(sortCol===i)sortDir*=-1;else{{sortCol=i;sortDir=c[2]==='n'&&c[0]!=='rank'?-1:1}}render()}};h.appendChild(th)}});
-const tier=p=>p>=.45?'tier1':p>=.40?'tier2':p>=.35?'tier3':p>=.30?'tier4':p>=.25?'tier5':'';
+const tierN=p=>p>=.45?1:p>=.40?2:p>=.35?3:p>=.30?4:p>=.25?5:6;
+const tier=p=>'tier'+tierN(p);
+D.forEach(r=>r.tier=tierN(r.p42));
 const chips=s=>s.c.map(x=>`<span class="chip ${{x.f}}">${{x.t}}</span>`).join(' AND ');
 function render(){{
-  const f=q.value.toLowerCase(),k=bb.value,g=sg.value;
-  let rows=D.filter(r=>(!k||r.bb===k)&&(!g||r.ns>=+g)&&(!f||(r.t+' '+r.sec+' '+r.co).toLowerCase().includes(f)));
+  const f=q.value.toLowerCase(),k=bb.value,g=sg.value,tv=tf.value;
+  let rows=D.filter(r=>(!k||r.bb===k)&&(!g||r.ns>=+g)&&(!tv||r.tier<=+tv)&&(!f||(r.t+' '+r.sec+' '+r.co).toLowerCase().includes(f)));
   rows.sort((x,y)=>{{const c=COLS[sortCol][0];let a=x[c],d=y[c];if(a==null)return 1;if(d==null)return -1;return (a<d?-1:a>d?1:0)*sortDir}});
   [...h.children].forEach((th,i)=>th.style.color=i===sortCol?'var(--price)':'');
   b.innerHTML=rows.map(r=>{{
-    const main=`<tr class="main" data-t="${{r.t}}"><td>${{r.rank}}</td><td><b>${{r.t}}</b></td><td>${{r.sec}}</td><td>${{r.bb}}</td><td class="p">${{r.b==null?'':r.b.toFixed(2)}}</td><td class="p ${{tier(r.p42)}}">${{(r.p42*100).toFixed(0)}}%</td><td class="p ${{tier(r.p63)}}">${{(r.p63*100).toFixed(0)}}%</td><td class="p">${{r.ns}}</td><td>${{r.basis}}</td><td>${{r.sigs.length?chips(r.sigs[0]):'<span class="states">'+r.states+'</span>'}}</td></tr>`;
+    const main=`<tr class="main ${{tier(r.p42)}}row" data-t="${{r.t}}"><td>${{r.rank}}</td><td class="p ${{tier(r.p42)}}">Tier ${{r.tier}}</td><td><b>${{r.t}}</b></td><td>${{r.sec}}</td><td>${{r.bb}}</td><td class="p">${{r.b==null?'':r.b.toFixed(2)}}</td><td class="p">${{(r.p42*100).toFixed(0)}}%</td><td class="p">${{(r.p63*100).toFixed(0)}}%</td><td class="p">${{r.ns}}</td><td>${{r.basis}}</td><td>${{r.sigs.length?chips(r.sigs[0]):'<span class="states">'+r.states+'</span>'}}</td></tr>`;
     if(!open.has(r.t))return main;
     const det=r.sigs.length?r.sigs.map(s=>`<div class="sigline"><span class="sigp">P ${{(s.p*100).toFixed(0)}}% n=${{s.n}}</span>${{chips(s)}}</div>`).join(''):'<div class="states">No confirmed signature fires. Probability from the multi-factor composite tier.</div>';
-    return main+`<tr class="detail"><td colspan="10">${{det}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
+    return main+`<tr class="detail"><td colspan="11">${{det}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
   }}).join('');
   n.textContent=rows.length+' of '+D.length+' names';
   b.querySelectorAll('tr.main').forEach(tr=>tr.onclick=()=>{{const t=tr.dataset.t;open.has(t)?open.delete(t):open.add(t);render()}});
 }}
-q.oninput=render;bb.onchange=render;sg.onchange=render;render();
+q.oninput=render;bb.onchange=render;sg.onchange=render;tf.onchange=render;render();
 </script>
 """
     (RESULTS_DIR / "THE_LIST.html").write_text(html)
