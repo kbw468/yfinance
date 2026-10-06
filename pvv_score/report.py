@@ -63,6 +63,53 @@ def main():
 * **Short-term price factors** (`ret_5`, `clv_5`, `streak_now`, `pos_in_20d_range`): nothing. Daily-turnover factors with no 1-3 month payoff.
 """)
 
+    L.append("## 3b. Rate-of-change family (added in the rebuild): did it carry signal?\n")
+    L.append("""35 ROC factors were added: point-to-point ROC of volume (5/10/21), dollar volume, realised vol (5/10/21, fast 10d RV, Parkinson, range, Bollinger width), downside vol, vol asymmetry, beta, correlation, idiosyncratic vol and vol-of-vol; acceleration (ROC of ROC) for price, volume and RV; and interactions: volume turning up off a dry-up, RV expanding off compression, volume confirming price, volume rising on a flat tape, volume up while vol down. They went through every gate below alongside the original 86.
+""")
+    rocf = [f for f in ic.index if FACTORS.get(f, ("",))[0] == "roc"]
+    rt = ic.loc[rocf].sort_values("t_spy_recent", key=np.abs, ascending=False)
+    L.append("\n**Single-factor IC, all 35 ROC factors** (SPY-excess Sharpe, mean over 21/42/63d):\n")
+    L.append(md(rt[["prior", "ic_spy_full", "t_spy_full", "ic_spy_recent", "t_spy_recent", "ic_sec_recent", "t_sec_recent", "sign_stable", "d10_d1_spread_recent_42", "autocorr_21"]]))
+    rocz = [f for f in cond42.index if FACTORS.get(f, ("",))[0] == "roc"]
+    cc = cond42.loc[rocz, [c for c in cond42.columns if c.endswith("|recent|t_nw")]].copy()
+    cc.columns = [c.split("|")[0] for c in cc.columns]
+    cc["max_abs_t"] = cc.abs().max(axis=1)
+    L.append("\n**Conditional (recent, 42d, NW t) for the ROC factors, top 15 by max |t|:**\n")
+    L.append(md(cc.sort_values("max_abs_t", ascending=False).head(15).drop(columns="max_abs_t"), 2))
+    evr = pd.read_csv(RESULTS_DIR / "event_pre_episode_profile.csv")
+    evr = evr[(evr.window == "recent") & (evr.bucket == "all") & evr.factor.str.replace("z_", "", regex=False).isin(rocf)].set_index("factor").sort_values("t_cluster", key=np.abs, ascending=False)
+    L.append("\n**Event study, state version of the ROC factors, 5 sessions before top-decile windows (recent, pooled), top 15:**\n")
+    L.append(md(evr[["mean_rank_excess", "t_cluster", "n_clusters", "lift_top_q", "lift_bottom_q"]].head(15), 3))
+    # before / after on the OOS composites
+    pre_s = pd.read_csv(RESULTS_DIR / "pre_roc" / "composite_state_oos_evaluation.csv", index_col=[0, 1])
+    pre_l = pd.read_csv(RESULTS_DIR / "pre_roc" / "composite_level_oos_evaluation.csv", index_col=[0, 1])
+    cs_ = pd.read_csv(RESULTS_DIR / "composite_state_oos_evaluation.csv", index_col=[0, 1])
+    cl_ = pd.read_csv(RESULTS_DIR / "composite_level_oos_evaluation.csv", index_col=[0, 1])
+    rows = []
+    for lab, ev_, mdl in [("state, before ROC", pre_s, "composite_betabucket_wf_state"), ("state, with ROC", cs_, "composite_betabucket_wf_state"),
+                          ("level, before ROC", pre_l, "composite_betabucket_wf_level"), ("level, with ROC", cl_, "composite_betabucket_wf_level")]:
+        sub = ev_[ev_.model == mdl]
+        if sub.empty:
+            sub = ev_[ev_.model.str.contains("betabucket")]
+        r = {"composite": lab}
+        for h in (42, 63):
+            for win in ("full", "recent"):
+                r[f"IC {h}d {win}"] = sub.loc[(f"spy_sh{h}", win), "ic"]
+                r[f"t {h}d {win}"] = sub.loc[(f"spy_sh{h}", win), "t_nw"]
+            r[f"IC {h}d beta-neutral recent"] = sub.loc[(f"spy_sh{h}_betaneutral", "recent"), "ic"]
+        rows.append(r)
+    L.append("\n**Walk-forward OOS composites, before vs after adding the ROC family** (beta-bucketed variants; same folds, same rules):\n")
+    L.append(md(pd.DataFrame(rows).set_index("composite"), 3))
+    wf = pd.read_csv(RESULTS_DIR / "composite_state_weights_by_fold.csv")
+    wf["is_roc"] = wf.factor.str.replace("z_", "", regex=False).isin(rocf)
+    share = wf.assign(a=wf.weight.abs()).groupby(["year", "bucket"]).apply(lambda g: g.loc[g.is_roc, "a"].sum() / g.a.sum()).unstack()
+    L.append("\n**Share of absolute weight the state composite gave to ROC factors, by fold and bucket:**\n")
+    L.append(md(share, 2))
+    picked = wf[wf.is_roc].groupby("factor").agg(folds=("year", "nunique"), mean_w=("weight", "mean")).sort_values("folds", ascending=False)
+    L.append("\n**ROC factors the state composite selected, and in how many of the 10 folds:**\n")
+    L.append(md(picked.head(20), 3))
+    L.append("\n(Reading of these tables is in section 8.)\n")
+
     L.append("## 4. Conditional results: where each factor works (recent window, 42d, NW t-stats)\n")
     cols = [c for c in cond42.columns if c.endswith("|recent|t_nw")]
     v = cond42[cols].copy(); v.columns = [c.split("|")[0] for c in cols]
