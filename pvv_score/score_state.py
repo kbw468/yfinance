@@ -21,6 +21,8 @@ EXCLUDE_GROUPS = {"roc"}  # tested, did not improve out-of-sample IC; kept out o
 
 
 def main():
+    import os
+    sfx = "_smooth" if os.environ.get("PVV_TARGET", "").startswith("smooth") else ""
     full = pd.read_parquet(CACHE_DIR / "research_long.parquet")
     uni = load_universe()
     asof = full.date.max()
@@ -49,7 +51,9 @@ def main():
         # per-name contributions: weight x (rank - 0.5)
         rk = today.loc[m].groupby("date")[list(wb.index)].rank(pct=True) - 0.5
         contrib[b] = rk * wb.values
-    pd.DataFrame(weights).to_csv(RESULTS_DIR / "composite_state_final_weights.csv")
+    import os
+    sfx = "_smooth" if os.environ.get("PVV_TARGET", "").startswith("smooth") else ""
+    pd.DataFrame(weights).to_csv(RESULTS_DIR / f"composite_state{sfx}_final_weights.csv")
     today["state_score"] = today.groupby("beta_bucket")["state_raw"].rank(pct=True)
     # raw composites use different weight vectors per bucket, so standardise within bucket before pooling
     zraw = (today["state_raw"] - today.groupby("beta_bucket")["state_raw"].transform("mean")) / today.groupby("beta_bucket")["state_raw"].transform("std")
@@ -83,10 +87,10 @@ def main():
         m = tds.sgrp == g
         today.loc[m[m].index, "vs_sector_raw"] = score_rows(tds[m], wg).values
     _c.TARGET = old_target
-    pd.DataFrame(sec_w).to_csv(RESULTS_DIR / "composite_state_sector_final_weights.csv")
+    pd.DataFrame(sec_w).to_csv(RESULTS_DIR / f"composite_state_sector{('_smooth' if os.environ.get('PVV_TARGET', '').startswith('smooth') else '')}_final_weights.csv")
     today["vs_sector_score"] = today.groupby("sector")["vs_sector_raw"].rank(pct=True)
 
-    prev = pd.read_csv(RESULTS_DIR / "current_rankings.csv").set_index("ticker")
+    prev = pd.read_csv(RESULTS_DIR / f"current_rankings{sfx}.csv").set_index("ticker")
     today["level_score"] = today.ticker.map(prev["final_score"])
     today["ml_score"] = today.ticker.map(prev["ml_score"])
 
@@ -126,7 +130,7 @@ def main():
     out["note"] = out.apply(reason, axis=1)
     out = out.sort_values("state_score_pooled", ascending=False)
     out.insert(0, "asof", asof.date())
-    out.to_csv(RESULTS_DIR / "universe_scores.csv")
+    out.to_csv(RESULTS_DIR / f"universe_scores{sfx}.csv")
 
     pd.set_option("display.width", 300, "display.max_columns", 30, "display.max_rows", 60)
     show = ["Sector", "beta_bucket", "state_score", "state_score_pooled", "level_score", "ml_score", "z_mom_12_1", "z_rs_lead_126",

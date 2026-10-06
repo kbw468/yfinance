@@ -4,18 +4,23 @@ For each score vigintile (20 bins) over the OOS history (recent window primary, 
 frequency that the name's forward 42d Sharpe landed in the top half / top quartile of the universe that day, and the
 mean forward 42d Sharpe excess over the universe mean. Today's names inherit the probability of their bin.
 """
+import os
 import numpy as np
 import pandas as pd
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 
 BINS = 20
+TARGET = os.environ.get("PVV_TARGET", "xs_spy_sharpe_42")
+SMOOTH = TARGET.startswith("smooth")
 
 
 def main():
-    df = load_research()[["date", "ticker", "xs_spy_sharpe_42", "xs_spy_sharpe_63"]]
-    st = pd.read_parquet(CACHE_DIR / "composite_state_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "state"})
-    lv = pd.read_parquet(CACHE_DIR / "composite_level_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "level"})
+    ycols = ["smooth_42", "smooth_63"] if SMOOTH else ["xs_spy_sharpe_42", "xs_spy_sharpe_63"]
+    df = load_research()[["date", "ticker"] + ycols].rename(columns={ycols[0]: "xs_spy_sharpe_42", ycols[1]: "xs_spy_sharpe_63"})
+    sfx = "_smooth" if SMOOTH else ""
+    st = pd.read_parquet(CACHE_DIR / f"composite_state{sfx}_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "state"})
+    lv = pd.read_parquet(CACHE_DIR / f"composite_level{sfx}_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "level"})
     d = df.merge(st, on=["date", "ticker"]).merge(lv, on=["date", "ticker"]).dropna()
     for c in ["state", "level"]:
         d[c + "_p"] = d.groupby("date")[c].rank(pct=True)
@@ -33,7 +38,7 @@ def main():
                                  xs_sharpe_42_vs_universe=("xs_mean_42", "mean"), p_top_half_63d=("top_half_63", "mean"),
                                  p_top_quartile_63d=("top_q_63", "mean"), xs_sharpe_63_vs_universe=("xs_mean_63", "mean"))
         tabs[win] = g
-        g.to_csv(RESULTS_DIR / f"calibration_{win}.csv")
+        g.to_csv(RESULTS_DIR / f"calibration{sfx}_{win}.csv")
     cal = tabs["recent"]
     u = pd.read_csv(RESULTS_DIR / "universe_scores.csv")
     b = np.ceil(u.avg_score * BINS).clip(1, BINS)

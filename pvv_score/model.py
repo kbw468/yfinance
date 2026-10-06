@@ -120,6 +120,13 @@ def beta_partial_ic(df: pd.DataFrame, pred: str, target: str) -> pd.DataFrame:
 def evaluate_prediction(df: pd.DataFrame, pred: str, tag: str) -> pd.DataFrame:
     rows = {}
     for h in HORIZONS:
+        col = f"smooth_{h}"
+        if col in df.columns:
+            ic = daily_ic(df, [pred], col)[pred]
+            for win, start in [("full", None), ("recent", RECENT_START)]:
+                m, t, p = nw_tstat(ic.loc[start:], h)
+                rows[(f"smooth{h}", win)] = {"ic": m, "t_nw": t, "hit": (ic.loc[start:] > 0).mean()}
+    for h in HORIZONS:
         for bench in ["spy", "sec"]:
             tgt = f"xs_{bench}_sharpe_{h}"
             ic = daily_ic(df, [pred], tgt)[pred]

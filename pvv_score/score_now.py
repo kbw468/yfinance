@@ -62,7 +62,9 @@ def main():
         weights[b] = wb
         m = today.beta_bucket == b
         today.loc[m, "comp_score"] = score_rows(today[m], wb).values
-    pd.DataFrame({b: w for b, w in weights.items()}).to_csv(RESULTS_DIR / "composite_final_weights.csv")
+    import os
+    sfx = "_smooth" if os.environ.get("PVV_TARGET", "").startswith("smooth") else ""
+    pd.DataFrame({b: w for b, w in weights.items()}).to_csv(RESULTS_DIR / f"composite{sfx}_final_weights.csv")
 
     today["ml_rank"] = today.ml_score.rank(pct=True)
     today["comp_rank"] = today.groupby("beta_bucket").comp_score.rank(pct=True)
@@ -99,7 +101,7 @@ def main():
             "ceiling_2x_low", "analog_examples"]
     out = today.sort_values("final_score", ascending=False)[show]
     out.insert(0, "asof", asof.date())
-    out.to_csv(RESULTS_DIR / "current_rankings.csv", index=False)
+    out.to_csv(RESULTS_DIR / f"current_rankings{sfx}.csv", index=False)
     pd.set_option("display.width", 300, "display.max_columns", 40)
     print(out.drop(columns=["analog_examples"]).head(40).round(3).to_string(index=False))
     print("\nbottom 10:")

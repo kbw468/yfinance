@@ -25,7 +25,8 @@ EMBARGO = 63
 T_MIN = 1.5
 RHO_MAX = 0.7
 RECENT_DAYS = 756
-TARGET = "xs_spy_sharpe_42"
+import os
+TARGET = os.environ.get("PVV_TARGET", "xs_spy_sharpe_42")   # e.g. PVV_TARGET=smooth_42 for the smooth-path objective
 H = 42
 
 
@@ -105,6 +106,8 @@ def main(state: bool = False, sector: bool = False):
     global FACTORS, TARGET
     df = load_research().reset_index(drop=True)
     tag = "state" if state else "level"
+    if TARGET.startswith("smooth"):
+        tag += "_smooth"
     if state:
         FACTORS = {c: ("state", 0, c) for c in df.columns if c.startswith("z_") and c[2:] in load_registry() and load_registry()[c[2:]][0] != "roc"}
     if sector:

@@ -9,7 +9,7 @@ from .data_io import load_panel, load_universe
 from .clean import clean_panel
 from .features import compute_features, eligibility, FACTORS
 from .state import to_state
-from .targets import build_targets, blended_rank_target, sector_bench_returns
+from .targets import build_targets, blended_rank_target, sector_bench_returns, smooth_path_target
 
 
 def sector_close(panel_close: pd.DataFrame, universe: pd.DataFrame) -> pd.DataFrame:
@@ -37,6 +37,8 @@ def main():
     T = build_targets(panel["Close"], universe)
     T["y_blend_spy"] = blended_rank_target(T, "xs_spy_sharpe")
     T["y_blend_sec"] = blended_rank_target(T, "xs_sec_sharpe")
+    sm = smooth_path_target(panel["Close"][stocks])
+    T.update(sm)
     print(f"targets done {time.time()-t0:.0f}s", file=sys.stderr)
     elig = eligibility(panel, stocks)
 
