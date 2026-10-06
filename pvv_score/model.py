@@ -23,7 +23,7 @@ import numpy as np
 import pandas as pd
 import lightgbm as lgb
 
-from .config import CACHE_DIR, RESULTS_DIR, HORIZONS, RECENT_START, ML_HALFLIFE_DAYS, MARKET
+from .config import WF_YEARS, CACHE_DIR, RESULTS_DIR, HORIZONS, RECENT_START, ML_HALFLIFE_DAYS, MARKET
 from .evaluate import daily_ic, summarize_ic, nw_tstat, decile_spread
 from .run_eval import load_research, load_registry
 from .data_io import load_panel
@@ -71,7 +71,7 @@ def decay_weights(dates: pd.Series, end: pd.Timestamp, bdays_index: pd.DatetimeI
     return np.power(0.5, age / ML_HALFLIFE_DAYS)
 
 
-def walk_forward(df: pd.DataFrame, X: pd.DataFrame, label: str, years=range(2017, 2027), params=None, n_rounds=None,
+def walk_forward(df: pd.DataFrame, X: pd.DataFrame, label: str, years=WF_YEARS, params=None, n_rounds=None,
                  decay=True, tag="ml") -> pd.Series:
     params = params or PARAMS
     n_rounds = n_rounds or N_ROUNDS

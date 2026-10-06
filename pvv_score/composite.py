@@ -15,7 +15,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-from .config import CACHE_DIR, RESULTS_DIR, RECENT_WEIGHT, RECENT_START
+from .config import WF_YEARS, CACHE_DIR, RESULTS_DIR, RECENT_WEIGHT, RECENT_START
 from .evaluate import daily_ic, summarize_ic, nw_tstat
 from .run_eval import load_research, load_registry
 from .model import evaluate_prediction, decile_spread
@@ -62,7 +62,7 @@ def score_rows(sub: pd.DataFrame, w: pd.Series) -> pd.Series:
     return (rk * w.values).sum(axis=1, min_count=1)
 
 
-def walk_forward(df: pd.DataFrame, years=range(2017, 2027)) -> tuple[pd.Series, pd.Series, dict]:
+def walk_forward(df: pd.DataFrame, years=WF_YEARS) -> tuple[pd.Series, pd.Series, dict]:
     factors = list(FACTORS)
     bdays = pd.DatetimeIndex(sorted(df.date.unique()))
     pos = pd.Series(np.arange(len(bdays)), index=bdays)

@@ -31,7 +31,11 @@ HORIZONS = (21, 42, 63)
 
 # Evaluation windows. RECENT is the regime that matters most (CTA / vol-control / 0DTE flow era).
 BACKTEST_START = "2014-01-01"
-RECENT_START = "2022-10-01"
+RECENT_START = "2024-01-01"
+# nothing before this date enters any evaluation, fit or probability table (market structure regime cut)
+SAMPLE_START = "2018-01-01"
+# walk-forward test years (training starts at SAMPLE_START, so the first test year needs >= 1y of history + embargo)
+WF_YEARS = range(2020, 2027)
 # weight on recent-window IC when forming composite weights (rest on full window)
 RECENT_WEIGHT = 0.67
 # time-decay half-life (trading days) for ML sample weights

@@ -16,7 +16,7 @@ import numpy as np
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 
-from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
+from .config import WF_YEARS, CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
 from .evaluate import daily_ic, nw_tstat
@@ -93,7 +93,7 @@ def analog_outcomes(train: pd.DataFrame, query: pd.DataFrame, rcols: list, want_
     return (res, cases) if want_cases else res
 
 
-def walk_forward(P: pd.DataFrame, rcols: list, years=range(2017, 2027)) -> pd.DataFrame:
+def walk_forward(P: pd.DataFrame, rcols: list, years=WF_YEARS) -> pd.DataFrame:
     bdays = pd.DatetimeIndex(sorted(P.date.unique())); pos = pd.Series(np.arange(len(bdays)), index=bdays)
     outs = []
     for y in years:

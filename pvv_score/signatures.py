@@ -4,8 +4,8 @@ A condition = factor in its top or bottom quintile on the date (cross-sectional)
 threshold. A signature = AND of 2 or 3 conditions. Outcome = the name's next-42-session path lands in the top
 quartile of the universe on the smooth-climb score (Sharpe, max drawdown, straightness, up-day share).
 
-Discovery window 2014-2021: keep signatures with >= MIN_N cases and lift >= MIN_LIFT (P / 0.25).
-Confirmation window 2022-10 onward: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
+Discovery window 2018-2023: keep signatures with >= MIN_N cases and lift >= MIN_LIFT (P / 0.25).
+Confirmation window 2024 onward: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
 Names today are ranked by the best confirmed signature they carry (its confirmation-window probability), then by how
 many confirmed signatures fire. Nothing is averaged across signatures; a signature fires or it does not.
 """
@@ -17,9 +17,9 @@ import pandas as pd
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 
-DISCOVER_END = "2021-12-31"
-MIN_N, MIN_LIFT = 400, 1.20
-MIN_N_CONFIRM, CONFIRM_LIFT = 150, 1.15
+DISCOVER_END = "2023-12-31"      # discovery 2018-01 .. 2023-12 (SAMPLE_START applies), confirmation RECENT_START (2024-01) onward
+MIN_N, MIN_LIFT = 300, 1.20
+MIN_N_CONFIRM, CONFIRM_LIFT = 100, 1.15
 
 # curated factor set (price / volume / volatility; levels and states), quintile conditions on each
 QUINTILE_FACTORS = [
