@@ -84,6 +84,9 @@ def main():
         if pd.isna(r.beta_bucket):
             return "no 252d beta (recent re-listing)"
         return "state norm needs 252 sessions of factor history"
+    # recommended sort keys: identity-neutral state first, persistence layer as confirmation
+    out["avg_score"] = (out["state_score_pooled"] + out["level_score"]) / 2
+    out["both_agree"] = (out["state_score_pooled"] >= 0.8) & (out["level_score"] >= 0.8)
     out["note"] = out.apply(reason, axis=1)
     out = out.sort_values("state_score_pooled", ascending=False)
     out.insert(0, "asof", asof.date())

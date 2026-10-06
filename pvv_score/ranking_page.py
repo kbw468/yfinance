@@ -5,7 +5,7 @@ from .config import RESULTS_DIR
 
 COLS = [("ticker", "Ticker", "s"), ("Sector", "Sector", "s"), ("beta_bucket", "Beta bucket", "s"),
         ("state_score_pooled", "State score (universe pct)", "n"), ("state_score", "State score (within beta)", "n"),
-        ("level_score", "Level score (identity-heavy)", "n"), ("ml_score", "ML pct", "n"),
+        ("level_score", "Level score (identity-heavy)", "n"), ("avg_score", "Avg (state+level)/2", "n"), ("both_agree", "Both >= 0.8", "s"), ("ml_score", "ML pct", "n"),
         ("z_mom_12_1", "z 12-1 mom", "n"), ("z_rs_lead_126", "z RS lead", "n"), ("z_dist_52w_high", "z dist 52w hi", "n"),
         ("z_rv20_pct_252", "z RV20 pct", "n"), ("z_bbw_pct_252", "z BB width", "n"), ("z_vol_dry_20_250", "z vol dry-up", "n"),
         ("z_updown_vol_ratio_50", "z up/dn vol", "n"), ("z_obv_price_div_63", "z OBV lead", "n"), ("z_dn_up_vol_asym_63", "z dn/up vol asym", "n"),
@@ -40,7 +40,7 @@ td.pos{{color:var(--pos);font-weight:500}} td.neg{{color:var(--neg);font-weight:
 .count{{color:var(--muted);font-size:.85rem}}
 </style>
 <h1>PVV universe scores</h1>
-<p class="sub">All {len(df)} tickers as of the {asof} close. <b>State score</b> is the identity-neutral ranking: every factor is the name's deviation from its own trailing 3-year norm (z), combined with weights validated walk-forward inside beta terciles. A chronically strong name scores near the middle unless its current price / volume / volatility behaviour is unusual for it. <b>Level score</b> is the earlier identity-heavy composite, shown for comparison. z columns are in standard deviations vs the name's own history; blue = above its norm, orange = below. Click a header to sort; type to filter.</p>
+<p class="sub">All {len(df)} tickers as of the {asof} close. <b>State score</b> is the identity-neutral ranking: every factor is the name's deviation from its own trailing 3-year norm (z), combined with weights validated walk-forward inside beta terciles. A chronically strong name scores near the middle unless its current price / volume / volatility behaviour is unusual for it. <b>Level score</b> is the earlier identity-heavy composite, shown for comparison. z columns are in standard deviations vs the name's own history; blue = above its norm, orange = below. <b>Recommended sort for actionable names today:</b> <code>Avg (state+level)/2</code> descending, or filter <code>Both >= 0.8</code> = True (behaviour unusual for the name AND the name is in a persistent-strength regime). Click a header to sort; type to filter.</p>
 <div class="bar"><input id="q" placeholder="filter ticker / sector / note" size="34"><select id="bb"><option value="">all beta buckets</option><option>low</option><option>mid</option><option>high</option></select><span class="count" id="n"></span></div>
 <div class="tw"><table id="t"><thead><tr id="h"></tr></thead><tbody id="b"></tbody></table></div>
 <script>
@@ -49,7 +49,7 @@ const h=document.getElementById('h'),b=document.getElementById('b'),q=document.g
 D.cols.forEach((c,i)=>{{const th=document.createElement('th');th.textContent=c[1];th.onclick=()=>{{if(sortCol===i)sortDir*=-1;else{{sortCol=i;sortDir=c[2]==='n'?-1:1}}render()}};h.appendChild(th)}});
 function render(){{
   const f=q.value.toLowerCase(),bk=bb.value;
-  let rows=D.rows.filter(r=>(!bk||r[2]===bk)&&(!f||[r[0],r[1],r[20],r[21]].join(' ').toLowerCase().includes(f)));
+  let rows=D.rows.filter(r=>(!bk||r[2]===bk)&&(!f||[r[0],r[1],r[22],r[23]].join(' ').toLowerCase().includes(f)));
   rows.sort((x,y)=>{{const a=x[sortCol],c=y[sortCol];if(a==null&&c==null)return 0;if(a==null)return 1;if(c==null)return -1;return (a<c?-1:a>c?1:0)*sortDir}});
   [...h.children].forEach((th,i)=>th.className=i===sortCol?'on':'');
   b.innerHTML=rows.map(r=>'<tr>'+r.map((v,i)=>{{const k=D.cols[i][2];let cls=k==='s'?'s':'';if(k==='n'&&D.cols[i][0].startsWith('z_')&&v!=null){{if(v>=1)cls='pos';else if(v<=-1)cls='neg'}}return `<td class="${{cls}}">${{v==null?'':v}}</td>`}}).join('')+'</tr>').join('');
