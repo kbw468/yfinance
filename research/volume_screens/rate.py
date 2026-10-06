@@ -1,5 +1,5 @@
 # 1-10 volume/volatility backdrop rating. 10 components, each 0-1, linear between bad and good anchors.
-import pandas as pd, numpy as np, yfinance as yf, warnings, sys
+import pandas as pd, numpy as np, yfinance as yf, warnings, sys, time
 warnings.filterwarnings('ignore')
 SECTOR_ETF = {'Industrials':'XLI','Technology':'XLK','Healthcare':'XLV','Financial Services':'XLF','Consumer Cyclical':'XLY',
  'Consumer Defensive':'XLP','Energy':'XLE','Basic Materials':'XLB','Utilities':'XLU','Real Estate':'XLRE','Communication Services':'XLC'}
@@ -7,8 +7,10 @@ def lin(x, bad, good):
     if x is None or np.isnan(x): return 0.5
     return float(np.clip((x-bad)/(good-bad), 0, 1))
 def rate(T, show=False):
-    try: sec = yf.Ticker(T).info.get('sector')
-    except Exception: sec = None
+    sec = None
+    for i in range(3):
+        try: sec = yf.Ticker(T).info.get('sector'); break
+        except Exception: time.sleep(3*(i+1))
     etf = SECTOR_ETF.get(sec, 'SPY')
     d = yf.download([T,'SPY',etf], period='3y', auto_adjust=True, progress=False, group_by='column')
     # drop today's partial bar if volume is <60% of 21d avg pace
