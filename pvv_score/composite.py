@@ -92,23 +92,27 @@ def walk_forward(df: pd.DataFrame, years=range(2017, 2027)) -> tuple[pd.Series, 
     return pooled, bucketed, log
 
 
-def main():
+def main(state: bool = False):
+    global FACTORS
     df = load_research().reset_index(drop=True)
     df["beta_bucket"] = tercile_series(df)
+    tag = "state" if state else "level"
+    if state:
+        FACTORS = {c: ("state", 0, c) for c in df.columns if c.startswith("z_")}
     pooled, bucketed, log = walk_forward(df)
     df["comp_pooled"] = pooled
     df["comp_bucketed"] = bucketed
     oos = df[df.comp_pooled.notna()].copy()
-    oos[["date", "ticker", "comp_pooled", "comp_bucketed"]].to_parquet(CACHE_DIR / "composite_oos_preds.parquet", index=False)
+    oos[["date", "ticker", "comp_pooled", "comp_bucketed"]].to_parquet(CACHE_DIR / f"composite_{tag}_oos_preds.parquet", index=False)
 
-    ev = pd.concat([evaluate_prediction(oos, "comp_pooled", "composite_pooled_wf"),
-                    evaluate_prediction(oos[oos.comp_bucketed.notna()], "comp_bucketed", "composite_betabucket_wf")])
-    ev.to_csv(RESULTS_DIR / "composite_oos_evaluation.csv")
+    ev = pd.concat([evaluate_prediction(oos, "comp_pooled", f"composite_pooled_wf_{tag}"),
+                    evaluate_prediction(oos[oos.comp_bucketed.notna()], "comp_bucketed", f"composite_betabucket_wf_{tag}")])
+    ev.to_csv(RESULTS_DIR / f"composite_{tag}_oos_evaluation.csv")
     rows = []
     for (y, b), w in log.items():
         for f, v in w.items():
             rows.append({"year": y, "bucket": b, "factor": f, "weight": v})
-    pd.DataFrame(rows).to_csv(RESULTS_DIR / "composite_weights_by_fold.csv", index=False)
+    pd.DataFrame(rows).to_csv(RESULTS_DIR / f"composite_{tag}_weights_by_fold.csv", index=False)
 
     pd.set_option("display.width", 250, "display.max_rows", 200)
     print(ev.round(3).to_string())
@@ -121,4 +125,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(state="--state" in sys.argv)

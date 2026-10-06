@@ -8,6 +8,7 @@ from .config import CACHE_DIR, BACKTEST_START, MARKET
 from .data_io import load_panel, load_universe
 from .clean import clean_panel
 from .features import compute_features, eligibility, FACTORS
+from .state import to_state
 from .targets import build_targets, blended_rank_target, sector_bench_returns
 
 
@@ -30,6 +31,9 @@ def main():
     sb = sector_close(panel["Close"], universe)
     F = compute_features(panel, universe, sb)
     print(f"features done {time.time()-t0:.0f}s", file=sys.stderr)
+    # state versions: the 0/1 flag is excluded (z of a binary is not meaningful)
+    Z = to_state(F, skip=("ceiling_2x_low",))
+    print(f"state transforms done {time.time()-t0:.0f}s", file=sys.stderr)
     T = build_targets(panel["Close"], universe)
     T["y_blend_spy"] = blended_rank_target(T, "xs_spy_sharpe")
     T["y_blend_sec"] = blended_rank_target(T, "xs_sec_sharpe")
@@ -39,7 +43,7 @@ def main():
     # wide -> long, restricted to backtest window and eligible rows
     dates = panel["Close"].loc[BACKTEST_START:].index
     pieces = {}
-    for k, v in {**F, **T}.items():
+    for k, v in {**F, **Z, **T}.items():
         pieces[k] = v.reindex(index=dates, columns=stocks).stack(future_stack=True)
     long = pd.DataFrame(pieces)
     long["eligible"] = elig.reindex(index=dates, columns=stocks).stack(future_stack=True).fillna(False).astype(bool)

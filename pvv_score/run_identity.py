@@ -16,13 +16,13 @@ from .data_io import load_panel
 from .clean import clean_panel
 
 TGT, H = "xs_spy_sharpe_42", 42
-KEY = ["comp_bucketed", "dist_52w_high", "days_since_20pct_dd", "sharpe_126", "mom_12_1", "rs_lead_126", "idio_vol_63",
+KEY = ["comp_bucketed", "z_mom_12_1", "z_rs_lead_126", "z_vol_dry_20_250", "z_rv20_pct_252", "z_obv_price_div_63", "dist_52w_high", "days_since_20pct_dd", "sharpe_126", "mom_12_1", "rs_lead_126", "idio_vol_63",
        "vol_dry_20_250", "obv_price_div_63", "dryup_x_tight", "corr_spy_63", "up_capture_63"]
 
 
-def main():
+def main(tag: str = "level"):
     df = load_research().reset_index(drop=True)
-    oos = pd.read_parquet(CACHE_DIR / "composite_oos_preds.parquet")
+    oos = pd.read_parquet(CACHE_DIR / f"composite_{tag}_oos_preds.parquet")
     df = df.merge(oos, on=["date", "ticker"], how="left").sort_values(["ticker", "date"])
     p, _ = clean_panel(load_panel(), verbose=False)
     rr = p["Close"].pct_change()
@@ -45,7 +45,7 @@ def main():
                 m, t, _ = nw_tstat(ic.loc[start:, c], H)
                 rows.append({"factor": col, "window": win, "component": c, "ic": m, "t_nw": t})
     dec = pd.DataFrame(rows)
-    dec.to_csv(RESULTS_DIR / "identity_decomposition.csv", index=False)
+    dec.to_csv(RESULTS_DIR / f"identity_decomposition_{tag}.csv", index=False)
 
     idc = ["sharpe_252", "sharpe_504", "sharpe_756", "past_xs_1y_mean"]
     tmp = df[["date", "ticker", TGT] + idc].dropna()
@@ -63,10 +63,11 @@ def main():
     rk_o = own.groupby(rec.date).rank(pct=True)
     ok = rk_o.notna()
     corr = float(np.corrcoef(rk_c[ok], rk_o[ok])[0, 1])
-    (RESULTS_DIR / "identity_rank_overlap.txt").write_text(f"{corr:.3f}")
+    (RESULTS_DIR / f"identity_rank_overlap_{tag}.txt").write_text(f"{corr:.3f}")
     print(dec.pivot_table(index="factor", columns=["window", "component"], values="ic").round(3).to_string())
     print("composite-rank vs own-history-rank correlation (recent):", round(corr, 2))
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(sys.argv[1] if len(sys.argv) > 1 else "level")
