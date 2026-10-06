@@ -21,9 +21,11 @@ def _num(x):
     try: return float(str(x).replace('$','').replace(',',''))
     except Exception: return np.nan
 def history(t, years=3):
-    ac = 'etf' if t in ETFS else 'stocks'
     to = pd.Timestamp.today().normalize(); fr = to - pd.DateOffset(years=years)
-    d = _get(f'https://api.nasdaq.com/api/quote/{t}/historical?assetclass={ac}&fromdate={fr:%Y-%m-%d}&limit=9999&todate={to:%Y-%m-%d}')
+    order = ['etf','stocks'] if t in ETFS else ['stocks','etf']
+    for ac in order:
+        d = _get(f'https://api.nasdaq.com/api/quote/{t}/historical?assetclass={ac}&fromdate={fr:%Y-%m-%d}&limit=9999&todate={to:%Y-%m-%d}')
+        if d and d.get('tradesTable') and d['tradesTable'].get('rows'): break
     if not d or not d.get('tradesTable') or not d['tradesTable'].get('rows'): raise RuntimeError(f'no history for {t}')
     df = pd.DataFrame(d['tradesTable']['rows'])
     df.index = pd.to_datetime(df['date'], format='%m/%d/%Y')
