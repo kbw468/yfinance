@@ -5,12 +5,12 @@ Probabilities are realised out-of-sample frequencies (2022-10 onward) for names 
 SIG = volume ROC21 > +50% AND price +3% over 21d AND 20d-RV ROC21 < -20%, simultaneously. When set, the probability is the realised cell for names with the signature in that bucket and tier.
 
   # tkr    sector                 beta   b252 SIG   Q42   H42   Q63   H63 score  what the tape is doing
-  1 P      Technology             high   2.44  Y   0.49  0.68  0.52  0.71  0.98  log_dvol_63 z=+2.2; up_day_frac_63 z=+2.1; days_since_52w_high z=-1.2
-  2 HPE    Technology             high   2.06  -   0.49  0.68  0.52  0.70  0.99  mom_12_1 z=+2.3; log_dvol_63 z=+2.2; amihud_21 z=-1.7
-  3 MRVL   Technology             high   3.05  -   0.49  0.68  0.52  0.70  0.99  mom_12_1 z=+1.6; log_dvol_63 z=+2.1; amihud_21 z=-2.2
-  4 MRNA   Healthcare             high   1.94  -   0.49  0.68  0.52  0.70  0.98  mom_12_1 z=+4.9; log_dvol_63 z=+6.0; amihud_21 z=-4.1
-  5 DELL   Technology             high   2.23  -   0.49  0.68  0.52  0.70  0.98  mom_12_1 z=+2.5; log_dvol_63 z=+2.2; amihud_21 z=-2.8
-  6 LITE   Technology             high   2.87  -   0.49  0.68  0.52  0.70  0.96  amihud_21 z=-1.9; log_dvol_63 z=+1.6; mom_12_1 z=+0.7
+  1 P      Technology             high   2.44  Y   0.49  0.69  0.52  0.71  0.98  log_dvol_63 z=+2.2; up_day_frac_63 z=+2.1; days_since_52w_high z=-1.2
+  2 HPE    Technology             high   2.06  -   0.49  0.69  0.52  0.71  0.99  mom_12_1 z=+2.3; log_dvol_63 z=+2.2; amihud_21 z=-1.7
+  3 MRVL   Technology             high   3.05  -   0.49  0.69  0.52  0.71  0.99  mom_12_1 z=+1.6; log_dvol_63 z=+2.1; amihud_21 z=-2.2
+  4 MRNA   Healthcare             high   1.94  -   0.49  0.69  0.52  0.71  0.98  mom_12_1 z=+4.9; log_dvol_63 z=+6.0; amihud_21 z=-4.1
+  5 DELL   Technology             high   2.23  -   0.49  0.69  0.52  0.71  0.98  mom_12_1 z=+2.5; log_dvol_63 z=+2.2; amihud_21 z=-2.8
+  6 LITE   Technology             high   2.87  -   0.49  0.69  0.52  0.71  0.96  amihud_21 z=-1.9; log_dvol_63 z=+1.6; mom_12_1 z=+0.7
   7 NTAP   Technology             high   1.31  -   0.40  0.61  0.42  0.64  0.95  log_dvol_63 z=+2.6; mom_12_1 z=+1.0; rs_spy_126 z=+3.7
   8 KEYS   Technology             high   1.85  -   0.40  0.61  0.42  0.64  0.94  mom_12_1 z=+1.6; log_dvol_63 z=+1.8; days_since_52w_high z=-1.1
   9 ON     Technology             high   2.68  -   0.40  0.61  0.42  0.64  0.93  mom_12_1 z=+1.0; beta_252 z=+3.1; log_dvol_63 z=+1.5
@@ -20,34 +20,34 @@ SIG = volume ROC21 > +50% AND price +3% over 21d AND 20d-RV ROC21 < -20%, simult
  13 BE     Industrials            high   4.22  -   0.40  0.61  0.42  0.64  0.92  log_dvol_63 z=+1.7; amihud_21 z=-1.9; beta_252 z=+2.2
  14 TER    Technology             high   3.26  -   0.40  0.61  0.42  0.64  0.91  mom_12_1 z=+0.7; log_dvol_63 z=+1.4; beta_252 z=+2.4
  15 INTC   Technology             high   2.91  -   0.40  0.61  0.42  0.64  0.91  log_dvol_63 z=+2.1; amihud_21 z=-2.2; mom_12_1 z=+0.7
- 16 STX    Technology             high   2.27  -   0.33  0.58  0.34  0.58  0.90  log_dvol_63 z=+2.1; amihud_21 z=-2.3; dn_vol_63 z=+2.0
- 17 PANW   Technology             high   1.19  -   0.33  0.58  0.34  0.58  0.89  log_dvol_63 z=+2.5; mom_12_1 z=+0.9; rs_spy_126 z=+3.3
- 18 COHR   Technology             high   3.23  -   0.33  0.58  0.34  0.58  0.88  log_dvol_63 z=+1.6; amihud_21 z=-1.7; dn_vol_63 z=+1.4
- 19 CRWD   Technology             high   1.49  -   0.33  0.58  0.34  0.58  0.88  amihud_21 z=-2.0; rs_spy_126 z=+2.8; idio_vol_63 z=+3.0
- 20 MU     Technology             high   3.28  -   0.33  0.58  0.34  0.58  0.88  amihud_21 z=-2.2; log_dvol_63 z=+1.9; mom_12_1 z=+1.4
- 21 DDOG   Technology             high   1.15  -   0.33  0.58  0.34  0.58  0.88  log_dvol_63 z=+1.8; dn_vol_63 z=+2.2; rs_spy_126 z=+3.2
- 22 WDC    Technology             high   2.89  -   0.33  0.58  0.34  0.58  0.86  amihud_21 z=-2.1; log_dvol_63 z=+1.7; dn_vol_63 z=+1.8
- 23 FLEX   Technology             high   2.89  -   0.33  0.58  0.34  0.58  0.85  mom_12_1 z=+0.7; dn_vol_63 z=+1.3; beta_252 z=+2.6
- 24 SWKS   Technology             high   1.48  -   0.33  0.58  0.34  0.58  0.85  log_dvol_63 z=+2.7; days_since_52w_high z=-2.4; up_day_frac_63 z=+0.9
- 25 KLAC   Technology             high   2.75  -   0.33  0.58  0.34  0.58  0.85  log_dvol_63 z=+1.6; up_day_frac_63 z=-2.2; amihud_21 z=-1.6
- 26 LRCX   Technology             high   3.18  -   0.33  0.58  0.34  0.58  0.84  amihud_21 z=-2.2; log_dvol_63 z=+1.7; beta_252 z=+2.4
- 27 FTNT   Technology             high   0.92  -   0.33  0.58  0.34  0.58  0.83  mom_12_1 z=+1.7; log_dvol_63 z=+1.8; days_since_52w_high z=-1.2
- 28 RVTY   Healthcare             high   1.16  -   0.33  0.58  0.34  0.58  0.83  mom_12_1 z=+2.3; log_dvol_63 z=+3.2; amihud_21 z=-2.5
- 29 FCX    Basic Materials        high   2.15  -   0.33  0.58  0.34  0.58  0.82  mom_12_1 z=+2.2; amihud_21 z=-1.9; days_since_52w_high z=-1.0
- 30 CRL    Healthcare             high   1.24  -   0.31  0.57  0.32  0.58  0.80  mom_12_1 z=+2.2; log_dvol_63 z=+2.4; amihud_21 z=-2.5
- 31 MPWR   Technology             high   2.54  -   0.31  0.57  0.32  0.58  0.79  log_dvol_63 z=+1.6; amihud_21 z=-1.7; clv_21 z=+1.2
- 32 ZBRA   Technology             high   1.76  -   0.31  0.57  0.32  0.58  0.79  amihud_21 z=-1.8; dn_vol_63 z=-1.0; days_since_52w_high z=-1.3
- 33 JBL    Technology             high   2.07  -   0.31  0.57  0.32  0.58  0.79  dn_vol_63 z=+1.2; beta_252 z=+2.3; rv20 z=+1.0
- 34 TXN    Technology             high   1.47  -   0.31  0.57  0.32  0.58  0.79  mom_12_1 z=+1.6; up_day_frac_63 z=+0.6; days_since_2x_low z=-2.0
- 35 NUE    Basic Materials        high   0.94  -   0.31  0.57  0.32  0.58  0.78  mom_12_1 z=+2.1; up_day_frac_63 z=+1.0; amihud_21 z=-0.5
- 36 CSCO   Technology             high   1.06  -   0.31  0.57  0.32  0.58  0.77  mom_12_1 z=+1.6; log_dvol_63 z=+1.7; amihud_21 z=-0.1
- 37 CAT    Industrials            high   1.73  -   0.31  0.57  0.32  0.58  0.77  log_dvol_63 z=+1.5; amihud_21 z=-1.6; beta_252 z=+2.4
- 38 STLD   Basic Materials        high   1.12  -   0.31  0.57  0.32  0.58  0.76  mom_12_1 z=+1.4; dn_vol_63 z=+1.2; log_dvol_63 z=+1.4
- 39 META   Communication Services high   1.45  -   0.31  0.57  0.32  0.58  0.75  log_dvol_63 z=+1.6; mom_12_1 z=-1.2; up_day_frac_63 z=+0.8
- 40 FFIV   Technology             high   1.02  -   0.31  0.57  0.32  0.58  0.74  days_since_2x_low z=-6.0; days_since_52w_high z=-0.8; amihud_21 z=-0.5
- 41 CIEN   Technology             high   2.51  -   0.31  0.57  0.32  0.58  0.73  dn_vol_63 z=+1.1; up_gap_freq_21 z=+2.0; log_dvol_63 z=+1.4
- 42 ADI    Technology             high   1.68  -   0.31  0.57  0.32  0.58  0.73  mom_12_1 z=+1.0; up_day_frac_63 z=+1.0; up_gap_freq_21 z=-0.5
- 43 QCOM   Technology             high   2.12  -   0.31  0.57  0.32  0.58  0.72  rs_spy_126 z=+1.4; up_gap_freq_21 z=+1.7; rv20 z=+0.9
+ 16 STX    Technology             high   2.27  -   0.33  0.59  0.34  0.58  0.90  log_dvol_63 z=+2.1; amihud_21 z=-2.3; dn_vol_63 z=+2.0
+ 17 PANW   Technology             high   1.19  -   0.33  0.59  0.34  0.58  0.89  log_dvol_63 z=+2.5; mom_12_1 z=+0.9; rs_spy_126 z=+3.3
+ 18 COHR   Technology             high   3.23  -   0.33  0.59  0.34  0.58  0.88  log_dvol_63 z=+1.6; amihud_21 z=-1.7; dn_vol_63 z=+1.4
+ 19 CRWD   Technology             high   1.49  -   0.33  0.59  0.34  0.58  0.88  amihud_21 z=-2.0; rs_spy_126 z=+2.8; idio_vol_63 z=+3.0
+ 20 MU     Technology             high   3.28  -   0.33  0.59  0.34  0.58  0.88  amihud_21 z=-2.2; log_dvol_63 z=+1.9; mom_12_1 z=+1.4
+ 21 DDOG   Technology             high   1.15  -   0.33  0.59  0.34  0.58  0.88  log_dvol_63 z=+1.8; dn_vol_63 z=+2.2; rs_spy_126 z=+3.2
+ 22 WDC    Technology             high   2.89  -   0.33  0.59  0.34  0.58  0.86  amihud_21 z=-2.1; log_dvol_63 z=+1.7; dn_vol_63 z=+1.8
+ 23 FLEX   Technology             high   2.89  -   0.33  0.59  0.34  0.58  0.85  mom_12_1 z=+0.7; dn_vol_63 z=+1.3; beta_252 z=+2.6
+ 24 SWKS   Technology             high   1.48  -   0.33  0.59  0.34  0.58  0.85  log_dvol_63 z=+2.7; days_since_52w_high z=-2.4; up_day_frac_63 z=+0.9
+ 25 KLAC   Technology             high   2.75  -   0.33  0.59  0.34  0.58  0.85  log_dvol_63 z=+1.6; up_day_frac_63 z=-2.2; amihud_21 z=-1.6
+ 26 LRCX   Technology             high   3.18  -   0.33  0.59  0.34  0.58  0.84  amihud_21 z=-2.2; log_dvol_63 z=+1.7; beta_252 z=+2.4
+ 27 FTNT   Technology             high   0.92  -   0.33  0.59  0.34  0.58  0.83  mom_12_1 z=+1.7; log_dvol_63 z=+1.8; days_since_52w_high z=-1.2
+ 28 RVTY   Healthcare             high   1.16  -   0.33  0.59  0.34  0.58  0.83  mom_12_1 z=+2.3; log_dvol_63 z=+3.2; amihud_21 z=-2.5
+ 29 FCX    Basic Materials        high   2.15  -   0.33  0.59  0.34  0.58  0.82  mom_12_1 z=+2.2; amihud_21 z=-1.9; days_since_52w_high z=-1.0
+ 30 CRL    Healthcare             high   1.24  -   0.31  0.56  0.32  0.58  0.80  mom_12_1 z=+2.2; log_dvol_63 z=+2.4; amihud_21 z=-2.5
+ 31 MPWR   Technology             high   2.54  -   0.31  0.56  0.32  0.58  0.79  log_dvol_63 z=+1.6; amihud_21 z=-1.7; clv_21 z=+1.2
+ 32 ZBRA   Technology             high   1.76  -   0.31  0.56  0.32  0.58  0.79  amihud_21 z=-1.8; dn_vol_63 z=-1.0; days_since_52w_high z=-1.3
+ 33 JBL    Technology             high   2.07  -   0.31  0.56  0.32  0.58  0.79  dn_vol_63 z=+1.2; beta_252 z=+2.3; rv20 z=+1.0
+ 34 TXN    Technology             high   1.47  -   0.31  0.56  0.32  0.58  0.79  mom_12_1 z=+1.6; up_day_frac_63 z=+0.6; days_since_2x_low z=-2.0
+ 35 NUE    Basic Materials        high   0.94  -   0.31  0.56  0.32  0.58  0.78  mom_12_1 z=+2.1; up_day_frac_63 z=+1.0; amihud_21 z=-0.5
+ 36 CSCO   Technology             high   1.06  -   0.31  0.56  0.32  0.58  0.77  mom_12_1 z=+1.6; log_dvol_63 z=+1.7; amihud_21 z=-0.1
+ 37 CAT    Industrials            high   1.73  -   0.31  0.56  0.32  0.58  0.77  log_dvol_63 z=+1.5; amihud_21 z=-1.6; beta_252 z=+2.4
+ 38 STLD   Basic Materials        high   1.12  -   0.31  0.56  0.32  0.58  0.76  mom_12_1 z=+1.4; dn_vol_63 z=+1.2; log_dvol_63 z=+1.4
+ 39 META   Communication Services high   1.45  -   0.31  0.56  0.32  0.58  0.75  log_dvol_63 z=+1.6; mom_12_1 z=-1.2; up_day_frac_63 z=+0.8
+ 40 FFIV   Technology             high   1.02  -   0.31  0.56  0.32  0.58  0.74  days_since_2x_low z=-6.0; days_since_52w_high z=-0.8; amihud_21 z=-0.5
+ 41 CIEN   Technology             high   2.51  -   0.31  0.56  0.32  0.58  0.73  dn_vol_63 z=+1.1; up_gap_freq_21 z=+2.0; log_dvol_63 z=+1.4
+ 42 ADI    Technology             high   1.68  -   0.31  0.56  0.32  0.58  0.73  mom_12_1 z=+1.0; up_day_frac_63 z=+1.0; up_gap_freq_21 z=-0.5
+ 43 QCOM   Technology             high   2.12  -   0.31  0.56  0.32  0.58  0.72  rs_spy_126 z=+1.4; up_gap_freq_21 z=+1.7; rv20 z=+0.9
  44 APH    Technology             high   1.75  -   0.27  0.54  0.27  0.55  0.70  days_since_52w_high z=-0.9; up_gap_freq_21 z=+1.7; beta_252 z=+1.7
  45 ANET   Technology             high   2.05  -   0.27  0.54  0.27  0.55  0.69  days_since_52w_high z=-0.9; up_gap_freq_21 z=+2.0; days_since_2x_low z=+1.7
  46 ABNB   Consumer Cyclical      high   1.10  -   0.27  0.54  0.27  0.55  0.68  mom_12_1 z=+2.2; log_dvol_63 z=+1.9; days_since_52w_high z=-1.1
@@ -171,78 +171,78 @@ SIG = volume ROC21 > +50% AND price +3% over 21d AND 20d-RV ROC21 < -20%, simult
 164 AXP    Financial              high   0.96  -   0.26  0.51  0.25  0.51  0.06  mom_12_1 z=-1.4; amihud_21 z=-2.0; rs_spy_126 z=-1.6
 165 CBRE   Real Estate            high   0.86  -   0.26  0.51  0.25  0.51  0.05  mom_12_1 z=-1.3; rs_spy_126 z=-1.4; days_since_52w_high z=+1.6
 166 UBER   Technology             high   0.88  -   0.26  0.51  0.25  0.51  0.02  log_dvol_63 z=-0.4; mom_12_1 z=-1.3; days_since_52w_high z=+2.5
-167 DPZ    Consumer Cyclical      low    0.11  -   0.24  0.48  0.24  0.48  0.70  dvol_trend_21_126 z=-1.4; days_since_ignition z=+1.2; down_capture_63 z=-1.1
-168 ABT    Healthcare             low    0.04  -   0.24  0.48  0.24  0.48  0.70  dvol_trend_21_126 z=-1.1; down_capture_63 z=-1.0; ret_5 z=-0.9
-169 T      Communication Services low   -0.33  -   0.24  0.48  0.24  0.48  0.69  pos_in_20d_range z=-1.5; dvol_trend_21_126 z=-1.1; higher_low_cadence z=+0.2
-170 ETR    Utilities              low    0.21  -   0.24  0.48  0.24  0.48  0.69  higher_low_cadence z=-2.3; base_depth_63 z=-2.3; down_capture_63 z=+1.1
-171 SJM    Consumer Defensive     low   -0.29  -   0.24  0.48  0.24  0.48  0.69  pos_in_20d_range z=-1.1; ret_5 z=-0.9; rs_newhigh_price_not_20 z=-0.2
-172 CPRT   Industrials            low    0.13  -   0.24  0.48  0.24  0.48  0.68  pos_in_20d_range z=-1.3; higher_low_cadence z=+0.4; down_capture_63 z=-0.9
-173 SRE    Utilities              low    0.14  -   0.24  0.48  0.24  0.48  0.68  dvol_trend_21_126 z=-1.0; higher_low_cadence z=-2.1; base_depth_63 z=-1.7
-174 REG    Real Estate            low    0.05  -   0.24  0.48  0.24  0.48  0.67  base_depth_63 z=-2.7; pos_in_20d_range z=-1.5; dvol_trend_21_126 z=-0.9
-175 FE     Utilities              low   -0.06  -   0.24  0.48  0.24  0.48  0.67  down_capture_63 z=+1.0; higher_low_cadence z=-2.0; base_depth_63 z=-1.8
-176 KDP    Consumer Defensive     low    0.06  -   0.24  0.48  0.24  0.48  0.67  base_depth_63 z=+0.4; down_capture_63 z=+1.2; higher_low_cadence z=-1.7
-177 DOW    Basic Materials        low   -0.08  -   0.24  0.48  0.24  0.48  0.66  dvol_trend_21_126 z=-1.4; down_capture_63 z=-2.3; base_depth_63 z=-0.2
-178 ES     Utilities              low    0.07  -   0.24  0.48  0.24  0.48  0.66  higher_low_cadence z=-2.2; streak_now z=+2.6; dvol_trend_21_126 z=+0.2
-179 AON    Financial              low   -0.24  -   0.24  0.48  0.24  0.48  0.66  base_depth_63 z=-4.2; dvol_trend_21_126 z=+1.1; down_capture_63 z=+1.5
-180 ERIE   Financial              low   -0.39  -   0.24  0.48  0.24  0.48  0.65  days_since_2x_low z=+0.9; dvol_trend_21_126 z=-0.6; pos_in_20d_range z=-0.9
-181 FOX    Communication Services low    0.06  -   0.24  0.48  0.24  0.48  0.65  pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.3; days_since_2x_low z=+0.6
-182 BSX    Healthcare             low    0.19  -   0.24  0.48  0.24  0.48  0.65  pos_in_20d_range z=-1.6; dvol_trend_21_126 z=-0.8; ret_5 z=-1.0
-183 KO     Consumer Defensive     low   -0.25  -   0.24  0.48  0.24  0.48  0.65  pullback_duration_21 z=+1.5; pos_in_20d_range z=-1.2; ret_5 z=-0.5
-184 VICI   Real Estate            low    0.02  -   0.24  0.48  0.24  0.48  0.65  base_depth_63 z=-2.5; pos_in_20d_range z=-1.2; ret_5 z=-0.8
-185 PCG    Utilities              low    0.15  -   0.24  0.48  0.24  0.48  0.65  base_depth_63 z=-2.9; down_capture_63 z=+1.8; dvol_trend_21_126 z=+0.5
-186 BALL   Consumer Cyclical      low    0.18  -   0.24  0.48  0.24  0.48  0.64  dvol_trend_21_126 z=-1.1; higher_low_cadence z=+0.5; rs_newhigh_price_not_20 z=-0.2
-187 FDS    Financial              low    0.06  -   0.24  0.48  0.24  0.48  0.63  higher_low_cadence z=+0.8; pos_in_20d_range z=+0.1; base_depth_63 z=-0.4
-188 AWK    Utilities              low   -0.45  -   0.24  0.48  0.24  0.48  0.62  pos_in_20d_range z=-1.4; dvol_trend_21_126 z=-0.8; days_since_ignition z=+1.2
-189 ATO    Utilities              low   -0.15  -   0.24  0.48  0.24  0.48  0.62  dvol_trend_21_126 z=-1.0; base_depth_63 z=-2.2; pullback_duration_21 z=+1.4
-190 TRGP   Energy                 low   -0.17  -   0.24  0.48  0.24  0.48  0.61  pullback_duration_21 z=+1.5; down_capture_63 z=-1.8; rs_newhigh_price_not_20 z=-0.3
-191 CBOE   Financial              low   -0.35  -   0.24  0.48  0.24  0.48  0.61  dvol_trend_21_126 z=-1.0; down_capture_63 z=-1.4; pullback_duration_21 z=+1.4
-192 VZ     Communication Services low   -0.30  -   0.24  0.48  0.24  0.48  0.61  pos_in_20d_range z=-1.5; pullback_duration_21 z=+0.5; higher_low_cadence z=+0.3
-193 CINF   Financial              low   -0.01  -   0.24  0.48  0.24  0.48  0.61  higher_low_cadence z=-1.8; rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-1.6
-194 CMCSA  Communication Services low    0.15  -   0.24  0.48  0.24  0.48  0.61  pos_in_20d_range z=-1.4; rs_newhigh_price_not_20 z=+0.0; down_capture_63 z=+1.0
-195 LNT    Utilities              low   -0.07  -   0.24  0.48  0.24  0.48  0.60  base_depth_63 z=-2.6; higher_low_cadence z=-2.8; down_capture_63 z=+1.1
-196 MAA    Real Estate            low    0.06  -   0.24  0.48  0.24  0.48  0.60  dvol_trend_21_126 z=+0.8; base_depth_63 z=-1.8; higher_low_cadence z=-1.7
-197 ZBH    Healthcare             low    0.20  -   0.24  0.48  0.24  0.48  0.59  rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-0.5; ret_5 z=-0.4
-198 PPL    Utilities              low   -0.02  -   0.24  0.48  0.24  0.48  0.59  dvol_trend_21_126 z=-1.4; higher_low_cadence z=-2.9; pos_in_20d_range z=+0.2
-199 CPT    Real Estate            low    0.10  -   0.24  0.48  0.24  0.48  0.58  higher_low_cadence z=-2.8; base_depth_63 z=-1.9; rs_newhigh_price_not_20 z=-0.2
-200 SBAC   Real Estate            low    0.13  -   0.24  0.48  0.24  0.48  0.58  down_capture_63 z=+1.7; base_depth_63 z=-0.4; ret_5 z=+1.0
-201 AIZ    Financial              low    0.16  -   0.24  0.48  0.24  0.48  0.58  pullback_duration_21 z=+1.4; days_since_ignition z=-0.0; ret_5 z=+0.7
-202 O      Real Estate            low   -0.01  -   0.24  0.48  0.24  0.48  0.58  dvol_trend_21_126 z=+2.2; base_depth_63 z=-2.3; pos_in_20d_range z=-1.3
-203 UDR    Real Estate            low    0.15  -   0.24  0.48  0.24  0.48  0.57  higher_low_cadence z=-2.8; base_depth_63 z=-1.8; rs_newhigh_price_not_20 z=-0.2
-204 CTSH   Technology             low    0.21  -   0.24  0.48  0.24  0.48  0.57  higher_low_cadence z=+0.9; down_capture_63 z=-1.7; dvol_trend_21_126 z=-0.8
-205 CCI    Real Estate            low    0.16  -   0.24  0.48  0.24  0.48  0.57  down_capture_63 z=+1.7; dvol_trend_21_126 z=-0.8; pullback_duration_21 z=+0.9
-206 TRV    Financial              low   -0.11  -   0.24  0.48  0.24  0.48  0.57  dvol_trend_21_126 z=-1.3; pos_in_20d_range z=-1.4; down_capture_63 z=-1.0
-207 TMUS   Communication Services low   -0.33  -   0.24  0.48  0.24  0.48  0.57  down_capture_63 z=+1.5; dvol_trend_21_126 z=-0.8; pos_in_20d_range z=-1.1
-208 PAYX   Technology             low    0.06  -   0.24  0.48  0.24  0.48  0.56  rs_newhigh_price_not_20 z=+0.0; base_depth_63 z=-2.2; pos_in_20d_range z=-1.3
-209 MCD    Consumer Cyclical      low    0.01  -   0.24  0.48  0.24  0.48  0.56  dvol_trend_21_126 z=+1.2; base_depth_63 z=-2.1; pos_in_20d_range z=-1.3
-210 STZ    Consumer Defensive     low    0.03  -   0.24  0.48  0.24  0.48  0.56  pullback_duration_21 z=+1.0; ret_5 z=+0.8; comp_then_exp z=-0.7
-211 BMY    Healthcare             low    0.23  -   0.24  0.48  0.24  0.48  0.55  dvol_trend_21_126 z=+0.9; higher_low_cadence z=+0.5; ret_5 z=-1.2
-212 KMB    Consumer Defensive     low    0.03  -   0.24  0.48  0.24  0.48  0.55  down_capture_63 z=+2.9; ret_5 z=-0.7; rs_newhigh_price_not_20 z=-0.2
-213 KIM    Real Estate            low    0.10  -   0.24  0.48  0.24  0.48  0.55  pos_in_20d_range z=-1.3; base_depth_63 z=-1.8; higher_low_cadence z=-1.8
-214 MSI    Technology             low    0.15  -   0.24  0.48  0.24  0.48  0.54  pullback_duration_21 z=+1.5; dvol_trend_21_126 z=-0.9; base_depth_63 z=-0.2
-215 NEE    Utilities              low    0.19  -   0.24  0.48  0.24  0.48  0.54  higher_low_cadence z=-2.0; down_capture_63 z=+0.9; pullback_duration_21 z=+1.3
-216 MNST   Consumer Defensive     low    0.23  -   0.24  0.48  0.24  0.48  0.53  pos_in_20d_range z=-0.0; higher_low_cadence z=-2.0; pullback_duration_21 z=+1.4
-217 TYL    Technology             low    0.05  -   0.24  0.48  0.24  0.48  0.53  dvol_trend_21_126 z=-1.0; higher_low_cadence z=+0.1; ret_5 z=+1.1
-218 NI     Utilities              low    0.17  -   0.24  0.48  0.24  0.48  0.53  higher_low_cadence z=-3.2; base_depth_63 z=-2.4; pullback_duration_21 z=+1.6
-219 HIG    Financial              low   -0.09  -   0.24  0.48  0.24  0.48  0.53  base_depth_63 z=-2.6; rs_newhigh_price_not_20 z=-0.3; pullback_duration_21 z=+1.5
-220 BG     Consumer Defensive     low   -0.07  -   0.24  0.48  0.24  0.48  0.53  dvol_trend_21_126 z=+0.9; down_capture_63 z=-1.2; pos_in_20d_range z=-1.2
-221 FOXA   Communication Services low    0.11  -   0.24  0.48  0.24  0.48  0.52  pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.4; down_capture_63 z=-1.1
-222 ACN    Technology             low    0.25  -   0.24  0.48  0.24  0.48  0.52  pullback_duration_21 z=-1.0; higher_low_cadence z=+0.8; down_capture_63 z=-1.5
-223 UNP    Industrials            low    0.23  -   0.24  0.48  0.24  0.48  0.51  dvol_trend_21_126 z=-0.9; down_capture_63 z=-1.1; streak_now z=-0.9
-224 NOC    Industrials            low    0.07  -   0.24  0.48  0.24  0.48  0.51  down_capture_63 z=+0.9; ret_5 z=-1.2; days_since_ignition z=+1.1
-225 APA    Energy                 low   -0.73  -   0.24  0.48  0.24  0.48  0.50  base_depth_63 z=+0.9; higher_low_cadence z=+1.4; down_capture_63 z=-1.5
-226 MRK    Healthcare             low    0.17  -   0.24  0.48  0.24  0.48  0.50  days_since_2x_low z=-4.6; ret_5 z=-1.4; base_depth_63 z=-0.3
-227 BR     Technology             low    0.10  -   0.23  0.48  0.24  0.47  0.80  dvol_trend_21_126 z=-1.2; higher_low_cadence z=+0.6; pos_in_20d_range z=-1.2
-228 JNJ    Healthcare             low   -0.18  -   0.23  0.48  0.24  0.47  0.79  pos_in_20d_range z=-1.4; rs_newhigh_price_not_20 z=-0.3; ret_5 z=-2.0
-229 FRT    Real Estate            low    0.17  -   0.23  0.48  0.24  0.47  0.78  pos_in_20d_range z=-1.7; base_depth_63 z=-2.6; higher_low_cadence z=-2.3
-230 MKC    Consumer Defensive     low   -0.30  -   0.23  0.48  0.24  0.47  0.78  ret_5 z=-1.6; rs_newhigh_price_not_20 z=-0.2; higher_low_cadence z=+0.0
-231 CASY   Consumer Cyclical      low   -0.07  -   0.23  0.48  0.24  0.47  0.76  base_depth_63 z=-4.4; pullback_duration_21 z=+1.6; rs_newhigh_price_not_20 z=-0.3
-232 CAH    Healthcare             low   -0.08  -   0.23  0.48  0.24  0.47  0.75  pos_in_20d_range z=+0.3; pullback_duration_21 z=+1.5; dvol_trend_21_126 z=-0.8
-233 OKE    Energy                 low   -0.42  -   0.23  0.48  0.24  0.47  0.72  pullback_duration_21 z=+1.4; down_capture_63 z=-1.1; base_depth_63 z=-0.6
-234 LYB    Basic Materials        low   -0.38  -   0.23  0.48  0.24  0.47  0.72  dvol_trend_21_126 z=-1.3; higher_low_cadence z=+0.9; down_capture_63 z=-2.1
-235 EIX    Utilities              low    0.06  -   0.23  0.48  0.24  0.47  0.71  base_depth_63 z=-2.5; down_capture_63 z=+1.0; dvol_trend_21_126 z=+0.4
-236 YUM    Consumer Cyclical      low    0.04  -   0.23  0.48  0.24  0.47  0.71  base_depth_63 z=-2.5; down_capture_63 z=+0.8; higher_low_cadence z=+0.1
-237 KHC    Consumer Defensive     low   -0.09  -   0.23  0.48  0.24  0.47  0.71  dvol_trend_21_126 z=+2.3; base_depth_63 z=-2.4; down_capture_63 z=+1.7
-238 HSY    Consumer Defensive     low   -0.15  -   0.23  0.48  0.24  0.47  0.70  dvol_trend_21_126 z=-1.0; days_since_ignition z=+0.9; down_capture_63 z=+0.4
+167 BR     Technology             low    0.10  -   0.24  0.50  0.25  0.48  0.80  dvol_trend_21_126 z=-1.2; higher_low_cadence z=+0.6; pos_in_20d_range z=-1.2
+168 JNJ    Healthcare             low   -0.18  -   0.24  0.50  0.25  0.48  0.79  pos_in_20d_range z=-1.4; rs_newhigh_price_not_20 z=-0.3; ret_5 z=-2.0
+169 FRT    Real Estate            low    0.17  -   0.24  0.50  0.25  0.48  0.78  pos_in_20d_range z=-1.7; base_depth_63 z=-2.6; higher_low_cadence z=-2.3
+170 MKC    Consumer Defensive     low   -0.30  -   0.24  0.50  0.25  0.48  0.78  ret_5 z=-1.6; rs_newhigh_price_not_20 z=-0.2; higher_low_cadence z=+0.0
+171 CASY   Consumer Cyclical      low   -0.07  -   0.24  0.50  0.25  0.48  0.76  base_depth_63 z=-4.4; pullback_duration_21 z=+1.6; rs_newhigh_price_not_20 z=-0.3
+172 CAH    Healthcare             low   -0.08  -   0.24  0.50  0.25  0.48  0.75  pos_in_20d_range z=+0.3; pullback_duration_21 z=+1.5; dvol_trend_21_126 z=-0.8
+173 OKE    Energy                 low   -0.42  -   0.24  0.50  0.25  0.48  0.72  pullback_duration_21 z=+1.4; down_capture_63 z=-1.1; base_depth_63 z=-0.6
+174 LYB    Basic Materials        low   -0.38  -   0.24  0.50  0.25  0.48  0.72  dvol_trend_21_126 z=-1.3; higher_low_cadence z=+0.9; down_capture_63 z=-2.1
+175 EIX    Utilities              low    0.06  -   0.24  0.50  0.25  0.48  0.71  base_depth_63 z=-2.5; down_capture_63 z=+1.0; dvol_trend_21_126 z=+0.4
+176 YUM    Consumer Cyclical      low    0.04  -   0.24  0.50  0.25  0.48  0.71  base_depth_63 z=-2.5; down_capture_63 z=+0.8; higher_low_cadence z=+0.1
+177 KHC    Consumer Defensive     low   -0.09  -   0.24  0.50  0.25  0.48  0.71  dvol_trend_21_126 z=+2.3; base_depth_63 z=-2.4; down_capture_63 z=+1.7
+178 HSY    Consumer Defensive     low   -0.15  -   0.24  0.50  0.25  0.48  0.70  dvol_trend_21_126 z=-1.0; days_since_ignition z=+0.9; down_capture_63 z=+0.4
+179 DPZ    Consumer Cyclical      low    0.11  -   0.23  0.47  0.24  0.47  0.70  dvol_trend_21_126 z=-1.4; days_since_ignition z=+1.2; down_capture_63 z=-1.1
+180 ABT    Healthcare             low    0.04  -   0.23  0.47  0.24  0.47  0.70  dvol_trend_21_126 z=-1.1; down_capture_63 z=-1.0; ret_5 z=-0.9
+181 T      Communication Services low   -0.33  -   0.23  0.47  0.24  0.47  0.69  pos_in_20d_range z=-1.5; dvol_trend_21_126 z=-1.1; higher_low_cadence z=+0.2
+182 ETR    Utilities              low    0.21  -   0.23  0.47  0.24  0.47  0.69  higher_low_cadence z=-2.3; base_depth_63 z=-2.3; down_capture_63 z=+1.1
+183 SJM    Consumer Defensive     low   -0.29  -   0.23  0.47  0.24  0.47  0.69  pos_in_20d_range z=-1.1; ret_5 z=-0.9; rs_newhigh_price_not_20 z=-0.2
+184 CPRT   Industrials            low    0.13  -   0.23  0.47  0.24  0.47  0.68  pos_in_20d_range z=-1.3; higher_low_cadence z=+0.4; down_capture_63 z=-0.9
+185 SRE    Utilities              low    0.14  -   0.23  0.47  0.24  0.47  0.68  dvol_trend_21_126 z=-1.0; higher_low_cadence z=-2.1; base_depth_63 z=-1.7
+186 REG    Real Estate            low    0.05  -   0.23  0.47  0.24  0.47  0.67  base_depth_63 z=-2.7; pos_in_20d_range z=-1.5; dvol_trend_21_126 z=-0.9
+187 FE     Utilities              low   -0.06  -   0.23  0.47  0.24  0.47  0.67  down_capture_63 z=+1.0; higher_low_cadence z=-2.0; base_depth_63 z=-1.8
+188 KDP    Consumer Defensive     low    0.06  -   0.23  0.47  0.24  0.47  0.67  base_depth_63 z=+0.4; down_capture_63 z=+1.2; higher_low_cadence z=-1.7
+189 DOW    Basic Materials        low   -0.08  -   0.23  0.47  0.24  0.47  0.66  dvol_trend_21_126 z=-1.4; down_capture_63 z=-2.3; base_depth_63 z=-0.2
+190 ES     Utilities              low    0.07  -   0.23  0.47  0.24  0.47  0.66  higher_low_cadence z=-2.2; streak_now z=+2.6; dvol_trend_21_126 z=+0.2
+191 AON    Financial              low   -0.24  -   0.23  0.47  0.24  0.47  0.66  base_depth_63 z=-4.2; dvol_trend_21_126 z=+1.1; down_capture_63 z=+1.5
+192 ERIE   Financial              low   -0.39  -   0.23  0.47  0.24  0.47  0.65  days_since_2x_low z=+0.9; dvol_trend_21_126 z=-0.6; pos_in_20d_range z=-0.9
+193 FOX    Communication Services low    0.06  -   0.23  0.47  0.24  0.47  0.65  pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.3; days_since_2x_low z=+0.6
+194 BSX    Healthcare             low    0.19  -   0.23  0.47  0.24  0.47  0.65  pos_in_20d_range z=-1.6; dvol_trend_21_126 z=-0.8; ret_5 z=-1.0
+195 KO     Consumer Defensive     low   -0.25  -   0.23  0.47  0.24  0.47  0.65  pullback_duration_21 z=+1.5; pos_in_20d_range z=-1.2; ret_5 z=-0.5
+196 VICI   Real Estate            low    0.02  -   0.23  0.47  0.24  0.47  0.65  base_depth_63 z=-2.5; pos_in_20d_range z=-1.2; ret_5 z=-0.8
+197 PCG    Utilities              low    0.15  -   0.23  0.47  0.24  0.47  0.65  base_depth_63 z=-2.9; down_capture_63 z=+1.8; dvol_trend_21_126 z=+0.5
+198 BALL   Consumer Cyclical      low    0.18  -   0.23  0.47  0.24  0.47  0.64  dvol_trend_21_126 z=-1.1; higher_low_cadence z=+0.5; rs_newhigh_price_not_20 z=-0.2
+199 FDS    Financial              low    0.06  -   0.23  0.47  0.24  0.47  0.63  higher_low_cadence z=+0.8; pos_in_20d_range z=+0.1; base_depth_63 z=-0.4
+200 AWK    Utilities              low   -0.45  -   0.23  0.47  0.24  0.47  0.62  pos_in_20d_range z=-1.4; dvol_trend_21_126 z=-0.8; days_since_ignition z=+1.2
+201 ATO    Utilities              low   -0.15  -   0.23  0.47  0.24  0.47  0.62  dvol_trend_21_126 z=-1.0; base_depth_63 z=-2.2; pullback_duration_21 z=+1.4
+202 TRGP   Energy                 low   -0.17  -   0.23  0.47  0.24  0.47  0.61  pullback_duration_21 z=+1.5; down_capture_63 z=-1.8; rs_newhigh_price_not_20 z=-0.3
+203 CBOE   Financial              low   -0.35  -   0.23  0.47  0.24  0.47  0.61  dvol_trend_21_126 z=-1.0; down_capture_63 z=-1.4; pullback_duration_21 z=+1.4
+204 VZ     Communication Services low   -0.30  -   0.23  0.47  0.24  0.47  0.61  pos_in_20d_range z=-1.5; pullback_duration_21 z=+0.5; higher_low_cadence z=+0.3
+205 CINF   Financial              low   -0.01  -   0.23  0.47  0.24  0.47  0.61  higher_low_cadence z=-1.8; rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-1.6
+206 CMCSA  Communication Services low    0.15  -   0.23  0.47  0.24  0.47  0.61  pos_in_20d_range z=-1.4; rs_newhigh_price_not_20 z=+0.0; down_capture_63 z=+1.0
+207 LNT    Utilities              low   -0.07  -   0.23  0.47  0.24  0.47  0.60  base_depth_63 z=-2.6; higher_low_cadence z=-2.8; down_capture_63 z=+1.1
+208 MAA    Real Estate            low    0.06  -   0.23  0.47  0.24  0.47  0.60  dvol_trend_21_126 z=+0.8; base_depth_63 z=-1.8; higher_low_cadence z=-1.7
+209 ZBH    Healthcare             low    0.20  -   0.23  0.47  0.24  0.47  0.59  rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-0.5; ret_5 z=-0.4
+210 PPL    Utilities              low   -0.02  -   0.23  0.47  0.24  0.47  0.59  dvol_trend_21_126 z=-1.4; higher_low_cadence z=-2.9; pos_in_20d_range z=+0.2
+211 CPT    Real Estate            low    0.10  -   0.23  0.47  0.24  0.47  0.58  higher_low_cadence z=-2.8; base_depth_63 z=-1.9; rs_newhigh_price_not_20 z=-0.2
+212 SBAC   Real Estate            low    0.13  -   0.23  0.47  0.24  0.47  0.58  down_capture_63 z=+1.7; base_depth_63 z=-0.4; ret_5 z=+1.0
+213 AIZ    Financial              low    0.16  -   0.23  0.47  0.24  0.47  0.58  pullback_duration_21 z=+1.4; days_since_ignition z=-0.0; ret_5 z=+0.7
+214 O      Real Estate            low   -0.01  -   0.23  0.47  0.24  0.47  0.58  dvol_trend_21_126 z=+2.2; base_depth_63 z=-2.3; pos_in_20d_range z=-1.3
+215 UDR    Real Estate            low    0.15  -   0.23  0.47  0.24  0.47  0.57  higher_low_cadence z=-2.8; base_depth_63 z=-1.8; rs_newhigh_price_not_20 z=-0.2
+216 CTSH   Technology             low    0.21  -   0.23  0.47  0.24  0.47  0.57  higher_low_cadence z=+0.9; down_capture_63 z=-1.7; dvol_trend_21_126 z=-0.8
+217 CCI    Real Estate            low    0.16  -   0.23  0.47  0.24  0.47  0.57  down_capture_63 z=+1.7; dvol_trend_21_126 z=-0.8; pullback_duration_21 z=+0.9
+218 TRV    Financial              low   -0.11  -   0.23  0.47  0.24  0.47  0.57  dvol_trend_21_126 z=-1.3; pos_in_20d_range z=-1.4; down_capture_63 z=-1.0
+219 TMUS   Communication Services low   -0.33  -   0.23  0.47  0.24  0.47  0.57  down_capture_63 z=+1.5; dvol_trend_21_126 z=-0.8; pos_in_20d_range z=-1.1
+220 PAYX   Technology             low    0.06  -   0.23  0.47  0.24  0.47  0.56  rs_newhigh_price_not_20 z=+0.0; base_depth_63 z=-2.2; pos_in_20d_range z=-1.3
+221 MCD    Consumer Cyclical      low    0.01  -   0.23  0.47  0.24  0.47  0.56  dvol_trend_21_126 z=+1.2; base_depth_63 z=-2.1; pos_in_20d_range z=-1.3
+222 STZ    Consumer Defensive     low    0.03  -   0.23  0.47  0.24  0.47  0.56  pullback_duration_21 z=+1.0; ret_5 z=+0.8; comp_then_exp z=-0.7
+223 BMY    Healthcare             low    0.23  -   0.23  0.47  0.24  0.47  0.55  dvol_trend_21_126 z=+0.9; higher_low_cadence z=+0.5; ret_5 z=-1.2
+224 KMB    Consumer Defensive     low    0.03  -   0.23  0.47  0.24  0.47  0.55  down_capture_63 z=+2.9; ret_5 z=-0.7; rs_newhigh_price_not_20 z=-0.2
+225 KIM    Real Estate            low    0.10  -   0.23  0.47  0.24  0.47  0.55  pos_in_20d_range z=-1.3; base_depth_63 z=-1.8; higher_low_cadence z=-1.8
+226 MSI    Technology             low    0.15  -   0.23  0.47  0.24  0.47  0.54  pullback_duration_21 z=+1.5; dvol_trend_21_126 z=-0.9; base_depth_63 z=-0.2
+227 NEE    Utilities              low    0.19  -   0.23  0.47  0.24  0.47  0.54  higher_low_cadence z=-2.0; down_capture_63 z=+0.9; pullback_duration_21 z=+1.3
+228 MNST   Consumer Defensive     low    0.23  -   0.23  0.47  0.24  0.47  0.53  pos_in_20d_range z=-0.0; higher_low_cadence z=-2.0; pullback_duration_21 z=+1.4
+229 TYL    Technology             low    0.05  -   0.23  0.47  0.24  0.47  0.53  dvol_trend_21_126 z=-1.0; higher_low_cadence z=+0.1; ret_5 z=+1.1
+230 NI     Utilities              low    0.17  -   0.23  0.47  0.24  0.47  0.53  higher_low_cadence z=-3.2; base_depth_63 z=-2.4; pullback_duration_21 z=+1.6
+231 HIG    Financial              low   -0.09  -   0.23  0.47  0.24  0.47  0.53  base_depth_63 z=-2.6; rs_newhigh_price_not_20 z=-0.3; pullback_duration_21 z=+1.5
+232 BG     Consumer Defensive     low   -0.07  -   0.23  0.47  0.24  0.47  0.53  dvol_trend_21_126 z=+0.9; down_capture_63 z=-1.2; pos_in_20d_range z=-1.2
+233 FOXA   Communication Services low    0.11  -   0.23  0.47  0.24  0.47  0.52  pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.4; down_capture_63 z=-1.1
+234 ACN    Technology             low    0.25  -   0.23  0.47  0.24  0.47  0.52  pullback_duration_21 z=-1.0; higher_low_cadence z=+0.8; down_capture_63 z=-1.5
+235 UNP    Industrials            low    0.23  -   0.23  0.47  0.24  0.47  0.51  dvol_trend_21_126 z=-0.9; down_capture_63 z=-1.1; streak_now z=-0.9
+236 NOC    Industrials            low    0.07  -   0.23  0.47  0.24  0.47  0.51  down_capture_63 z=+0.9; ret_5 z=-1.2; days_since_ignition z=+1.1
+237 APA    Energy                 low   -0.73  -   0.23  0.47  0.24  0.47  0.50  base_depth_63 z=+0.9; higher_low_cadence z=+1.4; down_capture_63 z=-1.5
+238 MRK    Healthcare             low    0.17  -   0.23  0.47  0.24  0.47  0.50  days_since_2x_low z=-4.6; ret_5 z=-1.4; base_depth_63 z=-0.3
 239 IQV    Healthcare             mid    0.74  -   0.23  0.49  0.21  0.46  0.70  corr_spy_63 z=-2.6; dist_52w_low z=+1.7; skew_63 z=+1.2
 240 PFE    Healthcare             mid    0.29  -   0.23  0.49  0.21  0.46  0.69  days_since_20pct_dd z=+2.5; days_since_ignition z=+1.0; corr_spy_63 z=-0.4
 241 DG     Consumer Defensive     mid    0.58  -   0.23  0.49  0.21  0.46  0.69  log_dvol_63 z=-1.0; corr_spy_63 z=+0.1; days_since_ignition z=+0.9
@@ -295,215 +295,215 @@ SIG = volume ROC21 > +50% AND price +3% over 21d AND 20d-RV ROC21 < -20%, simult
 288 LDOS   Technology             mid    0.38  -   0.23  0.49  0.21  0.46  0.51  corr_spy_63 z=+0.1; days_since_20pct_dd z=-0.9; vol_dry_10_50 z=-0.6
 289 ELV    Healthcare             mid    0.32  -   0.23  0.49  0.21  0.46  0.51  log_dvol_63 z=-1.1; dist_52w_low z=+1.9; corr_spy_63 z=-0.1
 290 TMO    Healthcare             mid    0.54  -   0.23  0.49  0.21  0.46  0.50  corr_spy_63 z=-2.4; dist_52w_low z=+1.4; days_since_ignition z=-1.0
-291 PNW    Utilities              low   -0.12  -   0.22  0.46  0.21  0.46  0.50  pos_in_20d_range z=+1.4; higher_low_cadence z=-3.2; down_capture_63 z=+1.4
-292 AFL    Financial              low   -0.16  -   0.22  0.46  0.21  0.46  0.49  dvol_trend_21_126 z=-1.2; pullback_duration_21 z=+1.5; base_depth_63 z=-2.4
-293 FANG   Energy                 low   -0.37  -   0.22  0.46  0.21  0.46  0.49  pos_in_20d_range z=-1.4; dvol_trend_21_126 z=+1.0; down_capture_63 z=-1.7
-294 WM     Industrials            low   -0.38  -   0.22  0.46  0.21  0.46  0.49  base_depth_63 z=-2.6; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=+1.0
-295 BF-B   Consumer Defensive     low    0.06  -   0.22  0.46  0.21  0.46  0.49  base_depth_63 z=+0.5; pos_in_20d_range z=+0.3; dvol_trend_21_126 z=-0.9
-296 AEP    Utilities              low   -0.02  -   0.22  0.46  0.21  0.46  0.48  higher_low_cadence z=-2.1; days_since_ignition z=+1.2; down_capture_63 z=+0.8
-297 ADM    Consumer Defensive     low   -0.01  -   0.22  0.46  0.21  0.46  0.48  base_depth_63 z=+0.2; pullback_duration_21 z=+0.8; down_capture_63 z=-0.9
-298 EVRG   Utilities              low   -0.02  -   0.22  0.46  0.21  0.46  0.48  higher_low_cadence z=-3.1; pos_in_20d_range z=+0.1; rs_newhigh_price_not_20 z=-0.2
-299 DGX    Healthcare             low   -0.13  -   0.22  0.46  0.21  0.46  0.48  pos_in_20d_range z=-1.5; dvol_trend_21_126 z=+1.4; pullback_duration_21 z=+0.3
-300 DTE    Utilities              low   -0.01  -   0.22  0.46  0.21  0.46  0.47  higher_low_cadence z=-3.1; base_depth_63 z=-2.4; dvol_trend_21_126 z=+1.2
-301 ADP    Technology             low   -0.02  -   0.22  0.46  0.21  0.46  0.46  higher_low_cadence z=+0.4; base_depth_63 z=-0.3; pullback_duration_21 z=+1.3
-302 CI     Healthcare             low    0.20  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-0.3; pullback_duration_21 z=+0.6; days_since_ignition z=+1.1
-303 KVUE   Consumer Defensive     low    0.15  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-0.1; dvol_trend_21_126 z=+0.8; days_since_ignition z=+1.2
-304 L      Financial              low    0.00  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-3.1; pullback_duration_21 z=+1.6; dvol_trend_21_126 z=+1.2
-305 INVH   Real Estate            low    0.09  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-1.8; dvol_trend_21_126 z=+0.2; pos_in_20d_range z=-1.0
-306 GDDY   Technology             low    0.23  -   0.22  0.46  0.21  0.46  0.45  pullback_duration_21 z=-0.3; base_depth_63 z=-0.1; days_since_2x_low z=+0.9
-307 CB     Financial              low   -0.34  -   0.22  0.46  0.21  0.46  0.44  pullback_duration_21 z=+1.5; higher_low_cadence z=-2.3; dvol_trend_21_126 z=-0.7
-308 PM     Consumer Defensive     low   -0.16  -   0.22  0.46  0.21  0.46  0.43  pos_in_20d_range z=+0.6; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=+1.0
-309 EG     Financial              low   -0.01  -   0.22  0.46  0.21  0.46  0.43  higher_low_cadence z=+0.8; dvol_trend_21_126 z=+0.9; base_depth_63 z=-0.4
-310 CNP    Utilities              low   -0.12  -   0.22  0.46  0.21  0.46  0.43  base_depth_63 z=-2.2; higher_low_cadence z=-2.2; pos_in_20d_range z=+0.0
-311 AMT    Real Estate            low   -0.07  -   0.22  0.46  0.21  0.46  0.42  base_depth_63 z=+0.2; higher_low_cadence z=+0.7; dvol_trend_21_126 z=-0.8
-312 MPC    Energy                 low   -0.13  -   0.22  0.46  0.21  0.46  0.42  base_depth_63 z=+1.1; dvol_trend_21_126 z=+3.2; pos_in_20d_range z=+1.1
-313 EXC    Utilities              low   -0.21  -   0.22  0.46  0.21  0.46  0.41  higher_low_cadence z=-2.8; rs_newhigh_price_not_20 z=-0.2; down_capture_63 z=+0.7
-314 CME    Financial              low   -0.29  -   0.22  0.46  0.21  0.46  0.41  dvol_trend_21_126 z=-2.0; base_depth_63 z=-0.2; pullback_duration_21 z=+1.4
-315 SO     Utilities              low   -0.22  -   0.22  0.46  0.21  0.46  0.40  higher_low_cadence z=-2.9; base_depth_63 z=-2.1; down_capture_63 z=+0.9
-316 VLO    Energy                 low   -0.26  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+1.2; dvol_trend_21_126 z=+2.9; pos_in_20d_range z=+1.2
-317 PEP    Consumer Defensive     low   -0.24  -   0.22  0.46  0.21  0.46  0.39  dvol_trend_21_126 z=+0.6; pos_in_20d_range z=-1.2; days_since_ignition z=+1.2
-318 SYY    Consumer Defensive     low    0.16  -   0.22  0.46  0.21  0.46  0.39  dvol_trend_21_126 z=+1.5; pos_in_20d_range z=-1.3; days_since_ignition z=-1.1
-319 AEE    Utilities              low   -0.09  -   0.22  0.46  0.21  0.46  0.39  higher_low_cadence z=-2.9; rs_newhigh_price_not_20 z=-0.3; days_since_ignition z=-2.2
-320 PSX    Energy                 low   -0.23  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+0.9; dvol_trend_21_126 z=+2.2; higher_low_cadence z=+1.1
-321 DVN    Energy                 low   -0.53  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+0.6; higher_low_cadence z=+0.9; down_capture_63 z=-2.0
-322 ED     Utilities              low   -0.45  -   0.22  0.46  0.21  0.46  0.39  higher_low_cadence z=-1.9; rs_newhigh_price_not_20 z=-0.2; pos_in_20d_range z=-0.2
-323 LMT    Industrials            low    0.03  -   0.22  0.46  0.21  0.46  0.39  rs_newhigh_price_not_20 z=+0.0; pullback_duration_21 z=+1.4; pos_in_20d_range z=-0.9
-324 VMRK   Real Estate            low    0.15  -   0.22  0.46  0.21  0.46  0.38  dvol_trend_21_126 z=+2.5; base_depth_63 z=-1.9; rs_newhigh_price_not_20 z=-0.2
-325 OXY    Energy                 low   -0.62  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=+0.3; down_capture_63 z=-1.5; higher_low_cadence z=+0.5
-326 EOG    Energy                 low   -0.58  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=+0.3; down_capture_63 z=-1.7; rs_newhigh_price_not_20 z=-0.2
-327 WMB    Energy                 low    0.03  -   0.22  0.46  0.21  0.46  0.37  rs_newhigh_price_not_20 z=-0.3; base_depth_63 z=-0.1; higher_low_cadence z=-2.1
-328 DUK    Utilities              low   -0.28  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=-2.4; higher_low_cadence z=-2.3; pullback_duration_21 z=+1.4
-329 WMT    Consumer Defensive     low   -0.04  -   0.22  0.46  0.21  0.46  0.37  down_capture_63 z=+1.5; pullback_duration_21 z=+0.1; days_since_ignition z=+1.2
-330 COP    Energy                 low   -0.52  -   0.22  0.46  0.21  0.46  0.36  base_depth_63 z=+0.0; down_capture_63 z=-2.1; rs_newhigh_price_not_20 z=-0.2
-331 ORLY   Consumer Cyclical      low    0.02  -   0.22  0.46  0.21  0.46  0.36  dvol_trend_21_126 z=-0.8; rs_newhigh_price_not_20 z=-0.2; higher_low_cadence z=-0.0
-332 WEC    Utilities              low   -0.09  -   0.22  0.46  0.21  0.46  0.35  dvol_trend_21_126 z=+1.0; higher_low_cadence z=-1.8; base_depth_63 z=-1.8
-333 XEL    Utilities              low    0.02  -   0.22  0.46  0.21  0.46  0.35  higher_low_cadence z=-2.4; rs_newhigh_price_not_20 z=-0.3; down_capture_63 z=+1.2
-334 MRSH   Financial              low   -0.29  -   0.22  0.46  0.21  0.46  0.35  rs_newhigh_price_not_20 z=-0.2; dvol_trend_21_126 z=+0.2; days_since_ignition z=-0.3
-335 EXE    Energy                 low    0.04  -   0.22  0.46  0.21  0.46  0.34  higher_low_cadence z=+0.7; rs_newhigh_price_not_20 z=-0.3; days_since_2x_low z=+0.2
-336 PGR    Financial              low   -0.49  -   0.22  0.46  0.21  0.46  0.34  rs_newhigh_price_not_20 z=+0.0; pos_in_20d_range z=-0.1; pullback_duration_21 z=+1.3
-337 CTAS   Industrials            low    0.18  -   0.22  0.46  0.21  0.46  0.34  rs_newhigh_price_not_20 z=-0.3; pullback_duration_21 z=+1.4; down_capture_63 z=-1.4
-338 COR    Healthcare             low   -0.15  -   0.22  0.46  0.21  0.46  0.33  pullback_duration_21 z=+1.6; base_depth_63 z=-0.1; pos_in_20d_range z=+0.2
-339 CMS    Utilities              low   -0.14  -   0.22  0.46  0.21  0.46  0.32  higher_low_cadence z=-2.7; base_depth_63 z=-2.4; down_capture_63 z=+1.0
-340 UHS    Healthcare             low    0.18  -   0.22  0.46  0.21  0.46  0.32  base_depth_63 z=+0.6; higher_low_cadence z=+1.2; pullback_duration_21 z=-0.1
-341 MO     Consumer Defensive     low   -0.49  -   0.22  0.46  0.21  0.46  0.30  higher_low_cadence z=-2.6; pullback_duration_21 z=+0.6; dvol_trend_21_126 z=-0.8
-342 AZO    Consumer Cyclical      low    0.12  -   0.22  0.46  0.21  0.46  0.30  pos_in_20d_range z=+0.3; base_depth_63 z=-0.3; days_since_ignition z=-1.5
-343 SYK    Healthcare             low    0.16  -   0.22  0.46  0.21  0.46  0.29  base_depth_63 z=-2.6; pos_in_20d_range z=-0.0; rs_newhigh_price_not_20 z=-0.2
-344 APD    Basic Materials        low    0.14  -   0.22  0.46  0.21  0.46  0.29  base_depth_63 z=-0.4; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=-1.1
-345 VRSN   Technology             low    0.05  -   0.22  0.46  0.21  0.46  0.27  base_depth_63 z=+0.3; pullback_duration_21 z=-0.0; higher_low_cadence z=+0.4
-346 KR     Consumer Defensive     low   -0.62  -   0.22  0.46  0.21  0.46  0.26  base_depth_63 z=+0.1; higher_low_cadence z=+0.6; pullback_duration_21 z=+0.3
-347 TSN    Consumer Defensive     low   -0.06  -   0.22  0.46  0.21  0.46  0.25  rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-1.6; pos_in_20d_range z=-0.1
-348 CVX    Energy                 low   -0.49  -   0.22  0.46  0.21  0.46  0.25  higher_low_cadence z=+1.8; base_depth_63 z=+0.4; down_capture_63 z=-2.2
-349 PEG    Utilities              low    0.13  -   0.22  0.46  0.21  0.46  0.25  dvol_trend_21_126 z=+1.3; pos_in_20d_range z=+0.7; rs_newhigh_price_not_20 z=-0.3
-350 RSG    Industrials            low   -0.37  -   0.22  0.46  0.21  0.46  0.25  rs_newhigh_price_not_20 z=-0.3; base_depth_63 z=-0.3; pullback_duration_21 z=+0.7
-351 TJX    Consumer Cyclical      low    0.13  -   0.22  0.46  0.21  0.46  0.24  pos_in_20d_range z=+1.4; base_depth_63 z=-2.5; dvol_trend_21_126 z=+1.3
-352 MDT    Healthcare             low    0.16  -   0.22  0.46  0.21  0.46  0.23  dvol_trend_21_126 z=+5.5; higher_low_cadence z=+1.3; rs_newhigh_price_not_20 z=+0.0
-353 ESS    Real Estate            low    0.15  -   0.22  0.46  0.21  0.46  0.22  pullback_duration_21 z=-1.3; pos_in_20d_range z=+0.2; dvol_trend_21_126 z=+0.6
-354 XOM    Energy                 low   -0.56  -   0.22  0.46  0.21  0.46  0.22  base_depth_63 z=+0.8; higher_low_cadence z=+1.1; down_capture_63 z=-2.7
-355 MCK    Healthcare             low   -0.23  -   0.22  0.46  0.21  0.46  0.22  base_depth_63 z=+0.8; pos_in_20d_range z=+1.1; pullback_duration_21 z=-1.0
-356 CL     Consumer Defensive     low   -0.11  -   0.22  0.46  0.21  0.46  0.19  pos_in_20d_range z=-0.1; dvol_trend_21_126 z=+0.3; down_capture_63 z=+0.7
-357 ACGL   Financial              low   -0.30  -   0.22  0.46  0.21  0.46  0.19  dvol_trend_21_126 z=+3.8; higher_low_cadence z=-2.2; days_since_2x_low z=+0.5
-358 KMI    Energy                 low   -0.11  -   0.22  0.46  0.21  0.46  0.18  base_depth_63 z=+0.6; pos_in_20d_range z=+1.2; pullback_duration_21 z=+1.5
-359 AIG    Financial              low    0.05  -   0.22  0.46  0.21  0.46  0.18  dvol_trend_21_126 z=+1.1; pos_in_20d_range z=+0.3; base_depth_63 z=-0.3
-360 CHD    Consumer Defensive     low   -0.04  -   0.22  0.46  0.21  0.46  0.18  higher_low_cadence z=+1.0; pos_in_20d_range z=+1.0; base_depth_63 z=-0.2
-361 BRK-B  Financial              low    0.01  -   0.22  0.46  0.21  0.46  0.17  down_capture_63 z=-1.2; pullback_duration_21 z=+0.5; base_depth_63 z=-0.5
-362 ABBV   Healthcare             low   -0.11  -   0.22  0.46  0.21  0.46  0.17  base_depth_63 z=+1.0; dvol_trend_21_126 z=-1.3; pos_in_20d_range z=+1.0
-363 EQT    Energy                 low    0.17  -   0.22  0.46  0.21  0.46  0.15  base_depth_63 z=+0.4; higher_low_cadence z=+0.8; pos_in_20d_range z=+0.3
-364 WRB    Financial              low   -0.32  -   0.22  0.46  0.21  0.46  0.12  dvol_trend_21_126 z=+2.8; pos_in_20d_range z=+0.3; rs_newhigh_price_not_20 z=-0.2
-365 HCA    Healthcare             low    0.18  -   0.22  0.46  0.21  0.46  0.12  base_depth_63 z=+0.6; pos_in_20d_range z=+0.4; pullback_duration_21 z=-0.1
-366 MDLZ   Consumer Defensive     low   -0.22  -   0.22  0.46  0.21  0.46  0.08  higher_low_cadence z=+0.1; base_depth_63 z=-0.4; pullback_duration_21 z=+0.9
-367 LIN    Basic Materials        low    0.09  -   0.22  0.46  0.21  0.46  0.06  pos_in_20d_range z=+1.3; pullback_duration_21 z=-1.2; rs_newhigh_price_not_20 z=-0.3
-368 COST   Consumer Defensive     low   -0.10  -   0.22  0.46  0.21  0.46  0.05  pos_in_20d_range z=+1.3; pullback_duration_21 z=-1.2; base_depth_63 z=+0.1
-369 PG     Consumer Defensive     low   -0.03  -   0.22  0.46  0.21  0.46  0.05  base_depth_63 z=+0.5; pos_in_20d_range z=+1.0; higher_low_cadence z=+1.0
-370 WDAY   Technology             mid    0.36  -   0.22  0.48  0.20  0.46  0.79  vol_dry_10_50 z=-1.5; dist_52w_low z=+1.6; days_since_ignition z=+0.1
-371 DLR    Real Estate            mid    0.80  -   0.22  0.48  0.20  0.46  0.78  skew_63 z=+1.7; days_since_20pct_dd z=+1.4; vol_dry_10_50 z=-0.8
-372 HUM    Healthcare             mid    0.57  -   0.22  0.48  0.20  0.46  0.78  days_since_20pct_dd z=+2.7; corr_spy_63 z=+1.0; dist_52w_low z=+2.9
-373 VEEV   Healthcare             mid    0.56  -   0.22  0.48  0.20  0.46  0.77  dist_52w_low z=+3.2; vol_dry_10_50 z=-0.9; days_since_ignition z=-0.4
-374 AAPL   Technology             mid    0.68  -   0.22  0.48  0.20  0.46  0.77  corr_spy_63 z=-2.6; vol_dry_10_50 z=-1.2; log_dvol_63 z=+1.3
-375 IEX    Industrials            mid    0.65  -   0.22  0.48  0.20  0.46  0.76  days_since_20pct_dd z=+2.1; dist_52w_low z=+2.3; corr_spy_63 z=-1.7
-376 BIIB   Healthcare             mid    0.31  -   0.22  0.48  0.20  0.46  0.76  days_since_20pct_dd z=+3.0; log_dvol_63 z=-1.1; vol_dry_10_50 z=+1.2
-377 ULTA   Consumer Cyclical      mid    0.56  -   0.22  0.48  0.20  0.46  0.76  log_dvol_63 z=-1.7; vol_dry_10_50 z=-1.4; corr_spy_63 z=-0.1
-378 ROST   Consumer Cyclical      mid    0.63  -   0.22  0.48  0.20  0.46  0.75  log_dvol_63 z=+1.3; days_since_ignition z=-0.4; vol_dry_10_50 z=-0.8
-379 EXPD   Industrials            mid    0.52  -   0.22  0.48  0.20  0.46  0.75  dist_52w_low z=+2.3; corr_spy_63 z=+0.0; log_dvol_63 z=+1.3
-380 TPL    Energy                 mid    0.42  -   0.22  0.48  0.20  0.46  0.75  corr_spy_63 z=-0.4; log_dvol_63 z=+0.3; skew_63 z=-0.4
-381 WST    Healthcare             mid    0.59  -   0.22  0.48  0.20  0.46  0.75  days_since_20pct_dd z=+2.4; dist_52w_low z=+1.7; days_since_ignition z=-1.3
-382 BAC    Financial              mid    0.73  -   0.22  0.48  0.20  0.46  0.74  dist_52w_low z=-1.5; days_since_20pct_dd z=+1.8; skew_63 z=-1.4
-383 PH     Industrials            mid    0.83  -   0.22  0.48  0.20  0.46  0.74  vol_dry_10_50 z=-0.9; log_dvol_63 z=+1.1; days_since_ignition z=+0.3
-384 FITB   Financial              mid    0.83  -   0.22  0.48  0.20  0.46  0.73  corr_spy_63 z=+0.1; vol_dry_10_50 z=+0.7; skew_63 z=-1.0
-385 CRM    Technology             mid    0.45  -   0.22  0.48  0.20  0.46  0.73  vol_dry_10_50 z=-1.0; log_dvol_63 z=+1.4; skew_63 z=+1.8
-386 DXCM   Healthcare             mid    0.65  -   0.22  0.48  0.20  0.46  0.72  vol_dry_10_50 z=-1.1; log_dvol_63 z=-0.2; skew_63 z=+0.9
-387 FAST   Industrials            mid    0.50  -   0.22  0.48  0.20  0.46  0.72  log_dvol_63 z=+1.6; days_since_ignition z=+1.2; skew_63 z=-0.3
-388 MSCI   Financial              mid    0.35  -   0.22  0.48  0.20  0.46  0.70  days_since_20pct_dd z=+2.0; days_since_ignition z=+1.0; skew_63 z=-1.2
-389 TGT    Consumer Defensive     mid    0.44  -   0.21  0.43  0.16  0.41  0.89  days_since_20pct_dd z=+3.3; dist_52w_low z=+2.1; corr_spy_63 z=-0.4
-390 HST    Real Estate            mid    0.70  -   0.21  0.43  0.16  0.41  0.88  log_dvol_63 z=+2.1; days_since_20pct_dd z=+1.9; corr_spy_63 z=-2.1
-391 EQIX   Real Estate            mid    0.49  -   0.21  0.43  0.16  0.41  0.87  corr_spy_63 z=+0.1; dist_52w_low z=+1.3; log_dvol_63 z=+1.3
-392 JBHT   Industrials            mid    0.76  -   0.21  0.43  0.16  0.41  0.87  log_dvol_63 z=+2.0; skew_63 z=-1.1; days_since_20pct_dd z=-0.8
-393 CDW    Technology             mid    0.81  -   0.21  0.43  0.16  0.41  0.85  vol_dry_10_50 z=-1.2; dist_52w_low z=+1.0; skew_63 z=+0.6
-394 NOW    Technology             mid    0.65  -   0.21  0.43  0.16  0.41  0.83  vol_dry_10_50 z=-1.7; days_since_20pct_dd z=-0.8; dist_52w_low z=+0.8
-395 LH     Healthcare             mid    0.29  -   0.21  0.43  0.16  0.41  0.83  log_dvol_63 z=+2.5; dist_52w_low z=+0.7; days_since_20pct_dd z=+0.8
-396 MAR    Consumer Cyclical      mid    0.62  -   0.21  0.43  0.16  0.41  0.83  corr_spy_63 z=-2.7; vol_dry_10_50 z=-1.2; log_dvol_63 z=+1.4
-397 MTD    Healthcare             mid    0.79  -   0.21  0.43  0.16  0.41  0.82  log_dvol_63 z=+1.9; days_since_ignition z=-1.6; dist_52w_low z=+1.1
-398 GPC    Consumer Cyclical      mid    0.48  -   0.21  0.43  0.16  0.41  0.82  dist_52w_low z=+1.9; vol_dry_10_50 z=-1.2; log_dvol_63 z=+0.4
-399 DLTR   Consumer Defensive     mid    0.80  -   0.21  0.43  0.16  0.41  0.81  log_dvol_63 z=-0.2; days_since_ignition z=+1.1; corr_spy_63 z=-0.5
-400 WTW    Financial              low   -0.11  -   0.21  0.47  0.32  0.77  0.88  rs_newhigh_price_not_20 z=+0.0; pullback_duration_21 z=+1.5; down_capture_63 z=+1.3
-401 BRO    Financial              low   -0.33  -   0.21  0.47  0.32  0.77  0.88  dvol_trend_21_126 z=-0.7; pos_in_20d_range z=-1.1; days_since_ignition z=-0.0
-402 CVS    Healthcare             low    0.16  -   0.21  0.47  0.32  0.77  0.86  down_capture_63 z=+1.6; pullback_duration_21 z=+1.4; pos_in_20d_range z=-1.2
-403 JKHY   Technology             low   -0.06  -   0.21  0.47  0.32  0.77  0.85  pos_in_20d_range z=-1.3; dvol_trend_21_126 z=-0.9; higher_low_cadence z=+0.1
-404 GIS    Consumer Defensive     low   -0.33  -   0.21  0.47  0.32  0.77  0.85  down_capture_63 z=+1.4; base_depth_63 z=-2.0; ret_5 z=-1.5
-405 DVA    Healthcare             low   -0.02  -   0.21  0.47  0.32  0.77  0.85  dvol_trend_21_126 z=-1.1; down_capture_63 z=+1.6; pullback_duration_21 z=+0.2
-406 AJG    Financial              low   -0.30  -   0.21  0.47  0.32  0.77  0.84  pullback_duration_21 z=+1.3; dvol_trend_21_126 z=-0.5; pos_in_20d_range z=-0.9
-407 CF     Basic Materials        low   -0.93  -   0.21  0.47  0.32  0.77  0.84  down_capture_63 z=-1.3; pos_in_20d_range z=-1.2; pullback_duration_21 z=+0.8
-408 ROL    Consumer Cyclical      low    0.09  -   0.21  0.47  0.32  0.77  0.83  base_depth_63 z=-3.0; down_capture_63 z=+2.4; higher_low_cadence z=-2.3
-409 HRL    Consumer Defensive     low   -0.12  -   0.21  0.47  0.32  0.77  0.82  base_depth_63 z=-2.1; dvol_trend_21_126 z=-0.8; streak_now z=-0.8
-410 D      Utilities              low   -0.07  -   0.21  0.47  0.32  0.77  0.82  dvol_trend_21_126 z=-1.0; base_depth_63 z=-1.8; pullback_duration_21 z=+1.3
-411 WELL   Real Estate            low   -0.01  -   0.21  0.47  0.32  0.77  0.81  dvol_trend_21_126 z=-1.3; pos_in_20d_range z=-1.5; pullback_duration_21 z=+1.5
-412 ALL    Financial              low   -0.37  -   0.21  0.47  0.32  0.77  0.80  base_depth_63 z=-4.1; pos_in_20d_range z=-1.6; dvol_trend_21_126 z=+2.2
-413 SOLV   Healthcare             mid    0.57  -   0.21  0.47  0.22  0.47  0.50  vol_dry_10_50 z=-0.9; log_dvol_63 z=+0.1; days_since_20pct_dd z=-0.7
-414 HBAN   Financial              mid    0.83  -   0.21  0.47  0.22  0.47  0.49  dist_52w_low z=-2.0; corr_spy_63 z=+0.4; vol_dry_10_50 z=+0.6
-415 LYV    Communication Services mid    0.65  -   0.21  0.47  0.22  0.47  0.49  days_since_ignition z=+1.2; corr_spy_63 z=-1.9; log_dvol_63 z=+0.5
-416 UPS    Industrials            mid    0.75  -   0.21  0.47  0.22  0.47  0.46  log_dvol_63 z=-0.7; dist_52w_low z=+0.4; corr_spy_63 z=-1.0
-417 LLY    Healthcare             mid    0.29  -   0.21  0.47  0.22  0.47  0.46  corr_spy_63 z=-2.0; log_dvol_63 z=+0.4; vol_dry_10_50 z=-0.6
-418 GWW    Industrials            mid    0.52  -   0.21  0.47  0.22  0.47  0.45  corr_spy_63 z=-3.2; log_dvol_63 z=+1.5; days_since_ignition z=+1.2
-419 RJF    Financial              mid    0.75  -   0.21  0.47  0.22  0.47  0.44  dist_52w_low z=-1.6; days_since_20pct_dd z=+1.9; corr_spy_63 z=-0.4
-420 CSGP   Real Estate            mid    0.26  -   0.21  0.47  0.22  0.47  0.43  log_dvol_63 z=-0.2; vol_dry_10_50 z=-1.0; skew_63 z=+1.1
-421 HAS    Consumer Cyclical      mid    0.74  -   0.21  0.47  0.22  0.47  0.43  days_since_ignition z=-1.4; vol_dry_10_50 z=+0.6; skew_63 z=+1.2
-422 RF     Financial              mid    0.76  -   0.21  0.47  0.22  0.47  0.42  days_since_20pct_dd z=+2.1; vol_dry_10_50 z=+1.1; corr_spy_63 z=-0.4
-423 SBUX   Consumer Cyclical      mid    0.55  -   0.21  0.47  0.22  0.47  0.42  days_since_20pct_dd z=+2.4; log_dvol_63 z=-0.7; dist_52w_low z=+0.2
-424 PLD    Real Estate            mid    0.45  -   0.21  0.47  0.22  0.47  0.40  days_since_20pct_dd z=+2.5; corr_spy_63 z=-1.7; log_dvol_63 z=+1.3
-425 INTU   Technology             mid    0.31  -   0.21  0.47  0.22  0.47  0.40  days_since_20pct_dd z=-1.0; corr_spy_63 z=-1.7; skew_63 z=+0.7
-426 FICO   Technology             mid    0.46  -   0.21  0.47  0.22  0.47  0.39  vol_dry_10_50 z=+5.4; skew_63 z=-2.2; corr_spy_63 z=-1.9
-427 NDAQ   Financial              mid    0.67  -   0.21  0.47  0.22  0.47  0.39  days_since_ignition z=+1.0; log_dvol_63 z=+1.1; skew_63 z=+0.7
-428 PKG    Consumer Cyclical      mid    0.74  -   0.21  0.47  0.22  0.47  0.39  skew_63 z=+1.3; log_dvol_63 z=+0.1; corr_spy_63 z=-0.6
-429 TSCO   Consumer Cyclical      mid    0.40  -   0.21  0.47  0.22  0.47  0.39  days_since_20pct_dd z=-1.0; skew_63 z=+0.8; days_since_ignition z=+0.9
-430 DIS    Communication Services mid    0.66  -   0.21  0.47  0.22  0.47  0.37  log_dvol_63 z=-0.5; days_since_ignition z=+0.1; dist_52w_low z=-1.0
-431 JPM    Financial              mid    0.79  -   0.21  0.47  0.22  0.47  0.36  dist_52w_low z=-1.9; corr_spy_63 z=-0.0; vol_dry_10_50 z=+0.7
-432 MOS    Basic Materials        mid    0.74  -   0.21  0.47  0.22  0.47  0.35  skew_63 z=+0.8; days_since_ignition z=+0.9; dist_52w_low z=-0.7
-433 ARE    Real Estate            mid    0.71  -   0.21  0.47  0.22  0.47  0.35  log_dvol_63 z=-1.2; corr_spy_63 z=-2.0; days_since_ignition z=-0.5
-434 TFC    Financial              mid    0.72  -   0.21  0.47  0.22  0.47  0.34  dist_52w_low z=-1.5; vol_dry_10_50 z=+0.6; days_since_ignition z=+1.0
-435 EW     Healthcare             mid    0.56  -   0.21  0.47  0.22  0.47  0.34  days_since_20pct_dd z=+2.5; days_since_ignition z=+1.2; corr_spy_63 z=-1.9
-436 BXP    Real Estate            mid    0.72  -   0.21  0.47  0.22  0.47  0.34  corr_spy_63 z=-2.0; log_dvol_63 z=-0.1; skew_63 z=+0.9
-437 VRTX   Healthcare             mid    0.50  -   0.21  0.47  0.22  0.47  0.34  corr_spy_63 z=-1.8; log_dvol_63 z=+0.3; vol_dry_10_50 z=-0.7
-438 PSA    Real Estate            mid    0.41  -   0.21  0.47  0.22  0.47  0.33  days_since_20pct_dd z=+1.5; corr_spy_63 z=-1.0; skew_63 z=+0.4
-439 TDG    Industrials            mid    0.73  -   0.21  0.47  0.22  0.47  0.32  days_since_20pct_dd z=-2.0; vol_dry_10_50 z=-1.0; dist_52w_low z=-1.4
-440 NVR    Consumer Cyclical      mid    0.55  -   0.21  0.47  0.22  0.47  0.32  log_dvol_63 z=+2.4; days_since_20pct_dd z=-0.8; corr_spy_63 z=-0.6
-441 DOC    Real Estate            mid    0.44  -   0.21  0.47  0.22  0.47  0.32  days_since_20pct_dd z=+1.4; vol_dry_10_50 z=+0.5; corr_spy_63 z=-1.7
-442 HON    Industrials            mid    0.71  -   0.21  0.47  0.22  0.47  0.32  days_since_20pct_dd z=-1.7; vol_dry_10_50 z=-1.4; log_dvol_63 z=-0.5
-443 V      Financial              mid    0.30  -   0.21  0.47  0.22  0.47  0.31  days_since_20pct_dd z=-1.5; vol_dry_10_50 z=-1.3; corr_spy_63 z=-1.6
-444 COO    Healthcare             mid    0.50  -   0.21  0.47  0.22  0.47  0.30  vol_dry_10_50 z=+1.0; skew_63 z=-1.8; days_since_20pct_dd z=-0.8
-445 MLM    Basic Materials        mid    0.84  -   0.21  0.47  0.22  0.47  0.30  log_dvol_63 z=+2.0; days_since_20pct_dd z=-1.2; vol_dry_10_50 z=+1.1
-446 BNY    Financial              mid    0.76  -   0.21  0.47  0.22  0.47  0.30  vol_dry_10_50 z=+1.1; log_dvol_63 z=+1.3; skew_63 z=+0.9
-447 LHX    Industrials            mid    0.26  -   0.21  0.47  0.22  0.47  0.29  days_since_20pct_dd z=-1.1; dist_52w_low z=-1.5; skew_63 z=-1.7
-448 SHW    Basic Materials        mid    0.81  -   0.21  0.47  0.22  0.47  0.29  days_since_20pct_dd z=-0.9; skew_63 z=+1.7; corr_spy_63 z=-0.3
-449 CMG    Consumer Cyclical      mid    0.68  -   0.21  0.47  0.22  0.47  0.28  log_dvol_63 z=-0.6; corr_spy_63 z=-2.3; vol_dry_10_50 z=+0.4
-450 NKE    Consumer Cyclical      mid    0.68  -   0.21  0.47  0.22  0.47  0.28  log_dvol_63 z=+2.4; vol_dry_10_50 z=+2.0; days_since_ignition z=+1.0
-451 XYL    Industrials            mid    0.78  -   0.21  0.47  0.22  0.47  0.28  days_since_20pct_dd z=-1.1; log_dvol_63 z=+1.5; corr_spy_63 z=-2.2
-452 EXR    Real Estate            mid    0.37  -   0.21  0.47  0.22  0.47  0.27  days_since_20pct_dd z=+1.7; vol_dry_10_50 z=+0.6; skew_63 z=+0.7
-453 SNA    Industrials            mid    0.55  -   0.21  0.47  0.22  0.47  0.27  vol_dry_10_50 z=-0.8; dist_52w_low z=-1.0; skew_63 z=+0.6
-454 CSX    Industrials            mid    0.43  -   0.21  0.47  0.22  0.47  0.27  corr_spy_63 z=-2.6; skew_63 z=+1.4; days_since_20pct_dd z=+1.0
-455 ITW    Industrials            mid    0.50  -   0.21  0.47  0.22  0.47  0.27  vol_dry_10_50 z=+1.0; log_dvol_63 z=+1.3; corr_spy_63 z=-1.7
-456 AOS    Industrials            mid    0.76  -   0.21  0.47  0.22  0.47  0.27  corr_spy_63 z=-0.1; days_since_20pct_dd z=-0.8; days_since_ignition z=+1.0
-457 TXT    Industrials            mid    0.70  -   0.21  0.47  0.22  0.47  0.26  days_since_20pct_dd z=-1.3; dist_52w_low z=-1.7; log_dvol_63 z=+1.4
-458 NSC    Industrials            mid    0.25  -   0.21  0.47  0.22  0.47  0.26  vol_dry_10_50 z=-1.4; corr_spy_63 z=-2.2; days_since_20pct_dd z=+1.8
-459 CHTR   Communication Services mid    0.28  -   0.21  0.47  0.22  0.47  0.25  log_dvol_63 z=-1.3; dist_52w_low z=-1.2; days_since_20pct_dd z=-0.6
-460 ICE    Financial              mid    0.25  -   0.21  0.47  0.22  0.47  0.24  vol_dry_10_50 z=-1.4; days_since_20pct_dd z=-1.1; corr_spy_63 z=-2.0
-461 RTX    Industrials            mid    0.34  -   0.21  0.47  0.22  0.47  0.24  dist_52w_low z=-1.5; days_since_ignition z=+1.0; corr_spy_63 z=-1.8
-462 SPG    Real Estate            mid    0.25  -   0.21  0.47  0.22  0.47  0.24  corr_spy_63 z=-1.9; days_since_20pct_dd z=+1.2; dist_52w_low z=-1.2
-463 AES    Utilities              mid    0.38  -   0.21  0.47  0.22  0.47  0.24  days_since_20pct_dd z=+2.9; log_dvol_63 z=-0.7; vol_dry_10_50 z=+0.5
-464 MGM    Consumer Cyclical      mid    0.85  -   0.21  0.47  0.22  0.47  0.23  log_dvol_63 z=-3.5; vol_dry_10_50 z=+4.9; dist_52w_low z=-1.6
-465 GD     Industrials            mid    0.40  -   0.21  0.47  0.22  0.47  0.23  dist_52w_low z=-1.6; vol_dry_10_50 z=+1.2; days_since_ignition z=+1.2
-466 NFLX   Communication Services mid    0.32  -   0.21  0.47  0.22  0.47  0.22  dist_52w_low z=-1.7; days_since_20pct_dd z=-1.0; log_dvol_63 z=-0.3
-467 ECL    Basic Materials        mid    0.49  -   0.21  0.47  0.22  0.47  0.22  days_since_20pct_dd z=-1.7; vol_dry_10_50 z=-0.8; days_since_ignition z=+0.9
-468 EFX    Industrials            mid    0.56  -   0.21  0.47  0.22  0.47  0.22  vol_dry_10_50 z=+2.6; log_dvol_63 z=+0.2; dist_52w_low z=-1.2
-469 FISV   Technology             mid    0.65  -   0.21  0.47  0.22  0.47  0.19  log_dvol_63 z=-1.0; days_since_20pct_dd z=-1.0; skew_63 z=+0.8
-470 VMC    Basic Materials        mid    0.81  -   0.21  0.47  0.22  0.47  0.18  days_since_20pct_dd z=-1.3; dist_52w_low z=-1.7; vol_dry_10_50 z=+1.0
-471 HII    Industrials            mid    0.79  -   0.21  0.47  0.22  0.47  0.17  corr_spy_63 z=+0.2; days_since_20pct_dd z=-1.0; days_since_ignition z=-1.5
-472 MCO    Financial              mid    0.52  -   0.21  0.47  0.22  0.47  0.17  dist_52w_low z=-1.6; vol_dry_10_50 z=+0.9; log_dvol_63 z=+0.4
-473 FIS    Technology             mid    0.37  -   0.21  0.47  0.22  0.47  0.17  log_dvol_63 z=-0.3; days_since_20pct_dd z=-0.7; vol_dry_10_50 z=+0.2
-474 MA     Financial              mid    0.30  -   0.21  0.47  0.22  0.47  0.17  days_since_20pct_dd z=-2.1; skew_63 z=+1.3; corr_spy_63 z=-1.6
-475 VLTO   Industrials            mid    0.28  -   0.21  0.47  0.22  0.47  0.16  days_since_20pct_dd z=-1.0; vol_dry_10_50 z=+0.5; corr_spy_63 z=-1.5
-476 HD     Consumer Cyclical      mid    0.71  -   0.21  0.47  0.22  0.47  0.16  days_since_20pct_dd z=-1.1; vol_dry_10_50 z=+1.7; dist_52w_low z=-1.5
-477 TTWO   Communication Services mid    0.65  -   0.21  0.47  0.22  0.47  0.14  days_since_20pct_dd z=-1.5; log_dvol_63 z=+1.6; corr_spy_63 z=-2.3
-478 SPGI   Financial              mid    0.34  -   0.21  0.47  0.22  0.47  0.14  days_since_20pct_dd z=-1.6; dist_52w_low z=-1.3; vol_dry_10_50 z=+0.2
-479 LVS    Consumer Cyclical      mid    0.62  -   0.21  0.47  0.22  0.47  0.13  log_dvol_63 z=-0.5; corr_spy_63 z=-1.8; dist_52w_low z=-1.1
-480 STE    Healthcare             mid    0.43  -   0.21  0.47  0.22  0.47  0.13  days_since_20pct_dd z=-1.6; dist_52w_low z=-1.3; vol_dry_10_50 z=-0.7
-481 WYNN   Consumer Cyclical      mid    0.84  -   0.21  0.47  0.22  0.47  0.12  log_dvol_63 z=-0.8; vol_dry_10_50 z=+1.4; dist_52w_low z=-1.2
-482 LOW    Consumer Cyclical      mid    0.63  -   0.21  0.47  0.22  0.47  0.11  days_since_20pct_dd z=-1.0; dist_52w_low z=-1.4; vol_dry_10_50 z=+0.5
-483 ZTS    Healthcare             mid    0.56  -   0.21  0.47  0.22  0.47  0.08  log_dvol_63 z=-0.4; corr_spy_63 z=-1.9; vol_dry_10_50 z=-1.0
-484 GEHC   Healthcare             mid    0.76  -   0.21  0.47  0.22  0.47  0.07  corr_spy_63 z=-2.5; log_dvol_63 z=-0.2; dist_52w_low z=-1.4
-485 WY     Real Estate            mid    0.29  -   0.21  0.47  0.22  0.47  0.05  vol_dry_10_50 z=+2.4; dist_52w_low z=-1.6; days_since_20pct_dd z=-0.9
-486 TKO    Communication Services mid    0.44  -   0.21  0.47  0.22  0.47  0.04  dist_52w_low z=-1.8; days_since_20pct_dd z=-1.2; days_since_ignition z=-0.8
-487 OTIS   Industrials            mid    0.27  -   0.21  0.47  0.22  0.47  0.03  days_since_20pct_dd z=-1.9; vol_dry_10_50 z=+0.7; skew_63 z=+0.8
-488 VTRS   Healthcare             mid    0.70  -   0.11  0.27  0.09  0.22  0.95  days_since_20pct_dd z=+2.7; log_dvol_63 z=+1.7; days_since_ignition z=+1.1
-489 A      Healthcare             mid    0.85  -   0.11  0.27  0.09  0.22  0.93  log_dvol_63 z=+2.9; dist_52w_low z=+1.7; days_since_ignition z=+1.0
-490 CNC    Healthcare             mid    0.36  -   0.11  0.27  0.09  0.22  0.93  corr_spy_63 z=+1.7; log_dvol_63 z=-0.1; dist_52w_low z=+1.4
-491 BBY    Consumer Cyclical      mid    0.72  -   0.11  0.27  0.09  0.22  0.93  dist_52w_low z=+1.5; days_since_ignition z=-0.6; log_dvol_63 z=+1.3
-492 WAT    Healthcare             mid    0.84  -   0.11  0.27  0.09  0.22  0.93  log_dvol_63 z=+1.6; corr_spy_63 z=+0.0; dist_52w_low z=+1.6
-493 AMGN   Healthcare             mid    0.49  -   0.11  0.27  0.09  0.22  0.91  log_dvol_63 z=+2.1; days_since_20pct_dd z=+1.7; skew_63 z=-1.3
+291 WDAY   Technology             mid    0.36  -   0.22  0.49  0.20  0.47  0.79  vol_dry_10_50 z=-1.5; dist_52w_low z=+1.6; days_since_ignition z=+0.1
+292 DLR    Real Estate            mid    0.80  -   0.22  0.49  0.20  0.47  0.78  skew_63 z=+1.7; days_since_20pct_dd z=+1.4; vol_dry_10_50 z=-0.8
+293 HUM    Healthcare             mid    0.57  -   0.22  0.49  0.20  0.47  0.78  days_since_20pct_dd z=+2.7; corr_spy_63 z=+1.0; dist_52w_low z=+2.9
+294 VEEV   Healthcare             mid    0.56  -   0.22  0.49  0.20  0.47  0.77  dist_52w_low z=+3.2; vol_dry_10_50 z=-0.9; days_since_ignition z=-0.4
+295 AAPL   Technology             mid    0.68  -   0.22  0.49  0.20  0.47  0.77  corr_spy_63 z=-2.6; vol_dry_10_50 z=-1.2; log_dvol_63 z=+1.3
+296 IEX    Industrials            mid    0.65  -   0.22  0.49  0.20  0.47  0.76  days_since_20pct_dd z=+2.1; dist_52w_low z=+2.3; corr_spy_63 z=-1.7
+297 BIIB   Healthcare             mid    0.31  -   0.22  0.49  0.20  0.47  0.76  days_since_20pct_dd z=+3.0; log_dvol_63 z=-1.1; vol_dry_10_50 z=+1.2
+298 ULTA   Consumer Cyclical      mid    0.56  -   0.22  0.49  0.20  0.47  0.76  log_dvol_63 z=-1.7; vol_dry_10_50 z=-1.4; corr_spy_63 z=-0.1
+299 ROST   Consumer Cyclical      mid    0.63  -   0.22  0.49  0.20  0.47  0.75  log_dvol_63 z=+1.3; days_since_ignition z=-0.4; vol_dry_10_50 z=-0.8
+300 EXPD   Industrials            mid    0.52  -   0.22  0.49  0.20  0.47  0.75  dist_52w_low z=+2.3; corr_spy_63 z=+0.0; log_dvol_63 z=+1.3
+301 TPL    Energy                 mid    0.42  -   0.22  0.49  0.20  0.47  0.75  corr_spy_63 z=-0.4; log_dvol_63 z=+0.3; skew_63 z=-0.4
+302 WST    Healthcare             mid    0.59  -   0.22  0.49  0.20  0.47  0.75  days_since_20pct_dd z=+2.4; dist_52w_low z=+1.7; days_since_ignition z=-1.3
+303 BAC    Financial              mid    0.73  -   0.22  0.49  0.20  0.47  0.74  dist_52w_low z=-1.5; days_since_20pct_dd z=+1.8; skew_63 z=-1.4
+304 PH     Industrials            mid    0.83  -   0.22  0.49  0.20  0.47  0.74  vol_dry_10_50 z=-0.9; log_dvol_63 z=+1.1; days_since_ignition z=+0.3
+305 FITB   Financial              mid    0.83  -   0.22  0.49  0.20  0.47  0.73  corr_spy_63 z=+0.1; vol_dry_10_50 z=+0.7; skew_63 z=-1.0
+306 CRM    Technology             mid    0.45  -   0.22  0.49  0.20  0.47  0.73  vol_dry_10_50 z=-1.0; log_dvol_63 z=+1.4; skew_63 z=+1.8
+307 DXCM   Healthcare             mid    0.65  -   0.22  0.49  0.20  0.47  0.72  vol_dry_10_50 z=-1.1; log_dvol_63 z=-0.2; skew_63 z=+0.9
+308 FAST   Industrials            mid    0.50  -   0.22  0.49  0.20  0.47  0.72  log_dvol_63 z=+1.6; days_since_ignition z=+1.2; skew_63 z=-0.3
+309 MSCI   Financial              mid    0.35  -   0.22  0.49  0.20  0.47  0.70  days_since_20pct_dd z=+2.0; days_since_ignition z=+1.0; skew_63 z=-1.2
+310 PNW    Utilities              low   -0.12  -   0.22  0.46  0.21  0.46  0.50  pos_in_20d_range z=+1.4; higher_low_cadence z=-3.2; down_capture_63 z=+1.4
+311 AFL    Financial              low   -0.16  -   0.22  0.46  0.21  0.46  0.49  dvol_trend_21_126 z=-1.2; pullback_duration_21 z=+1.5; base_depth_63 z=-2.4
+312 FANG   Energy                 low   -0.37  -   0.22  0.46  0.21  0.46  0.49  pos_in_20d_range z=-1.4; dvol_trend_21_126 z=+1.0; down_capture_63 z=-1.7
+313 WM     Industrials            low   -0.38  -   0.22  0.46  0.21  0.46  0.49  base_depth_63 z=-2.6; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=+1.0
+314 BF-B   Consumer Defensive     low    0.06  -   0.22  0.46  0.21  0.46  0.49  base_depth_63 z=+0.5; pos_in_20d_range z=+0.3; dvol_trend_21_126 z=-0.9
+315 AEP    Utilities              low   -0.02  -   0.22  0.46  0.21  0.46  0.48  higher_low_cadence z=-2.1; days_since_ignition z=+1.2; down_capture_63 z=+0.8
+316 ADM    Consumer Defensive     low   -0.01  -   0.22  0.46  0.21  0.46  0.48  base_depth_63 z=+0.2; pullback_duration_21 z=+0.8; down_capture_63 z=-0.9
+317 EVRG   Utilities              low   -0.02  -   0.22  0.46  0.21  0.46  0.48  higher_low_cadence z=-3.1; pos_in_20d_range z=+0.1; rs_newhigh_price_not_20 z=-0.2
+318 DGX    Healthcare             low   -0.13  -   0.22  0.46  0.21  0.46  0.48  pos_in_20d_range z=-1.5; dvol_trend_21_126 z=+1.4; pullback_duration_21 z=+0.3
+319 DTE    Utilities              low   -0.01  -   0.22  0.46  0.21  0.46  0.47  higher_low_cadence z=-3.1; base_depth_63 z=-2.4; dvol_trend_21_126 z=+1.2
+320 ADP    Technology             low   -0.02  -   0.22  0.46  0.21  0.46  0.46  higher_low_cadence z=+0.4; base_depth_63 z=-0.3; pullback_duration_21 z=+1.3
+321 CI     Healthcare             low    0.20  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-0.3; pullback_duration_21 z=+0.6; days_since_ignition z=+1.1
+322 KVUE   Consumer Defensive     low    0.15  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-0.1; dvol_trend_21_126 z=+0.8; days_since_ignition z=+1.2
+323 L      Financial              low    0.00  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-3.1; pullback_duration_21 z=+1.6; dvol_trend_21_126 z=+1.2
+324 INVH   Real Estate            low    0.09  -   0.22  0.46  0.21  0.46  0.45  base_depth_63 z=-1.8; dvol_trend_21_126 z=+0.2; pos_in_20d_range z=-1.0
+325 GDDY   Technology             low    0.23  -   0.22  0.46  0.21  0.46  0.45  pullback_duration_21 z=-0.3; base_depth_63 z=-0.1; days_since_2x_low z=+0.9
+326 CB     Financial              low   -0.34  -   0.22  0.46  0.21  0.46  0.44  pullback_duration_21 z=+1.5; higher_low_cadence z=-2.3; dvol_trend_21_126 z=-0.7
+327 PM     Consumer Defensive     low   -0.16  -   0.22  0.46  0.21  0.46  0.43  pos_in_20d_range z=+0.6; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=+1.0
+328 EG     Financial              low   -0.01  -   0.22  0.46  0.21  0.46  0.43  higher_low_cadence z=+0.8; dvol_trend_21_126 z=+0.9; base_depth_63 z=-0.4
+329 CNP    Utilities              low   -0.12  -   0.22  0.46  0.21  0.46  0.43  base_depth_63 z=-2.2; higher_low_cadence z=-2.2; pos_in_20d_range z=+0.0
+330 AMT    Real Estate            low   -0.07  -   0.22  0.46  0.21  0.46  0.42  base_depth_63 z=+0.2; higher_low_cadence z=+0.7; dvol_trend_21_126 z=-0.8
+331 MPC    Energy                 low   -0.13  -   0.22  0.46  0.21  0.46  0.42  base_depth_63 z=+1.1; dvol_trend_21_126 z=+3.2; pos_in_20d_range z=+1.1
+332 EXC    Utilities              low   -0.21  -   0.22  0.46  0.21  0.46  0.41  higher_low_cadence z=-2.8; rs_newhigh_price_not_20 z=-0.2; down_capture_63 z=+0.7
+333 CME    Financial              low   -0.29  -   0.22  0.46  0.21  0.46  0.41  dvol_trend_21_126 z=-2.0; base_depth_63 z=-0.2; pullback_duration_21 z=+1.4
+334 SO     Utilities              low   -0.22  -   0.22  0.46  0.21  0.46  0.40  higher_low_cadence z=-2.9; base_depth_63 z=-2.1; down_capture_63 z=+0.9
+335 VLO    Energy                 low   -0.26  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+1.2; dvol_trend_21_126 z=+2.9; pos_in_20d_range z=+1.2
+336 PEP    Consumer Defensive     low   -0.24  -   0.22  0.46  0.21  0.46  0.39  dvol_trend_21_126 z=+0.6; pos_in_20d_range z=-1.2; days_since_ignition z=+1.2
+337 SYY    Consumer Defensive     low    0.16  -   0.22  0.46  0.21  0.46  0.39  dvol_trend_21_126 z=+1.5; pos_in_20d_range z=-1.3; days_since_ignition z=-1.1
+338 AEE    Utilities              low   -0.09  -   0.22  0.46  0.21  0.46  0.39  higher_low_cadence z=-2.9; rs_newhigh_price_not_20 z=-0.3; days_since_ignition z=-2.2
+339 PSX    Energy                 low   -0.23  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+0.9; dvol_trend_21_126 z=+2.2; higher_low_cadence z=+1.1
+340 DVN    Energy                 low   -0.53  -   0.22  0.46  0.21  0.46  0.39  base_depth_63 z=+0.6; higher_low_cadence z=+0.9; down_capture_63 z=-2.0
+341 ED     Utilities              low   -0.45  -   0.22  0.46  0.21  0.46  0.39  higher_low_cadence z=-1.9; rs_newhigh_price_not_20 z=-0.2; pos_in_20d_range z=-0.2
+342 LMT    Industrials            low    0.03  -   0.22  0.46  0.21  0.46  0.39  rs_newhigh_price_not_20 z=+0.0; pullback_duration_21 z=+1.4; pos_in_20d_range z=-0.9
+343 VMRK   Real Estate            low    0.15  -   0.22  0.46  0.21  0.46  0.38  dvol_trend_21_126 z=+2.5; base_depth_63 z=-1.9; rs_newhigh_price_not_20 z=-0.2
+344 OXY    Energy                 low   -0.62  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=+0.3; down_capture_63 z=-1.5; higher_low_cadence z=+0.5
+345 EOG    Energy                 low   -0.58  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=+0.3; down_capture_63 z=-1.7; rs_newhigh_price_not_20 z=-0.2
+346 WMB    Energy                 low    0.03  -   0.22  0.46  0.21  0.46  0.37  rs_newhigh_price_not_20 z=-0.3; base_depth_63 z=-0.1; higher_low_cadence z=-2.1
+347 DUK    Utilities              low   -0.28  -   0.22  0.46  0.21  0.46  0.37  base_depth_63 z=-2.4; higher_low_cadence z=-2.3; pullback_duration_21 z=+1.4
+348 WMT    Consumer Defensive     low   -0.04  -   0.22  0.46  0.21  0.46  0.37  down_capture_63 z=+1.5; pullback_duration_21 z=+0.1; days_since_ignition z=+1.2
+349 COP    Energy                 low   -0.52  -   0.22  0.46  0.21  0.46  0.36  base_depth_63 z=+0.0; down_capture_63 z=-2.1; rs_newhigh_price_not_20 z=-0.2
+350 ORLY   Consumer Cyclical      low    0.02  -   0.22  0.46  0.21  0.46  0.36  dvol_trend_21_126 z=-0.8; rs_newhigh_price_not_20 z=-0.2; higher_low_cadence z=-0.0
+351 WEC    Utilities              low   -0.09  -   0.22  0.46  0.21  0.46  0.35  dvol_trend_21_126 z=+1.0; higher_low_cadence z=-1.8; base_depth_63 z=-1.8
+352 XEL    Utilities              low    0.02  -   0.22  0.46  0.21  0.46  0.35  higher_low_cadence z=-2.4; rs_newhigh_price_not_20 z=-0.3; down_capture_63 z=+1.2
+353 MRSH   Financial              low   -0.29  -   0.22  0.46  0.21  0.46  0.35  rs_newhigh_price_not_20 z=-0.2; dvol_trend_21_126 z=+0.2; days_since_ignition z=-0.3
+354 EXE    Energy                 low    0.04  -   0.22  0.46  0.21  0.46  0.34  higher_low_cadence z=+0.7; rs_newhigh_price_not_20 z=-0.3; days_since_2x_low z=+0.2
+355 PGR    Financial              low   -0.49  -   0.22  0.46  0.21  0.46  0.34  rs_newhigh_price_not_20 z=+0.0; pos_in_20d_range z=-0.1; pullback_duration_21 z=+1.3
+356 CTAS   Industrials            low    0.18  -   0.22  0.46  0.21  0.46  0.34  rs_newhigh_price_not_20 z=-0.3; pullback_duration_21 z=+1.4; down_capture_63 z=-1.4
+357 COR    Healthcare             low   -0.15  -   0.22  0.46  0.21  0.46  0.33  pullback_duration_21 z=+1.6; base_depth_63 z=-0.1; pos_in_20d_range z=+0.2
+358 CMS    Utilities              low   -0.14  -   0.22  0.46  0.21  0.46  0.32  higher_low_cadence z=-2.7; base_depth_63 z=-2.4; down_capture_63 z=+1.0
+359 UHS    Healthcare             low    0.18  -   0.22  0.46  0.21  0.46  0.32  base_depth_63 z=+0.6; higher_low_cadence z=+1.2; pullback_duration_21 z=-0.1
+360 MO     Consumer Defensive     low   -0.49  -   0.22  0.46  0.21  0.46  0.30  higher_low_cadence z=-2.6; pullback_duration_21 z=+0.6; dvol_trend_21_126 z=-0.8
+361 AZO    Consumer Cyclical      low    0.12  -   0.22  0.46  0.21  0.46  0.30  pos_in_20d_range z=+0.3; base_depth_63 z=-0.3; days_since_ignition z=-1.5
+362 SYK    Healthcare             low    0.16  -   0.22  0.46  0.21  0.46  0.29  base_depth_63 z=-2.6; pos_in_20d_range z=-0.0; rs_newhigh_price_not_20 z=-0.2
+363 APD    Basic Materials        low    0.14  -   0.22  0.46  0.21  0.46  0.29  base_depth_63 z=-0.4; rs_newhigh_price_not_20 z=-0.2; days_since_ignition z=-1.1
+364 VRSN   Technology             low    0.05  -   0.22  0.46  0.21  0.46  0.27  base_depth_63 z=+0.3; pullback_duration_21 z=-0.0; higher_low_cadence z=+0.4
+365 KR     Consumer Defensive     low   -0.62  -   0.22  0.46  0.21  0.46  0.26  base_depth_63 z=+0.1; higher_low_cadence z=+0.6; pullback_duration_21 z=+0.3
+366 TSN    Consumer Defensive     low   -0.06  -   0.22  0.46  0.21  0.46  0.25  rs_newhigh_price_not_20 z=-0.2; base_depth_63 z=-1.6; pos_in_20d_range z=-0.1
+367 CVX    Energy                 low   -0.49  -   0.22  0.46  0.21  0.46  0.25  higher_low_cadence z=+1.8; base_depth_63 z=+0.4; down_capture_63 z=-2.2
+368 PEG    Utilities              low    0.13  -   0.22  0.46  0.21  0.46  0.25  dvol_trend_21_126 z=+1.3; pos_in_20d_range z=+0.7; rs_newhigh_price_not_20 z=-0.3
+369 RSG    Industrials            low   -0.37  -   0.22  0.46  0.21  0.46  0.25  rs_newhigh_price_not_20 z=-0.3; base_depth_63 z=-0.3; pullback_duration_21 z=+0.7
+370 TJX    Consumer Cyclical      low    0.13  -   0.22  0.46  0.21  0.46  0.24  pos_in_20d_range z=+1.4; base_depth_63 z=-2.5; dvol_trend_21_126 z=+1.3
+371 MDT    Healthcare             low    0.16  -   0.22  0.46  0.21  0.46  0.23  dvol_trend_21_126 z=+5.5; higher_low_cadence z=+1.3; rs_newhigh_price_not_20 z=+0.0
+372 ESS    Real Estate            low    0.15  -   0.22  0.46  0.21  0.46  0.22  pullback_duration_21 z=-1.3; pos_in_20d_range z=+0.2; dvol_trend_21_126 z=+0.6
+373 XOM    Energy                 low   -0.56  -   0.22  0.46  0.21  0.46  0.22  base_depth_63 z=+0.8; higher_low_cadence z=+1.1; down_capture_63 z=-2.7
+374 MCK    Healthcare             low   -0.23  -   0.22  0.46  0.21  0.46  0.22  base_depth_63 z=+0.8; pos_in_20d_range z=+1.1; pullback_duration_21 z=-1.0
+375 CL     Consumer Defensive     low   -0.11  -   0.22  0.46  0.21  0.46  0.19  pos_in_20d_range z=-0.1; dvol_trend_21_126 z=+0.3; down_capture_63 z=+0.7
+376 ACGL   Financial              low   -0.30  -   0.22  0.46  0.21  0.46  0.19  dvol_trend_21_126 z=+3.8; higher_low_cadence z=-2.2; days_since_2x_low z=+0.5
+377 KMI    Energy                 low   -0.11  -   0.22  0.46  0.21  0.46  0.18  base_depth_63 z=+0.6; pos_in_20d_range z=+1.2; pullback_duration_21 z=+1.5
+378 AIG    Financial              low    0.05  -   0.22  0.46  0.21  0.46  0.18  dvol_trend_21_126 z=+1.1; pos_in_20d_range z=+0.3; base_depth_63 z=-0.3
+379 CHD    Consumer Defensive     low   -0.04  -   0.22  0.46  0.21  0.46  0.18  higher_low_cadence z=+1.0; pos_in_20d_range z=+1.0; base_depth_63 z=-0.2
+380 BRK-B  Financial              low    0.01  -   0.22  0.46  0.21  0.46  0.17  down_capture_63 z=-1.2; pullback_duration_21 z=+0.5; base_depth_63 z=-0.5
+381 ABBV   Healthcare             low   -0.11  -   0.22  0.46  0.21  0.46  0.17  base_depth_63 z=+1.0; dvol_trend_21_126 z=-1.3; pos_in_20d_range z=+1.0
+382 EQT    Energy                 low    0.17  -   0.22  0.46  0.21  0.46  0.15  base_depth_63 z=+0.4; higher_low_cadence z=+0.8; pos_in_20d_range z=+0.3
+383 WRB    Financial              low   -0.32  -   0.22  0.46  0.21  0.46  0.12  dvol_trend_21_126 z=+2.8; pos_in_20d_range z=+0.3; rs_newhigh_price_not_20 z=-0.2
+384 HCA    Healthcare             low    0.18  -   0.22  0.46  0.21  0.46  0.12  base_depth_63 z=+0.6; pos_in_20d_range z=+0.4; pullback_duration_21 z=-0.1
+385 MDLZ   Consumer Defensive     low   -0.22  -   0.22  0.46  0.21  0.46  0.08  higher_low_cadence z=+0.1; base_depth_63 z=-0.4; pullback_duration_21 z=+0.9
+386 LIN    Basic Materials        low    0.09  -   0.22  0.46  0.21  0.46  0.06  pos_in_20d_range z=+1.3; pullback_duration_21 z=-1.2; rs_newhigh_price_not_20 z=-0.3
+387 COST   Consumer Defensive     low   -0.10  -   0.22  0.46  0.21  0.46  0.05  pos_in_20d_range z=+1.3; pullback_duration_21 z=-1.2; base_depth_63 z=+0.1
+388 PG     Consumer Defensive     low   -0.03  -   0.22  0.46  0.21  0.46  0.05  base_depth_63 z=+0.5; pos_in_20d_range z=+1.0; higher_low_cadence z=+1.0
+389 WTW    Financial              low   -0.11  -   0.21  0.45  0.32  0.76  0.88  rs_newhigh_price_not_20 z=+0.0; pullback_duration_21 z=+1.5; down_capture_63 z=+1.3
+390 BRO    Financial              low   -0.33  -   0.21  0.45  0.32  0.76  0.88  dvol_trend_21_126 z=-0.7; pos_in_20d_range z=-1.1; days_since_ignition z=-0.0
+391 CVS    Healthcare             low    0.16  -   0.21  0.45  0.32  0.76  0.86  down_capture_63 z=+1.6; pullback_duration_21 z=+1.4; pos_in_20d_range z=-1.2
+392 JKHY   Technology             low   -0.06  -   0.21  0.45  0.32  0.76  0.85  pos_in_20d_range z=-1.3; dvol_trend_21_126 z=-0.9; higher_low_cadence z=+0.1
+393 GIS    Consumer Defensive     low   -0.33  -   0.21  0.45  0.32  0.76  0.85  down_capture_63 z=+1.4; base_depth_63 z=-2.0; ret_5 z=-1.5
+394 DVA    Healthcare             low   -0.02  -   0.21  0.45  0.32  0.76  0.85  dvol_trend_21_126 z=-1.1; down_capture_63 z=+1.6; pullback_duration_21 z=+0.2
+395 AJG    Financial              low   -0.30  -   0.21  0.45  0.32  0.76  0.84  pullback_duration_21 z=+1.3; dvol_trend_21_126 z=-0.5; pos_in_20d_range z=-0.9
+396 CF     Basic Materials        low   -0.93  -   0.21  0.45  0.32  0.76  0.84  down_capture_63 z=-1.3; pos_in_20d_range z=-1.2; pullback_duration_21 z=+0.8
+397 ROL    Consumer Cyclical      low    0.09  -   0.21  0.45  0.32  0.76  0.83  base_depth_63 z=-3.0; down_capture_63 z=+2.4; higher_low_cadence z=-2.3
+398 HRL    Consumer Defensive     low   -0.12  -   0.21  0.45  0.32  0.76  0.82  base_depth_63 z=-2.1; dvol_trend_21_126 z=-0.8; streak_now z=-0.8
+399 D      Utilities              low   -0.07  -   0.21  0.45  0.32  0.76  0.82  dvol_trend_21_126 z=-1.0; base_depth_63 z=-1.8; pullback_duration_21 z=+1.3
+400 WELL   Real Estate            low   -0.01  -   0.21  0.45  0.32  0.76  0.81  dvol_trend_21_126 z=-1.3; pos_in_20d_range z=-1.5; pullback_duration_21 z=+1.5
+401 ALL    Financial              low   -0.37  -   0.21  0.45  0.32  0.76  0.80  base_depth_63 z=-4.1; pos_in_20d_range z=-1.6; dvol_trend_21_126 z=+2.2
+402 SOLV   Healthcare             mid    0.57  -   0.21  0.47  0.21  0.47  0.50  vol_dry_10_50 z=-0.9; log_dvol_63 z=+0.1; days_since_20pct_dd z=-0.7
+403 HBAN   Financial              mid    0.83  -   0.21  0.47  0.21  0.47  0.49  dist_52w_low z=-2.0; corr_spy_63 z=+0.4; vol_dry_10_50 z=+0.6
+404 LYV    Communication Services mid    0.65  -   0.21  0.47  0.21  0.47  0.49  days_since_ignition z=+1.2; corr_spy_63 z=-1.9; log_dvol_63 z=+0.5
+405 UPS    Industrials            mid    0.75  -   0.21  0.47  0.21  0.47  0.46  log_dvol_63 z=-0.7; dist_52w_low z=+0.4; corr_spy_63 z=-1.0
+406 LLY    Healthcare             mid    0.29  -   0.21  0.47  0.21  0.47  0.46  corr_spy_63 z=-2.0; log_dvol_63 z=+0.4; vol_dry_10_50 z=-0.6
+407 GWW    Industrials            mid    0.52  -   0.21  0.47  0.21  0.47  0.45  corr_spy_63 z=-3.2; log_dvol_63 z=+1.5; days_since_ignition z=+1.2
+408 RJF    Financial              mid    0.75  -   0.21  0.47  0.21  0.47  0.44  dist_52w_low z=-1.6; days_since_20pct_dd z=+1.9; corr_spy_63 z=-0.4
+409 CSGP   Real Estate            mid    0.26  -   0.21  0.47  0.21  0.47  0.43  log_dvol_63 z=-0.2; vol_dry_10_50 z=-1.0; skew_63 z=+1.1
+410 HAS    Consumer Cyclical      mid    0.74  -   0.21  0.47  0.21  0.47  0.43  days_since_ignition z=-1.4; vol_dry_10_50 z=+0.6; skew_63 z=+1.2
+411 RF     Financial              mid    0.76  -   0.21  0.47  0.21  0.47  0.42  days_since_20pct_dd z=+2.1; vol_dry_10_50 z=+1.1; corr_spy_63 z=-0.4
+412 SBUX   Consumer Cyclical      mid    0.55  -   0.21  0.47  0.21  0.47  0.42  days_since_20pct_dd z=+2.4; log_dvol_63 z=-0.7; dist_52w_low z=+0.2
+413 PLD    Real Estate            mid    0.45  -   0.21  0.47  0.21  0.47  0.40  days_since_20pct_dd z=+2.5; corr_spy_63 z=-1.7; log_dvol_63 z=+1.3
+414 INTU   Technology             mid    0.31  -   0.21  0.47  0.21  0.47  0.40  days_since_20pct_dd z=-1.0; corr_spy_63 z=-1.7; skew_63 z=+0.7
+415 FICO   Technology             mid    0.46  -   0.21  0.47  0.21  0.47  0.39  vol_dry_10_50 z=+5.4; skew_63 z=-2.2; corr_spy_63 z=-1.9
+416 NDAQ   Financial              mid    0.67  -   0.21  0.47  0.21  0.47  0.39  days_since_ignition z=+1.0; log_dvol_63 z=+1.1; skew_63 z=+0.7
+417 PKG    Consumer Cyclical      mid    0.74  -   0.21  0.47  0.21  0.47  0.39  skew_63 z=+1.3; log_dvol_63 z=+0.1; corr_spy_63 z=-0.6
+418 TSCO   Consumer Cyclical      mid    0.40  -   0.21  0.47  0.21  0.47  0.39  days_since_20pct_dd z=-1.0; skew_63 z=+0.8; days_since_ignition z=+0.9
+419 DIS    Communication Services mid    0.66  -   0.21  0.47  0.21  0.47  0.37  log_dvol_63 z=-0.5; days_since_ignition z=+0.1; dist_52w_low z=-1.0
+420 JPM    Financial              mid    0.79  -   0.21  0.47  0.21  0.47  0.36  dist_52w_low z=-1.9; corr_spy_63 z=-0.0; vol_dry_10_50 z=+0.7
+421 MOS    Basic Materials        mid    0.74  -   0.21  0.47  0.21  0.47  0.35  skew_63 z=+0.8; days_since_ignition z=+0.9; dist_52w_low z=-0.7
+422 ARE    Real Estate            mid    0.71  -   0.21  0.47  0.21  0.47  0.35  log_dvol_63 z=-1.2; corr_spy_63 z=-2.0; days_since_ignition z=-0.5
+423 TFC    Financial              mid    0.72  -   0.21  0.47  0.21  0.47  0.34  dist_52w_low z=-1.5; vol_dry_10_50 z=+0.6; days_since_ignition z=+1.0
+424 EW     Healthcare             mid    0.56  -   0.21  0.47  0.21  0.47  0.34  days_since_20pct_dd z=+2.5; days_since_ignition z=+1.2; corr_spy_63 z=-1.9
+425 BXP    Real Estate            mid    0.72  -   0.21  0.47  0.21  0.47  0.34  corr_spy_63 z=-2.0; log_dvol_63 z=-0.1; skew_63 z=+0.9
+426 VRTX   Healthcare             mid    0.50  -   0.21  0.47  0.21  0.47  0.34  corr_spy_63 z=-1.8; log_dvol_63 z=+0.3; vol_dry_10_50 z=-0.7
+427 PSA    Real Estate            mid    0.41  -   0.21  0.47  0.21  0.47  0.33  days_since_20pct_dd z=+1.5; corr_spy_63 z=-1.0; skew_63 z=+0.4
+428 TDG    Industrials            mid    0.73  -   0.21  0.47  0.21  0.47  0.32  days_since_20pct_dd z=-2.0; vol_dry_10_50 z=-1.0; dist_52w_low z=-1.4
+429 NVR    Consumer Cyclical      mid    0.55  -   0.21  0.47  0.21  0.47  0.32  log_dvol_63 z=+2.4; days_since_20pct_dd z=-0.8; corr_spy_63 z=-0.6
+430 DOC    Real Estate            mid    0.44  -   0.21  0.47  0.21  0.47  0.32  days_since_20pct_dd z=+1.4; vol_dry_10_50 z=+0.5; corr_spy_63 z=-1.7
+431 HON    Industrials            mid    0.71  -   0.21  0.47  0.21  0.47  0.32  days_since_20pct_dd z=-1.7; vol_dry_10_50 z=-1.4; log_dvol_63 z=-0.5
+432 V      Financial              mid    0.30  -   0.21  0.47  0.21  0.47  0.31  days_since_20pct_dd z=-1.5; vol_dry_10_50 z=-1.3; corr_spy_63 z=-1.6
+433 COO    Healthcare             mid    0.50  -   0.21  0.47  0.21  0.47  0.30  vol_dry_10_50 z=+1.0; skew_63 z=-1.8; days_since_20pct_dd z=-0.8
+434 MLM    Basic Materials        mid    0.84  -   0.21  0.47  0.21  0.47  0.30  log_dvol_63 z=+2.0; days_since_20pct_dd z=-1.2; vol_dry_10_50 z=+1.1
+435 BNY    Financial              mid    0.76  -   0.21  0.47  0.21  0.47  0.30  vol_dry_10_50 z=+1.1; log_dvol_63 z=+1.3; skew_63 z=+0.9
+436 LHX    Industrials            mid    0.26  -   0.21  0.47  0.21  0.47  0.29  days_since_20pct_dd z=-1.1; dist_52w_low z=-1.5; skew_63 z=-1.7
+437 SHW    Basic Materials        mid    0.81  -   0.21  0.47  0.21  0.47  0.29  days_since_20pct_dd z=-0.9; skew_63 z=+1.7; corr_spy_63 z=-0.3
+438 CMG    Consumer Cyclical      mid    0.68  -   0.21  0.47  0.21  0.47  0.28  log_dvol_63 z=-0.6; corr_spy_63 z=-2.3; vol_dry_10_50 z=+0.4
+439 NKE    Consumer Cyclical      mid    0.68  -   0.21  0.47  0.21  0.47  0.28  log_dvol_63 z=+2.4; vol_dry_10_50 z=+2.0; days_since_ignition z=+1.0
+440 XYL    Industrials            mid    0.78  -   0.21  0.47  0.21  0.47  0.28  days_since_20pct_dd z=-1.1; log_dvol_63 z=+1.5; corr_spy_63 z=-2.2
+441 EXR    Real Estate            mid    0.37  -   0.21  0.47  0.21  0.47  0.27  days_since_20pct_dd z=+1.7; vol_dry_10_50 z=+0.6; skew_63 z=+0.7
+442 SNA    Industrials            mid    0.55  -   0.21  0.47  0.21  0.47  0.27  vol_dry_10_50 z=-0.8; dist_52w_low z=-1.0; skew_63 z=+0.6
+443 CSX    Industrials            mid    0.43  -   0.21  0.47  0.21  0.47  0.27  corr_spy_63 z=-2.6; skew_63 z=+1.4; days_since_20pct_dd z=+1.0
+444 ITW    Industrials            mid    0.50  -   0.21  0.47  0.21  0.47  0.27  vol_dry_10_50 z=+1.0; log_dvol_63 z=+1.3; corr_spy_63 z=-1.7
+445 AOS    Industrials            mid    0.76  -   0.21  0.47  0.21  0.47  0.27  corr_spy_63 z=-0.1; days_since_20pct_dd z=-0.8; days_since_ignition z=+1.0
+446 TXT    Industrials            mid    0.70  -   0.21  0.47  0.21  0.47  0.26  days_since_20pct_dd z=-1.3; dist_52w_low z=-1.7; log_dvol_63 z=+1.4
+447 NSC    Industrials            mid    0.25  -   0.21  0.47  0.21  0.47  0.26  vol_dry_10_50 z=-1.4; corr_spy_63 z=-2.2; days_since_20pct_dd z=+1.8
+448 CHTR   Communication Services mid    0.28  -   0.21  0.47  0.21  0.47  0.25  log_dvol_63 z=-1.3; dist_52w_low z=-1.2; days_since_20pct_dd z=-0.6
+449 ICE    Financial              mid    0.25  -   0.21  0.47  0.21  0.47  0.24  vol_dry_10_50 z=-1.4; days_since_20pct_dd z=-1.1; corr_spy_63 z=-2.0
+450 RTX    Industrials            mid    0.34  -   0.21  0.47  0.21  0.47  0.24  dist_52w_low z=-1.5; days_since_ignition z=+1.0; corr_spy_63 z=-1.8
+451 SPG    Real Estate            mid    0.25  -   0.21  0.47  0.21  0.47  0.24  corr_spy_63 z=-1.9; days_since_20pct_dd z=+1.2; dist_52w_low z=-1.2
+452 AES    Utilities              mid    0.38  -   0.21  0.47  0.21  0.47  0.24  days_since_20pct_dd z=+2.9; log_dvol_63 z=-0.7; vol_dry_10_50 z=+0.5
+453 MGM    Consumer Cyclical      mid    0.85  -   0.21  0.47  0.21  0.47  0.23  log_dvol_63 z=-3.5; vol_dry_10_50 z=+4.9; dist_52w_low z=-1.6
+454 GD     Industrials            mid    0.40  -   0.21  0.47  0.21  0.47  0.23  dist_52w_low z=-1.6; vol_dry_10_50 z=+1.2; days_since_ignition z=+1.2
+455 NFLX   Communication Services mid    0.32  -   0.21  0.47  0.21  0.47  0.22  dist_52w_low z=-1.7; days_since_20pct_dd z=-1.0; log_dvol_63 z=-0.3
+456 ECL    Basic Materials        mid    0.49  -   0.21  0.47  0.21  0.47  0.22  days_since_20pct_dd z=-1.7; vol_dry_10_50 z=-0.8; days_since_ignition z=+0.9
+457 EFX    Industrials            mid    0.56  -   0.21  0.47  0.21  0.47  0.22  vol_dry_10_50 z=+2.6; log_dvol_63 z=+0.2; dist_52w_low z=-1.2
+458 FISV   Technology             mid    0.65  -   0.21  0.47  0.21  0.47  0.19  log_dvol_63 z=-1.0; days_since_20pct_dd z=-1.0; skew_63 z=+0.8
+459 VMC    Basic Materials        mid    0.81  -   0.21  0.47  0.21  0.47  0.18  days_since_20pct_dd z=-1.3; dist_52w_low z=-1.7; vol_dry_10_50 z=+1.0
+460 HII    Industrials            mid    0.79  -   0.21  0.47  0.21  0.47  0.17  corr_spy_63 z=+0.2; days_since_20pct_dd z=-1.0; days_since_ignition z=-1.5
+461 MCO    Financial              mid    0.52  -   0.21  0.47  0.21  0.47  0.17  dist_52w_low z=-1.6; vol_dry_10_50 z=+0.9; log_dvol_63 z=+0.4
+462 FIS    Technology             mid    0.37  -   0.21  0.47  0.21  0.47  0.17  log_dvol_63 z=-0.3; days_since_20pct_dd z=-0.7; vol_dry_10_50 z=+0.2
+463 MA     Financial              mid    0.30  -   0.21  0.47  0.21  0.47  0.17  days_since_20pct_dd z=-2.1; skew_63 z=+1.3; corr_spy_63 z=-1.6
+464 VLTO   Industrials            mid    0.28  -   0.21  0.47  0.21  0.47  0.16  days_since_20pct_dd z=-1.0; vol_dry_10_50 z=+0.5; corr_spy_63 z=-1.5
+465 HD     Consumer Cyclical      mid    0.71  -   0.21  0.47  0.21  0.47  0.16  days_since_20pct_dd z=-1.1; vol_dry_10_50 z=+1.7; dist_52w_low z=-1.5
+466 TTWO   Communication Services mid    0.65  -   0.21  0.47  0.21  0.47  0.14  days_since_20pct_dd z=-1.5; log_dvol_63 z=+1.6; corr_spy_63 z=-2.3
+467 SPGI   Financial              mid    0.34  -   0.21  0.47  0.21  0.47  0.14  days_since_20pct_dd z=-1.6; dist_52w_low z=-1.3; vol_dry_10_50 z=+0.2
+468 LVS    Consumer Cyclical      mid    0.62  -   0.21  0.47  0.21  0.47  0.13  log_dvol_63 z=-0.5; corr_spy_63 z=-1.8; dist_52w_low z=-1.1
+469 STE    Healthcare             mid    0.43  -   0.21  0.47  0.21  0.47  0.13  days_since_20pct_dd z=-1.6; dist_52w_low z=-1.3; vol_dry_10_50 z=-0.7
+470 WYNN   Consumer Cyclical      mid    0.84  -   0.21  0.47  0.21  0.47  0.12  log_dvol_63 z=-0.8; vol_dry_10_50 z=+1.4; dist_52w_low z=-1.2
+471 LOW    Consumer Cyclical      mid    0.63  -   0.21  0.47  0.21  0.47  0.11  days_since_20pct_dd z=-1.0; dist_52w_low z=-1.4; vol_dry_10_50 z=+0.5
+472 ZTS    Healthcare             mid    0.56  -   0.21  0.47  0.21  0.47  0.08  log_dvol_63 z=-0.4; corr_spy_63 z=-1.9; vol_dry_10_50 z=-1.0
+473 GEHC   Healthcare             mid    0.76  -   0.21  0.47  0.21  0.47  0.07  corr_spy_63 z=-2.5; log_dvol_63 z=-0.2; dist_52w_low z=-1.4
+474 WY     Real Estate            mid    0.29  -   0.21  0.47  0.21  0.47  0.05  vol_dry_10_50 z=+2.4; dist_52w_low z=-1.6; days_since_20pct_dd z=-0.9
+475 TKO    Communication Services mid    0.44  -   0.21  0.47  0.21  0.47  0.04  dist_52w_low z=-1.8; days_since_20pct_dd z=-1.2; days_since_ignition z=-0.8
+476 OTIS   Industrials            mid    0.27  -   0.21  0.47  0.21  0.47  0.03  days_since_20pct_dd z=-1.9; vol_dry_10_50 z=+0.7; skew_63 z=+0.8
+477 TGT    Consumer Defensive     mid    0.44  -   0.20  0.43  0.15  0.38  0.89  days_since_20pct_dd z=+3.3; dist_52w_low z=+2.1; corr_spy_63 z=-0.4
+478 HST    Real Estate            mid    0.70  -   0.20  0.43  0.15  0.38  0.88  log_dvol_63 z=+2.1; days_since_20pct_dd z=+1.9; corr_spy_63 z=-2.1
+479 EQIX   Real Estate            mid    0.49  -   0.20  0.43  0.15  0.38  0.87  corr_spy_63 z=+0.1; dist_52w_low z=+1.3; log_dvol_63 z=+1.3
+480 JBHT   Industrials            mid    0.76  -   0.20  0.43  0.15  0.38  0.87  log_dvol_63 z=+2.0; skew_63 z=-1.1; days_since_20pct_dd z=-0.8
+481 CDW    Technology             mid    0.81  -   0.20  0.43  0.15  0.38  0.85  vol_dry_10_50 z=-1.2; dist_52w_low z=+1.0; skew_63 z=+0.6
+482 NOW    Technology             mid    0.65  -   0.20  0.43  0.15  0.38  0.83  vol_dry_10_50 z=-1.7; days_since_20pct_dd z=-0.8; dist_52w_low z=+0.8
+483 LH     Healthcare             mid    0.29  -   0.20  0.43  0.15  0.38  0.83  log_dvol_63 z=+2.5; dist_52w_low z=+0.7; days_since_20pct_dd z=+0.8
+484 MAR    Consumer Cyclical      mid    0.62  -   0.20  0.43  0.15  0.38  0.83  corr_spy_63 z=-2.7; vol_dry_10_50 z=-1.2; log_dvol_63 z=+1.4
+485 MTD    Healthcare             mid    0.79  -   0.20  0.43  0.15  0.38  0.82  log_dvol_63 z=+1.9; days_since_ignition z=-1.6; dist_52w_low z=+1.1
+486 GPC    Consumer Cyclical      mid    0.48  -   0.20  0.43  0.15  0.38  0.82  dist_52w_low z=+1.9; vol_dry_10_50 z=-1.2; log_dvol_63 z=+0.4
+487 DLTR   Consumer Defensive     mid    0.80  -   0.20  0.43  0.15  0.38  0.81  log_dvol_63 z=-0.2; days_since_ignition z=+1.1; corr_spy_63 z=-0.5
 
 not ranked:
+    VTRS   no probability cell (bucket/tier unavailable)
     VTR    no probability cell (bucket/tier unavailable)
     VRSK   no probability cell (bucket/tier unavailable)
+    AMGN   no probability cell (bucket/tier unavailable)
+    WAT    no probability cell (bucket/tier unavailable)
+    CNC    no probability cell (bucket/tier unavailable)
+    BBY    no probability cell (bucket/tier unavailable)
     ILMN   no probability cell (bucket/tier unavailable)
     HPQ    no probability cell (bucket/tier unavailable)
+    A      no probability cell (bucket/tier unavailable)
     CTVA   fails liquidity / price eligibility today or no completed session (e.g. CTVA unadjusted spin-off)
     FDXF   insufficient history (72 sessions; 252 needed)
     HONA   insufficient history (59 sessions; 252 needed)

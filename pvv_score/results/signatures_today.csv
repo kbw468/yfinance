@@ -1,238 +1,453 @@
 ticker,sector,beta_bucket,n_fire,best_signature,best_signature_plain,best_p_conf,best_n_conf
-MRNA,Healthcare,high,339,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4302822925577416,1169.0
-PLTR,Technology,high,197,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
-CRWD,Technology,high,185,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3793103448275862,1160.0
-SNDK,Technology,high,182,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.5369458128078818,812.0
-SWKS,Technology,high,180,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,beta top 20% AND OBV leading price bottom 20% AND share of up days 63d top 20%,0.4072191154041688,1967.0
-HOOD,Financial,high,179,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
-P,Technology,high,179,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
-FLEX,Technology,high,175,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
-ANET,Technology,high,159,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
-DELL,Technology,high,158,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
-MRVL,Technology,high,148,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
-STX,Technology,high,142,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP,distance to 52w high bottom 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%,0.4823943661971831,284.0
-HPE,Technology,high,141,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
-VRT,Industrials,high,140,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,gain off 52w low top 20% AND dollar-volume trend bottom 20% AND volROC21>+25%,0.5176848874598071,311.0
-AMD,Technology,high,136,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
-AMAT,Technology,high,134,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
-MU,Technology,high,131,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,downside vol top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.5044722719141324,559.0
-EL,Consumer Defensive,high,128,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP,beta top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%,0.5110062893081762,2544.0
-ON,Technology,high,122,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP,distance to 52w high bottom 20% AND net volume flow top 20% AND 12-1m momentum vs own norm top 20%,0.4650602409638554,415.0
-LITE,Technology,high,120,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.4170522141440846,1513.0
-WDC,Technology,high,114,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%,0.4374537379718727,1351.0
-SNPS,Technology,high,110,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3793103448275862,1160.0
-ACN,Technology,low,105,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4302822925577416,1169.0
-SMCI,Technology,high,103,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
-LRCX,Technology,high,99,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
-ILMN,Healthcare,mid,96,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3643122676579926,538.0
-KLAC,Technology,high,94,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%,0.416195856873823,531.0
-INTC,Technology,high,93,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
-GNRC,Industrials,high,91,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4596456692913386,1016.0
-BE,Industrials,high,89,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND volume on pullbacks top 20% AND distance to 52w high vs own norm top 20%,0.4411764705882353,884.0
-MCHP,Technology,high,84,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP,downside vol top 20% AND range compression bottom 20% AND skew top 20%,0.4529411764705882,1190.0
-HPQ,Technology,mid,83,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3643122676579926,538.0
-GLW,Technology,high,82,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT,depth below 126d high bottom 20% AND up-capture top 20% AND volume vs 250d vs own norm bottom 20%,0.4982027318475917,2782.0
-RDDT,Communication Services,high,82,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT,beta top 20% AND overnight share of moves bottom 20% AND 20d RV vs norm vs own norm bottom 20%,0.3681462140992167,383.0
-NCLH,Consumer Cyclical,high,80,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND net volume flow bottom 20% AND up-capture top 20%,0.4716885743174924,1978.0
-COHR,Technology,high,79,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4596456692913386,1016.0
-FCX,Basic Materials,high,77,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP,beta top 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%,0.5194216395049627,8161.0
-GEV,Industrials,high,77,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT,up-capture top 20% AND downside/upside vol vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.366065464261857,1497.0
-WDAY,Technology,mid,76,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3923076923076923,1170.0
-DDOG,Technology,high,76,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP,downside vol top 20% AND range vol / close vol top 20% AND 126d Sharpe top 20%,0.4908306364617044,927.0
-NOW,Technology,mid,75,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%,0.4374537379718727,1351.0
-CVNA,Consumer Cyclical,high,74,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,beta top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3925099027727763,5554.0
-NEM,Basic Materials,high,68,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,beta top 20% AND OBV leading price bottom 20% AND share of up days 63d top 20%,0.4072191154041688,1967.0
-ABNB,Consumer Cyclical,high,68,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP,idiosyncratic vol top 20% AND 21d return bottom 20% AND 126d Sharpe top 20%,0.4627720504009164,1746.0
-LII,Industrials,high,67,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3920922570016474,1821.0
-TER,Technology,high,65,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT,accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.3590561224489796,1568.0
-NVDA,Technology,high,65,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.6155555555555555,450.0
-IVZ,Financial,high,64,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT,beta top 20% AND net volume flow top 20% AND OBV leading price vs own norm bottom 20%,0.4117336152219873,1892.0
-NTAP,Technology,high,64,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
-CIEN,Technology,high,64,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%,0.416195856873823,531.0
-CRM,Technology,mid,63,dist_52w_low:TOP & ret_21:BOT & ret_63:TOP,gain off 52w low top 20% AND 21d return bottom 20% AND 63d return top 20%,0.4,2350.0
-MPWR,Technology,high,62,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,gain off 52w low top 20% AND dollar-volume trend bottom 20% AND volROC21>+25%,0.5176848874598071,311.0
-ARES,Financial,high,62,beta_252:TOP & ret_21:BOT & skew_63:TOP,beta top 20% AND 21d return bottom 20% AND skew top 20%,0.3314159292035398,2260.0
-JBHT,Industrials,mid,62,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT,gain off 52w low top 20% AND higher-low cadence bottom 20% AND 21d return bottom 20%,0.4339171974522293,1256.0
-META,Communication Services,high,62,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
-ZBRA,Technology,high,57,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,corr to SPY top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%,0.4099960952752831,2561.0
-PTC,Technology,mid,54,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm bottom 20%,0.5202702702702703,296.0
-GS,Financial,high,52,beta_252:TOP & ret_21:BOT & skew_63:TOP,beta top 20% AND 21d return bottom 20% AND skew top 20%,0.3314159292035398,2260.0
-PYPL,Financial,high,51,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3923076923076923,1170.0
-FSLR,Technology,high,49,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.4671717171717172,1980.0
-TSLA,Consumer Cyclical,high,49,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP,time since ignition day bottom 20% AND up-capture top 20% AND downside/upside vol vs own norm top 20%,0.4191082802547771,785.0
-DVA,Healthcare,low,48,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT,gain off 52w low top 20% AND idiosyncratic vol top 20% AND dollar volume bottom 20%,0.4069017823284035,2637.0
-FIX,Industrials,high,48,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND downside vol top 20% AND RS line leading price vs own norm bottom 20%,0.4268142681426814,2439.0
-NRG,Utilities,high,48,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
-VST,Utilities,high,47,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP,depth below 126d high top 20% AND downside vol top 20% AND volume vs 250d vs own norm top 20%,0.4319880418535127,669.0
-CCL,Consumer Cyclical,high,46,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND net volume flow bottom 20% AND up-capture top 20%,0.4716885743174924,1978.0
-PANW,Technology,high,45,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP,downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume vs own norm top 20%,0.5136443661971831,2272.0
-PWR,Industrials,high,45,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND share of up days 63d top 20%,0.4309927360774818,4956.0
-APH,Technology,high,44,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,beta top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3965060878771837,1889.0
-QCOM,Technology,high,44,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50%,dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volROC21>+50%,0.559322033898305,177.0
-IT,Technology,mid,44,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT,downside/upside vol bottom 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.4076751946607341,1798.0
-APP,Communication Services,high,44,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
-AMZN,Consumer Cyclical,high,43,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP,beta top 20% AND range compression bottom 20% AND skew top 20%,0.3597037037037037,3375.0
-KEYS,Technology,high,42,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
-HAL,Energy,mid,40,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT,gain off 52w low top 20% AND ignition-day volume top 20% AND 126d Sharpe bottom 20%,0.5194805194805194,154.0
-COIN,Financial,high,40,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT,downside vol top 20% AND net volume flow top 20% AND RS line leading price vs own norm bottom 20%,0.3229426433915212,802.0
-CEG,Utilities,high,40,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND share of up days 63d top 20%,0.4309927360774818,4956.0
-ETN,Industrials,high,39,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP,distance to 52w high top 20% AND downside vol top 20% AND overnight share of moves top 20%,0.5149402390438247,1004.0
-JBL,Technology,high,38,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50%,depth below 126d high bottom 20% AND gain off 52w low top 20% AND volROC21>+50%,0.4367301231802911,893.0
-AKAM,Technology,high,38,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP,beta top 20% AND downside vol top 20% AND skew top 20%,0.4395909169700121,5769.0
-LULU,Consumer Cyclical,high,38,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
-FDS,Financial,low,38,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price bottom 20%,0.3530927835051546,1552.0
-KKR,Financial,high,36,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP,time since ignition day bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.39568345323741,1251.0
-AXON,Industrials,high,34,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,beta top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3925099027727763,5554.0
-ALGN,Healthcare,high,33,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP,beta top 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%,0.5147584973166368,2236.0
-GDDY,Technology,low,33,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT,up minus down capture top 20% AND downside vol top 20% AND dollar volume bottom 20%,0.3877159309021113,1042.0
-ADI,Technology,high,32,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
-ORCL,Technology,high,32,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,downside vol top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4820496083550913,3064.0
-ADSK,Technology,mid,30,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,downside vol top 20% AND downside/upside vol vs own norm bottom 20% AND OBV leading price vs own norm bottom 20%,0.3761627906976744,1720.0
-XYZ,Technology,high,29,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP,beta top 20% AND rvROC10<-20% AND 126d Sharpe top 20%,0.4196762141967621,2409.0
-ADBE,Technology,mid,29,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND rvROC21<-20% AND downside/upside vol vs own norm bottom 20%,0.3654753877275792,1483.0
-ECHO,Communication Services,high,28,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT,126d Sharpe bottom 20% AND up-capture top 20% AND volume vs 250d bottom 20%,0.4842840512223516,859.0
-LUV,Industrials,high,27,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP,beta top 20% AND downside/upside vol top 20% AND net volume flow top 20%,0.3308641975308642,405.0
-CHTR,Communication Services,mid,27,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP,dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volume vs 250d top 20%,0.3782696177062374,497.0
-CDW,Technology,mid,26,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP,downside vol top 20% AND 21d return bottom 20% AND distance to 52w high vs own norm top 20%,0.4148471615720524,458.0
-CTSH,Technology,low,26,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP,close location in range bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%,0.476906552094522,1862.0
-TEL,Technology,high,25,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND beta top 20% AND OBV leading price bottom 20%,0.3340172343044727,2437.0
-GPN,Technology,high,25,pullback_21:BOT & ret_63:TOP & sharpe_126:TOP,pullback from 21d high bottom 20% AND 63d return top 20% AND 126d Sharpe top 20%,0.4211267605633803,3550.0
-IBKR,Financial,high,25,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20%,beta top 20% AND time since 20% drawdown top 20% AND rvROC10<-20%,0.3838120104438642,383.0
-HWM,Industrials,high,24,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20%,time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND rvROC21<-20%,0.4617104527669088,1789.0
-CSGP,Real Estate,mid,24,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3920922570016474,1821.0
-APTV,Consumer Cyclical,high,24,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP,up minus down capture bottom 20% AND dollar-volume trend bottom 20% AND volume vs 250d top 20%,0.3847150259067357,772.0
-PNR,Industrials,high,24,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP,dollar-volume trend bottom 20% AND overnight share of moves top 20% AND volume vs 250d top 20%,0.4913043478260869,230.0
-SW,Consumer Cyclical,high,24,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP,beta top 20% AND OBV leading price bottom 20% AND 12-1m momentum vs own norm top 20%,0.4211096075778078,3695.0
-EME,Industrials,high,23,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND beta top 20% AND OBV leading price bottom 20%,0.3340172343044727,2437.0
-VEEV,Healthcare,mid,23,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,idiosyncratic vol top 20% AND volume on pullbacks top 20% AND distance to 52w high vs own norm top 20%,0.3931818181818182,1320.0
-PCG,Utilities,low,23,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP,idiosyncratic vol top 20% AND OBV leading price top 20% AND share of up days 63d top 20%,0.3294491525423729,2832.0
-TXN,Technology,high,21,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
-ARE,Real Estate,mid,20,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
-CAT,Industrials,high,19,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,up minus down capture bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4819512195121951,1025.0
-EMR,Industrials,high,19,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP,beta top 20% AND up minus down capture top 20% AND share of up days 63d top 20%,0.4662670427832628,8508.0
-SKYD,Communication Services,mid,18,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
-DOW,Basic Materials,low,18,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP,Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%,0.4217687074829932,441.0
-ERIE,Financial,low,18,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
-GRMN,Technology,high,18,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP,up minus down capture top 20% AND net volume flow bottom 20% AND RS line leading price top 20%,0.3463414634146341,205.0
-BX,Financial,high,18,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,12-1m momentum bottom 20% AND up-capture top 20% AND up/down volume bottom 20%,0.4086886564762671,1243.0
-COF,Financial,high,17,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP,volume on pullbacks bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.4713958810068649,874.0
-CRL,Healthcare,high,17,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT,idiosyncratic vol top 20% AND 12-1m momentum top 20% AND OBV leading price bottom 20%,0.4033083891295785,5078.0
-FTNT,Technology,high,17,idio_vol_63:TOP & sharpe_126:TOP,idiosyncratic vol top 20% AND 126d Sharpe top 20%,0.4232531904392582,14183.0
-ALB,Basic Materials,high,16,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT,beta top 20% AND 12-1m momentum top 20% AND 126d Sharpe bottom 20%,0.4249578414839797,593.0
-GEN,Technology,mid,16,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
-EXPE,Consumer Cyclical,high,15,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT,downside vol top 20% AND share of up days 63d top 20% AND vol of vol bottom 20%,0.5275459098497496,1198.0
-APO,Financial,high,15,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP,21d return bottom 20% AND rvROC21<-20% AND up-capture top 20%,0.358695652173913,2944.0
-INTU,Technology,mid,13,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND 21d return bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3193548387096774,620.0
-LYB,Basic Materials,low,12,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP,depth below 126d high bottom 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%,0.5715622076707203,1069.0
-IBM,Technology,high,11,range_comp_10_252:BOT & dn_vol_63:TOP,range compression bottom 20% AND downside vol top 20%,0.3875075195508322,9974.0
-EIX,Utilities,low,11,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20%,idiosyncratic vol top 20% AND OBV leading price top 20% AND rvROC10<-20%,0.3563706563706563,2590.0
-NXPI,Technology,high,11,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT,depth below 126d high bottom 20% AND beta top 20% AND dollar-volume trend bottom 20%,0.4269098598995506,7566.0
-ISRG,Healthcare,high,11,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP,downside vol top 20% AND net volume flow top 20% AND downside/upside vol vs own norm top 20%,0.3266129032258064,992.0
-CF,Basic Materials,low,11,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT,up minus down capture top 20% AND gain off 52w low top 20% AND 21d return bottom 20%,0.4380530973451327,2034.0
-TPR,Consumer Cyclical,high,10,bbw_pct_252:BOT & idio_vol_63:TOP,Bollinger width vs norm bottom 20% AND idiosyncratic vol top 20%,0.3618579723090665,11195.0
-ROK,Industrials,high,10,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP,beta top 20% AND higher-low cadence bottom 20% AND 126d Sharpe top 20%,0.4617224880382775,418.0
-TPL,Energy,mid,10,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND RS line leading price vs own norm bottom 20%,0.3797752808988764,1335.0
-VRSK,Industrials,low,9,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10%,downside vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-10%,0.357059136920618,9385.0
-CRH,Basic Materials,high,9,beta_252:TOP & ret_21:BOT & rvROC21<-20%,beta top 20% AND 21d return bottom 20% AND rvROC21<-20%,0.3557716280229369,4011.0
-FDX,Industrials,high,9,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT,accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND net volume flow bottom 20%,0.5209888059701493,2144.0
-UAL,Industrials,high,9,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP,beta top 20% AND dollar-volume trend bottom 20% AND volume vs 50d top 20%,0.4873035066505441,827.0
-RCL,Consumer Cyclical,high,9,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%,0.3759776536312849,3580.0
-PODD,Healthcare,mid,8,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT,idiosyncratic vol top 20% AND volume vs 250d top 20% AND RS line leading price vs own norm bottom 20%,0.3055056852184321,3342.0
-CASY,Consumer Cyclical,low,8,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
-BBY,Consumer Cyclical,mid,8,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP,gain off 52w low top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%,0.4196745838788105,5347.0
-MS,Financial,high,7,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT,beta top 20% AND 12-1m momentum top 20% AND OBV leading price bottom 20%,0.4028098879601636,5623.0
-BEN,Financial,high,7,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT,accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND volume vs 250d vs own norm bottom 20%,0.4375,1920.0
-FICO,Technology,mid,7,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
-MGM,Consumer Cyclical,mid,7,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP,distance to 52w high bottom 20% AND downside vol top 20% AND 12-1m momentum vs own norm top 20%,0.4515576857240671,2921.0
-CDNS,Technology,high,7,net_vol_flow_63:TOP & dn_vol_63:TOP,net volume flow top 20% AND downside vol top 20%,0.4484953703703703,8640.0
-AVGO,Technology,high,7,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%,0.3696763202725724,2935.0
-DASH,Consumer Cyclical,high,7,up_day_frac_63:TOP & beta_252:TOP,share of up days 63d top 20% AND beta top 20%,0.4069926053557326,13929.0
-MSFT,Technology,high,6,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,up-capture top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%,0.3796436122017517,3311.0
-CNC,Healthcare,mid,6,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP,gain off 52w low top 20% AND net volume flow bottom 20% AND 126d Sharpe top 20%,0.3926553672316384,1416.0
-DAL,Industrials,high,6,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP,beta top 20% AND rvROC21<-10% AND 126d Sharpe top 20%,0.405010056683123,5469.0
-REGN,Healthcare,mid,6,ret_21:BOT & ret_63:TOP & z_obv_price_div_63:TOP,21d return bottom 20% AND 63d return top 20% AND OBV leading price vs own norm top 20%,0.3666666666666666,450.0
-SWK,Industrials,high,6,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP,Bollinger width vs norm bottom 20% AND beta top 20% AND 12-1m momentum vs own norm top 20%,0.4651927098894532,3347.0
-TRMB,Technology,high,6,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP,OBV leading price bottom 20% AND up-capture top 20% AND share of up days 63d top 20%,0.3708756345177665,3152.0
-EFX,Industrials,mid,6,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20%,downside vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3545878693623639,7073.0
-HST,Real Estate,mid,6,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20%,gain off 52w low top 20% AND downside/upside vol top 20% AND rvROC10<-20%,0.3747126436781609,870.0
-CHRW,Industrials,mid,6,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
-CMI,Industrials,high,6,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.4170522141440846,1513.0
-SLB,Energy,mid,5,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT,gain off 52w low top 20% AND downside/upside vol bottom 20% AND 21d return bottom 20%,0.3328197226502311,1298.0
-CARR,Industrials,high,5,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT,depth below 126d high bottom 20% AND beta top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3953875416072278,4206.0
-CMG,Consumer Cyclical,mid,5,ret_21:BOT & idio_vol_63:TOP,21d return bottom 20% AND idiosyncratic vol top 20%,0.3485323305129009,19146.0
-VTRS,Healthcare,mid,5,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3%,gain off 52w low top 20% AND dollar volume bottom 20% AND px5<-3%,0.4182389937106918,954.0
-DLTR,Consumer Defensive,mid,5,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,pullback from 21d high bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3889943074003795,1054.0
-LDOS,Technology,mid,4,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP,depth below 126d high bottom 20% AND downside/upside vol bottom 20% AND net volume flow top 20%,0.4732510288065844,486.0
-TYL,Technology,low,4,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND idiosyncratic vol top 20% AND OBV leading price bottom 20%,0.3418776033322653,3121.0
-EXPD,Industrials,mid,4,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP,gain off 52w low top 20% AND dollar volume bottom 20% AND up-capture top 20%,0.4036047634373994,3107.0
-BNY,Financial,mid,3,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND up/down volume bottom 20%,0.3864734299516908,828.0
-STLD,Basic Materials,high,3,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP,gain off 52w low top 20% AND rvROC21<-20% AND downside/upside vol vs own norm top 20%,0.3799301048427358,2003.0
-C,Financial,high,3,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT,beta top 20% AND 12-1m momentum top 20% AND RS line leading price vs own norm bottom 20%,0.4876434245366284,2266.0
-BXP,Real Estate,mid,3,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND vol of vol bottom 20%,0.3756756756756756,1110.0
-DLR,Real Estate,mid,3,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP,dollar-volume trend bottom 20% AND higher-low cadence bottom 20% AND up-capture top 20%,0.4763440860215053,1860.0
-DG,Consumer Defensive,mid,3,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.3846153846153846,442.0
-MAS,Industrials,high,3,bbw_pct_252:BOT & dn_vol_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20%,0.3642478211443729,10556.0
-GOOGL,Communication Services,high,3,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,beta top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4479603507434235,5246.0
-JKHY,Technology,low,3,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.3846153846153846,442.0
-HII,Industrials,mid,3,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT,depth below 126d high bottom 20% AND time since ignition day bottom 20% AND downside/upside vol bottom 20%,0.4196969696969697,660.0
-BLK,Financial,high,2,obv_price_div_63:BOT & up_capture_63:TOP,OBV leading price bottom 20% AND up-capture top 20%,0.3326932650593841,14061.0
-CPRT,Industrials,low,2,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT,depth below 126d high bottom 20% AND downside/upside vol bottom 20% AND vol of vol bottom 20%,0.4426229508196721,183.0
-FFIV,Technology,high,2,sharpe_126:TOP & up_capture_63:TOP,126d Sharpe top 20% AND up-capture top 20%,0.3889138644128754,22244.0
-COO,Healthcare,mid,2,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP,downside vol top 20% AND dollar volume bottom 20% AND volume vs 50d top 20%,0.3184865900383142,2088.0
-GOOG,Communication Services,high,2,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,beta top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4479603507434235,5246.0
-CBOE,Financial,low,2,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT,depth below 126d high bottom 20% AND up minus down capture top 20% AND volume on pullbacks bottom 20%,0.4320809248554913,692.0
-SYK,Healthcare,low,1,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,downside vol top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.3216035634743875,2245.0
-MRK,Healthcare,low,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
-MPC,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
-DXCM,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
-TMUS,Communication Services,low,1,range_comp_10_252:BOT & dn_vol_63:TOP,range compression bottom 20% AND downside vol top 20%,0.3875075195508322,9974.0
-PSX,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
-VLO,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
-A,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
-BAX,Healthcare,high,1,dist_52w_low:TOP & log_dvol_63:BOT,gain off 52w low top 20% AND dollar volume bottom 20%,0.3478943611705924,7005.0
-RVTY,Healthcare,high,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
-IQV,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
-ZTS,Healthcare,mid,1,base_depth_126:BOT & z_vol_dry_20_250:BOT,depth below 126d high bottom 20% AND volume vs 250d vs own norm bottom 20%,0.3677581863979849,7543.0
-WSM,Consumer Cyclical,high,1,sharpe_126:TOP & up_capture_63:TOP,126d Sharpe top 20% AND up-capture top 20%,0.3889138644128754,22244.0
-BDX,Healthcare,mid,0,,,,
+MRNA,Healthcare,high,391,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4257064721969006,1097.0
+PLTR,Technology,high,308,dn_vol_63:TOP & range_comp_10_252:BOT & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND range compression bottom 20% AND downside/upside vol vs own norm bottom 20%,0.4049079754601227,652.0
+ANET,Technology,high,271,base_depth_126:TOP & dn_vol_63:TOP & range_comp_10_252:BOT,depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%,0.3759512937595129,657.0
+SNDK,Technology,high,268,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.5007278020378457,687.0
+MU,Technology,high,238,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.5392156862745098,306.0
+AMD,Technology,high,228,base_depth_126:TOP & dn_vol_63:TOP & range_comp_10_252:BOT,depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%,0.3759512937595129,657.0
+FLEX,Technology,high,227,base_depth_126:BOT & beta_252:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND beta top 20% AND 126d Sharpe top 20%,0.5083665338645418,1255.0
+CRWD,Technology,high,226,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3709528214616096,1081.0
+SWKS,Technology,high,218,beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%,0.3919491525423729,1888.0
+HOOD,Financial,high,202,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4808612440191387,836.0
+DELL,Technology,high,201,bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP,Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%,0.4381578947368421,760.0
+BE,Industrials,high,197,bbw_pct_252:BOT & dn_vol_63:TOP & rs_spy_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND 63d RS vs SPY top 20%,0.4447327451997924,1927.0
+MRVL,Technology,high,193,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5267765190525232,1942.0
+LITE,Technology,high,191,base_depth_126:TOP & dn_vol_63:TOP & range_comp_10_252:BOT,depth below 126d high top 20% AND downside vol top 20% AND range compression bottom 20%,0.3759512937595129,657.0
+ACN,Technology,low,176,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4257064721969006,1097.0
+STX,Technology,high,170,dist_52w_high:BOT & net_vol_flow_63:TOP & sharpe_126:TOP,distance to 52w high bottom 20% AND net volume flow top 20% AND 126d Sharpe top 20%,0.4353448275862069,232.0
+HPE,Technology,high,167,beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%,0.4939873417721519,3160.0
+VRT,Industrials,high,167,bbw_pct_252:BOT & dist_52w_high:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%,0.4292682926829268,1025.0
+AMAT,Technology,high,166,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4808612440191387,836.0
+EL,Consumer Defensive,high,164,clv_21:BOT & days_since_20pct_dd:BOT & sharpe_126:TOP,close location in range bottom 20% AND time since 20% drawdown bottom 20% AND 126d Sharpe top 20%,0.6,270.0
+P,Technology,high,157,beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%,0.4939873417721519,3160.0
+WDC,Technology,high,146,bbw_pct_252:BOT & dist_52w_high:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%,0.4292682926829268,1025.0
+WDAY,Technology,mid,145,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3827281648675171,1019.0
+SMCI,Technology,high,142,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4808612440191387,836.0
+LRCX,Technology,high,132,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4808612440191387,836.0
+DDOG,Technology,high,129,dist_52w_high:TOP & dn_vol_63:TOP & rv20_pct_252:BOT,distance to 52w high top 20% AND downside vol top 20% AND 20d RV vs norm bottom 20%,0.3588785046728971,535.0
+ON,Technology,high,126,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP,distance to 52w high bottom 20% AND net volume flow top 20% AND 12-1m momentum vs own norm top 20%,0.4371727748691099,382.0
+ILMN,Healthcare,mid,125,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3480885311871227,497.0
+NEM,Basic Materials,high,120,beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,beta top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%,0.3919491525423729,1888.0
+NOW,Technology,mid,118,bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP,Bollinger width vs norm bottom 20% AND downside/upside vol bottom 20% AND downside vol top 20%,0.4381578947368421,760.0
+INTC,Technology,high,117,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4808612440191387,836.0
+GNRC,Industrials,high,117,base_depth_126:BOT & beta_252:TOP & dn_up_vol_asym_63:BOT,depth below 126d high bottom 20% AND beta top 20% AND downside/upside vol bottom 20%,0.4118967452300786,891.0
+TER,Technology,high,114,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT,accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.3440273037542662,1465.0
+FCX,Basic Materials,high,111,beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%,0.3549905838041431,4248.0
+HPQ,Technology,mid,102,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3480885311871227,497.0
+KLAC,Technology,high,101,base_depth_126:BOT & dist_52w_low:TOP & range_comp_10_252:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND range compression bottom 20%,0.4723304754481683,1283.0
+SNPS,Technology,high,100,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3709528214616096,1081.0
+CRM,Technology,mid,96,capture_spread_63:TOP & ret_21:BOT & up_capture_63:TOP,up minus down capture top 20% AND 21d return bottom 20% AND up-capture top 20%,0.4505190311418685,1445.0
+ZBRA,Technology,high,94,corr_spy_63:TOP & idio_vol_63:TOP & rv20_pct_252:BOT,corr to SPY top 20% AND idiosyncratic vol top 20% AND 20d RV vs norm bottom 20%,0.3356545961002785,1436.0
+GEV,Industrials,high,92,dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND downside/upside vol vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.4462719298245614,912.0
+NCLH,Consumer Cyclical,high,89,bbw_pct_252:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,Bollinger width vs norm bottom 20% AND up-capture top 20% AND up/down volume bottom 20%,0.3983957219251337,1122.0
+NVDA,Technology,high,89,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.5392156862745098,306.0
+MCHP,Technology,high,88,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP,downside vol top 20% AND range compression bottom 20% AND skew top 20%,0.405857740585774,956.0
+PTC,Technology,mid,86,dist_52w_low:TOP & log_dvol_63:BOT & mom_12_1:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND 12-1m momentum bottom 20%,0.4670781893004115,486.0
+GLW,Technology,high,85,corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP,corr to SPY top 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%,0.4692760942760943,2376.0
+PYPL,Financial,high,82,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3827281648675171,1019.0
+IT,Technology,mid,77,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT,downside/upside vol bottom 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.406547619047619,1680.0
+ARES,Financial,high,76,beta_252:TOP & pullback_vol_21:TOP & z_dn_up_vol_asym_63:BOT,beta top 20% AND volume on pullbacks top 20% AND downside/upside vol vs own norm bottom 20%,0.367311072056239,1138.0
+COHR,Technology,high,74,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4454926624737945,954.0
+ABNB,Consumer Cyclical,high,73,ret_21:BOT & rs_spy_63:TOP & up_capture_63:TOP,21d return bottom 20% AND 63d RS vs SPY top 20% AND up-capture top 20%,0.3725929243170622,2233.0
+FIX,Industrials,high,72,dist_52w_low:TOP & idio_vol_63:TOP & range_comp_10_252:BOT,gain off 52w low top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%,0.3877718506360279,4874.0
+MPWR,Technology,high,70,dist_52w_low:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.3863453815261044,1245.0
+PANW,Technology,high,68,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP,downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume vs own norm top 20%,0.5036330608537694,2202.0
+PWR,Industrials,high,67,dist_52w_high:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3575510204081633,1225.0
+IVZ,Financial,high,66,beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol vs own norm bottom 20% AND dollar volume vs own norm top 20%,0.4939873417721519,3160.0
+META,Communication Services,high,65,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4658413571756075,4362.0
+VEEV,Healthcare,mid,64,dist_52w_high:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3575510204081633,1225.0
+APH,Technology,high,60,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.5392156862745098,306.0
+COIN,Financial,high,59,clv_21:BOT & dist_52w_high:BOT & ret_63:TOP,close location in range bottom 20% AND distance to 52w high bottom 20% AND 63d return top 20%,0.4106463878326996,789.0
+XYZ,Technology,high,55,beta_252:TOP & range_comp_10_252:BOT & sharpe_126:TOP,beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%,0.3594771241830065,2448.0
+JBHT,Industrials,mid,54,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT,gain off 52w low top 20% AND higher-low cadence bottom 20% AND 21d return bottom 20%,0.430379746835443,1185.0
+RDDT,Communication Services,high,54,bbw_pct_252:BOT & beta_252:TOP & idio_vol_63:TOP,Bollinger width vs norm bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.392090586445834,5917.0
+CEG,Utilities,high,52,beta_252:TOP & days_since_20pct_dd:BOT & dn_up_vol_asym_63:BOT,beta top 20% AND time since 20% drawdown bottom 20% AND downside/upside vol bottom 20%,0.3320867614061331,1337.0
+GS,Financial,high,51,range_comp_10_252:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%,0.3952033368091762,959.0
+AMZN,Consumer Cyclical,high,50,beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%,0.3549905838041431,4248.0
+ADI,Technology,high,49,beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT,beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%,0.4369881109643329,3785.0
+CTSH,Technology,low,49,capture_spread_63:TOP & dist_52w_high:BOT & dist_52w_low:TOP,up minus down capture top 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%,0.455003599712023,1389.0
+FDS,Financial,low,46,bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT,Bollinger width vs norm bottom 20% AND downside vol top 20% AND downside/upside vol vs own norm bottom 20%,0.4090909090909091,594.0
+NTAP,Technology,high,45,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4658413571756075,4362.0
+ADSK,Technology,mid,44,dn_vol_63:TOP & mom_12_1:BOT & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3531499556344277,1127.0
+CIEN,Technology,high,44,base_depth_126:BOT & dist_52w_low:TOP & vol_of_vol_63:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND vol of vol bottom 20%,0.4748717948717949,975.0
+CAT,Industrials,high,43,dist_52w_low:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.3863453815261044,1245.0
+CCL,Consumer Cyclical,high,42,accum_dist_50:BOT & beta_252:TOP & dn_up_vol_asym_63:BOT,accumulation-distribution days bottom 20% AND beta top 20% AND downside/upside vol bottom 20%,0.3885647607934656,857.0
+AKAM,Technology,high,42,dn_vol_63:TOP & dvol_trend_21_126:TOP & skew_63:TOP,downside vol top 20% AND dollar-volume trend top 20% AND skew top 20%,0.4212454212454212,2730.0
+FTNT,Technology,high,42,dist_52w_high:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,distance to 52w high top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3575510204081633,1225.0
+CRL,Healthcare,high,41,idio_vol_63:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT,idiosyncratic vol top 20% AND 12-1m momentum top 20% AND OBV leading price vs own norm bottom 20%,0.3771157752200406,4431.0
+QCOM,Technology,high,39,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.5007278020378457,687.0
+LII,Industrials,high,39,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3885819521178637,1629.0
+TXN,Technology,high,38,beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT,beta top 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%,0.4369881109643329,3785.0
+TSLA,Consumer Cyclical,high,38,days_since_ignition:BOT & dn_vol_63:TOP & z_vol_dry_20_250:BOT,time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3375394321766561,1268.0
+KEYS,Technology,high,38,beta_252:TOP & skew_63:BOT & z_dist_52w_high:TOP,beta top 20% AND skew bottom 20% AND distance to 52w high vs own norm top 20%,0.3854047890535917,877.0
+HAL,Energy,mid,37,dist_52w_low:TOP & ret_21:BOT & sharpe_126:BOT,gain off 52w low top 20% AND 21d return bottom 20% AND 126d Sharpe bottom 20%,0.4455128205128205,312.0
+ETN,Industrials,high,36,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP,distance to 52w high top 20% AND downside vol top 20% AND overnight share of moves top 20%,0.5127681307456589,979.0
+EME,Industrials,high,36,beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,beta top 20% AND downside/upside vol bottom 20% AND OBV leading price vs own norm bottom 20%,0.3549905838041431,4248.0
+DVA,Healthcare,low,36,days_since_20pct_dd:BOT & dist_52w_low:TOP & log_dvol_63:BOT,time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND dollar volume bottom 20%,0.5555555555555556,585.0
+CVNA,Consumer Cyclical,high,35,beta_252:TOP & idio_vol_63:TOP & up_day_frac_63:TOP,beta top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%,0.4632665452337584,6588.0
+SW,Consumer Cyclical,high,35,range_comp_10_252:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,range compression bottom 20% AND up-capture top 20% AND up/down volume bottom 20%,0.3952033368091762,959.0
+GRMN,Technology,high,33,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP,up minus down capture top 20% AND net volume flow bottom 20% AND RS line leading price top 20%,0.3368983957219251,187.0
+KKR,Financial,high,32,range_comp_10_252:BOT & ret_21:BOT & up_capture_63:TOP,range compression bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.3802416488983653,1407.0
+JBL,Technology,high,32,dist_52w_low:TOP & px5<-3% & vol_dry_20_250:TOP,gain off 52w low top 20% AND px5<-3% AND volume vs 250d top 20%,0.4117361784675072,2062.0
+TEL,Technology,high,32,beta_252:TOP & higher_low_cadence:TOP & z_obv_price_div_63:BOT,beta top 20% AND higher-low cadence top 20% AND OBV leading price vs own norm bottom 20%,0.3531621790857858,3194.0
+GDDY,Technology,low,30,capture_spread_63:TOP & dist_52w_high:BOT & vol_dry_20_250:TOP,up minus down capture top 20% AND distance to 52w high bottom 20% AND volume vs 250d top 20%,0.3778751369112815,913.0
+CDW,Technology,mid,30,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP,downside vol top 20% AND 21d return bottom 20% AND distance to 52w high vs own norm top 20%,0.3774038461538461,416.0
+ORCL,Technology,high,29,accum_dist_50:TOP & beta_252:TOP & log_dvol_63:TOP,accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%,0.3670202507232401,5185.0
+GPN,Technology,high,28,ret_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3442622950819672,305.0
+HWM,Industrials,high,27,mom_12_1:TOP & z_dist_52w_high:BOT & z_rs_lead_126:BOT,12-1m momentum top 20% AND distance to 52w high vs own norm bottom 20% AND RS line leading price vs own norm bottom 20%,0.4096209912536443,686.0
+ECHO,Communication Services,high,26,base_depth_126:BOT & beta_252:TOP & skew_63:TOP,depth below 126d high bottom 20% AND beta top 20% AND skew top 20%,0.3797127468581687,2228.0
+CSGP,Real Estate,mid,26,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3885819521178637,1629.0
+VST,Utilities,high,25,base_depth_126:TOP & dn_vol_63:TOP & net_vol_flow_63:TOP,depth below 126d high top 20% AND downside vol top 20% AND net volume flow top 20%,0.4755417956656346,1615.0
+NRG,Utilities,high,24,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%,0.3662807954882754,3369.0
+ADBE,Technology,mid,24,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND rvROC21<-20% AND downside/upside vol vs own norm bottom 20%,0.3657056145675265,1318.0
+COF,Financial,high,22,ret_21:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT,21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3231622746185853,1442.0
+FSLR,Technology,high,22,mom_12_1:BOT & ret_21:BOT & up_capture_63:TOP,12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.3300198807157057,1006.0
+APP,Communication Services,high,22,dn_vol_63:TOP & range_comp_10_252:BOT & rs_lead_126:TOP,downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%,0.4613596746077861,1721.0
+LUV,Industrials,high,22,gap_share_21:TOP & rs_spy_63:BOT & up_capture_63:TOP,overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%,0.4674835061262959,2122.0
+IQV,Healthcare,mid,22,dist_52w_low:TOP & volROC21>+25% & z_rv20_pct_252:BOT,gain off 52w low top 20% AND volROC21>+25% AND 20d RV vs norm vs own norm bottom 20%,0.4043715846994535,1098.0
+IBKR,Financial,high,21,beta_252:TOP & range_comp_10_252:BOT & sharpe_126:TOP,beta top 20% AND range compression bottom 20% AND 126d Sharpe top 20%,0.3594771241830065,2448.0
+APO,Financial,high,21,ret_21:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT,21d return bottom 20% AND up-capture top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3231622746185853,1442.0
+BIIB,Healthcare,mid,20,volROC21>+50% & z_mom_12_1:TOP & z_rv20_pct_252:BOT,volROC21>+50% AND 12-1m momentum vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3431952662721893,169.0
+DAL,Industrials,high,19,rv20_pct_252:BOT & up_capture_63:TOP & volROC21>+50%,20d RV vs norm bottom 20% AND up-capture top 20% AND volROC21>+50%,0.4285714285714285,182.0
+DXCM,Healthcare,mid,19,dist_52w_low:TOP & px5<-3% & range_comp_10_252:BOT,gain off 52w low top 20% AND px5<-3% AND range compression bottom 20%,0.3865546218487395,1547.0
+ALGN,Healthcare,high,19,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP,beta top 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%,0.4879275653923541,1988.0
+BAX,Healthcare,high,19,dist_52w_low:TOP & log_dvol_63:BOT & z_obv_price_div_63:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%,0.3698539176626826,1506.0
+BEN,Financial,high,18,dist_52w_low:TOP & log_dvol_63:BOT & z_obv_price_div_63:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND OBV leading price vs own norm bottom 20%,0.3698539176626826,1506.0
+BX,Financial,high,17,mom_12_1:BOT & ret_21:BOT & up_capture_63:TOP,12-1m momentum bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.3300198807157057,1006.0
+DOW,Basic Materials,low,16,dist_52w_high:BOT & z_mom_12_1:TOP & z_vol_dry_20_250:BOT,distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20% AND volume vs 250d vs own norm bottom 20%,0.4368174726989079,641.0
+GEN,Technology,mid,15,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3162518301610542,2049.0
+CF,Basic Materials,low,15,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT,up minus down capture top 20% AND gain off 52w low top 20% AND 21d return bottom 20%,0.4306608884073672,1846.0
+LULU,Consumer Cyclical,high,15,beta_252:TOP & obv_price_div_63:BOT & rv_ratio_20_60:BOT,beta top 20% AND OBV leading price bottom 20% AND 20d/60d RV bottom 20%,0.3558792924037461,1922.0
+INTU,Technology,mid,15,dn_vol_63:TOP & mom_12_1:BOT & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND 12-1m momentum bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3531499556344277,1127.0
+A,Healthcare,mid,14,dist_52w_low:TOP & px5<-3% & rs_spy_63:TOP,gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%,0.3904382470119522,4769.0
+EMR,Industrials,high,13,beta_252:TOP & capture_spread_63:TOP & vol_of_vol_63:BOT,beta top 20% AND up minus down capture top 20% AND vol of vol bottom 20%,0.4314858891533492,2941.0
+PCG,Utilities,low,13,idio_vol_63:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP,idiosyncratic vol top 20% AND share of up days 63d top 20% AND dollar volume vs own norm top 20%,0.4745319982585981,4594.0
+AXON,Industrials,high,13,beta_252:TOP & idio_vol_63:TOP & range_comp_10_252:BOT,beta top 20% AND idiosyncratic vol top 20% AND range compression bottom 20%,0.395938205172713,5761.0
+ALB,Basic Materials,high,12,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT,beta top 20% AND 12-1m momentum top 20% AND 126d Sharpe bottom 20%,0.4108391608391608,572.0
+EXPD,Industrials,mid,12,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP,gain off 52w low top 20% AND dollar volume bottom 20% AND up-capture top 20%,0.4012583012932541,2861.0
+SWK,Industrials,high,11,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP,Bollinger width vs norm bottom 20% AND beta top 20% AND 12-1m momentum vs own norm top 20%,0.4474708171206226,3084.0
+TRMB,Technology,high,11,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP,OBV leading price bottom 20% AND up-capture top 20% AND share of up days 63d top 20%,0.3642450619350519,2987.0
+SKYD,Communication Services,mid,11,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3162518301610542,2049.0
+DLTR,Consumer Defensive,mid,11,ret_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3442622950819672,305.0
+IBM,Technology,high,11,dn_vol_63:TOP & range_comp_10_252:BOT & rs_lead_126:TOP,downside vol top 20% AND range compression bottom 20% AND RS line leading price top 20%,0.4613596746077861,1721.0
+PSX,Energy,low,11,dist_52w_low:TOP & obv_price_div_63:BOT & vol_dry_20_250:TOP,gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%,0.3825187969924812,3192.0
+GOOGL,Communication Services,high,11,accum_dist_50:TOP & beta_252:TOP & log_dvol_63:TOP,accumulation-distribution days top 20% AND beta top 20% AND dollar volume top 20%,0.3670202507232401,5185.0
+AVGO,Technology,high,10,base_depth_126:BOT & range_comp_10_252:BOT & up_capture_63:TOP,depth below 126d high bottom 20% AND range compression bottom 20% AND up-capture top 20%,0.4285714285714285,1722.0
+MS,Financial,high,10,mom_12_1:TOP & updown_vol_ratio_50:BOT & z_rs_lead_126:BOT,12-1m momentum top 20% AND up/down volume bottom 20% AND RS line leading price vs own norm bottom 20%,0.3989314336598397,1123.0
+ARE,Real Estate,mid,10,days_since_ignition:BOT & dn_vol_63:TOP & z_vol_dry_20_250:BOT,time since ignition day bottom 20% AND downside vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3375394321766561,1268.0
+APTV,Consumer Cyclical,high,10,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3885819521178637,1629.0
+MRK,Healthcare,low,10,dist_52w_low:TOP & px5<-3% & rs_spy_63:TOP,gain off 52w low top 20% AND px5<-3% AND 63d RS vs SPY top 20%,0.3904382470119522,4769.0
+HST,Real Estate,mid,9,dist_52w_low:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.3569438917628332,2513.0
+LYB,Basic Materials,low,9,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP,depth below 126d high bottom 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%,0.562,1000.0
+CARR,Industrials,high,9,beta_252:TOP & range_comp_10_252:BOT & vol_of_vol_63:TOP,beta top 20% AND range compression bottom 20% AND vol of vol top 20%,0.3439926907263591,2189.0
+SLB,Energy,mid,9,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT,gain off 52w low top 20% AND downside/upside vol bottom 20% AND 21d return bottom 20%,0.3249581239530988,1194.0
+ISRG,Healthcare,high,8,dn_vol_63:TOP & log_dvol_63:TOP & net_vol_flow_63:TOP,downside vol top 20% AND dollar volume top 20% AND net volume flow top 20%,0.45662100456621,3285.0
+TECH,Healthcare,mid,8,dist_52w_low:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,gain off 52w low top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.3569438917628332,2513.0
+RCL,Consumer Cyclical,high,8,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%,0.3662807954882754,3369.0
+BBY,Consumer Cyclical,mid,8,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,pullback from 21d high bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3824662813102119,1038.0
+BSX,Healthcare,low,8,bbw_pct_252:BOT & dist_52w_high:BOT & pullback_21:BOT,Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND pullback from 21d high bottom 20%,0.340878828229028,2253.0
+RVTY,Healthcare,high,8,dist_52w_low:TOP & obv_price_div_63:BOT & vol_dry_20_250:TOP,gain off 52w low top 20% AND OBV leading price bottom 20% AND volume vs 250d top 20%,0.3825187969924812,3192.0
+MGM,Consumer Cyclical,mid,8,days_since_20pct_dd:BOT & log_dvol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%,0.4402390438247012,502.0
+HII,Industrials,mid,8,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT,depth below 126d high bottom 20% AND time since ignition day bottom 20% AND downside/upside vol bottom 20%,0.4186851211072664,578.0
+EXPE,Consumer Cyclical,high,8,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT,downside vol top 20% AND share of up days 63d top 20% AND vol of vol bottom 20%,0.4985968194574368,1069.0
+CMI,Industrials,high,7,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.4010989010989011,1456.0
+ROK,Industrials,high,7,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP,beta top 20% AND higher-low cadence bottom 20% AND 126d Sharpe top 20%,0.4581005586592179,358.0
+MSFT,Technology,high,7,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,up-capture top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%,0.3738437001594896,3135.0
+UAL,Industrials,high,7,gap_share_21:TOP & rs_spy_63:BOT & up_capture_63:TOP,overnight share of moves top 20% AND 63d RS vs SPY bottom 20% AND up-capture top 20%,0.4674835061262959,2122.0
+CPRT,Industrials,low,7,dist_52w_high:BOT & dn_up_vol_asym_63:BOT & pullback_21:BOT,distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%,0.3206521739130434,920.0
+DASH,Consumer Cyclical,high,7,dist_52w_high:BOT & rs_lead_126:TOP & up_capture_63:TOP,distance to 52w high bottom 20% AND RS line leading price top 20% AND up-capture top 20%,0.4146959459459459,2368.0
+PFE,Healthcare,mid,6,log_dvol_63:TOP & px5<-3% & ret_63:TOP,dollar volume top 20% AND px5<-3% AND 63d return top 20%,0.3885760257441673,2486.0
+CME,Financial,low,6,nr7_count_20:BOT & rs_spy_63:TOP & z_dist_52w_high:BOT,NR7 count bottom 20% AND 63d RS vs SPY top 20% AND distance to 52w high vs own norm bottom 20%,0.3264462809917355,242.0
+FDX,Industrials,high,6,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT,accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND net volume flow bottom 20%,0.518022657054583,1942.0
+ERIE,Financial,low,6,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3162518301610542,2049.0
+CNC,Healthcare,mid,6,dist_52w_low:TOP & net_vol_flow_63:BOT & range_comp_10_252:BOT,gain off 52w low top 20% AND net volume flow bottom 20% AND range compression bottom 20%,0.3525773195876289,970.0
+VTRS,Healthcare,mid,6,dist_52w_low:TOP & log_dvol_63:BOT & rv20_pct_252:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND 20d RV vs norm bottom 20%,0.3474207582349285,1609.0
+CDNS,Technology,high,6,accum_dist_50:TOP & beta_252:TOP & clv_21:TOP,accumulation-distribution days top 20% AND beta top 20% AND close location in range top 20%,0.3838759012453572,4577.0
+TPR,Consumer Cyclical,high,6,bbw_pct_252:BOT & dn_vol_63:TOP & range_comp_10_252:BOT,Bollinger width vs norm bottom 20% AND downside vol top 20% AND range compression bottom 20%,0.3673680579510175,2899.0
+CASY,Consumer Cyclical,low,6,idio_vol_63:TOP & z_log_dvol_63:TOP & z_obv_price_div_63:TOP,idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%,0.349014181943964,2891.0
+CRH,Basic Materials,high,6,beta_252:TOP & rs_lead_126:BOT & z_rv20_pct_252:BOT,beta top 20% AND RS line leading price bottom 20% AND 20d RV vs norm vs own norm bottom 20%,0.3592017738359201,902.0
+C,Financial,high,5,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT,beta top 20% AND 12-1m momentum top 20% AND RS line leading price vs own norm bottom 20%,0.4575860397479399,2063.0
+TSCO,Consumer Cyclical,mid,5,base_depth_126:BOT & updown_vol_ratio_50:TOP & z_dn_up_vol_asym_63:BOT,depth below 126d high bottom 20% AND up/down volume top 20% AND downside/upside vol vs own norm bottom 20%,0.4600550964187327,363.0
+TYL,Technology,low,5,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND idiosyncratic vol top 20% AND OBV leading price bottom 20%,0.342512908777969,2905.0
+CBOE,Financial,low,5,base_depth_126:BOT & capture_spread_63:TOP & ignition_mult_10:TOP,depth below 126d high bottom 20% AND up minus down capture top 20% AND ignition-day volume top 20%,0.4012738853503185,471.0
+CPAY,Technology,high,5,dist_52w_low:TOP & range_comp_10_252:BOT & rv20_pct_252:BOT,gain off 52w low top 20% AND range compression bottom 20% AND 20d RV vs norm bottom 20%,0.3196059431524548,6192.0
+LDOS,Technology,mid,5,dist_52w_high:BOT & dn_up_vol_asym_63:BOT & pullback_21:BOT,distance to 52w high bottom 20% AND downside/upside vol bottom 20% AND pullback from 21d high bottom 20%,0.3206521739130434,920.0
+IP,Consumer Cyclical,high,5,base_depth_126:BOT & skew_63:TOP & volROC21>+25%,depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%,0.3016605166051661,1084.0
+CMG,Consumer Cyclical,mid,4,ret_21:BOT & idio_vol_63:TOP,21d return bottom 20% AND idiosyncratic vol top 20%,0.3359365893460776,17158.0
+TPL,Energy,mid,4,idio_vol_63:TOP & log_dvol_63:BOT & vol_of_vol_63:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND vol of vol bottom 20%,0.4116997792494481,906.0
+TMO,Healthcare,mid,4,log_dvol_63:TOP & px5<-3% & ret_63:TOP,dollar volume top 20% AND px5<-3% AND 63d return top 20%,0.3885760257441673,2486.0
+WY,Real Estate,mid,4,base_depth_126:BOT & skew_63:TOP & volROC21>+50%,depth below 126d high bottom 20% AND skew top 20% AND volROC21>+50%,0.3367983367983368,481.0
+REGN,Healthcare,mid,4,ret_21:BOT & ret_63:TOP & z_obv_price_div_63:TOP,21d return bottom 20% AND 63d return top 20% AND OBV leading price vs own norm top 20%,0.3697674418604651,430.0
+CHTR,Communication Services,mid,4,idio_vol_63:TOP & pullback_21:BOT & rvROC21<-20%,idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3486983916431769,6031.0
+INVH,Real Estate,low,4,pullback_vol_21:TOP & volROC21>+50% & z_rv20_pct_252:BOT,volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%,0.366412213740458,262.0
+EG,Financial,low,4,pullback_vol_21:TOP & volROC21>+50% & z_rv20_pct_252:BOT,volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%,0.366412213740458,262.0
+DG,Consumer Defensive,mid,4,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.4015151515151515,396.0
+DGX,Healthcare,low,4,capture_spread_63:TOP & updown_vol_ratio_50:BOT & volROC21>+25%,up minus down capture top 20% AND up/down volume bottom 20% AND volROC21>+25%,0.3211920529801324,302.0
+NXPI,Technology,high,4,dn_vol_63:TOP & dvol_trend_21_126:BOT & range_comp_10_252:BOT,downside vol top 20% AND dollar-volume trend bottom 20% AND range compression bottom 20%,0.3321734475374732,3736.0
+JKHY,Technology,low,4,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.4015151515151515,396.0
+GOOG,Communication Services,high,4,bbw_pct_252:BOT & beta_252:TOP & updown_vol_ratio_50:TOP,Bollinger width vs norm bottom 20% AND beta top 20% AND up/down volume top 20%,0.3916666666666666,2400.0
+AMGN,Healthcare,mid,4,log_dvol_63:TOP & px5<-3% & ret_63:TOP,dollar volume top 20% AND px5<-3% AND 63d return top 20%,0.3885760257441673,2486.0
+L,Financial,low,3,volROC21>+50% & z_log_dvol_63:TOP & z_rv20_pct_252:BOT,volROC21>+50% AND dollar volume vs own norm top 20% AND 20d RV vs norm vs own norm bottom 20%,0.337719298245614,228.0
+COP,Energy,low,3,corr_spy_63:BOT & dist_52w_low:TOP & gap_share_21:TOP,corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%,0.3789209535759096,797.0
+BMY,Healthcare,low,3,ret_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,21d return bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3442622950819672,305.0
+CINF,Financial,low,3,pullback_vol_21:TOP & volROC21>+50% & z_rv20_pct_252:BOT,volume on pullbacks top 20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%,0.366412213740458,262.0
+GM,Consumer Cyclical,high,3,mom_12_1:TOP & volROC21>+50% & z_rs_lead_126:BOT,12-1m momentum top 20% AND volROC21>+50% AND RS line leading price vs own norm bottom 20%,0.36,275.0
+DVN,Energy,low,3,corr_spy_63:BOT & dist_52w_low:TOP & gap_share_21:TOP,corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%,0.3789209535759096,797.0
+SBAC,Real Estate,low,3,base_depth_126:BOT & skew_63:TOP & volROC21>+25%,depth below 126d high bottom 20% AND skew top 20% AND volROC21>+25%,0.3016605166051661,1084.0
+EIX,Utilities,low,3,idio_vol_63:TOP & z_log_dvol_63:TOP & z_obv_price_div_63:TOP,idiosyncratic vol top 20% AND dollar volume vs own norm top 20% AND OBV leading price vs own norm top 20%,0.349014181943964,2891.0
+APA,Energy,low,3,corr_spy_63:BOT & dist_52w_low:TOP & gap_share_21:TOP,corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%,0.3789209535759096,797.0
+FICO,Technology,mid,3,ret_21:BOT & idio_vol_63:TOP,21d return bottom 20% AND idiosyncratic vol top 20%,0.3359365893460776,17158.0
+MPC,Energy,low,3,corr_spy_63:BOT & dist_52w_low:TOP & gap_share_21:TOP,corr to SPY bottom 20% AND gain off 52w low top 20% AND overnight share of moves top 20%,0.3789209535759096,797.0
+BLK,Financial,high,3,obv_price_div_63:BOT & up_capture_63:TOP,OBV leading price bottom 20% AND up-capture top 20%,0.3210903210903211,12987.0
+STLD,Basic Materials,high,3,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP,gain off 52w low top 20% AND rvROC21<-20% AND downside/upside vol vs own norm top 20%,0.3787128712871287,1616.0
+CHRW,Industrials,mid,3,idio_vol_63:TOP & px5<-3%,idiosyncratic vol top 20% AND px5<-3%,0.344009336099585,15424.0
+URI,Industrials,high,3,dist_52w_low:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.3456140350877193,1140.0
+DLR,Real Estate,mid,3,higher_low_cadence:BOT & up_capture_63:TOP & z_rs_lead_126:BOT,higher-low cadence bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%,0.4379503602882306,1249.0
+DE,Industrials,mid,3,dist_52w_low:TOP & dvol_trend_21_126:TOP & z_rv20_pct_252:BOT,gain off 52w low top 20% AND dollar-volume trend top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3592989289191821,2054.0
+DPZ,Consumer Cyclical,low,3,dist_52w_high:BOT & pullback_21:BOT & z_dn_up_vol_asym_63:BOT,distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3310344827586207,1015.0
+BXP,Real Estate,mid,3,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND vol of vol bottom 20%,0.3724489795918367,980.0
+DHR,Healthcare,mid,2,rs_spy_63:TOP & px5<-3%,63d RS vs SPY top 20% AND px5<-3%,0.3328613903440464,7063.0
+VRSK,Industrials,low,2,dn_vol_63:TOP & z_vol_dry_20_250:BOT,downside vol top 20% AND volume vs 250d vs own norm bottom 20%,0.3660337552742616,9480.0
+BNY,Financial,mid,2,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND up/down volume bottom 20%,0.3770053475935829,748.0
+FFIV,Technology,high,2,dist_52w_low:TOP & up_capture_63:TOP,gain off 52w low top 20% AND up-capture top 20%,0.3885647938377888,35312.0
+WAB,Industrials,high,2,dist_52w_low:TOP & gap_share_21:TOP & nr7_count_20:BOT,gain off 52w low top 20% AND overnight share of moves top 20% AND NR7 count bottom 20%,0.3851109520400859,2794.0
+MOS,Basic Materials,mid,2,dist_52w_high:BOT & pullback_21:BOT & z_dn_up_vol_asym_63:BOT,distance to 52w high bottom 20% AND pullback from 21d high bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3310344827586207,1015.0
+EFX,Industrials,mid,2,dn_vol_63:TOP & parkinson_cc_20:TOP & z_obv_price_div_63:BOT,downside vol top 20% AND range vol / close vol top 20% AND OBV leading price vs own norm bottom 20%,0.3215158924205379,818.0
+PNR,Industrials,high,1,rv20_pct_252:BOT & dn_vol_63:TOP,20d RV vs norm bottom 20% AND downside vol top 20%,0.3244438982425955,8137.0
+PODD,Healthcare,mid,1,idio_vol_63:TOP & z_rs_lead_126:BOT,idiosyncratic vol top 20% AND RS line leading price vs own norm bottom 20%,0.3028957528957529,10360.0
+MAS,Industrials,high,1,bbw_pct_252:BOT & dn_vol_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20%,0.3459933222036728,9584.0
+BR,Technology,low,1,dist_52w_high:BOT & rs_lead_126:TOP & skew_63:TOP,distance to 52w high bottom 20% AND RS line leading price top 20% AND skew top 20%,0.3269537480063796,627.0
+HUM,Healthcare,mid,1,dist_52w_low:TOP & bbw_pct_252:BOT,gain off 52w low top 20% AND Bollinger width vs norm bottom 20%,0.343077177873468,12076.0
+TGT,Consumer Defensive,mid,1,dist_52w_low:TOP & bbw_pct_252:BOT,gain off 52w low top 20% AND Bollinger width vs norm bottom 20%,0.343077177873468,12076.0
+DHI,Consumer Cyclical,high,1,rvROC21<-20% & volROC21>+50% & z_rv20_pct_252:BOT,rvROC21<-20% AND volROC21>+50% AND 20d RV vs norm vs own norm bottom 20%,0.3587786259541984,262.0
+TMUS,Communication Services,low,1,range_comp_10_252:BOT & dn_vol_63:TOP,range compression bottom 20% AND downside vol top 20%,0.3495000574646592,8701.0
+VLO,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4017939993813795,9699.0
+WSM,Consumer Cyclical,high,1,sharpe_126:TOP & up_capture_63:TOP,126d Sharpe top 20% AND up-capture top 20%,0.3708323222518806,20605.0
+NWSA,Communication Services,mid,0,,,,
+O,Real Estate,low,0,,,,
+ODFL,Industrials,high,0,,,,
 BALL,Consumer Cyclical,low,0,,,,
+OKE,Energy,low,0,,,,
 BAC,Financial,mid,0,,,,
-COP,Energy,low,0,,,,
+RTX,Industrials,mid,0,,,,
 BA,Industrials,high,0,,,,
 AZO,Consumer Cyclical,low,0,,,,
-COR,Healthcare,low,0,,,,
-COST,Consumer Defensive,low,0,,,,
-CPAY,Technology,high,0,,,,
-BMY,Healthcare,low,0,,,,
-OXY,Energy,low,0,,,,
-SJM,Consumer Defensive,low,0,,,,
-SCHW,Financial,mid,0,,,,
 SBUX,Consumer Cyclical,mid,0,,,,
-SBAC,Real Estate,low,0,,,,
-RTX,Industrials,mid,0,,,,
-OKE,Energy,low,0,,,,
-ODFL,Industrials,high,0,,,,
-O,Real Estate,low,0,,,,
-CMS,Utilities,low,0,,,,
-NWS,Communication Services,mid,0,,,,
+SHW,Basic Materials,mid,0,,,,
+SJM,Consumer Defensive,low,0,,,,
+RF,Financial,mid,0,,,,
+RJF,Financial,mid,0,,,,
+DOC,Real Estate,mid,0,,,,
+REG,Real Estate,low,0,,,,
+DOV,Industrials,high,0,,,,
+RL,Consumer Cyclical,high,0,,,,
+RSG,Industrials,low,0,,,,
+ROST,Consumer Cyclical,mid,0,,,,
+RMD,Healthcare,mid,0,,,,
+ROL,Consumer Cyclical,low,0,,,,
+SCHW,Financial,mid,0,,,,
+DIS,Communication Services,mid,0,,,,
+CVS,Healthcare,low,0,,,,
+CVX,Energy,low,0,,,,
+DECK,Consumer Cyclical,high,0,,,,
+D,Utilities,low,0,,,,
+DD,Basic Materials,high,0,,,,
+MTD,Healthcare,mid,0,,,,
+MMM,Industrials,mid,0,,,,
+MNST,Consumer Defensive,low,0,,,,
+MO,Consumer Defensive,low,0,,,,
+DTE,Utilities,low,0,,,,
+PGR,Financial,low,0,,,,
+PH,Industrials,mid,0,,,,
+PHM,Consumer Cyclical,high,0,,,,
+PKG,Consumer Cyclical,mid,0,,,,
+BDX,Healthcare,mid,0,,,,
+DRI,Consumer Cyclical,mid,0,,,,
+PM,Consumer Defensive,low,0,,,,
+PNC,Financial,mid,0,,,,
+PAYX,Technology,low,0,,,,
+PCAR,Industrials,high,0,,,,
+PEG,Utilities,low,0,,,,
+PEP,Consumer Defensive,low,0,,,,
+PFG,Financial,mid,0,,,,
+PG,Consumer Defensive,low,0,,,,
+OMC,Communication Services,mid,0,,,,
+ORLY,Consumer Cyclical,low,0,,,,
+OTIS,Industrials,mid,0,,,,
+OXY,Energy,low,0,,,,
 NVR,Consumer Cyclical,mid,0,,,,
+NWS,Communication Services,mid,0,,,,
+PLD,Real Estate,mid,0,,,,
+TDY,Technology,high,0,,,,
+T,Communication Services,low,0,,,,
+SYY,Consumer Defensive,low,0,,,,
+SYK,Healthcare,low,0,,,,
+SYF,Financial,high,0,,,,
+TKO,Communication Services,mid,0,,,,
+TJX,Consumer Cyclical,low,0,,,,
 CLX,Consumer Defensive,mid,0,,,,
+IEX,Industrials,mid,0,,,,
+IDXX,Healthcare,high,0,,,,
+ICE,Financial,mid,0,,,,
+FERG,Industrials,high,0,,,,
+FE,Utilities,low,0,,,,
+FAST,Industrials,mid,0,,,,
+FRT,Real Estate,low,0,,,,
+AMT,Real Estate,low,0,,,,
+VLTO,Industrials,mid,0,,,,
+BKNG,Consumer Cyclical,high,0,,,,
+BG,Consumer Defensive,low,0,,,,
+BF-B,Consumer Defensive,low,0,,,,
+BRO,Financial,low,0,,,,
+BRK-B,Financial,low,0,,,,
+CCI,Real Estate,low,0,,,,
+CBRE,Real Estate,high,0,,,,
+SPGI,Financial,mid,0,,,,
+CAH,Healthcare,low,0,,,,
+TRV,Financial,low,0,,,,
+TROW,Financial,high,0,,,,
+TRGP,Energy,low,0,,,,
+STZ,Consumer Defensive,low,0,,,,
+STT,Financial,high,0,,,,
+STE,Healthcare,mid,0,,,,
+SRE,Utilities,low,0,,,,
+CB,Financial,low,0,,,,
+TFC,Financial,mid,0,,,,
+PSA,Real Estate,mid,0,,,,
+PRU,Financial,mid,0,,,,
+PPL,Utilities,low,0,,,,
+PPG,Basic Materials,high,0,,,,
+PNW,Utilities,low,0,,,,
+CMCSA,Communication Services,low,0,,,,
+AMP,Financial,mid,0,,,,
 CL,Consumer Defensive,low,0,,,,
-CINF,Financial,low,0,,,,
 CI,Healthcare,low,0,,,,
 CNP,Utilities,low,0,,,,
+CMS,Utilities,low,0,,,,
 CPT,Real Estate,low,0,,,,
-NWSA,Communication Services,mid,0,,,,
-MMM,Industrials,mid,0,,,,
-MTD,Healthcare,mid,0,,,,
+COST,Consumer Defensive,low,0,,,,
+COR,Healthcare,low,0,,,,
+COO,Healthcare,mid,0,,,,
+CHD,Consumer Defensive,low,0,,,,
+AME,Industrials,high,0,,,,
+AMCR,Consumer Cyclical,mid,0,,,,
+APD,Basic Materials,low,0,,,,
+AOS,Industrials,mid,0,,,,
+AON,Financial,low,0,,,,
+AXP,Financial,high,0,,,,
+AWK,Utilities,low,0,,,,
+AVY,Consumer Cyclical,mid,0,,,,
+TSN,Consumer Defensive,low,0,,,,
+VZ,Communication Services,low,0,,,,
+VTR,Real Estate,low,0,,,,
+V,Financial,mid,0,,,,
+VRSN,Technology,low,0,,,,
+WM,Industrials,low,0,,,,
+TXT,Industrials,mid,0,,,,
+TTWO,Communication Services,mid,0,,,,
+TT,Industrials,high,0,,,,
+ATO,Utilities,low,0,,,,
+HBAN,Financial,mid,0,,,,
+HUBB,Industrials,high,0,,,,
+HSY,Consumer Defensive,low,0,,,,
+HSIC,Healthcare,mid,0,,,,
+HRL,Consumer Defensive,low,0,,,,
+VICI,Real Estate,low,0,,,,
+ALLE,Industrials,mid,0,,,,
+ALL,Financial,low,0,,,,
+MRSH,Financial,low,0,,,,
+ABBV,Healthcare,low,0,,,,
+ABT,Healthcare,low,0,,,,
+AJG,Financial,low,0,,,,
+AIZ,Financial,low,0,,,,
+ACGL,Financial,low,0,,,,
+WFC,Financial,mid,0,,,,
+WELL,Real Estate,low,0,,,,
+WEC,Utilities,low,0,,,,
+AAPL,Technology,mid,0,,,,
+FISV,Technology,mid,0,,,,
+FIS,Technology,mid,0,,,,
+GEHC,Healthcare,mid,0,,,,
+GE,Industrials,high,0,,,,
+GD,Industrials,mid,0,,,,
+FTV,Technology,mid,0,,,,
+GL,Financial,mid,0,,,,
+GIS,Consumer Defensive,low,0,,,,
+HCA,Healthcare,low,0,,,,
+ED,Utilities,low,0,,,,
+ECL,Basic Materials,mid,0,,,,
+EBAY,Consumer Cyclical,mid,0,,,,
+DUK,Utilities,low,0,,,,
+EOG,Energy,low,0,,,,
+HON,Industrials,mid,0,,,,
+HLT,Consumer Cyclical,mid,0,,,,
+HIG,Financial,low,0,,,,
+HD,Consumer Cyclical,mid,0,,,,
+GILD,Healthcare,mid,0,,,,
+AEP,Utilities,low,0,,,,
+AEE,Utilities,low,0,,,,
+ADP,Technology,low,0,,,,
+ADM,Consumer Defensive,low,0,,,,
+ZTS,Healthcare,mid,0,,,,
+VRTX,Healthcare,mid,0,,,,
+BKR,Energy,mid,0,,,,
+XYL,Industrials,mid,0,,,,
+WAT,Healthcare,mid,0,,,,
+TDG,Industrials,mid,0,,,,
+UPS,Industrials,mid,0,,,,
+UNP,Industrials,low,0,,,,
+UNH,Healthcare,mid,0,,,,
+ULTA,Consumer Cyclical,mid,0,,,,
+UHS,Healthcare,low,0,,,,
+UDR,Real Estate,low,0,,,,
+UBER,Technology,high,0,,,,
+IFF,Basic Materials,mid,0,,,,
+WYNN,Consumer Cyclical,mid,0,,,,
+WTW,Financial,low,0,,,,
+WST,Healthcare,mid,0,,,,
+WRB,Financial,low,0,,,,
+WMT,Consumer Defensive,low,0,,,,
+WMB,Energy,low,0,,,,
+AIG,Financial,low,0,,,,
+ZBH,Healthcare,low,0,,,,
+AES,Utilities,mid,0,,,,
+VMC,Basic Materials,mid,0,,,,
+XOM,Energy,low,0,,,,
+XEL,Utilities,low,0,,,,
+SPG,Real Estate,mid,0,,,,
+SOLV,Healthcare,mid,0,,,,
+SO,Utilities,low,0,,,,
+SNA,Industrials,mid,0,,,,
+USB,Financial,mid,0,,,,
+AFL,Financial,low,0,,,,
+YUM,Consumer Cyclical,low,0,,,,
+LEN,Consumer Cyclical,high,0,,,,
+LVS,Consumer Cyclical,mid,0,,,,
+LOW,Consumer Cyclical,mid,0,,,,
+LNT,Utilities,low,0,,,,
+LMT,Industrials,low,0,,,,
+MCK,Healthcare,low,0,,,,
+MCD,Consumer Cyclical,low,0,,,,
+MAR,Consumer Cyclical,mid,0,,,,
+FITB,Financial,mid,0,,,,
+MA,Financial,mid,0,,,,
+LYV,Communication Services,mid,0,,,,
+MLM,Basic Materials,mid,0,,,,
+MKC,Consumer Defensive,low,0,,,,
+MET,Financial,mid,0,,,,
+MDT,Healthcare,low,0,,,,
+MDLZ,Consumer Defensive,low,0,,,,
+MCO,Financial,mid,0,,,,
+MAA,Real Estate,low,0,,,,
+CFG,Financial,high,0,,,,
 MTB,Financial,mid,0,,,,
 MSI,Technology,low,0,,,,
 MSCI,Financial,mid,0,,,,
-MRSH,Financial,low,0,,,,
+VMRK,Real Estate,low,0,,,,
 NI,Utilities,low,0,,,,
 NFLX,Communication Services,mid,0,,,,
-SHW,Basic Materials,mid,0,,,,
-NDSN,Industrials,mid,0,,,,
+NEE,Utilities,low,0,,,,
+LH,Healthcare,mid,0,,,,
 NDAQ,Financial,mid,0,,,,
 NUE,Basic Materials,high,0,,,,
 NTRS,Financial,high,0,,,,
@@ -241,221 +456,8 @@ NOC,Industrials,low,0,,,,
 NKE,Consumer Cyclical,mid,0,,,,
 LLY,Healthcare,mid,0,,,,
 LIN,Basic Materials,low,0,,,,
-NEE,Utilities,low,0,,,,
-OTIS,Industrials,mid,0,,,,
-ORLY,Consumer Cyclical,low,0,,,,
-OMC,Communication Services,mid,0,,,,
-PG,Consumer Defensive,low,0,,,,
-PFG,Financial,mid,0,,,,
-PFE,Healthcare,mid,0,,,,
-PEP,Consumer Defensive,low,0,,,,
-PEG,Utilities,low,0,,,,
-PCAR,Industrials,high,0,,,,
-MNST,Consumer Defensive,low,0,,,,
-PNC,Financial,mid,0,,,,
-PM,Consumer Defensive,low,0,,,,
-PLD,Real Estate,mid,0,,,,
-PKG,Consumer Cyclical,mid,0,,,,
-PHM,Consumer Cyclical,high,0,,,,
-PH,Industrials,mid,0,,,,
-PGR,Financial,low,0,,,,
-MOS,Basic Materials,mid,0,,,,
-MO,Consumer Defensive,low,0,,,,
-PAYX,Technology,low,0,,,,
-SRE,Utilities,low,0,,,,
-SPGI,Financial,mid,0,,,,
-YUM,Consumer Cyclical,low,0,,,,
-TDG,Industrials,mid,0,,,,
-T,Communication Services,low,0,,,,
-SYY,Consumer Defensive,low,0,,,,
-SYF,Financial,high,0,,,,
-TMO,Healthcare,mid,0,,,,
-ROL,Consumer Cyclical,low,0,,,,
-STZ,Consumer Defensive,low,0,,,,
-ATO,Utilities,low,0,,,,
-VZ,Communication Services,low,0,,,,
-VTR,Real Estate,low,0,,,,
-VRTX,Healthcare,mid,0,,,,
-VRSN,Technology,low,0,,,,
-WM,Industrials,low,0,,,,
-WFC,Financial,mid,0,,,,
-TXT,Industrials,mid,0,,,,
-TKO,Communication Services,mid,0,,,,
-BKR,Energy,mid,0,,,,
-BKNG,Consumer Cyclical,high,0,,,,
-BIIB,Healthcare,mid,0,,,,
-BG,Consumer Defensive,low,0,,,,
-BF-B,Consumer Defensive,low,0,,,,
-BSX,Healthcare,low,0,,,,
-BRO,Financial,low,0,,,,
-BRK-B,Financial,low,0,,,,
-STE,Healthcare,mid,0,,,,
-CCI,Real Estate,low,0,,,,
-CBRE,Real Estate,high,0,,,,
-CB,Financial,low,0,,,,
-CAH,Healthcare,low,0,,,,
-TSCO,Consumer Cyclical,mid,0,,,,
-TRV,Financial,low,0,,,,
-TROW,Financial,high,0,,,,
-TRGP,Energy,low,0,,,,
-STT,Financial,high,0,,,,
-BR,Technology,low,0,,,,
-ADP,Technology,low,0,,,,
-TJX,Consumer Cyclical,low,0,,,,
-TGT,Consumer Defensive,mid,0,,,,
-TFC,Financial,mid,0,,,,
-TECH,Healthcare,mid,0,,,,
-PSA,Real Estate,mid,0,,,,
-PRU,Financial,mid,0,,,,
-PPL,Utilities,low,0,,,,
-TTWO,Communication Services,mid,0,,,,
-PNW,Utilities,low,0,,,,
-REG,Real Estate,low,0,,,,
-RSG,Industrials,low,0,,,,
-ROST,Consumer Cyclical,mid,0,,,,
 LHX,Industrials,mid,0,,,,
-RMD,Healthcare,mid,0,,,,
-RL,Consumer Cyclical,high,0,,,,
-RJF,Financial,mid,0,,,,
-RF,Financial,mid,0,,,,
-PPG,Basic Materials,high,0,,,,
-TT,Industrials,high,0,,,,
-TSN,Consumer Defensive,low,0,,,,
-URI,Industrials,high,0,,,,
-UPS,Industrials,mid,0,,,,
-UNP,Industrials,low,0,,,,
-UNH,Healthcare,mid,0,,,,
-ULTA,Consumer Cyclical,mid,0,,,,
-UHS,Healthcare,low,0,,,,
-UDR,Real Estate,low,0,,,,
-AEE,Utilities,low,0,,,,
-VMRK,Real Estate,low,0,,,,
-VMC,Basic Materials,mid,0,,,,
-VLTO,Industrials,mid,0,,,,
-TDY,Technology,high,0,,,,
-V,Financial,mid,0,,,,
-USB,Financial,mid,0,,,,
-AFL,Financial,low,0,,,,
-AES,Utilities,mid,0,,,,
-AEP,Utilities,low,0,,,,
-UBER,Technology,high,0,,,,
-FIS,Technology,mid,0,,,,
-GEHC,Healthcare,mid,0,,,,
-GE,Industrials,high,0,,,,
-GD,Industrials,mid,0,,,,
-FTV,Technology,mid,0,,,,
-GM,Consumer Cyclical,high,0,,,,
-GL,Financial,mid,0,,,,
-GIS,Consumer Defensive,low,0,,,,
-LVS,Consumer Cyclical,mid,0,,,,
-ED,Utilities,low,0,,,,
-ECL,Basic Materials,mid,0,,,,
-EBAY,Consumer Cyclical,mid,0,,,,
-DVN,Energy,low,0,,,,
-DUK,Utilities,low,0,,,,
-EOG,Energy,low,0,,,,
-AMT,Real Estate,low,0,,,,
-AMP,Financial,mid,0,,,,
-AMGN,Healthcare,mid,0,,,,
-GILD,Healthcare,mid,0,,,,
-HD,Consumer Cyclical,mid,0,,,,
-HCA,Healthcare,low,0,,,,
-HBAN,Financial,mid,0,,,,
-HUM,Healthcare,mid,0,,,,
-HUBB,Industrials,high,0,,,,
-HSY,Consumer Defensive,low,0,,,,
-HSIC,Healthcare,mid,0,,,,
-HRL,Consumer Defensive,low,0,,,,
-IFF,Basic Materials,mid,0,,,,
-FISV,Technology,mid,0,,,,
-IDXX,Healthcare,high,0,,,,
-ICE,Financial,mid,0,,,,
-FERG,Industrials,high,0,,,,
-FE,Utilities,low,0,,,,
-FAST,Industrials,mid,0,,,,
-FRT,Real Estate,low,0,,,,
-FOXA,Communication Services,low,0,,,,
-FOX,Communication Services,low,0,,,,
-FITB,Financial,mid,0,,,,
-IEX,Industrials,mid,0,,,,
-WYNN,Consumer Cyclical,mid,0,,,,
-WY,Real Estate,mid,0,,,,
-WTW,Financial,low,0,,,,
-WST,Healthcare,mid,0,,,,
-WRB,Financial,low,0,,,,
-WMT,Consumer Defensive,low,0,,,,
-WMB,Energy,low,0,,,,
-AIG,Financial,low,0,,,,
-AME,Industrials,high,0,,,,
-VICI,Real Estate,low,0,,,,
-XYL,Industrials,mid,0,,,,
-XOM,Energy,low,0,,,,
-XEL,Utilities,low,0,,,,
-SPG,Real Estate,mid,0,,,,
-SOLV,Healthcare,mid,0,,,,
-SO,Utilities,low,0,,,,
-SNA,Industrials,mid,0,,,,
-ADM,Consumer Defensive,low,0,,,,
-ZBH,Healthcare,low,0,,,,
-AMCR,Consumer Cyclical,mid,0,,,,
-APD,Basic Materials,low,0,,,,
-APA,Energy,low,0,,,,
-AOS,Industrials,mid,0,,,,
-AON,Financial,low,0,,,,
-AXP,Financial,high,0,,,,
-AWK,Utilities,low,0,,,,
-AVY,Consumer Cyclical,mid,0,,,,
-ALLE,Industrials,mid,0,,,,
-WAB,Industrials,high,0,,,,
-AAPL,Technology,mid,0,,,,
-ABBV,Healthcare,low,0,,,,
-AJG,Financial,low,0,,,,
-AIZ,Financial,low,0,,,,
-ABT,Healthcare,low,0,,,,
-ACGL,Financial,low,0,,,,
-WELL,Real Estate,low,0,,,,
-WEC,Utilities,low,0,,,,
-WAT,Healthcare,mid,0,,,,
-ALL,Financial,low,0,,,,
-LOW,Consumer Cyclical,mid,0,,,,
-LNT,Utilities,low,0,,,,
-LMT,Industrials,low,0,,,,
-MCK,Healthcare,low,0,,,,
-MCD,Consumer Cyclical,low,0,,,,
-MAR,Consumer Cyclical,mid,0,,,,
-MAA,Real Estate,low,0,,,,
-MA,Financial,mid,0,,,,
-HIG,Financial,low,0,,,,
-MLM,Basic Materials,mid,0,,,,
-MKC,Consumer Defensive,low,0,,,,
-MET,Financial,mid,0,,,,
-MDT,Healthcare,low,0,,,,
-MDLZ,Consumer Defensive,low,0,,,,
-MCO,Financial,mid,0,,,,
-IRM,Real Estate,high,0,,,,
-IR,Industrials,high,0,,,,
-IP,Consumer Cyclical,high,0,,,,
-LYV,Communication Services,mid,0,,,,
-LH,Healthcare,mid,0,,,,
-LEN,Consumer Cyclical,high,0,,,,
-D,Utilities,low,0,,,,
-CVX,Energy,low,0,,,,
-CVS,Healthcare,low,0,,,,
-DIS,Communication Services,mid,0,,,,
-DHR,Healthcare,mid,0,,,,
-DHI,Consumer Cyclical,high,0,,,,
-DGX,Healthcare,low,0,,,,
-CMCSA,Communication Services,low,0,,,,
-DE,Industrials,mid,0,,,,
-DTE,Utilities,low,0,,,,
-DRI,Consumer Cyclical,mid,0,,,,
-DPZ,Consumer Cyclical,low,0,,,,
-DOV,Industrials,high,0,,,,
-DOC,Real Estate,mid,0,,,,
-CHD,Consumer Defensive,low,0,,,,
-CFG,Financial,high,0,,,,
-CME,Financial,low,0,,,,
-DECK,Consumer Cyclical,high,0,,,,
+NDSN,Industrials,mid,0,,,,
 J,Industrials,high,0,,,,
 ITW,Industrials,mid,0,,,,
 KIM,Real Estate,low,0,,,,
@@ -464,8 +466,7 @@ KEY,Financial,mid,0,,,,
 KDP,Consumer Defensive,low,0,,,,
 JPM,Financial,mid,0,,,,
 JNJ,Healthcare,low,0,,,,
-L,Financial,low,0,,,,
-INVH,Real Estate,low,0,,,,
+IRM,Real Estate,high,0,,,,
 KR,Consumer Defensive,low,0,,,,
 KO,Consumer Defensive,low,0,,,,
 KMI,Energy,low,0,,,,
@@ -473,19 +474,19 @@ KMB,Consumer Defensive,low,0,,,,
 HAS,Consumer Cyclical,mid,0,,,,
 GWW,Industrials,mid,0,,,,
 GPC,Consumer Cyclical,mid,0,,,,
-HON,Industrials,mid,0,,,,
-HLT,Consumer Cyclical,mid,0,,,,
+FOXA,Communication Services,low,0,,,,
+FOX,Communication Services,low,0,,,,
 KVUE,Consumer Defensive,low,0,,,,
+IR,Industrials,high,0,,,,
 INCY,Healthcare,mid,0,,,,
 JCI,Industrials,high,0,,,,
 ELV,Healthcare,mid,0,,,,
-EG,Financial,low,0,,,,
 EVRG,Utilities,low,0,,,,
 ETR,Utilities,low,0,,,,
 ESS,Real Estate,low,0,,,,
 ES,Utilities,low,0,,,,
-EQT,Energy,low,0,,,,
-DD,Basic Materials,high,0,,,,
+CSCO,Technology,high,0,,,,
+EQIX,Real Estate,mid,0,,,,
 FANG,Energy,low,0,,,,
 F,Consumer Cyclical,high,0,,,,
 EXR,Real Estate,mid,0,,,,
@@ -494,5 +495,4 @@ EXC,Utilities,low,0,,,,
 EW,Healthcare,mid,0,,,,
 CTAS,Industrials,low,0,,,,
 CSX,Industrials,mid,0,,,,
-CSCO,Technology,high,0,,,,
-EQIX,Real Estate,mid,0,,,,
+EQT,Energy,low,0,,,,
