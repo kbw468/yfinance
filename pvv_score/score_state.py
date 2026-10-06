@@ -23,10 +23,25 @@ EXCLUDE_GROUPS = {"roc"}  # tested, did not improve out-of-sample IC; kept out o
 def main():
     import os
     sfx = "_smooth" if os.environ.get("PVV_TARGET", "").startswith("smooth") else ""
-    full = pd.read_parquet(CACHE_DIR / "research_long.parquet")
+    import pyarrow.parquet as pq
+    from .config import SAMPLE_START
     uni = load_universe()
+    schema_cols = pq.read_schema(CACHE_DIR / "research_long.parquet").names
+    reg0 = pd.read_csv(CACHE_DIR / "factor_registry.csv", index_col=0)
+    roc0 = set(reg0.index[reg0.group.isin(EXCLUDE_GROUPS)])
+    zneed = [c for c in schema_cols if c.startswith("z_") and c[2:] not in roc0]
+    keep_level = ["beta_252", "rv20", "mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "rs_spy_63", "sharpe_126", "rv20_pct_252",
+                  "vol_dry_20_250", "updown_vol_ratio_50", "obv_price_div_63", "dn_up_vol_asym_63", "corr_spy_63", "idio_vol_63", "days_since_20pct_dd",
+                  "ceiling_2x_low", "bbw_pct_252", "log_dvol_63", "amihud_21"]
+    need = ["date", "ticker", "sector", "eligible", "y_blend_spy", "xs_spy_sharpe_42", "xs_sec_sharpe_42", "smooth_42", "y_smooth"] + keep_level + zneed
+    need = [c for c in dict.fromkeys(need) if c in schema_cols]
+    full = pq.read_table(CACHE_DIR / "research_long.parquet", columns=need).to_pandas()
     asof = full.date.max()
-    df = full[full.eligible].reset_index(drop=True)
+    last = full[full.date == asof]
+    df = full[full.eligible & (full.date >= SAMPLE_START)].reset_index(drop=True)
+    for c in df.columns:
+        if df[c].dtype == "float64":
+            df[c] = df[c].astype("float32")
     df["beta_bucket"] = tercile_series(df)
     # Live weights exclude factor groups that failed the walk-forward test (the ROC family lowered OOS IC; see report 3b).
     reg = pd.read_csv(CACHE_DIR / "factor_registry.csv", index_col=0)
@@ -71,12 +86,14 @@ def main():
     from .composite import SECTOR_GROUP
     import pvv_score.composite as _c
     grp_map = {"defensive": "low", "cyclical": "mid", "growth": "high"}
-    trs = tr.copy()
+    trs = tr[["date", "ticker", "sector", "beta_bucket", _c.TARGET if _c.TARGET in tr.columns else "xs_spy_sharpe_42", "xs_sec_sharpe_42"] + zcols].copy()
     trs[zcols] = trs.groupby(["date", "sector"])[zcols].rank(pct=True).astype("float32")
     trs["sgrp"] = trs["sector"].map(SECTOR_GROUP)
-    tds = today.copy()
+    tds = today[["date", "ticker", "sector", "beta_bucket"] + zcols].copy()
     tds[zcols] = tds.groupby(["date", "sector"])[zcols].rank(pct=True).astype("float32")
     tds["sgrp"] = tds["sector"].map(SECTOR_GROUP)
+    del full
+    import gc; gc.collect()
     old_target = _c.TARGET
     _c.TARGET = "xs_sec_sharpe_42"
     sec_w = {}
@@ -98,7 +115,7 @@ def main():
     out = uni[["Company", "Sector", "SectorETF"]].copy()
     out.index.name = "ticker"
     hist = full.groupby("ticker").size()
-    last = full[full.date == asof].set_index("ticker")
+    last = last.set_index("ticker")
     out["sessions_of_history"] = hist.reindex(out.index).fillna(0).astype(int)
     out["eligible_today"] = last["eligible"].reindex(out.index).fillna(False).astype(bool)
     t = today.set_index("ticker")
