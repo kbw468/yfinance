@@ -20,7 +20,7 @@ from .evaluate import daily_ic, summarize_ic, nw_tstat
 from .run_eval import load_research, load_registry
 from .model import evaluate_prediction, decile_spread
 
-FACTORS = load_registry()
+FACTORS = {k: v for k, v in load_registry().items() if v[0] != "roc"}
 EMBARGO = 63
 T_MIN = 1.5
 RHO_MAX = 0.7
@@ -92,13 +92,30 @@ def walk_forward(df: pd.DataFrame, years=range(2017, 2027)) -> tuple[pd.Series, 
     return pooled, bucketed, log
 
 
-def main(state: bool = False):
-    global FACTORS
+SECTOR_GROUP = {
+    "Utilities": "defensive", "Consumer Defensive": "defensive", "Healthcare": "defensive", "Real Estate": "defensive",
+    "Industrials": "cyclical", "Financial": "cyclical", "Basic Materials": "cyclical", "Energy": "cyclical", "Consumer Cyclical": "cyclical",
+    "Technology": "growth", "Communication Services": "growth",
+}
+
+
+def main(state: bool = False, sector: bool = False):
+    """sector=True: target is Sharpe vs the name's own sector ETF, factor ranks are taken inside (date, sector),
+    and weights are fitted per sector group (defensive / cyclical / growth) instead of per beta tercile."""
+    global FACTORS, TARGET
     df = load_research().reset_index(drop=True)
-    df["beta_bucket"] = tercile_series(df)
     tag = "state" if state else "level"
     if state:
-        FACTORS = {c: ("state", 0, c) for c in df.columns if c.startswith("z_")}
+        FACTORS = {c: ("state", 0, c) for c in df.columns if c.startswith("z_") and c[2:] in load_registry() and load_registry()[c[2:]][0] != "roc"}
+    if sector:
+        tag += "_sector"
+        TARGET = "xs_sec_sharpe_42"
+        # within-sector percentile ranks replace raw factor values so the composite compares a name to its sector peers
+        fcols = list(FACTORS)
+        df[fcols] = df.groupby(["date", "sector"])[fcols].rank(pct=True).astype("float32")
+        df["beta_bucket"] = df["sector"].map(SECTOR_GROUP).map({"defensive": "low", "cyclical": "mid", "growth": "high"})
+    else:
+        df["beta_bucket"] = tercile_series(df)
     pooled, bucketed, log = walk_forward(df)
     df["comp_pooled"] = pooled
     df["comp_bucketed"] = bucketed
@@ -125,4 +142,4 @@ def main(state: bool = False):
 
 
 if __name__ == "__main__":
-    main(state="--state" in sys.argv)
+    main(state="--state" in sys.argv, sector="--sector" in sys.argv)
