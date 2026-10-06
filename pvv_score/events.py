@@ -6,7 +6,9 @@ days for one ticker are one cluster; the cluster's first day is the episode STAR
 (all data <= start) is "what preceded the move".
 
 For every state factor z_f (deviation from the name's own 3y norm), ranked cross-sectionally per date:
-  * mean rank at episode start minus 0.5 (baseline), with a cluster-robust t-stat
+  * mean rank PRE_LAG sessions before the episode start minus 0.5 (baseline), cluster-robust t-stat
+    (the start day itself is selection-contaminated: it is mechanically a local low, z_ret_5 t = -59 at t-0 and
+     flat at t-5, so t-0 is not used)
   * lift = P(episode | rank in top quintile) / P(episode) and the same for the bottom quintile
   * the rank path at 20, 10, 5, 0 sessions before the start (sequence: e.g. compression then expansion)
 Pooled, by window (full / recent) and by trailing-beta tercile.
@@ -21,6 +23,7 @@ from .composite import tercile_series
 
 EPISODE_Q = 0.90
 LAGS = (20, 10, 5, 0)
+PRE_LAG = 5  # sessions before the cluster start at which the 'preceding state' is measured (t-0 is selection-contaminated)
 
 
 def cluster_t(x: pd.Series, cl: pd.Series) -> tuple[float, float, int]:
@@ -54,14 +57,15 @@ def main():
     for win, start in [("full", None), ("recent", RECENT_START)]:
         Rw = R if start is None else R[R.date >= start]
         Sw = starts if start is None else starts[starts.date >= start]
-        key = Rw.set_index(["date", "ticker"])
+        key = Rw.set_index(["ticker", "pos"])
         for bucket in ["all", "low", "mid", "high"]:
             Rb = Rw if bucket == "all" else Rw[Rw.beta_bucket == bucket]
             Sb = Sw if bucket == "all" else Sw[Sw.beta_bucket == bucket]
             if len(Sb) < 30:
                 continue
-            idx = pd.MultiIndex.from_arrays([Sb.date, Sb.ticker])
+            idx = pd.MultiIndex.from_arrays([Sb.ticker, Sb.pos - PRE_LAG])
             at_start = key.reindex(idx)
+            at_start.index = pd.MultiIndex.from_arrays([Sb.date, Sb.ticker])
             pb = Rb.episode.mean()
             for f in zcols:
                 x = at_start[f].dropna()
@@ -87,7 +91,7 @@ def main():
 
     pd.set_option("display.width", 250, "display.max_rows", 120)
     v = prof[(prof.window == "recent") & (prof.bucket == "all")].set_index("factor").sort_values("t_cluster", key=np.abs, ascending=False)
-    print("\nRecent window, pooled: state factors at episode start (rank excess over 0.5; cluster t; lifts)")
+    print(f"\nRecent window, pooled: state factors {PRE_LAG} sessions BEFORE episode start (rank excess over 0.5; cluster t; lifts)")
     print(v[["mean_rank_excess", "t_cluster", "n_clusters", "lift_top_q", "lift_bottom_q"]].head(30).round(3).to_string())
     for b in ["low", "mid", "high"]:
         v = prof[(prof.window == "recent") & (prof.bucket == b)].set_index("factor").sort_values("t_cluster", key=np.abs, ascending=False)
