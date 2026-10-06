@@ -44,7 +44,9 @@ def main():
                 parts = item.split("|")
                 conds = parts[0].split(" & ")
                 sigs.append({"p": float(parts[1]), "n": int(parts[2]), "c": [chip(c, reg) for c in conds]})
-        rows.append({"rank": int(r["rank"]), "t": r.ticker, "co": r.Company, "sec": r.Sector, "bb": r.beta_bucket, "b": round(float(r.beta_252), 2) if pd.notna(r.beta_252) else None,
+        nm_n = int(sig["near_miss_n"].get(r.ticker, 0)) if r.ticker in sig.index and "near_miss_n" in sig.columns else 0
+        nm_p = sig["near_miss_piece"].get(r.ticker, "") if r.ticker in sig.index and "near_miss_piece" in sig.columns else ""
+        rows.append({"rank": int(r["rank"]), "t": r.ticker, "nmn": nm_n, "nmp": nm_p if isinstance(nm_p, str) else "", "co": r.Company, "sec": r.Sector, "bb": r.beta_bucket, "b": round(float(r.beta_252), 2) if pd.notna(r.beta_252) else None,
                      "p42": float(r.P_topq_42d), "p63": float(r.P_topq_63d), "basis": r.basis, "ns": int(r.n_signatures), "sigs": sigs, "states": r.top_states if isinstance(r.top_states, str) else ""})
     data = json.dumps(rows)
     html = f"""<title>THE LIST</title>
@@ -105,7 +107,8 @@ function render(){{
     const main=`<tr class="main ${{tier(r.p42)}}row" data-t="${{r.t}}"><td>${{r.rank}}</td><td class="p ${{tier(r.p42)}}">Tier ${{r.tier}}</td><td><b>${{r.t}}</b></td><td>${{r.sec}}</td><td>${{r.bb}}</td><td class="p">${{r.b==null?'':r.b.toFixed(2)}}</td><td class="p">${{(r.p42*100).toFixed(0)}}%</td><td class="p">${{(r.p63*100).toFixed(0)}}%</td><td class="p">${{r.ns}}</td><td>${{r.basis}}</td><td>${{r.sigs.length?chips(r.sigs[0]):'<span class="states">'+r.states+'</span>'}}</td></tr>`;
     if(!open.has(r.t))return main;
     const det=r.sigs.length?r.sigs.map(s=>`<div class="sigline"><span class="sigp">P ${{(s.p*100).toFixed(0)}}% n=${{s.n}}</span>${{chips(s)}}</div>`).join(''):'<div class="states">No confirmed signature fires. Probability from the multi-factor composite tier.</div>';
-    return main+`<tr class="detail"><td colspan="11">${{det}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
+    const near=r.nmn>0?`<div class="states" style="margin-top:6px"><b>One condition away:</b> ${{r.nmn}} confirmed signatures; most common missing piece: ${{r.nmp}}</div>`:'';
+    return main+`<tr class="detail"><td colspan="11">${{det}}${{near}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
   }}).join('');
   n.textContent=rows.length+' of '+D.length+' names';
   b.querySelectorAll('tr.main').forEach(tr=>tr.onclick=()=>{{const t=tr.dataset.t;open.has(t)?open.delete(t):open.add(t);render()}});

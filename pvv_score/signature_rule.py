@@ -90,11 +90,29 @@ def main():
             if len(top5[t]) < 5:
                 top5[t].append(f"{r.signature}|{r.p_conf:.2f}|{int(r.n_conf)}")
     today["top5_signatures"] = today.ticker.map(lambda t: " || ".join(top5.get(t, [])))
+    # one-condition-away count and most common missing piece per name
+    from collections import Counter
+    sig_parts = [r.signature.split(" & ") for _, r in conf.iterrows()]
+    cond_today = {k: v[tmask] for k, v in conds.items()}
+    tick_today = df.ticker.values[tmask]
+    near_n, near_miss = {}, {}
+    for j, tk in enumerate(tick_today):
+        live = {k for k, v in cond_today.items() if v[j]}
+        misses = Counter()
+        cnt = 0
+        for parts in sig_parts:
+            m = [c for c in parts if c not in live]
+            if len(m) == 1:
+                cnt += 1; misses[m[0]] += 1
+        near_n[tk] = cnt
+        near_miss[tk] = plain(misses.most_common(1)[0][0]) if misses else ""
+    today["near_miss_n"] = today.ticker.map(near_n)
+    today["near_miss_piece"] = today.ticker.map(near_miss)
     today["best_signature"] = today.best_sig_idx.map(lambda i: conf.signature.iloc[i] if i >= 0 else "")
     today["best_signature_plain"] = today.best_signature.map(lambda s: " AND ".join(plain(c) for c in s.split(" & ")) if s else "")
     today["best_p_conf"] = today.best_sig_idx.map(lambda i: conf.p_conf.iloc[i] if i >= 0 else np.nan)
     today["best_n_conf"] = today.best_sig_idx.map(lambda i: conf.n_conf.iloc[i] if i >= 0 else np.nan)
-    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures"]].sort_values(["n_fire"], ascending=False)
+    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
     print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
