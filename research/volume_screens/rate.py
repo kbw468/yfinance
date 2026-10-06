@@ -8,9 +8,17 @@ def lin(x, bad, good):
     return float(np.clip((x-bad)/(good-bad), 0, 1))
 def rate(T, show=False):
     sec = None
-    for i in range(3):
-        try: sec = yf.Ticker(T).info.get('sector'); break
-        except Exception: time.sleep(3*(i+1))
+    for i in range(4):
+        try:
+            sec = yf.Ticker(T).info.get('sector')
+            if sec: break
+        except Exception: pass
+        time.sleep(3*(i+1))
+    if not sec:  # fall back to the finviz universe file
+        try:
+            import os; u = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)),'universe_finviz.csv'), index_col='Ticker')
+            sec = {'Financial':'Financial Services'}.get(u.loc[T,'Sector'], u.loc[T,'Sector'])
+        except Exception: sec = None
     etf = SECTOR_ETF.get(sec, 'SPY')
     d = yf.download([T,'SPY',etf], period='3y', auto_adjust=True, progress=False, group_by='column')
     # drop today's partial bar if volume is <60% of 21d avg pace
