@@ -92,6 +92,17 @@ def forward_path_metrics(close: pd.DataFrame, h: int) -> dict:
     return {"mdd": mdd.where(valid), "r2": (r2 * slope_sign).where(valid), "up_frac": up_frac}
 
 
+def smooth_components(close: pd.DataFrame, horizons=HORIZONS) -> dict:
+    """Per-ticker forward path components only (fwd_sharpe/mdd/r2/up per horizon); percentiles are taken later."""
+    r = close.pct_change()
+    out = {}
+    for h in horizons:
+        sh, _ = sharpe_sortino(r, h)
+        pm = forward_path_metrics(close, h)
+        out[f"fwd_sharpe_{h}"] = sh; out[f"fwd_mdd_{h}"] = pm["mdd"]; out[f"fwd_r2_{h}"] = pm["r2"]; out[f"fwd_up_{h}"] = pm["up_frac"]
+    return out
+
+
 def smooth_path_target(close: pd.DataFrame, horizons=HORIZONS, beta: pd.DataFrame | None = None) -> dict:
     """Forward 'smooth climb' score. Four path components over t+1..t+h: Sharpe, -max drawdown, signed R^2 of the
     climb, up-day share. Each is converted to a per-date percentile WITHIN THE NAME'S BETA TERCILE (so a low-vol

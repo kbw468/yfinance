@@ -56,7 +56,7 @@ def _beta_corr(rs: pd.DataFrame, rm: pd.Series, w: int):
 
 
 # ----------------------------------------------------------------------------- main
-def compute_features(panel: dict, universe: pd.DataFrame, sector_bench: pd.DataFrame) -> dict[str, pd.DataFrame]:
+def compute_features(panel: dict, universe: pd.DataFrame, sector_bench: pd.DataFrame, cross_sectional: bool = True) -> dict[str, pd.DataFrame]:
     """panel: cleaned dict of wide frames. sector_bench: wide frame of each stock's sector-ETF CLOSE (aligned).
     Returns dict factor -> wide float32 DataFrame restricted to universe stocks."""
     stocks = [t for t in universe.index if t in panel["Close"].columns]
@@ -415,7 +415,11 @@ def compute_features(panel: dict, universe: pd.DataFrame, sector_bench: pd.DataF
     F["vol_up_rv_down"] = F["vol_roc_10"].clip(-1, 3) - F["rv20_roc_10"].clip(-1, 3)
     _reg("vol_up_rv_down", "roc", +1, "volume ROC(10) minus RV ROC(10): participation rising while vol falls")
 
-    # interactions the user explicitly described as setups
+    # interactions the user explicitly described as setups (cross-sectional ranks; build.py computes them after stacking when chunked)
+    _reg("dryup_x_tight", "interaction", +1, "rank sum: volume dry-up + range compression + proximity to 52w high (VCP-style)")
+    _reg("ignite_x_rs", "interaction", +1, "rank sum: recent ignition volume + 63d RS + up/down volume")
+    if not cross_sectional:
+        return {k: v.astype("float32") for k, v in F.items()}
     F["dryup_x_tight"] = (-F["vol_dry_20_250"]).rank(axis=1, pct=True) + (-F["range_comp_10_252"]).rank(axis=1, pct=True) + F["dist_52w_high"].rank(axis=1, pct=True)
     _reg("dryup_x_tight", "interaction", +1, "rank sum: volume dry-up + range compression + proximity to 52w high (VCP-style)")
     F["ignite_x_rs"] = F["ignition_mult_10"].rank(axis=1, pct=True) + F["rs_spy_63"].rank(axis=1, pct=True) + F["updown_vol_ratio_50"].rank(axis=1, pct=True)
