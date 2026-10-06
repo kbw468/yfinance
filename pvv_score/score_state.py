@@ -17,6 +17,8 @@ from .data_io import load_universe
 from .run_eval import load_research
 from .composite import tercile_series, fit_weights, score_rows
 
+EXCLUDE_GROUPS = {"roc"}  # tested, did not improve out-of-sample IC; kept out of the live score
+
 
 def main():
     full = pd.read_parquet(CACHE_DIR / "research_long.parquet")
@@ -24,7 +26,10 @@ def main():
     asof = full.date.max()
     df = full[full.eligible].reset_index(drop=True)
     df["beta_bucket"] = tercile_series(df)
-    zcols = [c for c in df.columns if c.startswith("z_")]
+    # Live weights exclude factor groups that failed the walk-forward test (the ROC family lowered OOS IC; see report 3b).
+    reg = pd.read_csv(CACHE_DIR / "factor_registry.csv", index_col=0)
+    excluded = set(reg.index[reg.group.isin(EXCLUDE_GROUPS)])
+    zcols = [c for c in df.columns if c.startswith("z_") and c[2:] not in excluded]
     lab = df["y_blend_spy"].notna()
     tr = df[lab]
 

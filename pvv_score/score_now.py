@@ -21,6 +21,7 @@ from .model import make_design, decay_weights, PARAMS, N_ROUNDS, EMBARGO, TRAIN_
 from .composite import tercile_series, fit_weights, score_rows
 
 FACTORS = load_registry()
+EXCLUDE_GROUPS = {"roc"}  # tested, did not improve out-of-sample IC; kept out of the live score
 ANALOG_FACTORS = ["mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "rs_spy_126", "sharpe_126", "corr_spy_63",
                   "beta_252", "rv20_pct_252", "vol_dry_20_250", "obv_price_div_63", "dn_up_vol_asym_63", "skew_63",
                   "days_since_20pct_dd", "base_depth_126", "gap_share_21", "up_capture_63", "idio_vol_63"]
@@ -49,7 +50,7 @@ def main():
     (imp / imp.sum()).sort_values(ascending=False).to_csv(RESULTS_DIR / "ml_final_feature_importance.csv")
 
     # ---------------- composite: weights per beta bucket on all labelled history
-    factors = list(FACTORS)
+    factors = [f for f, v in FACTORS.items() if v[0] not in EXCLUDE_GROUPS]
     tr = df[lab]
     samp = tr[tr.date >= tr.date.max() - pd.Timedelta(days=3 * 365)]
     samp = samp[samp.date.isin(sorted(samp.date.unique())[::10])]
