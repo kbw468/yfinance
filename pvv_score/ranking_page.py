@@ -5,7 +5,7 @@ from .config import RESULTS_DIR
 
 COLS = [("ticker", "Ticker", "s"), ("Sector", "Sector", "s"), ("beta_bucket", "Beta bucket", "s"),
         ("state_score_pooled", "State score (universe pct)", "n"), ("state_score", "State score (within beta)", "n"),
-        ("level_score", "Level score (identity-heavy)", "n"), ("avg_score", "Avg (state+level)/2", "n"), ("both_agree", "Both >= 0.8", "s"), ("ml_score", "ML pct", "n"),
+        ("level_score", "Level score (identity-heavy)", "n"), ("avg_score", "Avg (state+level)/2", "n"), ("p_top_half_42d", "P(top half 42d)", "n"), ("p_top_quartile_42d", "P(top quartile 42d)", "n"), ("both_agree", "Both >= 0.8", "s"), ("ml_score", "ML pct", "n"),
         ("z_mom_12_1", "z 12-1 mom", "n"), ("z_rs_lead_126", "z RS lead", "n"), ("z_dist_52w_high", "z dist 52w hi", "n"),
         ("z_rv20_pct_252", "z RV20 pct", "n"), ("z_bbw_pct_252", "z BB width", "n"), ("z_vol_dry_20_250", "z vol dry-up", "n"),
         ("z_updown_vol_ratio_50", "z up/dn vol", "n"), ("z_obv_price_div_63", "z OBV lead", "n"), ("z_dn_up_vol_asym_63", "z dn/up vol asym", "n"),
@@ -49,7 +49,7 @@ const h=document.getElementById('h'),b=document.getElementById('b'),q=document.g
 D.cols.forEach((c,i)=>{{const th=document.createElement('th');th.textContent=c[1];th.onclick=()=>{{if(sortCol===i)sortDir*=-1;else{{sortCol=i;sortDir=c[2]==='n'?-1:1}}render()}};h.appendChild(th)}});
 function render(){{
   const f=q.value.toLowerCase(),bk=bb.value;
-  let rows=D.rows.filter(r=>(!bk||r[2]===bk)&&(!f||[r[0],r[1],r[22],r[23]].join(' ').toLowerCase().includes(f)));
+  let rows=D.rows.filter(r=>(!bk||r[2]===bk)&&(!f||[r[0],r[1],r[24],r[25]].join(' ').toLowerCase().includes(f)));
   rows.sort((x,y)=>{{const a=x[sortCol],c=y[sortCol];if(a==null&&c==null)return 0;if(a==null)return 1;if(c==null)return -1;return (a<c?-1:a>c?1:0)*sortDir}});
   [...h.children].forEach((th,i)=>th.className=i===sortCol?'on':'');
   b.innerHTML=rows.map(r=>'<tr>'+r.map((v,i)=>{{const k=D.cols[i][2];let cls=k==='s'?'s':'';if(k==='n'&&D.cols[i][0].startsWith('z_')&&v!=null){{if(v>=1)cls='pos';else if(v<=-1)cls='neg'}}return `<td class="${{cls}}">${{v==null?'':v}}</td>`}}).join('')+'</tr>').join('');
