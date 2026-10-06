@@ -5,7 +5,7 @@ DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "results"
 CACHE_DIR = Path("/tmp/claude-0/-home-user-yfinance/6b0db6a0-0646-53b0-950e-60d46b6034fa/scratchpad/pvv_cache")
 
-UNIVERSE_CSV = DATA_DIR / "universe_finviz.csv"
+UNIVERSE_CSV = DATA_DIR / "universe_combined.csv"   # S&P 500 + S&P 400 (Finviz exports), deduplicated
 
 START = "2012-01-01"  # 10y backtest from 2014 + 2y warm-up
 

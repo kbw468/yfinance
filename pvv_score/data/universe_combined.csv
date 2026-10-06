@@ -1,0 +1,901 @@
+Ticker,Company,Sector,Industry,Market Cap,Index
+A,Agilent Technologies Inc,Healthcare,Diagnostics & Research,47774.25,SP500
+AAPL,Apple Inc,Technology,Consumer Electronics,4852665.4,SP500
+ABBV,Abbvie Inc,Healthcare,Drug Manufacturers - General,472253.25,SP500
+ABNB,Airbnb Inc,Consumer Cyclical,Travel Services,96051.21,SP500
+ABT,Abbott Laboratories,Healthcare,Medical Devices,171619.42,SP500
+ACGL,Arch Capital Group Ltd,Financial,Insurance - Diversified,32293.92,SP500
+ACN,Accenture plc,Technology,Information Technology Services,119273.7,SP500
+ADBE,Adobe Inc,Technology,Software - Application,92577.07,SP500
+ADI,Analog Devices Inc,Technology,Semiconductors,203788.85,SP500
+ADM,Archer Daniels Midland Co,Consumer Defensive,Farm Products,39783.36,SP500
+ADP,Automatic Data Processing Inc,Technology,Software - Application,104081.41,SP500
+ADSK,Autodesk Inc,Technology,Software - Application,47359.4,SP500
+AEE,Ameren Corp,Utilities,Utilities - Regulated Electric,27896.11,SP500
+AEP,American Electric Power Company Inc,Utilities,Utilities - Regulated Electric,65779.54,SP500
+AES,AES Corp,Utilities,Utilities - Diversified,10637.36,SP500
+AFL,Aflac Inc,Financial,Insurance - Life,56932.55,SP500
+AIG,American International Group Inc,Financial,Insurance - Diversified,39352.93,SP500
+AIZ,Assurant Inc,Financial,Insurance - Property & Casualty,13239.48,SP500
+AJG,Arthur J. Gallagher & Co,Financial,Insurance Brokers,58742.68,SP500
+AKAM,Akamai Technologies Inc,Technology,Software - Infrastructure,15531.46,SP500
+ALB,Albemarle Corp,Basic Materials,Specialty Chemicals,12591.14,SP500
+ALGN,Align Technology Inc,Healthcare,Medical Instruments & Supplies,10116.78,SP500
+ALL,Allstate Corp,Financial,Insurance - Property & Casualty,56463.18,SP500
+ALLE,Allegion plc,Industrials,Security & Protection Services,13199.2,SP500
+AMAT,Applied Materials Inc,Technology,Semiconductor Equipment & Materials,421491.44,SP500
+AMCR,Amcor Plc,Consumer Cyclical,Packaging & Containers,19473.31,SP500
+AMD,Advanced Micro Devices Inc,Technology,Semiconductors,1072927.84,SP500
+AME,Ametek Inc,Industrials,Specialty Industrial Machinery,58407.74,SP500
+AMGN,AMGEN Inc,Healthcare,Drug Manufacturers - General,216963.84,SP500
+AMP,Ameriprise Financial Inc,Financial,Asset Management,43290.34,SP500
+AMT,American Tower Corp,Real Estate,REIT - Specialty,76766.92,SP500
+AMZN,Amazon.com Inc,Consumer Cyclical,Internet Retail,2755471.96,SP500
+ANET,Arista Networks Inc,Technology,Computer Hardware,268281.38,SP500
+AON,Aon Plc,Financial,Insurance Brokers,58027.97,SP500
+AOS,A.O. Smith Corp,Industrials,Specialty Industrial Machinery,7838.53,SP500
+APA,APA Corp,Energy,Oil & Gas E&P,15499.55,SP500
+APD,Air Products & Chemicals Inc,Basic Materials,Specialty Chemicals,62739.41,SP500
+APH,Amphenol Corp,Technology,Electronic Components,220435.75,SP500
+APO,Apollo Global Management Inc,Financial,Asset Management,68207.74,SP500
+APP,Applovin Corp,Communication Services,Advertising Agencies,93068.12,SP500
+APTV,Aptiv Plc,Consumer Cyclical,Auto Parts,9256.3,SP500
+ARE,Alexandria Real Estate Equities Inc,Real Estate,REIT - Office,8091.15,SP500
+ARES,Ares Management Corp,Financial,Asset Management,38993.75,SP500
+ATO,Atmos Energy Corp,Utilities,Utilities - Regulated Gas,26882.7,SP500
+AVGO,Broadcom Inc,Technology,Semiconductors,1804695.2,SP500
+AVY,Avery Dennison Corp,Consumer Cyclical,Packaging & Containers,12955.98,SP500
+AWK,American Water Works Co Inc,Utilities,Utilities - Regulated Water,25389.61,SP500
+AXON,Axon Enterprise Inc,Industrials,Aerospace & Defense,33649.35,SP500
+AXP,American Express Co,Financial,Credit Services,205679.11,SP500
+AZO,Autozone Inc,Consumer Cyclical,Auto Parts,47543.35,SP500
+BA,Boeing Co,Industrials,Aerospace & Defense,150806.54,SP500
+BAC,Bank Of America Corp,Financial,Banks - Diversified,378062.94,SP500
+BALL,Ball Corp,Consumer Cyclical,Packaging & Containers,15290.59,SP500
+BAX,Baxter International Inc,Healthcare,Medical Instruments & Supplies,12503.55,SP500
+BBY,Best Buy Co Inc,Consumer Cyclical,Specialty Retail,18006.17,SP500
+BDX,Becton Dickinson & Co,Healthcare,Medical Instruments & Supplies,49323.94,SP500
+BE,Bloom Energy Corp,Industrials,Electrical Equipment & Parts,87462.84,SP500
+BEN,Franklin Templeton Inc,Financial,Asset Management,16547.3,SP500
+BF-B,Brown-Forman Corp,Consumer Defensive,Beverages - Wineries & Distilleries,12204.37,SP500
+BG,Bunge Global SA,Consumer Defensive,Farm Products,20688.34,SP500
+BIIB,Biogen Inc,Healthcare,Drug Manufacturers - General,32741.55,SP500
+BKNG,Booking Holdings Inc,Consumer Cyclical,Travel Services,117482.09,SP500
+BKR,Baker Hughes Co,Energy,Oil & Gas Equipment & Services,56907.23,SP500
+BLK,Blackrock Inc,Financial,Asset Management,175389.79,SP500
+BMY,Bristol-Myers Squibb Co,Healthcare,Drug Manufacturers - General,120755.08,SP500
+BNY,Bank Of New York Mellon Corp,Financial,Banks - Diversified,97511.77,SP500
+BR,Broadridge Financial Solutions Inc,Technology,Information Technology Services,18044.82,SP500
+BRK-B,Berkshire Hathaway Inc,Financial,Insurance - Diversified,974629.48,SP500
+BRO,Brown & Brown Inc,Financial,Insurance Brokers,20391.16,SP500
+BSX,Boston Scientific Corp,Healthcare,Medical Devices,61715.43,SP500
+BX,Blackstone Inc,Financial,Asset Management,140091.62,SP500
+BXP,BXP Inc,Real Estate,REIT - Office,10461.17,SP500
+C,Citigroup Inc,Financial,Banks - Diversified,215189.98,SP500
+CAH,Cardinal Health Inc,Healthcare,Medical Distribution,53764.9,SP500
+CARR,Carrier Global Corp,Industrials,Building Products & Equipment,46607.34,SP500
+CASY,Casey's General Stores Inc,Consumer Cyclical,Specialty Retail,22942.28,SP500
+CAT,Caterpillar Inc,Industrials,Farm & Heavy Construction Machinery,397770.46,SP500
+CB,Chubb Limited,Financial,Insurance - Property & Casualty,128999.89,SP500
+CBOE,Cboe Global Markets Inc,Financial,Financial Data & Stock Exchanges,28761.2,SP500
+CBRE,CBRE Group Inc,Real Estate,Real Estate Services,38118.01,SP500
+CCI,Crown Castle Inc,Real Estate,REIT - Specialty,29064.56,SP500
+CCL,Carnival Corp Ltd,Consumer Cyclical,Travel Services,35813.69,SP500
+CDNS,Cadence Design Systems Inc,Technology,Software - Application,98947.33,SP500
+CDW,CDW Corp,Technology,Information Technology Services,16931.12,SP500
+CEG,Constellation Energy Corp,Utilities,Utilities - Independent Power Producers,108814.88,SP500
+CF,CF Industries Holdings Inc,Basic Materials,Agricultural Inputs,17557.77,SP500
+CFG,Citizens Financial Group Inc,Financial,Banks - Regional,26963.78,SP500
+CHD,Church & Dwight Co Inc,Consumer Defensive,Household & Personal Products,22976.74,SP500
+CHRW,C.H. Robinson Worldwide Inc,Industrials,Integrated Freight & Logistics,15675.6,SP500
+CHTR,Charter Communications Inc,Communication Services,Telecom Services,19260.92,SP500
+CI,Cigna Group,Healthcare,Healthcare Plans,71623.71,SP500
+CIEN,CIENA Corp,Technology,Communication Equipment,61186.84,SP500
+CINF,Cincinnati Financial Corp,Financial,Insurance - Property & Casualty,24954.3,SP500
+CL,Colgate-Palmolive Co,Consumer Defensive,Household & Personal Products,69751.82,SP500
+CLX,Clorox Co,Consumer Defensive,Household & Personal Products,10160.62,SP500
+CMCSA,Comcast Corp,Communication Services,Telecom Services,76277.95,SP500
+CME,CME Group Inc,Financial,Financial Data & Stock Exchanges,96913.79,SP500
+CMG,Chipotle Mexican Grill,Consumer Cyclical,Restaurants,39411.44,SP500
+CMI,Cummins Inc,Industrials,Specialty Industrial Machinery,73410.96,SP500
+CMS,CMS Energy Corp,Utilities,Utilities - Regulated Electric,20269.62,SP500
+CNC,Centene Corp,Healthcare,Healthcare Plans,31534.17,SP500
+CNP,Centerpoint Energy Inc,Utilities,Utilities - Regulated Electric,25290.64,SP500
+COF,Capital One Financial Corp,Financial,Credit Services,120430.13,SP500
+COHR,Coherent Corp,Technology,Scientific & Technical Instruments,65862.3,SP500
+COIN,Coinbase Global Inc,Financial,Financial Data & Stock Exchanges,49669.14,SP500
+COO,Cooper Companies Inc,Healthcare,Medical Instruments & Supplies,10696.24,SP500
+COP,Conoco Phillips,Energy,Oil & Gas E&P,156065.76,SP500
+COR,Cencora Inc,Healthcare,Medical Distribution,59739.4,SP500
+COST,Costco Wholesale Corp,Consumer Defensive,Discount Stores,413352.22,SP500
+CPAY,Corpay Inc,Technology,Software - Infrastructure,26538.95,SP500
+CPRT,Copart Inc,Industrials,Specialty Business Services,25085.03,SP500
+CPT,Camden Property Trust,Real Estate,REIT - Residential,13259.34,SP500
+CRH,CRH Plc,Basic Materials,Building Materials,55800.73,SP500
+CRL,Charles River Laboratories International Inc,Healthcare,Diagnostics & Research,14733.17,SP500
+CRM,Salesforce Inc,Technology,Software - Application,186145.89,SP500
+CRWD,Crowdstrike Holdings Inc,Technology,Software - Infrastructure,285398.8,SP500
+CSCO,Cisco Systems Inc,Technology,Communication Equipment,457773.74,SP500
+CSGP,Costar Group Inc,Real Estate,Real Estate Services,11363.77,SP500
+CSX,CSX Corp,Industrials,Railroads,87835.09,SP500
+CTAS,Cintas Corp,Industrials,Specialty Business Services,78600.44,SP500
+CTSH,Cognizant Technology Solutions Corp,Technology,Information Technology Services,25923.07,SP500
+CTVA,Corteva Inc,Basic Materials,Agricultural Inputs,9225.43,SP500
+CVNA,Carvana Co,Consumer Cyclical,Auto & Truck Dealerships,70028.01,SP500
+CVS,CVS Health Corp,Healthcare,Healthcare Plans,109531.02,SP500
+CVX,Chevron Corp,Energy,Oil & Gas Integrated,411938.41,SP500
+D,Dominion Energy Inc,Utilities,Utilities - Regulated Electric,54222.77,SP500
+DAL,Delta Air Lines Inc,Industrials,Airlines,55298.79,SP500
+DASH,DoorDash Inc,Consumer Cyclical,Internet Retail,83722.52,SP500
+DD,DuPont de Nemours Inc,Basic Materials,Specialty Chemicals,18057.27,SP500
+DDOG,Datadog Inc,Technology,Software - Application,99426.08,SP500
+DE,Deere & Co,Industrials,Farm & Heavy Construction Machinery,183641.85,SP500
+DECK,Deckers Outdoor Corp,Consumer Cyclical,Footwear & Accessories,11136.96,SP500
+DELL,Dell Technologies Inc,Technology,Computer Hardware,365989.71,SP500
+DG,Dollar General Corp,Consumer Defensive,Discount Stores,27022.25,SP500
+DGX,Quest Diagnostics Inc,Healthcare,Diagnostics & Research,25267.77,SP500
+DHI,D.R. Horton Inc,Consumer Cyclical,Residential Construction,38275.72,SP500
+DHR,Danaher Corp,Healthcare,Diagnostics & Research,152913.54,SP500
+DIS,Walt Disney Co,Communication Services,Entertainment,179178.29,SP500
+DLR,Digital Realty Trust Inc,Real Estate,REIT - Specialty,68519.76,SP500
+DLTR,Dollar Tree Inc,Consumer Defensive,Discount Stores,21809.2,SP500
+DOC,Healthpeak Properties Inc,Real Estate,REIT - Healthcare Facilities,13477.0,SP500
+DOV,Dover Corp,Industrials,Specialty Industrial Machinery,26077.78,SP500
+DOW,Dow Inc,Basic Materials,Chemicals,20496.41,SP500
+DPZ,Dominos Pizza Inc,Consumer Cyclical,Restaurants,10064.11,SP500
+DRI,Darden Restaurants Inc,Consumer Cyclical,Restaurants,22883.22,SP500
+DTE,DTE Energy Co,Utilities,Utilities - Regulated Electric,26371.0,SP500
+DUK,Duke Energy Corp,Utilities,Utilities - Regulated Electric,89474.73,SP500
+DVA,DaVita Inc,Healthcare,Medical Care Facilities,11589.91,SP500
+DVN,Devon Energy Corp,Energy,Oil & Gas E&P,52816.5,SP500
+DXCM,Dexcom Inc,Healthcare,Medical Devices,31687.74,SP500
+EBAY,EBay Inc,Consumer Cyclical,Internet Retail,47401.4,SP500
+ECHO,EchoStar Corp,Communication Services,Telecom Services,28739.03,SP500
+ECL,Ecolab Inc,Basic Materials,Specialty Chemicals,78777.93,SP500
+ED,Consolidated Edison Inc,Utilities,Utilities - Regulated Electric,38467.13,SP500
+EFX,Equifax Inc,Industrials,Consulting Services,16840.88,SP500
+EG,Everest Group Ltd,Financial,Insurance - Reinsurance,14114.09,SP500
+EIX,Edison International,Utilities,Utilities - Regulated Electric,20703.38,SP500
+EL,Estee Lauder Cos. Inc,Consumer Defensive,Household & Personal Products,34117.26,SP500
+ELV,Elevance Health Inc,Healthcare,Healthcare Plans,86012.34,SP500
+EME,Emcor Group Inc,Industrials,Engineering & Construction,36546.55,SP500
+EMR,Emerson Electric Co,Industrials,Specialty Industrial Machinery,91147.3,SP500
+EOG,EOG Resources Inc,Energy,Oil & Gas E&P,75985.92,SP500
+EQIX,Equinix Inc,Real Estate,REIT - Specialty,103077.38,SP500
+EQT,EQT Corp,Energy,Oil & Gas E&P,32473.67,SP500
+ERIE,Erie Indemnity Co,Financial,Insurance Brokers,10343.26,SP500
+ES,Eversource Energy,Utilities,Utilities - Regulated Electric,24325.66,SP500
+ESS,Essex Property Trust Inc,Real Estate,REIT - Residential,18275.75,SP500
+ETN,Eaton Corp Plc,Industrials,Specialty Industrial Machinery,172898.2,SP500
+ETR,Entergy Corp,Utilities,Utilities - Regulated Electric,48868.65,SP500
+EVRG,Evergy Inc,Utilities,Utilities - Regulated Electric,18427.21,SP500
+EW,Edwards Lifesciences Corp,Healthcare,Medical Devices,50193.67,SP500
+EXC,Exelon Corp,Utilities,Utilities - Regulated Electric,42559.82,SP500
+EXE,Expand Energy Corp,Energy,Oil & Gas E&P,20328.34,SP500
+EXPD,Expeditors International Of Washington Inc,Industrials,Integrated Freight & Logistics,24894.5,SP500
+EXPE,Expedia Group Inc,Consumer Cyclical,Travel Services,30819.66,SP500
+EXR,Extra Space Storage Inc,Real Estate,REIT - Industrial,29859.27,SP500
+F,Ford Motor Co,Consumer Cyclical,Auto Manufacturers,48548.97,SP500
+FANG,Diamondback Energy Inc,Energy,Oil & Gas E&P,51801.7,SP500
+FAST,Fastenal Co,Industrials,Industrial Distribution,58739.95,SP500
+FCX,Freeport-McMoRan Inc,Basic Materials,Copper,104549.26,SP500
+FDS,Factset Research Systems Inc,Financial,Financial Data & Stock Exchanges,9737.49,SP500
+FDX,Fedex Corp,Industrials,Integrated Freight & Logistics,68169.38,SP500
+FDXF,FedEx Freight Holding Company Inc,Industrials,Integrated Freight & Logistics,16505.3,SP500
+FE,Firstenergy Corp,Utilities,Utilities - Regulated Electric,25455.3,SP500
+FERG,Ferguson Enterprises Inc,Industrials,Industrial Distribution,43633.26,SP500
+FFIV,F5 Inc,Technology,Software - Infrastructure,26441.21,SP500
+FICO,Fair Isaac Corp,Technology,Software - Application,14716.8,SP500
+FIS,Fidelity National Information Services Inc,Technology,Information Technology Services,17353.56,SP500
+FISV,Fiserv Inc,Technology,Information Technology Services,24375.92,SP500
+FITB,Fifth Third Bancorp,Financial,Banks - Regional,46132.26,SP500
+FIX,Comfort Systems USA Inc,Industrials,Engineering & Construction,64229.65,SP500
+FLEX,Flex Ltd,Technology,Electronic Components,43771.45,SP500
+FOX,Fox Corp,Communication Services,Entertainment,24556.51,SP500
+FOXA,Fox Corp,Communication Services,Entertainment,24525.32,SP500
+FRT,Federal Realty Investment Trust,Real Estate,REIT - Retail,9305.44,SP500
+FSLR,First Solar Inc,Technology,Solar,19408.51,SP500
+FTNT,Fortinet Inc,Technology,Software - Infrastructure,138687.57,SP500
+FTV,Fortive Corp,Technology,Scientific & Technical Instruments,17556.25,SP500
+GD,General Dynamics Corp,Industrials,Aerospace & Defense,89739.38,SP500
+GDDY,Godaddy Inc,Technology,Software - Infrastructure,12504.56,SP500
+GE,GE Aerospace,Industrials,Aerospace & Defense,320990.7,SP500
+GEHC,GE HealthCare Technologies Inc,Healthcare,Medical Devices,29508.66,SP500
+GEN,Gen Digital Inc,Technology,Software - Infrastructure,13656.88,SP500
+GEV,GE Vernova Inc,Industrials,Specialty Industrial Machinery,279180.44,SP500
+GILD,Gilead Sciences Inc,Healthcare,Drug Manufacturers - General,178171.14,SP500
+GIS,General Mills Inc,Consumer Defensive,Packaged Foods,17236.23,SP500
+GL,Globe Life Inc,Financial,Insurance - Life,12813.57,SP500
+GLW,Corning Inc,Technology,Electronic Components,145281.75,SP500
+GM,General Motors Company,Consumer Cyclical,Auto Manufacturers,71731.66,SP500
+GNRC,Generac Holdings Inc,Industrials,Specialty Industrial Machinery,13211.42,SP500
+GOOG,Alphabet Inc,Communication Services,Internet Content & Information,4226175.55,SP500
+GOOGL,Alphabet Inc,Communication Services,Internet Content & Information,4235601.2,SP500
+GPC,Genuine Parts Co,Consumer Cyclical,Auto Parts,17649.5,SP500
+GPN,Global Payments Inc,Technology,Software - Infrastructure,21721.2,SP500
+GRMN,Garmin Ltd,Technology,Scientific & Technical Instruments,53923.49,SP500
+GS,Goldman Sachs Group Inc,Financial,Capital Markets,261584.04,SP500
+GWW,W.W. Grainger Inc,Industrials,Industrial Distribution,60383.64,SP500
+HAL,Halliburton Co,Energy,Oil & Gas Equipment & Services,27180.88,SP500
+HAS,Hasbro Inc,Consumer Cyclical,Leisure,12878.07,SP500
+HBAN,Huntington Bancshares Inc,Financial,Banks - Regional,30972.96,SP500
+HCA,HCA Healthcare Inc,Healthcare,Medical Care Facilities,94312.38,SP500
+HD,Home Depot Inc,Consumer Cyclical,Home Improvement Retail,285533.8,SP500
+HIG,Hartford Insurance Group Inc,Financial,Insurance - Diversified,34403.46,SP500
+HII,Huntington Ingalls Industries Inc,Industrials,Aerospace & Defense,10388.63,SP500
+HLT,Hilton Worldwide Holdings Inc,Consumer Cyclical,Lodging,72864.77,SP500
+HON,Honeywell International Inc,Industrials,Conglomerates,67145.23,SP500
+HONA,Honeywell Aerospace Inc,Industrials,Aerospace & Defense,50075.36,SP500
+HOOD,Robinhood Markets Inc,Financial,Capital Markets,101605.29,SP500
+HPE,Hewlett Packard Enterprise Co,Technology,Communication Equipment,94238.18,SP500
+HPQ,HP Inc,Technology,Computer Hardware,29004.75,SP500
+HRL,Hormel Foods Corp,Consumer Defensive,Packaged Foods,10954.73,SP500
+HSIC,Henry Schein Inc,Healthcare,Medical Distribution,9472.95,SP500
+HST,Host Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,15511.21,SP500
+HSY,Hershey Company,Consumer Defensive,Confectioners,32319.25,SP500
+HUBB,Hubbell Inc,Industrials,Electrical Equipment & Parts,25831.95,SP500
+HUM,Humana Inc,Healthcare,Healthcare Plans,47651.47,SP500
+HWM,Howmet Aerospace Inc,Industrials,Aerospace & Defense,91399.3,SP500
+IBKR,Interactive Brokers Group Inc,Financial,Capital Markets,41286.75,SP500
+IBM,International Business Machines Corp,Technology,Information Technology Services,209488.29,SP500
+ICE,Intercontinental Exchange Inc,Financial,Financial Data & Stock Exchanges,86408.72,SP500
+IDXX,Idexx Laboratories Inc,Healthcare,Diagnostics & Research,40825.95,SP500
+IEX,Idex Corp,Industrials,Specialty Industrial Machinery,17592.66,SP500
+IFF,International Flavors & Fragrances Inc,Basic Materials,Specialty Chemicals,21483.63,SP500
+ILMN,Illumina Inc,Healthcare,Diagnostics & Research,41645.8,SP500
+INCY,Incyte Corp,Healthcare,Biotechnology,22980.85,SP500
+INTC,Intel Corp,Technology,Semiconductors,605919.84,SP500
+INTU,Intuit Inc,Technology,Software - Application,77126.13,SP500
+INVH,Invitation Homes Inc,Real Estate,REIT - Residential,15636.75,SP500
+IP,International Paper Co,Consumer Cyclical,Packaging & Containers,17150.12,SP500
+IQV,IQVIA Holdings Inc,Healthcare,Diagnostics & Research,43412.52,SP500
+IR,Ingersoll Rand Inc,Industrials,Specialty Industrial Machinery,31171.88,SP500
+IRM,Iron Mountain Inc,Real Estate,REIT - Specialty,34713.64,SP500
+ISRG,Intuitive Surgical Inc,Healthcare,Medical Instruments & Supplies,143651.68,SP500
+IT,Gartner Inc,Technology,Information Technology Services,11782.97,SP500
+ITW,Illinois Tool Works Inc,Industrials,Specialty Industrial Machinery,76491.58,SP500
+IVZ,Invesco Ltd,Financial,Asset Management,13452.14,SP500
+J,Jacobs Solutions Inc,Industrials,Engineering & Construction,16366.27,SP500
+JBHT,J.B. Hunt Transport Services Inc,Industrials,Integrated Freight & Logistics,21261.17,SP500
+JBL,Jabil Inc,Technology,Electronic Components,32018.33,SP500
+JCI,Johnson Controls International plc,Industrials,Building Products & Equipment,96408.55,SP500
+JKHY,Jack Henry & Associates Inc,Technology,Information Technology Services,10134.19,SP500
+JNJ,Johnson & Johnson,Healthcare,Drug Manufacturers - General,612885.38,SP500
+JPM,JPMorgan Chase & Co,Financial,Banks - Diversified,880449.01,SP500
+KDP,Keurig Dr Pepper Inc,Consumer Defensive,Beverages - Non-Alcoholic,42695.92,SP500
+KEY,Keycorp,Financial,Banks - Regional,21502.64,SP500
+KEYS,Keysight Technologies Inc,Technology,Scientific & Technical Instruments,65555.63,SP500
+KHC,Kraft Heinz Co,Consumer Defensive,Packaged Foods,26248.21,SP500
+KIM,Kimco Realty Corp,Real Estate,REIT - Retail,14821.09,SP500
+KKR,KKR & Co Inc,Financial,Asset Management,81545.71,SP500
+KLAC,KLA Corp,Technology,Semiconductor Equipment & Materials,258247.73,SP500
+KMB,Kimberly-Clark Corp,Consumer Defensive,Household & Personal Products,32083.9,SP500
+KMI,Kinder Morgan Inc,Energy,Oil & Gas Midstream,71580.55,SP500
+KO,Coca-Cola Co,Consumer Defensive,Beverages - Non-Alcoholic,375031.67,SP500
+KR,Kroger Co,Consumer Defensive,Grocery Stores,34257.1,SP500
+KVUE,Kenvue Inc,Consumer Defensive,Household & Personal Products,33666.55,SP500
+L,Loews Corp,Financial,Insurance - Property & Casualty,21731.69,SP500
+LDOS,Leidos Holdings Inc,Technology,Information Technology Services,14725.25,SP500
+LEN,Lennar Corp,Consumer Cyclical,Residential Construction,18407.55,SP500
+LH,Labcorp Holdings Inc,Healthcare,Diagnostics & Research,24944.73,SP500
+LHX,L3Harris Technologies Inc,Industrials,Aerospace & Defense,44289.28,SP500
+LII,Lennox International Inc,Industrials,Building Products & Equipment,12813.37,SP500
+LIN,Linde Plc,Basic Materials,Specialty Chemicals,226140.73,SP500
+LITE,Lumentum Holdings Inc,Technology,Communication Equipment,101047.94,SP500
+LLY,Lilly(Eli) & Co,Healthcare,Drug Manufacturers - General,1094186.35,SP500
+LMT,Lockheed Martin Corp,Industrials,Aerospace & Defense,117412.49,SP500
+LNT,Alliant Energy Corp,Utilities,Utilities - Regulated Electric,16848.32,SP500
+LOW,Lowe's Cos. Inc,Consumer Cyclical,Home Improvement Retail,103200.28,SP500
+LRCX,Lam Research Corp,Technology,Semiconductor Equipment & Materials,415698.12,SP500
+LULU,Lululemon Athletica Inc,Consumer Cyclical,Apparel Retail,10911.97,SP500
+LUV,Southwest Airlines Co,Industrials,Airlines,20727.75,SP500
+LVS,Las Vegas Sands Corp,Consumer Cyclical,Resorts & Casinos,23663.76,SP500
+LYB,LyondellBasell Industries NV,Basic Materials,Specialty Chemicals,19026.94,SP500
+LYV,Live Nation Entertainment Inc,Communication Services,Entertainment,40604.43,SP500
+MA,Mastercard Incorporated,Financial,Credit Services,494971.92,SP500
+MAA,Mid-America Apartment Communities Inc,Real Estate,REIT - Residential,14029.13,SP500
+MAR,Marriott International Inc,Consumer Cyclical,Lodging,94342.64,SP500
+MAS,Masco Corp,Industrials,Building Products & Equipment,13769.6,SP500
+MCD,McDonald's Corp,Consumer Cyclical,Restaurants,164951.24,SP500
+MCHP,Microchip Technology Inc,Technology,Semiconductors,44385.53,SP500
+MCK,Mckesson Corp,Healthcare,Medical Distribution,106742.98,SP500
+MCO,Moody's Corp,Financial,Financial Data & Stock Exchanges,78490.64,SP500
+MDLZ,Mondelez International Inc,Consumer Defensive,Confectioners,76116.46,SP500
+MDT,Medtronic Plc,Healthcare,Medical Devices,111534.43,SP500
+MET,Metlife Inc,Financial,Insurance - Life,62136.93,SP500
+META,Meta Platforms Inc,Communication Services,Internet Content & Information,1890147.7,SP500
+MGM,MGM Resorts International,Consumer Cyclical,Resorts & Casinos,7780.07,SP500
+MKC,McCormick & Co Inc,Consumer Defensive,Packaged Foods,12354.33,SP500
+MLM,Martin Marietta Materials Inc,Basic Materials,Building Materials,34695.95,SP500
+MMM,3M Co,Industrials,Conglomerates,84548.41,SP500
+MNST,Monster Beverage Corp,Consumer Defensive,Beverages - Non-Alcoholic,84513.49,SP500
+MO,Altria Group Inc,Consumer Defensive,Tobacco,114661.31,SP500
+MOS,Mosaic Company,Basic Materials,Agricultural Inputs,6721.9,SP500
+MPC,Marathon Petroleum Corp,Energy,Oil & Gas Refining & Marketing,121641.9,SP500
+MPWR,Monolithic Power System Inc,Technology,Semiconductors,72547.02,SP500
+MRK,Merck & Co Inc,Healthcare,Drug Manufacturers - General,349499.54,SP500
+MRNA,Moderna Inc,Healthcare,Biotechnology,76345.87,SP500
+MRSH,Marsh,Financial,Insurance Brokers,82070.79,SP500
+MRVL,Marvell Technology Inc,Technology,Semiconductors,250021.73,SP500
+MS,Morgan Stanley,Financial,Capital Markets,299572.8,SP500
+MSCI,MSCI Inc,Financial,Financial Data & Stock Exchanges,40517.16,SP500
+MSFT,Microsoft Corp,Technology,Software - Infrastructure,3954140.09,SP500
+MSI,Motorola Solutions Inc,Technology,Communication Equipment,75432.06,SP500
+MTB,M & T Bank Corp,Financial,Banks - Regional,31592.5,SP500
+MTD,Mettler-Toledo International Inc,Healthcare,Diagnostics & Research,30802.0,SP500
+MU,Micron Technology Inc,Technology,Semiconductors,1204633.22,SP500
+NCLH,Norwegian Cruise Line Holdings Ltd,Consumer Cyclical,Travel Services,7183.99,SP500
+NDAQ,Nasdaq Inc,Financial,Financial Data & Stock Exchanges,51850.01,SP500
+NDSN,Nordson Corp,Industrials,Specialty Industrial Machinery,18812.52,SP500
+NEE,NextEra Energy Inc,Utilities,Utilities - Regulated Electric,161100.11,SP500
+NEM,Newmont Corp,Basic Materials,Gold,122461.59,SP500
+NFLX,Netflix Inc,Communication Services,Entertainment,283002.17,SP500
+NI,NiSource Inc,Utilities,Utilities - Regulated Gas,19319.08,SP500
+NKE,Nike Inc,Consumer Cyclical,Footwear & Accessories,51036.74,SP500
+NOC,Northrop Grumman Corp,Industrials,Aerospace & Defense,68730.1,SP500
+NOW,ServiceNow Inc,Technology,Software - Application,142314.58,SP500
+NRG,NRG Energy Inc,Utilities,Utilities - Independent Power Producers,22026.91,SP500
+NSC,Norfolk Southern Corp,Industrials,Railroads,70762.87,SP500
+NTAP,Netapp Inc,Technology,Software - Infrastructure,45046.73,SP500
+NTRS,Northern Trust Corp,Financial,Asset Management,31018.3,SP500
+NUE,Nucor Corp,Basic Materials,Steel,57022.52,SP500
+NVDA,NVIDIA Corp,Technology,Semiconductors,5800146.95,SP500
+NVR,NVR Inc,Consumer Cyclical,Residential Construction,16071.95,SP500
+NWS,News Corp,Communication Services,Entertainment,15916.61,SP500
+NWSA,News Corp,Communication Services,Entertainment,15903.76,SP500
+NXPI,NXP Semiconductors NV,Technology,Semiconductors,61641.53,SP500
+O,Realty Income Corp,Real Estate,REIT - Retail,51209.43,SP500
+ODFL,Old Dominion Freight Line Inc,Industrials,Trucking,37102.32,SP500
+OKE,Oneok Inc,Energy,Oil & Gas Midstream,56613.9,SP500
+OMC,Omnicom Group Inc,Communication Services,Advertising Agencies,20518.33,SP500
+ON,ON Semiconductor Corp,Technology,Semiconductors,33694.93,SP500
+ORCL,Oracle Corp,Technology,Software - Infrastructure,442463.3,SP500
+ORLY,O'Reilly Automotive Inc,Consumer Cyclical,Auto Parts,68393.59,SP500
+OTIS,Otis Worldwide Corp,Industrials,Specialty Industrial Machinery,25368.61,SP500
+OXY,Occidental Petroleum Corp,Energy,Oil & Gas E&P,58773.68,SP500
+P,Everpure Inc,Technology,Computer Hardware,49237.66,SP500
+PANW,Palo Alto Networks Inc,Technology,Software - Infrastructure,342251.2,SP500
+PAYX,Paychex Inc,Technology,Software - Application,35813.42,SP500
+PCAR,Paccar Inc,Industrials,Farm & Heavy Construction Machinery,57498.47,SP500
+PCG,PG&E Corp,Utilities,Utilities - Regulated Electric,27276.57,SP500
+PEG,Public Service Enterprise Group Inc,Utilities,Utilities - Regulated Electric,35552.3,SP500
+PEP,PepsiCo Inc,Consumer Defensive,Beverages - Non-Alcoholic,173252.5,SP500
+PFE,Pfizer Inc,Healthcare,Drug Manufacturers - General,156208.68,SP500
+PFG,Principal Financial Group Inc,Financial,Asset Management,23681.05,SP500
+PG,Procter & Gamble Co,Consumer Defensive,Household & Personal Products,345729.8,SP500
+PGR,Progressive Corp,Financial,Insurance - Property & Casualty,123344.27,SP500
+PH,Parker-Hannifin Corp,Industrials,Specialty Industrial Machinery,124869.76,SP500
+PHM,PulteGroup Inc,Consumer Cyclical,Residential Construction,21775.16,SP500
+PKG,Packaging Corp Of America,Consumer Cyclical,Packaging & Containers,20563.0,SP500
+PLD,Prologis Inc,Real Estate,REIT - Industrial,125230.34,SP500
+PLTR,Palantir Technologies Inc,Technology,Software - Infrastructure,461122.85,SP500
+PM,Philip Morris International Inc,Consumer Defensive,Tobacco,297924.61,SP500
+PNC,PNC Financial Services Group Inc,Financial,Banks - Regional,87752.61,SP500
+PNR,Pentair plc,Industrials,Specialty Industrial Machinery,8523.37,SP500
+PNW,Pinnacle West Capital Corp,Utilities,Utilities - Regulated Electric,11809.46,SP500
+PODD,Insulet Corp,Healthcare,Medical Devices,9391.95,SP500
+PPG,PPG Industries Inc,Basic Materials,Specialty Chemicals,23733.86,SP500
+PPL,PPL Corp,Utilities,Utilities - Regulated Electric,25183.23,SP500
+PRU,Prudential Wealth Advisors,Financial,Insurance - Life,39402.45,SP500
+PSA,Public Storage,Real Estate,REIT - Industrial,53671.45,SP500
+PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,107745.86,SP500
+PTC,PTC Inc,Technology,Software - Application,20964.32,SP500
+PWR,Quanta Services Inc,Industrials,Engineering & Construction,107936.02,SP500
+PYPL,PayPal Holdings Inc,Financial,Credit Services,46797.99,SP500
+Q,Qnity Electronics Inc,Technology,Semiconductor Equipment & Materials,27594.61,SP500
+QCOM,Qualcomm Inc,Technology,Semiconductors,190207.86,SP500
+RCL,Royal Caribbean Group,Consumer Cyclical,Travel Services,76596.81,SP500
+RDDT,Reddit Inc,Communication Services,Internet Content & Information,28510.27,SP500
+REG,Regency Centers Corp,Real Estate,REIT - Retail,13087.63,SP500
+REGN,Regeneron Pharmaceuticals Inc,Healthcare,Biotechnology,75763.04,SP500
+RF,Regions Financial Corp,Financial,Banks - Regional,23111.65,SP500
+RJF,Raymond James Financial Inc,Financial,Asset Management,30685.08,SP500
+RL,Ralph Lauren Corp,Consumer Cyclical,Apparel Manufacturing,21822.2,SP500
+RMD,Resmed Inc,Healthcare,Medical Instruments & Supplies,31248.58,SP500
+ROK,Rockwell Automation Inc,Industrials,Specialty Industrial Machinery,50801.44,SP500
+ROL,Rollins Inc,Consumer Cyclical,Personal Services,14542.62,SP500
+ROST,Ross Stores Inc,Consumer Cyclical,Apparel Retail,71498.3,SP500
+RSG,Republic Services Inc,Industrials,Waste Management,65906.16,SP500
+RTX,RTX Corp,Industrials,Aerospace & Defense,247866.34,SP500
+RVTY,Revvity Inc,Healthcare,Diagnostics & Research,17195.99,SP500
+SBAC,SBA Communications Corp,Real Estate,REIT - Specialty,17770.29,SP500
+SBUX,Starbucks Corp,Consumer Cyclical,Restaurants,109348.8,SP500
+SCHW,Charles Schwab Corp,Financial,Capital Markets,167659.09,SP500
+SHW,Sherwin-Williams Co,Basic Materials,Specialty Chemicals,78213.26,SP500
+SJM,J.M. Smucker Co,Consumer Defensive,Packaged Foods,12472.02,SP500
+SKYD,Skydance Corp,Communication Services,Entertainment,10321.9,SP500
+SLB,SLB Ltd,Energy,Oil & Gas Equipment & Services,74468.67,SP500
+SMCI,Super Micro Computer Inc,Technology,Computer Hardware,28814.5,SP500
+SNA,Snap-on Inc,Industrials,Tools & Accessories,19179.65,SP500
+SNDK,Sandisk Corp,Technology,Computer Hardware,244513.56,SP500
+SNPS,Synopsys Inc,Technology,Software - Infrastructure,95962.05,SP500
+SO,Southern Company,Utilities,Utilities - Regulated Electric,97539.28,SP500
+SOLV,Solventum Corp,Healthcare,Medical Instruments & Supplies,14895.43,SP500
+SPG,Simon Property Group Inc,Real Estate,REIT - Retail,65342.84,SP500
+SPGI,S&P Global Inc,Financial,Financial Data & Stock Exchanges,117044.44,SP500
+SRE,Sempra,Utilities,Utilities - Diversified,51746.87,SP500
+STE,Steris Plc,Healthcare,Medical Devices,20545.22,SP500
+STLD,Steel Dynamics Inc,Basic Materials,Steel,34307.01,SP500
+STT,State Street Corp,Financial,Asset Management,48017.87,SP500
+STX,Seagate Technology Holdings Plc,Technology,Computer Hardware,183162.76,SP500
+STZ,Constellation Brands Inc,Consumer Defensive,Beverages - Brewers,19643.49,SP500
+SW,Smurfit WestRock plc,Consumer Cyclical,Packaging & Containers,22280.88,SP500
+SWK,Stanley Black & Decker Inc,Industrials,Tools & Accessories,13731.94,SP500
+SWKS,Skyworks Solutions Inc,Technology,Semiconductors,12319.21,SP500
+SYF,Synchrony Financial,Financial,Credit Services,23447.86,SP500
+SYK,Stryker Corp,Healthcare,Medical Devices,107741.83,SP500
+SYY,Sysco Corp,Consumer Defensive,Food Distribution,37990.52,SP500
+T,AT&T Inc,Communication Services,Telecom Services,166238.88,SP500
+TDG,Transdigm Group Incorporated,Industrials,Aerospace & Defense,61160.16,SP500
+TDY,Teledyne Technologies Inc,Technology,Scientific & Technical Instruments,28902.76,SP500
+TECH,Bio-Techne Corp,Healthcare,Biotechnology,11361.5,SP500
+TEL,TE Connectivity plc,Technology,Electronic Components,64306.68,SP500
+TER,Teradyne Inc,Technology,Semiconductor Equipment & Materials,67258.3,SP500
+TFC,Truist Financial Corp,Financial,Banks - Regional,31096.94,SP500
+TGT,Target Corp,Consumer Defensive,Discount Stores,69679.81,SP500
+TJX,TJX Companies Inc,Consumer Cyclical,Apparel Retail,149915.45,SP500
+TKO,TKO Group Holdings Inc,Communication Services,Entertainment,33246.17,SP500
+TMO,Thermo Fisher Scientific Inc,Healthcare,Diagnostics & Research,244465.81,SP500
+TMUS,T-Mobile US Inc,Communication Services,Telecom Services,175719.71,SP500
+TPL,Texas Pacific Land Corp,Energy,Oil & Gas E&P,24071.81,SP500
+TPR,Tapestry Inc,Consumer Cyclical,Luxury Goods,23212.0,SP500
+TRGP,Targa Resources Corp,Energy,Oil & Gas Midstream,61446.28,SP500
+TRMB,Trimble Inc,Technology,Scientific & Technical Instruments,14236.8,SP500
+TROW,T. Rowe Price Group Inc,Financial,Asset Management,22076.4,SP500
+TRV,Travelers Companies Inc,Financial,Insurance - Property & Casualty,75250.74,SP500
+TSCO,Tractor Supply Co,Consumer Cyclical,Specialty Retail,16890.82,SP500
+TSLA,Tesla Inc,Consumer Cyclical,Auto Manufacturers,1505207.33,SP500
+TSN,Tyson Foods Inc,Consumer Defensive,Farm Products,18003.76,SP500
+TT,Trane Technologies plc,Industrials,Building Products & Equipment,104979.66,SP500
+TTWO,Take-Two Interactive Software Inc,Communication Services,Electronic Gaming & Multimedia,38061.74,SP500
+TXN,Texas Instruments Inc,Technology,Semiconductors,272148.73,SP500
+TXT,Textron Inc,Industrials,Aerospace & Defense,12975.49,SP500
+TYL,Tyler Technologies Inc,Technology,Software - Application,13632.09,SP500
+UAL,United Airlines Holdings Inc,Industrials,Airlines,36486.46,SP500
+UBER,Uber Technologies Inc,Technology,Software - Application,140965.25,SP500
+UDR,UDR Inc,Real Estate,REIT - Residential,17750.97,SP500
+UHS,Universal Health Services Inc,Healthcare,Medical Care Facilities,10382.61,SP500
+ULTA,Ulta Beauty Inc,Consumer Cyclical,Specialty Retail,23486.34,SP500
+UNH,Unitedhealth Group Inc,Healthcare,Healthcare Plans,336603.63,SP500
+UNP,Union Pacific Corp,Industrials,Railroads,163611.37,SP500
+UPS,United Parcel Service Inc,Industrials,Integrated Freight & Logistics,79037.6,SP500
+URI,United Rentals Inc,Industrials,Rental & Leasing Services,67985.6,SP500
+USB,U.S. Bancorp,Financial,Banks - Regional,89143.92,SP500
+V,Visa Inc,Financial,Credit Services,690919.54,SP500
+VEEV,Veeva Systems Inc,Healthcare,Health Information Services,46149.51,SP500
+VICI,VICI Properties Inc,Real Estate,REIT - Diversified,25057.99,SP500
+VLO,Valero Energy Corp,Energy,Oil & Gas Refining & Marketing,120566.74,SP500
+VLTO,Veralto Corp,Industrials,Pollution & Treatment Controls,23608.94,SP500
+VMC,Vulcan Materials Co,Basic Materials,Building Materials,32221.49,SP500
+VMRK,Vivmark Residential,Real Estate,REIT - Residential,46751.74,SP500
+VRSK,Verisk Analytics Inc,Industrials,Consulting Services,21467.2,SP500
+VRSN,Verisign Inc,Technology,Software - Infrastructure,26461.06,SP500
+VRT,Vertiv Holdings Co,Industrials,Electrical Equipment & Parts,98476.12,SP500
+VRTX,Vertex Pharmaceuticals Inc,Healthcare,Biotechnology,127362.34,SP500
+VST,Vistra Corp,Utilities,Utilities - Independent Power Producers,54238.48,SP500
+VTR,Ventas Inc,Real Estate,REIT - Healthcare Facilities,42949.21,SP500
+VTRS,Viatris Inc,Healthcare,Drug Manufacturers - Specialty & Generic,20209.91,SP500
+VYLR,Vylor Inc,Basic Materials,Agricultural Inputs,48605.23,SP500
+VZ,Verizon Communications Inc,Communication Services,Telecom Services,188979.97,SP500
+WAB,Westinghouse Air Brake Technologies Corp,Industrials,Railroads,49658.1,SP500
+WAT,Waters Corp,Healthcare,Diagnostics & Research,42912.66,SP500
+WBD,Warner Bros. Discovery Inc,Communication Services,Entertainment,77769.04,SP500
+WDAY,Workday Inc,Technology,Software - Application,45192.32,SP500
+WDC,Western Digital Corp,Technology,Computer Hardware,147637.9,SP500
+WEC,WEC Energy Group Inc,Utilities,Utilities - Regulated Electric,33340.91,SP500
+WELL,Welltower Inc,Real Estate,REIT - Healthcare Facilities,162514.07,SP500
+WFC,Wells Fargo & Co,Financial,Banks - Diversified,245820.96,SP500
+WM,Waste Management Inc,Industrials,Waste Management,83290.61,SP500
+WMB,Williams Cos Inc,Energy,Oil & Gas Midstream,88496.17,SP500
+WMT,Walmart Inc,Consumer Defensive,Discount Stores,848196.82,SP500
+WRB,W.R. Berkley Corp,Financial,Insurance - Property & Casualty,26037.04,SP500
+WSM,Williams-Sonoma Inc,Consumer Cyclical,Specialty Retail,28722.22,SP500
+WST,West Pharmaceutical Services Inc,Healthcare,Medical Instruments & Supplies,26281.83,SP500
+WTW,Willis Towers Watson Public Limited Co,Financial,Insurance Brokers,26979.76,SP500
+WY,Weyerhaeuser Co,Real Estate,REIT - Specialty,13366.77,SP500
+WYNN,Wynn Resorts Ltd,Consumer Cyclical,Resorts & Casinos,8000.56,SP500
+XEL,Xcel Energy Inc,Utilities,Utilities - Regulated Electric,44836.25,SP500
+XOM,ExxonMobil Holdings Corp,Energy,Oil & Gas Integrated,681755.04,SP500
+XYL,Xylem Inc,Industrials,Specialty Industrial Machinery,24472.92,SP500
+XYZ,Block Inc,Technology,Software - Infrastructure,46030.97,SP500
+YUM,Yum Brands Inc,Consumer Cyclical,Restaurants,38036.95,SP500
+ZBH,Zimmer Biomet Holdings Inc,Healthcare,Medical Devices,17229.34,SP500
+ZBRA,Zebra Technologies Corp,Technology,Communication Equipment,18229.56,SP500
+ZTS,Zoetis Inc,Healthcare,Drug Manufacturers - Specialty & Generic,29274.83,SP500
+AA,Alcoa Corp,Basic Materials,Aluminum,11392.97,SP400
+AAL,American Airlines Group Inc,Industrials,Airlines,8605.6,SP400
+AAON,AAON Inc,Industrials,Building Products & Equipment,7261.69,SP400
+ACI,Albertsons Companies Inc,Consumer Defensive,Grocery Stores,5571.54,SP400
+ACM,AECOM,Industrials,Engineering & Construction,7742.38,SP400
+ADC,Agree Realty Corp,Real Estate,REIT - Retail,8182.92,SP400
+AEIS,Advanced Energy Industries Inc,Industrials,Electrical Equipment & Parts,12126.08,SP400
+AFG,American Financial Group Inc,Financial,Insurance - Property & Casualty,11614.81,SP400
+AGCO,AGCO Corp,Industrials,Farm & Heavy Construction Machinery,8136.99,SP400
+AHR,American Healthcare REIT Inc,Real Estate,REIT - Healthcare Facilities,11084.67,SP400
+AIT,Applied Industrial Technologies Inc,Industrials,Industrial Distribution,12672.82,SP400
+ALGM,Allegro Microsystems Inc,Technology,Semiconductors,7224.94,SP400
+ALK,Alaska Air Group Inc,Industrials,Airlines,4451.85,SP400
+ALLY,Ally Financial Inc,Financial,Credit Services,11443.99,SP400
+ALSN,Allison Transmission Holdings Inc,Consumer Cyclical,Auto Parts,9475.83,SP400
+ALV,Autoliv Inc,Consumer Cyclical,Auto Parts,8279.47,SP400
+AM,Antero Midstream Corp,Energy,Oil & Gas Midstream,10034.61,SP400
+AMG,Affiliated Managers Group Inc,Financial,Asset Management,9819.54,SP400
+AMH,American Homes 4 Rent,Real Estate,REIT - Residential,10963.57,SP400
+AMKR,AMKOR Technology Inc,Technology,Semiconductor Equipment & Materials,13264.88,SP400
+AN,Autonation Inc,Consumer Cyclical,Auto & Truck Dealerships,5228.24,SP400
+ANF,Abercrombie & Fitch Co,Consumer Cyclical,Apparel Retail,5999.8,SP400
+APG,APi Group Corp,Industrials,Engineering & Construction,18057.04,SP400
+APPF,Appfolio Inc,Technology,Software - Application,7200.71,SP400
+AR,Antero Resources Corp,Energy,Oil & Gas E&P,10981.72,SP400
+ARMK,Aramark,Industrials,Specialty Business Services,14618.01,SP400
+ARW,Arrow Electronics Inc,Technology,Electronics & Computer Distribution,12237.66,SP400
+ARWR,Arrowhead Pharmaceuticals Inc,Healthcare,Biotechnology,8692.8,SP400
+ASB,Associated Banc-Corp,Financial,Banks - Regional,5457.76,SP400
+ASH,Ashland Inc,Basic Materials,Specialty Chemicals,3249.96,SP400
+ATI,ATI Inc,Industrials,Metal Fabrication,26511.01,SP400
+ATR,Aptargroup Inc,Healthcare,Medical Instruments & Supplies,7645.63,SP400
+AVAV,AeroVironment Inc,Industrials,Aerospace & Defense,7294.8,SP400
+AVNT,Avient Corp,Basic Materials,Specialty Chemicals,3805.44,SP400
+AVT,Avnet Inc,Technology,Electronics & Computer Distribution,8730.1,SP400
+AVTR,Avantor Inc,Healthcare,Medical Instruments & Supplies,10436.21,SP400
+AXTA,Axalta Coating Systems Ltd,Basic Materials,Specialty Chemicals,7148.26,SP400
+AYI,Acuity Inc,Industrials,Electrical Equipment & Parts,9069.87,SP400
+BAH,Booz Allen Hamilton Holding Corp,Industrials,Consulting Services,8196.22,SP400
+BBWI,Bath & Body Works Inc,Consumer Cyclical,Specialty Retail,3615.5,SP400
+BC,Brunswick Corp,Consumer Cyclical,Recreational Vehicles,4210.54,SP400
+BCO,Brink's Co,Industrials,Security & Protection Services,4263.13,SP400
+BDC,Belden Inc,Technology,Communication Equipment,4424.05,SP400
+BHF,Brighthouse Financial Inc,Financial,Insurance - Life,2877.31,SP400
+BILL,BILL Holdings Inc,Technology,Software - Application,3748.76,SP400
+BIO,Bio-Rad Laboratories Inc,Healthcare,Medical Devices,9865.56,SP400
+BJ,BJ's Wholesale Club Holdings Inc,Consumer Defensive,Discount Stores,12078.21,SP400
+BKH,Black Hills Corp,Utilities,Utilities - Regulated Gas,5394.15,SP400
+BMRN,Biomarin Pharmaceutical Inc,Healthcare,Biotechnology,10882.71,SP400
+BRKR,Bruker Corp,Healthcare,Medical Devices,9217.74,SP400
+BROS,Dutch Bros Inc,Consumer Cyclical,Restaurants,6824.01,SP400
+BRX,Brixmor Property Group Inc,Real Estate,REIT - Retail,8426.72,SP400
+BSY,Bentley Systems Inc,Technology,Software - Application,10866.28,SP400
+BTSG,BrightSpring Health Services Inc,Healthcare,Health Information Services,12613.84,SP400
+BURL,Burlington Stores Inc,Consumer Cyclical,Apparel Retail,17364.01,SP400
+BWA,BorgWarner Inc,Consumer Cyclical,Auto Parts,12904.3,SP400
+BWXT,BWX Technologies Inc,Industrials,Aerospace & Defense,13349.33,SP400
+BYD,Boyd Gaming Corp,Consumer Cyclical,Resorts & Casinos,5115.66,SP400
+CACI,Caci International Inc,Technology,Information Technology Services,13251.81,SP400
+CAR,Avis Budget Group Inc,Industrials,Rental & Leasing Services,3979.44,SP400
+CART,Maplebear Inc,Consumer Cyclical,Internet Retail,10526.31,SP400
+CAVA,Cava Group Inc,Consumer Cyclical,Restaurants,6148.68,SP400
+CBSH,Commerce Bancshares Inc,Financial,Banks - Regional,7857.21,SP400
+CBT,Cabot Corp,Basic Materials,Specialty Chemicals,3981.27,SP400
+CCK,Crown Holdings Inc,Consumer Cyclical,Packaging & Containers,11712.41,SP400
+CDE,Coeur Mining Inc,Basic Materials,Gold,17649.64,SP400
+CELH,Celsius Holdings Inc,Consumer Defensive,Beverages - Non-Alcoholic,6905.32,SP400
+CFR,Cullen Frost Bankers Inc,Financial,Banks - Regional,9506.28,SP400
+CG,Carlyle Group Inc,Financial,Asset Management,13854.22,SP400
+CGNX,Cognex Corp,Technology,Scientific & Technical Instruments,11161.65,SP400
+CHDN,Churchill Downs Inc,Consumer Cyclical,Gambling,5451.26,SP400
+CHE,Chemed Corp,Healthcare,Medical Care Facilities,6663.59,SP400
+CHH,Choice Hotels International Inc,Consumer Cyclical,Lodging,4638.59,SP400
+CHRD,Chord Energy Corp,Energy,Oil & Gas E&P,7522.6,SP400
+CHWY,Chewy Inc,Consumer Cyclical,Internet Retail,7290.96,SP400
+CLF,Cleveland-Cliffs Inc,Basic Materials,Steel,6989.12,SP400
+CLH,Clean Harbors Inc,Industrials,Waste Management,16789.51,SP400
+CMC,Commercial Metals Co,Industrials,Metal Fabrication,7180.63,SP400
+CNH,CNH Industrial NV,Industrials,Farm & Heavy Construction Machinery,16424.63,SP400
+CNM,Core & Main Inc,Industrials,Industrial Distribution,8019.8,SP400
+CNO,CNO Financial Group Inc,Financial,Insurance - Life,4999.86,SP400
+CNX,CNX Resources Corp,Energy,Oil & Gas E&P,4917.64,SP400
+COKE,Coca-Cola Consolidated Inc,Consumer Defensive,Beverages - Non-Alcoholic,12954.08,SP400
+COLB,Columbia Banking System Inc,Financial,Banks - Regional,8173.04,SP400
+COLM,Columbia Sportswear Co,Consumer Cyclical,Apparel Manufacturing,2941.05,SP400
+CPRI,Capri Holdings Ltd,Consumer Cyclical,Luxury Goods,1667.27,SP400
+CR,Crane Co,Industrials,Specialty Industrial Machinery,12075.65,SP400
+CRBG,Corebridge Financial Inc,Financial,Asset Management,15677.81,SP400
+CROX,Crocs Inc,Consumer Cyclical,Footwear & Accessories,5763.96,SP400
+CRS,Carpenter Technology Corp,Industrials,Metal Fabrication,19610.82,SP400
+CRUS,Cirrus Logic Inc,Technology,Semiconductors,5957.48,SP400
+CSL,Carlisle Companies Inc,Industrials,Building Products & Equipment,12936.48,SP400
+CTRE,CareTrust REIT Inc,Real Estate,REIT - Healthcare Facilities,8636.51,SP400
+CUBE,CubeSmart,Real Estate,REIT - Industrial,8539.29,SP400
+CUZ,Cousins Properties Inc,Real Estate,REIT - Office,4552.89,SP400
+CVLT,Commvault Systems Inc,Technology,Software - Application,6423.08,SP400
+CW,Curtiss-Wright Corp,Industrials,Aerospace & Defense,20437.68,SP400
+CXT,Crane NXT Co,Industrials,Business Equipment & Supplies,2864.82,SP400
+CYTK,Cytokinetics Inc,Healthcare,Biotechnology,8529.09,SP400
+DAR,Darling Ingredients Inc,Consumer Defensive,Packaged Foods,9652.8,SP400
+DBX,Dropbox Inc,Technology,Software - Infrastructure,7334.34,SP400
+DCI,Donaldson Co Inc,Industrials,Specialty Industrial Machinery,10444.67,SP400
+DINO,HF Sinclair Corp,Energy,Oil & Gas Refining & Marketing,20374.02,SP400
+DKS,Dicks Sporting Goods Inc,Consumer Cyclical,Specialty Retail,11994.46,SP400
+DLB,Dolby Laboratories Inc,Industrials,Specialty Business Services,5475.88,SP400
+DOCN,DigitalOcean Holdings Inc,Technology,Software - Infrastructure,15404.1,SP400
+DOCS,Doximity Inc,Healthcare,Health Information Services,4953.46,SP400
+DOCU,DocuSign Inc,Technology,Software - Application,12750.49,SP400
+DT,Dynatrace Inc,Technology,Software - Application,17643.58,SP400
+DTM,DT Midstream Inc,Energy,Oil & Gas Midstream,12711.11,SP400
+DUOL,Duolingo Inc,Technology,Software - Application,6930.41,SP400
+DY,Dycom Industries Inc,Industrials,Engineering & Construction,8759.65,SP400
+EEFT,Euronet Worldwide Inc,Technology,Software - Infrastructure,2376.62,SP400
+EGP,Eastgroup Properties Inc,Real Estate,REIT - Industrial,10370.73,SP400
+EHC,Encompass Health Corp,Healthcare,Medical Care Facilities,12301.09,SP400
+ELAN,Elanco Animal Health Inc,Healthcare,Drug Manufacturers - Specialty & Generic,11231.5,SP400
+ELF,e.l.f. Beauty Inc,Consumer Defensive,Household & Personal Products,6065.43,SP400
+ELS,Equity Lifestyle Properties Inc,Real Estate,REIT - Residential,11778.15,SP400
+ENS,Enersys,Industrials,Electrical Equipment & Parts,6942.2,SP400
+ENSG,Ensign Group Inc,Healthcare,Medical Care Facilities,10028.08,SP400
+ENTG,Entegris Inc,Technology,Semiconductor Equipment & Materials,25500.8,SP400
+EPR,EPR Properties,Real Estate,REIT - Specialty,4234.18,SP400
+EQH,Equitable Holdings Inc,Financial,Asset Management,14880.42,SP400
+ESAB,ESAB Corp,Industrials,Metal Fabrication,4465.51,SP400
+ESNT,Essent Group Ltd,Financial,Insurance - Specialty,5562.46,SP400
+EVR,Evercore Inc,Financial,Capital Markets,10309.77,SP400
+EWBC,East West Bancorp Inc,Financial,Banks - Regional,17416.94,SP400
+EXEL,Exelixis Inc,Healthcare,Biotechnology,14453.1,SP400
+EXLS,ExlService Holdings Inc,Technology,Information Technology Services,5368.6,SP400
+EXP,Eagle Materials Inc,Basic Materials,Building Materials,5262.04,SP400
+EXPO,Exponent Inc,Industrials,Engineering & Construction,3289.23,SP400
+FAF,First American Financial Corp,Financial,Insurance - Specialty,6361.85,SP400
+FBIN,Fortune Brands Innovations Inc,Industrials,Building Products & Equipment,4697.27,SP400
+FCFS,FirstCash Holdings Inc,Financial,Credit Services,9238.19,SP400
+FCN,FTI Consulting Inc,Industrials,Consulting Services,3799.63,SP400
+FFIN,First Financial Bankshares Inc,Financial,Banks - Regional,4575.01,SP400
+FHI,Federated Hermes Inc,Financial,Asset Management,4222.79,SP400
+FHN,First Horizon Corp,Financial,Banks - Regional,11057.95,SP400
+FIVE,Five Below Inc,Consumer Cyclical,Specialty Retail,11556.95,SP400
+FLG,Flagstar Bank NA,Financial,Banks - Regional,4798.47,SP400
+FLR,Fluor Corp,Industrials,Engineering & Construction,6954.54,SP400
+FLS,Flowserve Corp,Industrials,Specialty Industrial Machinery,9322.45,SP400
+FN,Fabrinet,Technology,Electronic Components,17528.98,SP400
+FNB,F.N.B. Corp,Financial,Banks - Regional,6099.86,SP400
+FND,Floor & Decor Holdings Inc,Consumer Cyclical,Home Improvement Retail,5000.77,SP400
+FNF,Fidelity National Financial Inc,Financial,Insurance - Specialty,10480.98,SP400
+FOUR,Shift4 Payments Inc,Technology,Software - Infrastructure,3039.96,SP400
+FR,First Industrial Realty Trust Inc,Real Estate,REIT - Industrial,8120.45,SP400
+FTI,TechnipFMC plc,Energy,Oil & Gas Equipment & Services,27408.37,SP400
+G,Genpact Ltd,Technology,Information Technology Services,5620.75,SP400
+GAP,Gap Inc,Consumer Cyclical,Apparel Retail,8356.71,SP400
+GATX,GATX Corp,Industrials,Rental & Leasing Services,6032.06,SP400
+GBCI,Glacier Bancorp Inc,Financial,Banks - Regional,5674.63,SP400
+GEF,Greif Inc,Consumer Cyclical,Packaging & Containers,4357.8,SP400
+GGG,Graco Inc,Industrials,Specialty Industrial Machinery,12776.54,SP400
+GHC,Graham Holdings Co,Industrials,Conglomerates,4902.65,SP400
+GLPI,Gaming and Leisure Properties Inc,Real Estate,REIT - Specialty,11078.24,SP400
+GME,Gamestop Corp,Consumer Cyclical,Specialty Retail,12491.45,SP400
+GMED,Globus Medical Inc,Healthcare,Medical Devices,10261.63,SP400
+GNTX,Gentex Corp,Consumer Cyclical,Auto Parts,4540.22,SP400
+GPK,Graphic Packaging Holding Co,Consumer Cyclical,Packaging & Containers,2549.18,SP400
+GWRE,Guidewire Software Inc,Technology,Software - Application,13489.43,SP400
+GXO,GXO Logistics Inc,Industrials,Integrated Freight & Logistics,5321.36,SP400
+H,Hyatt Hotels Corp,Consumer Cyclical,Lodging,15014.05,SP400
+HAE,Haemonetics Corp,Healthcare,Medical Devices,4709.85,SP400
+HALO,Halozyme Therapeutics Inc,Healthcare,Biotechnology,12453.0,SP400
+HGV,Hilton Grand Vacations Inc,Consumer Cyclical,Resorts & Casinos,2699.36,SP400
+HIMS,Hims & Hers Health Inc,Healthcare,Drug Manufacturers - Specialty & Generic,6875.75,SP400
+HL,Hecla Mining Co,Basic Materials,Other Precious Metals & Mining,11487.24,SP400
+HLI,Houlihan Lokey Inc,Financial,Capital Markets,8942.69,SP400
+HLNE,Hamilton Lane Inc,Financial,Asset Management,4773.56,SP400
+HOG,Harley-Davidson Inc,Consumer Cyclical,Recreational Vehicles,2803.71,SP400
+HOMB,Home Bancshares Inc,Financial,Banks - Regional,5711.42,SP400
+HQY,Healthequity Inc,Healthcare,Health Information Services,7531.23,SP400
+HR,Healthcare Realty Trust Inc,Real Estate,REIT - Healthcare Facilities,5839.94,SP400
+HRB,H&R Block Inc,Consumer Cyclical,Personal Services,5221.88,SP400
+HWC,Hancock Whitney Corp,Financial,Banks - Regional,5833.82,SP400
+HXL,Hexcel Corp,Industrials,Aerospace & Defense,6504.37,SP400
+IBOC,International Bancshares Corp,Financial,Banks - Regional,4287.48,SP400
+IDA,Idacorp Inc,Utilities,Utilities - Regulated Electric,7674.48,SP400
+IDCC,Interdigital Inc,Technology,Software - Application,8755.72,SP400
+IESC,IES Holdings Inc,Industrials,Engineering & Construction,13622.08,SP400
+INGR,Ingredion Inc,Consumer Defensive,Packaged Foods,6101.44,SP400
+IPGP,IPG Photonics Corp,Technology,Semiconductor Equipment & Materials,3559.72,SP400
+IRT,Independence Realty Trust Inc,Real Estate,REIT - Residential,3560.04,SP400
+ITT,ITT Inc,Industrials,Specialty Industrial Machinery,18533.51,SP400
+JAZZ,Jazz Pharmaceuticals plc,Healthcare,Biotechnology,15020.59,SP400
+JEF,Jefferies Financial Group Inc,Financial,Capital Markets,10365.53,SP400
+JLL,Jones Lang Lasalle Inc,Real Estate,Real Estate Services,13968.86,SP400
+KBH,KB Home,Consumer Cyclical,Residential Construction,2760.32,SP400
+KBR,KBR Inc,Industrials,Engineering & Construction,4363.21,SP400
+KD,Kyndryl Holdings Inc,Technology,Information Technology Services,2500.55,SP400
+KEX,Kirby Corp,Industrials,Marine Shipping,7312.8,SP400
+KNF,Knife River Corp,Basic Materials,Building Materials,3021.52,SP400
+KNSL,Kinsale Capital Group Inc,Financial,Insurance - Property & Casualty,7663.8,SP400
+KNX,Knight-Swift Transportation Holdings Inc,Industrials,Trucking,10518.92,SP400
+KRC,Kilroy Realty Corp,Real Estate,REIT - Office,3981.3,SP400
+KRG,Kite Realty Group Trust,Real Estate,REIT - Retail,4834.37,SP400
+KRYS,Krystal Biotech Inc,Healthcare,Biotechnology,9673.2,SP400
+KTOS,Kratos Defense & Security Solutions Inc,Industrials,Aerospace & Defense,8205.3,SP400
+LAD,Lithia Motors Inc,Consumer Cyclical,Auto & Truck Dealerships,6430.28,SP400
+LAMR,Lamar Advertising Co,Real Estate,REIT - Specialty,14698.31,SP400
+LEA,Lear Corp,Consumer Cyclical,Auto Parts,6017.62,SP400
+LECO,Lincoln Electric Holdings Inc,Industrials,Tools & Accessories,15018.51,SP400
+LFUS,Littelfuse Inc,Technology,Electronic Components,11538.14,SP400
+LIVN,LivaNova PLC,Healthcare,Medical Devices,4128.16,SP400
+LNTH,Lantheus Holdings Inc,Healthcare,Drug Manufacturers - Specialty & Generic,6526.72,SP400
+LOPE,Grand Canyon Education Inc,Consumer Defensive,Education & Training Services,4054.42,SP400
+LPX,Louisiana-Pacific Corp,Industrials,Building Products & Equipment,4677.18,SP400
+LSCC,Lattice Semiconductor Corp,Technology,Semiconductors,19098.81,SP400
+LSTR,Landstar System Inc,Industrials,Integrated Freight & Logistics,5737.04,SP400
+M,Macy's Inc,Consumer Cyclical,Department Stores,5866.03,SP400
+MANH,Manhattan Associates Inc,Technology,Software - Application,11826.58,SP400
+MAT,Mattel Inc,Consumer Cyclical,Leisure,4551.2,SP400
+MEDP,Medpace Holdings Inc,Healthcare,Diagnostics & Research,16827.94,SP400
+MIDD,Middleby Corp,Industrials,Specialty Industrial Machinery,4789.95,SP400
+MKSI,MKS Inc,Technology,Scientific & Technical Instruments,19028.25,SP400
+MLI,Mueller Industries Inc,Industrials,Metal Fabrication,13963.18,SP400
+MMS,Maximus Inc,Industrials,Specialty Business Services,2862.93,SP400
+MOG-A,Moog Inc,Industrials,Aerospace & Defense,11911.14,SP400
+MOH,Molina Healthcare Inc,Healthcare,Healthcare Plans,10187.87,SP400
+MORN,Morningstar Inc,Financial,Financial Data & Stock Exchanges,7341.03,SP400
+MP,MP Materials Corp,Basic Materials,Other Industrial Metals & Mining,8643.27,SP400
+MSA,MSA Safety Inc,Industrials,Security & Protection Services,7038.61,SP400
+MSM,MSC Industrial Direct Co Inc,Industrials,Industrial Distribution,7277.89,SP400
+MTDR,Matador Resources Co,Energy,Oil & Gas E&P,6547.83,SP400
+MTG,MGIC Investment Corp,Financial,Insurance - Specialty,5612.22,SP400
+MTN,Vail Resorts Inc,Consumer Cyclical,Resorts & Casinos,5174.25,SP400
+MTSI,MACOM Technology Solutions Holdings Inc,Technology,Semiconductors,26780.99,SP400
+MTZ,Mastec Inc,Industrials,Engineering & Construction,18333.61,SP400
+MUR,Murphy Oil Corp,Energy,Oil & Gas E&P,5418.37,SP400
+MUSA,Murphy USA Inc,Consumer Cyclical,Specialty Retail,9429.67,SP400
+MZTI,Marzetti Co,Consumer Defensive,Packaged Foods,2734.56,SP400
+NBIX,Neurocrine Biosciences Inc,Healthcare,Drug Manufacturers - Specialty & Generic,14790.97,SP400
+NEU,NewMarket Corp,Basic Materials,Specialty Chemicals,8518.45,SP400
+NFG,National Fuel Gas Co,Energy,Oil & Gas Integrated,7446.78,SP400
+NJR,New Jersey Resources Corp,Utilities,Utilities - Regulated Gas,5230.67,SP400
+NLY,Annaly Capital Management Inc,Real Estate,REIT - Mortgage,13883.42,SP400
+NNN,NNN REIT Inc,Real Estate,REIT - Retail,7775.14,SP400
+NOV,NOV Inc,Energy,Oil & Gas Equipment & Services,6773.09,SP400
+NOVT,Novanta Inc,Technology,Scientific & Technical Instruments,5638.63,SP400
+NTNX,Nutanix Inc,Technology,Software - Infrastructure,19862.56,SP400
+NVST,Envista Holdings Corp,Healthcare,Medical Instruments & Supplies,3737.58,SP400
+NVT,nVent Electric plc,Industrials,Electrical Equipment & Parts,28130.91,SP400
+NWE,NorthWestern Energy Group Inc,Utilities,Utilities - Regulated Electric,4239.81,SP400
+NXST,Nexstar Media Group Inc,Communication Services,Broadcasting,4848.0,SP400
+NXT,Nextpower Inc,Technology,Solar,13365.85,SP400
+NYT,New York Times Co,Communication Services,Publishing,10333.44,SP400
+OC,Owens Corning,Industrials,Building Products & Equipment,9468.45,SP400
+OGE,Oge Energy Corp,Utilities,Utilities - Regulated Electric,9469.69,SP400
+OGS,ONE Gas Inc,Utilities,Utilities - Regulated Gas,4597.94,SP400
+OHI,Omega Healthcare Investors Inc,Real Estate,REIT - Healthcare Facilities,13565.89,SP400
+OKTA,Okta Inc,Technology,Software - Infrastructure,38228.05,SP400
+OLED,Universal Display Corp,Technology,Electronic Components,3661.71,SP400
+OLLI,Ollies Bargain Outlet Holdings Inc,Consumer Defensive,Discount Stores,5212.56,SP400
+OLN,Olin Corp,Basic Materials,Chemicals,1847.66,SP400
+ONB,Old National Bancorp,Financial,Banks - Regional,9524.08,SP400
+ONTO,Onto Innovation Inc,Technology,Semiconductor Equipment & Materials,15395.08,SP400
+OPCH,Option Care Health Inc,Healthcare,Medical Care Facilities,4643.34,SP400
+ORA,Ormat Technologies Inc,Utilities,Utilities - Renewable,5723.52,SP400
+ORI,Old Republic International Corp,Financial,Insurance - Property & Casualty,9176.86,SP400
+OSK,Oshkosh Corp,Industrials,Farm & Heavy Construction Machinery,8157.67,SP400
+OVV,Ovintiv Inc,Energy,Oil & Gas E&P,16937.96,SP400
+OZK,Bank OZK,Financial,Banks - Regional,4866.62,SP400
+PAG,Penske Automotive Group Inc,Consumer Cyclical,Auto & Truck Dealerships,13067.57,SP400
+PATH,UiPath Inc,Technology,Software - Infrastructure,6827.14,SP400
+PB,Prosperity Bancshares Inc,Financial,Banks - Regional,8063.86,SP400
+PBF,PBF Energy Inc,Energy,Oil & Gas Refining & Marketing,9824.33,SP400
+PCTY,Paylocity Holding Corp,Technology,Software - Application,7754.81,SP400
+PEGA,Pegasystems Inc,Technology,Software - Application,5688.41,SP400
+PEN,Penumbra Inc,Healthcare,Medical Devices,12488.42,SP400
+PFGC,Performance Food Group Company,Consumer Defensive,Food Distribution,14773.45,SP400
+PII,Polaris Inc,Consumer Cyclical,Recreational Vehicles,3003.94,SP400
+PINS,Pinterest Inc,Communication Services,Internet Content & Information,11343.25,SP400
+PK,Park Hotels & Resorts Inc,Real Estate,REIT - Hotel & Motel,3070.41,SP400
+PLNT,Planet Fitness Inc,Consumer Cyclical,Leisure,3191.27,SP400
+PNFP,Pinnacle Financial Partners Inc,Financial,Banks - Regional,14527.97,SP400
+POR,Portland General Electric Co,Utilities,Utilities - Regulated Electric,5206.49,SP400
+POST,Post Holdings Inc,Consumer Defensive,Packaged Foods,3222.91,SP400
+PPC,Pilgrim's Pride Corp,Consumer Defensive,Packaged Foods,6640.85,SP400
+PR,Permian Resources Holdings Inc,Energy,Oil & Gas E&P,18719.4,SP400
+PRI,Primerica Inc,Financial,Insurance - Life,8590.88,SP400
+PSN,Parsons Corp,Technology,Information Technology Services,4496.51,SP400
+PVH,PVH Corp,Consumer Cyclical,Apparel Manufacturing,3608.44,SP400
+QLYS,Qualys Inc,Technology,Software - Infrastructure,6916.57,SP400
+R,Ryder System Inc,Industrials,Rental & Leasing Services,9056.38,SP400
+RBA,RB Global Inc,Industrials,Specialty Business Services,15005.6,SP400
+RBC,RBC Bearings Inc,Industrials,Tools & Accessories,16278.55,SP400
+REXR,Rexford Industrial Realty Inc,Real Estate,REIT - Industrial,8205.96,SP400
+RGA,Reinsurance Group Of America Inc,Financial,Insurance - Reinsurance,16399.86,SP400
+RGEN,Repligen Corp,Healthcare,Medical Instruments & Supplies,9868.33,SP400
+RGLD,Royal Gold Inc,Basic Materials,Gold,19855.98,SP400
+RH,RH,Consumer Cyclical,Specialty Retail,2218.21,SP400
+RLI,RLI Corp,Financial,Insurance - Property & Casualty,5142.96,SP400
+RMBS,Rambus Inc,Technology,Semiconductors,12374.38,SP400
+RNR,RenaissanceRe Holdings Ltd,Financial,Insurance - Reinsurance,13480.27,SP400
+ROIV,Roivant Sciences Ltd,Healthcare,Biotechnology,25664.14,SP400
+ROKU,Roku Inc,Communication Services,Entertainment,22582.22,SP400
+RPM,RPM International Inc,Basic Materials,Specialty Chemicals,12542.8,SP400
+RRC,Range Resources Corp,Energy,Oil & Gas E&P,9351.86,SP400
+RRX,Regal Rexnord Corp,Industrials,Specialty Industrial Machinery,11078.22,SP400
+RS,Reliance Inc,Basic Materials,Steel,20497.89,SP400
+RYAN,Ryan Specialty Holdings Inc,Financial,Insurance Brokers,9797.71,SP400
+RYN,Rayonier Inc,Real Estate,REIT - Specialty,5412.12,SP400
+SAIA,Saia Inc,Industrials,Trucking,9113.39,SP400
+SAIC,Science Applications International Corp,Technology,Information Technology Services,5220.03,SP400
+SAM,Boston Beer Co Inc,Consumer Defensive,Beverages - Brewers,1753.39,SP400
+SANM,Sanmina Corp,Technology,Electronic Components,12223.95,SP400
+SARO,StandardAero Inc,Industrials,Aerospace & Defense,6929.46,SP400
+SBRA,Sabra Healthcare REIT Inc,Real Estate,REIT - Healthcare Facilities,4884.44,SP400
+SCI,Service Corp International,Consumer Cyclical,Personal Services,10535.34,SP400
+SEIC,SEI Investments Co,Financial,Asset Management,12345.17,SP400
+SF,Stifel Financial Corp,Financial,Capital Markets,10588.24,SP400
+SFM,Sprouts Farmers Market Inc,Consumer Defensive,Grocery Stores,6076.95,SP400
+SGI,Somnigroup International Inc,Consumer Cyclical,"Furnishings, Fixtures & Appliances",14445.21,SP400
+SHC,Sotera Health Co,Healthcare,Diagnostics & Research,5208.09,SP400
+SIGI,Selective Insurance Group Inc,Financial,Insurance - Property & Casualty,5052.66,SP400
+SIRI,Sirius XM Holdings Inc,Communication Services,Entertainment,8885.08,SP400
+SITM,SiTime Corp,Technology,Semiconductors,21382.31,SP400
+SLAB,Silicon Laboratories Inc,Technology,Semiconductors,7428.1,SP400
+SLGN,Silgan Holdings Inc,Consumer Cyclical,Packaging & Containers,3721.06,SP400
+SLM,SLM Corp,Financial,Credit Services,4243.84,SP400
+SMG,Scotts Miracle-Gro Company,Basic Materials,Agricultural Inputs,2941.29,SP400
+SMTC,Semtech Corp,Technology,Semiconductors,18403.81,SP400
+SN,SharkNinja Inc,Consumer Cyclical,"Furnishings, Fixtures & Appliances",26021.79,SP400
+SNX,TD Synnex Corp,Technology,Electronics & Computer Distribution,22208.47,SP400
+SOLS,Solstice Advanced Materials Inc,Basic Materials,Specialty Chemicals,9735.15,SP400
+SON,Sonoco Products Co,Consumer Cyclical,Packaging & Containers,4747.97,SP400
+SPXC,SPX Technologies Inc,Industrials,Building Products & Equipment,8806.1,SP400
+SR,Spire Inc,Utilities,Utilities - Regulated Gas,4621.16,SP400
+SSB,SouthState Bank Corp,Financial,Banks - Regional,9789.57,SP400
+SSD,Simpson Manufacturing Co Inc,Basic Materials,Lumber & Wood Production,7173.14,SP400
+ST,Sensata Technologies Holding Plc,Technology,Scientific & Technical Instruments,6391.93,SP400
+STAG,STAG Industrial Inc,Real Estate,REIT - Industrial,6964.24,SP400
+STRL,Sterling Infrastructure Inc,Industrials,Engineering & Construction,17242.44,SP400
+STWD,Starwood Property Trust Inc,Real Estate,REIT - Mortgage,4786.28,SP400
+SUI,Sun Communities Inc,Real Estate,REIT - Residential,13650.23,SP400
+SWX,Southwest Gas Holdings Inc,Utilities,Utilities - Regulated Gas,6036.19,SP400
+SYNA,Synaptics Inc,Technology,Semiconductors,4739.95,SP400
+TCBI,Texas Capital Bancshares Inc,Financial,Banks - Regional,4041.81,SP400
+TEX,Terex Corp,Industrials,Farm & Heavy Construction Machinery,6488.81,SP400
+THC,Tenet Healthcare Corp,Healthcare,Medical Care Facilities,20811.74,SP400
+THG,Hanover Insurance Group Inc,Financial,Insurance - Property & Casualty,7661.84,SP400
+THO,Thor Industries Inc,Consumer Cyclical,Recreational Vehicles,3490.68,SP400
+TKR,Timken Co,Industrials,Tools & Accessories,8283.75,SP400
+TLN,Talen Energy Corp,Utilities,Utilities - Independent Power Producers,17648.1,SP400
+TNL,Travel+Leisure Co,Consumer Cyclical,Travel Services,3844.85,SP400
+TOL,Toll Brothers Inc,Consumer Cyclical,Residential Construction,12716.28,SP400
+TOST,Toast Inc,Technology,Software - Infrastructure,17575.25,SP400
+TREX,TREX Co Inc,Industrials,Building Products & Equipment,4569.67,SP400
+TRU,TransUnion,Financial,Financial Data & Stock Exchanges,12151.27,SP400
+TTC,Toro Co,Industrials,Tools & Accessories,9361.26,SP400
+TTEK,Tetra Tech Inc,Industrials,Engineering & Construction,8546.76,SP400
+TTMI,TTM Technologies Inc,Technology,Electronic Components,13980.85,SP400
+TWLO,Twilio Inc,Technology,Software - Infrastructure,43064.03,SP400
+TXNM,TXNM Energy Inc,Utilities,Utilities - Regulated Electric,6447.87,SP400
+TXRH,Texas Roadhouse Inc,Consumer Cyclical,Restaurants,10736.89,SP400
+UBSI,United Bankshares Inc,Financial,Banks - Regional,6273.95,SP400
+UFPI,UFP Industries Inc,Basic Materials,Lumber & Wood Production,4357.75,SP400
+UGI,UGI Corp,Utilities,Utilities - Regulated Gas,7968.48,SP400
+ULS,UL Solutions Inc,Industrials,Specialty Business Services,13803.78,SP400
+UMBF,UMB Financial Corp,Financial,Banks - Regional,2755.18,SP400
+UNM,Unum Group,Financial,Insurance - Life,14537.31,SP400
+USFD,US Foods Holding Corp,Consumer Defensive,Food Distribution,20882.41,SP400
+UTHR,United Therapeutics Corp,Healthcare,Drug Manufacturers - Specialty & Generic,23230.46,SP400
+VAL,Valaris Ltd,Energy,Oil & Gas Drilling,5693.74,SP400
+VC,Visteon Corp,Consumer Cyclical,Auto Parts,2384.17,SP400
+VFC,VF Corp,Consumer Cyclical,Apparel Manufacturing,5680.79,SP400
+VIAV,Viavi Solutions Inc,Technology,Communication Equipment,11838.69,SP400
+VICR,Vicor Corp,Technology,Electronic Components,13799.29,SP400
+VLY,Valley National Bancorp,Financial,Banks - Regional,7001.51,SP400
+VMI,Valmont Industries Inc,Industrials,Conglomerates,9399.34,SP400
+VNO,Vornado Realty Trust,Real Estate,REIT - Office,6817.1,SP400
+VNOM,Viper Energy Inc,Energy,Oil & Gas Midstream,14938.91,SP400
+VNT,Vontier Corp,Technology,Scientific & Technical Instruments,4439.97,SP400
+VOYA,Voya Financial Inc,Financial,Financial Conglomerates,8862.13,SP400
+VVV,Valvoline Inc,Consumer Cyclical,Auto & Truck Dealerships,3938.59,SP400
+WAL,Western Alliance Bancorp,Financial,Banks - Regional,8301.49,SP400
+WCC,Wesco International Inc,Industrials,Industrial Distribution,18717.8,SP400
+WEX,WEX Inc,Technology,Software - Infrastructure,5844.32,SP400
+WFRD,Weatherford International plc,Energy,Oil & Gas Equipment & Services,5810.71,SP400
+WH,Wyndham Hotels & Resorts Inc,Consumer Cyclical,Lodging,5391.44,SP400
+WHR,Whirlpool Corp,Consumer Cyclical,"Furnishings, Fixtures & Appliances",1965.76,SP400
+WING,Wingstop Inc,Consumer Cyclical,Restaurants,3056.61,SP400
+WLK,Westlake Corp,Basic Materials,Specialty Chemicals,8101.02,SP400
+WMG,Warner Music Group Corp,Communication Services,Entertainment,14443.06,SP400
+WMS,Advanced Drainage Systems Inc,Industrials,Building Products & Equipment,9807.97,SP400
+WPC,W. P. Carey Inc,Real Estate,REIT - Diversified,14582.56,SP400
+WSO,Watsco Inc,Industrials,Industrial Distribution,11997.88,SP400
+WTFC,Wintrust Financial Corp,Financial,Banks - Regional,9778.52,SP400
+WTRG,Essential Utilities Inc,Utilities,Utilities - Regulated Water,11013.45,SP400
+WTS,Watts Water Technologies Inc,Industrials,Specialty Industrial Machinery,12099.69,SP400
+WWD,Woodward Inc,Industrials,Aerospace & Defense,19636.28,SP400
+XPO,XPO Inc,Industrials,Trucking,21484.2,SP400
+XRAY,DENTSPLY Sirona Inc,Healthcare,Medical Instruments & Supplies,1698.5,SP400
+YETI,YETI Holdings Inc,Consumer Cyclical,Leisure,2937.8,SP400
+ZION,Zions Bancorporation N.A,Financial,Banks - Regional,9173.17,SP400
