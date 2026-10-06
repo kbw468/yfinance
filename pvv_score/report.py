@@ -26,12 +26,16 @@ def main():
     L = []
     L.append("# PVV Score: price / volume / volatility selection for 21-63 day forward risk-adjusted returns\n")
     L.append(f"Universe: 503 Finviz S&P 500 constituents (file `data/universe_finviz.csv`), sector mapped to SPDR ETF. "
-             f"Data: yfinance daily OHLCV, dividend/split adjusted, 2012-{rank.asof.iloc[0]}. Backtest window {BACKTEST_START} onward; "
+             f"Data: yfinance daily OHLCV, dividend/split adjusted, 2012-{rank["asof"].iloc[0]}. Backtest window {BACKTEST_START} onward; "
              f"**the 2022-10 onward window ('recent') is the primary evidence** per the mandate, the full window is the secondary check.\n")
     L.append("All statistics are out-of-sample where labelled OOS. Nothing here uses fundamentals, earnings or valuation.\n")
 
     L.append("## 1. Bottom line\n")
-    L.append("See `current_rankings.csv` for the live list. Section 6 summarises what the ranking is made of and section 7 what to trust.\n")
+    L.append("""* Two readings carry out-of-sample signal for 21-63d forward Sharpe in this universe in the current regime: relative-strength leadership (`rs_lead_126`: RS line nearer its 6-month high than price is to its own) and 12-1 momentum. Both survive beta-neutralisation (recent-window 42d IC 0.03-0.05, NW t 2.1-2.4). Both were dead 2014-2021.
+* The setup that works depends on beta. High-beta names: buy persistence (momentum, trailing Sharpe, proximity to highs, recent 2x-off-low crossings; the 100%-off-low ceiling is the wrong sign there). Low-beta names: price-structure factors die and quiet volume-led accumulation takes over (volume dry-up vs 250d, falling dollar volume, OBV leading price, shallow drawdowns, low idiosyncratic vol, and the dry-up x tight-range x near-high interaction).
+* The live ranking (`current_rankings.csv`) is the within-beta-bucket walk-forward composite built from those weights: recent-window OOS 42d IC 0.047, 63d 0.065, top-vs-bottom decile 42d Sharpe spread +0.29 annualised, 57% of windows positive. A pooled (beta-blind) composite has no edge.
+* Compression / NR7 / Bollinger squeeze, ignition-day volume multiples, accumulation-day counts, gap behaviour, streaks and close-location factors showed no 1-3 month signal in S&P 500 names, pooled. The LightGBM case-study model, in five configurations, did not beat the two single factors out of sample (recent 42d IC 0.00-0.02) and is reported but not used in the ranking.
+""")
 
     L.append("## 2. Method\n")
     L.append("""* **Targets.** For every (date, stock): realised Sharpe and Sortino of the stock over t+1..t+h (h = 21, 42, 63) minus the same for SPY and for the stock's sector ETF (XLRE/XLC spliced to XLF/XLK before inception). Also the information-ratio form (Sharpe of stock-minus-SPY). The ML label is the per-date percentile of SPY-excess Sharpe averaged over the three horizons.
@@ -99,11 +103,11 @@ Multiple-testing note: 86 factors x 10 buckets = 860 tests; the expected maximum
         L.append(md(pick(comp, name)))
 
     L.append("\n## 6. Live scoring\n")
-    L.append("`current_rankings.csv` columns: `final_score` = average of the ML percentile and the within-beta-bucket composite percentile; `analog_med_xsSharpe42` / `analog_hit_rate` = realised 42d SPY-excess Sharpe of the 50 nearest historical cases (median, share > 0); key factor readings follow.\n")
+    L.append("`current_rankings.csv` columns: `final_score` = within-beta-bucket composite percentile (the ML percentile is reported alongside, not blended, because of its OOS record); `analog_med_xsSharpe42` / `analog_pct` / `analog_hit_rate` = realised 42d SPY-excess Sharpe of the 50 nearest historical cases (median, its percentile across today's names, share > 0); key factor readings follow.\n")
     L.append("\n### Final composite weights by beta bucket\n")
     L.append(md(cw.dropna(how="all"), 3))
-    L.append("\n### Top 30 as of " + str(rank.asof.iloc[0]) + "\n")
-    show = ["ticker", "sector", "beta_bucket", "final_score", "ml_score", "comp_score", "analog_med_xsSharpe42", "analog_hit_rate",
+    L.append("\n### Top 30 as of " + str(rank["asof"].iloc[0]) + "\n")
+    show = ["ticker", "sector", "beta_bucket", "final_score", "ml_score", "comp_score", "analog_pct", "analog_hit_rate",
             "mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "beta_252", "rv20_pct_252", "vol_dry_20_250", "obv_price_div_63"]
     L.append(md(rank[show].head(30).set_index("ticker"), 2))
 

@@ -4,7 +4,7 @@ Produces results/current_rankings.csv with, per eligible ticker:
   ml_score        - case-study model trained on ALL history to date (time-decay weighted), predicted
                     percentile of forward 21-63d excess Sharpe vs SPY
   comp_score      - transparent beta-bucket composite (weights fitted on all history to date)
-  final_score     - average of the two percentile ranks
+  final_score     - within-beta-bucket composite percentile (the only layer with OOS support); ML reported alongside
   key factor readings, sector, beta bucket
   analogs         - the historical (date, ticker) cases nearest in factor space and what their
                     realised 42d excess Sharpe vs SPY was (median, hit rate), i.e. the case-study evidence
@@ -65,7 +65,9 @@ def main():
 
     today["ml_rank"] = today.ml_score.rank(pct=True)
     today["comp_rank"] = today.groupby("beta_bucket").comp_score.rank(pct=True)
-    today["final_score"] = (today.ml_rank + today.comp_rank.fillna(today.ml_rank)) / 2
+    # final score = within-beta-bucket composite percentile. The ML model showed ~zero OOS IC in the recent
+    # window (see ml_oos_evaluation.csv) so it is reported as a column, not blended into the ranking.
+    today["final_score"] = today.comp_rank.fillna(today.ml_rank)
 
     # ---------------- analogs: nearest historical cases in rank-factor space, with realised outcomes
     hist = tr[tr.date <= train_end]
@@ -85,9 +87,12 @@ def main():
     today["analog_med_xsSharpe42"] = a_med
     today["analog_hit_rate"] = a_hit
     today["analog_n"] = a_n
+    # analog outcomes in absolute excess-Sharpe units sit near -1 in the recent era (SPY's own Sharpe was high);
+    # the percentile across today's names is the comparable reading
+    today["analog_pct"] = pd.Series(a_med, index=today.index).rank(pct=True)
     today["analog_examples"] = a_list
 
-    show = ["ticker", "sector", "beta_bucket", "final_score", "ml_score", "comp_score", "analog_med_xsSharpe42", "analog_hit_rate",
+    show = ["ticker", "sector", "beta_bucket", "final_score", "ml_score", "comp_score", "analog_med_xsSharpe42", "analog_pct", "analog_hit_rate",
             "mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "rs_spy_63", "sharpe_126", "beta_252", "rv20", "rv20_pct_252",
             "vol_dry_20_250", "updown_vol_ratio_50", "obv_price_div_63", "dn_up_vol_asym_63", "corr_spy_63", "days_since_20pct_dd",
             "ceiling_2x_low", "analog_examples"]
