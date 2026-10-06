@@ -1,498 +1,498 @@
-ticker,n_signatures,best_p_top_q_42,best_signature,best_signature_n,all_signatures
-NVDA,65,0.6155555555555555,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,450,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.62) | beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & dist_52w_high:TOP & z_rs_lead_126:BOT (0.47) | beta_252:TOP & dist_52w_high:TOP & rv_ratio_20_60:BOT (0.34) | beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP (0.47)
-FLEX,175,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | beta_252:TOP & sharpe_126:TOP & z_dist_52w_high:BOT (0.41) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
-AMAT,134,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
-LRCX,99,0.6094839609483961,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,717,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50)
-LYB,12,0.5715622076707203,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP,1069,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP (0.57) | days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | base_depth_126:BOT & capture_spread_63:TOP & vol_of_vol_63:BOT (0.44) | days_since_20pct_dd:BOT & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.47) | base_depth_126:BOT & capture_spread_63:TOP & z_vol_dry_20_250:BOT (0.49)
-QCOM,44,0.559322033898305,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50%,177,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50% (0.56) | dist_52w_high:BOT & dvol_trend_21_126:BOT & volROC21>+50% (0.52) | beta_252:TOP & dvol_trend_21_126:BOT & volROC21>+50% (0.55) | base_depth_126:BOT & dvol_trend_21_126:BOT & volROC21>+50% (0.52) | dn_vol_63:TOP & dvol_trend_21_126:BOT & volROC21>+50% (0.53)
-SNDK,182,0.5369458128078818,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,812,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.54) | dist_52w_high:BOT & rvROC21<-20% & sharpe_126:TOP (0.47) | days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | base_depth_126:BOT & rvROC21<-20% & sharpe_126:TOP (0.47)
-PLTR,197,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & parkinson_cc_20:TOP & skew_63:TOP (0.41) | dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & parkinson_cc_20:TOP (0.46)
-ANET,159,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP (0.51)
-MRVL,148,0.5304606240713224,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,2019,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP (0.53) | gap_share_21:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48)
-EXPE,15,0.5275459098497496,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT,1198,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.53) | idio_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.50) | idio_vol_63:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36)
-FDX,9,0.5209888059701493,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT,2144,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT (0.52) | accum_dist_50:BOT & dist_52w_low:TOP & dvol_trend_21_126:BOT (0.49) | dist_52w_low:TOP & updown_vol_ratio_50:BOT (0.41) | dist_52w_low:TOP & dvol_trend_21_126:BOT & rv_ratio_20_60:TOP (0.41) | ret_21:BOT & dist_52w_low:TOP (0.38)
-PTC,54,0.5202702702702703,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT,296,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT (0.52) | dist_52w_low:TOP & log_dvol_63:BOT & mom_12_1:BOT (0.44) | dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.41) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | gap_share_21:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.35)
-HAL,40,0.5194805194805194,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT,154,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT (0.52) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.52) | dist_52w_low:TOP & net_vol_flow_63:BOT & range_comp_10_252:BOT (0.38) | dist_52w_low:TOP & net_vol_flow_63:BOT & rvROC21<-20% (0.40) | base_depth_126:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.49)
-FCX,77,0.5194216395049627,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP,8161,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP (0.42) | beta_252:TOP & z_mom_12_1:TOP & z_obv_price_div_63:BOT (0.43) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_mom_12_1:TOP (0.45) | bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP (0.47)
-VRT,140,0.5176848874598071,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,311,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.52) | base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.37) | capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.48) | dist_52w_high:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.44)
-MPWR,62,0.5176848874598071,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,311,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.52) | dvol_trend_21_126:BOT & idio_vol_63:TOP & volROC21>+25% (0.47) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | beta_252:TOP & net_vol_flow_63:TOP & z_log_dvol_63:TOP (0.49)
-ETN,39,0.5149402390438247,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP,1004,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP (0.51) | dist_52w_high:TOP & dn_vol_63:TOP & net_vol_flow_63:TOP (0.52) | base_depth_126:TOP & dn_vol_63:TOP & vol_dry_10_50:BOT (0.41) | base_depth_126:TOP & dn_vol_63:TOP & net_vol_flow_63:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:TOP & dn_vol_63:TOP (0.44)
-ALGN,33,0.5147584973166368,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP,2236,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP (0.51) | beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.51) | base_depth_126:BOT & beta_252:TOP & z_mom_12_1:TOP (0.50) | dist_52w_high:BOT & range_comp_10_252:BOT & z_mom_12_1:TOP (0.49) | dist_52w_high:BOT & dvol_trend_21_126:BOT & z_mom_12_1:TOP (0.42)
-PANW,45,0.5136443661971831,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP,2272,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | dn_vol_63:TOP & rvROC21<-20% & skew_63:TOP (0.39) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | base_depth_126:TOP & dn_vol_63:TOP & skew_63:TOP (0.43) | dn_vol_63:TOP & higher_low_cadence:TOP & skew_63:TOP (0.44)
-EL,128,0.5110062893081762,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP,2544,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.51) | days_since_20pct_dd:BOT & sharpe_126:TOP & z_mom_12_1:TOP (0.56) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | clv_21:BOT & days_since_20pct_dd:BOT & sharpe_126:TOP (0.59) | beta_252:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.35)
-MU,131,0.5044722719141324,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,559,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.50) | beta_252:TOP & z_mom_12_1:TOP & z_rs_lead_126:BOT (0.59) | gap_share_21:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & z_mom_12_1:TOP (0.49) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53)
-GLW,82,0.4982027318475917,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT,2782,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT (0.50) | base_depth_126:BOT & beta_252:TOP & z_vol_dry_20_250:BOT (0.47) | corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48) | days_since_20pct_dd:BOT & mom_12_1:TOP & up_capture_63:TOP (0.50)
-HOOD,179,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | clv_21:BOT & dn_vol_63:TOP & sharpe_126:TOP (0.51) | clv_21:BOT & days_since_20pct_dd:BOT & sharpe_126:TOP (0.59) | capture_spread_63:BOT & dn_vol_63:TOP & sharpe_126:TOP (0.44)
-SMCI,103,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | days_since_20pct_dd:BOT & idio_vol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.47) | dn_vol_63:TOP & skew_63:TOP & up_day_frac_63:TOP (0.43)
-INTC,93,0.4977827050997783,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,902,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & sharpe_126:TOP (0.52) | dn_vol_63:TOP & gap_share_21:TOP & sharpe_126:TOP (0.53) | dn_vol_63:TOP & gap_share_21:TOP & skew_63:TOP (0.43) | days_since_20pct_dd:BOT & idio_vol_63:TOP & sharpe_126:TOP (0.50)
-PNR,24,0.49130434782608695,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP,230,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP (0.49) | dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP (0.38) | accum_dist_50:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.45) | dvol_trend_21_126:BOT & up_day_frac_63:BOT & vol_dry_20_250:TOP (0.40) | capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38)
-DDOG,76,0.49083063646170444,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP,927,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP (0.49) | dn_vol_63:TOP & rv20_pct_252:BOT & z_dist_52w_high:TOP (0.45) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | dn_vol_63:TOP & rvROC21<-10% & sharpe_126:TOP (0.47) | dist_52w_high:TOP & dn_vol_63:TOP & vol_of_vol_63:TOP (0.34)
-C,3,0.4876434245366284,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT,2266,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.49) | mom_12_1:TOP & beta_252:TOP (0.43) | range_comp_10_252:BOT & beta_252:TOP (0.38)
-UAL,9,0.4873035066505441,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP,827,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP (0.49) | beta_252:TOP & dvol_trend_21_126:BOT & volROC21>+25% (0.50) | beta_252:TOP & dvol_trend_21_126:BOT & pullback_vol_21:BOT (0.38) | beta_252:TOP & dvol_trend_21_126:BOT & rs_spy_63:BOT (0.44) | beta_252:TOP & dvol_trend_21_126:BOT & ret_63:BOT (0.44)
-ECHO,28,0.4842840512223516,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT,859,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.48) | base_depth_126:BOT & beta_252:TOP & skew_63:TOP (0.40) | beta_252:TOP & sharpe_126:BOT & skew_63:TOP (0.38) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | base_depth_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.47)
-STX,142,0.4823943661971831,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP,284,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP (0.48) | dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP (0.54) | dist_52w_high:BOT & gap_share_21:TOP & sharpe_126:TOP (0.63) | base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP (0.61) | dist_52w_high:BOT & net_vol_flow_63:TOP & sharpe_126:TOP (0.46)
-ORCL,32,0.48204960835509136,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,3064,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.48) | pullback_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.41) | beta_252:TOP & pullback_21:BOT & rvROC21<-10% (0.40) | corr_spy_63:TOP & idio_vol_63:TOP & rvROC21<-10% (0.41) | beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45)
-CAT,19,0.4819512195121951,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1025,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.48) | dist_52w_low:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:TOP (0.41) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.42) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | beta_252:TOP & dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.43)
-AMD,136,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | dn_vol_63:TOP & sharpe_126:TOP & z_vol_dry_20_250:BOT (0.46) | beta_252:TOP & idio_vol_63:TOP & z_mom_12_1:TOP (0.50) | beta_252:TOP & dn_vol_63:TOP & z_mom_12_1:TOP (0.51) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52)
-KEYS,42,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & skew_63:BOT & z_dist_52w_high:TOP (0.40) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & rs_spy_63:TOP & z_mom_12_1:TOP (0.47) | beta_252:TOP & ret_63:TOP & z_mom_12_1:TOP (0.47)
-ADI,32,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.46)
-TXN,21,0.47713717693836977,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,6036,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42)
-CTSH,26,0.47690655209452204,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP,1862,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP (0.48) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & pullback_21:BOT (0.39) | dist_52w_high:BOT & dist_52w_low:TOP & dn_up_vol_asym_63:BOT (0.32) | days_since_20pct_dd:BOT & dist_52w_low:TOP & dn_up_vol_asym_63:BOT (0.33) | capture_spread_63:TOP & dist_52w_low:TOP & pullback_21:BOT (0.47)
-DLR,3,0.47634408602150535,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP,1860,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP (0.48) | days_since_20pct_dd:TOP & higher_low_cadence:BOT & up_capture_63:TOP (0.56) | higher_low_cadence:BOT & up_capture_63:TOP (0.44)
-LDOS,4,0.4732510288065844,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP,486,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP (0.47) | base_depth_126:BOT & dn_up_vol_asym_63:BOT & updown_vol_ratio_50:TOP (0.46) | accum_dist_50:TOP & base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.47) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
-NCLH,80,0.4716885743174924,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,1978,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP (0.47) | base_depth_126:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT (0.45) | bbw_pct_252:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.42) | idio_vol_63:TOP & net_vol_flow_63:BOT & up_capture_63:TOP (0.44) | higher_low_cadence:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.47)
-CCL,46,0.4716885743174924,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,1978,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP (0.47) | higher_low_cadence:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.47) | higher_low_cadence:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | beta_252:TOP & days_since_20pct_dd:BOT & dn_up_vol_asym_63:BOT (0.34) | accum_dist_50:BOT & beta_252:TOP & dn_up_vol_asym_63:BOT (0.41)
-COF,17,0.47139588100686497,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP,874,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP (0.47) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | ret_21:BOT & rv20_pct_252:BOT & up_capture_63:TOP (0.34) | beta_252:TOP & pullback_vol_21:BOT & ret_21:BOT (0.47) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36)
-P,179,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dist_52w_high:TOP & dn_vol_63:TOP & vol_dry_20_250:TOP (0.53) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & vol_dry_20_250:TOP (0.47)
-DELL,158,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_vol_63:TOP & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.53) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51)
-HPE,141,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48)
-NTAP,64,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & gap_share_21:BOT & z_mom_12_1:TOP (0.56) | beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP (0.48) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP (0.52)
-META,62,0.4707452725250278,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,4495,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | beta_252:TOP & net_vol_flow_63:TOP & z_log_dvol_63:TOP (0.49) | beta_252:TOP & idio_vol_63:TOP & up_day_frac_63:TOP (0.48)
-FSLR,49,0.4671717171717172,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP,1980,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP (0.47) | dist_52w_low:BOT & higher_low_cadence:BOT & up_capture_63:TOP (0.42) | higher_low_cadence:BOT & pullback_21:BOT & up_capture_63:TOP (0.48) | higher_low_cadence:BOT & rs_spy_63:BOT & up_capture_63:TOP (0.53) | higher_low_cadence:BOT & ret_63:BOT & up_capture_63:TOP (0.53)
-EMR,19,0.4662670427832628,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP,8508,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP (0.47) | beta_252:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.46) | beta_252:TOP & rs_spy_63:TOP & up_day_frac_63:TOP (0.43) | beta_252:TOP & ret_63:TOP & up_day_frac_63:TOP (0.43) | beta_252:TOP & capture_spread_63:TOP & vol_of_vol_63:BOT (0.47)
-SWK,6,0.4651927098894532,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP,3347,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP (0.47) | beta_252:TOP & log_dvol_63:BOT & z_mom_12_1:TOP (0.46) | beta_252:TOP & z_mom_12_1:TOP (0.46) | sharpe_126:TOP & beta_252:TOP (0.42) | log_dvol_63:BOT & beta_252:TOP (0.38)
-ON,122,0.4650602409638554,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP,415,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP (0.47) | dist_52w_high:BOT & up_capture_63:TOP & z_mom_12_1:TOP (0.52) | beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP (0.51) | dist_52w_high:BOT & px21>+8% & z_mom_12_1:TOP (0.64) | dist_52w_high:BOT & updown_vol_ratio_50:TOP & z_mom_12_1:TOP (0.55)
-ABNB,68,0.4627720504009164,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP,1746,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP (0.46) | ret_21:BOT & rs_spy_63:TOP & z_vol_dry_20_250:TOP (0.33) | ret_21:BOT & ret_63:TOP & z_vol_dry_20_250:TOP (0.33) | ret_21:BOT & rs_spy_63:TOP & z_log_dvol_63:TOP (0.35) | ret_21:BOT & ret_63:TOP & z_log_dvol_63:TOP (0.35)
-ROK,10,0.46172248803827753,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP,418,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP (0.46) | beta_252:TOP & higher_low_cadence:BOT & up_day_frac_63:TOP (0.33) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & sharpe_126:TOP & up_day_frac_63:TOP (0.46) | beta_252:TOP & dist_52w_high:TOP & vol_dry_10_50:BOT (0.35)
-HWM,24,0.46171045276690886,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20%,1789,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20% (0.46) | days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-10% (0.49) | dn_vol_63:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.47) | dn_vol_63:TOP & up_day_frac_63:TOP & z_rs_lead_126:BOT (0.32) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & mom_12_1:TOP (0.46)
-NRG,48,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & days_since_ignition:BOT & ret_21:BOT (0.36) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41)
-APP,44,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & dvol_trend_21_126:BOT & sharpe_126:BOT (0.38) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41) | beta_252:TOP & dvol_trend_21_126:BOT & pullback_21:BOT (0.42)
-LULU,38,0.461702776930119,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,6554,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & gap_share_21:BOT & rvROC21<-20% (0.37) | beta_252:TOP & obv_price_div_63:BOT & rv_ratio_20_60:BOT (0.36) | beta_252:TOP & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.41) | dn_vol_63:TOP & px5<-3% & rvROC21<-20% (0.37)
-GNRC,91,0.4596456692913386,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1016,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & vol_dry_20_250:TOP (0.47)
-COHR,79,0.4596456692913386,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,1016,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.46) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT (0.44) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48)
-MCHP,84,0.45294117647058824,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP,1190,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP (0.45) | dn_vol_63:TOP & gap_share_21:TOP & skew_63:TOP (0.43) | base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT (0.50) | beta_252:TOP & dn_vol_63:TOP & skew_63:TOP (0.44) | base_depth_126:BOT & dist_52w_low:TOP & range_comp_10_252:BOT (0.54)
-MGM,7,0.4515576857240671,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP,2921,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP (0.45) | days_since_20pct_dd:BOT & log_dvol_63:BOT & z_mom_12_1:TOP (0.44) | dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32) | dist_52w_high:BOT & z_mom_12_1:TOP (0.42) | dn_vol_63:TOP & z_mom_12_1:TOP (0.45)
-CDNS,7,0.44849537037037035,net_vol_flow_63:TOP & dn_vol_63:TOP,8640,net_vol_flow_63:TOP & dn_vol_63:TOP (0.45) | net_vol_flow_63:TOP & beta_252:TOP (0.41) | dn_vol_63:TOP & beta_252:TOP (0.43) | dn_vol_63:TOP & up_capture_63:TOP (0.45) | updown_vol_ratio_50:TOP & dn_vol_63:TOP (0.43)
-GOOGL,3,0.44796035074342355,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,5246,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45) | mom_12_1:TOP & beta_252:TOP (0.43) | updown_vol_ratio_50:TOP & beta_252:TOP (0.41)
-GOOG,2,0.44796035074342355,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,5246,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.45) | updown_vol_ratio_50:TOP & beta_252:TOP (0.41)
-CPRT,2,0.4426229508196721,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT,183,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT (0.44) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
-BE,89,0.4411764705882353,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,884,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP (0.44) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | bbw_pct_252:BOT & idio_vol_63:TOP & parkinson_cc_20:BOT (0.37) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_rv20_pct_252:BOT (0.44) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dist_52w_high:TOP (0.43)
-AKAM,38,0.4395909169700121,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP,5769,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP (0.44) | beta_252:TOP & capture_spread_63:BOT & skew_63:TOP (0.32) | base_depth_126:BOT & beta_252:TOP & skew_63:TOP (0.40) | rs_spy_63:BOT & up_capture_63:TOP & volROC10>+50% (0.55) | ret_63:BOT & up_capture_63:TOP & volROC10>+50% (0.55)
-CF,11,0.43805309734513276,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT,2034,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT (0.44) | capture_spread_63:TOP & dist_52w_low:TOP & pullback_21:BOT (0.47) | dist_52w_low:TOP & pullback_21:BOT & rvROC21<-20% (0.41) | capture_spread_63:TOP & mom_12_1:TOP & pullback_21:BOT (0.47) | capture_spread_63:TOP & mom_12_1:TOP & ret_21:BOT (0.40)
-BEN,7,0.4375,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT,1920,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT (0.44) | accum_dist_50:BOT & dist_52w_low:TOP & rvROC10<-20% (0.44) | accum_dist_50:BOT & dist_52w_low:TOP & up_day_frac_63:BOT (0.49) | accum_dist_50:BOT & bbw_pct_252:BOT & dist_52w_low:TOP (0.43) | accum_dist_50:BOT & dist_52w_low:TOP & rvROC21<-10% (0.43)
-WDC,114,0.4374537379718727,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,1351,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | dist_52w_low:TOP & gap_share_21:TOP & rs_spy_63:BOT (0.49) | dist_52w_low:TOP & gap_share_21:TOP & ret_63:BOT (0.49) | accum_dist_50:BOT & dist_52w_low:TOP & rs_spy_63:BOT (0.55) | accum_dist_50:BOT & dist_52w_low:TOP & ret_63:BOT (0.55)
-NOW,75,0.4374537379718727,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,1351,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | dn_vol_63:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:BOT (0.44)
-JBL,38,0.43673012318029114,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50%,893,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50% (0.44) | gap_share_21:TOP & idio_vol_63:TOP & mom_12_1:TOP (0.48) | dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP (0.48) | beta_252:TOP & mom_12_1:TOP & vol_dry_20_250:TOP (0.47) | base_depth_126:BOT & mom_12_1:TOP & up_capture_63:TOP (0.51)
-JBHT,62,0.4339171974522293,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT,1256,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT (0.43) | days_since_20pct_dd:BOT & dist_52w_low:TOP & z_mom_12_1:TOP (0.52) | dist_52w_low:TOP & ret_21:BOT & volROC21>+50% (0.39) | dist_52w_low:TOP & higher_low_cadence:BOT & pullback_21:BOT (0.45) | base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50% (0.44)
-CBOE,2,0.4320809248554913,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT,692,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT (0.43) | base_depth_126:BOT & capture_spread_63:TOP (0.47)
-VST,47,0.4319880418535127,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP,669,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP (0.43) | beta_252:TOP & net_vol_flow_63:TOP & rs_lead_126:BOT (0.37) | base_depth_126:TOP & dn_vol_63:TOP & vol_dry_20_250:TOP (0.50) | dn_vol_63:TOP & pullback_vol_21:BOT & up_day_frac_63:TOP (0.42) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32)
-PWR,45,0.43099273607748184,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,4956,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & skew_63:TOP & up_day_frac_63:TOP (0.42) | corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & mom_12_1:TOP (0.40) | beta_252:TOP & mom_12_1:TOP & up_day_frac_63:TOP (0.45)
-CEG,40,0.43099273607748184,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,4956,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | beta_252:TOP & skew_63:TOP & up_day_frac_63:TOP (0.42) | beta_252:TOP & up_day_frac_63:TOP & z_dn_up_vol_asym_63:BOT (0.43) | beta_252:TOP & days_since_20pct_dd:BOT & dn_up_vol_asym_63:BOT (0.34) | beta_252:TOP & clv_21:BOT & up_day_frac_63:TOP (0.34)
-MRNA,339,0.43028229255774164,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,1169,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.43) | beta_252:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.42) | dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41)
-ACN,105,0.43028229255774164,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,1169,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT (0.43) | dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.43) | accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35)
-NXPI,11,0.4269098598995506,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT,7566,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT (0.43) | beta_252:TOP & dvol_trend_21_126:BOT & rs_spy_63:BOT (0.44) | beta_252:TOP & dvol_trend_21_126:BOT & ret_63:BOT (0.44) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | range_comp_10_252:BOT & dn_vol_63:TOP (0.39)
-FIX,48,0.4268142681426814,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT,2439,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43) | dist_52w_low:TOP & dvol_trend_21_126:BOT & gap_share_21:TOP (0.41) | dn_vol_63:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.47) | gap_share_21:TOP & idio_vol_63:TOP & mom_12_1:TOP (0.48) | dn_vol_63:TOP & gap_share_21:TOP & z_vol_dry_20_250:BOT (0.43)
-ALB,16,0.42495784148397975,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT,593,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT (0.42) | beta_252:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.49) | beta_252:TOP & dist_52w_high:BOT & mom_12_1:TOP (0.50) | dist_52w_high:BOT & mom_12_1:TOP & nr7_count_20:TOP (0.47) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40)
-FTNT,17,0.42325319043925824,idio_vol_63:TOP & sharpe_126:TOP,14183,idio_vol_63:TOP & sharpe_126:TOP (0.42) | dn_up_vol_asym_63:BOT & idio_vol_63:TOP & z_log_dvol_63:TOP (0.43) | dist_52w_high:TOP & idio_vol_63:TOP & vol_dry_20_250:BOT (0.34) | idio_vol_63:TOP & rs_lead_126:TOP & vol_dry_20_250:BOT (0.36) | idio_vol_63:TOP & z_mom_12_1:TOP (0.43)
-DOW,18,0.4217687074829932,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP,441,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP (0.42) | dist_52w_high:BOT & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.46) | dist_52w_high:BOT & z_mom_12_1:TOP & z_rv20_pct_252:BOT (0.41) | dist_52w_high:BOT & range_comp_10_252:BOT & z_mom_12_1:TOP (0.49) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.45)
-GPN,25,0.4211267605633803,pullback_21:BOT & rs_spy_63:TOP & sharpe_126:TOP,3550,pullback_21:BOT & rs_spy_63:TOP & sharpe_126:TOP (0.42) | pullback_21:BOT & ret_63:TOP & sharpe_126:TOP (0.42) | capture_spread_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.46) | pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & ret_21:BOT & rs_spy_63:TOP (0.35)
-SW,24,0.42110960757780785,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP,3695,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP (0.42) | beta_252:TOP & z_mom_12_1:TOP & z_vol_dry_20_250:BOT (0.45) | beta_252:TOP & skew_63:TOP & z_mom_12_1:TOP (0.44) | net_vol_flow_63:BOT & up_capture_63:TOP & z_rv20_pct_252:BOT (0.43) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36)
-HII,3,0.4196969696969697,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT,660,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT (0.42) | base_depth_126:BOT & dn_up_vol_asym_63:BOT & volROC21>+25% (0.52) | base_depth_126:BOT & dn_up_vol_asym_63:BOT (0.36)
-XYZ,29,0.41967621419676215,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP,2409,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & sharpe_126:TOP & vol_of_vol_63:BOT (0.45) | beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & rvROC21<-20% & sharpe_126:TOP (0.41) | beta_252:TOP & sharpe_126:TOP & z_obv_price_div_63:BOT (0.36)
-BBY,8,0.41967458387881057,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP,5347,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP (0.42) | pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & sharpe_126:TOP & z_dist_52w_high:TOP (0.42) | pullback_21:BOT & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.47) | dist_52w_low:TOP & pullback_21:BOT (0.41)
-TSLA,49,0.4191082802547771,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP,785,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.42) | days_since_ignition:BOT & dn_up_vol_asym_63:TOP & up_capture_63:TOP (0.41) | rvROC21<-20% & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.45) | rvROC10<-20% & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP (0.47) | dn_up_vol_asym_63:TOP & rvROC10<-20% & up_capture_63:TOP (0.46)
-VTRS,5,0.41823899371069184,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3%,954,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3% (0.42) | accum_dist_50:BOT & dist_52w_low:TOP & px5<-3% (0.47) | dist_52w_low:TOP & log_dvol_63:BOT (0.35) | dist_52w_low:TOP & px5<-3% (0.39) | dist_52w_low:TOP & accum_dist_50:BOT (0.46)
-LITE,120,0.4170522141440846,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,1513,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | base_depth_126:TOP & dn_vol_63:TOP & range_comp_10_252:BOT (0.40) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_rv20_pct_252:BOT (0.44) | dn_vol_63:TOP & range_comp_10_252:BOT & z_dist_52w_high:TOP (0.43) | beta_252:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49)
-CMI,6,0.4170522141440846,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,1513,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42) | base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & z_dist_52w_high:BOT (0.41) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | base_depth_126:BOT & beta_252:TOP (0.41)
-KLAC,94,0.416195856873823,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,531,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.42) | dist_52w_low:TOP & gap_share_21:TOP & rs_spy_63:BOT (0.49) | dist_52w_low:TOP & gap_share_21:TOP & ret_63:BOT (0.49) | dist_52w_low:TOP & parkinson_cc_20:BOT & rs_spy_63:BOT (0.45) | dist_52w_low:TOP & parkinson_cc_20:BOT & ret_63:BOT (0.45)
-CIEN,64,0.416195856873823,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,531,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP (0.42) | dist_52w_high:BOT & mom_12_1:TOP & vol_of_vol_63:BOT (0.45) | corr_spy_63:TOP & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.48) | days_since_20pct_dd:BOT & mom_12_1:TOP & up_capture_63:TOP (0.50) | days_since_20pct_dd:BOT & mom_12_1:TOP & pullback_21:TOP (0.48)
-CDW,26,0.4148471615720524,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP,458,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP (0.41) | idio_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP (0.35) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_vol_dry_20_250:BOT (0.45) | idio_vol_63:TOP & ret_21:BOT & up_capture_63:TOP (0.43) | idio_vol_63:TOP & pullback_21:BOT & z_dist_52w_high:TOP (0.41)
-IVZ,64,0.4117336152219873,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT,1892,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47) | beta_252:TOP & log_dvol_63:BOT & z_log_dvol_63:TOP (0.49) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP (0.42)
-ZBRA,57,0.4099960952752831,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,2561,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT (0.41) | beta_252:TOP & sharpe_126:TOP & vol_dry_10_50:BOT (0.42) | beta_252:TOP & dist_52w_high:TOP & rv_ratio_20_60:BOT (0.34) | beta_252:TOP & rv_ratio_20_60:BOT & skew_63:TOP (0.33) | corr_spy_63:TOP & idio_vol_63:TOP & vol_dry_20_250:BOT (0.37)
-BX,18,0.4086886564762671,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,1243,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.41) | base_depth_126:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.46) | dist_52w_high:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT (0.45) | ret_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.37) | pullback_21:BOT & rvROC21<-10% & up_capture_63:TOP (0.41)
-MPC,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
-PSX,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
-RVTY,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
-VLO,1,0.40777767586902686,dist_52w_low:TOP & vol_dry_20_250:TOP,10903,dist_52w_low:TOP & vol_dry_20_250:TOP (0.41)
-IT,44,0.40767519466073415,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT,1798,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | dn_vol_63:TOP & skew_63:TOP & z_obv_price_div_63:BOT (0.39) | dn_vol_63:TOP & obv_price_div_63:BOT & skew_63:TOP (0.40) | dist_52w_high:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.36)
-SWKS,180,0.4072191154041688,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,1967,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP (0.41) | beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.40) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & pullback_vol_21:TOP (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.47)
-NEM,68,0.4072191154041688,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,1967,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP (0.41) | beta_252:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.40) | beta_252:TOP & dn_up_vol_asym_63:BOT & pullback_vol_21:TOP (0.37) | beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP (0.43) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37)
-DASH,7,0.4069926053557326,up_day_frac_63:TOP & beta_252:TOP,13929,up_day_frac_63:TOP & beta_252:TOP (0.41) | up_day_frac_63:TOP & dn_vol_63:TOP (0.42) | dn_vol_63:TOP & beta_252:TOP (0.43) | dn_vol_63:TOP & up_capture_63:TOP (0.45) | dist_52w_high:BOT & up_capture_63:TOP (0.40)
-DVA,48,0.4069017823284035,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT,2637,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.41) | dist_52w_low:TOP & parkinson_cc_20:BOT & rs_spy_63:BOT (0.45) | dist_52w_low:TOP & parkinson_cc_20:BOT & ret_63:BOT (0.45) | days_since_20pct_dd:BOT & dist_52w_low:TOP & log_dvol_63:BOT (0.55) | dist_52w_low:TOP & log_dvol_63:BOT & z_dn_up_vol_asym_63:TOP (0.58)
-DAL,6,0.40501005668312307,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP,5469,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & days_since_ignition:BOT & rvROC21<-10% (0.37) | sharpe_126:TOP & beta_252:TOP (0.42) | mom_12_1:TOP & beta_252:TOP (0.43) | days_since_ignition:BOT & beta_252:TOP (0.36)
-EXPD,4,0.4036047634373994,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP,3107,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP (0.40) | dist_52w_low:TOP & log_dvol_63:BOT (0.35) | sharpe_126:TOP & up_capture_63:TOP (0.39) | dist_52w_low:TOP & up_capture_63:TOP (0.41)
-CRL,17,0.40330838912957856,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT,5078,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT (0.40) | idio_vol_63:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.39) | idio_vol_63:TOP & sharpe_126:TOP (0.42) | dn_up_vol_asym_63:BOT & idio_vol_63:TOP & z_log_dvol_63:TOP (0.43) | idio_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.41)
-MS,7,0.4028098879601636,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT,5623,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT (0.40) | beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT (0.49) | mom_12_1:TOP & beta_252:TOP (0.43) | pullback_21:BOT & beta_252:TOP (0.39) | ret_21:BOT & beta_252:TOP (0.37)
-CRM,63,0.4,dist_52w_low:TOP & ret_21:BOT & rs_spy_63:TOP,2350,dist_52w_low:TOP & ret_21:BOT & rs_spy_63:TOP (0.40) | dist_52w_low:TOP & ret_21:BOT & ret_63:TOP (0.40) | capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT (0.44) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & ret_21:BOT & rs_spy_63:TOP (0.38)
-APH,44,0.3965060878771837,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1889,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40) | beta_252:TOP & updown_vol_ratio_50:TOP & z_obv_price_div_63:BOT (0.39) | beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT (0.62) | accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34)
-KKR,36,0.39568345323741005,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP,1251,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP (0.40) | beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36)
-CARR,5,0.3953875416072278,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT,4206,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & vol_of_vol_63:TOP (0.36) | base_depth_126:BOT & beta_252:TOP (0.41) | range_comp_10_252:BOT & beta_252:TOP (0.38)
-VEEV,23,0.3931818181818182,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,1320,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP (0.39) | idio_vol_63:TOP & rv20_pct_252:BOT & z_dist_52w_high:TOP (0.38) | days_since_ignition:BOT & idio_vol_63:TOP & up_day_frac_63:TOP (0.40) | idio_vol_63:TOP & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.43) | idio_vol_63:TOP & sharpe_126:TOP (0.42)
-CNC,6,0.3926553672316384,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP,1416,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP (0.39) | dist_52w_low:TOP & net_vol_flow_63:BOT & range_comp_10_252:BOT (0.38) | dist_52w_low:TOP & higher_low_cadence:BOT & z_mom_12_1:TOP (0.38) | dist_52w_low:TOP & higher_low_cadence:BOT & z_log_dvol_63:BOT (0.41) | dist_52w_low:TOP & net_vol_flow_63:BOT (0.43)
-CVNA,74,0.39250990277277636,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,5554,beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | base_depth_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT (0.47) | ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | beta_252:TOP & clv_21:BOT & up_day_frac_63:TOP (0.34) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40)
-AXON,34,0.39250990277277636,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,5554,beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39) | accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP (0.46) | beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36) | beta_252:TOP & idio_vol_63:TOP & ret_21:BOT (0.41) | beta_252:TOP & pullback_21:BOT & rvROC10<-20% (0.39)
-WDAY,76,0.3923076923076923,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,1170,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP (0.39) | bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP (0.44) | bbw_pct_252:BOT & dn_up_vol_asym_63:BOT & dn_vol_63:TOP (0.45) | dn_vol_63:TOP & skew_63:TOP & z_rv20_pct_252:BOT (0.42) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40)
-PYPL,51,0.3923076923076923,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,1170,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP (0.39) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & rvROC21<-20% & skew_63:TOP (0.39) | dn_vol_63:TOP & higher_low_cadence:TOP & skew_63:TOP (0.44) | dn_vol_63:TOP & rv_ratio_20_60:BOT & z_dn_up_vol_asym_63:BOT (0.33)
-LII,67,0.39209225700164746,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,1821,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39) | dn_vol_63:TOP & gap_share_21:TOP & log_dvol_63:BOT (0.36) | idio_vol_63:TOP & log_dvol_63:BOT & net_vol_flow_63:BOT (0.35) | gap_share_21:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.35) | beta_252:TOP & idio_vol_63:TOP & log_dvol_63:BOT (0.43)
-CSGP,24,0.39209225700164746,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,1821,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39) | idio_vol_63:TOP & log_dvol_63:BOT & net_vol_flow_63:BOT (0.35) | idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & up_day_frac_63:BOT (0.31) | higher_low_cadence:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.32)
-DLTR,5,0.3889943074003795,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,1054,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP (0.39) | pullback_21:BOT & volROC21>+25% & z_dist_52w_high:TOP (0.43) | mom_12_1:TOP & pullback_21:BOT & z_dist_52w_high:TOP (0.42) | pullback_21:BOT & up_day_frac_63:TOP & z_dist_52w_high:TOP (0.47) | pullback_21:BOT & z_dist_52w_high:TOP (0.37)
-FFIV,2,0.3889138644128754,sharpe_126:TOP & up_capture_63:TOP,22244,sharpe_126:TOP & up_capture_63:TOP (0.39) | dist_52w_low:TOP & up_capture_63:TOP (0.41)
-WSM,1,0.3889138644128754,sharpe_126:TOP & up_capture_63:TOP,22244,sharpe_126:TOP & up_capture_63:TOP (0.39)
-A,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
-DXCM,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
-IQV,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
-MRK,1,0.3885477034858576,dist_52w_low:TOP & px5<-3%,11561,dist_52w_low:TOP & px5<-3% (0.39)
-GDDY,33,0.3877159309021113,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT,1042,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT (0.39) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | capture_spread_63:TOP & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.51) | dist_52w_high:BOT & dvol_trend_21_126:TOP & rs_spy_63:TOP (0.40) | dist_52w_high:BOT & dvol_trend_21_126:TOP & ret_63:TOP (0.40)
-IBM,11,0.3875075195508322,range_comp_10_252:BOT & dn_vol_63:TOP,9974,range_comp_10_252:BOT & dn_vol_63:TOP (0.39) | range_comp_10_252:BOT & idio_vol_63:TOP (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | clv_21:BOT & idio_vol_63:TOP (0.34) | dvol_trend_21_126:BOT & dn_vol_63:TOP (0.36)
-TMUS,1,0.3875075195508322,range_comp_10_252:BOT & dn_vol_63:TOP,9974,range_comp_10_252:BOT & dn_vol_63:TOP (0.39)
-BNY,3,0.3864734299516908,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT,828,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT (0.39) | net_vol_flow_63:BOT & pullback_21:BOT & sharpe_126:TOP (0.42) | pullback_21:BOT & sharpe_126:TOP (0.38)
-APTV,24,0.38471502590673573,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP,772,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38) | dvol_trend_21_126:BOT & rs_spy_63:BOT & vol_dry_20_250:TOP (0.40) | dvol_trend_21_126:BOT & ret_63:BOT & vol_dry_20_250:TOP (0.40) | vol_dry_20_250:TOP & dvol_trend_21_126:BOT (0.40) | idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT (0.39)
-DG,3,0.38461538461538464,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,442,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | days_since_20pct_dd:BOT & z_dist_52w_high:TOP & z_mom_12_1:TOP (0.57) | days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.42)
-JKHY,3,0.38461538461538464,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,442,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP (0.38) | days_since_20pct_dd:BOT & log_dvol_63:BOT & z_mom_12_1:TOP (0.44) | days_since_20pct_dd:BOT & z_mom_12_1:TOP (0.42)
-IBKR,25,0.3838120104438642,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20%,383,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20% (0.38) | beta_252:TOP & rvROC10<-20% & sharpe_126:TOP (0.42) | beta_252:TOP & sharpe_126:TOP & vol_of_vol_63:BOT (0.45) | beta_252:TOP & rvROC21<-10% & sharpe_126:TOP (0.41) | beta_252:TOP & dist_52w_high:TOP & range_comp_10_252:BOT (0.33)
-STLD,3,0.37993010484273587,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP,2003,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP (0.38) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.39) | dist_52w_low:TOP & dvol_trend_21_126:BOT (0.38)
-TPL,10,0.3797752808988764,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT,1335,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT (0.38) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.30)
-MSFT,6,0.37964361220175175,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,3311,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.38) | net_vol_flow_63:TOP & up_capture_63:TOP & z_obv_price_div_63:BOT (0.37) | sharpe_126:TOP & up_capture_63:TOP & z_obv_price_div_63:BOT (0.33) | rv_ratio_20_60:BOT & up_capture_63:TOP & z_obv_price_div_63:BOT (0.32) | sharpe_126:TOP & up_capture_63:TOP (0.39)
-CRWD,185,0.3793103448275862,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1160,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40)
-SNPS,110,0.3793103448275862,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,1160,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.38) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.41) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.41) | beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP (0.40) | dn_vol_63:TOP & skew_63:TOP & z_obv_price_div_63:BOT (0.39)
-CHTR,27,0.3782696177062374,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP,497,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP (0.38) | accum_dist_50:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.45) | capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP (0.38) | dvol_trend_21_126:BOT & rs_spy_63:BOT & vol_dry_20_250:TOP (0.40) | dvol_trend_21_126:BOT & ret_63:BOT & vol_dry_20_250:TOP (0.40)
-ADSK,30,0.37616279069767444,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,1720,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.38) | dn_vol_63:TOP & obv_price_div_63:BOT & z_dn_up_vol_asym_63:BOT (0.38) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36) | days_since_ignition:BOT & dist_52w_high:BOT & up_capture_63:TOP (0.36) | days_since_ignition:BOT & dn_vol_63:TOP & obv_price_div_63:BOT (0.37)
-RCL,9,0.37597765363128494,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,3580,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & dvol_trend_21_126:TOP & z_obv_price_div_63:BOT (0.39) | beta_252:TOP & days_since_ignition:BOT & obv_price_div_63:BOT (0.37) | beta_252:TOP & vol_dry_20_250:TOP & z_obv_price_div_63:BOT (0.43) | beta_252:TOP & dvol_trend_21_126:TOP & obv_price_div_63:BOT (0.39)
-BXP,3,0.37567567567567567,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT,1110,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT (0.38) | clv_21:BOT & pullback_21:BOT & sharpe_126:TOP (0.38) | pullback_21:BOT & sharpe_126:TOP (0.38)
-HST,6,0.37471264367816093,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20%,870,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20% (0.37) | dist_52w_low:TOP & rvROC10<-20% & z_dn_up_vol_asym_63:TOP (0.40) | dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP (0.38) | dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC21<-20% (0.37) | dist_52w_low:TOP & z_dn_up_vol_asym_63:TOP (0.39)
-TRMB,6,0.3708756345177665,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP,3152,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT (0.38) | accum_dist_50:TOP & obv_price_div_63:BOT & up_capture_63:TOP (0.33) | log_dvol_63:BOT & up_capture_63:TOP & z_obv_price_div_63:BOT (0.32) | obv_price_div_63:BOT & up_capture_63:TOP (0.33)
-AVGO,7,0.3696763202725724,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT,2935,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT (0.37) | base_depth_126:BOT & range_comp_10_252:BOT & up_capture_63:TOP (0.50) | beta_252:TOP & days_since_20pct_dd:BOT & range_comp_10_252:BOT (0.40) | beta_252:TOP & range_comp_10_252:BOT & up_capture_63:TOP (0.41) | base_depth_126:BOT & up_capture_63:TOP (0.45)
-RDDT,82,0.3681462140992167,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT,383,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT (0.37) | bbw_pct_252:BOT & idio_vol_63:TOP & updown_vol_ratio_50:BOT (0.37) | beta_252:TOP & days_since_ignition:BOT & vol_dry_10_50:BOT (0.38) | beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT (0.38) | beta_252:TOP & gap_share_21:BOT & rvROC21<-20% (0.37)
-ZTS,1,0.3677581863979849,base_depth_126:BOT & z_vol_dry_20_250:BOT,7543,base_depth_126:BOT & z_vol_dry_20_250:BOT (0.37)
-REGN,6,0.36666666666666664,ret_21:BOT & rs_spy_63:TOP & z_obv_price_div_63:TOP,450,ret_21:BOT & rs_spy_63:TOP & z_obv_price_div_63:TOP (0.37) | ret_21:BOT & ret_63:TOP & z_obv_price_div_63:TOP (0.37) | mom_12_1:TOP & ret_21:BOT & rs_spy_63:TOP (0.38) | mom_12_1:TOP & ret_21:BOT & ret_63:TOP (0.38) | ret_21:BOT & rs_spy_63:TOP (0.32)
-GEV,77,0.36606546426185704,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT,1497,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT (0.37) | dist_52w_low:TOP & px21>+8% & z_dn_up_vol_asym_63:TOP (0.44) | dist_52w_low:TOP & gap_share_21:TOP & z_dn_up_vol_asym_63:TOP (0.41) | up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_vol_dry_20_250:BOT (0.50) | dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT (0.43)
-ADBE,29,0.3654753877275792,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT,1483,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT (0.37) | dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT (0.32) | dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT (0.53) | idio_vol_63:TOP & net_vol_flow_63:TOP & ret_21:BOT (0.37) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36)
-ILMN,96,0.3643122676579926,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,538,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP (0.36) | pullback_21:BOT & vol_dry_20_250:TOP & z_dist_52w_high:TOP (0.42) | obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP (0.37) | pullback_21:BOT & sharpe_126:TOP & vol_dry_20_250:TOP (0.43) | idio_vol_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.45)
-HPQ,83,0.3643122676579926,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,538,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP (0.36) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & dvol_trend_21_126:TOP (0.45) | dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP (0.51) | dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP (0.49) | idio_vol_63:TOP & pullback_21:BOT & sharpe_126:TOP (0.45)
-MAS,3,0.3642478211443729,bbw_pct_252:BOT & dn_vol_63:TOP,10556,bbw_pct_252:BOT & dn_vol_63:TOP (0.36) | log_dvol_63:BOT & dn_vol_63:TOP (0.32) | vol_dry_10_50:BOT & dn_vol_63:TOP (0.36)
-TPR,10,0.3618579723090665,bbw_pct_252:BOT & idio_vol_63:TOP,11195,bbw_pct_252:BOT & idio_vol_63:TOP (0.36) | range_comp_10_252:BOT & dn_vol_63:TOP (0.39) | range_comp_10_252:BOT & idio_vol_63:TOP (0.36) | bbw_pct_252:BOT & dn_vol_63:TOP (0.36) | dn_vol_63:TOP & rvROC21<-20% (0.34)
-AMZN,43,0.3597037037037037,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP,3375,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | dvol_trend_21_126:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & range_comp_10_252:BOT & z_dn_up_vol_asym_63:BOT (0.34) | bbw_pct_252:BOT & beta_252:TOP & skew_63:TOP (0.33)
-TER,65,0.3590561224489796,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT,1568,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.40) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | dn_vol_63:TOP & z_dist_52w_high:TOP & z_vol_dry_20_250:BOT (0.45) | dn_vol_63:TOP & mom_12_1:TOP & z_obv_price_div_63:BOT (0.41)
-APO,15,0.358695652173913,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP,2944,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.36) | pullback_21:BOT & rvROC21<-20% & up_capture_63:TOP (0.40) | parkinson_cc_20:TOP & ret_21:BOT & up_capture_63:TOP (0.35) | ret_21:BOT & rv20_pct_252:BOT & up_capture_63:TOP (0.34) | parkinson_cc_20:TOP & pullback_21:BOT & up_capture_63:TOP (0.40)
-VRSK,9,0.357059136920618,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10%,9385,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & mom_12_1:BOT & vol_dry_20_250:BOT (0.34) | base_depth_126:BOT & pullback_21:BOT & z_vol_dry_20_250:BOT (0.41) | base_depth_126:BOT & parkinson_cc_20:BOT & z_vol_dry_20_250:BOT (0.47) | dn_vol_63:TOP & z_vol_dry_20_250:BOT (0.40)
-EIX,11,0.35637065637065635,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20%,2590,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20% (0.36) | idio_vol_63:TOP & obv_price_div_63:TOP & rvROC21<-10% (0.34) | clv_21:BOT & idio_vol_63:TOP (0.34) | dn_vol_63:TOP & rvROC21<-20% (0.34) | idio_vol_63:TOP & rvROC21<-10% (0.35)
-CRH,9,0.35577162802293694,beta_252:TOP & ret_21:BOT & rvROC21<-20%,4011,beta_252:TOP & ret_21:BOT & rvROC21<-20% (0.36) | beta_252:TOP & ret_21:BOT & rvROC21<-10% (0.37) | base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT (0.40) | beta_252:TOP & mom_12_1:BOT & ret_21:BOT (0.34) | beta_252:TOP & ret_21:BOT & z_rv20_pct_252:BOT (0.35)
-CASY,8,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | ret_21:BOT & idio_vol_63:TOP (0.35) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
-FICO,7,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | ret_21:BOT & idio_vol_63:TOP (0.35) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
-CHRW,6,0.354956169925826,updown_vol_ratio_50:BOT & idio_vol_63:TOP,14830,updown_vol_ratio_50:BOT & idio_vol_63:TOP (0.35) | idio_vol_63:TOP & px5<-3% (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | net_vol_flow_63:BOT & idio_vol_63:TOP (0.36) | dn_vol_63:TOP & idio_vol_63:TOP (0.38)
-EFX,6,0.3545878693623639,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20%,7073,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & ret_21:BOT & rvROC21<-20% (0.32) | dn_vol_63:TOP & rvROC21<-20% (0.34) | dn_vol_63:TOP & rvROC21<-10% (0.35)
-FDS,38,0.35309278350515466,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT,1552,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT (0.35) | bbw_pct_252:BOT & idio_vol_63:TOP & rv_ratio_20_60:TOP (0.34) | bbw_pct_252:BOT & dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.40) | dn_vol_63:TOP & ret_21:BOT & rs_spy_63:TOP (0.42) | dn_vol_63:TOP & ret_21:BOT & ret_63:TOP (0.42)
-CMG,5,0.3485323305129009,ret_21:BOT & idio_vol_63:TOP,19146,ret_21:BOT & idio_vol_63:TOP (0.35) | idio_vol_63:TOP & px5<-3% (0.36) | pullback_21:BOT & idio_vol_63:TOP (0.36) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33) | dn_vol_63:TOP & idio_vol_63:TOP (0.38)
-BAX,1,0.3478943611705924,dist_52w_low:TOP & log_dvol_63:BOT,7005,dist_52w_low:TOP & log_dvol_63:BOT (0.35)
-GRMN,18,0.3463414634146341,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP,205,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP (0.35) | idio_vol_63:TOP & net_vol_flow_63:BOT & rs_spy_63:TOP (0.37) | idio_vol_63:TOP & net_vol_flow_63:BOT & ret_63:TOP (0.37) | net_vol_flow_63:BOT & rs_lead_126:TOP & rs_spy_63:TOP (0.35) | net_vol_flow_63:BOT & ret_63:TOP & rs_lead_126:TOP (0.35)
-TYL,4,0.3418776033322653,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT,3121,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT (0.34) | obv_price_div_63:BOT & idio_vol_63:TOP (0.34) | idio_vol_63:TOP & z_obv_price_div_63:BOT (0.34) | idio_vol_63:TOP & z_log_dvol_63:TOP (0.42)
-TEL,25,0.3340172343044727,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,2437,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | beta_252:TOP & higher_low_cadence:TOP & rs_lead_126:BOT (0.32) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | beta_252:TOP & rs_lead_126:BOT & rs_spy_63:TOP (0.39) | beta_252:TOP & ret_63:TOP & rs_lead_126:BOT (0.39)
-EME,23,0.3340172343044727,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,2437,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT (0.33) | accum_dist_50:TOP & beta_252:TOP & z_obv_price_div_63:BOT (0.34) | beta_252:TOP & dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.36) | beta_252:TOP & dn_up_vol_asym_63:BOT & obv_price_div_63:BOT (0.37) | beta_252:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT (0.34)
-ARE,20,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | clv_21:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.31) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | idio_vol_63:TOP & px5<-3% & rvROC21<-10% (0.36)
-ERIE,18,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_spy_63:BOT (0.34) | idio_vol_63:TOP & log_dvol_63:BOT & ret_63:BOT (0.34) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34)
-SKYD,18,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | dist_52w_high:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.33) | idio_vol_63:TOP & log_dvol_63:BOT & rs_lead_126:BOT (0.34) | idio_vol_63:TOP & ret_21:BOT & updown_vol_ratio_50:TOP (0.34) | dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32)
-GEN,16,0.33319292333614153,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,2374,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT (0.33) | clv_21:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.31) | idio_vol_63:TOP & log_dvol_63:BOT & rs_spy_63:BOT (0.34) | idio_vol_63:TOP & log_dvol_63:BOT & ret_63:BOT (0.34) | capture_spread_63:BOT & idio_vol_63:TOP & log_dvol_63:BOT (0.34)
-SLB,5,0.33281972265023113,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT,1298,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT (0.33) | dist_52w_low:TOP & dn_up_vol_asym_63:BOT & pullback_21:BOT (0.39) | dist_52w_low:TOP & pullback_21:BOT & rvROC21<-20% (0.41) | ret_21:BOT & dist_52w_low:TOP (0.38) | dist_52w_low:TOP & pullback_21:BOT (0.41)
-BLK,2,0.3326932650593841,obv_price_div_63:BOT & up_capture_63:TOP,14061,obv_price_div_63:BOT & up_capture_63:TOP (0.33) | up_capture_63:TOP & z_obv_price_div_63:BOT (0.33)
-ARES,62,0.33141592920353985,beta_252:TOP & ret_21:BOT & skew_63:TOP,2260,beta_252:TOP & ret_21:BOT & skew_63:TOP (0.33) | beta_252:TOP & parkinson_cc_20:TOP & skew_63:TOP (0.38) | ret_21:BOT & skew_63:TOP & up_capture_63:TOP (0.31) | beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP (0.36) | beta_252:TOP & pullback_21:BOT & rvROC21<-20% (0.39)
-GS,52,0.33141592920353985,beta_252:TOP & ret_21:BOT & skew_63:TOP,2260,beta_252:TOP & ret_21:BOT & skew_63:TOP (0.33) | beta_252:TOP & capture_spread_63:BOT & skew_63:TOP (0.32) | ret_21:BOT & up_capture_63:TOP & up_day_frac_63:BOT (0.41) | ret_21:BOT & skew_63:TOP & up_capture_63:TOP (0.31) | range_comp_10_252:BOT & up_capture_63:TOP & z_dist_52w_high:BOT (0.44)
-LUV,27,0.3308641975308642,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP,405,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP (0.33) | dn_up_vol_asym_63:TOP & rvROC21<-20% & up_capture_63:TOP (0.44) | dn_up_vol_asym_63:TOP & parkinson_cc_20:TOP & up_capture_63:TOP (0.40) | dn_up_vol_asym_63:TOP & rvROC21<-10% & up_capture_63:TOP (0.43) | rs_spy_63:BOT & rvROC21<-20% & up_capture_63:TOP (0.46)
-PCG,23,0.3294491525423729,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP,2832,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP (0.33) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | idio_vol_63:TOP & up_day_frac_63:TOP & vol_dry_20_250:TOP (0.42) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-20% (0.35) | idio_vol_63:TOP & up_day_frac_63:TOP & z_log_dvol_63:TOP (0.49)
-ISRG,11,0.32661290322580644,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP,992,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP (0.33) | dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32) | idio_vol_63:TOP & log_dvol_63:TOP & net_vol_flow_63:TOP (0.43) | net_vol_flow_63:TOP & dn_vol_63:TOP (0.45) | idio_vol_63:TOP & z_rs_lead_126:BOT (0.32)
-COIN,40,0.3229426433915212,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT,802,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT (0.32) | dn_vol_63:TOP & rs_spy_63:TOP & z_rs_lead_126:BOT (0.35) | dn_vol_63:TOP & ret_63:TOP & z_rs_lead_126:BOT (0.35) | beta_252:TOP & days_since_ignition:BOT & vol_dry_10_50:BOT (0.38) | clv_21:BOT & dist_52w_high:BOT & rs_spy_63:TOP (0.43)
-SYK,1,0.3216035634743875,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,2245,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT (0.32)
-INTU,13,0.3193548387096774,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT,620,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT (0.32) | dn_vol_63:TOP & rvROC21<-10% & z_dn_up_vol_asym_63:BOT (0.36) | idio_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10% (0.36) | dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT (0.39)
-COO,2,0.3184865900383142,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP,2088,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP (0.32) | log_dvol_63:BOT & dn_vol_63:TOP (0.32)
-PODD,8,0.3055056852184321,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT,3342,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT (0.31) | idio_vol_63:TOP & obv_price_div_63:TOP & rvROC21<-10% (0.34) | idio_vol_63:TOP & z_rs_lead_126:BOT (0.32) | idio_vol_63:TOP & rvROC21<-10% (0.35) | obv_price_div_63:TOP & idio_vol_63:TOP (0.33)
-AAPL,0,0.2511737452933976,,0,
-ABBV,0,0.2511737452933976,,0,
-ABT,0,0.2511737452933976,,0,
-ACGL,0,0.2511737452933976,,0,
-ADM,0,0.2511737452933976,,0,
-ADP,0,0.2511737452933976,,0,
-AEE,0,0.2511737452933976,,0,
-AEP,0,0.2511737452933976,,0,
-AES,0,0.2511737452933976,,0,
-AFL,0,0.2511737452933976,,0,
-AIG,0,0.2511737452933976,,0,
-AIZ,0,0.2511737452933976,,0,
-AJG,0,0.2511737452933976,,0,
-ALL,0,0.2511737452933976,,0,
-ALLE,0,0.2511737452933976,,0,
-AMCR,0,0.2511737452933976,,0,
-AME,0,0.2511737452933976,,0,
-AMGN,0,0.2511737452933976,,0,
-AMP,0,0.2511737452933976,,0,
-AMT,0,0.2511737452933976,,0,
-AON,0,0.2511737452933976,,0,
-AOS,0,0.2511737452933976,,0,
-APA,0,0.2511737452933976,,0,
-APD,0,0.2511737452933976,,0,
-ATO,0,0.2511737452933976,,0,
-AVY,0,0.2511737452933976,,0,
-AWK,0,0.2511737452933976,,0,
-AXP,0,0.2511737452933976,,0,
-AZO,0,0.2511737452933976,,0,
-BA,0,0.2511737452933976,,0,
-BAC,0,0.2511737452933976,,0,
-BALL,0,0.2511737452933976,,0,
-BDX,0,0.2511737452933976,,0,
-BF-B,0,0.2511737452933976,,0,
-BG,0,0.2511737452933976,,0,
-BIIB,0,0.2511737452933976,,0,
-BKNG,0,0.2511737452933976,,0,
-BKR,0,0.2511737452933976,,0,
-BMY,0,0.2511737452933976,,0,
-BR,0,0.2511737452933976,,0,
-BRK-B,0,0.2511737452933976,,0,
-BRO,0,0.2511737452933976,,0,
-BSX,0,0.2511737452933976,,0,
-CAH,0,0.2511737452933976,,0,
-CB,0,0.2511737452933976,,0,
-CBRE,0,0.2511737452933976,,0,
-CCI,0,0.2511737452933976,,0,
-CFG,0,0.2511737452933976,,0,
-CHD,0,0.2511737452933976,,0,
-CI,0,0.2511737452933976,,0,
-CINF,0,0.2511737452933976,,0,
-CL,0,0.2511737452933976,,0,
-CLX,0,0.2511737452933976,,0,
-CMCSA,0,0.2511737452933976,,0,
-CME,0,0.2511737452933976,,0,
-CMS,0,0.2511737452933976,,0,
-CNP,0,0.2511737452933976,,0,
-COP,0,0.2511737452933976,,0,
-COR,0,0.2511737452933976,,0,
-COST,0,0.2511737452933976,,0,
-CPAY,0,0.2511737452933976,,0,
-CPT,0,0.2511737452933976,,0,
-CSCO,0,0.2511737452933976,,0,
-CSX,0,0.2511737452933976,,0,
-CTAS,0,0.2511737452933976,,0,
-CVS,0,0.2511737452933976,,0,
-CVX,0,0.2511737452933976,,0,
-D,0,0.2511737452933976,,0,
-DD,0,0.2511737452933976,,0,
-DE,0,0.2511737452933976,,0,
-DECK,0,0.2511737452933976,,0,
-DGX,0,0.2511737452933976,,0,
-DHI,0,0.2511737452933976,,0,
-DHR,0,0.2511737452933976,,0,
-DIS,0,0.2511737452933976,,0,
-DOC,0,0.2511737452933976,,0,
-DOV,0,0.2511737452933976,,0,
-DPZ,0,0.2511737452933976,,0,
-DRI,0,0.2511737452933976,,0,
-DTE,0,0.2511737452933976,,0,
-DUK,0,0.2511737452933976,,0,
-DVN,0,0.2511737452933976,,0,
-EBAY,0,0.2511737452933976,,0,
-ECL,0,0.2511737452933976,,0,
-ED,0,0.2511737452933976,,0,
-EG,0,0.2511737452933976,,0,
-ELV,0,0.2511737452933976,,0,
-EOG,0,0.2511737452933976,,0,
-EQIX,0,0.2511737452933976,,0,
-EQT,0,0.2511737452933976,,0,
-ES,0,0.2511737452933976,,0,
-ESS,0,0.2511737452933976,,0,
-ETR,0,0.2511737452933976,,0,
-EVRG,0,0.2511737452933976,,0,
-EW,0,0.2511737452933976,,0,
-EXC,0,0.2511737452933976,,0,
-EXE,0,0.2511737452933976,,0,
-EXR,0,0.2511737452933976,,0,
-F,0,0.2511737452933976,,0,
-FANG,0,0.2511737452933976,,0,
-FAST,0,0.2511737452933976,,0,
-FE,0,0.2511737452933976,,0,
-FERG,0,0.2511737452933976,,0,
-FIS,0,0.2511737452933976,,0,
-FISV,0,0.2511737452933976,,0,
-FITB,0,0.2511737452933976,,0,
-FOX,0,0.2511737452933976,,0,
-FOXA,0,0.2511737452933976,,0,
-FRT,0,0.2511737452933976,,0,
-FTV,0,0.2511737452933976,,0,
-GD,0,0.2511737452933976,,0,
-GE,0,0.2511737452933976,,0,
-GEHC,0,0.2511737452933976,,0,
-GILD,0,0.2511737452933976,,0,
-GIS,0,0.2511737452933976,,0,
-GL,0,0.2511737452933976,,0,
-GM,0,0.2511737452933976,,0,
-GPC,0,0.2511737452933976,,0,
-GWW,0,0.2511737452933976,,0,
-HAS,0,0.2511737452933976,,0,
-HBAN,0,0.2511737452933976,,0,
-HCA,0,0.2511737452933976,,0,
-HD,0,0.2511737452933976,,0,
-HIG,0,0.2511737452933976,,0,
-HLT,0,0.2511737452933976,,0,
-HON,0,0.2511737452933976,,0,
-HRL,0,0.2511737452933976,,0,
-HSIC,0,0.2511737452933976,,0,
-HSY,0,0.2511737452933976,,0,
-HUBB,0,0.2511737452933976,,0,
-HUM,0,0.2511737452933976,,0,
-ICE,0,0.2511737452933976,,0,
-IDXX,0,0.2511737452933976,,0,
-IEX,0,0.2511737452933976,,0,
-IFF,0,0.2511737452933976,,0,
-INCY,0,0.2511737452933976,,0,
-INVH,0,0.2511737452933976,,0,
-IP,0,0.2511737452933976,,0,
-IR,0,0.2511737452933976,,0,
-IRM,0,0.2511737452933976,,0,
-ITW,0,0.2511737452933976,,0,
-J,0,0.2511737452933976,,0,
-JCI,0,0.2511737452933976,,0,
-JNJ,0,0.2511737452933976,,0,
-JPM,0,0.2511737452933976,,0,
-KDP,0,0.2511737452933976,,0,
-KEY,0,0.2511737452933976,,0,
-KHC,0,0.2511737452933976,,0,
-KIM,0,0.2511737452933976,,0,
-KMB,0,0.2511737452933976,,0,
-KMI,0,0.2511737452933976,,0,
-KO,0,0.2511737452933976,,0,
-KR,0,0.2511737452933976,,0,
-KVUE,0,0.2511737452933976,,0,
-L,0,0.2511737452933976,,0,
-LEN,0,0.2511737452933976,,0,
-LH,0,0.2511737452933976,,0,
-LHX,0,0.2511737452933976,,0,
-LIN,0,0.2511737452933976,,0,
-LLY,0,0.2511737452933976,,0,
-LMT,0,0.2511737452933976,,0,
-LNT,0,0.2511737452933976,,0,
-LOW,0,0.2511737452933976,,0,
-LVS,0,0.2511737452933976,,0,
-LYV,0,0.2511737452933976,,0,
-MA,0,0.2511737452933976,,0,
-MAA,0,0.2511737452933976,,0,
-MAR,0,0.2511737452933976,,0,
-MCD,0,0.2511737452933976,,0,
-MCK,0,0.2511737452933976,,0,
-MCO,0,0.2511737452933976,,0,
-MDLZ,0,0.2511737452933976,,0,
-MDT,0,0.2511737452933976,,0,
-MET,0,0.2511737452933976,,0,
-MKC,0,0.2511737452933976,,0,
-MLM,0,0.2511737452933976,,0,
-MMM,0,0.2511737452933976,,0,
-MNST,0,0.2511737452933976,,0,
-MO,0,0.2511737452933976,,0,
-MOS,0,0.2511737452933976,,0,
-MRSH,0,0.2511737452933976,,0,
-MSCI,0,0.2511737452933976,,0,
-MSI,0,0.2511737452933976,,0,
-MTB,0,0.2511737452933976,,0,
-MTD,0,0.2511737452933976,,0,
-NDAQ,0,0.2511737452933976,,0,
-NDSN,0,0.2511737452933976,,0,
-NEE,0,0.2511737452933976,,0,
-NFLX,0,0.2511737452933976,,0,
-NI,0,0.2511737452933976,,0,
-NKE,0,0.2511737452933976,,0,
-NOC,0,0.2511737452933976,,0,
-NSC,0,0.2511737452933976,,0,
-NTRS,0,0.2511737452933976,,0,
-NUE,0,0.2511737452933976,,0,
-NVR,0,0.2511737452933976,,0,
-NWS,0,0.2511737452933976,,0,
-NWSA,0,0.2511737452933976,,0,
-O,0,0.2511737452933976,,0,
-ODFL,0,0.2511737452933976,,0,
-OKE,0,0.2511737452933976,,0,
-OMC,0,0.2511737452933976,,0,
-ORLY,0,0.2511737452933976,,0,
-OTIS,0,0.2511737452933976,,0,
-OXY,0,0.2511737452933976,,0,
-PAYX,0,0.2511737452933976,,0,
-PCAR,0,0.2511737452933976,,0,
-PEG,0,0.2511737452933976,,0,
-PEP,0,0.2511737452933976,,0,
-PFE,0,0.2511737452933976,,0,
-PFG,0,0.2511737452933976,,0,
-PG,0,0.2511737452933976,,0,
-PGR,0,0.2511737452933976,,0,
-PH,0,0.2511737452933976,,0,
-PHM,0,0.2511737452933976,,0,
-PKG,0,0.2511737452933976,,0,
-PLD,0,0.2511737452933976,,0,
-PM,0,0.2511737452933976,,0,
-PNC,0,0.2511737452933976,,0,
-PNW,0,0.2511737452933976,,0,
-PPG,0,0.2511737452933976,,0,
-PPL,0,0.2511737452933976,,0,
-PRU,0,0.2511737452933976,,0,
-PSA,0,0.2511737452933976,,0,
-REG,0,0.2511737452933976,,0,
-RF,0,0.2511737452933976,,0,
-RJF,0,0.2511737452933976,,0,
-RL,0,0.2511737452933976,,0,
-RMD,0,0.2511737452933976,,0,
-ROL,0,0.2511737452933976,,0,
-ROST,0,0.2511737452933976,,0,
-RSG,0,0.2511737452933976,,0,
-RTX,0,0.2511737452933976,,0,
-SBAC,0,0.2511737452933976,,0,
-SBUX,0,0.2511737452933976,,0,
-SCHW,0,0.2511737452933976,,0,
-SHW,0,0.2511737452933976,,0,
-SJM,0,0.2511737452933976,,0,
-SNA,0,0.2511737452933976,,0,
-SO,0,0.2511737452933976,,0,
-SOLV,0,0.2511737452933976,,0,
-SPG,0,0.2511737452933976,,0,
-SPGI,0,0.2511737452933976,,0,
-SRE,0,0.2511737452933976,,0,
-STE,0,0.2511737452933976,,0,
-STT,0,0.2511737452933976,,0,
-STZ,0,0.2511737452933976,,0,
-SYF,0,0.2511737452933976,,0,
-SYY,0,0.2511737452933976,,0,
-T,0,0.2511737452933976,,0,
-TDG,0,0.2511737452933976,,0,
-TDY,0,0.2511737452933976,,0,
-TECH,0,0.2511737452933976,,0,
-TFC,0,0.2511737452933976,,0,
-TGT,0,0.2511737452933976,,0,
-TJX,0,0.2511737452933976,,0,
-TKO,0,0.2511737452933976,,0,
-TMO,0,0.2511737452933976,,0,
-TRGP,0,0.2511737452933976,,0,
-TROW,0,0.2511737452933976,,0,
-TRV,0,0.2511737452933976,,0,
-TSCO,0,0.2511737452933976,,0,
-TSN,0,0.2511737452933976,,0,
-TT,0,0.2511737452933976,,0,
-TTWO,0,0.2511737452933976,,0,
-TXT,0,0.2511737452933976,,0,
-UBER,0,0.2511737452933976,,0,
-UDR,0,0.2511737452933976,,0,
-UHS,0,0.2511737452933976,,0,
-ULTA,0,0.2511737452933976,,0,
-UNH,0,0.2511737452933976,,0,
-UNP,0,0.2511737452933976,,0,
-UPS,0,0.2511737452933976,,0,
-URI,0,0.2511737452933976,,0,
-USB,0,0.2511737452933976,,0,
-V,0,0.2511737452933976,,0,
-VICI,0,0.2511737452933976,,0,
-VLTO,0,0.2511737452933976,,0,
-VMC,0,0.2511737452933976,,0,
-VMRK,0,0.2511737452933976,,0,
-VRSN,0,0.2511737452933976,,0,
-VRTX,0,0.2511737452933976,,0,
-VTR,0,0.2511737452933976,,0,
-VZ,0,0.2511737452933976,,0,
-WAB,0,0.2511737452933976,,0,
-WAT,0,0.2511737452933976,,0,
-WEC,0,0.2511737452933976,,0,
-WELL,0,0.2511737452933976,,0,
-WFC,0,0.2511737452933976,,0,
-WM,0,0.2511737452933976,,0,
-WMB,0,0.2511737452933976,,0,
-WMT,0,0.2511737452933976,,0,
-WRB,0,0.2511737452933976,,0,
-WST,0,0.2511737452933976,,0,
-WTW,0,0.2511737452933976,,0,
-WY,0,0.2511737452933976,,0,
-WYNN,0,0.2511737452933976,,0,
-XEL,0,0.2511737452933976,,0,
-XOM,0,0.2511737452933976,,0,
-XYL,0,0.2511737452933976,,0,
-YUM,0,0.2511737452933976,,0,
-ZBH,0,0.2511737452933976,,0,
+ticker,sector,beta_bucket,n_fire,best_signature,best_signature_plain,best_p_conf,best_n_conf
+MRNA,Healthcare,high,339,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4302822925577416,1169.0
+PLTR,Technology,high,197,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
+CRWD,Technology,high,185,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3793103448275862,1160.0
+SNDK,Technology,high,182,dist_52w_high:BOT & log_dvol_63:TOP & sharpe_126:TOP,distance to 52w high bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.5369458128078818,812.0
+SWKS,Technology,high,180,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,beta top 20% AND OBV leading price bottom 20% AND share of up days 63d top 20%,0.4072191154041688,1967.0
+HOOD,Financial,high,179,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
+P,Technology,high,179,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
+FLEX,Technology,high,175,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
+ANET,Technology,high,159,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
+DELL,Technology,high,158,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
+MRVL,Technology,high,148,dn_vol_63:TOP & gap_share_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND overnight share of moves top 20% AND distance to 52w high vs own norm top 20%,0.5304606240713224,2019.0
+STX,Technology,high,142,dist_52w_high:BOT & sharpe_126:TOP & up_day_frac_63:TOP,distance to 52w high bottom 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%,0.4823943661971831,284.0
+HPE,Technology,high,141,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
+VRT,Industrials,high,140,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,gain off 52w low top 20% AND dollar-volume trend bottom 20% AND volROC21>+25%,0.5176848874598071,311.0
+AMD,Technology,high,136,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
+AMAT,Technology,high,134,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
+MU,Technology,high,131,dn_vol_63:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,downside vol top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.5044722719141324,559.0
+EL,Consumer Defensive,high,128,beta_252:TOP & days_since_20pct_dd:BOT & z_mom_12_1:TOP,beta top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%,0.5110062893081762,2544.0
+ON,Technology,high,122,dist_52w_high:BOT & net_vol_flow_63:TOP & z_mom_12_1:TOP,distance to 52w high bottom 20% AND net volume flow top 20% AND 12-1m momentum vs own norm top 20%,0.4650602409638554,415.0
+LITE,Technology,high,120,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.4170522141440846,1513.0
+WDC,Technology,high,114,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%,0.4374537379718727,1351.0
+SNPS,Technology,high,110,dn_vol_63:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,downside vol top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3793103448275862,1160.0
+ACN,Technology,low,105,dn_vol_63:TOP & net_vol_flow_63:TOP & obv_price_div_63:BOT,downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%,0.4302822925577416,1169.0
+SMCI,Technology,high,103,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
+LRCX,Technology,high,99,base_depth_126:BOT & gap_share_21:TOP & sharpe_126:TOP,depth below 126d high bottom 20% AND overnight share of moves top 20% AND 126d Sharpe top 20%,0.6094839609483961,717.0
+ILMN,Healthcare,mid,96,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3643122676579926,538.0
+KLAC,Technology,high,94,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%,0.416195856873823,531.0
+INTC,Technology,high,93,days_since_20pct_dd:BOT & log_dvol_63:TOP & sharpe_126:TOP,time since 20% drawdown bottom 20% AND dollar volume top 20% AND 126d Sharpe top 20%,0.4977827050997783,902.0
+GNRC,Industrials,high,91,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4596456692913386,1016.0
+BE,Industrials,high,89,dn_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,downside vol top 20% AND volume on pullbacks top 20% AND distance to 52w high vs own norm top 20%,0.4411764705882353,884.0
+MCHP,Technology,high,84,dn_vol_63:TOP & range_comp_10_252:BOT & skew_63:TOP,downside vol top 20% AND range compression bottom 20% AND skew top 20%,0.4529411764705882,1190.0
+HPQ,Technology,mid,83,pullback_21:BOT & z_dist_52w_high:TOP & z_log_dvol_63:TOP,pullback from 21d high bottom 20% AND distance to 52w high vs own norm top 20% AND dollar volume vs own norm top 20%,0.3643122676579926,538.0
+GLW,Technology,high,82,base_depth_126:BOT & up_capture_63:TOP & z_vol_dry_20_250:BOT,depth below 126d high bottom 20% AND up-capture top 20% AND volume vs 250d vs own norm bottom 20%,0.4982027318475917,2782.0
+RDDT,Communication Services,high,82,beta_252:TOP & gap_share_21:BOT & z_rv20_pct_252:BOT,beta top 20% AND overnight share of moves bottom 20% AND 20d RV vs norm vs own norm bottom 20%,0.3681462140992167,383.0
+NCLH,Consumer Cyclical,high,80,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND net volume flow bottom 20% AND up-capture top 20%,0.4716885743174924,1978.0
+COHR,Technology,high,79,base_depth_126:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4596456692913386,1016.0
+FCX,Basic Materials,high,77,beta_252:TOP & capture_spread_63:TOP & z_mom_12_1:TOP,beta top 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%,0.5194216395049627,8161.0
+GEV,Industrials,high,77,up_capture_63:TOP & z_dn_up_vol_asym_63:TOP & z_rs_lead_126:BOT,up-capture top 20% AND downside/upside vol vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.366065464261857,1497.0
+WDAY,Technology,mid,76,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3923076923076923,1170.0
+DDOG,Technology,high,76,dn_vol_63:TOP & parkinson_cc_20:TOP & sharpe_126:TOP,downside vol top 20% AND range vol / close vol top 20% AND 126d Sharpe top 20%,0.4908306364617044,927.0
+NOW,Technology,mid,75,bbw_pct_252:BOT & days_since_20pct_dd:BOT & dist_52w_low:TOP,Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%,0.4374537379718727,1351.0
+CVNA,Consumer Cyclical,high,74,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,beta top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3925099027727763,5554.0
+NEM,Basic Materials,high,68,beta_252:TOP & obv_price_div_63:BOT & up_day_frac_63:TOP,beta top 20% AND OBV leading price bottom 20% AND share of up days 63d top 20%,0.4072191154041688,1967.0
+ABNB,Consumer Cyclical,high,68,idio_vol_63:TOP & ret_21:BOT & sharpe_126:TOP,idiosyncratic vol top 20% AND 21d return bottom 20% AND 126d Sharpe top 20%,0.4627720504009164,1746.0
+LII,Industrials,high,67,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3920922570016474,1821.0
+TER,Technology,high,65,accum_dist_50:TOP & dn_vol_63:TOP & z_obv_price_div_63:BOT,accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.3590561224489796,1568.0
+NVDA,Technology,high,65,beta_252:TOP & sharpe_126:TOP & z_rs_lead_126:BOT,beta top 20% AND 126d Sharpe top 20% AND RS line leading price vs own norm bottom 20%,0.6155555555555555,450.0
+IVZ,Financial,high,64,beta_252:TOP & net_vol_flow_63:TOP & z_obv_price_div_63:BOT,beta top 20% AND net volume flow top 20% AND OBV leading price vs own norm bottom 20%,0.4117336152219873,1892.0
+NTAP,Technology,high,64,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
+CIEN,Technology,high,64,clv_21:TOP & days_since_20pct_dd:BOT & mom_12_1:TOP,close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%,0.416195856873823,531.0
+CRM,Technology,mid,63,dist_52w_low:TOP & ret_21:BOT & ret_63:TOP,gain off 52w low top 20% AND 21d return bottom 20% AND 63d return top 20%,0.4,2350.0
+MPWR,Technology,high,62,dist_52w_low:TOP & dvol_trend_21_126:BOT & volROC21>+25%,gain off 52w low top 20% AND dollar-volume trend bottom 20% AND volROC21>+25%,0.5176848874598071,311.0
+ARES,Financial,high,62,beta_252:TOP & ret_21:BOT & skew_63:TOP,beta top 20% AND 21d return bottom 20% AND skew top 20%,0.3314159292035398,2260.0
+JBHT,Industrials,mid,62,dist_52w_low:TOP & higher_low_cadence:BOT & ret_21:BOT,gain off 52w low top 20% AND higher-low cadence bottom 20% AND 21d return bottom 20%,0.4339171974522293,1256.0
+META,Communication Services,high,62,beta_252:TOP & dn_up_vol_asym_63:BOT & z_log_dvol_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND dollar volume vs own norm top 20%,0.4707452725250278,4495.0
+ZBRA,Technology,high,57,corr_spy_63:TOP & idio_vol_63:TOP & z_vol_dry_20_250:BOT,corr to SPY top 20% AND idiosyncratic vol top 20% AND volume vs 250d vs own norm bottom 20%,0.4099960952752831,2561.0
+PTC,Technology,mid,54,dist_52w_low:TOP & log_dvol_63:BOT & z_mom_12_1:BOT,gain off 52w low top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm bottom 20%,0.5202702702702703,296.0
+GS,Financial,high,52,beta_252:TOP & ret_21:BOT & skew_63:TOP,beta top 20% AND 21d return bottom 20% AND skew top 20%,0.3314159292035398,2260.0
+PYPL,Financial,high,51,bbw_pct_252:BOT & dn_vol_63:TOP & skew_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20% AND skew top 20%,0.3923076923076923,1170.0
+FSLR,Technology,high,49,higher_low_cadence:BOT & ret_21:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.4671717171717172,1980.0
+TSLA,Consumer Cyclical,high,49,days_since_ignition:BOT & up_capture_63:TOP & z_dn_up_vol_asym_63:TOP,time since ignition day bottom 20% AND up-capture top 20% AND downside/upside vol vs own norm top 20%,0.4191082802547771,785.0
+DVA,Healthcare,low,48,dist_52w_low:TOP & idio_vol_63:TOP & log_dvol_63:BOT,gain off 52w low top 20% AND idiosyncratic vol top 20% AND dollar volume bottom 20%,0.4069017823284035,2637.0
+FIX,Industrials,high,48,dist_52w_low:TOP & dn_vol_63:TOP & z_rs_lead_126:BOT,gain off 52w low top 20% AND downside vol top 20% AND RS line leading price vs own norm bottom 20%,0.4268142681426814,2439.0
+NRG,Utilities,high,48,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
+VST,Utilities,high,47,base_depth_126:TOP & dn_vol_63:TOP & z_vol_dry_20_250:TOP,depth below 126d high top 20% AND downside vol top 20% AND volume vs 250d vs own norm top 20%,0.4319880418535127,669.0
+CCL,Consumer Cyclical,high,46,higher_low_cadence:BOT & net_vol_flow_63:BOT & up_capture_63:TOP,higher-low cadence bottom 20% AND net volume flow bottom 20% AND up-capture top 20%,0.4716885743174924,1978.0
+PANW,Technology,high,45,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_log_dvol_63:TOP,downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume vs own norm top 20%,0.5136443661971831,2272.0
+PWR,Industrials,high,45,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND share of up days 63d top 20%,0.4309927360774818,4956.0
+APH,Technology,high,44,beta_252:TOP & obv_price_div_63:BOT & updown_vol_ratio_50:TOP,beta top 20% AND OBV leading price bottom 20% AND up/down volume top 20%,0.3965060878771837,1889.0
+QCOM,Technology,high,44,dvol_trend_21_126:BOT & pullback_21:BOT & volROC21>+50%,dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volROC21>+50%,0.559322033898305,177.0
+IT,Technology,mid,44,dn_up_vol_asym_63:BOT & dn_vol_63:TOP & z_obv_price_div_63:BOT,downside/upside vol bottom 20% AND downside vol top 20% AND OBV leading price vs own norm bottom 20%,0.4076751946607341,1798.0
+APP,Communication Services,high,44,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
+AMZN,Consumer Cyclical,high,43,beta_252:TOP & range_comp_10_252:BOT & skew_63:TOP,beta top 20% AND range compression bottom 20% AND skew top 20%,0.3597037037037037,3375.0
+KEYS,Technology,high,42,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
+HAL,Energy,mid,40,dist_52w_low:TOP & ignition_mult_10:TOP & sharpe_126:BOT,gain off 52w low top 20% AND ignition-day volume top 20% AND 126d Sharpe bottom 20%,0.5194805194805194,154.0
+COIN,Financial,high,40,dn_vol_63:TOP & net_vol_flow_63:TOP & z_rs_lead_126:BOT,downside vol top 20% AND net volume flow top 20% AND RS line leading price vs own norm bottom 20%,0.3229426433915212,802.0
+CEG,Utilities,high,40,beta_252:TOP & dn_up_vol_asym_63:BOT & up_day_frac_63:TOP,beta top 20% AND downside/upside vol bottom 20% AND share of up days 63d top 20%,0.4309927360774818,4956.0
+ETN,Industrials,high,39,dist_52w_high:TOP & dn_vol_63:TOP & gap_share_21:TOP,distance to 52w high top 20% AND downside vol top 20% AND overnight share of moves top 20%,0.5149402390438247,1004.0
+JBL,Technology,high,38,base_depth_126:BOT & dist_52w_low:TOP & volROC21>+50%,depth below 126d high bottom 20% AND gain off 52w low top 20% AND volROC21>+50%,0.4367301231802911,893.0
+AKAM,Technology,high,38,beta_252:TOP & dn_vol_63:TOP & skew_63:TOP,beta top 20% AND downside vol top 20% AND skew top 20%,0.4395909169700121,5769.0
+LULU,Consumer Cyclical,high,38,accum_dist_50:BOT & beta_252:TOP & idio_vol_63:TOP,accumulation-distribution days bottom 20% AND beta top 20% AND idiosyncratic vol top 20%,0.461702776930119,6554.0
+FDS,Financial,low,38,accum_dist_50:TOP & dn_vol_63:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND downside vol top 20% AND OBV leading price bottom 20%,0.3530927835051546,1552.0
+KKR,Financial,high,36,days_since_ignition:BOT & ret_21:BOT & up_capture_63:TOP,time since ignition day bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.39568345323741,1251.0
+AXON,Industrials,high,34,beta_252:TOP & pullback_21:BOT & rvROC21<-20%,beta top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3925099027727763,5554.0
+ALGN,Healthcare,high,33,beta_252:TOP & dist_52w_high:BOT & z_mom_12_1:TOP,beta top 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%,0.5147584973166368,2236.0
+GDDY,Technology,low,33,capture_spread_63:TOP & dn_vol_63:TOP & log_dvol_63:BOT,up minus down capture top 20% AND downside vol top 20% AND dollar volume bottom 20%,0.3877159309021113,1042.0
+ADI,Technology,high,32,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
+ORCL,Technology,high,32,dn_vol_63:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,downside vol top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4820496083550913,3064.0
+ADSK,Technology,mid,30,dn_vol_63:TOP & z_dn_up_vol_asym_63:BOT & z_obv_price_div_63:BOT,downside vol top 20% AND downside/upside vol vs own norm bottom 20% AND OBV leading price vs own norm bottom 20%,0.3761627906976744,1720.0
+XYZ,Technology,high,29,beta_252:TOP & rvROC10<-20% & sharpe_126:TOP,beta top 20% AND rvROC10<-20% AND 126d Sharpe top 20%,0.4196762141967621,2409.0
+ADBE,Technology,mid,29,dn_vol_63:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND rvROC21<-20% AND downside/upside vol vs own norm bottom 20%,0.3654753877275792,1483.0
+ECHO,Communication Services,high,28,sharpe_126:BOT & up_capture_63:TOP & vol_dry_20_250:BOT,126d Sharpe bottom 20% AND up-capture top 20% AND volume vs 250d bottom 20%,0.4842840512223516,859.0
+LUV,Industrials,high,27,beta_252:TOP & dn_up_vol_asym_63:TOP & net_vol_flow_63:TOP,beta top 20% AND downside/upside vol top 20% AND net volume flow top 20%,0.3308641975308642,405.0
+CHTR,Communication Services,mid,27,dvol_trend_21_126:BOT & pullback_21:BOT & vol_dry_20_250:TOP,dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volume vs 250d top 20%,0.3782696177062374,497.0
+CDW,Technology,mid,26,dn_vol_63:TOP & ret_21:BOT & z_dist_52w_high:TOP,downside vol top 20% AND 21d return bottom 20% AND distance to 52w high vs own norm top 20%,0.4148471615720524,458.0
+CTSH,Technology,low,26,clv_21:BOT & dist_52w_high:BOT & dist_52w_low:TOP,close location in range bottom 20% AND distance to 52w high bottom 20% AND gain off 52w low top 20%,0.476906552094522,1862.0
+TEL,Technology,high,25,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND beta top 20% AND OBV leading price bottom 20%,0.3340172343044727,2437.0
+GPN,Technology,high,25,pullback_21:BOT & ret_63:TOP & sharpe_126:TOP,pullback from 21d high bottom 20% AND 63d return top 20% AND 126d Sharpe top 20%,0.4211267605633803,3550.0
+IBKR,Financial,high,25,beta_252:TOP & days_since_20pct_dd:TOP & rvROC10<-20%,beta top 20% AND time since 20% drawdown top 20% AND rvROC10<-20%,0.3838120104438642,383.0
+HWM,Industrials,high,24,days_since_20pct_dd:BOT & mom_12_1:TOP & rvROC21<-20%,time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND rvROC21<-20%,0.4617104527669088,1789.0
+CSGP,Real Estate,mid,24,idio_vol_63:TOP & log_dvol_63:BOT & updown_vol_ratio_50:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND up/down volume bottom 20%,0.3920922570016474,1821.0
+APTV,Consumer Cyclical,high,24,capture_spread_63:BOT & dvol_trend_21_126:BOT & vol_dry_20_250:TOP,up minus down capture bottom 20% AND dollar-volume trend bottom 20% AND volume vs 250d top 20%,0.3847150259067357,772.0
+PNR,Industrials,high,24,dvol_trend_21_126:BOT & gap_share_21:TOP & vol_dry_20_250:TOP,dollar-volume trend bottom 20% AND overnight share of moves top 20% AND volume vs 250d top 20%,0.4913043478260869,230.0
+SW,Consumer Cyclical,high,24,beta_252:TOP & obv_price_div_63:BOT & z_mom_12_1:TOP,beta top 20% AND OBV leading price bottom 20% AND 12-1m momentum vs own norm top 20%,0.4211096075778078,3695.0
+EME,Industrials,high,23,accum_dist_50:TOP & beta_252:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND beta top 20% AND OBV leading price bottom 20%,0.3340172343044727,2437.0
+VEEV,Healthcare,mid,23,idio_vol_63:TOP & pullback_vol_21:TOP & z_dist_52w_high:TOP,idiosyncratic vol top 20% AND volume on pullbacks top 20% AND distance to 52w high vs own norm top 20%,0.3931818181818182,1320.0
+PCG,Utilities,low,23,idio_vol_63:TOP & obv_price_div_63:TOP & up_day_frac_63:TOP,idiosyncratic vol top 20% AND OBV leading price top 20% AND share of up days 63d top 20%,0.3294491525423729,2832.0
+TXN,Technology,high,21,beta_252:TOP & up_day_frac_63:TOP & z_mom_12_1:TOP,beta top 20% AND share of up days 63d top 20% AND 12-1m momentum vs own norm top 20%,0.4771371769383697,6036.0
+ARE,Real Estate,mid,20,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
+CAT,Industrials,high,19,capture_spread_63:BOT & dist_52w_low:TOP & z_rs_lead_126:BOT,up minus down capture bottom 20% AND gain off 52w low top 20% AND RS line leading price vs own norm bottom 20%,0.4819512195121951,1025.0
+EMR,Industrials,high,19,beta_252:TOP & capture_spread_63:TOP & up_day_frac_63:TOP,beta top 20% AND up minus down capture top 20% AND share of up days 63d top 20%,0.4662670427832628,8508.0
+SKYD,Communication Services,mid,18,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
+DOW,Basic Materials,low,18,bbw_pct_252:BOT & dist_52w_high:BOT & z_mom_12_1:TOP,Bollinger width vs norm bottom 20% AND distance to 52w high bottom 20% AND 12-1m momentum vs own norm top 20%,0.4217687074829932,441.0
+ERIE,Financial,low,18,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
+GRMN,Technology,high,18,capture_spread_63:TOP & net_vol_flow_63:BOT & rs_lead_126:TOP,up minus down capture top 20% AND net volume flow bottom 20% AND RS line leading price top 20%,0.3463414634146341,205.0
+BX,Financial,high,18,mom_12_1:BOT & up_capture_63:TOP & updown_vol_ratio_50:BOT,12-1m momentum bottom 20% AND up-capture top 20% AND up/down volume bottom 20%,0.4086886564762671,1243.0
+COF,Financial,high,17,pullback_vol_21:BOT & ret_21:BOT & up_capture_63:TOP,volume on pullbacks bottom 20% AND 21d return bottom 20% AND up-capture top 20%,0.4713958810068649,874.0
+CRL,Healthcare,high,17,idio_vol_63:TOP & mom_12_1:TOP & obv_price_div_63:BOT,idiosyncratic vol top 20% AND 12-1m momentum top 20% AND OBV leading price bottom 20%,0.4033083891295785,5078.0
+FTNT,Technology,high,17,idio_vol_63:TOP & sharpe_126:TOP,idiosyncratic vol top 20% AND 126d Sharpe top 20%,0.4232531904392582,14183.0
+ALB,Basic Materials,high,16,beta_252:TOP & mom_12_1:TOP & sharpe_126:BOT,beta top 20% AND 12-1m momentum top 20% AND 126d Sharpe bottom 20%,0.4249578414839797,593.0
+GEN,Technology,mid,16,idio_vol_63:TOP & log_dvol_63:BOT & ret_21:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND 21d return bottom 20%,0.3331929233361415,2374.0
+EXPE,Consumer Cyclical,high,15,dn_vol_63:TOP & up_day_frac_63:TOP & vol_of_vol_63:BOT,downside vol top 20% AND share of up days 63d top 20% AND vol of vol bottom 20%,0.5275459098497496,1198.0
+APO,Financial,high,15,ret_21:BOT & rvROC21<-20% & up_capture_63:TOP,21d return bottom 20% AND rvROC21<-20% AND up-capture top 20%,0.358695652173913,2944.0
+INTU,Technology,mid,13,dn_vol_63:TOP & ret_21:BOT & z_dn_up_vol_asym_63:BOT,downside vol top 20% AND 21d return bottom 20% AND downside/upside vol vs own norm bottom 20%,0.3193548387096774,620.0
+LYB,Basic Materials,low,12,base_depth_126:BOT & capture_spread_63:TOP & z_mom_12_1:TOP,depth below 126d high bottom 20% AND up minus down capture top 20% AND 12-1m momentum vs own norm top 20%,0.5715622076707203,1069.0
+IBM,Technology,high,11,range_comp_10_252:BOT & dn_vol_63:TOP,range compression bottom 20% AND downside vol top 20%,0.3875075195508322,9974.0
+EIX,Utilities,low,11,idio_vol_63:TOP & obv_price_div_63:TOP & rvROC10<-20%,idiosyncratic vol top 20% AND OBV leading price top 20% AND rvROC10<-20%,0.3563706563706563,2590.0
+NXPI,Technology,high,11,base_depth_126:BOT & beta_252:TOP & dvol_trend_21_126:BOT,depth below 126d high bottom 20% AND beta top 20% AND dollar-volume trend bottom 20%,0.4269098598995506,7566.0
+ISRG,Healthcare,high,11,dn_vol_63:TOP & net_vol_flow_63:TOP & z_dn_up_vol_asym_63:TOP,downside vol top 20% AND net volume flow top 20% AND downside/upside vol vs own norm top 20%,0.3266129032258064,992.0
+CF,Basic Materials,low,11,capture_spread_63:TOP & dist_52w_low:TOP & ret_21:BOT,up minus down capture top 20% AND gain off 52w low top 20% AND 21d return bottom 20%,0.4380530973451327,2034.0
+TPR,Consumer Cyclical,high,10,bbw_pct_252:BOT & idio_vol_63:TOP,Bollinger width vs norm bottom 20% AND idiosyncratic vol top 20%,0.3618579723090665,11195.0
+ROK,Industrials,high,10,beta_252:TOP & higher_low_cadence:BOT & sharpe_126:TOP,beta top 20% AND higher-low cadence bottom 20% AND 126d Sharpe top 20%,0.4617224880382775,418.0
+TPL,Energy,mid,10,idio_vol_63:TOP & log_dvol_63:BOT & z_rs_lead_126:BOT,idiosyncratic vol top 20% AND dollar volume bottom 20% AND RS line leading price vs own norm bottom 20%,0.3797752808988764,1335.0
+VRSK,Industrials,low,9,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-10%,downside vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-10%,0.357059136920618,9385.0
+CRH,Basic Materials,high,9,beta_252:TOP & ret_21:BOT & rvROC21<-20%,beta top 20% AND 21d return bottom 20% AND rvROC21<-20%,0.3557716280229369,4011.0
+FDX,Industrials,high,9,accum_dist_50:BOT & dist_52w_low:TOP & net_vol_flow_63:BOT,accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND net volume flow bottom 20%,0.5209888059701493,2144.0
+UAL,Industrials,high,9,beta_252:TOP & dvol_trend_21_126:BOT & vol_dry_10_50:TOP,beta top 20% AND dollar-volume trend bottom 20% AND volume vs 50d top 20%,0.4873035066505441,827.0
+RCL,Consumer Cyclical,high,9,beta_252:TOP & days_since_ignition:BOT & z_obv_price_div_63:BOT,beta top 20% AND time since ignition day bottom 20% AND OBV leading price vs own norm bottom 20%,0.3759776536312849,3580.0
+PODD,Healthcare,mid,8,idio_vol_63:TOP & vol_dry_20_250:TOP & z_rs_lead_126:BOT,idiosyncratic vol top 20% AND volume vs 250d top 20% AND RS line leading price vs own norm bottom 20%,0.3055056852184321,3342.0
+CASY,Consumer Cyclical,low,8,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
+BBY,Consumer Cyclical,mid,8,dist_52w_low:TOP & pullback_21:BOT & sharpe_126:TOP,gain off 52w low top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%,0.4196745838788105,5347.0
+MS,Financial,high,7,beta_252:TOP & mom_12_1:TOP & obv_price_div_63:BOT,beta top 20% AND 12-1m momentum top 20% AND OBV leading price bottom 20%,0.4028098879601636,5623.0
+BEN,Financial,high,7,accum_dist_50:BOT & dist_52w_low:TOP & z_vol_dry_20_250:BOT,accumulation-distribution days bottom 20% AND gain off 52w low top 20% AND volume vs 250d vs own norm bottom 20%,0.4375,1920.0
+FICO,Technology,mid,7,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
+MGM,Consumer Cyclical,mid,7,dist_52w_high:BOT & dn_vol_63:TOP & z_mom_12_1:TOP,distance to 52w high bottom 20% AND downside vol top 20% AND 12-1m momentum vs own norm top 20%,0.4515576857240671,2921.0
+CDNS,Technology,high,7,net_vol_flow_63:TOP & dn_vol_63:TOP,net volume flow top 20% AND downside vol top 20%,0.4484953703703703,8640.0
+AVGO,Technology,high,7,base_depth_126:BOT & up_capture_63:TOP & z_rs_lead_126:BOT,depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%,0.3696763202725724,2935.0
+DASH,Consumer Cyclical,high,7,up_day_frac_63:TOP & beta_252:TOP,share of up days 63d top 20% AND beta top 20%,0.4069926053557326,13929.0
+MSFT,Technology,high,6,up_capture_63:TOP & up_day_frac_63:TOP & z_obv_price_div_63:BOT,up-capture top 20% AND share of up days 63d top 20% AND OBV leading price vs own norm bottom 20%,0.3796436122017517,3311.0
+CNC,Healthcare,mid,6,dist_52w_low:TOP & net_vol_flow_63:BOT & sharpe_126:TOP,gain off 52w low top 20% AND net volume flow bottom 20% AND 126d Sharpe top 20%,0.3926553672316384,1416.0
+DAL,Industrials,high,6,beta_252:TOP & rvROC21<-10% & sharpe_126:TOP,beta top 20% AND rvROC21<-10% AND 126d Sharpe top 20%,0.405010056683123,5469.0
+REGN,Healthcare,mid,6,ret_21:BOT & ret_63:TOP & z_obv_price_div_63:TOP,21d return bottom 20% AND 63d return top 20% AND OBV leading price vs own norm top 20%,0.3666666666666666,450.0
+SWK,Industrials,high,6,bbw_pct_252:BOT & beta_252:TOP & z_mom_12_1:TOP,Bollinger width vs norm bottom 20% AND beta top 20% AND 12-1m momentum vs own norm top 20%,0.4651927098894532,3347.0
+TRMB,Technology,high,6,obv_price_div_63:BOT & up_capture_63:TOP & up_day_frac_63:TOP,OBV leading price bottom 20% AND up-capture top 20% AND share of up days 63d top 20%,0.3708756345177665,3152.0
+EFX,Industrials,mid,6,dn_vol_63:TOP & pullback_21:BOT & rvROC21<-20%,downside vol top 20% AND pullback from 21d high bottom 20% AND rvROC21<-20%,0.3545878693623639,7073.0
+HST,Real Estate,mid,6,dist_52w_low:TOP & dn_up_vol_asym_63:TOP & rvROC10<-20%,gain off 52w low top 20% AND downside/upside vol top 20% AND rvROC10<-20%,0.3747126436781609,870.0
+CHRW,Industrials,mid,6,updown_vol_ratio_50:BOT & idio_vol_63:TOP,up/down volume bottom 20% AND idiosyncratic vol top 20%,0.354956169925826,14830.0
+CMI,Industrials,high,6,beta_252:TOP & range_comp_10_252:BOT & z_log_dvol_63:TOP,beta top 20% AND range compression bottom 20% AND dollar volume vs own norm top 20%,0.4170522141440846,1513.0
+SLB,Energy,mid,5,dist_52w_low:TOP & dn_up_vol_asym_63:BOT & ret_21:BOT,gain off 52w low top 20% AND downside/upside vol bottom 20% AND 21d return bottom 20%,0.3328197226502311,1298.0
+CARR,Industrials,high,5,base_depth_126:BOT & beta_252:TOP & z_rv20_pct_252:BOT,depth below 126d high bottom 20% AND beta top 20% AND 20d RV vs norm vs own norm bottom 20%,0.3953875416072278,4206.0
+CMG,Consumer Cyclical,mid,5,ret_21:BOT & idio_vol_63:TOP,21d return bottom 20% AND idiosyncratic vol top 20%,0.3485323305129009,19146.0
+VTRS,Healthcare,mid,5,dist_52w_low:TOP & log_dvol_63:BOT & px5<-3%,gain off 52w low top 20% AND dollar volume bottom 20% AND px5<-3%,0.4182389937106918,954.0
+DLTR,Consumer Defensive,mid,5,pullback_21:BOT & rs_lead_126:TOP & z_dist_52w_high:TOP,pullback from 21d high bottom 20% AND RS line leading price top 20% AND distance to 52w high vs own norm top 20%,0.3889943074003795,1054.0
+LDOS,Technology,mid,4,base_depth_126:BOT & dn_up_vol_asym_63:BOT & net_vol_flow_63:TOP,depth below 126d high bottom 20% AND downside/upside vol bottom 20% AND net volume flow top 20%,0.4732510288065844,486.0
+TYL,Technology,low,4,accum_dist_50:TOP & idio_vol_63:TOP & obv_price_div_63:BOT,accumulation-distribution days top 20% AND idiosyncratic vol top 20% AND OBV leading price bottom 20%,0.3418776033322653,3121.0
+EXPD,Industrials,mid,4,dist_52w_low:TOP & log_dvol_63:BOT & up_capture_63:TOP,gain off 52w low top 20% AND dollar volume bottom 20% AND up-capture top 20%,0.4036047634373994,3107.0
+BNY,Financial,mid,3,pullback_21:BOT & sharpe_126:TOP & updown_vol_ratio_50:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND up/down volume bottom 20%,0.3864734299516908,828.0
+STLD,Basic Materials,high,3,dist_52w_low:TOP & rvROC21<-20% & z_dn_up_vol_asym_63:TOP,gain off 52w low top 20% AND rvROC21<-20% AND downside/upside vol vs own norm top 20%,0.3799301048427358,2003.0
+C,Financial,high,3,beta_252:TOP & mom_12_1:TOP & z_rs_lead_126:BOT,beta top 20% AND 12-1m momentum top 20% AND RS line leading price vs own norm bottom 20%,0.4876434245366284,2266.0
+BXP,Real Estate,mid,3,pullback_21:BOT & sharpe_126:TOP & vol_of_vol_63:BOT,pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND vol of vol bottom 20%,0.3756756756756756,1110.0
+DLR,Real Estate,mid,3,dvol_trend_21_126:BOT & higher_low_cadence:BOT & up_capture_63:TOP,dollar-volume trend bottom 20% AND higher-low cadence bottom 20% AND up-capture top 20%,0.4763440860215053,1860.0
+DG,Consumer Defensive,mid,3,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.3846153846153846,442.0
+MAS,Industrials,high,3,bbw_pct_252:BOT & dn_vol_63:TOP,Bollinger width vs norm bottom 20% AND downside vol top 20%,0.3642478211443729,10556.0
+GOOGL,Communication Services,high,3,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,beta top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4479603507434235,5246.0
+JKHY,Technology,low,3,days_since_20pct_dd:BOT & vol_of_vol_63:BOT & z_mom_12_1:TOP,time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%,0.3846153846153846,442.0
+HII,Industrials,mid,3,base_depth_126:BOT & days_since_ignition:BOT & dn_up_vol_asym_63:BOT,depth below 126d high bottom 20% AND time since ignition day bottom 20% AND downside/upside vol bottom 20%,0.4196969696969697,660.0
+BLK,Financial,high,2,obv_price_div_63:BOT & up_capture_63:TOP,OBV leading price bottom 20% AND up-capture top 20%,0.3326932650593841,14061.0
+CPRT,Industrials,low,2,base_depth_126:BOT & dn_up_vol_asym_63:BOT & vol_of_vol_63:BOT,depth below 126d high bottom 20% AND downside/upside vol bottom 20% AND vol of vol bottom 20%,0.4426229508196721,183.0
+FFIV,Technology,high,2,sharpe_126:TOP & up_capture_63:TOP,126d Sharpe top 20% AND up-capture top 20%,0.3889138644128754,22244.0
+COO,Healthcare,mid,2,dn_vol_63:TOP & log_dvol_63:BOT & vol_dry_10_50:TOP,downside vol top 20% AND dollar volume bottom 20% AND volume vs 50d top 20%,0.3184865900383142,2088.0
+GOOG,Communication Services,high,2,beta_252:TOP & gap_share_21:TOP & updown_vol_ratio_50:TOP,beta top 20% AND overnight share of moves top 20% AND up/down volume top 20%,0.4479603507434235,5246.0
+CBOE,Financial,low,2,base_depth_126:BOT & capture_spread_63:TOP & pullback_vol_21:BOT,depth below 126d high bottom 20% AND up minus down capture top 20% AND volume on pullbacks bottom 20%,0.4320809248554913,692.0
+SYK,Healthcare,low,1,dn_vol_63:TOP & z_log_dvol_63:TOP & z_rs_lead_126:BOT,downside vol top 20% AND dollar volume vs own norm top 20% AND RS line leading price vs own norm bottom 20%,0.3216035634743875,2245.0
+MRK,Healthcare,low,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
+MPC,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
+DXCM,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
+TMUS,Communication Services,low,1,range_comp_10_252:BOT & dn_vol_63:TOP,range compression bottom 20% AND downside vol top 20%,0.3875075195508322,9974.0
+PSX,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
+VLO,Energy,low,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
+A,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
+BAX,Healthcare,high,1,dist_52w_low:TOP & log_dvol_63:BOT,gain off 52w low top 20% AND dollar volume bottom 20%,0.3478943611705924,7005.0
+RVTY,Healthcare,high,1,dist_52w_low:TOP & vol_dry_20_250:TOP,gain off 52w low top 20% AND volume vs 250d top 20%,0.4077776758690268,10903.0
+IQV,Healthcare,mid,1,dist_52w_low:TOP & px5<-3%,gain off 52w low top 20% AND px5<-3%,0.3885477034858576,11561.0
+ZTS,Healthcare,mid,1,base_depth_126:BOT & z_vol_dry_20_250:BOT,depth below 126d high bottom 20% AND volume vs 250d vs own norm bottom 20%,0.3677581863979849,7543.0
+WSM,Consumer Cyclical,high,1,sharpe_126:TOP & up_capture_63:TOP,126d Sharpe top 20% AND up-capture top 20%,0.3889138644128754,22244.0
+BDX,Healthcare,mid,0,,,,
+BALL,Consumer Cyclical,low,0,,,,
+BAC,Financial,mid,0,,,,
+COP,Energy,low,0,,,,
+BA,Industrials,high,0,,,,
+AZO,Consumer Cyclical,low,0,,,,
+COR,Healthcare,low,0,,,,
+COST,Consumer Defensive,low,0,,,,
+CPAY,Technology,high,0,,,,
+BMY,Healthcare,low,0,,,,
+OXY,Energy,low,0,,,,
+SJM,Consumer Defensive,low,0,,,,
+SCHW,Financial,mid,0,,,,
+SBUX,Consumer Cyclical,mid,0,,,,
+SBAC,Real Estate,low,0,,,,
+RTX,Industrials,mid,0,,,,
+OKE,Energy,low,0,,,,
+ODFL,Industrials,high,0,,,,
+O,Real Estate,low,0,,,,
+CMS,Utilities,low,0,,,,
+NWS,Communication Services,mid,0,,,,
+NVR,Consumer Cyclical,mid,0,,,,
+CLX,Consumer Defensive,mid,0,,,,
+CL,Consumer Defensive,low,0,,,,
+CINF,Financial,low,0,,,,
+CI,Healthcare,low,0,,,,
+CNP,Utilities,low,0,,,,
+CPT,Real Estate,low,0,,,,
+NWSA,Communication Services,mid,0,,,,
+MMM,Industrials,mid,0,,,,
+MTD,Healthcare,mid,0,,,,
+MTB,Financial,mid,0,,,,
+MSI,Technology,low,0,,,,
+MSCI,Financial,mid,0,,,,
+MRSH,Financial,low,0,,,,
+NI,Utilities,low,0,,,,
+NFLX,Communication Services,mid,0,,,,
+SHW,Basic Materials,mid,0,,,,
+NDSN,Industrials,mid,0,,,,
+NDAQ,Financial,mid,0,,,,
+NUE,Basic Materials,high,0,,,,
+NTRS,Financial,high,0,,,,
+NSC,Industrials,mid,0,,,,
+NOC,Industrials,low,0,,,,
+NKE,Consumer Cyclical,mid,0,,,,
+LLY,Healthcare,mid,0,,,,
+LIN,Basic Materials,low,0,,,,
+NEE,Utilities,low,0,,,,
+OTIS,Industrials,mid,0,,,,
+ORLY,Consumer Cyclical,low,0,,,,
+OMC,Communication Services,mid,0,,,,
+PG,Consumer Defensive,low,0,,,,
+PFG,Financial,mid,0,,,,
+PFE,Healthcare,mid,0,,,,
+PEP,Consumer Defensive,low,0,,,,
+PEG,Utilities,low,0,,,,
+PCAR,Industrials,high,0,,,,
+MNST,Consumer Defensive,low,0,,,,
+PNC,Financial,mid,0,,,,
+PM,Consumer Defensive,low,0,,,,
+PLD,Real Estate,mid,0,,,,
+PKG,Consumer Cyclical,mid,0,,,,
+PHM,Consumer Cyclical,high,0,,,,
+PH,Industrials,mid,0,,,,
+PGR,Financial,low,0,,,,
+MOS,Basic Materials,mid,0,,,,
+MO,Consumer Defensive,low,0,,,,
+PAYX,Technology,low,0,,,,
+SRE,Utilities,low,0,,,,
+SPGI,Financial,mid,0,,,,
+YUM,Consumer Cyclical,low,0,,,,
+TDG,Industrials,mid,0,,,,
+T,Communication Services,low,0,,,,
+SYY,Consumer Defensive,low,0,,,,
+SYF,Financial,high,0,,,,
+TMO,Healthcare,mid,0,,,,
+ROL,Consumer Cyclical,low,0,,,,
+STZ,Consumer Defensive,low,0,,,,
+ATO,Utilities,low,0,,,,
+VZ,Communication Services,low,0,,,,
+VTR,Real Estate,low,0,,,,
+VRTX,Healthcare,mid,0,,,,
+VRSN,Technology,low,0,,,,
+WM,Industrials,low,0,,,,
+WFC,Financial,mid,0,,,,
+TXT,Industrials,mid,0,,,,
+TKO,Communication Services,mid,0,,,,
+BKR,Energy,mid,0,,,,
+BKNG,Consumer Cyclical,high,0,,,,
+BIIB,Healthcare,mid,0,,,,
+BG,Consumer Defensive,low,0,,,,
+BF-B,Consumer Defensive,low,0,,,,
+BSX,Healthcare,low,0,,,,
+BRO,Financial,low,0,,,,
+BRK-B,Financial,low,0,,,,
+STE,Healthcare,mid,0,,,,
+CCI,Real Estate,low,0,,,,
+CBRE,Real Estate,high,0,,,,
+CB,Financial,low,0,,,,
+CAH,Healthcare,low,0,,,,
+TSCO,Consumer Cyclical,mid,0,,,,
+TRV,Financial,low,0,,,,
+TROW,Financial,high,0,,,,
+TRGP,Energy,low,0,,,,
+STT,Financial,high,0,,,,
+BR,Technology,low,0,,,,
+ADP,Technology,low,0,,,,
+TJX,Consumer Cyclical,low,0,,,,
+TGT,Consumer Defensive,mid,0,,,,
+TFC,Financial,mid,0,,,,
+TECH,Healthcare,mid,0,,,,
+PSA,Real Estate,mid,0,,,,
+PRU,Financial,mid,0,,,,
+PPL,Utilities,low,0,,,,
+TTWO,Communication Services,mid,0,,,,
+PNW,Utilities,low,0,,,,
+REG,Real Estate,low,0,,,,
+RSG,Industrials,low,0,,,,
+ROST,Consumer Cyclical,mid,0,,,,
+LHX,Industrials,mid,0,,,,
+RMD,Healthcare,mid,0,,,,
+RL,Consumer Cyclical,high,0,,,,
+RJF,Financial,mid,0,,,,
+RF,Financial,mid,0,,,,
+PPG,Basic Materials,high,0,,,,
+TT,Industrials,high,0,,,,
+TSN,Consumer Defensive,low,0,,,,
+URI,Industrials,high,0,,,,
+UPS,Industrials,mid,0,,,,
+UNP,Industrials,low,0,,,,
+UNH,Healthcare,mid,0,,,,
+ULTA,Consumer Cyclical,mid,0,,,,
+UHS,Healthcare,low,0,,,,
+UDR,Real Estate,low,0,,,,
+AEE,Utilities,low,0,,,,
+VMRK,Real Estate,low,0,,,,
+VMC,Basic Materials,mid,0,,,,
+VLTO,Industrials,mid,0,,,,
+TDY,Technology,high,0,,,,
+V,Financial,mid,0,,,,
+USB,Financial,mid,0,,,,
+AFL,Financial,low,0,,,,
+AES,Utilities,mid,0,,,,
+AEP,Utilities,low,0,,,,
+UBER,Technology,high,0,,,,
+FIS,Technology,mid,0,,,,
+GEHC,Healthcare,mid,0,,,,
+GE,Industrials,high,0,,,,
+GD,Industrials,mid,0,,,,
+FTV,Technology,mid,0,,,,
+GM,Consumer Cyclical,high,0,,,,
+GL,Financial,mid,0,,,,
+GIS,Consumer Defensive,low,0,,,,
+LVS,Consumer Cyclical,mid,0,,,,
+ED,Utilities,low,0,,,,
+ECL,Basic Materials,mid,0,,,,
+EBAY,Consumer Cyclical,mid,0,,,,
+DVN,Energy,low,0,,,,
+DUK,Utilities,low,0,,,,
+EOG,Energy,low,0,,,,
+AMT,Real Estate,low,0,,,,
+AMP,Financial,mid,0,,,,
+AMGN,Healthcare,mid,0,,,,
+GILD,Healthcare,mid,0,,,,
+HD,Consumer Cyclical,mid,0,,,,
+HCA,Healthcare,low,0,,,,
+HBAN,Financial,mid,0,,,,
+HUM,Healthcare,mid,0,,,,
+HUBB,Industrials,high,0,,,,
+HSY,Consumer Defensive,low,0,,,,
+HSIC,Healthcare,mid,0,,,,
+HRL,Consumer Defensive,low,0,,,,
+IFF,Basic Materials,mid,0,,,,
+FISV,Technology,mid,0,,,,
+IDXX,Healthcare,high,0,,,,
+ICE,Financial,mid,0,,,,
+FERG,Industrials,high,0,,,,
+FE,Utilities,low,0,,,,
+FAST,Industrials,mid,0,,,,
+FRT,Real Estate,low,0,,,,
+FOXA,Communication Services,low,0,,,,
+FOX,Communication Services,low,0,,,,
+FITB,Financial,mid,0,,,,
+IEX,Industrials,mid,0,,,,
+WYNN,Consumer Cyclical,mid,0,,,,
+WY,Real Estate,mid,0,,,,
+WTW,Financial,low,0,,,,
+WST,Healthcare,mid,0,,,,
+WRB,Financial,low,0,,,,
+WMT,Consumer Defensive,low,0,,,,
+WMB,Energy,low,0,,,,
+AIG,Financial,low,0,,,,
+AME,Industrials,high,0,,,,
+VICI,Real Estate,low,0,,,,
+XYL,Industrials,mid,0,,,,
+XOM,Energy,low,0,,,,
+XEL,Utilities,low,0,,,,
+SPG,Real Estate,mid,0,,,,
+SOLV,Healthcare,mid,0,,,,
+SO,Utilities,low,0,,,,
+SNA,Industrials,mid,0,,,,
+ADM,Consumer Defensive,low,0,,,,
+ZBH,Healthcare,low,0,,,,
+AMCR,Consumer Cyclical,mid,0,,,,
+APD,Basic Materials,low,0,,,,
+APA,Energy,low,0,,,,
+AOS,Industrials,mid,0,,,,
+AON,Financial,low,0,,,,
+AXP,Financial,high,0,,,,
+AWK,Utilities,low,0,,,,
+AVY,Consumer Cyclical,mid,0,,,,
+ALLE,Industrials,mid,0,,,,
+WAB,Industrials,high,0,,,,
+AAPL,Technology,mid,0,,,,
+ABBV,Healthcare,low,0,,,,
+AJG,Financial,low,0,,,,
+AIZ,Financial,low,0,,,,
+ABT,Healthcare,low,0,,,,
+ACGL,Financial,low,0,,,,
+WELL,Real Estate,low,0,,,,
+WEC,Utilities,low,0,,,,
+WAT,Healthcare,mid,0,,,,
+ALL,Financial,low,0,,,,
+LOW,Consumer Cyclical,mid,0,,,,
+LNT,Utilities,low,0,,,,
+LMT,Industrials,low,0,,,,
+MCK,Healthcare,low,0,,,,
+MCD,Consumer Cyclical,low,0,,,,
+MAR,Consumer Cyclical,mid,0,,,,
+MAA,Real Estate,low,0,,,,
+MA,Financial,mid,0,,,,
+HIG,Financial,low,0,,,,
+MLM,Basic Materials,mid,0,,,,
+MKC,Consumer Defensive,low,0,,,,
+MET,Financial,mid,0,,,,
+MDT,Healthcare,low,0,,,,
+MDLZ,Consumer Defensive,low,0,,,,
+MCO,Financial,mid,0,,,,
+IRM,Real Estate,high,0,,,,
+IR,Industrials,high,0,,,,
+IP,Consumer Cyclical,high,0,,,,
+LYV,Communication Services,mid,0,,,,
+LH,Healthcare,mid,0,,,,
+LEN,Consumer Cyclical,high,0,,,,
+D,Utilities,low,0,,,,
+CVX,Energy,low,0,,,,
+CVS,Healthcare,low,0,,,,
+DIS,Communication Services,mid,0,,,,
+DHR,Healthcare,mid,0,,,,
+DHI,Consumer Cyclical,high,0,,,,
+DGX,Healthcare,low,0,,,,
+CMCSA,Communication Services,low,0,,,,
+DE,Industrials,mid,0,,,,
+DTE,Utilities,low,0,,,,
+DRI,Consumer Cyclical,mid,0,,,,
+DPZ,Consumer Cyclical,low,0,,,,
+DOV,Industrials,high,0,,,,
+DOC,Real Estate,mid,0,,,,
+CHD,Consumer Defensive,low,0,,,,
+CFG,Financial,high,0,,,,
+CME,Financial,low,0,,,,
+DECK,Consumer Cyclical,high,0,,,,
+J,Industrials,high,0,,,,
+ITW,Industrials,mid,0,,,,
+KIM,Real Estate,low,0,,,,
+KHC,Consumer Defensive,low,0,,,,
+KEY,Financial,mid,0,,,,
+KDP,Consumer Defensive,low,0,,,,
+JPM,Financial,mid,0,,,,
+JNJ,Healthcare,low,0,,,,
+L,Financial,low,0,,,,
+INVH,Real Estate,low,0,,,,
+KR,Consumer Defensive,low,0,,,,
+KO,Consumer Defensive,low,0,,,,
+KMI,Energy,low,0,,,,
+KMB,Consumer Defensive,low,0,,,,
+HAS,Consumer Cyclical,mid,0,,,,
+GWW,Industrials,mid,0,,,,
+GPC,Consumer Cyclical,mid,0,,,,
+HON,Industrials,mid,0,,,,
+HLT,Consumer Cyclical,mid,0,,,,
+KVUE,Consumer Defensive,low,0,,,,
+INCY,Healthcare,mid,0,,,,
+JCI,Industrials,high,0,,,,
+ELV,Healthcare,mid,0,,,,
+EG,Financial,low,0,,,,
+EVRG,Utilities,low,0,,,,
+ETR,Utilities,low,0,,,,
+ESS,Real Estate,low,0,,,,
+ES,Utilities,low,0,,,,
+EQT,Energy,low,0,,,,
+DD,Basic Materials,high,0,,,,
+FANG,Energy,low,0,,,,
+F,Consumer Cyclical,high,0,,,,
+EXR,Real Estate,mid,0,,,,
+EXE,Energy,low,0,,,,
+EXC,Utilities,low,0,,,,
+EW,Healthcare,mid,0,,,,
+CTAS,Industrials,low,0,,,,
+CSX,Industrials,mid,0,,,,
+CSCO,Technology,high,0,,,,
+EQIX,Real Estate,mid,0,,,,

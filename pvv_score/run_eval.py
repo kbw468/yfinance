@@ -3,7 +3,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-from .config import CACHE_DIR, RESULTS_DIR, HORIZONS, RECENT_START, SAMPLE_START
+from .config import CACHE_DIR, RESULTS_DIR, HORIZONS, RECENT_START, SAMPLE_START, EXCLUDE_PERIODS
 from .evaluate import evaluate_factors, decile_spread, yearly_ic, factor_autocorr, bh_fdr
 
 RESULTS_DIR.mkdir(exist_ok=True)
@@ -21,6 +21,8 @@ FACTORS = load_registry()
 def load_research() -> pd.DataFrame:
     df = pd.read_parquet(CACHE_DIR / "research_long.parquet")
     df = df[df.eligible & (df.date >= SAMPLE_START)].copy()
+    for a, b in EXCLUDE_PERIODS:
+        df = df[(df.date < a) | (df.date > b)]
     return df
 
 
