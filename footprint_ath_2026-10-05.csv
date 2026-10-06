@@ -1,0 +1,25 @@
+,sector,industry,PATH,GATE,short%float,ret_12m,ret_6m,off_ATH,ATH_month,maxDD_250,maxDD_days_ago,within5_120,wkHL_26,slope_60,RV250,dollarvol20M
+TXNM,Utilities,Utilities - Regulated Electric,99.289,False,6.6,6.0,1.0,-1.0,2026-05,-5.0,62.0,98.0,54.0,10.0,0.052,107.92
+RGA,Financial Services,Insurance - Reinsurance,98.894,True,1.7,32.0,21.0,-2.6,2026-09,-13.0,85.0,94.0,62.0,27.0,0.226,88.877
+NDSN,Industrials,Specialty Industrial Machinery,98.736,True,3.1,46.0,28.0,-1.1,2026-08,-14.0,130.0,81.0,50.0,54.0,0.22,114.298
+EXPD,Industrials,Integrated Freight & Logistics,97.235,True,3.9,59.0,34.0,-0.6,2026-10,-16.0,154.0,93.0,69.0,42.0,0.313,214.321
+ACA,Industrials,Engineering & Construction,96.682,True,3.8,59.0,38.0,-0.2,2026-10,-21.0,136.0,89.0,73.0,4.0,0.318,106.752
+SLAB,Technology,Semiconductors,95.498,True,12.9,67.0,6.0,-0.3,2026-10,-16.0,217.0,100.0,69.0,9.0,0.548,61.503
+ABBV,Healthcare,Drug Manufacturers - General,94.629,True,1.2,16.0,31.0,-1.3,2026-09,-16.0,111.0,87.0,54.0,25.0,0.254,1151.894
+JCI,Industrials,Building Products & Equipment,93.523,True,2.1,46.0,18.0,-0.4,2026-10,-13.0,130.0,62.0,58.0,9.0,0.305,487.293
+SHEL,Energy,Oil & Gas Integrated,91.232,False,1.2,39.0,5.0,-2.7,2026-09,-18.0,69.0,63.0,58.0,59.0,0.228,613.942
+WAT,Healthcare,Diagnostics & Research,84.755,True,3.4,37.0,45.0,-1.8,2026-09,-31.0,142.0,80.0,62.0,69.0,0.354,314.355
+CRBG,Financial Services,Asset Management,84.439,False,4.8,11.0,44.0,-2.2,2026-09,-30.0,131.0,82.0,65.0,46.0,0.351,169.89
+EQH,Financial Services,Asset Management,83.807,False,2.7,10.0,42.0,-1.9,2026-09,-30.0,131.0,81.0,65.0,49.0,0.334,178.765
+EMR,Industrials,Specialty Industrial Machinery,80.806,True,1.5,24.0,23.0,-2.4,2026-08,-23.0,130.0,52.0,50.0,37.0,0.321,379.265
+FFIV,Technology,Software - Infrastructure,74.013,True,3.2,40.0,49.0,-0.8,2026-09,-35.0,218.0,70.0,65.0,38.0,0.367,245.218
+TMO,Healthcare,Diagnostics & Research,72.512,False,1.4,29.0,39.0,-1.0,2026-09,-31.0,97.0,62.0,50.0,99.0,0.289,1529.207
+NVDA,Technology,Semiconductors,71.88,True,1.3,27.0,35.0,-0.5,2026-10,-20.0,130.0,34.0,54.0,52.0,0.378,24550.35
+WCC,Industrials,Industrial Distribution,69.51,True,3.4,77.0,35.0,-2.1,2026-10,-21.0,136.0,50.0,50.0,33.0,0.454,177.449
+TSM,Technology,Semiconductors,68.799,False,0.6,70.0,43.0,-0.3,2026-10,-22.0,47.0,41.0,58.0,51.0,0.402,4465.365
+APH,Technology,Electronic Components,60.348,True,1.5,42.0,38.0,-2.1,2026-06,-28.0,130.0,40.0,58.0,29.0,0.457,990.542
+PANW,Technology,Software - Infrastructure,52.37,True,2.7,94.0,151.0,-0.7,2026-10,-36.0,154.0,58.0,77.0,55.0,0.478,2322.027
+ITUB,Financial Services,Banks - Regional,49.526,False,0.4,55.0,19.0,-2.6,2026-10,-24.0,31.0,6.0,46.0,7.0,0.358,267.853
+NET,Technology,Software - Infrastructure,43.76,True,2.7,60.0,70.0,-2.2,2026-09,-37.0,155.0,51.0,58.0,116.0,0.646,1068.619
+CVI,Energy,Oil & Gas Refining & Marketing,38.152,True,19.8,54.0,76.0,-0.5,2026-10,-48.0,156.0,52.0,65.0,256.0,0.542,60.891
+P,Technology,Computer Hardware,30.49,True,2.9,63.0,135.0,-0.1,2026-10,-42.0,130.0,37.0,62.0,242.0,0.688,877.287
