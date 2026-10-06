@@ -79,11 +79,22 @@ def main():
     depth.to_csv(RESULTS_DIR / "signature_depth_oos.csv")
     # tonight
     today = df[df.date == df.date.max()].copy()
+    # top-5 confirmed signatures per name tonight (ordered by discovery probability), for display
+    tmask = (df.date == df.date.max()).values
+    top5 = {t: [] for t in df.ticker.values[tmask]}
+    for i, r in conf.iterrows():
+        m = np.ones(n, dtype=bool)
+        for p in r.signature.split(" & "):
+            m &= conds[p]
+        for t in df.ticker.values[tmask & m]:
+            if len(top5[t]) < 5:
+                top5[t].append(f"{r.signature}|{r.p_conf:.2f}|{int(r.n_conf)}")
+    today["top5_signatures"] = today.ticker.map(lambda t: " || ".join(top5.get(t, [])))
     today["best_signature"] = today.best_sig_idx.map(lambda i: conf.signature.iloc[i] if i >= 0 else "")
     today["best_signature_plain"] = today.best_signature.map(lambda s: " AND ".join(plain(c) for c in s.split(" & ")) if s else "")
     today["best_p_conf"] = today.best_sig_idx.map(lambda i: conf.p_conf.iloc[i] if i >= 0 else np.nan)
     today["best_n_conf"] = today.best_sig_idx.map(lambda i: conf.n_conf.iloc[i] if i >= 0 else np.nan)
-    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf"]].sort_values(["n_fire"], ascending=False)
+    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
     print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
