@@ -167,6 +167,20 @@ Multiple-testing note: 86 factors x 10 buckets = 860 tests; the expected maximum
             "z_rv20_pct_252", "z_vol_dry_20_250", "z_obv_price_div_63", "z_dn_up_vol_asym_63", "top_states", "note"]
     tbl = us[cols].set_index("ticker")
     L.append(md(tbl, 2))
+    L.append("\n### 6e. Sector-relative composite: does the score predict beating the sector ETF?\n")
+    css = pd.read_csv(RESULTS_DIR / "composite_state_sector_oos_evaluation.csv", index_col=[0, 1])
+    b = css[css.model.str.contains("betabucket")]
+    rows = []
+    for h in (21, 42, 63):
+        for w in ("full", "recent"):
+            rows.append({"h": h, "window": w, "IC vs sector ETF": b.loc[(f"sec_sh{h}", w), "ic"], "t": b.loc[(f"sec_sh{h}", w), "t_nw"],
+                         "hit": b.loc[(f"sec_sh{h}", w), "hit"], "IC vs SPY": b.loc[(f"spy_sh{h}", w), "ic"], "t vs SPY": b.loc[(f"spy_sh{h}", w), "t_nw"]})
+    L.append("""The main score was fitted to Sharpe vs SPY. Checked directly, it has no power to pick which utility beats XLU (within-utilities IC vs XLU-excess Sharpe -0.01 at 42d, top-tercile P(beat XLU) 48%). So a separate composite was fitted walk-forward with the target = Sharpe vs the name's own sector ETF, factors ranked against sector peers, weights per sector group (defensive / cyclical / growth):
+""")
+    L.append(md(pd.DataFrame(rows).set_index(["h", "window"]), 3))
+    L.append("""
+It works for its own question (IC +0.03 to +0.04 vs the sector ETF, 58-62% of days positive, t 1.5-2.3) and it points the OPPOSITE way on the main question (IC -0.02 to -0.05 vs SPY). The names that beat their sector ETF over 1-3 months are, in this sample, short-term laggards in defensive sectors and low-idiosyncratic-vol names in growth: a within-sector mean-reversion read, not a Sharpe-maximising one. It is reported as a separate column (`vs_sector_score`, within-sector percentile) with a `read` flag, and it is not blended into the main ranking.
+""")
     L.append("\n### 6d. Identity vs state: the names raised\n")
     diag = us.set_index("ticker").reindex([t for t in ["DELL", "NVDA", "LLY", "PGR", "BRK-B", "AMD", "PANW", "NTAP", "DUK", "KO"] if t in us.ticker.values])
     L.append(md(diag[["Sector", "beta_bucket", "level_score", "state_score", "state_score_pooled", "top_states"]], 2))

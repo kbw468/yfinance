@@ -62,6 +62,30 @@ def main():
             tops[i] = "; ".join(f"{f[2:]} z={today.at[i, f]:+.1f}" for f in top3)
     today["top_states"] = pd.Series(tops)
 
+    # ---------------- sector-relative state composite: target = Sharpe vs own sector ETF, ranks within (date, sector),
+    # weights per sector group. Answers "beats its sector ETF?", which is a different question from the main score.
+    from .composite import SECTOR_GROUP
+    import pvv_score.composite as _c
+    grp_map = {"defensive": "low", "cyclical": "mid", "growth": "high"}
+    trs = tr.copy()
+    trs[zcols] = trs.groupby(["date", "sector"])[zcols].rank(pct=True).astype("float32")
+    trs["sgrp"] = trs["sector"].map(SECTOR_GROUP)
+    tds = today.copy()
+    tds[zcols] = tds.groupby(["date", "sector"])[zcols].rank(pct=True).astype("float32")
+    tds["sgrp"] = tds["sector"].map(SECTOR_GROUP)
+    old_target = _c.TARGET
+    _c.TARGET = "xs_sec_sharpe_42"
+    sec_w = {}
+    today["vs_sector_raw"] = np.nan
+    for g in ["defensive", "cyclical", "growth"]:
+        wg = fit_weights(trs[trs.sgrp == g], zcols, corr)
+        sec_w[g] = wg
+        m = tds.sgrp == g
+        today.loc[m[m].index, "vs_sector_raw"] = score_rows(tds[m], wg).values
+    _c.TARGET = old_target
+    pd.DataFrame(sec_w).to_csv(RESULTS_DIR / "composite_state_sector_final_weights.csv")
+    today["vs_sector_score"] = today.groupby("sector")["vs_sector_raw"].rank(pct=True)
+
     prev = pd.read_csv(RESULTS_DIR / "current_rankings.csv").set_index("ticker")
     today["level_score"] = today.ticker.map(prev["final_score"])
     today["ml_score"] = today.ticker.map(prev["ml_score"])
@@ -74,7 +98,7 @@ def main():
     out["sessions_of_history"] = hist.reindex(out.index).fillna(0).astype(int)
     out["eligible_today"] = last["eligible"].reindex(out.index).fillna(False).astype(bool)
     t = today.set_index("ticker")
-    for c in ["beta_bucket", "state_score", "state_score_pooled", "level_score", "ml_score", "top_states",
+    for c in ["beta_bucket", "state_score", "state_score_pooled", "level_score", "ml_score", "top_states", "vs_sector_score",
               "z_mom_12_1", "z_rs_lead_126", "z_dist_52w_high", "z_rv20_pct_252", "z_vol_dry_20_250", "z_obv_price_div_63",
               "z_updown_vol_ratio_50", "z_bbw_pct_252", "z_dn_up_vol_asym_63", "z_corr_spy_63", "z_idio_vol_63",
               "beta_252", "rv20", "mom_12_1", "dist_52w_high"]:
@@ -92,6 +116,13 @@ def main():
     # recommended sort keys: identity-neutral state first, persistence layer as confirmation
     out["avg_score"] = (out["state_score_pooled"] + out["level_score"]) / 2
     out["both_agree"] = (out["state_score_pooled"] >= 0.8) & (out["level_score"] >= 0.8)
+    def read(r):
+        if pd.isna(r.avg_score):
+            return ""
+        spy = r.avg_score >= 0.8
+        sec = pd.notna(r.vs_sector_score) and r.vs_sector_score >= 0.67
+        return "SPY & sector" if (spy and sec) else "SPY only" if spy else "sector only" if sec else ""
+    out["read"] = out.apply(read, axis=1)
     out["note"] = out.apply(reason, axis=1)
     out = out.sort_values("state_score_pooled", ascending=False)
     out.insert(0, "asof", asof.date())
