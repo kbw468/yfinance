@@ -1,0 +1,106 @@
+ticker,Company,Sector,Industry,mcap_$B,fwd63,fwd21,close,rv21,ret63,off_52w_hi
+DCOM,Dime Commercial Bancshares Inc,Financial,Banks - Regional,1.8,10.0,10.0,39.88,0.14,-0.001,-0.05
+PDLB,Ponce Financial Group Inc,Financial,Banks - Regional,0.5,10.0,10.0,20.35,0.14,0.009,-0.036
+RAMP,LiveRamp Holdings Inc,Technology,Software - Infrastructure,2.3,10.0,10.0,37.65,0.05,0.003,-0.015
+PAYO,Payoneer Global Inc,Technology,Software - Infrastructure,2.4,10.0,10.0,7.15,0.06,0.003,-0.006
+CFFN,Capitol Federal Financial,Financial,Banks - Regional,1.1,10.0,10.0,8.58,0.18,0.024,-0.065
+UVSP,Univest Financial Corp,Financial,Banks - Regional,1.1,10.0,9.8,41.81,0.12,-0.051,-0.076
+PGC,Peapack-Gladstone Financial Corp,Financial,Banks - Regional,0.8,10.0,9.8,44.58,0.15,-0.069,-0.092
+TECH,Bio-Techne Corp,Healthcare,Biotechnology,11.4,10.0,10.0,72.4,0.02,0.022,-0.004
+SHBI,Shore Bancshares Inc,Financial,Banks - Regional,0.8,10.0,9.6,23.0,0.16,0.011,-0.07
+KEY,Keycorp,Financial,Banks - Regional,21.7,10.0,9.9,20.08,0.22,-0.145,-0.158
+OBK,Origin Bancorp Inc,Financial,Banks - Regional,1.7,10.0,9.8,53.62,0.14,0.046,-0.031
+KRNY,Kearny Financial Corp,Financial,Banks - Regional,0.6,10.0,9.9,9.32,0.17,0.002,-0.09
+HFWA,Heritage Financial Corp,Financial,Banks - Regional,1.1,9.9,9.9,28.14,0.15,-0.049,-0.092
+RBB,RBB Bancorp,Financial,Banks - Regional,0.4,9.9,9.5,26.19,0.14,-0.035,-0.067
+MYFW,First Western Financial Inc,Financial,Banks - Regional,0.3,9.9,9.7,30.09,0.15,-0.093,-0.124
+BY,Byline Bancorp Inc,Financial,Banks - Regional,1.7,9.9,9.9,37.74,0.14,0.013,-0.057
+ACA,Arcosa Inc,Industrials,Engineering & Construction,7.2,9.9,10.0,146.5,0.03,0.008,-0.003
+GSBC,Great Southern Bancorp Inc,Financial,Banks - Regional,0.9,9.9,9.8,79.27,0.13,0.016,-0.039
+KVUE,Kenvue Inc,Consumer Defensive,Household & Personal Products,33.2,9.9,9.9,17.2,0.19,-0.106,-0.126
+FSBC,Five Star Bancorp,Financial,Banks - Regional,1.1,9.9,9.6,43.65,0.17,-0.11,-0.127
+CNOB,ConnectOne Bancorp Inc,Financial,Banks - Regional,1.5,9.9,9.9,30.78,0.16,-0.055,-0.093
+NATL,NCR Atleos Corp,Technology,Software - Application,3.4,9.9,9.9,45.42,0.12,0.01,-0.064
+RNST,Renasant Corp,Financial,Banks - Regional,3.6,9.9,9.9,39.92,0.16,-0.068,-0.098
+THFF,First Financial Corp,Financial,Banks - Regional,1.2,9.9,9.7,74.99,0.14,-0.019,-0.102
+HBCP,Home Bancorp Inc,Financial,Banks - Regional,0.5,9.9,9.5,67.53,0.13,-0.02,-0.094
+ALRS,Alerus Financial Corp,Financial,Banks - Regional,0.8,9.9,9.8,32.67,0.18,0.055,-0.044
+FBIZ,First Business Financial Services Inc,Financial,Banks - Regional,0.6,9.9,9.6,70.93,0.16,0.102,-0.038
+PLBC,Plumas Bancorp,Financial,Banks - Regional,0.4,9.9,9.6,62.54,0.14,0.06,-0.023
+HWC,Hancock Whitney Corp,Financial,Banks - Regional,5.9,9.9,9.9,73.09,0.17,-0.02,-0.082
+FRST,Primis Financial Corp,Financial,Banks - Regional,0.4,9.9,9.2,15.62,0.17,-0.017,-0.075
+AROW,Arrow Financial Corp,Financial,Banks - Regional,0.7,9.9,9.2,37.79,0.16,-0.081,-0.108
+SLP,Simulations Plus Inc,Healthcare,Health Information Services,0.4,9.9,10.0,18.5,0.02,0.008,-0.119
+SMBC,Southern Missouri Bancorp Inc,Financial,Banks - Regional,0.8,9.9,9.3,72.59,0.13,-0.05,-0.088
+BFST,Business First Bancshares Inc,Financial,Banks - Regional,1.0,9.9,9.9,30.9,0.15,0.005,-0.046
+BSRR,Sierra Bancorp,Financial,Banks - Regional,0.5,9.9,9.1,39.76,0.14,-0.021,-0.072
+AEE,Ameren Corp,Utilities,Utilities - Regulated Electric,27.7,9.8,9.8,99.94,0.13,-0.116,-0.149
+PCYO,Pure Cycle Corp,Utilities,Utilities - Regulated Water,0.3,9.8,8.9,10.9,0.13,0.033,-0.124
+BEN,Franklin Templeton Inc,Financial,Asset Management,16.7,9.8,9.1,32.81,0.22,-0.038,-0.086
+TXNM,TXNM Energy Inc,Utilities,Utilities - Regulated Electric,6.4,9.8,10.0,58.41,0.06,0.038,-0.012
+BUSE,First Busey Corp,Financial,Banks - Regional,2.4,9.8,9.8,29.73,0.13,0.017,-0.062
+CIVB,Civista Bancshares Inc,Financial,Banks - Regional,0.6,9.8,9.2,26.98,0.15,-0.028,-0.094
+PEG,Public Service Enterprise Group Inc,Utilities,Utilities - Regulated Electric,34.2,9.8,9.4,68.07,0.16,-0.162,-0.203
+HTH,Hilltop Holdings Inc,Financial,Financial Conglomerates,2.2,9.8,9.7,38.45,0.14,0.002,-0.042
+PCB,PCB Bancorp,Financial,Banks - Regional,0.4,9.8,9.2,28.01,0.15,-0.018,-0.085
+UBSI,United Bankshares Inc,Financial,Banks - Regional,6.4,9.8,9.7,47.04,0.13,0.02,-0.044
+QCRH,QCR Holding Inc,Financial,Banks - Regional,1.6,9.8,9.4,100.95,0.15,0.037,-0.065
+ACGL,Arch Capital Group Ltd,Financial,Insurance - Diversified,32.3,9.8,9.9,93.6,0.2,-0.084,-0.126
+LNTH,Lantheus Holdings Inc,Healthcare,Drug Manufacturers - Specialty & Generic,6.5,9.8,9.9,99.96,0.04,-0.028,-0.106
+EFSC,Enterprise Financial Services Corp,Financial,Banks - Regional,2.2,9.8,9.5,60.08,0.15,-0.084,-0.121
+EBC,Eastern Bankshares Inc,Financial,Banks - Regional,4.9,9.8,9.5,21.47,0.14,-0.05,-0.091
+FISI,Financial Institutions Inc,Financial,Banks - Regional,0.8,9.8,9.6,39.98,0.16,0.035,-0.062
+FIBK,First Interstate BancSystem Inc,Financial,Banks - Regional,3.4,9.8,9.8,36.0,0.16,-0.077,-0.102
+FCF,First Commonwealth Financial Corp,Financial,Banks - Regional,2.1,9.8,10.0,20.56,0.14,0.01,-0.074
+OSBC,Old Second Bancorporation Inc,Financial,Banks - Regional,1.3,9.8,9.9,24.95,0.13,0.075,-0.043
+ONB,Old National Bancorp,Financial,Banks - Regional,9.6,9.8,9.7,24.96,0.17,-0.052,-0.083
+TCBI,Texas Capital Bancshares Inc,Financial,Banks - Regional,4.1,9.8,9.8,93.76,0.15,-0.114,-0.136
+ED,Consolidated Edison Inc,Utilities,Utilities - Regulated Electric,38.3,9.8,9.5,103.39,0.14,-0.071,-0.096
+LXFR,Luxfer Holdings PLC,Industrials,Specialty Industrial Machinery,0.5,9.8,10.0,17.27,0.03,0.003,-0.105
+FVCB,FVCBankcorp Inc,Financial,Banks - Regional,0.3,9.7,8.7,17.79,0.18,0.028,-0.069
+PG,Procter & Gamble Co,Consumer Defensive,Household & Personal Products,338.4,9.7,9.1,144.91,0.17,-0.022,-0.121
+ISTR,Investar Holding Corp,Financial,Banks - Regional,0.4,9.7,9.6,29.41,0.14,0.01,-0.063
+WM,Waste Management Inc,Industrials,Waste Management,82.7,9.7,9.6,204.45,0.16,-0.109,-0.169
+ASB,Associated Banc-Corp,Financial,Banks - Regional,5.5,9.7,9.8,29.0,0.17,-0.047,-0.1
+NTRS,Northern Trust Corp,Financial,Asset Management,31.3,9.7,9.1,171.4,0.24,-0.051,-0.12
+ITGR,Integer Holdings Corp,Healthcare,Medical Devices,4.3,9.7,9.8,126.45,0.03,0.303,-0.003
+TOWN,Townebank Portsmouth VA,Financial,Banks - Regional,3.3,9.7,9.4,36.03,0.12,0.0,-0.07
+FE,Firstenergy Corp,Utilities,Utilities - Regulated Electric,25.4,9.7,9.6,43.34,0.14,-0.086,-0.155
+DTE,DTE Energy Co,Utilities,Utilities - Regulated Electric,26.3,9.7,9.6,124.45,0.15,-0.187,-0.194
+BHRB,Burke & Herbert Financial Services Corp,Financial,Banks - Regional,1.4,9.7,9.6,69.86,0.12,0.01,-0.063
+FMBH,First Mid Bancshares Inc,Financial,Banks - Regional,1.3,9.7,9.6,49.98,0.14,0.032,-0.059
+UE,Urban Edge Properties,Real Estate,REIT - Retail,2.6,9.7,9.8,19.7,0.1,-0.128,-0.168
+CB,Chubb Limited,Financial,Insurance - Property & Casualty,128.2,9.7,9.7,330.89,0.17,-0.072,-0.093
+HBNC,Horizon Bancorp Inc (IN),Financial,Banks - Regional,1.0,9.7,9.8,19.48,0.17,-0.015,-0.066
+FRME,First Merchants Corp,Financial,Banks - Regional,2.5,9.7,9.9,40.15,0.16,-0.07,-0.106
+NBTB,NBT Bancorp Inc,Financial,Banks - Regional,2.7,9.7,9.6,51.53,0.15,0.035,-0.047
+CMS,CMS Energy Corp,Utilities,Utilities - Regulated Electric,20.2,9.7,9.7,63.74,0.13,-0.172,-0.194
+ILPT,Industrial Logistics Properties Trust,Real Estate,REIT - Industrial,0.5,9.7,8.7,7.08,0.23,-0.196,-0.249
+CCNE,CNB Financial Corp (PA),Financial,Banks - Regional,1.0,9.7,9.2,34.1,0.15,0.016,-0.052
+KRG,Kite Realty Group Trust,Real Estate,REIT - Retail,4.9,9.7,9.7,24.39,0.09,-0.145,-0.185
+SFST,Southern First Bancshares Inc,Financial,Banks - Regional,0.6,9.7,8.8,60.85,0.2,-0.006,-0.065
+PRU,Prudential Wealth Advisors,Financial,Insurance - Life,39.3,9.7,8.9,112.6,0.2,-0.003,-0.108
+WSBF,Waterstone Financial Inc,Financial,Banks - Regional,0.4,9.7,9.8,19.94,0.18,0.007,-0.079
+FULT,Fulton Financial Corp,Financial,Banks - Regional,4.4,9.6,9.6,22.81,0.16,-0.056,-0.088
+USB,U.S. Bancorp,Financial,Banks - Regional,89.9,9.6,9.1,57.51,0.2,-0.079,-0.122
+ARR,ARMOUR Residential REIT Inc,Real Estate,REIT - Mortgage,1.9,9.6,9.8,13.59,0.2,-0.19,-0.212
+NWBI,Northwest Bancshares Inc,Financial,Banks - Regional,2.2,9.6,9.7,15.19,0.14,0.018,-0.048
+CBU,Community Financial System Inc,Financial,Banks - Regional,3.2,9.6,9.8,60.69,0.15,-0.1,-0.14
+HSIC,Henry Schein Inc,Healthcare,Medical Distribution,9.4,9.6,9.2,84.88,0.2,-0.02,-0.079
+ACNB,ACNB Corp,Financial,Banks - Regional,0.7,9.6,9.3,63.78,0.15,0.059,-0.057
+PDM,Piedmont Realty Trust Inc,Real Estate,REIT - Office,1.1,9.6,9.0,9.0,0.29,-0.067,-0.112
+HAFC,Hanmi Financial Corp,Financial,Banks - Regional,0.9,9.6,9.4,31.67,0.15,-0.016,-0.046
+STT,State Street Corp,Financial,Asset Management,48.3,9.6,9.4,175.96,0.19,0.005,-0.097
+SMBK,SmartFinancial Inc,Financial,Banks - Regional,0.9,9.6,9.2,50.99,0.17,0.081,-0.058
+HOPE,Hope Bancorp Inc,Financial,Banks - Regional,1.7,9.6,9.7,13.68,0.16,0.021,-0.062
+UNTY,Unity Bancorp Inc,Financial,Banks - Regional,0.6,9.6,8.7,55.34,0.2,-0.031,-0.112
+CCBG,Capital City Bank Group Inc,Financial,Banks - Regional,0.8,9.6,9.1,49.66,0.16,0.008,-0.069
+CURB,Curbline Properties Corp,Real Estate,REIT - Retail,3.2,9.6,9.7,28.27,0.15,-0.057,-0.115
+FFBC,First Financial Bancorp,Financial,Banks - Regional,3.3,9.6,9.9,31.87,0.17,-0.075,-0.114
+NEE,NextEra Energy Inc,Utilities,Utilities - Regulated Electric,160.4,9.6,9.5,76.83,0.16,-0.122,-0.21
+CPF,Central Pacific Financial Corp,Financial,Banks - Regional,0.9,9.6,9.4,36.42,0.15,-0.047,-0.104
+EVRG,Evergy Inc,Utilities,Utilities - Regulated Electric,18.3,9.6,9.7,79.17,0.13,-0.078,-0.099
+PLD,Prologis Inc,Real Estate,REIT - Industrial,125.2,9.6,9.4,128.91,0.16,-0.076,-0.153
+COSO,CoastalSouth Bancshares Inc,Financial,Banks - Regional,0.3,9.6,9.5,26.98,0.16,0.015,-0.054
+HVT,Haverty Furniture Cos. Inc,Consumer Cyclical,Home Improvement Retail,0.4,9.6,9.3,27.5,0.24,0.105,-0.067
+SO,Southern Company,Utilities,Utilities - Regulated Electric,97.0,9.6,9.3,83.72,0.13,-0.129,-0.15
