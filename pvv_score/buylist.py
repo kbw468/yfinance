@@ -29,8 +29,9 @@ def main():
     df["sig"] = ((df.vol_roc_21 > 0.5) & (df.ret_21 > 0.03) & (df.rv20_roc_21 < -0.2)).astype(int)
     for h in (42, 63):
         u = universe_smooth(df, h)
-        df[f"u_top_q_{h}"] = (u >= 0.75).astype(float).where(u.notna())
-        df[f"u_top_half_{h}"] = (u >= 0.5).astype(float).where(u.notna())
+        ur = u.groupby(df.date).rank(pct=True)          # re-rank the combined score so exactly 25% / 50% qualify
+        df[f"u_top_q_{h}"] = (ur >= 0.75).astype(float).where(u.notna())
+        df[f"u_top_half_{h}"] = (ur >= 0.5).astype(float).where(u.notna())
     st = pd.read_parquet(CACHE_DIR / "composite_state_smooth_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "state"})
     lv = pd.read_parquet(CACHE_DIR / "composite_level_smooth_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "level"})
     d = df.merge(st, on=["date", "ticker"]).merge(lv, on=["date", "ticker"]).dropna(subset=["state", "level", "u_top_q_42"])
