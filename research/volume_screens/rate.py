@@ -1,26 +1,47 @@
 # 1-10 volume/volatility backdrop rating. 10 components, each 0-1, linear between bad and good anchors.
-import pandas as pd, numpy as np, yfinance as yf, warnings, sys, time
+import pandas as pd, numpy as np, warnings, sys, time
 warnings.filterwarnings('ignore')
-SECTOR_ETF = {'Industrials':'XLI','Technology':'XLK','Healthcare':'XLV','Financial Services':'XLF','Consumer Cyclical':'XLY',
- 'Consumer Defensive':'XLP','Energy':'XLE','Basic Materials':'XLB','Utilities':'XLU','Real Estate':'XLRE','Communication Services':'XLC'}
+# Data source: Nasdaq public quote API (keyless, split-adjusted daily OHLCV, sector field).
+UA = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36',
+      'Accept': 'application/json, text/plain, */*'}
+ETFS = {'SPY','XLI','XLK','XLV','XLF','XLY','XLP','XLE','XLB','XLU','XLRE','XLC'}
+SECTOR_ETF = {'Industrials':'XLI','Technology':'XLK','Health Care':'XLV','Finance':'XLF','Consumer Discretionary':'XLY',
+ 'Consumer Staples':'XLP','Energy':'XLE','Basic Materials':'XLB','Utilities':'XLU','Real Estate':'XLRE',
+ 'Telecommunications':'XLC','Communication Services':'XLC'}
+def _get(url):
+    import requests
+    for i in range(4):
+        try:
+            r = requests.get(url, headers=UA, timeout=30)
+            if r.status_code == 200 and r.json().get('data'): return r.json()['data']
+        except Exception: pass
+        time.sleep(2*(i+1))
+    return None
+def _num(x):
+    try: return float(str(x).replace('$','').replace(',',''))
+    except Exception: return np.nan
+def history(t, years=3):
+    ac = 'etf' if t in ETFS else 'stocks'
+    to = pd.Timestamp.today().normalize(); fr = to - pd.DateOffset(years=years)
+    d = _get(f'https://api.nasdaq.com/api/quote/{t}/historical?assetclass={ac}&fromdate={fr:%Y-%m-%d}&limit=9999&todate={to:%Y-%m-%d}')
+    if not d or not d.get('tradesTable') or not d['tradesTable'].get('rows'): raise RuntimeError(f'no history for {t}')
+    df = pd.DataFrame(d['tradesTable']['rows'])
+    df.index = pd.to_datetime(df['date'], format='%m/%d/%Y')
+    df = df[['open','high','low','close','volume']].apply(lambda c: c.map(_num)).sort_index()
+    df.columns = ['Open','High','Low','Close','Volume']
+    return df
+def sector(t):
+    d = _get(f'https://api.nasdaq.com/api/quote/{t}/summary?assetclass=stocks')
+    try: return d['summaryData']['Sector']['value']
+    except Exception: return None
 def lin(x, bad, good):
     if x is None or np.isnan(x): return 0.5
     return float(np.clip((x-bad)/(good-bad), 0, 1))
 def rate(T, show=False):
-    sec = None
-    for i in range(4):
-        try:
-            sec = yf.Ticker(T).info.get('sector')
-            if sec: break
-        except Exception: pass
-        time.sleep(3*(i+1))
-    if not sec:  # fall back to the finviz universe file
-        try:
-            import os; u = pd.read_csv(os.path.join(os.path.dirname(os.path.abspath(__file__)),'universe_finviz.csv'), index_col='Ticker')
-            sec = {'Financial':'Financial Services'}.get(u.loc[T,'Sector'], u.loc[T,'Sector'])
-        except Exception: sec = None
+    sec = sector(T)
     etf = SECTOR_ETF.get(sec, 'SPY')
-    d = yf.download([T,'SPY',etf], period='3y', auto_adjust=True, progress=False, group_by='column')
+    frames = {t: history(t) for t in dict.fromkeys([T,'SPY',etf])}
+    d = pd.concat(frames, axis=1).swaplevel(0,1,axis=1).sort_index(axis=1).dropna(subset=[('Close','SPY')])
     # drop today's partial bar if volume is <60% of 21d avg pace
     if d['Volume'][T].iloc[-1] < 0.6*d['Volume'][T].iloc[-22:-1].mean(): d = d.iloc[:-1]
     O,H,L,C,V = [d[k] for k in ['Open','High','Low','Close','Volume']]
