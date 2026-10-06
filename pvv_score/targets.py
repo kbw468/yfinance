@@ -92,18 +92,37 @@ def forward_path_metrics(close: pd.DataFrame, h: int) -> dict:
     return {"mdd": mdd.where(valid), "r2": (r2 * slope_sign).where(valid), "up_frac": up_frac}
 
 
-def smooth_path_target(close: pd.DataFrame, horizons=HORIZONS) -> dict:
-    """Per-date percentile of (fwd Sharpe, -fwd max drawdown, signed R^2 of the climb, up-day share), averaged.
-    smooth_{h} is the forward 'Bernie curve' score; y_smooth is the mean across horizons."""
+def smooth_path_target(close: pd.DataFrame, horizons=HORIZONS, beta: pd.DataFrame | None = None) -> dict:
+    """Forward 'smooth climb' score. Four path components over t+1..t+h: Sharpe, -max drawdown, signed R^2 of the
+    climb, up-day share. Each is converted to a per-date percentile WITHIN THE NAME'S BETA TERCILE (so a low-vol
+    utility is only credited for a smoother path than other low-beta names), then averaged.
+    smooth_{h} per horizon; y_smooth = mean across horizons. Raw components are returned too."""
     r = close.pct_change()
+    if beta is not None:
+        rk = beta.rank(axis=1, pct=True)
+        bucket = pd.DataFrame(np.select([rk <= 1 / 3, rk <= 2 / 3], [0, 1], 2), index=rk.index, columns=rk.columns).where(rk.notna())
+    else:
+        bucket = None
+
+    def pct_within(x: pd.DataFrame) -> pd.DataFrame:
+        if bucket is None:
+            return x.rank(axis=1, pct=True)
+        out = pd.DataFrame(np.nan, index=x.index, columns=x.columns)
+        for b in (0, 1, 2):
+            m = bucket == b
+            out = out.where(~m, x.where(m).rank(axis=1, pct=True))
+        return out
+
     out = {}
     for h in horizons:
         sh, _ = sharpe_sortino(r, h)
         pm = forward_path_metrics(close, h)
-        parts = [sh.rank(axis=1, pct=True), (-pm["mdd"]).rank(axis=1, pct=True), pm["r2"].rank(axis=1, pct=True), pm["up_frac"].rank(axis=1, pct=True)]
-        out[f"smooth_{h}"] = sum(parts) / 4
+        out[f"fwd_sharpe_{h}"] = sh
         out[f"fwd_mdd_{h}"] = pm["mdd"]
         out[f"fwd_r2_{h}"] = pm["r2"]
+        out[f"fwd_up_{h}"] = pm["up_frac"]
+        parts = [pct_within(sh), pct_within(-pm["mdd"]), pct_within(pm["r2"]), pct_within(pm["up_frac"])]
+        out[f"smooth_{h}"] = sum(parts) / 4
     out["y_smooth"] = sum(out[f"smooth_{h}"] for h in horizons) / len(horizons)
     return out
 

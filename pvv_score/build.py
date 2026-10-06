@@ -37,7 +37,7 @@ def main():
     T = build_targets(panel["Close"], universe)
     T["y_blend_spy"] = blended_rank_target(T, "xs_spy_sharpe")
     T["y_blend_sec"] = blended_rank_target(T, "xs_sec_sharpe")
-    sm = smooth_path_target(panel["Close"][stocks])
+    sm = smooth_path_target(panel["Close"][stocks], beta=F["beta_252"].astype("float64"))
     T.update(sm)
     print(f"targets done {time.time()-t0:.0f}s", file=sys.stderr)
     elig = eligibility(panel, stocks)
