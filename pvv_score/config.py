@@ -36,9 +36,9 @@ RECENT_START = "2024-01-01"
 SAMPLE_START = "2018-01-01"
 # periods removed from every fit, discovery and probability table (2022: bear market for everything but energy/commodities;
 # behaviour that precedes smooth climbs in a normal tape did not get to express itself)
-EXCLUDE_PERIODS = [("2022-01-01", "2022-12-31")]
+EXCLUDE_PERIODS = []   # 2022 stays in the sample; it is handled as risk-off CONTEXT via the market regime tag (see regime.py)
 # walk-forward test years (training starts at SAMPLE_START, so the first test year needs >= 1y of history + embargo)
-WF_YEARS = [y for y in range(2020, 2027) if y != 2022]
+WF_YEARS = range(2020, 2027)
 # weight on recent-window IC when forming composite weights (rest on full window)
 RECENT_WEIGHT = 0.67
 # time-decay half-life (trading days) for ML sample weights

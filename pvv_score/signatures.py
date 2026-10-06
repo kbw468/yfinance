@@ -16,6 +16,7 @@ import pandas as pd
 
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
+from .regime import tag, today_regime
 
 DISCOVER_END = "2023-12-31"      # discovery 2018-01 .. 2023-12 (SAMPLE_START applies), confirmation RECENT_START (2024-01) onward
 MIN_N, MIN_LIFT = 300, 1.30
@@ -64,11 +65,14 @@ def build_conditions(df: pd.DataFrame) -> dict:
 def main():
     need = ["date", "ticker", "sector", "beta_252", "vol_roc_21", "vol_roc_10", "rv20_roc_21", "rv20_roc_10", "ret_21", "ret_5", "dvol_roc_21", "vol_accel_5", "rv_accel_5",
             "fwd_sharpe_42", "fwd_mdd_42", "fwd_r2_42", "fwd_up_42", "fwd_sharpe_63", "fwd_mdd_63", "fwd_r2_63", "fwd_up_63"] + QUINTILE_FACTORS
-    df = load_research()[list(dict.fromkeys(need))].reset_index(drop=True)
+    df = tag(load_research()[list(dict.fromkeys(need))].reset_index(drop=True))
+    reg = today_regime()
+    same = (df.regime == reg).values
+    print(f"today's regime: {reg}; same-regime share of sample: {same.mean():.2f}", file=sys.stderr)
     y42 = smooth_top_quartile(df, 42).astype(float).values
     y63 = smooth_top_quartile(df, 63).astype(float).values
-    disc = (df.date <= DISCOVER_END).values & ~np.isnan(y42)
-    conf = (df.date >= RECENT_START).values & ~np.isnan(y42)
+    disc = (df.date <= DISCOVER_END).values & ~np.isnan(y42) & same
+    conf = (df.date >= RECENT_START).values & ~np.isnan(y42) & same
     conds = build_conditions(df)
     names = list(conds)
     print(f"{len(names)} conditions, rows disc={disc.sum():,} conf={conf.sum():,}", file=sys.stderr)

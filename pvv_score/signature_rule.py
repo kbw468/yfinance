@@ -9,6 +9,7 @@ from .config import RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
 from .signatures import QUINTILE_FACTORS, FIXED, build_conditions, smooth_top_quartile
+from .regime import tag, today_regime
 
 PLAIN = {
     "mom_12_1": "12-1m momentum", "ret_21": "21d return", "ret_63": "63d return", "rs_lead_126": "RS line leading price", "rs_spy_63": "63d RS vs SPY",
@@ -38,8 +39,9 @@ def main():
     conf = sig[sig.confirmed].sort_values("p_disc", ascending=False).reset_index(drop=True)
     need = ["date", "ticker", "sector", "beta_252", "vol_roc_21", "vol_roc_10", "rv20_roc_21", "rv20_roc_10", "ret_21", "ret_5", "dvol_roc_21", "vol_accel_5", "rv_accel_5",
             "fwd_sharpe_42", "fwd_mdd_42", "fwd_r2_42", "fwd_up_42", "fwd_sharpe_63", "fwd_mdd_63", "fwd_r2_63", "fwd_up_63"] + QUINTILE_FACTORS
-    df = load_research()[list(dict.fromkeys(need))].reset_index(drop=True)
+    df = tag(load_research()[list(dict.fromkeys(need))].reset_index(drop=True))
     df["beta_bucket"] = tercile_series(df)
+    reg = today_regime()
     y42 = smooth_top_quartile(df, 42).astype(float).values
     y63 = smooth_top_quartile(df, 63).astype(float).values
     conds = build_conditions(df)
@@ -54,7 +56,7 @@ def main():
     df["best_sig_idx"] = np.where(np.isfinite(best_rank), best_rank, -1).astype(int)
     df["fires"] = df.best_sig_idx >= 0
     df["y42"] = y42; df["y63"] = y63
-    rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42)]
+    rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42) & (df.regime == reg)]
     rows = []
     for b in ["all", "low", "mid", "high"]:
         s = rec if b == "all" else rec[rec.beta_bucket == b]
@@ -71,7 +73,7 @@ def main():
             m &= conds[p]
         cnt += m
     df["n_fire"] = cnt
-    rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42)]
+    rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42) & (df.regime == reg)]
     depth = rec.groupby(pd.cut(rec.n_fire, [-1, 0, 2, 5, 10, 20, 50, 10000], labels=["0", "1-2", "3-5", "6-10", "11-20", "21-50", "50+"]), observed=True).agg(
         n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))
     depth.to_csv(RESULTS_DIR / "signature_depth_oos.csv")
@@ -84,7 +86,7 @@ def main():
     today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
-    print("RULE as applied (recent OOS): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
+    print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
     print(rule.round(3).to_string())
     print("\nby number of confirmed signatures firing:\n", depth.round(3).to_string())
     print(f"\ntonight: {int(today.n_fire.gt(0).sum())} names fire; top 30 by depth:")

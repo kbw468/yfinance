@@ -11,6 +11,7 @@ import pandas as pd
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
+from .regime import tag, today_regime
 
 TIERS = [0, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0]
 TIER_LABELS = ["<50", "50-70", "70-80", "80-90", "90-95", "95-100"]
@@ -23,8 +24,9 @@ def universe_smooth(df: pd.DataFrame, h: int) -> pd.Series:
 
 def main():
     cols = ["date", "ticker", "beta_252", "vol_roc_21", "ret_21", "rv20_roc_21"] + [f"fwd_{k}_{h}" for h in (42, 63) for k in ("sharpe", "mdd", "r2", "up")]
-    df = load_research()[cols].reset_index(drop=True)
+    df = tag(load_research()[cols].reset_index(drop=True))
     df["beta_bucket"] = tercile_series(df)
+    reg = today_regime()
     # the signature: participation rising while volatility compresses on an advance, all at once (a conjunction, kept intact)
     df["sig"] = ((df.vol_roc_21 > 0.5) & (df.ret_21 > 0.03) & (df.rv20_roc_21 < -0.2)).astype(int)
     for h in (42, 63):
@@ -39,7 +41,8 @@ def main():
         d[c + "_p"] = d.groupby("date")[c].rank(pct=True)
     d["avg_p"] = (d.state_p + d.level_p) / 2
     d["tier"] = pd.cut(d.avg_p, TIERS, labels=TIER_LABELS, include_lowest=True)
-    rec = d[d.date >= RECENT_START]
+    rec = d[(d.date >= RECENT_START) & (d.regime == reg)]
+    print(f"regime today: {reg}; cells measured on {rec.date.nunique()} same-regime sessions since {RECENT_START}")
     tab = rec.groupby(["beta_bucket", "tier"], observed=True).agg(n=("u_top_q_42", "size"), p_top_q_42=("u_top_q_42", "mean"), p_top_half_42=("u_top_half_42", "mean"),
                                                                    p_top_q_63=("u_top_q_63", "mean"), p_top_half_63=("u_top_half_63", "mean"))
     tab.to_csv(RESULTS_DIR / "buylist_probability_table.csv")

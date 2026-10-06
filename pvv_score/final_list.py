@@ -39,7 +39,10 @@ def main():
     ranked.insert(0, "rank", ranked.index + 1)
     cols = ["rank", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "P_topq_42d", "P_topq_63d", "basis", "n_signatures", "best_signature", "avg_score", "top_states"]
     ranked[cols].to_csv(RESULTS_DIR / "THE_LIST.csv", index=False)
-    lines = [f"THE LIST, {asof} close. P42 / P63 = probability (realised out of sample, 2024 onward) that the next 42 / 63 sessions are a top-quartile",
+    from .regime import today_regime
+    reg = today_regime()
+    lines = [f"THE LIST, {asof} close. Market regime today: {reg}; all probabilities measured on {reg} sessions.",
+             f" P42 / P63 = probability (realised out of sample, 2024 onward, same regime) that the next 42 / 63 sessions are a top-quartile",
              "smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.",
              "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight; 'composite <tier>' = multi-factor score tier.", "",
              f"{'#':>3} {'tkr':<6} {'sector':<22} {'beta':<5} {'P42':>5} {'P63':>5} {'basis':<16} {'sigs':>4}  strongest confirmed signature firing tonight"]
