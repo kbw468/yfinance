@@ -45,10 +45,13 @@ def clean_panel(panel: dict, today: dt.date | None = None, verbose=True) -> tupl
     panel = {k: v.copy() for k, v in panel.items()}
     report = {}
 
-    # 1. drop partial current-session row
-    today = today or dt.datetime.utcnow().date()
+    # 1. drop a partial current-session row. The current date's bar is kept only once the US session is closed
+    #    and Yahoo has finalised it (after 21:30 UTC); before that it is intraday and is dropped.
+    now = dt.datetime.utcnow()
+    today = today or now.date()
     last = panel["Close"].index[-1].date()
-    if last >= today:
+    session_final = now >= dt.datetime.combine(today, dt.time(21, 30))
+    if last > today or (last == today and not session_final):
         for k in panel:
             panel[k] = panel[k].iloc[:-1]
         report["dropped_partial_row"] = str(last)
