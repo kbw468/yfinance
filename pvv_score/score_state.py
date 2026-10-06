@@ -2,7 +2,7 @@
 
 state_score      within-beta-bucket percentile of the walk-forward-validated STATE composite (z-factors only:
                  each factor is the name's deviation from its own 3y norm). Weights fitted on all labelled history.
-state_score_pooled   same composite, percentile across the whole universe (for a single sortable number)
+state_score_pooled   same composite standardised within bucket, then percentile across the whole universe (single sortable number)
 level_score      the earlier level-based composite percentile, for comparison (identity-heavy)
 ml_score         walk-forward LightGBM percentile (reported, not used)
 top_states       the three state readings most responsible for the name's score today (factor: z)
@@ -46,7 +46,9 @@ def main():
         contrib[b] = rk * wb.values
     pd.DataFrame(weights).to_csv(RESULTS_DIR / "composite_state_final_weights.csv")
     today["state_score"] = today.groupby("beta_bucket")["state_raw"].rank(pct=True)
-    today["state_score_pooled"] = today["state_raw"].rank(pct=True)
+    # raw composites use different weight vectors per bucket, so standardise within bucket before pooling
+    zraw = (today["state_raw"] - today.groupby("beta_bucket")["state_raw"].transform("mean")) / today.groupby("beta_bucket")["state_raw"].transform("std")
+    today["state_score_pooled"] = zraw.rank(pct=True)
 
     tops = {}
     for b, c in contrib.items():

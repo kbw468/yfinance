@@ -17,8 +17,9 @@ def main():
     cond42 = pd.read_csv(RESULTS_DIR / "conditional_ic_42.csv", index_col=0)
     sn = pd.read_csv(RESULTS_DIR / "sector_neutral_ic.csv", index_col=0)
     ml = pd.read_csv(RESULTS_DIR / "ml_oos_evaluation.csv", index_col=[0, 1])
+    dec_path = RESULTS_DIR / "identity_decomposition_level.csv"
     mlv = pd.read_csv(RESULTS_DIR / "ml_variants_oos_evaluation.csv", index_col=[0, 1])
-    comp = pd.read_csv(RESULTS_DIR / "composite_oos_evaluation.csv", index_col=[0, 1])
+    comp = pd.read_csv(RESULTS_DIR / "composite_level_oos_evaluation.csv", index_col=[0, 1])
     cw = pd.read_csv(RESULTS_DIR / "composite_final_weights.csv", index_col=0)
     rank = pd.read_csv(RESULTS_DIR / "current_rankings.csv")
     byyear_ml = pd.read_csv(RESULTS_DIR / "ml_oos_ic42_by_year.csv", index_col=0)
@@ -31,13 +32,12 @@ def main():
     L.append("All statistics are out-of-sample where labelled OOS. Nothing here uses fundamentals, earnings or valuation.\n")
 
     L.append("## 1. Bottom line\n")
-    L.append("""* Two readings carry out-of-sample signal for 21-63d forward Sharpe in this universe in the current regime: relative-strength leadership (`rs_lead_126`: RS line nearer its 6-month high than price is to its own) and 12-1 momentum. Both survive beta-neutralisation (recent-window 42d IC 0.03-0.05, NW t 2.1-2.4). Both were dead 2014-2021.
-* The setup that works depends on beta. High-beta names: buy persistence (momentum, trailing Sharpe, proximity to highs, recent 2x-off-low crossings; the 100%-off-low ceiling is the wrong sign there). Low-beta names: price-structure factors die and quiet volume-led accumulation takes over (volume dry-up vs 250d, falling dollar volume, OBV leading price, shallow drawdowns, low idiosyncratic vol, and the dry-up x tight-range x near-high interaction).
-* The live ranking (`current_rankings.csv`) is the within-beta-bucket walk-forward composite built from those weights: recent-window OOS 42d IC 0.047, 63d 0.065, top-vs-bottom decile 42d Sharpe spread +0.29 annualised, 57% of windows positive. A pooled (beta-blind) composite has no edge.
-* Roughly half to two thirds of the ranking is ticker identity (names that are chronically near highs, drawdown-free and high-Sharpe) rather than a current state change; the state-change half is weaker (IC 0.035) and is led by momentum and RS leadership that are unusual for the name (section 7).
-* Compression / NR7 / Bollinger squeeze, ignition-day volume multiples, accumulation-day counts, gap behaviour, streaks and close-location factors showed no 1-3 month signal in S&P 500 names, pooled. The LightGBM case-study model, in five configurations, did not beat the two single factors out of sample (recent 42d IC 0.00-0.02) and is reported but not used in the ranking.
+    L.append("""* **The ranking is identity-neutral.** Every factor is expressed as the name's deviation from its own trailing 3-year norm (z), so a chronically strong, drawdown-free, high-Sharpe name (DELL, NVDA, LLY, PGR, BRK-B) scores near the middle unless its current price / volume / volatility behaviour is unusual for it. Weights are fitted walk-forward inside beta terciles. Every one of the 503 tickers has a score (section 6); names without 252 sessions of history are listed with the reason.
+* **Out of sample (walk-forward 2017-2026), the state composite is the more robust of the two systems.** Recent window: 42d IC 0.039, 63d IC 0.056 (NW t 2.3); beta-neutral 63d IC 0.029 (t 2.4). Full window beta-neutral: 42d IC 0.017 (t 2.6), 63d 0.023 (t 2.9). The level-based composite had a slightly higher recent raw IC (0.047) but almost none of it survived beta-neutralisation (0.006) and half of it was ticker identity (section 7). Top-vs-bottom decile 42d Sharpe spread of the state composite: +0.22 annualised.
+* **What precedes top-decile forward risk-adjusted windows, across all names (section 7b):** small but consistent pre-states. Pooled: 63d relative strength unusually WEAK for the name (bottom-quintile lift 1.08, top-quintile 0.85), dollar volume unusually low, no recent ignition day, downside-vol asymmetry unusually high, longer-than-usual time since the 21d high. That is a quiet, pulled-back, under-owned state, i.e. 1-3 month mean reversion, not breakout chasing. Mid-beta names add: 63d base unusually tight (lift 1.06 vs 0.84), downside vol unusually low, a recent ignition day. The identity layer (section 7) rewards persistent strength; the state layer rewards an unusual quiet pullback in a name. Both are real and they are different questions: which names, and when.
+* The identity-heavy level composite and the LightGBM case-study model are kept in the files for comparison and are not used in the ranking.
+* Compression / NR7 / Bollinger squeeze, ignition-day volume multiples, accumulation-day counts, gap behaviour, streaks and close-location factors showed no pooled 1-3 month signal as LEVELS. As STATES a few re-appear conditionally (tight base and ignition in mid beta); the rest stay flat.
 """)
-
     L.append("## 2. Method\n")
     L.append("""* **Targets.** For every (date, stock): realised Sharpe and Sortino of the stock over t+1..t+h (h = 21, 42, 63) minus the same for SPY and for the stock's sector ETF (XLRE/XLC spliced to XLF/XLK before inception). Also the information-ratio form (Sharpe of stock-minus-SPY). The ML label is the per-date percentile of SPY-excess Sharpe averaged over the three horizons.
 * **Eligibility (point-in-time).** Price >= $5, 63d median dollar volume >= $10M, >= 252 sessions of history. Survivorship caveat: the universe is today's constituents, so absolute levels are biased up; cross-sectional ranks are far less affected.
@@ -98,30 +98,42 @@ Multiple-testing note: 86 factors x 10 buckets = 860 tests; the expected maximum
     for name in mlv.model.unique():
         L.append(f"\n*{name}*\n")
         L.append(md(pick(mlv, name)))
-    L.append("\n### 5b. Walk-forward linear composite\n")
+    L.append("\n### 5b. Walk-forward linear composite (LEVEL factors; identity-heavy, superseded by section 6)\n")
     for name in comp.model.unique():
         L.append(f"\n*{name}*\n")
         L.append(md(pick(comp, name)))
 
-    L.append("\n## 6. Live scoring\n")
-    L.append("`current_rankings.csv` columns: `final_score` = within-beta-bucket composite percentile (the ML percentile is reported alongside, not blended, because of its OOS record); `analog_med_xsSharpe42` / `analog_pct` / `analog_hit_rate` = realised 42d SPY-excess Sharpe of the 50 nearest historical cases (median, its percentile across today's names, share > 0); key factor readings follow.\n")
-    L.append("\n### Final composite weights by beta bucket\n")
-    L.append(md(cw.dropna(how="all"), 3))
-    L.append("\n### Top 30 as of " + str(rank["asof"].iloc[0]) + "\n")
-    show = ["ticker", "sector", "beta_bucket", "final_score", "ml_score", "comp_score", "analog_pct", "analog_hit_rate",
-            "mom_12_1", "dist_52w_high", "dist_52w_low", "rs_lead_126", "beta_252", "rv20_pct_252", "vol_dry_20_250", "obv_price_div_63"]
-    L.append(md(rank[show].head(30).set_index("ticker"), 2))
-
+    L.append("\n## 6. Live scoring: full universe, identity-neutral\n")
+    cs = pd.read_csv(RESULTS_DIR / "composite_state_oos_evaluation.csv", index_col=[0, 1])
+    L.append("### 6a. Walk-forward OOS: state composite vs level composite\n")
+    for name in cs.model.unique():
+        L.append(f"\n*{name}*\n")
+        L.append(md(pick(cs, name)))
+    L.append("\nIdentity decomposition of the state composite (recent window, 42d): raw IC 0.039, persistent 0.027, deviation 0.039; correlation of today's rank with the name's own historical-average rank 0.42 (level composite: 0.58). The signal now sits in the deviation component.\n")
+    csw = pd.read_csv(RESULTS_DIR / "composite_state_final_weights.csv", index_col=0)
+    L.append("\n### 6b. Final state-composite weights by beta bucket (z = deviation from the name's own 3y norm)\n")
+    L.append(md(csw.dropna(how="all"), 3))
+    us = pd.read_csv(RESULTS_DIR / "universe_scores.csv")
+    L.append(f"\n### 6c. All {len(us)} tickers as of {us['asof'].iloc[0]}\n")
+    L.append("`state_score_pooled` = universe percentile of the state composite (the single sortable number). `state_score` = percentile inside the name's beta bucket. `level_score` = the identity-heavy composite, for comparison. z columns are standard deviations vs the name's own history. `top_states` = the three readings contributing most to the score today. Sorted by `state_score_pooled`. The interactive version (filter, sort) is `universe_scores.html`.\n")
+    cols = ["ticker", "Sector", "beta_bucket", "state_score_pooled", "state_score", "level_score", "z_mom_12_1", "z_rs_lead_126", "z_dist_52w_high",
+            "z_rv20_pct_252", "z_vol_dry_20_250", "z_obv_price_div_63", "z_dn_up_vol_asym_63", "top_states", "note"]
+    tbl = us[cols].set_index("ticker")
+    L.append(md(tbl, 2))
+    L.append("\n### 6d. Identity vs state: the names raised\n")
+    diag = us.set_index("ticker").reindex([t for t in ["DELL", "NVDA", "LLY", "PGR", "BRK-B", "AMD", "PANW", "NTAP", "DUK", "KO"] if t in us.ticker.values])
+    L.append(md(diag[["Sector", "beta_bucket", "level_score", "state_score", "state_score_pooled", "top_states"]], 2))
+    L.append("\nRank correlation between level and state scores across the universe: " + f"{us[['level_score', 'state_score']].corr(method='spearman').iloc[0, 1]:.2f}" + ".\n")
     L.append("\n## 7. Ticker identity vs. behaviour: how much of the signal generalises across tickers\n")
     L.append("""Each reading is split, point-in-time, into **persistent** (the ticker's own expanding-window mean up to t-1: "this ticker is usually like this") and **deviation** (today's reading as a z-score against the ticker's own history: "this ticker is currently unusual"). IC of each component vs 42d SPY-excess Sharpe:
 """)
-    dec = pd.read_csv(RESULTS_DIR / "identity_decomposition.csv")
+    dec = pd.read_csv(RESULTS_DIR / "identity_decomposition_level.csv")
     piv = dec.pivot_table(index="factor", columns=["window", "component"], values="ic")[[("recent", "raw"), ("recent", "persistent"), ("recent", "deviation"), ("full", "raw"), ("full", "persistent"), ("full", "deviation")]]
     piv.columns = [f"{w}|{c}" for w, c in piv.columns]
     L.append(md(piv, 3))
     pure = pd.read_csv(RESULTS_DIR / "identity_pure_predictors.csv").pivot(index="predictor", columns="window", values=["ic", "t_nw"])
     pure.columns = [f"{a}|{b}" for a, b in pure.columns]
-    overlap = (RESULTS_DIR / "identity_rank_overlap.txt").read_text().strip()
+    overlap = (RESULTS_DIR / "identity_rank_overlap_level.txt").read_text().strip()
     L.append("\nPure ticker-identity predictors (long trailing Sharpe; the ticker's own trailing-year mean realised excess Sharpe):\n")
     L.append(md(pure, 3))
     L.append(f"""
@@ -132,6 +144,25 @@ Reading:
 * The persistent component is the part most exposed to survivorship bias (today's constituents are disproportionately the names that were chronically strong). Treat the identity half of the score as regime- and universe-dependent.
 * The deviation component is the cleaner "behaviour predicts across tickers" evidence. It is weaker but real: 12-1 momentum unusually high for the name (IC 0.044, t 2.0, the only reading where the state component beats the identity component), RS-line leadership unusual for the name (0.031), correlation to SPY unusually high (0.058), idiosyncratic vol unusually low (-0.018). Proximity to 52w high, time since 20% drawdown and the dry-up interaction have no deviation signal pooled: they work only as identity, and only inside beta buckets.
 * Volume factors: `obv_price_div_63` and `vol_dry_20_250` show up as identity, not state, pooled. The names that habitually have volume leading price, or habitually dry up, do better; a dry-up that is unusual for the name does not.
+""")
+    L.append("\n## 7b. Event study: the price / volume / volatility STATE that preceded top-decile forward windows\n")
+    L.append("""Episode = a (date, name) whose forward blended SPY-excess-Sharpe percentile was >= 0.90. Consecutive episode days of one name form a cluster (9,078 clusters since 2014, 2,828 since 2022-10). The state is measured **5 sessions before the cluster start**: the start day itself is selection-contaminated (by construction the day before was not a top-decile start, so the start is mechanically a local low; `z_ret_5` reads t = -59 at t-0 and ~0 at t-5, see `event_pre_episode_path_recent.csv`). Each state factor is ranked cross-sectionally per date; `mean_rank_excess` is the mean rank at t-5 minus 0.5 with a cluster-robust t; `lift_top_q` / `lift_bottom_q` = P(episode | factor in top / bottom quintile) / P(episode), over all days (no start selection).
+""")
+    ev = pd.read_csv(RESULTS_DIR / "event_pre_episode_profile.csv")
+    rec = ev[(ev.window == "recent") & (ev.bucket == "all")].set_index("factor").sort_values("t_cluster", key=np.abs, ascending=False)
+    L.append("\n**Recent window, pooled** (top 25 by |t|):\n")
+    L.append(md(rec[["mean_rank_excess", "t_cluster", "n_clusters", "lift_top_q", "lift_bottom_q"]].head(25), 3))
+    mid = ev[(ev.window == "recent") & (ev.bucket == "mid")].set_index("factor").sort_values("t_cluster", key=np.abs, ascending=False)
+    L.append("\n**Recent window, mid-beta tercile** (top 15; the low and high terciles are dominated by `z_beta_*` / `z_corr_spy_*` entries that are an artefact of bucketing on the beta level and are not pre-conditions):\n")
+    L.append(md(mid[["mean_rank_excess", "t_cluster", "n_clusters", "lift_top_q", "lift_bottom_q"]].head(15), 3))
+    L.append("""
+Reading:
+
+* Effects are small (|rank excess| <= 0.02 pooled, lifts 0.85-1.16) and statistically clear (2,800 independent clusters). There is no dramatic P/V/V signature 1-4 weeks before a top-decile 1-3 month window in S&P 500 names; there is a consistent tilt.
+* The tilt is a **quiet pullback in the name**: 63d relative strength and 63d return unusually weak for the name (bottom-quintile lift 1.08-1.09), dollar volume unusually low (1.09), longer than usual since the 21d high (1.06), no recent ignition day (top-quintile lift of `days_since_ignition` 1.16), downside-vol asymmetry unusually high (1.07), beta and correlation to SPY unusually high. This is 1-3 month mean reversion with a capitulation flavour, and it is the opposite of what the level layer rewards.
+* Mid beta adds structure that matches the mandate's hypotheses: 63d base unusually tight (bottom-quintile lift 1.06 vs top 0.84), downside vol unusually low (0.88 top), a recent ignition day (bottom-quintile 0.86), time since 2x-off-low crossing unusually long (1.31).
+* Volume dry-up vs 250d, Bollinger / range compression, NR7 count, up/down volume ratio and OBV divergence as STATES: no pre-episode tilt pooled (|t| < 1.5). Accumulation-day count tilts slightly negative.
+* These are the ingredients the state composite is allowed to pick from; what it actually selects each year is in `composite_state_weights_by_fold.csv`.
 """)
     L.append("\n## 8. What to trust, what not to\n")
     L.append(open(RESULTS_DIR / "_assessment.md").read() if (RESULTS_DIR / "_assessment.md").exists() else "(assessment pending)\n")
@@ -148,11 +179,31 @@ Reading:
 | `ml_oos_evaluation.csv`, `ml_variants_oos_evaluation.csv`, `ml_oos_ic42_by_year.csv` | walk-forward model results |
 | `composite_oos_evaluation.csv`, `composite_weights_by_fold.csv` | walk-forward composite results and the factors it chose each year |
 | `composite_final_weights.csv`, `ml_final_feature_importance.csv` | what the live score is built from |
-| `identity_decomposition.csv`, `identity_pure_predictors.csv` | ticker-identity vs own-history-deviation split of the signal |
+| `identity_decomposition_level.csv`, `identity_decomposition_state.csv`, `identity_pure_predictors.csv` | ticker-identity vs own-history-deviation split of the signal |
+| `composite_state_oos_evaluation.csv`, `composite_state_weights_by_fold.csv`, `composite_state_final_weights.csv` | identity-neutral (state) composite: OOS results, per-year factor picks, live weights |
+| `event_pre_episode_profile.csv`, `event_pre_episode_path_recent.csv` | event study: state 5 sessions before top-decile forward windows; rank path t-20..t-0 |
+| `universe_scores.csv`, `universe_scores.html` | every ticker scored (state, level, ML, z readings, top states, notes) |
 | `current_rankings.csv` | the live ranking with analog evidence |
 """)
     L.append("\n## 10. Reproduce\n")
-    L.append("```\npip install -e . scikit-learn lightgbm pyarrow scipy statsmodels tabulate\npython -m pvv_score.data_io          # download\npython -m pvv_score.build            # features + targets\npython -m pvv_score.run_eval         # single-factor\npython -m pvv_score.run_conditional  # conditional\npython -m pvv_score.model            # walk-forward ML\npython -m pvv_score.run_model_variants\npython -m pvv_score.composite        # walk-forward composite\npython -m pvv_score.score_now        # live ranking\npython -m pvv_score.run_identity     # identity vs behaviour decomposition\npython -m pvv_score.report\n```\n")
+    L.append("```\n" + "\n".join([
+        "pip install -e . scikit-learn lightgbm pyarrow scipy statsmodels tabulate markdown",
+        "python -m pvv_score.data_io          # download",
+        "python -m pvv_score.build            # features + state transforms + targets",
+        "python -m pvv_score.run_eval         # single-factor",
+        "python -m pvv_score.run_conditional  # conditional",
+        "python -m pvv_score.model            # walk-forward ML",
+        "python -m pvv_score.run_model_variants",
+        "python -m pvv_score.composite        # walk-forward composite (level)",
+        "python -m pvv_score.score_now        # level-based ranking (comparison)",
+        "python -m pvv_score.run_identity level",
+        "python -m pvv_score.composite --state    # identity-neutral composite",
+        "python -m pvv_score.run_identity state",
+        "python -m pvv_score.events               # pre-episode event study",
+        "python -m pvv_score.score_state          # full-universe state scoring",
+        "python -m pvv_score.ranking_page         # sortable all-ticker page",
+        "python -m pvv_score.report",
+    ]) + "\n```\n")
     (RESULTS_DIR / "REPORT.md").write_text("\n".join(L))
     print("wrote", RESULTS_DIR / "REPORT.md")
 

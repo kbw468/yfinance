@@ -47,10 +47,11 @@ def _zs(x: pd.DataFrame, w: int) -> pd.DataFrame:
 
 
 def _beta_corr(rs: pd.DataFrame, rm: pd.Series, w: int):
-    cov = rs.rolling(w).cov(rm)
-    var_m = rm.rolling(w).var()
+    mp = int(0.9 * w)
+    cov = rs.rolling(w, min_periods=mp).cov(rm)
+    var_m = rm.rolling(w, min_periods=mp).var()
     beta = cov.div(var_m, axis=0)
-    corr = rs.rolling(w).corr(rm)
+    corr = rs.rolling(w, min_periods=mp).corr(rm)
     return beta, corr
 
 
