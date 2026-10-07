@@ -137,7 +137,7 @@ def main(csv=None, whatif=None, vol_pace=None, send_label=None):
         rec = rd.reset_index()[["ticker", "tier_now", "P_now", "sigs_now"]].rename(columns={"tier_now": "tier_proj", "P_now": "P_proj", "sigs_now": "sigs_proj"})
         rec.insert(0, "time_ny", dt.datetime.now(NY).strftime("%H:%M")); rec.insert(0, "asof", meta["bar_date"])
         old = pd.read_csv(lg) if lg.exists() else pd.DataFrame()
-        pd.concat([old[~((old.asof == meta["bar_date"]) & (old.time_ny == rec.time_ny.iloc[0]))] if len(old) else old, rec]).to_csv(lg, index=False)
+        pd.concat([old[~((old["asof"] == meta["bar_date"]) & (old.time_ny == rec.time_ny.iloc[0]))] if len(old) else old, rec]).to_csv(lg, index=False)
     # text
     L = [f"INTRADAY READ, {meta['now_ny']}. Bar: {meta['bar_date']} ({'partial, volume so far scaled by 1/' + str(meta['vol_share']) if meta['partial'] else 'final session bar'}); source {meta['source']}."
          + (f"  WHAT-IF: {', '.join(f'{k} {v:+.1f}%' for k, v in whatif.items())}" if whatif else ""),

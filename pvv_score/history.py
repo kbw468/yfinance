@@ -175,7 +175,7 @@ def projection_accuracy(asof) -> pd.DataFrame | None:
     lg = RESULTS_DIR / "intraday" / "projection_log.csv"
     if not lg.exists():
         return None
-    log = pd.read_csv(lg); log = log[log.asof == str(pd.Timestamp(asof).date())]
+    log = pd.read_csv(lg); log = log[log["asof"] == str(pd.Timestamp(asof).date())]
     if log.empty:
         return None
     last_t = sorted(log.time_ny.unique())[-1]
@@ -188,7 +188,7 @@ def projection_accuracy(asof) -> pd.DataFrame | None:
            "t12_projected": len(t12p), "t12_actual": len(t12a), "t12_overlap": len(t12p & t12a)}
     ap = HIST / "projection_accuracy.csv"
     acc = pd.read_csv(ap) if ap.exists() else pd.DataFrame()
-    acc = pd.concat([acc[acc.asof.astype(str) != str(row["asof"])] if len(acc) else acc, pd.DataFrame([row])])
+    acc = pd.concat([acc[acc["asof"].astype(str) != str(row["asof"])] if len(acc) else acc, pd.DataFrame([row])])
     acc.to_csv(ap, index=False)
     return pd.DataFrame([row])
 
