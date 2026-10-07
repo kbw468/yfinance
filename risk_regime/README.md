@@ -360,3 +360,26 @@ Nearest-neighbor search of today's 29-feature state (percentile levels, 5d and 2
 Weighted toward today's extremes (rates and bond vol at 1-year highs, equity vol and VVIX at lows, SPY at its high): 2021-03-15, 2016-11-28, 2026-05-22, 2015-05-20, 2022-04-20, 2022-09-12, 2021-10-22, 2023-03-03, 2022-01-12, 2010-12-14, 2018-10-03, 2013-02-01. Median forward: 63d 0.0%, 126d -0.1%, max drawdown 63d -3.2%, 126d -8.1%. Share with a 5%+ drawdown within 63 days 0.33 (base 0.31); 10%+ within 126 days 0.42 (base 0.22). The set splits cleanly: the analogs that occurred with SPY at its high and VIX near its lows (Mar 2021, Nov 2016, Feb 2013, Dec 2010) went straight up; the analogs that occurred with SPY already 3-4% off and VIX mid-range (Apr 2022, Sep 2022, Jan 2022, Oct 2018) were the start of 12-21% drawdowns within 5 to 14 sessions. Today sits with the first group on SPY position and VIX, and with the second group on rates and bond vol.
 
 Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% of high, 1991+): 13 episodes, median 63d max drawdown -3.9%, 38% had a 5%+ drawdown within 63 days, 15% a 10%+ within 126 days. Adding MOVE pct >= 80 narrows to 5 episodes (Jul 2013, Nov 2016, Feb 2021, Oct 2021, Jan 2022), four benign and one (Jan 2022) the start of the 2022 bear. Adding VVIX pct <= 25 leaves 4, all benign over 63 days, with the Oct 2021 one making a 7.6% drawdown 87 days later.
+
+---
+
+## 11. Exposure dial (0 = no beta, 100 = max long high beta)
+
+Built from every rule in sections 1, 8 and 9 plus six slow context flags. Base is 60 (the unconditional long bias). Each risk-off rule subtracts for a fixed number of sessions after it fires (10 to 21), each risk-on rule adds (21 to 42 sessions for capitulation prints). Weights follow the evidence: the rally-failure tell and the credit crack are -20, the VVIX-lagging onset and second-leg continuation are -15, the full capitulation print is +25, the VVIX-confirming spike is +8. Context: rates pressure with VIX asleep -5, complacency -5, in a 7%+ drawdown with no capitulation print -10, vol collapsing from a high +10, at the highs +5, VIX and VVIX both at the floor -3. Clamped to 0-100. Definitions and weights in `scripts/score.py`.
+
+Backtest 2008 to date, Feb-Jul 2020 excluded, 21-day forward:
+
+| Dial | Time share | P(5% DD in 21d) | Mean fwd 21d | Mean fwd 63d | Mean max DD 63d |
+|---|---|---|---|---|---|
+| 0-30 | 10% | **0.50** | **-1.55%** | -1.10% | **-12.7%** |
+| 31-45 | 11% | 0.21 | +1.34% | +2.59% | -5.8% |
+| 46-55 | 12% | 0.17 | +1.54% | +3.44% | -4.5% |
+| 56-65 | 17% | 0.15 | +1.05% | +3.34% | -4.6% |
+| 66-75 | 20% | 0.11 | +1.27% | +3.57% | -3.7% |
+| 76-100 | 30% | 0.12 | +1.07% | +2.83% | -3.8% |
+
+Holding SPY at dial/100 (lagged a day, rest in cash): 9.5% a year at 9.6% vol, Sharpe 0.98, worst drawdown -21.5%, versus buy-and-hold 10.9% at 18.6% vol, Sharpe 0.59, worst drawdown -73% (log). Average exposure 63%. It beat buy-and-hold on a risk-adjusted basis in 2008-12, 2018-22 and 2023-26 and matched it in 2013-17.
+
+Where the dial is weak, stated plainly: the separation is all in the bottom bucket. Above 45 the forward returns are flat across buckets; the dial tells you when to be out, not how much more to be in. It is also slow at lows: the median dial at the 25 troughs since 2008 was 48 on the low day and 56 ten days later, because the drawdown-without-capitulation and continuation flags are still in force. The capitulation prints lift it when they fire; when a low forms without them (2018-02, 2025-04) the dial stays low into the first leg of the rebound. The beta-tilt variant (small caps and Nasdaq above 70, treasuries for the unexposed portion below 40) did not improve on plain SPY exposure.
+
+**2026-10-07: 49.** Base 60, plus 10 for the vol-collapse confirmation that fired in late September, plus 5 for being at the highs, minus 10 for regional banks breaking relative while yields ripped (fired within the last three weeks), minus 8 for equity implied vol cheap against credit realized vol, minus 5 for rates pressure with the VIX asleep, minus 3 for VIX and VVIX both at the floor. Neutral bucket: 17% odds of a 5% drop in the next month, mean forward quarter +3.4%. The dial was 60 to 74 through early September and dropped to the 40s on September 23 when the bank and credit flags came in.
