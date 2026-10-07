@@ -151,6 +151,8 @@ def main(csv=None, whatif=None, vol_pace=None, send_label=None):
     t12 = rd[(rd.tier_now <= 2) | (rd.tier_close <= 2)]
     L.append(f"TIERS 1-2 (projected or at last close), {len(t12)} names:")
     L += [line(t, r) for t, r in t12.iterrows()]
+    t3 = rd[((rd.tier_now == 3) | (rd.tier_close == 3)) & ~rd.index.isin(t12.index)]
+    L += ["", f"TIER 3 (projected or at last close), {len(t3)} names:"] + [line(t, r) for t, r in t3.iterrows()]
     f1 = rd[(rd.day_ret < 0) & (rd.tier_now <= 2) & rd.status.isin(["holding", "strengthening", "UP A TIER"])].sort_values("day_ret")
     L += ["", f"DOWN ON THE DAY, PROJECTED TIER 1-2 AND HOLDING OR STRONGER ({len(f1)}):"] + [line(t, r) for t, r in f1.iterrows()]
     f2 = rd[(rd.day_ret > 0) & (rd.tier_close <= 2) & rd.status.isin(["weakening", "down a tier"])].sort_values("day_ret", ascending=False)
