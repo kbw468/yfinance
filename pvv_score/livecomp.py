@@ -23,4 +23,4 @@ def live_composite_percentile(asof=None) -> pd.Series:
     s = st[st.date == d].set_index("ticker")["comp_bucketed"].rename("s")
     l = lv[lv.date == d].set_index("ticker")["comp_bucketed"].rename("l")
     both = pd.concat([s, l], axis=1).dropna()
-    return ((both.s.rank(pct=True) + both.l.rank(pct=True)) / 2).rename("comp_p")
+    return ((both.s.rank(pct=True) + both.l.rank(pct=True)) / 2).round(8).rename("comp_p")   # 8 dp: tie order is then identical in every code path

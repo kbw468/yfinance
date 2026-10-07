@@ -46,7 +46,7 @@ def main(frozen: bool = False):
                 if m.any() and wd:
                     raw[m] = score_rows(rows[m], pd.Series(wd, dtype=float)).values
             comp[layer] = raw
-        live = ((comp["state"].rank(pct=True) + comp["level"].rank(pct=True)) / 2).where(comp["state"].notna() & comp["level"].notna())
+        live = ((comp["state"].rank(pct=True) + comp["level"].rank(pct=True)) / 2).round(8).where(comp["state"].notna() & comp["level"].notna())
         live.index = rows.ticker
         check(U["model"].iloc[0] == json.load(open(R / "model" / "model.json"))["sha256"], "list carries the frozen model id")
     else:

@@ -73,7 +73,7 @@ def main(source: str = "research", out_dir=RESULTS_DIR, asof=None, vol_header=Tr
                     contrib[b] = rk * w.values
         el[f"comp_{layer}"] = raw
     both = el.comp_state.notna() & el.comp_level.notna()
-    el["avg_score"] = ((el.comp_state.rank(pct=True) + el.comp_level.rank(pct=True)) / 2).where(both)
+    el["avg_score"] = ((el.comp_state.rank(pct=True) + el.comp_level.rank(pct=True)) / 2).round(8).where(both)   # 8 dp, as livecomp
     el["state_score"] = el.comp_state.rank(pct=True)
     tops = {}
     for b, c in contrib.items():
