@@ -5,7 +5,7 @@ threshold. A signature = AND of 2 or 3 conditions. Outcome = the name's next-42-
 quartile of the universe on the smooth-climb score (Sharpe, max drawdown, straightness, up-day share).
 
 Discovery window 2018-2023: keep signatures with >= MIN_N cases and lift >= MIN_LIFT (P / 0.25).
-Confirmation window 2024 onward: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
+Confirmation window CONFIRM_START (2021) onward; probabilities are then measured on the full RECENT_START (2018+) sample: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
 Names today are ranked by the best confirmed signature they carry (its confirmation-window probability), then by how
 many confirmed signatures fire. Nothing is averaged across signatures; a signature fires or it does not.
 """
@@ -18,6 +18,7 @@ from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .regime import tag, today_regime
 
+CONFIRM_START = "2021-01-01"     # confirmation half; discovery half is SAMPLE_START .. DISCOVER_END
 DISCOVER_END = "2020-12-31"      # discovery 2018-01 .. 2020-12 less the COVID window (regime-matched days), confirmation RECENT_START (2021-01) onward
 MIN_N, MIN_LIFT = 300, 1.30
 MIN_N_CONFIRM, CONFIRM_LIFT = 150, 1.20
@@ -72,7 +73,7 @@ def main():
     y42 = smooth_top_quartile(df, 42).astype(float).values
     y63 = smooth_top_quartile(df, 63).astype(float).values
     disc = (df.date <= DISCOVER_END).values & ~np.isnan(y42) & same
-    conf = (df.date >= RECENT_START).values & ~np.isnan(y42) & same
+    conf = (df.date >= CONFIRM_START).values & ~np.isnan(y42) & same
     conds = build_conditions(df)
     names = list(conds)
     print(f"{len(names)} conditions, rows disc={disc.sum():,} conf={conf.sum():,}", file=sys.stderr)
