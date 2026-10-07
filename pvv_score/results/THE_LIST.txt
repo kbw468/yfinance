@@ -1,5 +1,5 @@
 THE LIST, 2026-10-06 close. Market regime today: risk_on; all probabilities measured on risk_on sessions.
- P42 / P63 = probability (realised out of sample, 2024 onward, same regime) that the next 42 / 63 sessions are a top-quartile
+ P42 / P63 = probability (realised out of sample, 2023 onward, same regime) that the next 42 / 63 sessions are a top-quartile
 smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.
 basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).
 

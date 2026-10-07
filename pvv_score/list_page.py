@@ -1,7 +1,7 @@
 """THE LIST as a page: probability tiers shaded, signature conditions as chips colored by factor family."""
 import json
 import pandas as pd
-from .config import RESULTS_DIR, CACHE_DIR
+from .config import RESULTS_DIR, CACHE_DIR, RECENT_START
 from .signatures import FIXED
 from .signature_rule import PLAIN
 
@@ -82,7 +82,7 @@ tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 .count{{color:var(--muted);font-size:.85rem}}
 </style>
 <h1>THE LIST</h1>
-<p class="sub">{asof} close. Every name ranked by the probability that its next 42 / 63 sessions trace a top-quartile smooth climb against the whole universe (Sharpe, max drawdown, straightness, up-day share). Probabilities are realised out-of-sample frequencies, 2024 onward, same market regime as today. Baseline 25%. Click a row to see the confirmed signatures firing on it; each signature is three conditions that must all hold, colored by what they measure.</p>
+<p class="sub">{asof} close. Every name ranked by the probability that its next 42 / 63 sessions trace a top-quartile smooth climb against the whole universe (Sharpe, max drawdown, straightness, up-day share). Probabilities are realised out-of-sample frequencies, {RECENT_START[:4]} onward, same market regime as today. Baseline 25%. Click a row to see the confirmed signatures firing on it; each signature is three conditions that must all hold, colored by what they measure.</p>
 <div class="legend"><b>Condition family:</b> <span class="chip price">price / trend / structure</span> <span class="chip volume">volume / participation</span> <span class="chip volatility">volatility</span> <span class="chip relative">relative to market (beta, correlation, capture, RS)</span>
 </div>
 <div class="legend"><b>Tiers (P 42d):</b> <span class="chip tier1">Tier 1 &ge; 45%</span> <span class="chip tier2">Tier 2 40–45%</span> <span class="chip tier3" style="color:var(--fg)">Tier 3 35–40%</span> <span class="chip tier4" style="color:var(--fg)">Tier 4 30–35%</span> <span class="chip tier5" style="color:var(--fg)">Tier 5 25–30%</span> <span style="color:var(--muted)">Tier 6 &lt; 25% (below baseline)</span></div>

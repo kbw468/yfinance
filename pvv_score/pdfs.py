@@ -2,7 +2,7 @@
 import html
 import subprocess
 import pandas as pd
-from .config import RESULTS_DIR, UNIVERSE_CSV
+from .config import RESULTS_DIR, UNIVERSE_CSV, RECENT_START
 
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 TIER_BG = {1: "#1f5fbf", 2: "#4f82d4", 3: "#a9c1e8", 4: "#cbd9f2", 5: "#e6edf9", 6: "#ffffff"}
@@ -50,7 +50,7 @@ def main():
     mc["Ticker"] = mc.Ticker.str.replace(".", "-", regex=False)
     L = L.merge(mc.rename(columns={"Ticker": "ticker", "Market Cap": "mcap_m"}), on="ticker", how="left")
     lead = (f"{len(L)} names (S&P 500 + S&P 400). P = probability that the next 42 / 63 sessions trace a top-quartile smooth climb against the whole "
-            "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration (2024 onward, today's market regime; "
+            "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration ({RECENT_START[:4]} onward, today's market regime; "
             "every step of the curve rests on at least 500 historical cases). Baseline 25%. Score = multi-factor composite (0-1). sigs = confirmed three-condition "
             "signatures firing. Below the signature region, names are ordered by Score; in low beta the composite carried no out-of-sample edge, so those "
             "probabilities are flat by evidence, not by omission.")

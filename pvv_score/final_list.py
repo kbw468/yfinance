@@ -5,7 +5,7 @@ out of sample in the 2024+ window for the rule that applies to the name:
 Both are realised frequencies on the same outcome, so they sort together. Baseline 25%."""
 import numpy as np
 import pandas as pd
-from .config import RESULTS_DIR
+from .config import RESULTS_DIR, RECENT_START
 
 TIERS = [0, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0]
 TIER_LABELS = ["<50", "50-70", "70-80", "80-90", "90-95", "95-100"]
@@ -54,7 +54,7 @@ def main():
     from .regime import today_regime
     reg = today_regime()
     lines = [f"THE LIST, {asof} close. Market regime today: {reg}; all probabilities measured on {reg} sessions.",
-             f" P42 / P63 = probability (realised out of sample, 2024 onward, same regime) that the next 42 / 63 sessions are a top-quartile",
+             f" P42 / P63 = probability (realised out of sample, {RECENT_START[:4]} onward, same regime) that the next 42 / 63 sessions are a top-quartile",
              "smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.",
              "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).", "",
              "Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.", "",

@@ -125,7 +125,7 @@ def main():
     today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "liftsum", "bestp", "ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
-    print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
+    print(f"RULE as applied ({RECENT_START[:4]}+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
     print(rule.round(3).to_string())
     print("\nby number of confirmed signatures firing:\n", depth.round(3).to_string())
     print(f"\ntonight: {int(today.n_fire.gt(0).sum())} names fire; top 30 by depth:")
