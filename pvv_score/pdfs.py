@@ -19,10 +19,14 @@ def render(df, sig, title, lead, mcap_first):
         t = int(r.tier)
         best = sig["best_signature_plain"].get(r.ticker, "") if r.ticker in sig.index else ""
         best = best if isinstance(best, str) else ""
+        nm = sig["near_miss_n"].get(r.ticker, 0) if r.ticker in sig.index else 0
+        nmp = sig["near_miss_piece"].get(r.ticker, "") if r.ticker in sig.index else ""
+        nmp = nmp if isinstance(nmp, str) else ""
+        tail = best.replace(" AND ", " + ") if best else (f"none firing; {int(nm)} one condition away, missing: {nmp}" if nm else "none firing")
         cells = [f'<td class="n">{cap(r.mcap_m)}</td>', f'<td>{int(r["rank"])}</td>', f'<td><b>{t}</b></td>', f'<td><b>{r.ticker}</b></td>', f'<td>{r.Index}</td>',
                  f'<td>{html.escape(str(r.Sector))}</td>', f'<td>{r.beta_bucket}</td>', f'<td class="n">{r.P_topq_42d*100:.1f}%</td>', f'<td class="n">{r.P_topq_63d*100:.1f}%</td>',
-                 f'<td class="n">{int(r.n_signatures)}</td>', f'<td class="s">{html.escape(best.replace(" AND ", " + "))}</td>']
-        hdr = ["Mkt cap", "Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "sigs", "Strongest confirmed signature firing"]
+                 f'<td class="n">{r.avg_score:.2f}</td>', f'<td class="n">{int(r.n_signatures)}</td>', f'<td class="n">{int(nm)}</td>', f'<td class="s">{html.escape(tail)}</td>']
+        hdr = ["Mkt cap", "Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "Score", "sigs", "near", "Strongest confirmed signature firing / nearest miss"]
         if not mcap_first:
             cells = cells[1:4] + [cells[0]] + cells[4:]
         rows.append(f'<tr style="background:{TIER_BG[t]};color:{TIER_FG[t]}">' + "".join(cells) + "</tr>")
@@ -47,7 +51,9 @@ def main():
     L = L.merge(mc.rename(columns={"Ticker": "ticker", "Market Cap": "mcap_m"}), on="ticker", how="left")
     lead = (f"{len(L)} names (S&P 500 + S&P 400). P = probability that the next 42 / 63 sessions trace a top-quartile smooth climb against the whole "
             "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration (2024 onward, today's market regime; "
-            "every step of the curve rests on at least 500 historical cases). Baseline 25%.")
+            "every step of the curve rests on at least 500 historical cases). Baseline 25%. Score = multi-factor composite (0-1). sigs = confirmed three-condition "
+            "signatures firing; near = confirmed signatures one condition away from firing. Below the signature region, names are ordered by Score; in low beta the "
+            "composite carried no out-of-sample edge, so those probabilities are flat by evidence, not by omission.")
     tmp = RESULTS_DIR / "_tmp"
     tmp.mkdir(exist_ok=True)
     for name, df, mf, title in [("THE_LIST", L.sort_values("rank"), False, f"THE LIST, {asof} close"),
