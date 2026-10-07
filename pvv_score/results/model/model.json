@@ -1,5 +1,5 @@
 {
- "frozen_utc": "2026-10-07 03:12",
+ "frozen_utc": "2026-10-07 04:02",
  "fitted_through": "2026-10-06",
  "fold_year": 2026,
  "sample_start": "2015-01-01",
@@ -11,12 +11,12 @@
  ],
  "discovery_end": "2020-12-31",
  "confirm_start": "2021-01-01",
- "n_signatures": 719,
+ "n_signatures": 718,
  "weights_k": {
   "state": {
    "high": 23,
-   "low": 10,
-   "mid": 12
+   "low": 11,
+   "mid": 11
   },
   "level": {
    "high": 20,
@@ -31,5 +31,5 @@
   "calib_signature.json",
   "factor_registry.csv"
  ],
- "sha256": "10abb74c5ba4b955"
+ "sha256": "26e6bcfe15ccfc8f"
 }
