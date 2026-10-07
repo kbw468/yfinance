@@ -31,14 +31,14 @@ HORIZONS = (21, 42, 63)
 
 # Evaluation windows. RECENT is the regime that matters most (CTA / vol-control / 0DTE flow era).
 BACKTEST_START = "2014-01-01"
-RECENT_START = "2018-01-01"   # probability / calibration window: the full sample (regime-matched), COVID window excluded
+RECENT_START = "2015-01-01"   # probability / calibration window: the full sample (regime-matched), COVID window excluded
 # nothing before this date enters any evaluation, fit or probability table (market structure regime cut)
-SAMPLE_START = "2018-01-01"
+SAMPLE_START = "2015-01-01"
 # periods removed from every fit, discovery and probability table (2022: bear market for everything but energy/commodities;
 # behaviour that precedes smooth climbs in a normal tape did not get to express itself)
 EXCLUDE_PERIODS = [("2020-02-20", "2020-06-30")]   # COVID crash and V-recovery: no analogue elsewhere in the sample. 2022 stays in as risk-off context (regime.py)
 # walk-forward test years (training starts at SAMPLE_START, so the first test year needs >= 1y of history + embargo)
-WF_YEARS = range(2020, 2027)
+WF_YEARS = range(2017, 2027)
 # weight on recent-window IC when forming composite weights (rest on full window)
 RECENT_WEIGHT = 0.67
 # time-decay half-life (trading days) for ML sample weights
