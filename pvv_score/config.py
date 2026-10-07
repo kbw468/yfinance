@@ -31,7 +31,7 @@ HORIZONS = (21, 42, 63)
 
 # Evaluation windows. RECENT is the regime that matters most (CTA / vol-control / 0DTE flow era).
 BACKTEST_START = "2014-01-01"
-RECENT_START = "2023-01-01"
+RECENT_START = "2021-01-01"
 # nothing before this date enters any evaluation, fit or probability table (market structure regime cut)
 SAMPLE_START = "2018-01-01"
 # periods removed from every fit, discovery and probability table (2022: bear market for everything but energy/commodities;
