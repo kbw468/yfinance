@@ -1,0 +1,31 @@
+import pandas as pd, numpy as np, warnings; warnings.filterwarnings('ignore')
+pd.set_option('display.width',300); pd.set_option('display.max_rows',400); pd.set_option('display.max_columns',40)
+G=pd.read_pickle('G.pkl'); L=pd.read_pickle('L.pkl'); S=pd.read_pickle('S.pkl')
+ok=L['ok21']
+def grid(a,b,la,lb,bins=(-9,-1,-0.3,0.3,1,9),labels=('<-1','-1..-.3','-.3..+.3','+.3..1','>1'),h=21):
+    m=G[a].notna()&G[b].notna()&ok
+    A=pd.cut(G.loc[m,a],bins,labels=labels); B=pd.cut(G.loc[m,b],bins,labels=labels)
+    df=pd.DataFrame({'A':A,'B':B,'off':L.loc[m,'riskoff21'],'fwd':L.loc[m,f'fwd{h}'],'dd':L.loc[m,'fwdDD21']})
+    n=df.pivot_table(index='A',columns='B',values='off',aggfunc='count')
+    print(f'\n### {la} (rows) x {lb} (cols) | n={m.sum()} base riskoff21={df.off.mean():.3f}, base fwd21={df.fwd.mean()*100:.2f}%')
+    print('P(>=5% DD in 21d):'); print(df.pivot_table(index='A',columns='B',values='off',aggfunc='mean').round(3).to_string())
+    print('mean fwd21 %:'); print((df.pivot_table(index='A',columns='B',values='fwd',aggfunc='mean')*100).round(2).to_string())
+    print('counts:'); print(n.astype('Int64').to_string())
+# core cross-dimension pairs (all ROC5 z-scores)
+grid('VIX_roc5_z252','MOVE_roc5_z252','VIX ROC5z','MOVE ROC5z')
+grid('VIX_roc5_z252','TNX_chg5_z252','VIX ROC5z','TNX chg5z')
+grid('VIX_roc5_z252','X_VVIX_VIX_roc5_z252','VIX ROC5z','VVIX/VIX ROC5z')
+grid('VIX_roc5_z252','VVIX_roc5_z252','VIX ROC5z','VVIX ROC5z')
+grid('VIX_roc5_z252','TS_VIX_VIX3M_roc5_z252','VIX ROC5z','VIX/VIX3M ROC5z')
+grid('VIX_roc5_z252','GVZ_roc5_z252','VIX ROC5z','GVZ ROC5z')
+grid('VIX_roc5_z252','OVX_roc5_z252','VIX ROC5z','OVX ROC5z')
+grid('VIX_roc5_z252','SKEW_roc10_z252','VIX ROC5z','SKEW ROC10z')
+grid('MOVE_roc5_z252','TNX_chg5_z252','MOVE ROC5z','TNX chg5z')
+grid('VIX_roc10_z252','VIX9D_roc5_z252','VIX ROC10z','VIX9D ROC5z')
+grid('VIX_roc21_z252','VIX_roc5_z252','VIX ROC21z (trend)','VIX ROC5z (impulse)')
+# 3-way: the pre-top configuration: VIX ROC5z<0 & VVIX/VIX ROC5z>0.5 & SKEW ROC10z>0.5
+m=ok&G['VIX_roc5_z252'].notna()&G['X_VVIX_VIX_roc5_z252'].notna()&G['SKEW_roc10_z252'].notna()
+cfg=(G['VIX_roc5_z252']<0)&(G['X_VVIX_VIX_roc5_z252']>0.5)&(G['SKEW_roc10_z252']>0.5)&(G['SPY_dd63']>-0.02)
+print('\n### PRE-TOP CONFIG: VIX ROC5z<0 & VVIX/VIX ROC5z>0.5 & SKEW ROC10z>0.5 & SPY within 2% of 63d high')
+for name,mm in [('config',m&cfg),('near-high but no config',m&~cfg&(G['SPY_dd63']>-0.02))]:
+    print(f'{name:28s} n={mm.sum():5d}  P(off21)={L.loc[mm,"riskoff21"].mean():.3f}  fwd5={L.loc[mm,"fwd5"].mean()*100:.2f}% fwd10={L.loc[mm,"fwd10"].mean()*100:.2f}% fwd21={L.loc[mm,"fwd21"].mean()*100:.2f}%  fwdDD21={L.loc[mm,"fwdDD21"].mean()*100:.2f}%')

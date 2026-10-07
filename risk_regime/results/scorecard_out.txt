@@ -1,0 +1,99 @@
+=== RISK-OFF SCORECARD: day (vs peak=0) of first fire of each rule in window [peak-25, break-5%]; "." = no fire; "x" = series not yet available ===
+          peak  depth%  to-5%                            dim SETUP_rates SETUP_complac ONSET_impulse ONSET_vvixlag ONSET_movelag ONSET_ovxdiv CONT_2ndleg
+0   1994-02-02    -8.9     38                      YIELDS_UP          13             x             .             x             x            x           x
+1   1996-05-22    -7.9     34                      YIELDS_UP           8            25            31             x             x            x           x
+2   1997-02-18   -10.6     27                      YIELDS_UP          27             .             .             x             x            x           x
+3   1997-10-07   -11.9     14                      YIELDS_UP           3             7             8             x             x            x           x
+4   1998-07-14   -20.5     13                       VOL_ONLY           2             .             6             x             x            x           x
+5   1999-07-16    -9.7      6                  YIELDS_UP+FTQ           .             .             .             x             x            x           x
+6   1999-12-31    -9.7      4                      YIELDS_UP           .           -19           -24             x             x            x           x
+7   2000-03-24   -12.1     14                            FTQ           .           -15             .             x             x            x           x
+8   2000-09-01   -13.3     10                      YIELDS_UP           .             .             .             x             x            x           x
+9   2001-05-21   -10.4     16                      YIELDS_UP         -25             x           -19             x             x            x           x
+10  2001-12-05    -7.4     36                      YIELDS_UP         -15           -20             .             x             x            x           x
+11  2002-03-19   -11.1     16                      YIELDS_UP          -9             .             .             x             x            x           x
+12  2002-11-27   -10.5      7                  YIELDS_UP+FTQ         -25            -6             1             x             x            x           x
+13  2005-03-07    -7.2     27              RATEVOL+YIELDS_UP         -12             .            -9             x            -9            x           x
+14  2006-05-09    -7.9      9                        RATEVOL           .             .             .             x             .            x           x
+15  2007-07-19    -9.5      6                    RATEVOL+FTQ         -24             .             .             x             .            x           x
+16  2007-10-09   -10.5     21                            FTQ         -17           -15             5             x             5            x           .
+17  2008-05-06   -12.3     25                      YIELDS_UP         -21           -21             .            13             .            x           .
+18  2009-06-12    -7.2      6                  YIELDS_UP+FTQ          -9             .             .             .             .            .           .
+19  2010-01-19    -8.3      3                FTQ+OIL+GOLDVOL         -22            -6             .             3             .            .           .
+20  2010-04-06   -10.8     22          RATEVOL+YIELDS_UP+FTQ           .             .             .             9             .           -8          22
+21  2011-04-29    -7.1     25                FTQ+OIL+GOLDVOL         -25             .             .             5             .            .           .
+22  2011-10-27   -10.0      3                  YIELDS_UP+FTQ         -20             .             .           -25             .            .         -25
+23  2012-04-02   -10.1     29                            FTQ         -14           -14             .             4             .            .           .
+24  2012-09-14    -7.6     37              YIELDS_UP+FTQ+OIL         -25             .           -15           -15           -15            .           .
+25  2014-09-05    -7.2     26  RATEVOL+YIELDS_UP+OIL+GOLDVOL           7             .             .           -25             .            .           .
+26  2015-07-20   -12.7     24                    FTQ+GOLDVOL          -5            10             .           -13             .            .          24
+27  2018-01-26   -10.6      6  RATEVOL+YIELDS_UP+OIL+GOLDVOL         -24             .             .            -8             .          -22           6
+28  2018-08-29    -9.5     30                  YIELDS_UP+OIL         -24             .             .            28             .            .          30
+29  2020-09-02    -9.9      3                            OIL           .             .             .             1             .            .           3
+30  2021-12-27   -12.3     16              RATEVOL+YIELDS_UP         -10             .            10           -23            10            .           .
+31  2022-08-16   -18.2      8                      YIELDS_UP          -3             .             .             4             .            .           .
+32  2023-02-02    -7.8     15                      YIELDS_UP           .             .             .            12             .            .           .
+33  2024-07-16    -8.8     13                RATEVOL+FTQ+OIL         -10             .             .             2             .            .           .
+34  2025-01-23   -10.1     27                            FTQ         -18             .             .           -22             .          -20           .
+35  2026-01-27    -9.0     35            RATEVOL+OIL+GOLDVOL          -3             .             .             7             .           14           .
+
+events with at least one SETUP/ONSET fire before the -5% break: 0.92
+events with a fire at or BEFORE the peak day: 0.72
+
+=== RISK-ON SCORECARD: day (vs trough=0) of first fire in [trough-10, trough+10] ===
+        trough   dd%  rebound% CAP_alldims CAP_vix_gvz CAP_vvixout ONCONF_collapse FAIL_yieldsup
+0   1996-07-15  -7.9       7.5           x           x           x               x             .
+1   1997-04-11 -10.6      17.4           x           x           x               x             1
+2   1997-10-27 -11.9      12.6           x           x           x               x             .
+3   1998-08-31 -21.1      13.4           x           x           x               x             .
+4   1999-10-15 -10.0      14.1           x           x           x               x            -6
+5   2000-02-25  -9.8      14.4           x           x           x               x             .
+6   2000-05-25 -10.8       9.5           x           x           x               x            -5
+7   2001-04-03 -22.0      17.6           x           x           x               x             9
+8   2001-09-21 -24.0      17.4           x           x           x               x             .
+9   2002-02-07  -8.5       8.7           x           x           x               x             .
+10  2002-07-23 -32.4      19.0           x           x           x               x             5
+11  2002-10-09 -20.9      18.8           x           x           x               x             7
+12  2003-03-11 -14.8      15.8           x           x           x               x            10
+13  2004-08-06  -7.1       7.5           x           x           x               x             .
+14  2007-08-15  -9.5      10.9           x           x           x               x             .
+15  2008-03-10 -16.7      10.9           x           x           .              -9           -10
+16  2008-07-15 -16.2       7.7           x           x           .               3             6
+17  2008-11-20 -54.0      22.2           x           x           .               4             .
+18  2009-03-09 -31.7      30.9           x           x           .               3             .
+19  2009-07-10  -7.2      16.5           .          -2           .             -10             .
+20  2010-02-08  -8.3      12.5           0         -10           .              -5             .
+21  2010-07-02 -17.1      10.0           .           .           .             -10             7
+22  2010-08-31  -7.0      12.5           .           .           .               2             .
+23  2011-10-03 -20.3      15.7          -6          -6           .             -10             5
+24  2012-06-04 -10.2       8.5         -10         -10           .               4             .
+25  2012-11-15  -7.6       9.4           .          -5           .               1             .
+26  2014-10-16  -7.6      11.0          -1          -1           .               2             .
+27  2015-08-25 -12.7      10.8          -2          -2           .               4             .
+28  2016-02-11 -13.6      13.4          -3          -3           .              -8             .
+29  2018-02-08 -10.6       7.9           .          -8           .               2             8
+30  2018-12-24 -21.3      17.6          -2          -2           .               5            10
+31  2020-09-23  -9.9      11.7           .           .           .              -6             .
+32  2022-06-16 -23.0      16.3           .          -3           .               .           -10
+33  2022-10-12 -18.2      13.4           .           .           .               .             .
+34  2022-12-28  -7.5      10.1           .           .           .              10             .
+35  2023-03-13  -7.8       8.0          -1          -1          -1              -6             .
+36  2023-10-27 -10.2      15.3           .         -10           .               4             .
+37  2024-08-05  -8.8      10.6          -1          -1          -1               5             .
+38  2025-04-08 -20.8      18.9          -6          -6           .             -10            -9
+39  2026-03-30  -9.3      18.0           .          -4           .               4             .
+
+=== RULE first-fire accounting (ex-2020): share followed by >=5% DD in 21d / 42d, median fwdDD21, count ===
+SETUP_rates      n= 288  P(5%DD/21d)=0.25  P(5%DD/42d)=0.34  P(7%DD/42d)=0.21  medDD21=-2.14%  fwd21= 0.32%  fwd42= 1.16%
+SETUP_complac    n=  38  P(5%DD/21d)=0.24  P(5%DD/42d)=0.32  P(7%DD/42d)=0.18  medDD21=-2.42%  fwd21= 0.29%  fwd42= 0.58%
+ONSET_impulse    n=  62  P(5%DD/21d)=0.27  P(5%DD/42d)=0.32  P(7%DD/42d)=0.27  medDD21=-2.25%  fwd21= 0.75%  fwd42= 1.80%
+ONSET_vvixlag    n= 180  P(5%DD/21d)=0.27  P(5%DD/42d)=0.38  P(7%DD/42d)=0.28  medDD21=-1.88%  fwd21= 0.78%  fwd42= 1.35%
+ONSET_movelag    n=  14  P(5%DD/21d)=0.43  P(5%DD/42d)=0.50  P(7%DD/42d)=0.43  medDD21=-4.47%  fwd21=-0.46%  fwd42=-1.31%
+ONSET_ovxdiv     n=  39  P(5%DD/21d)=0.31  P(5%DD/42d)=0.38  P(7%DD/42d)=0.38  medDD21=-2.27%  fwd21=-0.15%  fwd42= 1.00%
+CONT_2ndleg      n=  64  P(5%DD/21d)=0.39  P(5%DD/42d)=0.50  P(7%DD/42d)=0.41  medDD21=-2.88%  fwd21= 1.07%  fwd42= 1.69%
+CAP_alldims      n=  52  P(5%DD/21d)=0.15  P(5%DD/42d)=0.31  P(7%DD/42d)=0.19  medDD21=-1.10%  fwd21= 2.50%  fwd42= 3.04%
+CAP_vix_gvz      n= 116  P(5%DD/21d)=0.17  P(5%DD/42d)=0.26  P(7%DD/42d)=0.16  medDD21=-1.49%  fwd21= 2.07%  fwd42= 3.26%
+CAP_vvixout      n=   9  P(5%DD/21d)=0.00  P(5%DD/42d)=0.00  P(7%DD/42d)=0.00  medDD21=-1.09%  fwd21= 3.99%  fwd42= 5.74%
+ONCONF_collapse  n= 224  P(5%DD/21d)=0.19  P(5%DD/42d)=0.28  P(7%DD/42d)=0.21  medDD21=-1.37%  fwd21= 1.16%  fwd42= 1.83%
+FAIL_yieldsup    n=  56  P(5%DD/21d)=0.39  P(5%DD/42d)=0.50  P(7%DD/42d)=0.43  medDD21=-3.41%  fwd21=-1.04%  fwd42=-0.36%
+BASE             n=8270  P(5%DD/21d)=0.17  P(5%DD/42d)=0.27  P(7%DD/42d)=0.17  medDD21=-1.65%  fwd21= 0.86%  fwd42= 1.72%
