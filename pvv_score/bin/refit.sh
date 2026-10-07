@@ -7,7 +7,7 @@ export PVV_TARGET=smooth_42
 export PVV_CACHE="${PVV_CACHE:-$PWD/pvv_score/.cache}"
 mkdir -p "$PVV_CACHE"
 # dependencies: the image carries pandas/numpy/pyarrow/scikit-learn; yfinance (this repo) needs requests & co. Install if missing.
-python -c "import requests, multitasking, platformdirs, peewee, bs4, curl_cffi, websockets, pandas, pyarrow, sklearn" 2>/dev/null || pip install -q -e . 2>&1 | tail -1
+python -c "import requests, multitasking, platformdirs, peewee, bs4, curl_cffi, websockets, pandas, pyarrow, sklearn, scipy, lightgbm" 2>/dev/null || pip install -q -e . pyarrow scikit-learn scipy lightgbm 2>&1 | tail -1
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
 log "prices";            python -m pvv_score.data_io
 log "vol indices";       python -c "from pvv_score.volindex import load_vol_indices; load_vol_indices(refresh=True)"

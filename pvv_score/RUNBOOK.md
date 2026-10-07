@@ -9,6 +9,11 @@
 
 The model is frozen between refits on purpose: a name moving up or down the list between two sessions is then tape, not refit noise. When a refit lands, `MOVERS.txt` says so on the first line and the comparison against the previous session carries that caveat.
 
+A routine fires a fresh container with no checkout and only the base image: the routine first attaches the repository with the
+session's `add_repo` tool (plain `git clone` is refused by the git proxy until then), clones, checks out the branch, and the
+script installs pyarrow, scikit-learn, scipy, lightgbm and yfinance's own dependencies if they are missing (about two
+minutes). Pre-installing them in the environment's setup script removes that step.
+
 Cache lives in `PVV_CACHE` (default `pvv_score/.cache`, not committed). A fresh container rebuilds it from the download in a few minutes.
 
 ## Reproducibility and the one source of jitter
