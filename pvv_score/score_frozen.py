@@ -134,11 +134,11 @@ def main(source: str = "research", out_dir=RESULTS_DIR, asof=None, vol_header=Tr
     ranked["best_signature"] = ranked.best_signature_plain
     cols = ["rank", "tier", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "P_topq_42d", "P_topq_63d", "basis", "n_signatures", "best_signature", "avg_score", "top_states"]
     out_dir = pd.io.common.stringify_path(out_dir); out_dir = RESULTS_DIR if out_dir == str(RESULTS_DIR) else __import__("pathlib").Path(out_dir)
-    ranked[cols].to_csv(out_dir / "THE_LIST.csv", index=False)
-    # signatures_today.csv (columns the page, pdfs and checks read)
+    # signatures_today.csv first (columns the page, pdfs and checks read), then the list: same order as the full chain
     st = el.rename(columns={"avg_score": "comp_p"})[["ticker", "sector", "beta_bucket", "comp_p", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf",
                                                       "top5_signatures", "liftsum", "bestp", "ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]].sort_values("n_fire", ascending=False)
     st.to_csv(out_dir / "signatures_today.csv", index=False)
+    ranked[cols].to_csv(out_dir / "THE_LIST.csv", index=False)
     # universe_scores_smooth.csv (every name in the universe, with the reason when not scored)
     C = pd.read_parquet(CACHE_DIR / "Close.parquet")
     u = uni[["Company", "Sector", "SectorETF"]].copy(); u.index.name = "ticker"

@@ -60,7 +60,25 @@ def clean_panel(panel: dict, today: dt.date | None = None, verbose=True) -> tupl
     panel, cutoffs = _mask_zero_volume_stubs(panel)
     report["zero_volume_stub_cutoffs"] = {k: str(v.date()) for k, v in cutoffs.items()}
 
-    # 3. isolated zero-volume days -> NaN volume (price kept)
+    # 3a. trailing placeholder bars: zero volume AND flat OHLC AND the last bar of the series. A name that has stopped
+    #     trading (cash acquisition, delisting) keeps printing a frozen bar on Yahoo; it is not a session. Masked in
+    #     every field so the name drops out of eligibility on that date instead of being scored off a phantom bar.
+    V = panel["Volume"]
+    O, H, L, C = (panel[f] for f in ["Open", "High", "Low", "Close"])
+    flat0 = (V == 0) & (O == H) & (H == L) & (L == C) & C.notna()
+    trailing = {}
+    for t in C.columns:
+        s = C[t].dropna()
+        while len(s) and bool(flat0.loc[s.index[-1], t]):
+            li = s.index[-1]
+            for f in panel:
+                panel[f].loc[li, t] = np.nan
+            trailing[t] = str(li.date())
+            s = s.iloc[:-1]
+    report["trailing_placeholder_bars"] = trailing
+    if verbose and trailing:
+        print(f"trailing placeholder bars masked: {trailing}")
+    # 3b. isolated zero-volume days -> NaN volume (price kept)
     V = panel["Volume"]
     iso = (V == 0) & panel["Close"].notna()
     report["isolated_zero_volume_days"] = int(iso.sum().sum())

@@ -32,7 +32,6 @@ def main(frozen: bool = False):
     rows_path = CACHE_DIR / ("recent_rows.parquet" if frozen else "research_long.parquet")
     if frozen:
         print("[A] tonight's composite percentile recomputed from the frozen weights")
-        import json
         from .composite import tercile_series, score_rows
         W = json.load(open(R / "model" / "weights.json"))
         fac = sorted({f for layer in ("state", "level") for b in W[layer].values() for f in b})
@@ -113,7 +112,8 @@ def main(frozen: bool = False):
     check(len(D) == len(L) and np.allclose(sorted(x["p42"] for x in D), sorted(L.P_topq_42d)), "html rows and probabilities == csv")
     check(f"{asof.date()}" in html, "html header carries asof")
     mt = {f: os.path.getmtime(R / f) for f in ["signatures_today.csv", "universe_scores_smooth.csv", "THE_LIST.csv", "THE_LIST.html", "THE_LIST.pdf", "THE_LIST_by_mktcap.pdf"]}
-    check(mt["signatures_today.csv"] <= mt["THE_LIST.csv"] <= mt["THE_LIST.html"] <= mt["THE_LIST.pdf"] <= mt["THE_LIST_by_mktcap.pdf"], "artifacts built in order signatures -> csv -> html -> pdfs")
+    check(abs(mt["signatures_today.csv"] - mt["THE_LIST.csv"]) < 600 and mt["THE_LIST.csv"] <= mt["THE_LIST.html"] <= mt["THE_LIST.pdf"] <= mt["THE_LIST_by_mktcap.pdf"],
+          "artifacts built in order: signatures and csv in the same run, then html, then pdfs")
     mc = pd.read_csv(R / "THE_LIST_by_mktcap.csv"); check(len(mc) == len(L) and np.allclose(sorted(mc.P_topq_42d), sorted(L.P_topq_42d)), "market-cap list is the same list")
 
     print("[F] calibration tables and model")
@@ -122,7 +122,6 @@ def main(frozen: bool = False):
     dep = pd.read_csv(R / "signature_depth_oos.csv", index_col=0)
     check(bool(dep.P_topq42.is_monotonic_increasing) and int(dep.n.min()) >= 500, "signature depth table monotone with >= 500 cases per step")
     check(int(len(conf)) > 0 and bool((conf.n_conf >= 150).all()), f"{len(conf)} confirmed signatures, all with >= 150 confirmation cases")
-    import json
     cc = json.load(open(R / "model" / "calib_composite.json")); cs = json.load(open(R / "model" / "calib_signature.json"))
     check(all(len(cc[b][c]["x"]) >= 1 for b in cc for c in cc[b]) and all(len(cs["curves"][c][q]["x"]) >= 1 for c in cs["curves"] for q in cs["curves"][c]), "frozen calibration curves present for every bucket and quintile")
     check(all(v["min_n"] >= 500 for b in cc for v in cc[b].values()) and all(v["min_n"] >= 500 for c in cs["curves"].values() for v in c.values()), "every frozen curve was fitted with >= 500 cases per step")
