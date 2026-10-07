@@ -5,6 +5,7 @@ is the probability the list is entitled to print for "name carries a confirmed s
 Also writes plain-English descriptions of the conditions and tonight's firing names with the rule's probability."""
 import numpy as np
 import pandas as pd
+from .calib import BinnedIsotonic
 from .config import RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
@@ -77,6 +78,10 @@ def main():
     depth = rec.groupby(pd.cut(rec.n_fire, [-1, 0, 2, 5, 10, 20, 50, 10000], labels=["0", "1-2", "3-5", "6-10", "11-20", "21-50", "50+"]), observed=True).agg(
         n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))
     depth.to_csv(RESULTS_DIR / "signature_depth_oos.csv")
+    iso_sig = {}
+    for c, src in [("sig_iso_q42", "y42"), ("sig_iso_q63", "y63")]:
+        ok_ = rec[src].notna()
+        iso_sig[c] = BinnedIsotonic(500).fit(np.log1p(rec.n_fire.values[ok_]), rec[src].values[ok_])
     # tonight
     today = df[df.date == df.date.max()].copy()
     # top-5 confirmed signatures per name tonight (ordered by discovery probability), for display
@@ -106,13 +111,15 @@ def main():
                 cnt += 1; misses[m[0]] += 1
         near_n[tk] = cnt
         near_miss[tk] = plain(misses.most_common(1)[0][0]) if misses else ""
+    for c, m in iso_sig.items():
+        today[c] = m.predict(np.log1p(today.n_fire.values))
     today["near_miss_n"] = today.ticker.map(near_n)
     today["near_miss_piece"] = today.ticker.map(near_miss)
     today["best_signature"] = today.best_sig_idx.map(lambda i: conf.signature.iloc[i] if i >= 0 else "")
     today["best_signature_plain"] = today.best_signature.map(lambda s: " AND ".join(plain(c) for c in s.split(" & ")) if s else "")
     today["best_p_conf"] = today.best_sig_idx.map(lambda i: conf.p_conf.iloc[i] if i >= 0 else np.nan)
     today["best_n_conf"] = today.best_sig_idx.map(lambda i: conf.n_conf.iloc[i] if i >= 0 else np.nan)
-    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece"]].sort_values(["n_fire"], ascending=False)
+    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "sig_iso_q42", "sig_iso_q63"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
     print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")

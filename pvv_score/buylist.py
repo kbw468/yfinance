@@ -8,6 +8,7 @@ produced top-quartile paths against everyone else. No forced representation of a
 """
 import numpy as np
 import pandas as pd
+from .calib import BinnedIsotonic
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
@@ -70,8 +71,18 @@ def main():
     sig_only = rec.groupby(["beta_bucket", "sig"], observed=True).agg(n=("u_top_q_42", "size"), p_top_q_42=("u_top_q_42", "mean"), p_top_half_42=("u_top_half_42", "mean"))
     print("signature alone (recent OOS) by bucket:\n", sig_only.round(3).to_string())
 
+    # continuous calibration: isotonic fit of the realised outcome on the composite score, per bucket (same OOS rows)
+    iso = {}
+    for b_ in ["low", "mid", "high"]:
+        s_ = rec[rec.beta_bucket == b_]
+        iso[b_] = {}
+        for c, src in [("iso_q42", "u_top_q_42"), ("iso_h42", "u_top_half_42"), ("iso_q63", "u_top_q_63"), ("iso_h63", "u_top_half_63")]:
+            ok_ = s_[src].notna()
+            iso[b_][c] = BinnedIsotonic(MIN_CELL_N).fit(s_.avg_p.values[ok_], s_[src].values[ok_])
     u = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv")
     asof = u["asof"].iloc[0]
+    for c in ["iso_q42", "iso_h42", "iso_q63", "iso_h63"]:
+        u[c] = [iso[b_][c].predict([x])[0] if (isinstance(b_, str) and b_ in iso and pd.notna(x)) else np.nan for b_, x in zip(u.beta_bucket, u.avg_score)]
     u["tier"] = pd.cut(u.avg_score, TIERS, labels=TIER_LABELS, include_lowest=True)
     today = df[df.date == df.date.max()].set_index("ticker")
     u["signature"] = u.ticker.map(today["sig"]).fillna(0).astype(int)
@@ -86,6 +97,7 @@ def main():
     out_cols = ["rank", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "signature", "p_top_q_42", "p_top_half_42", "p_top_q_63", "p_top_half_63",
                 "avg_score", "state_score_pooled", "level_score", "top_states"]
     scored[out_cols].round(3).to_csv(RESULTS_DIR / "buylist.csv", index=False)
+    u.to_csv(RESULTS_DIR / "universe_scores_smooth.csv", index=False)   # carries the isotonic composite probabilities to final_list
     lines = [f"BUY LIST as of {asof} close. Every name ranked by the probability that its next 42 sessions are a top-quartile smooth climb",
              "against the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline for any name: 25% (Q) / 50% (H).",
              "Probabilities are realised out-of-sample frequencies (2022-10 onward) for names in the same beta bucket and score tier.", "",
