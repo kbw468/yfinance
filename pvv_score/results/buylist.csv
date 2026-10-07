@@ -134,8 +134,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 133,CVNA,Carvana Co,Consumer Cyclical,high,2.348,0,0.313,0.566,0.315,0.569,0.721,0.095,0.634,mom_12_1 z=-1.0; amihud_21 z=+0.0; log_dvol_63 z=-0.3
 134,ORCL,Oracle Corp,Technology,high,2.025,0,0.313,0.566,0.315,0.569,0.718,0.339,0.624,mom_12_1 z=-2.3; days_since_52w_high z=+2.5; beta_252 z=+2.4
 135,AVAV,AeroVironment Inc,Industrials,high,2.005,0,0.313,0.566,0.315,0.569,0.718,0.237,0.55,mom_12_1 z=-2.4; dist_52w_low z=-1.2; days_since_52w_high z=+2.8
-136,NRG,NRG Energy Inc,Utilities,high,1.398,0,0.313,0.566,0.315,0.569,0.715,0.098,0.45,mom_12_1 z=-2.0; dist_52w_low z=-1.8; mom_6_1 z=-1.7
-137,CELH,Celsius Holdings Inc,Consumer Defensive,high,1.059,0,0.313,0.566,0.315,0.569,0.715,0.177,0.322,amihud_21 z=+0.4; mom_12_1 z=-1.0; log_dvol_63 z=-0.1
+136,CELH,Celsius Holdings Inc,Consumer Defensive,high,1.059,0,0.313,0.566,0.315,0.569,0.715,0.177,0.322,amihud_21 z=+0.4; mom_12_1 z=-1.0; log_dvol_63 z=-0.1
+137,NRG,NRG Energy Inc,Utilities,high,1.398,0,0.313,0.566,0.315,0.569,0.715,0.098,0.45,mom_12_1 z=-2.0; dist_52w_low z=-1.8; mom_6_1 z=-1.7
 138,CSCO,Cisco Systems Inc,Technology,high,1.063,0,0.313,0.566,0.315,0.569,0.712,0.965,0.631,mom_12_1 z=+1.6; dist_52w_low z=+1.7; days_since_2x_low z=-2.1
 139,PSN,Parsons Corp,Technology,high,1.273,0,0.313,0.566,0.315,0.569,0.709,0.236,0.201,mom_12_1 z=-1.5; amihud_21 z=+1.1; dn_vol_63 z=+2.9
 140,ADI,Analog Devices Inc,Technology,high,1.682,0,0.313,0.566,0.315,0.569,0.707,0.826,0.651,dist_52w_low z=+1.3; mom_12_1 z=+1.0; up_day_frac_63 z=+1.0
@@ -369,8 +369,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 368,TRGP,Targa Resources Corp,Energy,low,-0.168,0,0.237,0.477,0.238,0.477,0.571,0.318,0.866,down_capture_63 z=-1.8; pullback_duration_21 z=+1.5; days_since_2x_low z=-2.1
 369,TMUS,T-Mobile US Inc,Communication Services,low,-0.332,0,0.237,0.477,0.238,0.477,0.568,0.937,0.55,dn_vol_63 z=+1.8; down_capture_63 z=+1.5; dn_up_vol_asym_63 z=+1.1
 370,NNN,NNN REIT Inc,Real Estate,low,-0.023,0,0.237,0.477,0.238,0.477,0.563,0.916,0.611,base_depth_63 z=-2.5; pos_in_20d_range z=-1.5; dvol_trend_21_126 z=+1.4
-371,CTSH,Cognizant Technology Solutions Corp,Technology,low,0.213,0,0.237,0.477,0.238,0.477,0.563,0.198,0.933,dn_up_vol_asym_63 z=-1.8; down_capture_63 z=-1.7; higher_low_cadence z=+0.8
-372,CLX,Clorox Co,Consumer Defensive,low,0.327,0,0.237,0.477,0.238,0.477,0.563,0.497,0.742,down_capture_63 z=+2.5; dn_vol_63 z=+0.8; base_depth_63 z=-1.8
+371,CLX,Clorox Co,Consumer Defensive,low,0.327,0,0.237,0.477,0.238,0.477,0.563,0.497,0.742,down_capture_63 z=+2.5; dn_vol_63 z=+0.8; base_depth_63 z=-1.8
+372,CTSH,Cognizant Technology Solutions Corp,Technology,low,0.213,0,0.237,0.477,0.238,0.477,0.563,0.198,0.933,dn_up_vol_asym_63 z=-1.8; down_capture_63 z=-1.7; higher_low_cadence z=+0.8
 373,RLI,RLI Corp,Financial,low,-0.402,0,0.237,0.477,0.238,0.477,0.561,0.739,0.725,dn_vol_63 z=+1.7; base_depth_63 z=-1.7; dvol_trend_21_126 z=-0.6
 374,PPC,Pilgrim's Pride Corp,Consumer Defensive,low,-0.075,0,0.237,0.477,0.238,0.477,0.554,0.413,0.815,down_capture_63 z=+1.3; dn_vol_63 z=+1.0; days_since_2x_low z=+0.7
 375,AHR,American Healthcare REIT Inc,Real Estate,low,0.011,0,0.237,0.477,0.238,0.477,0.553,0.956,0.503,base_depth_63 z=-2.7; higher_low_cadence z=-2.4; pos_in_20d_range z=-2.0
@@ -385,8 +385,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 384,SAIC,Science Applications International Corp,Technology,low,0.179,0,0.237,0.477,0.238,0.477,0.541,0.402,0.809,dn_vol_63 z=-1.0; higher_low_cadence z=+1.0; pos_in_20d_range z=-1.7
 385,MTDR,Matador Resources Co,Energy,low,-0.478,0,0.237,0.477,0.238,0.477,0.541,0.271,0.966,down_capture_63 z=-1.7; rs_newhigh_price_not_20 z=-0.2; pullback_duration_21 z=+0.4
 386,LYB,LyondellBasell Industries NV,Basic Materials,low,-0.384,0,0.237,0.477,0.238,0.477,0.54,0.248,0.936,down_capture_63 z=-2.1; higher_low_cadence z=+0.9; dvol_trend_21_126 z=-1.3
-387,KNSL,Kinsale Capital Group Inc,Financial,low,-0.153,0,0.237,0.477,0.238,0.477,0.539,0.378,0.883,dvol_trend_21_126 z=-1.4; dn_vol_63 z=-0.3; base_depth_63 z=-0.3
-388,CTRE,CareTrust REIT Inc,Real Estate,low,0.034,0,0.237,0.477,0.238,0.477,0.539,0.935,0.51,base_depth_63 z=-2.1; pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.4
+387,CTRE,CareTrust REIT Inc,Real Estate,low,0.034,0,0.237,0.477,0.238,0.477,0.539,0.935,0.51,base_depth_63 z=-2.1; pullback_duration_21 z=+1.6; pos_in_20d_range z=-1.4
+388,KNSL,Kinsale Capital Group Inc,Financial,low,-0.153,0,0.237,0.477,0.238,0.477,0.539,0.378,0.883,dvol_trend_21_126 z=-1.4; dn_vol_63 z=-0.3; base_depth_63 z=-0.3
 389,MUR,Murphy Oil Corp,Energy,low,-0.551,0,0.237,0.477,0.238,0.477,0.537,0.079,0.95,base_depth_63 z=+0.7; down_capture_63 z=-1.9; higher_low_cadence z=+0.8
 390,ERIE,Erie Indemnity Co,Financial,low,-0.395,0,0.237,0.477,0.238,0.477,0.536,0.544,0.738,dn_vol_63 z=+1.8; days_since_2x_low z=+0.9; jump_21 z=-1.2
 391,TYL,Tyler Technologies Inc,Technology,low,0.051,0,0.237,0.477,0.238,0.477,0.529,0.367,0.832,dn_vol_63 z=+0.8; dvol_trend_21_126 z=-1.0; days_since_ignition z=-0.4
@@ -439,9 +439,9 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 438,H,Hyatt Hotels Corp,Consumer Cyclical,mid,0.93,0,0.236,0.498,0.242,0.499,0.606,0.558,0.832,days_since_20pct_dd z=-1.4; days_since_ignition z=+1.5; skew_63 z=-0.7
 439,DE,Deere & Co,Industrials,mid,0.485,0,0.236,0.498,0.242,0.499,0.605,0.686,0.557,mom_12_1 z=+2.4; dist_52w_low z=+1.9; days_since_20pct_dd z=+1.8
 440,WEX,WEX Inc,Technology,mid,0.421,0,0.236,0.498,0.242,0.499,0.601,0.628,0.517,skew_63 z=+1.2; log_dvol_63 z=+1.9; mom_12_1 z=+1.1
-441,REGN,Regeneron Pharmaceuticals Inc,Healthcare,mid,0.471,0,0.236,0.498,0.242,0.499,0.6,0.65,0.678,mom_12_1 z=+1.2; log_dvol_63 z=-0.2; up_day_frac_63 z=+0.5
-442,NTRS,Northern Trust Corp,Financial,mid,0.92,0,0.236,0.498,0.242,0.499,0.6,0.877,0.782,days_since_20pct_dd z=+1.9; skew_63 z=-0.7; log_dvol_63 z=+1.7
-443,VEEV,Veeva Systems Inc,Healthcare,mid,0.559,0,0.236,0.498,0.242,0.499,0.6,0.718,0.97,up_day_frac_63 z=+2.1; dist_52w_low z=+3.2; days_since_ignition z=-0.4
+441,NTRS,Northern Trust Corp,Financial,mid,0.92,0,0.236,0.498,0.242,0.499,0.6,0.877,0.782,days_since_20pct_dd z=+1.9; skew_63 z=-0.7; log_dvol_63 z=+1.7
+442,VEEV,Veeva Systems Inc,Healthcare,mid,0.559,0,0.236,0.498,0.242,0.499,0.6,0.718,0.97,up_day_frac_63 z=+2.1; dist_52w_low z=+3.2; days_since_ignition z=-0.4
+443,REGN,Regeneron Pharmaceuticals Inc,Healthcare,mid,0.471,0,0.236,0.498,0.242,0.499,0.6,0.65,0.678,mom_12_1 z=+1.2; log_dvol_63 z=-0.2; up_day_frac_63 z=+0.5
 444,WTS,Watts Water Technologies Inc,Industrials,mid,0.892,0,0.236,0.498,0.242,0.499,0.598,0.796,0.812,days_since_ignition z=+1.1; accum_dist_50 z=+1.4; pullback_vol_21 z=-2.0
 445,DOV,Dover Corp,Industrials,mid,0.898,0,0.236,0.498,0.242,0.499,0.597,0.941,0.681,skew_63 z=-2.7; days_since_ignition z=+1.3; up_day_frac_21 z=+0.3
 446,ARMK,Aramark,Industrials,mid,0.578,0,0.236,0.498,0.242,0.499,0.596,0.653,0.336,mom_12_1 z=+1.7; skew_63 z=+1.7; up_day_frac_63 z=-2.1
@@ -457,8 +457,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 456,ISRG,Intuitive Surgical Inc,Healthcare,mid,0.932,0,0.236,0.498,0.242,0.499,0.571,0.697,0.829,skew_63 z=-2.0; mom_12_1 z=-1.4; up_day_frac_21 z=+1.0
 457,VAL,Valaris Ltd,Energy,mid,0.617,0,0.236,0.498,0.242,0.499,0.57,0.399,0.842,days_since_ignition z=-1.1; log_dvol_63 z=+1.6; up_day_frac_21 z=-1.8
 458,MAR,Marriott International Inc,Consumer Cyclical,mid,0.625,0,0.236,0.498,0.242,0.499,0.57,0.886,0.826,skew_63 z=-1.5; up_day_frac_21 z=+0.4; vol_dry_10_50 z=-1.2
-459,NTNX,Nutanix Inc,Technology,mid,0.67,0,0.236,0.498,0.242,0.499,0.567,0.6,0.977,up_day_frac_21 z=+0.9; days_since_ignition z=-0.3; dist_52w_low z=+1.0
-460,GEF,Greif Inc,Consumer Cyclical,mid,0.433,0,0.236,0.498,0.242,0.499,0.567,0.82,0.52,mom_12_1 z=+2.5; log_dvol_63 z=+3.1; days_since_ignition z=-0.9
+459,GEF,Greif Inc,Consumer Cyclical,mid,0.433,0,0.236,0.498,0.242,0.499,0.567,0.82,0.52,mom_12_1 z=+2.5; log_dvol_63 z=+3.1; days_since_ignition z=-0.9
+460,NTNX,Nutanix Inc,Technology,mid,0.67,0,0.236,0.498,0.242,0.499,0.567,0.6,0.977,up_day_frac_21 z=+0.9; days_since_ignition z=-0.3; dist_52w_low z=+1.0
 461,IEX,Idex Corp,Industrials,mid,0.653,0,0.236,0.498,0.242,0.499,0.567,0.991,0.752,mom_12_1 z=+2.1; days_since_20pct_dd z=+2.1; up_day_frac_63 z=+1.2
 462,APPF,Appfolio Inc,Technology,mid,0.473,0,0.236,0.498,0.242,0.499,0.562,0.775,0.859,days_since_ignition z=+1.4; up_day_frac_63 z=+0.9; mom_12_1 z=-0.9
 463,HALO,Halozyme Therapeutics Inc,Healthcare,mid,0.542,0,0.236,0.498,0.242,0.499,0.562,0.546,0.721,skew_63 z=+2.5; mom_12_1 z=+1.5; days_since_ignition z=-1.2
@@ -505,8 +505,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 504,FITB,Fifth Third Bancorp,Financial,mid,0.829,0,0.227,0.491,0.233,0.496,0.478,0.541,0.574,skew_63 z=-1.0; days_since_ignition z=+1.0; vol_dry_10_50 z=+0.7
 505,TECH,Bio-Techne Corp,Healthcare,mid,0.795,0,0.227,0.491,0.233,0.496,0.478,0.981,0.413,log_dvol_63 z=+2.3; dist_52w_low z=+2.0; days_since_ignition z=+1.2
 506,EW,Edwards Lifesciences Corp,Healthcare,mid,0.56,0,0.227,0.491,0.233,0.496,0.478,0.9,0.295,days_since_20pct_dd z=+2.5; days_since_ignition z=+1.2; mom_12_1 z=+1.1
-507,VLY,Valley National Bancorp,Financial,mid,0.889,0,0.227,0.491,0.233,0.496,0.476,0.379,0.376,days_since_20pct_dd z=+2.4; up_day_frac_63 z=-1.7; mom_12_1 z=+0.8
-508,USB,U.S. Bancorp,Financial,mid,0.729,0,0.227,0.491,0.233,0.496,0.476,0.726,0.379,days_since_20pct_dd z=+1.9; skew_63 z=-1.2; mom_12_1 z=+1.0
+507,USB,U.S. Bancorp,Financial,mid,0.729,0,0.227,0.491,0.233,0.496,0.476,0.726,0.379,days_since_20pct_dd z=+1.9; skew_63 z=-1.2; mom_12_1 z=+1.0
+508,VLY,Valley National Bancorp,Financial,mid,0.889,0,0.227,0.491,0.233,0.496,0.476,0.379,0.376,days_since_20pct_dd z=+2.4; up_day_frac_63 z=-1.7; mom_12_1 z=+0.8
 509,ADBE,Adobe Inc,Technology,mid,0.359,0,0.227,0.491,0.233,0.496,0.474,0.519,0.809,up_day_frac_63 z=+1.3; log_dvol_63 z=-1.8; accum_dist_50 z=+2.0
 510,HLT,Hilton Worldwide Holdings Inc,Consumer Cyclical,mid,0.586,0,0.227,0.491,0.233,0.496,0.473,0.687,0.372,days_since_ignition z=+1.1; vol_dry_10_50 z=-1.1; up_day_frac_63 z=-1.2
 511,SSB,SouthState Bank Corp,Financial,mid,0.691,0,0.227,0.491,0.233,0.496,0.471,0.242,0.185,skew_63 z=+1.0; days_since_20pct_dd z=+1.0; clv_21 z=-2.7
@@ -542,8 +542,8 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 541,MTD,Mettler-Toledo International Inc,Healthcare,mid,0.794,0,0.227,0.491,0.233,0.496,0.419,0.728,0.799,days_since_ignition z=-1.6; log_dvol_63 z=+1.9; dist_52w_low z=+1.1
 542,PNFP,Pinnacle Financial Partners Inc,Financial,mid,0.845,0,0.227,0.491,0.233,0.496,0.418,0.453,0.725,up_day_frac_21 z=-0.1; up_day_frac_63 z=+0.1; days_since_ignition z=+0.9
 543,FHI,Federated Hermes Inc,Financial,mid,0.671,0,0.227,0.491,0.233,0.496,0.412,0.155,0.154,skew_63 z=+3.1; up_day_frac_63 z=-2.1; up_day_frac_21 z=-2.4
-544,PTC,PTC Inc,Technology,mid,0.617,0,0.227,0.491,0.233,0.496,0.409,0.289,0.95,skew_63 z=+3.0; mom_12_1 z=-1.7; days_since_ignition z=-2.2
-545,GME,Gamestop Corp,Consumer Cyclical,mid,0.572,0,0.227,0.491,0.233,0.496,0.409,0.837,0.926,days_since_20pct_dd z=+6.0; up_day_frac_63 z=+1.9; skew_63 z=-1.2
+544,GME,Gamestop Corp,Consumer Cyclical,mid,0.572,0,0.227,0.491,0.233,0.496,0.409,0.837,0.926,days_since_20pct_dd z=+6.0; up_day_frac_63 z=+1.9; skew_63 z=-1.2
+545,PTC,PTC Inc,Technology,mid,0.617,0,0.227,0.491,0.233,0.496,0.409,0.289,0.95,skew_63 z=+3.0; mom_12_1 z=-1.7; days_since_ignition z=-2.2
 546,PLD,Prologis Inc,Real Estate,mid,0.452,0,0.227,0.491,0.233,0.496,0.407,0.63,0.054,days_since_20pct_dd z=+2.5; up_day_frac_63 z=-1.4; accum_dist_50 z=-1.8
 547,MMM,3M Co,Industrials,mid,0.734,0,0.227,0.491,0.233,0.496,0.407,0.572,0.326,days_since_20pct_dd z=+1.1; vol_cv_20 z=-1.1; clv_21 z=+0.2
 548,ULS,UL Solutions Inc,Industrials,mid,0.654,0,0.227,0.491,0.233,0.496,0.403,0.227,0.658,days_since_20pct_dd z=-2.0; mom_12_1 z=-2.5; skew_63 z=-2.1
@@ -717,9 +717,9 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 716,EOG,EOG Resources Inc,Energy,low,-0.576,0,0.224,0.454,0.22,0.452,0.446,0.182,0.822,base_depth_63 z=+0.3; dn_vol_63 z=+1.0; down_capture_63 z=-1.7
 717,ZBH,Zimmer Biomet Holdings Inc,Healthcare,low,0.197,0,0.224,0.454,0.22,0.452,0.445,0.35,0.634,dn_up_vol_asym_63 z=-0.6; rs_newhigh_price_not_20 z=-0.2; jump_21 z=-1.3
 718,CNP,Centerpoint Energy Inc,Utilities,low,-0.12,0,0.224,0.454,0.22,0.452,0.443,0.838,0.352,dn_up_vol_asym_63 z=+1.4; base_depth_63 z=-2.2; higher_low_cadence z=-2.2
-719,CPRT,Copart Inc,Industrials,low,0.126,0,0.224,0.454,0.22,0.452,0.443,0.551,0.641,dn_up_vol_asym_63 z=-1.0; dn_vol_63 z=+1.0; pos_in_20d_range z=-1.3
-720,CTAS,Cintas Corp,Industrials,low,0.177,0,0.224,0.454,0.22,0.452,0.443,0.412,0.443,down_capture_63 z=-1.4; dn_up_vol_asym_63 z=-0.6; pullback_duration_21 z=+1.4
-721,PRI,Primerica Inc,Financial,low,0.206,0,0.224,0.454,0.22,0.452,0.443,0.679,0.564,pullback_duration_21 z=+1.6; base_depth_63 z=-1.9; higher_low_cadence z=-1.7
+719,PRI,Primerica Inc,Financial,low,0.206,0,0.224,0.454,0.22,0.452,0.443,0.679,0.564,pullback_duration_21 z=+1.6; base_depth_63 z=-1.9; higher_low_cadence z=-1.7
+720,CPRT,Copart Inc,Industrials,low,0.126,0,0.224,0.454,0.22,0.452,0.443,0.551,0.641,dn_up_vol_asym_63 z=-1.0; dn_vol_63 z=+1.0; pos_in_20d_range z=-1.3
+721,CTAS,Cintas Corp,Industrials,low,0.177,0,0.224,0.454,0.22,0.452,0.443,0.412,0.443,down_capture_63 z=-1.4; dn_up_vol_asym_63 z=-0.6; pullback_duration_21 z=+1.4
 722,PCTY,Paylocity Holding Corp,Technology,low,-0.036,0,0.224,0.454,0.22,0.452,0.441,0.148,0.842,base_depth_63 z=+0.4; dn_up_vol_asym_63 z=-1.1; higher_low_cadence z=+0.6
 723,PODD,Insulet Corp,Healthcare,low,0.297,0,0.224,0.454,0.22,0.452,0.44,0.515,0.648,dn_vol_63 z=+2.0; dn_up_vol_asym_63 z=+1.6; days_since_ignition z=+1.2
 724,KMB,Kimberly-Clark Corp,Consumer Defensive,low,0.034,0,0.224,0.454,0.22,0.452,0.439,0.578,0.597,down_capture_63 z=+2.9; dn_vol_63 z=+0.5; higher_low_cadence z=-1.5
@@ -783,11 +783,11 @@ rank,ticker,Company,Sector,beta_bucket,beta_252,signature,p_top_q_42,p_top_half_
 782,CNX,CNX Resources Corp,Energy,low,-0.016,0,0.224,0.454,0.22,0.452,0.331,0.133,0.607,dn_vol_63 z=-0.4; higher_low_cadence z=+0.6; pullback_duration_21 z=+1.4
 783,SYK,Stryker Corp,Healthcare,low,0.159,0,0.224,0.454,0.22,0.452,0.33,0.805,0.46,dn_vol_63 z=+2.9; base_depth_63 z=-2.6; dn_up_vol_asym_63 z=+1.3
 784,OTIS,Otis Worldwide Corp,Industrials,low,0.273,0,0.224,0.454,0.22,0.452,0.329,0.435,0.315,dvol_trend_21_126 z=+0.9; dn_up_vol_asym_63 z=-0.3; jump_21 z=-1.2
-785,IRT,Independence Realty Trust Inc,Real Estate,low,0.15,0,0.224,0.454,0.22,0.452,0.328,0.617,0.56,dvol_trend_21_126 z=+2.3; dn_up_vol_asym_63 z=+1.2; days_since_ignition z=+1.2
-786,FRT,Federal Realty Investment Trust,Real Estate,low,0.17,0,0.224,0.454,0.22,0.452,0.328,0.918,0.369,base_depth_63 z=-2.6; dn_up_vol_asym_63 z=+1.6; dn_vol_63 z=-0.7
+785,FRT,Federal Realty Investment Trust,Real Estate,low,0.17,0,0.224,0.454,0.22,0.452,0.328,0.918,0.369,base_depth_63 z=-2.6; dn_up_vol_asym_63 z=+1.6; dn_vol_63 z=-0.7
+786,IRT,Independence Realty Trust Inc,Real Estate,low,0.15,0,0.224,0.454,0.22,0.452,0.328,0.617,0.56,dvol_trend_21_126 z=+2.3; dn_up_vol_asym_63 z=+1.2; days_since_ignition z=+1.2
 787,THG,Hanover Insurance Group Inc,Financial,low,-0.146,0,0.224,0.454,0.22,0.452,0.327,0.357,0.433,higher_low_cadence z=-1.9; pullback_duration_21 z=+0.7; days_since_ignition z=-0.1
-788,CVX,Chevron Corp,Energy,low,-0.49,0,0.224,0.454,0.22,0.452,0.326,0.025,0.604,dn_up_vol_asym_63 z=-1.4; base_depth_63 z=+0.4; higher_low_cadence z=+1.8
-789,PM,Philip Morris International Inc,Consumer Defensive,low,-0.16,0,0.224,0.454,0.22,0.452,0.326,0.471,0.463,pos_in_20d_range z=+0.6; days_since_ignition z=+1.0; dn_vol_63 z=+0.5
+788,PM,Philip Morris International Inc,Consumer Defensive,low,-0.16,0,0.224,0.454,0.22,0.452,0.326,0.471,0.463,pos_in_20d_range z=+0.6; days_since_ignition z=+1.0; dn_vol_63 z=+0.5
+789,CVX,Chevron Corp,Energy,low,-0.49,0,0.224,0.454,0.22,0.452,0.326,0.025,0.604,dn_up_vol_asym_63 z=-1.4; base_depth_63 z=+0.4; higher_low_cadence z=+1.8
 790,NSC,Norfolk Southern Corp,Industrials,low,0.251,0,0.224,0.454,0.22,0.452,0.325,0.342,0.299,dn_vol_63 z=-0.6; down_capture_63 z=-1.3; dvol_trend_21_126 z=-0.7
 791,VLTO,Veralto Corp,Industrials,low,0.278,0,0.224,0.454,0.22,0.452,0.322,0.266,0.309,base_depth_63 z=+0.1; pos_in_20d_range z=+0.9; higher_low_cadence z=+0.4
 792,AFL,Aflac Inc,Financial,low,-0.156,0,0.224,0.454,0.22,0.452,0.321,0.808,0.111,base_depth_63 z=-2.4; dvol_trend_21_126 z=-1.2; pullback_duration_21 z=+1.5
