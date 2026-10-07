@@ -1,96 +1,96 @@
-MOVERS, 2026-10-06 close.  model 39a5401a35848049  vs 2026-10-05 and 2026-09-29
+MOVERS, 2026-10-07 close.  model 39a5401a35848049  vs 2026-10-06 and 2026-09-30
 
-list level (now | 2026-10-05 | 2026-09-29)
-  Tier 1                     38 | 43 | 48
-  Tier 2                     24 | 17 | 14
-  Tier 3                     43 | 42 | 44
-  names >= 40%               62 | 60 | 62
-  mean P, top 50             0.482 | 0.487 | 0.480
-  names firing               224 | 226 | 224
-  names with 50+ signatures  25 | 21 | 17
-  SPY                        779.1 | 774.8 | 764.2
-  VIX                        15.0 | 15.5 | 16.0
-  VXN                        21.1 | 21.7 | 22.1
-  MOVE                       105.2 | 113.6 | 106.6
-  IWM 20d rv                 11.8 | 11.7 | 12.2
+list level (now | 2026-10-06 | 2026-09-30)
+  Tier 1                     39 | 38 | 48
+  Tier 2                     20 | 24 | 12
+  Tier 3                     44 | 43 | 47
+  names >= 40%               59 | 62 | 60
+  mean P, top 50             0.479 | 0.482 | 0.485
+  names firing               223 | 224 | 222
+  names with 50+ signatures  21 | 25 | 19
+  SPY                        777.2 | 779.1 | 762.6
+  VIX                        15.1 | 15.0 | 16.3
+  VXN                        21.0 | 21.1 | 22.5
+  MOVE                       102.6 | 105.2 | 110.4
+  IWM 20d rv                 11.7 | 11.8 | 11.8
 
-entered Tiers 1-2 (4):
-  STRL   rank  45  tier 2  P42 44.0%  (was tier 3, +5.2 pts, +11 sigs)
-  IESC   rank  53  tier 2  P42 41.6%  (was tier 3, +1.6 pts, +0 sigs)
-  RRX    rank  56  tier 2  P42 41.1%  (was tier 3, +1.9 pts, +0 sigs)
-  PANW   rank  61  tier 2  P42 40.7%  (was tier 3, +4.4 pts, +8 sigs)
+entered Tiers 1-2 (1):
+  RGEN   rank  58  tier 2  P42 40.6%  (was tier 3, +1.3 pts, +4 sigs)
 
-left Tiers 1-2 (2):
-  ANET   now rank  87  tier 3  P42 37.0%  (was rank 22, tier 1, 51.2%)
-  MP     now rank  65  tier 3  P42 40.0%  (was rank 28, tier 1, 47.4%)
+left Tiers 1-2 (4):
+  PWR    now rank  95  tier 3  P42 36.2%  (was rank 50, tier 2, 42.8%)
+  IESC   now rank  74  tier 3  P42 38.8%  (was rank 53, tier 2, 41.6%)
+  RRX    now rank  72  tier 3  P42 39.3%  (was rank 56, tier 2, 41.1%)
+  BRKR   now rank  78  tier 3  P42 38.8%  (was rank 58, tier 2, 40.8%)
 
 biggest probability gains, 1 session:
-  SNPS   +10.6%  rank  72 (+189)  tier 3  P42 39.8%  sigs 7 (+6)
-  DBX    +10.1%  rank 126 (+340)  tier 4  P42 33.9%  sigs 18 (+18)
-  CHRD   +9.4%  rank 133 (+335)  tier 4  P42 33.3%  sigs 12 (+12)
-  RGEN   +8.7%  rank  75 (+111)  tier 3  P42 39.3%  sigs 87 (+85)
-  NOV    +8.0%  rank 149 (+221)  tier 4  P42 32.5%  sigs 4 (+4)
-  FDX    +7.1%  rank 162 (+220)  tier 4  P42 31.4%  sigs 2 (+2)
-  HRB    +7.0%  rank  85 (+104)  tier 3  P42 37.6%  sigs 14 (+12)
-  PCG    +6.9%  rank 175 (+221)  tier 4  P42 30.7%  sigs 5 (+5)
-  OPCH   +6.9%  rank 268 (+483)  tier 5  P42 29.2%  sigs 1 (+1)
-  CBOE   +6.8%  rank 187 (+223)  tier 4  P42 30.6%  sigs 5 (+5)
-  BBY    +6.1%  rank 180 (+193)  tier 4  P42 30.6%  sigs 4 (+4)
-  NOVT   +5.9%  rank  71 (+51)  tier 3  P42 40.0%  sigs 7 (+7)
-  EL     +5.4%  rank  99 (+94)  tier 3  P42 35.9%  sigs 20 (+14)
-  JBL    +5.3%  rank  38 (+21)  tier 1  P42 46.0%  sigs 37 (+1)
-  STRL   +5.2%  rank  45 (+31)  tier 2  P42 44.0%  sigs 23 (+11)
+  INTU   +10.2%  rank 123 (+303)  tier 4  P42 34.0%  sigs 20 (+20)
+  APPF   +9.6%  rank 133 (+376)  tier 4  P42 33.3%  sigs 12 (+12)
+  AGCO   +9.6%  rank 135 (+342)  tier 4  P42 33.3%  sigs 10 (+10)
+  TSCO   +9.3%  rank 208 (+670)  tier 4  P42 30.4%  sigs 11 (+11)
+  EIX    +7.9%  rank 160 (+254)  tier 4  P42 31.7%  sigs 4 (+4)
+  COO    +7.7%  rank 269 (+562)  tier 5  P42 29.1%  sigs 5 (+5)
+  CASY   +6.8%  rank 182 (+205)  tier 4  P42 30.6%  sigs 5 (+5)
+  FANG   +6.8%  rank 195 (+262)  tier 4  P42 30.6%  sigs 5 (+5)
+  DAR    +6.7%  rank 198 (+242)  tier 4  P42 30.5%  sigs 3 (+3)
+  DOCN   +5.3%  rank  34 (+26)  tier 1  P42 46.0%  sigs 54 (+19)
+  MCHP   +5.1%  rank  65 (+44)  tier 3  P42 40.0%  sigs 11 (+5)
+  DVA    +4.8%  rank  67 (+38)  tier 3  P42 40.0%  sigs 24 (-6)
+  DDOG   +4.6%  rank  37 (+17)  tier 1  P42 46.0%  sigs 21 (-16)
+  AVAV   +3.5%  rank 125 (+97)  tier 4  P42 33.7%  sigs 9 (+8)
+  CNH    +2.9%  rank 140 (+88)  tier 4  P42 32.8%  sigs 14 (+14)
 
 biggest probability drops, 1 session:
-  ANET   -14.2%  rank  87 (-65)  tier 3  P42 37.0%  sigs 3 (-10)
-  OLLI   -10.8%  rank 596 (-472)  tier 6  P42 23.1%  sigs 0 (-16)
-  FDS    -10.5%  rank 411 (-293)  tier 6  P42 23.8%  sigs 0 (-9)
-  TER    -9.8%  rank  55 (-39)  tier 2  P42 41.4%  sigs 17 (-25)
-  PWR    -8.5%  rank  50 (-25)  tier 2  P42 42.8%  sigs 11 (+2)
-  FAF    -7.7%  rank 629 (-424)  tier 6  P42 22.8%  sigs 0 (-3)
-  MP     -7.4%  rank  65 (-37)  tier 3  P42 40.0%  sigs 4 (-1)
-  FANG   -6.7%  rank 457 (-259)  tier 6  P42 23.8%  sigs 0 (-4)
-  LDOS   -6.3%  rank 685 (-415)  tier 6  P42 22.8%  sigs 0 (-6)
-  CHWY   -6.3%  rank 659 (-390)  tier 6  P42 22.8%  sigs 0 (-5)
-  PINS   -5.6%  rank 499 (-240)  tier 6  P42 23.6%  sigs 0 (-2)
-  DOCN   -5.3%  rank  60 (-21)  tier 2  P42 40.7%  sigs 35 (-14)
-  VRT    -5.2%  rank  36 (-15)  tier 1  P42 46.0%  sigs 46 (-4)
-  MCHP   -5.1%  rank 109 (-46)  tier 4  P42 34.9%  sigs 6 (-5)
-  MPWR   -4.9%  rank 107 (-37)  tier 4  P42 34.9%  sigs 6 (-7)
+  LYB    -8.7%  rank 429 (-282)  tier 6  P42 23.8%  sigs 0 (-5)
+  ZBRA   -7.3%  rank 155 (-81)  tier 4  P42 32.3%  sigs 7 (-2)
+  ACM    -7.3%  rank 548 (-345)  tier 6  P42 23.3%  sigs 0 (-5)
+  FDX    -7.1%  rank 378 (-216)  tier 6  P42 24.3%  sigs 0 (-2)
+  HXL    -6.9%  rank 483 (-299)  tier 6  P42 23.7%  sigs 0 (-6)
+  CBOE   -6.8%  rank 406 (-219)  tier 6  P42 23.8%  sigs 0 (-5)
+  JKHY   -6.8%  rank 418 (-227)  tier 6  P42 23.8%  sigs 0 (-5)
+  EL     -6.8%  rank 265 (-166)  tier 5  P42 29.2%  sigs 1 (-19)
+  DOW    -6.7%  rank 445 (-238)  tier 6  P42 23.8%  sigs 0 (-3)
+  NXT    -6.6%  rank  56 (-33)  tier 2  P42 40.8%  sigs 7 (-2)
+  PWR    -6.6%  rank  95 (-45)  tier 3  P42 36.2%  sigs 10 (-1)
+  VST    -6.1%  rank 336 (-213)  tier 5  P42 28.0%  sigs 1 (-11)
+  MOG-A  -5.9%  rank 118 (-48)  tier 4  P42 34.1%  sigs 2 (-3)
+  P      -5.8%  rank  39 (-23)  tier 1  P42 45.5%  sigs 74 (-8)
+  PEGA   -4.6%  rank 271 (-140)  tier 5  P42 29.0%  sigs 1 (-5)
 
 biggest probability gains, 5 sessions:
-  HRB    +13.8%  rank  85 (+321)  tier 3  P42 37.6%  sigs 14 (+14)
-  GME    +13.1%  rank  93 (+505)  tier 3  P42 36.3%  sigs 43 (+43)
-  SNPS   +10.9%  rank  72 (+215)  tier 3  P42 39.8%  sigs 7 (+7)
-  ACN    +10.5%  rank 119 (+321)  tier 4  P42 34.3%  sigs 23 (+23)
-  SKYD   +9.8%  rank 165 (+672)  tier 4  P42 31.2%  sigs 11 (+11)
-  RGEN   +9.4%  rank  75 (+147)  tier 3  P42 39.3%  sigs 87 (+87)
-  KTOS   +8.0%  rank  51 (+61)  tier 2  P42 42.8%  sigs 8 (+2)
-  PSN    +8.0%  rank  52 (+61)  tier 2  P42 42.8%  sigs 10 (+2)
-  NOV    +8.0%  rank 149 (+220)  tier 4  P42 32.5%  sigs 4 (+4)
-  LITE   +7.5%  rank   5 (+42)  tier 1  P42 52.9%  sigs 44 (+18)
-  JBL    +7.2%  rank  38 (+42)  tier 1  P42 46.0%  sigs 37 (+23)
-  PCG    +6.9%  rank 175 (+220)  tier 4  P42 30.7%  sigs 5 (+5)
-  OPCH   +6.9%  rank 268 (+461)  tier 5  P42 29.2%  sigs 1 (+1)
-  JKHY   +6.8%  rank 191 (+236)  tier 4  P42 30.6%  sigs 5 (+5)
-  CTSH   +6.8%  rank 202 (+245)  tier 4  P42 30.6%  sigs 8 (+8)
+  HRB    +14.0%  rank  82 (+325)  tier 3  P42 37.8%  sigs 24 (+24)
+  SNPS   +10.9%  rank  70 (+208)  tier 3  P42 39.8%  sigs 6 (+6)
+  RGEN   +10.4%  rank  58 (+153)  tier 2  P42 40.6%  sigs 91 (+91)
+  INTU   +10.2%  rank 123 (+331)  tier 4  P42 34.0%  sigs 20 (+20)
+  AGCO   +10.1%  rank 135 (+460)  tier 4  P42 33.3%  sigs 10 (+10)
+  DBX    +10.1%  rank 124 (+344)  tier 4  P42 33.9%  sigs 18 (+18)
+  SKYD   +9.8%  rank 169 (+660)  tier 4  P42 31.2%  sigs 11 (+11)
+  KTOS   +8.0%  rank  48 (+62)  tier 2  P42 42.8%  sigs 10 (+2)
+  PSN    +8.0%  rank  49 (+63)  tier 2  P42 42.8%  sigs 8 (+0)
+  LSTR   +8.0%  rank 150 (+222)  tier 4  P42 32.5%  sigs 5 (+5)
+  EIX    +7.9%  rank 160 (+236)  tier 4  P42 31.7%  sigs 4 (+4)
+  TSCO   +7.8%  rank 208 (+493)  tier 4  P42 30.4%  sigs 11 (+11)
+  PTC    +7.7%  rank 201 (+481)  tier 4  P42 30.5%  sigs 2 (+2)
+  OPCH   +6.9%  rank 264 (+465)  tier 5  P42 29.2%  sigs 1 (+1)
+  FANG   +6.8%  rank 195 (+243)  tier 4  P42 30.6%  sigs 5 (+5)
 
 biggest probability drops, 5 sessions:
-  OLLI   -13.8%  rank 596 (-502)  tier 6  P42 23.1%  sigs 0 (-23)
-  ESAB   -12.2%  rank 196 (-141)  tier 4  P42 30.6%  sigs 1 (-10)
-  WCC    -10.3%  rank  88 (-69)  tier 3  P42 37.0%  sigs 2 (-35)
-  ANET   -10.3%  rank  87 (-66)  tier 3  P42 37.0%  sigs 3 (-34)
-  DUOL   -9.0%  rank 115 (-63)  tier 4  P42 34.4%  sigs 24 (-25)
-  KD     -8.9%  rank 679 (-522)  tier 6  P42 22.8%  sigs 0 (-6)
-  WDC    -8.3%  rank  46 (-38)  tier 2  P42 44.0%  sigs 39 (-12)
-  TER    -8.3%  rank  55 (-40)  tier 2  P42 41.4%  sigs 17 (+7)
-  AN     -8.1%  rank 764 (-557)  tier 6  P42 22.3%  sigs 0 (-5)
-  CHRW   -7.8%  rank 559 (-392)  tier 6  P42 23.3%  sigs 0 (-2)
-  COO    -7.7%  rank 831 (-563)  tier 6  P42 21.4%  sigs 0 (-5)
-  CMG    -7.7%  rank 639 (-439)  tier 6  P42 22.8%  sigs 0 (-3)
-  EIX    -7.5%  rank 414 (-254)  tier 6  P42 23.8%  sigs 0 (-2)
-  ENS    -7.4%  rank 160 (-82)  tier 4  P42 31.4%  sigs 9 (-3)
-  AAL    -7.4%  rank 140 (-73)  tier 4  P42 32.6%  sigs 1 (-3)
+  OLLI   -13.7%  rank 580 (-487)  tier 6  P42 23.2%  sigs 0 (-23)
+  ANET   -13.2%  rank  81 (-62)  tier 3  P42 38.0%  sigs 3 (-45)
+  LYB    -12.5%  rank 429 (-332)  tier 6  P42 23.8%  sigs 0 (-40)
+  ESAB   -12.2%  rank 189 (-134)  tier 4  P42 30.6%  sigs 1 (-11)
+  DOW    -10.5%  rank 445 (-316)  tier 6  P42 23.8%  sigs 0 (-12)
+  OVV    -9.4%  rank 447 (-310)  tier 6  P42 23.8%  sigs 0 (-12)
+  DUOL   -9.3%  rank 114 (-63)  tier 4  P42 34.4%  sigs 20 (-23)
+  AN     -9.0%  rank 763 (-597)  tier 6  P42 22.3%  sigs 0 (-10)
+  KD     -8.9%  rank 680 (-519)  tier 6  P42 22.8%  sigs 0 (-6)
+  ALGN   -8.4%  rank 330 (-234)  tier 5  P42 28.0%  sigs 0 (-4)
+  RRX    -8.1%  rank  72 (-49)  tier 3  P42 39.3%  sigs 2 (-12)
+  CHRW   -7.8%  rank 567 (-400)  tier 6  P42 23.3%  sigs 0 (-2)
+  CMG    -7.7%  rank 638 (-436)  tier 6  P42 22.8%  sigs 0 (-3)
+  WDC    -7.7%  rank  45 (-36)  tier 2  P42 44.0%  sigs 29 (-33)
+  AAL    -7.4%  rank 147 (-84)  tier 4  P42 32.6%  sigs 1 (-4)
 
 realised scorecard (snapshots with 42 / 63 sessions elapsed):
   none matured yet; the first snapshot (2026-09-22) reads out after 42 sessions.
+intraday projection at 15:28 ET vs the close: tier matched for 97% of names; mean |ΔP| 0.18 pts (Tier 1-2 names 0.35); Tier 1-2 projected 59, actual 59, overlap 58.
