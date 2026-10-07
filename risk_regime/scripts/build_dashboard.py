@@ -10,6 +10,8 @@ out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(__file_
 DATA = json.load(open(src))
 tick_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'tick_data.json')
 DATA['tick'] = json.load(open(tick_src)) if os.path.exists(tick_src) else None
+rv_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'rv_data.json')
+DATA['rv'] = json.load(open(rv_src)) if os.path.exists(rv_src) else None
 
 RULE_META = {
  'SETUP_rates':   ('SETUP',  'Yields ripping, VIX asleep',          'TNX 5d chg z > 1 and VIX 5d ROC z < -0.3', 'P(5% DD/21d) 0.25 vs 0.17 base. 56% of tops, median 18d lead to the -5% break.'),
@@ -179,6 +181,24 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
   <h2>Stress-regime ROC beta: % change in ticker/SPY ratio per 100% move in the index (per 1 pct-pt for TNX/TYX), VIX pct &gt; 75</h2>
   <div class="tablewrap"><table id="beta" class="heat"></table></div>
 </section>
+
+<section id="rvsec">
+  <h2>Realized-vol layer: implied vs realized, realized term structure, crossed with index ROC</h2>
+  <div class="tiles" id="rvtiles"></div>
+  <div class="board" id="rvboard" style="margin-top:10px"></div>
+</section>
+
+<section>
+  <h2>Native implied / realized pairs (index ÷ ticker 21d realized vol)</h2>
+  <div class="tablewrap"><table id="ivrv"></table></div>
+  <p class="note">Low pct = implied cheap relative to that ticker's realized. HYG and XLE bottom quintiles carry P(5% SPY DD) of 0.31 and 0.27 vs 0.17 base. ROC z &lt; -1 while the index ROC z &gt; 1 means realized is outrunning implied in a spike (continuation); ROC z &gt; 1 in a spike means fear premium (dip).</p>
+</section>
+
+<section>
+  <h2>Realized-vol tape, 38 tickers + SPY</h2>
+  <div class="tablewrap"><table id="rvtape"></table></div>
+  <p class="note">RV10/RV21 = realized term structure (short over 1-month), z vs own trailing 252d. rel RV = ticker 21d realized ÷ SPY 21d realized, with the 5d ROC z of that ratio. Right-hand four columns: the ticker's median 10d return relative to SPY historically when its own realized was expanding (z &gt; 1) or compressed (z &lt; -0.5) while VIX 5d ROC z was &gt; 1 (up) or &lt; -1 (down).</p>
+</section>
 </div>
 <div class="tip" id="tip"></div>
 <script id="data" type="application/json">__DATA__</script>
@@ -293,6 +313,24 @@ if(TK){
     document.getElementById(id).innerHTML=`<tr><th>ticker</th>${M.cols.map(c=>`<th>${c}</th>`).join('')}</tr>`+M.rows.map((r,i)=>`<tr><td>${r}</td>${M.vals[i].map(cell).join('')}</tr>`).join('');
   }
   heat('heat',TK.mat,1.0); heat('beta',TK.beta,12);
+}
+// ---- realized vol layer
+const RVD=D.rv;
+if(RVD){
+  const spy=RVD.rv_tape.find(r=>r.t==='SPY'); const ivspy=RVD.ivrv.find(r=>r.pair==='SPY:VIX/RV'); const ivhyg=RVD.ivrv.find(r=>r.pair==='HYG:VIX/RV'); const ivtlt=RVD.ivrv.find(r=>r.pair==='TLT:MOVE/RV');
+  document.getElementById('rvtiles').innerHTML=[
+    ['SPY RV10 / RV21',`${spy.rv10} / ${spy.rv21}`,`term structure ${spy.rvr} · z ${f2(spy.rvr_z)}`],
+    ['VIX / SPY RV21',ivspy.level.toFixed(2),`pct ${Math.round(ivspy.pct252*100)} · ROC5 z ${f2(ivspy.roc5z)}`],
+    ['VIX / HYG RV21',ivhyg.level.toFixed(2),`pct ${Math.round(ivhyg.pct252*100)} · bottom-Q P(off) 0.31`],
+    ['MOVE / TLT RV21',ivtlt.level.toFixed(2),`pct ${Math.round(ivtlt.pct252*100)} · ROC5 z ${f2(ivtlt.roc5z)}`],
+    ['Realized-vol breadth',`${Math.round(RVD.breadth.now*100)}%`,`share of 38 with RV10/RV21 > 1.2 · z ${f2(RVD.breadth.z)} · peaks at +1..+3 after lows`],
+  ].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v num">${v}</div><div class="d">${d}</div></div>`).join('');
+  document.getElementById('rvboard').innerHTML=Object.entries(RVD.rv_rules).map(([k,r])=>{const st=r.live?'live':r.recent?'recent':'quiet';const bear=r.P_off!=null&&r.P_off>0.174;
+    return `<div class="rule ${bear?'ONSET':'CAP'}"><div class="t"><span class="tag">RV</span><span class="state ${st}">${st==='live'?'LIVE':st==='recent'?'last 10d':'quiet'}</span></div><div class="name">${k.replace(/_/g,' ')}</div><div class="def">${r.def}</div><div class="stat">${r.note} P(5% DD/21d) ${r.P_off==null?'n/a':r.P_off.toFixed(2)} vs 0.17 · fwd21 ${r.fwd21==null?'':f2(r.fwd21)+'%'} · n=${r.n}</div><div class="last">last first-fire ${r.last}</div></div>`;}).join('');
+  document.getElementById('ivrv').innerHTML=`<tr><th>pair</th><th>level</th><th>pct 252d</th><th>level z</th><th>ROC5 z</th></tr>`+RVD.ivrv.map(r=>`<tr><td>${r.pair}</td><td class="num">${r.level==null?'':r.level.toFixed(2)}</td><td class="num">${r.pct252==null?'':Math.round(r.pct252*100)}</td><td class="num">${zc(r.lvl_z)}</td><td class="num">${zc(r.roc5z)}</td></tr>`).join('');
+  const rows=RVD.rv_tape.slice().sort((a,b)=>(b.rvr_z??-9)-(a.rvr_z??-9));
+  document.getElementById('rvtape').innerHTML=`<tr><th>ticker</th><th>RV10</th><th>RV21</th><th>RV10/RV21</th><th>z</th><th>RV10 ROC5 z</th><th>rel RV</th><th>rel RV ROC5 z</th><th>P(off) RVR top/bot Q</th><th>exp · VIX up</th><th>exp · VIX dn</th><th>cmp · VIX up</th><th>cmp · VIX dn</th></tr>`+
+    rows.map(r=>`<tr><td>${r.t}</td><td class="num">${r.rv10??''}</td><td class="num">${r.rv21??''}</td><td class="num">${r.rvr??''}</td><td class="num">${zc(r.rvr_z)}</td><td class="num">${zc(r.rv10_roc5z)}</td><td class="num">${r.relrv==null?'':r.relrv.toFixed(2)}</td><td class="num">${zc(r.relrv_roc5z)}</td><td class="num">${r.P_top==null?'':r.P_top.toFixed(2)+' / '+r.P_bot.toFixed(2)}</td><td class="num">${f2(r.exp_vixup)}</td><td class="num">${f2(r.exp_vixdn)}</td><td class="num">${f2(r.cmp_vixup)}</td><td class="num">${f2(r.cmp_vixdn)}</td></tr>`).join('');
 }
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawSpy();drawZ();if(TK){heat('heat',TK.mat,1.0);heat('beta',TK.beta,12);}});
 </script>

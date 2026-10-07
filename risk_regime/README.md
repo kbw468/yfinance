@@ -203,7 +203,7 @@ What did not work, so you do not have to re-test it: a binarized "pre-top setup 
 
 SPY 777 at -0.24% from its 63-day high. VIX 15.08 (12th pctile), VIX 5d ROC -8%, 21d ROC -4%. VIX9D/VIX 0.78 (7th pctile), VVIX 83 (2nd pctile). MOVE 102.6 at the **95th percentile** with 21d ROC +30% (z +1.56). TNX 5.28% at the 99th percentile, 21d chg +47bp (z **+2.43**); TYX 5.66%, 21d z +2.48. TNX 5d chg z is -0.46 and MOVE 5d z is -0.81, so the SETUP rule is not live today; it requires a fresh 5-day yield impulse. The rate-led tag printed on Oct 2 and Oct 5. Configuration: yields and bond vol at 1-year extremes on a 21-day basis, equity vol compressed, VVIX at its lows. That is the section 3a shape on a slower clock. The trigger to watch is TNX/TYX 5d chg z crossing +1 while VIX 5d ROC z stays below -0.3 (SETUP), and then any VIX 5d ROC z > 1 print where VVIX/VIX 5d ROC z is below -1 (ONSET). If that VIX print comes with VVIX/VIX ROC z above -0.3, it is a dip.
 
-The dashboard (`dashboard.html`) renders this state, every rule's live/not-live status, the last two years of fires on the SPY chart, and the per-rule ticker playbook. Regenerate with `python scripts/fetch.py && python scripts/rebuild.py && python scripts/features_roc.py && python scripts/events.py && python scripts/scorecard.py && python scripts/playbook.py && python scripts/snapshot.py && python scripts/tick_roc.py && python scripts/tick_snapshot.py && python scripts/build_dashboard.py`.
+The dashboard (`dashboard.html`) renders this state, every rule's live/not-live status, the last two years of fires on the SPY chart, and the per-rule ticker playbook. Regenerate with `python scripts/fetch.py && python scripts/rebuild.py && python scripts/features_roc.py && python scripts/events.py && python scripts/scorecard.py && python scripts/playbook.py && python scripts/snapshot.py && python scripts/tick_roc.py && python scripts/tick_snapshot.py && python scripts/rv.py && python scripts/rv_snapshot.py && python scripts/build_dashboard.py`.
 
 ---
 
@@ -279,3 +279,74 @@ These are small-n cells (the full 4×4 grids with counts are in `results/tick_ro
 Consistent across every index spike: **XSD, QQQ, XLK, XAR, XSW outperform SPY in the 10 days after any vol-complex impulse** (+0.2 to +0.6% rel); **TLT, IEF, XES, HYG, GLD, BNO underperform** (-0.5 to -1.0% rel). Dimension-specific: XME +0.60 after a MOVE spike but -0.55 after a GVZ spike; XOP -0.77 after GVZ up but +0.27 after GVZ down; XHB -0.53 after TYX up, +0.33 after GVZ down; XLU +0.37 after MOVE down, -0.42 after VIX9D/VIX up. Full 38×26 matrix and the stress-regime ROC beta matrix are on the dashboard.
 
 Stress-regime ROC betas (per 100% move in VIX): TLT +21, IEF +19, GLD +16.5, HYG +11, XLP +8, XLU +7 on the hedge side; XES -6.3, XME -6.1, XSD -5.3, KCE -5.1, XOP -4.8, KBE -3.3 on the beta side. Per 1 pct-pt in TYX in stress: XES +10.2, XOP +10.1, XME +8.6, KBE +7.6, KCE +6.4 vs TLT -28, IEF -19, GLD -13, XLU -6.3, XLRE -5.5.
+
+---
+
+## 9. Realized-vol layer: ticker realized ratios × index ROC
+
+Three realized-vol objects per ticker, each z-scored against its own trailing 252 days: **RV10/RV21** (realized term structure), **rel RV** (ticker 21d realized ÷ SPY 21d realized, and its 5d ROC), and the **native implied/realized pairs** (VIX÷SPY RV, VXN÷QQQ RV, MOVE÷TLT and IEF RV, GVZ÷GLD RV, OVX÷XOP, BNO and XLE RV, VIX÷IWM and HYG RV). Plus realized-vol breadth (share of the 38 with RV10/RV21 above 1.2). Full output in `results/rv_out.txt`.
+
+### 9a. What realized vol does at the turns
+
+Into tops, SPY's own realized term structure is **compressing** (RV10/RV21 z -0.13 to -0.16 from day -5 to -1) while realized is already **expanding in the cyclical and energy names**: XLY +0.51, XLB +0.49, XES +0.46, XLE +0.41, XOP +0.40 at day -3. Realized-vol breadth is at its floor at tops (3% of tickers expanding). After the peak, realized expands everywhere, led by QQQ/XLK/XAR (+0.6 to +0.7 by day +4). The IV/RV ROC for SPY, QQQ, IWM, HYG dips negative at days -3 to -1 (realized catching up to implied into the high) and MOVE÷TLT RV is -0.4 to -0.5 (bond realized expanding faster than MOVE into equity tops).
+
+At troughs, every IV/RV ratio ROC flips from positive on the low day to -1.0 to -1.8 by day +4/+5 (implied collapses while realized stays elevated: the premium drains). IWM VIX/RV level z peaks at +1.28 on the trough day. Realized-vol breadth peaks at 16% on days +1 to +3 after the low, three to five times its baseline, and is back to 3% by day +9. **Breadth of realized expansion confirms a low; it never leads one.**
+
+### 9b. IV/RV pairs as predictors (P of 5% SPY drawdown in 21d by quintile of level; base 0.174)
+
+| Pair | Q1 (implied cheap vs realized) | Q5 (implied rich) | Fwd21 Q1 / Q5 |
+|---|---|---|---|
+| **VIX ÷ HYG RV** | **0.306** | 0.130 | **-0.05% / +1.39%** |
+| **OVX ÷ XLE RV** | **0.272** | 0.134 | +0.50% / +1.36% |
+| OVX ÷ XOP RV | 0.245 | 0.158 | +0.33% / +1.30% |
+| VIX ÷ SPY RV | 0.220 | 0.147 | +0.61% / +1.08% |
+| VXN ÷ QQQ RV | 0.215 | 0.117 | +0.30% / +1.23% |
+| OVX ÷ BNO RV | 0.105 | **0.222** | +1.42% / +0.90% (opposite sign) |
+| MOVE ÷ TLT RV, ROC5 z | 0.174 | **0.202** | MOVE rising faster than bond realized = risk-off |
+
+Equity implied cheap relative to credit realized is the strongest single realized-vol tell in the set.
+
+### 9c. Realized × implied ROC pair rules (first-fires, ex-2020)
+
+| Rule | First-fires | P(5% DD/21d) | Fwd21 | Last fire | Read |
+|---|---|---|---|---|---|
+| SPY VIX/RV ROC5 z < -1 and VIX 5d ROC z > 1 | 48 | **0.29** | +0.81% | 2026-06-11 | realized outrunning implied in the spike: continuation |
+| SPY VIX/RV ROC5 z > 1 and VIX 5d ROC z > 1 | 211 | 0.20 | **+1.60%** | 2026-07-29 | implied outrunning realized: fear premium, dip |
+| QQQ VXN/RV ROC5 z < -1 and VXN 5d ROC z > 1 | 41 | 0.27 | **-0.49%** | 2026-06-11 | Nasdaq realized leading implied |
+| **VIX ÷ HYG RV pct252 < 20** | 110 | 0.26 | +1.00% | **2026-06-18, LIVE** | equity implied cheap vs credit realized |
+| OVX ÷ XLE RV pct252 < 20 | 100 | 0.23 | +0.59% | 2026-08-28 | oil implied cheap vs energy-equity realized |
+| TLT RV10/RV21 z < -1 and MOVE 5d ROC z > 1 | 45 | 0.24 | -0.19% | 2026-07-22 | bond implied spiking off compressed bond realized |
+| HYG RV10/RV21 z > 1 and VIX 5d ROC z > 1 | 61 | 0.25 | +0.79% | 2026-03-24 | credit realized expanding into the spike |
+| GLD GVZ/RV ROC5 z > 1 and GVZ 5d ROC z < -1 | 13 | 0.46 | -2.04% | 2022-04-07 | small n |
+| XOP OVX/RV ROC5 z > 1 and OVX 5d ROC z < -1 | 11 | 0.45 | -0.27% | 2025-05-13 | small n |
+
+Cell-level (every day, not first-fire) versions of the same configurations are in `results/rv_out.txt` with counts; KRE RV10/RV21 z > 1 with TNX 5d chg z > 1 is P 0.24 / fwd21 -0.25% there and HYG RV10/RV21 z < -1 with VIX 5d ROC z < -1 (both compressed) is P 0.28.
+
+The realized/implied ROC spread is the realized-vol version of the VVIX finding in section 2: a spike where implied outruns realized is a dip; a spike where realized outruns implied continues.
+
+### 9d. Per-ticker: own realized expansion × VIX ROC (median 10d return relative to SPY)
+
+| Ticker | RV expanding, VIX up | RV expanding, VIX down | RV compressed, VIX up | RV compressed, VIX down |
+|---|---|---|---|---|
+| XES | **-1.74** | -0.86 | +0.33 | -0.67 |
+| XME | **-1.44** | -0.29 | +0.37 | -0.12 |
+| IEF | -1.31 | -0.86 | -0.84 | -0.82 |
+| XHE | -1.16 | +0.52 | -0.13 | +0.46 |
+| XLRE | -0.94 | +0.46 | -0.93 | -0.79 |
+| XLE | -0.89 | +0.25 | **+0.49** | -0.13 |
+| XTN | -0.88 | **+1.50** | -0.07 | +0.20 |
+| KRE | -0.53 | **+0.87** | -0.48 | -0.44 |
+| XRT | -0.20 | **+0.94** | -0.58 | +0.03 |
+| XLU | +0.11 | -0.60 | **+1.03** | +0.48 |
+| XAR | **+0.98** | +0.58 | -0.27 | +0.02 |
+| XBI | +0.78 | -0.38 | +0.20 | **+1.29** |
+| XSW | +0.29 | +0.52 | +0.40 | +0.33 |
+
+When a ticker's own realized is expanding and VIX is rising, energy services, metals and duration are the ones to be out of. When a ticker's realized expanded into a low and VIX then collapses, transports, retail and regional banks are the rip. Utilities are the hold when VIX rises and their realized has not moved. Full 38-row table on the dashboard.
+
+Per-ticker RV10/RV21 top-vs-bottom quintile has no predictive power for SPY drawdowns on its own (XLC 0.21 vs 0.13 and XTN 0.15 vs 0.08 are the widest gaps; most are flat). Realized vol in a single ticker tells you about that ticker's forward relative return, not about the index.
+
+
+### 9e. Current realized-vol read (2026-10-07)
+
+VIX ÷ HYG 21d realized is at the **10th percentile** (level z -1.11, 5d ROC z -0.72): credit is realizing more vol than equity implied is pricing. That rule is live, the only live rule across all three layers. MOVE ÷ TLT realized is at the 93rd percentile (level z +1.46) while IEF's is at the 47th: MOVE is rich to long-bond realized, not to the belly. SPY RV10/RV21 is below 1 with breadth at 0% of tickers expanding (z -1.02): realized is compressed across the entire list, which is the tops configuration from 9a if the cyclical/energy names start expanding first. Watch XLY, XLB, XES, XLE, XOP RV10/RV21 z crossing +0.4 while SPY's stays negative.
