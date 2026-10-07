@@ -11,6 +11,24 @@ The model is frozen between refits on purpose: a name moving up or down the list
 
 Cache lives in `PVV_CACHE` (default `pvv_score/.cache`, not committed). A fresh container rebuilds it from the download in a few minutes.
 
+## Reproducibility and the one source of jitter
+
+On a fixed price panel the frozen scorer reproduces the full chain's list exactly (probabilities, tiers, basis, signature
+counts, rank order) and a fresh container reproduces it from an empty cache. Across two downloads, Yahoo's **adjusted**
+closes can differ in the fourth decimal (max 0.0005, relative 2e-6; raw closes are identical). Continuous factors absorb
+that at 1e-5. Sign-based factors (up-day shares, streaks, higher-low cadence, on-balance volume) can flip on a handful
+of knife-edge days, which moves their three-year norms by a few hundredths and the composite percentile by up to about
+one point on a few names. Measured on 2026-10-06 between a 04:15 and a 05:05 download: 0 tier changes, 0 signature-count
+changes, 241 rank changes inside tiers, largest probability change 0.4 points. The gates do not treat this as a failure;
+it is the data source, not the code, and it is an order of magnitude below a normal session's tape move.
+
+## Schedules
+
+| Routine | Cron (UTC) | Fires |
+|---|---|---|
+| THE LIST nightly | `35 22 * * 1-5` | a fresh session runs `nightly.sh`, publishes the page, sends the three PDFs, posts a summary |
+| THE LIST weekly refit | `48 12 * * 6` | a fresh session runs `refit.sh`, publishes, sends, summarises the model change |
+
 ## The frozen model (`results/model/`)
 
 | File | Contents |
