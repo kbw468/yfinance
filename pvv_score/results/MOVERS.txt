@@ -43,7 +43,7 @@ biggest probability gains, 1 session:
 
 biggest probability drops, 1 session:
   ANET   -14.2%  rank  87 (-65)  tier 3  P42 37.0%  sigs 3 (-10)
-  OLLI   -10.8%  rank 595 (-471)  tier 6  P42 23.1%  sigs 0 (-16)
+  OLLI   -10.8%  rank 596 (-472)  tier 6  P42 23.1%  sigs 0 (-16)
   FDS    -10.5%  rank 411 (-293)  tier 6  P42 23.8%  sigs 0 (-9)
   TER    -9.8%  rank  55 (-39)  tier 2  P42 41.4%  sigs 17 (-25)
   PWR    -8.5%  rank  50 (-25)  tier 2  P42 42.8%  sigs 11 (+2)
@@ -65,8 +65,8 @@ biggest probability gains, 5 sessions:
   ACN    +10.5%  rank 119 (+321)  tier 4  P42 34.3%  sigs 23 (+23)
   SKYD   +9.8%  rank 165 (+672)  tier 4  P42 31.2%  sigs 11 (+11)
   RGEN   +9.4%  rank  75 (+147)  tier 3  P42 39.3%  sigs 87 (+87)
-  PSN    +8.0%  rank  52 (+61)  tier 2  P42 42.8%  sigs 10 (+2)
   KTOS   +8.0%  rank  51 (+61)  tier 2  P42 42.8%  sigs 8 (+2)
+  PSN    +8.0%  rank  52 (+61)  tier 2  P42 42.8%  sigs 10 (+2)
   NOV    +8.0%  rank 149 (+220)  tier 4  P42 32.5%  sigs 4 (+4)
   LITE   +7.5%  rank   5 (+42)  tier 1  P42 52.9%  sigs 44 (+18)
   JBL    +7.2%  rank  38 (+42)  tier 1  P42 46.0%  sigs 37 (+23)
@@ -76,7 +76,7 @@ biggest probability gains, 5 sessions:
   CTSH   +6.8%  rank 202 (+245)  tier 4  P42 30.6%  sigs 8 (+8)
 
 biggest probability drops, 5 sessions:
-  OLLI   -13.8%  rank 595 (-501)  tier 6  P42 23.1%  sigs 0 (-23)
+  OLLI   -13.8%  rank 596 (-502)  tier 6  P42 23.1%  sigs 0 (-23)
   ESAB   -12.2%  rank 196 (-141)  tier 4  P42 30.6%  sigs 1 (-10)
   WCC    -10.3%  rank  88 (-69)  tier 3  P42 37.0%  sigs 2 (-35)
   ANET   -10.3%  rank  87 (-66)  tier 3  P42 37.0%  sigs 3 (-34)
