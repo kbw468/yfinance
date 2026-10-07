@@ -1,7 +1,7 @@
 THE LIST, 2026-10-06 close. VIX 15.0  VXN 21.1  IWM 20d rv 11.8  MOVE 105 (move_mid). Rate-sensitive sectors (utilities, REITs, staples, financials) measured on move_mid sessions; all other sectors on every session.
  P42 / P63 = probability (realised out of sample, 2015 onward, COVID Feb-Jun 2020 excluded) that the next 42 / 63 sessions are a top-quartile
 smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.
-basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).
+model frozen 2026-10-07 04:02 UTC, fitted through 2026-10-06, 718 confirmed signatures, id 26e6bcfe15ccfc8f.
 
 Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.
 
@@ -786,8 +786,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 778   6  NWE    Utilities              low   22.2% 21.3% composite 0.23            0  
 779   6  ED     Utilities              low   22.2% 21.3% composite 0.23            0  
 780   6  COR    Healthcare             low   22.2% 21.3% composite 0.23            0  
-781   6  EHC    Healthcare             low   22.2% 21.3% composite 0.23            0  
-782   6  L      Financial              low   22.2% 21.3% composite 0.23            0  
+781   6  L      Financial              low   22.2% 21.3% composite 0.23            0  
+782   6  EHC    Healthcare             low   22.2% 21.3% composite 0.23            0  
 783   6  DUK    Utilities              low   22.2% 21.3% composite 0.22            0  
 784   6  HCA    Healthcare             low   22.2% 21.3% composite 0.22            0  
 785   6  UDR    Real Estate            low   22.2% 21.3% composite 0.22            0  
@@ -902,9 +902,9 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 894   6  STWD   Real Estate            mid   19.6% 19.2% composite 0.03            0  
 
 not ranked:
-    CTVA   fails liquidity / price eligibility today or no completed session (e.g. CTVA unadjusted spin-off)
-    FDXF   insufficient history (72 sessions; 252 needed)
-    HONA   insufficient history (59 sessions; 252 needed)
-    Q      insufficient history (217 sessions; 252 needed)
-    VYLR   insufficient history (0 sessions; 252 needed)
-    SOLS   insufficient history (222 sessions; 252 needed)
+    CTVA   fails liquidity / price eligibility today or no completed session
+    FDXF   insufficient history (92 sessions; 252 needed)
+    HONA   insufficient history (79 sessions; 252 needed)
+    Q      insufficient history (237 sessions; 252 needed)
+    VYLR   insufficient history (4 sessions; 252 needed)
+    SOLS   insufficient history (242 sessions; 252 needed)
