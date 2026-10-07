@@ -5,7 +5,7 @@ threshold. A signature = AND of 2 or 3 conditions. Outcome = the name's next-42-
 quartile of the universe on the smooth-climb score (Sharpe, max drawdown, straightness, up-day share).
 
 Discovery window 2018-2023: keep signatures with >= MIN_N cases and lift >= MIN_LIFT (P / 0.25).
-Confirmation window CONFIRM_START (2021) onward; probabilities are then measured on the full RECENT_START (2018+) sample: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
+Confirmation window CONFIRM_START (2021) onward; probabilities are then measured on the full RECENT_START (2015+, COVID window excluded) sample: keep only those whose lift is still >= CONFIRM_LIFT with >= MIN_N_CONFIRM cases.
 Names today are ranked by the best confirmed signature they carry (its confirmation-window probability), then by how
 many confirmed signatures fire. Nothing is averaged across signatures; a signature fires or it does not.
 """
