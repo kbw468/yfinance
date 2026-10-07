@@ -23,10 +23,11 @@ def render(df, sig, title, lead, mcap_first):
         nmp = sig["near_miss_piece"].get(r.ticker, "") if r.ticker in sig.index else ""
         nmp = nmp if isinstance(nmp, str) else ""
         tail = best.replace(" AND ", " + ") if best else "none firing"
-        cells = [f'<td class="n">{cap(r.mcap_m)}</td>', f'<td>{int(r["rank"])}</td>', f'<td><b>{t}</b></td>', f'<td><b>{r.ticker}</b></td>', f'<td>{r.Index}</td>',
+        wt = [f'<td class="n">{r.wt_universe*100:.2f}%</td>', f'<td class="n">{r.wt_tier*100:.1f}%</td>'] if mcap_first else []
+        cells = [f'<td class="n">{cap(r.mcap_m)}</td>'] + wt + [f'<td>{int(r["rank"])}</td>', f'<td><b>{t}</b></td>', f'<td><b>{r.ticker}</b></td>', f'<td>{r.Index}</td>',
                  f'<td>{html.escape(str(r.Sector))}</td>', f'<td>{r.beta_bucket}</td>', f'<td class="n">{r.P_topq_42d*100:.1f}%</td>', f'<td class="n">{r.P_topq_63d*100:.1f}%</td>',
                  f'<td class="n">{r.avg_score:.2f}</td>', f'<td class="n">{int(r.n_signatures)}</td>', f'<td class="s">{html.escape(tail)}</td>']
-        hdr = ["Mkt cap", "Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "Score", "sigs", "Strongest confirmed signature firing"]
+        hdr = ["Mkt cap"] + (["Wt universe", "Wt in tier"] if mcap_first else []) + ["Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "Score", "sigs", "Strongest confirmed signature firing"]
         if not mcap_first:
             cells = cells[1:4] + [cells[0]] + cells[4:]
         rows.append(f'<tr style="background:{TIER_BG[t]};color:{TIER_FG[t]}">' + "".join(cells) + "</tr>")
@@ -49,6 +50,8 @@ def main():
     mc = pd.read_csv(UNIVERSE_CSV)[["Ticker", "Market Cap", "Index"]]
     mc["Ticker"] = mc.Ticker.str.replace(".", "-", regex=False)
     L = L.merge(mc.rename(columns={"Ticker": "ticker", "Market Cap": "mcap_m"}), on="ticker", how="left")
+    L["wt_universe"] = L.mcap_m / L.mcap_m.sum()                                  # cap weight across every ranked name
+    L["wt_tier"] = L.mcap_m / L.groupby("tier").mcap_m.transform("sum")           # cap weight inside the name's tier
     from .volindex import today_readings
     from .regime import today_regime
     v = today_readings()
@@ -61,7 +64,7 @@ def main():
     tmp = RESULTS_DIR / "_tmp"
     tmp.mkdir(exist_ok=True)
     for name, df, mf, title in [("THE_LIST", L.sort_values("rank"), False, f"THE LIST, {asof} close"),
-                                ("THE_LIST_by_mktcap", L.sort_values("mcap_m", ascending=False), True, f"THE LIST, {asof} close, sorted by market cap")]:
+                                ("THE_LIST_by_mktcap", L.sort_values("mcap_m", ascending=False), True, f"THE LIST, {asof} close, market-cap weighted (sorted by cap; weight across the universe and inside each tier)")]:
         h = tmp / f"{name}.html"
         h.write_text(render(df, sig, title, lead, mf))
         subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={RESULTS_DIR / (name + '.pdf')}", f"file://{h}"],
