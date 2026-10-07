@@ -1,6 +1,6 @@
 import pandas as pd, numpy as np, warnings; warnings.filterwarnings('ignore')
 S=pd.read_pickle('S.pkl'); P=pd.read_pickle('P.pkl'); r=pd.read_pickle('R.pkl')
-F=pd.read_pickle('F.pkl')
+
 cols={}
 def pct(x,w): return x.rolling(w,min_periods=int(w*0.8)).rank(pct=True)
 def z(x,w): return (x-x.rolling(w).mean())/x.rolling(w).std()
