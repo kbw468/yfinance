@@ -18,7 +18,7 @@ from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .regime import tag, today_regime
 
-DISCOVER_END = "2020-12-31"      # discovery 2018-01 .. 2020-12 (regime-matched days), confirmation RECENT_START (2021-01) onward: full cycle
+DISCOVER_END = "2020-12-31"      # discovery 2018-01 .. 2020-12 less the COVID window (regime-matched days), confirmation RECENT_START (2021-01) onward
 MIN_N, MIN_LIFT = 300, 1.30
 MIN_N_CONFIRM, CONFIRM_LIFT = 150, 1.20
 MAX_PAIRS_TO_EXTEND = 400     # only the strongest discovery pairs are extended to triples

@@ -36,7 +36,7 @@ RECENT_START = "2021-01-01"
 SAMPLE_START = "2018-01-01"
 # periods removed from every fit, discovery and probability table (2022: bear market for everything but energy/commodities;
 # behaviour that precedes smooth climbs in a normal tape did not get to express itself)
-EXCLUDE_PERIODS = []   # 2022 stays in the sample; it is handled as risk-off CONTEXT via the market regime tag (see regime.py)
+EXCLUDE_PERIODS = [("2020-02-20", "2020-06-30")]   # COVID crash and V-recovery: no analogue elsewhere in the sample. 2022 stays in as risk-off context (regime.py)
 # walk-forward test years (training starts at SAMPLE_START, so the first test year needs >= 1y of history + embargo)
 WF_YEARS = range(2020, 2027)
 # weight on recent-window IC when forming composite weights (rest on full window)
