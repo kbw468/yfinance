@@ -21,26 +21,48 @@ def check(ok: bool, msg: str):
         FAIL.append(msg)
 
 
-def main():
+def main(frozen: bool = False):
     L = pd.read_csv(R / "THE_LIST.csv"); U = pd.read_csv(R / "universe_scores_smooth.csv"); S = pd.read_csv(R / "signatures_today.csv").set_index("ticker")
     asof = pd.Timestamp(U["asof"].iloc[0])
-    print(f"checks for the {asof.date()} list: {len(L)} ranked of {len(U)}")
+    print(f"checks for the {asof.date()} list: {len(L)} ranked of {len(U)}" + ("  [frozen model, nightly rows]" if frozen else ""))
     unr = U[U.state_score.isna()]
     print("  unranked: " + "; ".join(f"{r.ticker} ({r.note})" for _, r in unr.iterrows()))
 
-    print("[A] tonight's composite percentile is on the calibration tables' scale")
-    live = live_composite_percentile(asof)
+    from .signatures import QUINTILE_FACTORS, FIXED, build_conditions
+    rows_path = CACHE_DIR / ("recent_rows.parquet" if frozen else "research_long.parquet")
+    if frozen:
+        print("[A] tonight's composite percentile recomputed from the frozen weights")
+        import json
+        from .composite import tercile_series, score_rows
+        W = json.load(open(R / "model" / "weights.json"))
+        fac = sorted({f for layer in ("state", "level") for b in W[layer].values() for f in b})
+        rows = pq.read_table(rows_path, columns=list(dict.fromkeys(["date", "ticker", "eligible", "beta_252"] + fac)), filters=[("date", "==", asof)]).to_pandas()
+        rows = rows[rows.eligible.astype(bool)].reset_index(drop=True); rows["beta_bucket"] = tercile_series(rows)
+        comp = {}
+        for layer in ("state", "level"):
+            raw = pd.Series(np.nan, index=rows.index)
+            for b, wd in W[layer].items():
+                m = (rows.beta_bucket == b).values
+                if m.any() and wd:
+                    raw[m] = score_rows(rows[m], pd.Series(wd, dtype=float)).values
+            comp[layer] = raw
+        live = ((comp["state"].rank(pct=True) + comp["level"].rank(pct=True)) / 2).where(comp["state"].notna() & comp["level"].notna())
+        live.index = rows.ticker
+        check(U["model"].iloc[0] == json.load(open(R / "model" / "model.json"))["sha256"], "list carries the frozen model id")
+    else:
+        print("[A] tonight's composite percentile is on the calibration tables' scale")
+        live = live_composite_percentile(asof)
     j = L.merge(live.rename("comp_p"), left_on="ticker", right_index=True)
-    check(len(j) == len(L), f"every ranked name has a walk-forward composite tonight ({len(j)} of {len(L)})")
-    check(np.allclose(j.avg_score, j.comp_p, atol=1e-6), f"list Score == walk-forward composite percentile (max diff {np.abs(j.avg_score - j.comp_p).max():.2e})")
+    check(len(j) == len(L), f"every ranked name has a composite tonight ({len(j)} of {len(L)})")
+    check(np.allclose(j.avg_score, j.comp_p, atol=1e-6), f"list Score == composite percentile (max diff {np.abs(j.avg_score - j.comp_p).max():.2e})")
 
     print("[B] tonight's signature firing recomputed from the raw factor rows")
-    from .signatures import QUINTILE_FACTORS, FIXED, build_conditions
     need = list(dict.fromkeys(["date", "ticker", "eligible"] + QUINTILE_FACTORS + sorted({v[0] for v in FIXED.values()})))
-    rows = pq.read_table(CACHE_DIR / "research_long.parquet", columns=need, filters=[("date", "==", asof)]).to_pandas()
-    rows = rows[rows.eligible].reset_index(drop=True)
+    rows = pq.read_table(rows_path, columns=need, filters=[("date", "==", asof)]).to_pandas()
+    rows = rows[rows.eligible.astype(bool)].reset_index(drop=True)
     conds = build_conditions(rows)
-    conf = pd.read_csv(R / "signatures_all.csv"); conf = conf[conf.confirmed]
+    conf = pd.read_csv(R / "model" / "signatures.csv") if frozen else pd.read_csv(R / "signatures_all.csv")
+    conf = conf if frozen else conf[conf.confirmed]
     n = len(rows); cnt = np.zeros(n, int); bestp = np.zeros(n); liftsum = np.zeros(n)
     for _, r in conf.iterrows():
         m = np.ones(n, bool)
@@ -94,12 +116,19 @@ def main():
     check(mt["signatures_today.csv"] <= mt["THE_LIST.csv"] <= mt["THE_LIST.html"] <= mt["THE_LIST.pdf"] <= mt["THE_LIST_by_mktcap.pdf"], "artifacts built in order signatures -> csv -> html -> pdfs")
     mc = pd.read_csv(R / "THE_LIST_by_mktcap.csv"); check(len(mc) == len(L) and np.allclose(sorted(mc.P_topq_42d), sorted(L.P_topq_42d)), "market-cap list is the same list")
 
-    print("[F] calibration tables")
+    print("[F] calibration tables and model")
     B = pd.read_csv(R / "buylist_probability_table.csv")
     check(int(B.n.min()) >= 500 or B.pooled_from.notna().any(), f"composite cells rest on >= 500 cases or are pooled (min n {int(B.n.min())})")
     dep = pd.read_csv(R / "signature_depth_oos.csv", index_col=0)
     check(bool(dep.P_topq42.is_monotonic_increasing) and int(dep.n.min()) >= 500, "signature depth table monotone with >= 500 cases per step")
     check(int(len(conf)) > 0 and bool((conf.n_conf >= 150).all()), f"{len(conf)} confirmed signatures, all with >= 150 confirmation cases")
+    import json
+    cc = json.load(open(R / "model" / "calib_composite.json")); cs = json.load(open(R / "model" / "calib_signature.json"))
+    check(all(len(cc[b][c]["x"]) >= 1 for b in cc for c in cc[b]) and all(len(cs["curves"][c][q]["x"]) >= 1 for c in cs["curves"] for q in cs["curves"][c]), "frozen calibration curves present for every bucket and quintile")
+    check(all(v["min_n"] >= 500 for b in cc for v in cc[b].values()) and all(v["min_n"] >= 500 for c in cs["curves"].values() for v in c.values()), "every frozen curve was fitted with >= 500 cases per step")
+    if (R / "movers_today.csv").exists():
+        mv = pd.read_csv(R / "movers_today.csv")
+        check(set(mv.ticker) == set(L.ticker), "movers table covers exactly the ranked names")
 
     print()
     if FAIL:
@@ -108,4 +137,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(frozen="--frozen" in sys.argv)

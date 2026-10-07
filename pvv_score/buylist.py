@@ -80,6 +80,9 @@ def main():
         for c, src in [("iso_q42", "u_top_q_42"), ("iso_h42", "u_top_half_42"), ("iso_q63", "u_top_q_63"), ("iso_h63", "u_top_half_63")]:
             ok_ = s_[src].notna()
             iso[b_][c] = BinnedIsotonic(MIN_CELL_N).fit(s_.avg_p.values[ok_], s_[src].values[ok_])
+    import json
+    (RESULTS_DIR / "model").mkdir(exist_ok=True)
+    json.dump({b_: {c: iso[b_][c].to_dict() for c in iso[b_]} for b_ in iso}, open(RESULTS_DIR / "model" / "calib_composite.json", "w"), indent=1)
     u = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv")
     asof = u["asof"].iloc[0]
     # tonight's composite percentile on the calibration tables' own scale (walk-forward preds, universe-ranked); the

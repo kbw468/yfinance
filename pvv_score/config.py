@@ -3,7 +3,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "results"
-CACHE_DIR = Path("/tmp/claude-0/-home-user-yfinance/6b0db6a0-0646-53b0-950e-60d46b6034fa/scratchpad/pvv_cache")
+import os
+CACHE_DIR = Path(os.environ.get("PVV_CACHE", str(ROOT / ".cache")))   # heavy parquet cache; PVV_CACHE overrides (not committed)
 
 UNIVERSE_CSV = DATA_DIR / "universe_combined.csv"   # S&P 500 + S&P 400 (Finviz exports), deduplicated
 

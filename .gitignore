@@ -24,3 +24,5 @@ ENV/
 /doc/source/reference/api
 !yfinance.css
 !/doc/source/development/assets/branches.png
+pvv_score/.cache/
+pvv_score/results/_tmp/

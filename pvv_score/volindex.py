@@ -42,3 +42,14 @@ def load_vol_indices(refresh: bool = False) -> pd.DataFrame:
 def today_readings() -> dict:
     v = load_vol_indices().ffill().dropna(how="all").iloc[-1]
     return {k: (None if pd.isna(v[k]) else float(v[k])) for k in COLS} | {"date": v.name.strftime("%Y-%m-%d")}
+
+
+def readings_at(asof) -> dict:
+    """Vol readings as of a session (last available on or before it) plus the MOVE band used as the regime tag."""
+    from .regime import move_bucket
+    v = load_vol_indices().ffill()
+    v = v[v.index <= pd.Timestamp(asof)]
+    row = v.iloc[-1]
+    out = {k: (None if pd.isna(row[k]) else float(row[k])) for k in COLS} | {"date": row.name.strftime("%Y-%m-%d")}
+    out["move_band"] = str(move_bucket(pd.Series([out["move"]])).iloc[0]) if out["move"] is not None else "n/a"
+    return out

@@ -1,4 +1,4 @@
-"""Render THE LIST to two PDFs (ranked; sorted by market cap) via headless Chromium."""
+"""Render THE LIST to PDFs (ranked; market-cap weighted; movers) via headless Chromium. Delta columns come from history.py."""
 import html
 import subprocess
 import pandas as pd
@@ -13,6 +13,10 @@ def cap(x):
     return "" if pd.isna(x) else (f"${x/1e6:.2f}T" if x >= 1e6 else f"${x/1e3:.0f}B")
 
 
+def dv(x, d, scale=1.0):
+    return "" if pd.isna(x) else f"{x*scale:+.{d}f}"
+
+
 def render(df, sig, title, lead, mcap_first):
     rows = []
     for _, r in df.iterrows():
@@ -24,10 +28,11 @@ def render(df, sig, title, lead, mcap_first):
         nmp = nmp if isinstance(nmp, str) else ""
         tail = best.replace(" AND ", " + ") if best else "none firing"
         wt = [f'<td class="n">{r.wt_universe*100:.2f}%</td>', f'<td class="n">{r.wt_tier*100:.1f}%</td>'] if mcap_first else []
+        deltas = [f'<td class="n">{dv(r.get("d_rank_1", float("nan")), 0)}</td>', f'<td class="n">{dv(r.get("d_p42_1", float("nan")), 1, 100)}</td>', f'<td class="n">{dv(r.get("d_p42_5", float("nan")), 1, 100)}</td>']
         cells = [f'<td class="n">{cap(r.mcap_m)}</td>'] + wt + [f'<td>{int(r["rank"])}</td>', f'<td><b>{t}</b></td>', f'<td><b>{r.ticker}</b></td>', f'<td>{r.Index}</td>',
-                 f'<td>{html.escape(str(r.Sector))}</td>', f'<td>{r.beta_bucket}</td>', f'<td class="n">{r.P_topq_42d*100:.1f}%</td>', f'<td class="n">{r.P_topq_63d*100:.1f}%</td>',
+                 f'<td>{html.escape(str(r.Sector))}</td>', f'<td>{r.beta_bucket}</td>', f'<td class="n">{r.P_topq_42d*100:.1f}%</td>', f'<td class="n">{r.P_topq_63d*100:.1f}%</td>'] + deltas + [
                  f'<td class="n">{r.avg_score:.2f}</td>', f'<td class="n">{int(r.n_signatures)}</td>', f'<td class="s">{html.escape(tail)}</td>']
-        hdr = ["Mkt cap"] + (["Wt universe", "Wt in tier"] if mcap_first else []) + ["Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "Score", "sigs", "Strongest confirmed signature firing"]
+        hdr = ["Mkt cap"] + (["Wt universe", "Wt in tier"] if mcap_first else []) + ["Rank", "Tier", "Ticker", "Index", "Sector", "Beta", "P 42d", "P 63d", "Δrk 1d", "ΔP 1d", "ΔP 5d", "Score", "sigs", "Strongest confirmed signature firing"]
         if not mcap_first:
             cells = cells[1:4] + [cells[0]] + cells[4:]
         rows.append(f'<tr style="background:{TIER_BG[t]};color:{TIER_FG[t]}">' + "".join(cells) + "</tr>")
@@ -50,6 +55,9 @@ def main():
     mc = pd.read_csv(UNIVERSE_CSV)[["Ticker", "Market Cap", "Index"]]
     mc["Ticker"] = mc.Ticker.str.replace(".", "-", regex=False)
     L = L.merge(mc.rename(columns={"Ticker": "ticker", "Market Cap": "mcap_m"}), on="ticker", how="left")
+    mvp = RESULTS_DIR / "movers_today.csv"
+    if mvp.exists():
+        L = L.merge(pd.read_csv(mvp)[["ticker", "d_rank_1", "d_p42_1", "d_p42_5"]], on="ticker", how="left")
     L["wt_universe"] = L.mcap_m / L.mcap_m.sum()                                  # cap weight across every ranked name
     L["wt_tier"] = L.mcap_m / L.groupby("tier").mcap_m.transform("sum")           # cap weight inside the name's tier
     from .volindex import today_readings
@@ -70,7 +78,13 @@ def main():
         subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={RESULTS_DIR / (name + '.pdf')}", f"file://{h}"],
                        capture_output=True)
     L.sort_values("mcap_m", ascending=False).to_csv(RESULTS_DIR / "THE_LIST_by_mktcap.csv", index=False)
-    print("wrote THE_LIST.pdf and THE_LIST_by_mktcap.pdf")
+    mt = RESULTS_DIR / "MOVERS.txt"
+    if mt.exists():
+        h = tmp / "MOVERS.html"
+        style = "@page{size:A4 portrait;margin:12mm} body{font-family:Menlo,Consolas,monospace;font-size:8.6px;color:#1a1f2b;white-space:pre-wrap;line-height:1.4}"
+        h.write_text('<!doctype html><html><head><meta charset="utf-8"><style>' + style + '</style></head><body>' + html.escape(mt.read_text()) + '</body></html>')
+        subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={RESULTS_DIR / 'MOVERS.pdf'}", f"file://{h}"], capture_output=True)
+    print("wrote THE_LIST.pdf, THE_LIST_by_mktcap.pdf" + (" and MOVERS.pdf" if mt.exists() else ""))
 
 
 if __name__ == "__main__":

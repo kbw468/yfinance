@@ -1,5 +1,6 @@
 """THE LIST as a page: probability tiers shaded, signature conditions as chips colored by factor family."""
 import json
+import html as html_mod
 import pandas as pd
 from .config import RESULTS_DIR, CACHE_DIR, RECENT_START
 from .signatures import FIXED
@@ -41,6 +42,12 @@ def main():
     vix_cls = "vhot" if v["vix"] > 30 else ("vwarm" if v["vix"] > 20 else "")
     volline = (f'<p class="vol">VIX <span class="{vix_cls}">{v["vix"]:.1f}</span> &nbsp; VXN {v["vxn"]:.1f} &nbsp; IWM 20d realised {v["iwm_rv20"]:.1f} &nbsp; '
                f'MOVE <b>{v["move"]:.0f}</b> ({band.replace("move_", "")} band: rate-sensitive sectors measured on these sessions only)</p>')
+    mvp = RESULTS_DIR / "movers_today.csv"
+    mv = pd.read_csv(mvp).set_index("ticker") if mvp.exists() else None
+    def delta(t, c):
+        if mv is None or t not in mv.index or pd.isna(mv.loc[t, c]):
+            return None
+        return float(mv.loc[t, c])
     rows = []
     for _, r in L.iterrows():
         sigs = []
@@ -53,8 +60,11 @@ def main():
         nm_n = int(sig["near_miss_n"].get(r.ticker, 0)) if r.ticker in sig.index and "near_miss_n" in sig.columns else 0
         nm_p = sig["near_miss_piece"].get(r.ticker, "") if r.ticker in sig.index and "near_miss_piece" in sig.columns else ""
         rows.append({"rank": int(r["rank"]), "t": r.ticker, "nmn": nm_n, "nmp": nm_p if isinstance(nm_p, str) else "", "co": r.Company, "sec": r.Sector, "bb": r.beta_bucket, "b": round(float(r.beta_252), 2) if pd.notna(r.beta_252) else None,
-                     "p42": float(r.P_topq_42d), "p63": float(r.P_topq_63d), "basis": r.basis, "ns": int(r.n_signatures), "sigs": sigs, "states": r.top_states if isinstance(r.top_states, str) else ""})
+                     "p42": float(r.P_topq_42d), "p63": float(r.P_topq_63d), "basis": r.basis, "ns": int(r.n_signatures), "sigs": sigs, "states": r.top_states if isinstance(r.top_states, str) else "",
+                     "dr1": delta(r.ticker, "d_rank_1"), "dp1": delta(r.ticker, "d_p42_1"), "dp5": delta(r.ticker, "d_p42_5"), "st": (mv.loc[r.ticker, "status"] if mv is not None and r.ticker in mv.index and isinstance(mv.loc[r.ticker, "status"], str) else "")})
     data = json.dumps(rows)
+    mtxt = (RESULTS_DIR / "MOVERS.txt").read_text() if (RESULTS_DIR / "MOVERS.txt").exists() else ""
+    movers_html = (f'<details class="mv"><summary>Movers since the previous session, list-level change, realised scorecard</summary><pre>{html_mod.escape(mtxt)}</pre></details>' if mtxt else "")
     html = f"""<title>THE LIST</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
@@ -86,6 +96,8 @@ tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 .sigline{{margin:3px 0}} .sigp{{font-family:var(--mono);color:var(--muted);margin-right:8px}}
 .states{{color:var(--muted);font-size:.78rem;white-space:normal}}
 .count{{color:var(--muted);font-size:.85rem}}
+td.up{{color:var(--price)}} td.dn{{color:var(--volume)}} .chip.new{{background:var(--volume);color:#fff;font-size:.7rem}}
+details.mv{{margin:0 0 12px;border:1px solid var(--rule);border-radius:6px;background:var(--row)}} details.mv summary{{cursor:pointer;padding:8px 12px;font-weight:600}} details.mv pre{{margin:0;padding:0 12px 12px;font-family:var(--mono);font-size:.78rem;line-height:1.45;white-space:pre-wrap;max-height:60vh;overflow:auto}}
 .vol{{font-family:var(--mono);font-size:.9rem;margin:0 0 8px}} .vwarm{{color:var(--volume);font-weight:700}} .vhot{{color:var(--fg);font-weight:800;text-decoration:underline}}
 </style>
 <h1>THE LIST</h1>
@@ -95,16 +107,19 @@ tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 </div>
 <div class="legend"><b>Tiers (P 42d):</b> <span class="chip tier1">Tier 1 &ge; 45%</span> <span class="chip tier2">Tier 2 40–45%</span> <span class="chip tier3" style="color:var(--fg)">Tier 3 35–40%</span> <span class="chip tier4" style="color:var(--fg)">Tier 4 30–35%</span> <span class="chip tier5" style="color:var(--fg)">Tier 5 25–30%</span> <span style="color:var(--muted)">Tier 6 &lt; 25% (below baseline)</span></div>
 <div class="bar"><input id="q" placeholder="filter ticker / sector" size="28"><select id="bb"><option value="">all beta</option><option>low</option><option>mid</option><option>high</option></select><select id="tf"><option value="">all tiers</option><option value="1">Tier 1</option><option value="2">Tiers 1–2</option><option value="3">Tiers 1–3</option></select><select id="sg"><option value="">all names</option><option value="1">signatures firing</option><option value="50">50+ signatures</option></select><span class="count" id="n"></span></div>
+{movers_html}
 <div class="tw"><table><thead><tr id="h"></tr></thead><tbody id="b"></tbody></table></div>
 <script>
 const D={data};
-const COLS=[["rank","#","n"],["tier","Tier","n"],["t","Ticker","s"],["sec","Sector","s"],["bb","Beta","s"],["b","b252","n"],["p42","P 42d","n"],["p63","P 63d","n"],["ns","# signatures","n"],["basis","Basis","s"],["best","Strongest signature firing","x"]];
+const COLS=[["rank","#","n"],["tier","Tier","n"],["t","Ticker","s"],["sec","Sector","s"],["bb","Beta","s"],["b","b252","n"],["p42","P 42d","n"],["p63","P 63d","n"],["dr1","Δrank 1d","n"],["dp1","ΔP 1d","n"],["dp5","ΔP 5d","n"],["ns","# signatures","n"],["basis","Basis","s"],["best","Strongest signature firing","x"]];
 let sortCol=0,sortDir=1,open=new Set();
 const h=document.getElementById('h'),b=document.getElementById('b'),q=document.getElementById('q'),bb=document.getElementById('bb'),sg=document.getElementById('sg'),tf=document.getElementById('tf'),n=document.getElementById('n');
 COLS.forEach((c,i)=>{{const th=document.createElement('th');th.textContent=c[1];th.onclick=()=>{{if(c[2]==='x')return;if(sortCol===i)sortDir*=-1;else{{sortCol=i;sortDir=c[2]==='n'&&c[0]!=='rank'?-1:1}}render()}};h.appendChild(th)}});
 const tierN=p=>p>=.45?1:p>=.40?2:p>=.35?3:p>=.30?4:p>=.25?5:6;
 const tier=p=>'tier'+tierN(p);
 D.forEach(r=>r.tier=tierN(r.p42));
+const dfmt=(v,d)=>v==null?'<span class="states">–</span>':(v>0?'+':'')+v.toFixed(d);
+const dcls=v=>v==null||v===0?'':v>0?'up':'dn';
 const chips=s=>s.c.map(x=>`<span class="chip ${{x.f}}">${{x.t}}</span>`).join(' AND ');
 function render(){{
   const f=q.value.toLowerCase(),k=bb.value,g=sg.value,tv=tf.value;
@@ -112,10 +127,10 @@ function render(){{
   rows.sort((x,y)=>{{const c=COLS[sortCol][0];let a=x[c],d=y[c];if(a==null)return 1;if(d==null)return -1;return (a<d?-1:a>d?1:0)*sortDir}});
   [...h.children].forEach((th,i)=>th.style.color=i===sortCol?'var(--price)':'');
   b.innerHTML=rows.map(r=>{{
-    const main=`<tr class="main ${{tier(r.p42)}}row" data-t="${{r.t}}"><td>${{r.rank}}</td><td class="p ${{tier(r.p42)}}">Tier ${{r.tier}}</td><td><b>${{r.t}}</b></td><td>${{r.sec}}</td><td>${{r.bb}}</td><td class="p">${{r.b==null?'':r.b.toFixed(2)}}</td><td class="p">${{(r.p42*100).toFixed(0)}}%</td><td class="p">${{(r.p63*100).toFixed(0)}}%</td><td class="p">${{r.ns}}</td><td>${{r.basis}}</td><td>${{r.sigs.length?chips(r.sigs[0]):'<span class="states">'+r.states+'</span>'}}</td></tr>`;
+    const main=`<tr class="main ${{tier(r.p42)}}row" data-t="${{r.t}}"><td>${{r.rank}}</td><td class="p ${{tier(r.p42)}}">Tier ${{r.tier}}</td><td><b>${{r.t}}</b></td><td>${{r.sec}}</td><td>${{r.bb}}</td><td class="p">${{r.b==null?'':r.b.toFixed(2)}}</td><td class="p">${{(r.p42*100).toFixed(0)}}%</td><td class="p">${{(r.p63*100).toFixed(0)}}%</td><td class="p ${{dcls(r.dr1)}}">${{dfmt(r.dr1,0)}}</td><td class="p ${{dcls(r.dp1)}}">${{dfmt(r.dp1==null?null:r.dp1*100,1)}}</td><td class="p ${{dcls(r.dp5)}}">${{dfmt(r.dp5==null?null:r.dp5*100,1)}}</td><td class="p">${{r.ns}}${{r.st?' <span class="chip new">'+r.st+'</span>':''}}</td><td>${{r.basis}}</td><td>${{r.sigs.length?chips(r.sigs[0]):'<span class="states">'+r.states+'</span>'}}</td></tr>`;
     if(!open.has(r.t))return main;
     const det=r.sigs.length?r.sigs.map(s=>`<div class="sigline"><span class="sigp">P ${{(s.p*100).toFixed(0)}}% n=${{s.n}}</span>${{chips(s)}}</div>`).join(''):'<div class="states">No confirmed signature fires. Probability from the multi-factor composite tier.</div>';
-    return main+`<tr class="detail"><td colspan="11">${{det}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
+    return main+`<tr class="detail"><td colspan="14">${{det}}<div class="states" style="margin-top:6px">State readings vs own norm: ${{r.states}}</div></td></tr>`;
   }}).join('');
   n.textContent=rows.length+' of '+D.length+' names';
   b.querySelectorAll('tr.main').forEach(tr=>tr.onclick=()=>{{const t=tr.dataset.t;open.has(t)?open.delete(t):open.add(t);render()}});

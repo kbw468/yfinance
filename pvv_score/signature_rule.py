@@ -101,6 +101,11 @@ def main():
         for q in range(len(COMP_Q) - 1):
             mq = ok_ & (rec.comp_q == q).values
             iso_sig[(c, q)] = BinnedIsotonic(500).fit(x[mq], rec[src].values[mq]) if mq.sum() >= MIN_GROUP_N else iso_sig[(c, "all")]
+    import json
+    (RESULTS_DIR / "model").mkdir(exist_ok=True)
+    json.dump({"comp_q_edges": COMP_Q, "min_group_n": MIN_GROUP_N,
+               "curves": {c: {str(q): iso_sig[(c, q)].to_dict() for q in ["all"] + list(range(len(COMP_Q) - 1))} for c in ["ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]}},
+              open(RESULTS_DIR / "model" / "calib_signature.json", "w"), indent=1)
     # transparency table: realised P by composite quintile x best-signature probability band
     f = rec[rec.n_fire > 0]
     byc = f.groupby([f.comp_q.astype(str), pd.cut(f.bestp, [0, .30, .35, .40, .46, 1.0])], observed=True).agg(n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))

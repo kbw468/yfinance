@@ -45,7 +45,7 @@ def main():
         others = sorted({x[2].split(" ")[0] for x in cands if x[2] != best[2]})
         basis.append(best[2] + (f" (+{others[0]})" if others else ""))
     u["P_topq_42d"] = np.round(p42, 4); u["P_topq_63d"] = np.round(p63, 4); u["basis"] = basis
-    ranked = u[u.P_topq_42d.notna()].sort_values(["P_topq_42d", "P_topq_63d", "avg_score", "n_signatures"], ascending=False).reset_index(drop=True)
+    ranked = u[u.P_topq_42d.notna()].sort_values(["P_topq_42d", "P_topq_63d", "avg_score", "n_signatures", "ticker"], ascending=[False, False, False, False, True]).reset_index(drop=True)
     ranked = ranked.rename(columns={"tier": "score_tier"})
     ranked.insert(0, "rank", ranked.index + 1)
     ranked.insert(1, "tier", pd.cut(ranked.P_topq_42d, [-1, .25, .30, .35, .40, .45, 2], labels=[6, 5, 4, 3, 2, 1]).astype(int))
