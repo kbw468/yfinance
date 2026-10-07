@@ -20,9 +20,10 @@ WINDOW_YEARS = 7
 KEEP = 5
 
 
-def main(window_years: int = WINDOW_YEARS, keep: int = KEEP):
+def build_rows(panel: dict, out_path=None, window_years: int = WINDOW_YEARS, keep: int = KEEP):
+    """Factor + state rows for the last `keep` sessions of an already-cleaned panel."""
     t0 = time.time()
-    panel, _ = clean_panel(load_panel())
+    out_path = out_path or (CACHE_DIR / "recent_rows.parquet")
     asof = panel["Close"].index[-1]
     start = asof - pd.DateOffset(years=window_years)
     panel = {k: v.loc[start:] for k, v in panel.items()}
@@ -52,9 +53,14 @@ def main(window_years: int = WINDOW_YEARS, keep: int = KEEP):
     rk = lambda c: g[c].rank(pct=True).astype("float32")
     long["dryup_x_tight"] = (1 - rk("vol_dry_20_250")) + (1 - rk("range_comp_10_252")) + rk("dist_52w_high")
     long["ignite_x_rs"] = rk("ignition_mult_10") + rk("rs_spy_63") + rk("updown_vol_ratio_50")
-    out = CACHE_DIR / "recent_rows.parquet"
-    long.to_parquet(out, index=False)
-    print(f"saved {out} shape={long.shape} asof={asof.date()} eligible_today={int(long[long.date == asof].eligible.sum())} {time.time() - t0:.0f}s", file=sys.stderr)
+    long.to_parquet(out_path, index=False)
+    print(f"saved {out_path} shape={long.shape} asof={asof.date()} eligible_today={int(long[long.date == asof].eligible.sum())} {time.time() - t0:.0f}s", file=sys.stderr)
+    return out_path
+
+
+def main(window_years: int = WINDOW_YEARS, keep: int = KEEP):
+    panel, _ = clean_panel(load_panel())
+    return build_rows(panel, CACHE_DIR / "recent_rows.parquet", window_years, keep)
 
 
 if __name__ == "__main__":

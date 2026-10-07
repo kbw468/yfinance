@@ -35,6 +35,20 @@ it is the data source, not the code, and it is an order of magnitude below a nor
 |---|---|---|
 | THE LIST nightly | `35 22 * * 1-5` | the build session runs `nightly.sh`, publishes the page, sends the three PDFs, posts a summary |
 | THE LIST weekly refit | `48 12 * * 6` | the build session runs `refit.sh`, publishes, sends, summarises the model change |
+| THE LIST intraday | `CRON_TZ=America/New_York 25 15 * * 1-5` | the build session runs `intraday.sh`, sends `INTRADAY.pdf`, posts the Tier 1–2 read |
+
+## Intraday projection (`pvv_score/bin/intraday.sh`, 15:25 New York on weekdays)
+
+`python -m pvv_score.intraday` takes every name's bar so far today from Yahoo (price now as the close, today's high and low so
+far, volume so far scaled to a full-day estimate by a time-of-day curve), scores it through the frozen model exactly as the
+nightly does, and compares with the last published list. Output in `results/intraday/`: `INTRADAY.txt / .pdf` and a dated CSV.
+Per name: tier and P at the last close, projected tier and P now, change in signatures, the day's move, and a status
+(UP A TIER, strengthening ≥ +1 pt, holding, weakening ≤ −1 pt, down a tier). Sections: Tiers 1–2; down on the day but
+projected Tier 1–2 and holding or stronger; up on the day but weakening out of Tier 1–2; projected entrants; largest changes.
+On a final bar it reproduces the published list exactly (verified). Options: `--csv PATH` (Ticker, Price/Last, Volume, optional
+Open/High/Low) to use your own feed instead of Yahoo; `--whatif MRVL=-2.8` to move names to a hypothetical close;
+`--vol-pace 0.77` to override the volume share. Each live projection is logged, and the nightly writes how close it came to
+the actual close into `history/projection_accuracy.csv` and the last line of `MOVERS.txt`.
 
 ## The frozen model (`results/model/`)
 

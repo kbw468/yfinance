@@ -1,0 +1,113 @@
+INTRADAY READ, 2026-10-07 02:04 ET. Bar: 2026-10-06 (final session bar); source yahoo partial bars.
+Projected tonight's list vs the published 2026-10-06 list, same frozen model. Status: UP A TIER / strengthening (>= +1 pt) / holding / weakening (<= -1 pt) / down a tier.
+
+TIERS 1-2 (projected or at last close), 62 names:
+  MRVL   Technology     day  +5.8%  tier 1->1  P 53.3% -> 53.3% (+0.0)  sigs 50->50  holding
+  AMKR   Technology     day  -2.3%  tier 1->1  P 53.2% -> 53.2% (+0.0)  sigs 39->39  holding
+  TTMI   Technology     day  -0.3%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 50->50  holding
+  GLW    Technology     day  +6.0%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 35->35  holding
+  LITE   Technology     day  +3.8%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 44->44  holding
+  MRNA   Healthcare     day  -7.8%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 122->122  holding
+  ENTG   Technology     day  -0.0%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 30->30  holding
+  DELL   Technology     day  +3.9%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 64->64  holding
+  HPE    Technology     day  +3.1%  tier 1->1  P 52.8% -> 52.8% (+0.0)  sigs 97->97  holding
+  SMTC   Technology     day  +2.3%  tier 1->1  P 52.8% -> 52.8% (+0.0)  sigs 74->74  holding
+  MKSI   Technology     day  +0.3%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 66->66  holding
+  MTSI   Technology     day  +6.8%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 41->41  holding
+  COHR   Technology     day  +1.4%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 25->25  holding
+  SANM   Technology     day  +1.3%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 33->33  holding
+  SITM   Technology     day  +0.1%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 65->65  holding
+  P      Technology     day  +2.3%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 82->82  holding
+  LSCC   Technology     day  +1.2%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 30->30  holding
+  NVT    Industrials    day  +4.0%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 54->54  holding
+  AMD    Technology     day  +2.8%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 73->73  holding
+  RMBS   Technology     day  +3.4%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 11->11  holding
+  SMCI   Technology     day  +0.6%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 56->56  holding
+  CGNX   Technology     day  +3.1%  tier 1->1  P 47.4% -> 47.4% (+0.0)  sigs 7->7  holding
+  NXT    Technology     day  +6.2%  tier 1->1  P 47.4% -> 47.4% (+0.0)  sigs 9->9  holding
+  AMAT   Technology     day  -2.2%  tier 1->1  P 46.6% -> 46.6% (+0.0)  sigs 47->47  holding
+  FLEX   Technology     day  +4.0%  tier 1->1  P 46.6% -> 46.6% (+0.0)  sigs 41->41  holding
+  VIAV   Technology     day  +2.6%  tier 1->1  P 46.2% -> 46.2% (+0.0)  sigs 25->25  holding
+  MU     Technology     day  -1.7%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 31->31  holding
+  KLAC   Technology     day  -4.5%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 38->38  holding
+  AEIS   Industrials    day  +1.8%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 19->19  holding
+  ON     Technology     day  +0.4%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 77->77  holding
+  BE     Industrials    day  +3.2%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 54->54  holding
+  ONTO   Technology     day  -3.6%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 10->10  holding
+  SYNA   Technology     day  -0.3%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 38->38  holding
+  LRCX   Technology     day  -3.4%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 31->31  holding
+  INTC   Technology     day  -3.2%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 47->47  holding
+  VRT    Industrials    day  -0.2%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 46->46  holding
+  CIEN   Technology     day +13.8%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 29->29  holding
+  JBL    Technology     day  +2.7%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 37->37  holding
+  OKTA   Technology     day  +0.2%  tier 2->2  P 45.0% -> 45.0% (+0.0)  sigs 82->82  holding
+  TWLO   Technology     day  -6.8%  tier 2->2  P 45.0% -> 45.0% (+0.0)  sigs 90->90  holding
+  STX    Technology     day  -9.2%  tier 2->2  P 44.9% -> 44.9% (+0.0)  sigs 68->68  holding
+  VICR   Technology     day  -2.1%  tier 2->2  P 44.9% -> 44.9% (+0.0)  sigs 65->65  holding
+  CRWD   Technology     day  +2.3%  tier 2->2  P 44.6% -> 44.6% (+0.0)  sigs 59->59  holding
+  SNDK   Technology     day  -2.6%  tier 2->2  P 44.4% -> 44.4% (+0.0)  sigs 54->54  holding
+  STRL   Industrials    day  +7.7%  tier 2->2  P 44.0% -> 44.0% (+0.0)  sigs 23->23  holding
+  WDC    Technology     day  -6.9%  tier 2->2  P 44.0% -> 44.0% (+0.0)  sigs 39->39  holding
+  KEYS   Technology     day  +1.0%  tier 2->2  P 44.0% -> 44.0% (+0.0)  sigs 3->3  holding
+  WHR    Consumer Cycli day  +0.4%  tier 2->2  P 43.3% -> 43.3% (+0.0)  sigs 16->16  holding
+  PATH   Technology     day  -0.5%  tier 2->2  P 43.1% -> 43.1% (+0.0)  sigs 29->29  holding
+  PWR    Industrials    day  +5.3%  tier 2->2  P 42.8% -> 42.8% (+0.0)  sigs 11->11  holding
+  KTOS   Industrials    day  +4.0%  tier 2->2  P 42.8% -> 42.8% (+0.0)  sigs 8->8  holding
+  PSN    Technology     day  -0.0%  tier 2->2  P 42.8% -> 42.8% (+0.0)  sigs 10->10  holding
+  IESC   Industrials    day  +0.7%  tier 2->2  P 41.6% -> 41.6% (+0.0)  sigs 29->29  holding
+  DDOG   Technology     day  +0.7%  tier 2->2  P 41.4% -> 41.4% (+0.0)  sigs 37->37  holding
+  TER    Technology     day  -3.2%  tier 2->2  P 41.4% -> 41.4% (+0.0)  sigs 17->17  holding
+  RRX    Industrials    day  +3.2%  tier 2->2  P 41.1% -> 41.1% (+0.0)  sigs 2->2  holding
+  ALGM   Technology     day  +0.8%  tier 2->2  P 40.8% -> 40.8% (+0.0)  sigs 33->33  holding
+  BRKR   Healthcare     day  -5.3%  tier 2->2  P 40.8% -> 40.8% (+0.0)  sigs 20->20  holding
+  HIMS   Healthcare     day  -0.7%  tier 2->2  P 40.8% -> 40.8% (+0.0)  sigs 38->38  holding
+  DOCN   Technology     day  -4.5%  tier 2->2  P 40.7% -> 40.7% (+0.0)  sigs 35->35  holding
+  PANW   Technology     day  +3.2%  tier 2->2  P 40.7% -> 40.7% (+0.0)  sigs 45->45  holding
+  PBF    Energy         day  -1.5%  tier 2->2  P 40.5% -> 40.5% (+0.0)  sigs 85->85  holding
+
+DOWN ON THE DAY, PROJECTED TIER 1-2 AND HOLDING OR STRONGER (24):
+  STX    Technology     day  -9.2%  tier 2->2  P 44.9% -> 44.9% (+0.0)  sigs 68->68  holding
+  MRNA   Healthcare     day  -7.8%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 122->122  holding
+  WDC    Technology     day  -6.9%  tier 2->2  P 44.0% -> 44.0% (+0.0)  sigs 39->39  holding
+  TWLO   Technology     day  -6.8%  tier 2->2  P 45.0% -> 45.0% (+0.0)  sigs 90->90  holding
+  BRKR   Healthcare     day  -5.3%  tier 2->2  P 40.8% -> 40.8% (+0.0)  sigs 20->20  holding
+  KLAC   Technology     day  -4.5%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 38->38  holding
+  DOCN   Technology     day  -4.5%  tier 2->2  P 40.7% -> 40.7% (+0.0)  sigs 35->35  holding
+  ONTO   Technology     day  -3.6%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 10->10  holding
+  LRCX   Technology     day  -3.4%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 31->31  holding
+  TER    Technology     day  -3.2%  tier 2->2  P 41.4% -> 41.4% (+0.0)  sigs 17->17  holding
+  INTC   Technology     day  -3.2%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 47->47  holding
+  SNDK   Technology     day  -2.6%  tier 2->2  P 44.4% -> 44.4% (+0.0)  sigs 54->54  holding
+  AMKR   Technology     day  -2.3%  tier 1->1  P 53.2% -> 53.2% (+0.0)  sigs 39->39  holding
+  AMAT   Technology     day  -2.2%  tier 1->1  P 46.6% -> 46.6% (+0.0)  sigs 47->47  holding
+  VICR   Technology     day  -2.1%  tier 2->2  P 44.9% -> 44.9% (+0.0)  sigs 65->65  holding
+  MU     Technology     day  -1.7%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 31->31  holding
+  PBF    Energy         day  -1.5%  tier 2->2  P 40.5% -> 40.5% (+0.0)  sigs 85->85  holding
+  HIMS   Healthcare     day  -0.7%  tier 2->2  P 40.8% -> 40.8% (+0.0)  sigs 38->38  holding
+  PATH   Technology     day  -0.5%  tier 2->2  P 43.1% -> 43.1% (+0.0)  sigs 29->29  holding
+  TTMI   Technology     day  -0.3%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 50->50  holding
+  SYNA   Technology     day  -0.3%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 38->38  holding
+  VRT    Industrials    day  -0.2%  tier 1->1  P 46.0% -> 46.0% (+0.0)  sigs 46->46  holding
+  PSN    Technology     day  -0.0%  tier 2->2  P 42.8% -> 42.8% (+0.0)  sigs 10->10  holding
+  ENTG   Technology     day  -0.0%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 30->30  holding
+
+UP ON THE DAY BUT WEAKENING FROM TIER 1-2 (0):
+
+PROJECTED TO ENTER TIER 1-2 (0):
+
+LARGEST PROJECTED PROBABILITY CHANGES, ANY TIER:
+  MRVL   Technology     day  +5.8%  tier 1->1  P 53.3% -> 53.3% (+0.0)  sigs 50->50  holding
+  AMKR   Technology     day  -2.3%  tier 1->1  P 53.2% -> 53.2% (+0.0)  sigs 39->39  holding
+  TTMI   Technology     day  -0.3%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 50->50  holding
+  GLW    Technology     day  +6.0%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 35->35  holding
+  LITE   Technology     day  +3.8%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 44->44  holding
+  MRNA   Healthcare     day  -7.8%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 122->122  holding
+  ENTG   Technology     day  -0.0%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 30->30  holding
+  DELL   Technology     day  +3.9%  tier 1->1  P 52.9% -> 52.9% (+0.0)  sigs 64->64  holding
+  HPE    Technology     day  +3.1%  tier 1->1  P 52.8% -> 52.8% (+0.0)  sigs 97->97  holding
+  SMTC   Technology     day  +2.3%  tier 1->1  P 52.8% -> 52.8% (+0.0)  sigs 74->74  holding
+  MKSI   Technology     day  +0.3%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 66->66  holding
+  MTSI   Technology     day  +6.8%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 41->41  holding
+  COHR   Technology     day  +1.4%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 25->25  holding
+  SANM   Technology     day  +1.3%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 33->33  holding
+  SITM   Technology     day  +0.1%  tier 1->1  P 51.2% -> 51.2% (+0.0)  sigs 65->65  holding

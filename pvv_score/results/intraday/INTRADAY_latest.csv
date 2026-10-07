@@ -1,0 +1,894 @@
+ticker,Sector,tier_close,P_close,sigs_close,tier_now,P_now,sigs_now,rank_now,rank_close,day_ret,basis_now,dP,dsig,status
+MRVL,Technology,1,0.5329,50,1,0.5329,50,1,1,0.05810141849078332,composite 1.00 (+signatures),0.0,0,holding
+AMKR,Technology,1,0.5319,39,1,0.5319,39,2,2,-0.022698181479453128,composite 1.00 (+signatures),0.0,0,holding
+TTMI,Technology,1,0.5292,50,1,0.5292,50,3,3,-0.003229628043806998,composite 0.99 (+signatures),0.0,0,holding
+GLW,Technology,1,0.5292,35,1,0.5292,35,4,4,0.06023722405498333,composite 0.99 (+signatures),0.0,0,holding
+LITE,Technology,1,0.5292,44,1,0.5292,44,5,5,0.03822581804840697,composite 0.99 (+signatures),0.0,0,holding
+MRNA,Healthcare,1,0.5292,122,1,0.5292,122,6,6,-0.07750602568591525,composite 0.99 (+signatures),0.0,0,holding
+ENTG,Technology,1,0.5292,30,1,0.5292,30,7,7,-0.00017971950410944348,composite 0.99 (+signatures),0.0,0,holding
+DELL,Technology,1,0.5292,64,1,0.5292,64,8,8,0.039309099995259,composite 0.99 (+signatures),0.0,0,holding
+HPE,Technology,1,0.528,97,1,0.528,97,9,9,0.031012327788964456,composite 0.98 (+signatures),0.0,0,holding
+SMTC,Technology,1,0.528,74,1,0.528,74,10,10,0.022662423252042485,composite 0.98 (+signatures),0.0,0,holding
+MKSI,Technology,1,0.512,66,1,0.512,66,11,11,0.0032442198292670366,signatures x66 (+composite),0.0,0,holding
+MTSI,Technology,1,0.512,41,1,0.512,41,12,12,0.06813897796692125,signatures x41 (+composite),0.0,0,holding
+COHR,Technology,1,0.512,25,1,0.512,25,13,13,0.014146896343049553,signatures x25 (+composite),0.0,0,holding
+SANM,Technology,1,0.512,33,1,0.512,33,14,14,0.013284189927314616,signatures x33 (+composite),0.0,0,holding
+SITM,Technology,1,0.512,65,1,0.512,65,15,15,0.0014365663382558402,signatures x65 (+composite),0.0,0,holding
+P,Technology,1,0.512,82,1,0.512,82,16,16,0.02307472861245552,signatures x82 (+composite),0.0,0,holding
+LSCC,Technology,1,0.512,30,1,0.512,30,17,17,0.012194166674898144,signatures x30 (+composite),0.0,0,holding
+NVT,Industrials,1,0.512,54,1,0.512,54,18,18,0.039660255760199714,signatures x54 (+composite),0.0,0,holding
+AMD,Technology,1,0.512,73,1,0.512,73,19,19,0.027969897760437235,signatures x73 (+composite),0.0,0,holding
+RMBS,Technology,1,0.512,11,1,0.512,11,20,20,0.03436077226901224,signatures x11 (+composite),0.0,0,holding
+SMCI,Technology,1,0.512,56,1,0.512,56,21,21,0.006251457891844003,signatures x56 (+composite),0.0,0,holding
+CGNX,Technology,1,0.4736,7,1,0.4736,7,22,22,0.03075960296807967,signatures x7 (+composite),0.0,0,holding
+NXT,Technology,1,0.4736,9,1,0.4736,9,23,23,0.06170899170614841,signatures x9 (+composite),0.0,0,holding
+AMAT,Technology,1,0.466,47,1,0.466,47,24,24,-0.022147247025115946,composite 0.97 (+signatures),0.0,0,holding
+FLEX,Technology,1,0.466,41,1,0.466,41,25,25,0.03956830278057977,composite 0.97 (+signatures),0.0,0,holding
+VIAV,Technology,1,0.4619,25,1,0.4619,25,26,26,0.026220412411793736,composite 0.97 (+signatures),0.0,0,holding
+MU,Technology,1,0.46,31,1,0.46,31,27,27,-0.017293792077981096,signatures x31 (+composite),0.0,0,holding
+KLAC,Technology,1,0.46,38,1,0.46,38,28,28,-0.0453952096329614,signatures x38 (+composite),0.0,0,holding
+AEIS,Industrials,1,0.46,19,1,0.46,19,29,29,0.01843311349604937,signatures x19 (+composite),0.0,0,holding
+ON,Technology,1,0.46,77,1,0.46,77,30,30,0.004422172140910341,signatures x77 (+composite),0.0,0,holding
+BE,Industrials,1,0.46,54,1,0.46,54,31,31,0.03185070670578671,signatures x54 (+composite),0.0,0,holding
+ONTO,Technology,1,0.46,10,1,0.46,10,32,32,-0.03595467894459692,signatures x10 (+composite),0.0,0,holding
+SYNA,Technology,1,0.46,38,1,0.46,38,33,33,-0.0028397557650737815,signatures x38 (+composite),0.0,0,holding
+LRCX,Technology,1,0.46,31,1,0.46,31,34,34,-0.03444179746952969,signatures x31 (+composite),0.0,0,holding
+INTC,Technology,1,0.46,47,1,0.46,47,35,35,-0.03175834722326554,signatures x47 (+composite),0.0,0,holding
+VRT,Industrials,1,0.46,46,1,0.46,46,36,36,-0.0018925784117189703,signatures x46 (+composite),0.0,0,holding
+CIEN,Technology,1,0.46,29,1,0.46,29,37,37,0.13846901669793676,signatures x29 (+composite),0.0,0,holding
+JBL,Technology,1,0.46,37,1,0.46,37,38,38,0.02741410225649976,signatures x37 (+composite),0.0,0,holding
+OKTA,Technology,2,0.4495,82,2,0.4495,82,39,39,0.0017408259402638127,signatures x82 (+composite),0.0,0,holding
+TWLO,Technology,2,0.4495,90,2,0.4495,90,40,40,-0.06812668156762036,signatures x90 (+composite),0.0,0,holding
+STX,Technology,2,0.4492,68,2,0.4492,68,41,41,-0.09182835958759838,signatures x68 (+composite),0.0,0,holding
+VICR,Technology,2,0.4491,65,2,0.4491,65,42,42,-0.020679876671471864,signatures x65 (+composite),0.0,0,holding
+CRWD,Technology,2,0.4458,59,2,0.4458,59,43,43,0.0227013298822778,signatures x59 (+composite),0.0,0,holding
+SNDK,Technology,2,0.4443,54,2,0.4443,54,44,44,-0.025643174564425775,signatures x54 (+composite),0.0,0,holding
+STRL,Industrials,2,0.4395,23,2,0.4395,23,45,45,0.07712147981879203,composite 0.95 (+signatures),0.0,0,holding
+WDC,Technology,2,0.4395,39,2,0.4395,39,46,46,-0.06928721376815095,composite 0.95 (+signatures),0.0,0,holding
+KEYS,Technology,2,0.4395,3,2,0.4395,3,47,47,0.01004759668023536,composite 0.95 (+signatures),0.0,0,holding
+WHR,Consumer Cyclical,2,0.4332,16,2,0.4332,16,48,48,0.003995968336361955,signatures x16 (+composite),0.0,0,holding
+PATH,Technology,2,0.4314,29,2,0.4314,29,49,49,-0.004559229987694979,composite 0.94 (+signatures),0.0,0,holding
+PWR,Industrials,2,0.4275,11,2,0.4275,11,50,50,0.052881120763465406,signatures x11 (+composite),0.0,0,holding
+KTOS,Industrials,2,0.4275,8,2,0.4275,8,51,51,0.04021891024031965,signatures x8 (+composite),0.0,0,holding
+PSN,Technology,2,0.4275,10,2,0.4275,10,52,52,-0.00023752401057930417,signatures x10 (+composite),0.0,0,holding
+IESC,Industrials,2,0.4158,29,2,0.4158,29,53,53,0.0065661946245498815,composite 0.94 (+signatures),0.0,0,holding
+DDOG,Technology,2,0.4144,37,2,0.4144,37,54,54,0.006602324884817268,composite 0.94 (+signatures),0.0,0,holding
+TER,Technology,2,0.4144,17,2,0.4144,17,55,55,-0.0319663273437103,composite 0.94 (+signatures),0.0,0,holding
+RRX,Industrials,2,0.4108,2,2,0.4108,2,56,56,0.03162598460400812,composite 0.93 (+signatures),0.0,0,holding
+ALGM,Technology,2,0.4078,33,2,0.4078,33,57,57,0.007800292360944594,signatures x33 (+composite),0.0,0,holding
+BRKR,Healthcare,2,0.4078,20,2,0.4078,20,58,58,-0.05261510457622687,signatures x20 (+composite),0.0,0,holding
+HIMS,Healthcare,2,0.4078,38,2,0.4078,38,59,59,-0.006740841335529768,signatures x38 (+composite),0.0,0,holding
+DOCN,Technology,2,0.4071,35,2,0.4071,35,60,60,-0.045325376480026436,signatures x35 (+composite),0.0,0,holding
+PANW,Technology,2,0.4071,45,2,0.4071,45,61,61,0.032328630103193756,signatures x45 (+composite),0.0,0,holding
+PBF,Energy,2,0.4047,85,2,0.4047,85,62,62,-0.01520920096237699,signatures x85 (+composite),0.0,0,holding
+BTSG,Healthcare,3,0.3999,18,3,0.3999,18,63,63,0.02822580645161299,signatures x18 (+composite),0.0,0,holding
+FN,Technology,3,0.3999,6,3,0.3999,6,64,64,0.07782480083117771,signatures x6 (+composite),0.0,0,holding
+MP,Basic Materials,3,0.3999,4,3,0.3999,4,65,65,0.03608024383440589,signatures x4 (+composite),0.0,0,holding
+IPGP,Technology,3,0.3999,7,3,0.3999,7,66,66,0.0010766024991377687,signatures x7 (+composite),0.0,0,holding
+AAON,Industrials,3,0.3999,8,3,0.3999,8,67,67,0.044101971404829854,signatures x8 (+composite),0.0,0,holding
+CDE,Basic Materials,3,0.3999,28,3,0.3999,28,68,68,0.0070381727039940944,signatures x28 (+composite),0.0,0,holding
+CRS,Industrials,3,0.3999,30,3,0.3999,30,69,69,0.008949462363081251,signatures x30 (+composite),0.0,0,holding
+MOG-A,Industrials,3,0.3999,5,3,0.3999,5,70,70,-0.013909348603014293,signatures x5 (+composite),0.0,0,holding
+NOVT,Technology,3,0.3999,7,3,0.3999,7,71,71,-0.010025858181506142,signatures x7 (+composite),0.0,0,holding
+SNPS,Technology,3,0.3983,7,3,0.3983,7,72,72,0.03418840904312925,signatures x7 (+composite),0.0,0,holding
+GEV,Industrials,3,0.3979,11,3,0.3979,11,73,73,0.03960602114898992,signatures x11 (+composite),0.0,0,holding
+ZBRA,Technology,3,0.3962,9,3,0.3962,9,74,74,0.02693924031979189,signatures x9 (+composite),0.0,0,holding
+RGEN,Healthcare,3,0.393,87,3,0.393,87,75,75,-0.07725593345460913,signatures x87 (+composite),0.0,0,holding
+MTZ,Industrials,3,0.3878,1,3,0.3878,1,76,76,0.04056522061469425,composite 0.92 (+signatures),0.0,0,holding
+ARW,Technology,3,0.3878,3,3,0.3878,3,77,77,0.0007492826361943372,composite 0.91 (+signatures),0.0,0,holding
+CAT,Industrials,3,0.3878,2,3,0.3878,2,78,78,0.018039459910768052,composite 0.90 (+signatures),0.0,0,holding
+SN,Consumer Cyclical,3,0.3878,4,3,0.3878,4,79,79,0.01111171247560705,composite 0.90 (+signatures),0.0,0,holding
+ATI,Industrials,3,0.3878,5,3,0.3878,5,80,80,0.00828632313357014,composite 0.89 (+signatures),0.0,0,holding
+AVT,Technology,3,0.3878,0,3,0.3878,0,81,81,0.0016950777007007645,composite 0.89,0.0,0,holding
+QLYS,Technology,3,0.3838,50,3,0.3838,50,82,82,0.006291524290721329,signatures x50 (+composite),0.0,0,holding
+NTAP,Technology,3,0.3832,0,3,0.3832,0,83,83,0.020914298549518318,composite 0.89,0.0,0,holding
+MTDR,Energy,3,0.3774,7,3,0.3774,7,84,84,-0.0018864077964038106,signatures x7 (+composite),0.0,0,holding
+HRB,Consumer Cyclical,3,0.3762,14,3,0.3762,14,85,85,0.015000025431315178,signatures x14 (+composite),0.0,0,holding
+DY,Industrials,3,0.371,1,3,0.371,1,86,86,0.05837975583936017,composite 0.87 (+signatures),0.0,0,holding
+ANET,Technology,3,0.3703,3,3,0.3703,3,87,87,0.040889352167404525,composite 0.87 (+signatures),0.0,0,holding
+WCC,Industrials,3,0.3703,2,3,0.3703,2,88,88,0.018563207902571044,composite 0.87 (+signatures),0.0,0,holding
+FCX,Basic Materials,3,0.3703,1,3,0.3703,1,89,89,-0.0005509768094774659,composite 0.87 (+signatures),0.0,0,holding
+SWKS,Technology,3,0.3703,71,3,0.3703,71,90,90,-0.01334766652009789,signatures x71 (+composite),0.0,0,holding
+HL,Basic Materials,3,0.3703,50,3,0.3703,50,91,91,0.005291014190292431,signatures x50 (+composite),0.0,0,holding
+EME,Industrials,3,0.3635,5,3,0.3635,5,92,92,0.05816222614762667,signatures x5 (+composite),0.0,0,holding
+GME,Consumer Cyclical,3,0.3629,43,3,0.3629,43,93,93,-0.019017414682609757,signatures x43 (+composite),0.0,0,holding
+ARWR,Healthcare,3,0.3628,42,3,0.3628,42,94,94,-0.012991139990644052,signatures x42 (+composite),0.0,0,holding
+HOOD,Financial,3,0.3628,40,3,0.3628,40,95,95,-0.018490935054470192,signatures x40 (+composite),0.0,0,holding
+DOCS,Healthcare,3,0.3628,41,3,0.3628,41,96,96,-0.02764167285820862,signatures x41 (+composite),0.0,0,holding
+QCOM,Technology,3,0.3595,21,3,0.3595,21,97,97,0.001327537485906083,signatures x21 (+composite),0.0,0,holding
+WDAY,Technology,3,0.3595,28,3,0.3595,28,98,98,-0.01275404094242405,signatures x28 (+composite),0.0,0,holding
+EL,Consumer Defensive,3,0.3595,20,3,0.3595,20,99,99,0.0006430606284166807,signatures x20 (+composite),0.0,0,holding
+ILMN,Healthcare,3,0.3569,36,3,0.3569,36,100,100,-0.06860973723647423,signatures x36 (+composite),0.0,0,holding
+GNRC,Industrials,3,0.3569,34,3,0.3569,34,101,101,0.039126386098278676,signatures x34 (+composite),0.0,0,holding
+JBHT,Industrials,3,0.3569,34,3,0.3569,34,102,102,-0.01658401987587743,signatures x34 (+composite),0.0,0,holding
+GDDY,Technology,3,0.3555,30,3,0.3555,30,103,103,-0.0156406415881869,signatures x30 (+composite),0.0,0,holding
+VFC,Consumer Cyclical,3,0.3517,8,3,0.3517,8,104,104,0.012613829413266497,signatures x8 (+composite),0.0,0,holding
+DVA,Healthcare,3,0.3517,30,3,0.3517,30,105,105,0.009400138005295933,signatures x30 (+composite),0.0,0,holding
+FIX,Industrials,4,0.3491,6,4,0.3491,6,106,106,0.06122926555080577,composite 0.85 (+signatures),0.0,0,holding
+MPWR,Technology,4,0.3491,6,4,0.3491,6,107,107,-0.004189550021161836,composite 0.85 (+signatures),0.0,0,holding
+LFUS,Technology,4,0.3491,3,4,0.3491,3,108,108,0.006335530695340541,composite 0.85 (+signatures),0.0,0,holding
+MCHP,Technology,4,0.3491,6,4,0.3491,6,109,109,-0.0028223798449910076,composite 0.84 (+signatures),0.0,0,holding
+CVLT,Technology,4,0.3473,19,4,0.3473,19,110,110,0.008131139235932894,signatures x19 (+composite),0.0,0,holding
+FTNT,Technology,4,0.3451,4,4,0.3451,4,111,111,0.03877694672409637,signatures x4 (+composite),0.0,0,holding
+SNX,Technology,4,0.3437,8,4,0.3437,8,112,112,0.0039671310890014855,composite 0.83 (+signatures),0.0,0,holding
+TKR,Industrials,4,0.3437,5,4,0.3437,5,113,113,-0.003750287159377197,composite 0.82 (+signatures),0.0,0,holding
+ANF,Consumer Cyclical,4,0.3437,2,4,0.3437,2,114,114,-7.068251249897628e-05,composite 0.81 (+signatures),0.0,0,holding
+DUOL,Technology,4,0.3436,24,4,0.3436,24,115,115,0.007002030839971862,signatures x24 (+composite),0.0,0,holding
+HPQ,Technology,4,0.3436,21,4,0.3436,21,116,116,0.008261844123126583,signatures x21 (+composite),0.0,0,holding
+MOH,Healthcare,4,0.3436,19,4,0.3436,19,117,117,0.005771683069176525,signatures x19 (+composite),0.0,0,holding
+VAL,Energy,4,0.3431,28,4,0.3431,28,118,118,-0.017846423546455936,signatures x28 (+composite),0.0,0,holding
+ACN,Technology,4,0.3431,23,4,0.3431,23,119,119,-0.008459416198192016,signatures x23 (+composite),0.0,0,holding
+MUR,Energy,4,0.3429,15,4,0.3429,15,120,120,-0.015629030572031688,signatures x15 (+composite),0.0,0,holding
+NOW,Technology,4,0.3416,18,4,0.3416,18,121,121,0.013888884216763264,signatures x18 (+composite),0.0,0,holding
+CLF,Basic Materials,4,0.3413,18,4,0.3413,18,122,122,0.004098376353816935,signatures x18 (+composite),0.0,0,holding
+VST,Utilities,4,0.3408,12,4,0.3408,12,123,123,0.10773690852445972,signatures x12 (+composite),0.0,0,holding
+TXN,Technology,4,0.3405,2,4,0.3405,2,124,124,0.007901041499043249,composite 0.80 (+signatures),0.0,0,holding
+LUV,Industrials,4,0.3405,0,4,0.3405,0,125,125,0.014336972776459733,composite 0.80,0.0,0,holding
+DBX,Technology,4,0.3389,18,4,0.3389,18,126,126,-0.01862087313173333,signatures x18 (+composite),0.0,0,holding
+ABNB,Consumer Cyclical,4,0.3387,17,4,0.3387,17,127,127,-0.022429498203765275,signatures x17 (+composite),0.0,0,holding
+AKAM,Technology,4,0.3373,8,4,0.3373,8,128,128,0.00583391883762463,signatures x8 (+composite),0.0,0,holding
+AA,Basic Materials,4,0.3373,8,4,0.3373,8,129,129,-0.007358093749624484,signatures x8 (+composite),0.0,0,holding
+GWRE,Technology,4,0.3373,12,4,0.3373,12,130,130,0.007903011570711271,signatures x12 (+composite),0.0,0,holding
+PEGA,Technology,4,0.3367,6,4,0.3367,6,131,131,0.002027213938570638,signatures x6 (+composite),0.0,0,holding
+IT,Technology,4,0.3326,9,4,0.3326,9,132,132,-0.015125673311559562,signatures x9 (+composite),0.0,0,holding
+CHRD,Energy,4,0.3326,12,4,0.3326,12,133,133,-0.011357931307040103,signatures x12 (+composite),0.0,0,holding
+ADBE,Technology,4,0.3326,10,4,0.3326,10,134,134,-0.0028058050495545217,signatures x10 (+composite),0.0,0,holding
+KRYS,Healthcare,4,0.3295,6,4,0.3295,6,135,135,-0.024010776163570946,signatures x6 (+composite),0.0,0,holding
+KNX,Industrials,4,0.3293,15,4,0.3293,15,136,136,-0.00935010162975991,signatures x15 (+composite),0.0,0,holding
+FIVE,Consumer Cyclical,4,0.3293,16,4,0.3293,16,137,137,-0.02783306956278153,signatures x16 (+composite),0.0,0,holding
+LSTR,Industrials,4,0.3286,13,4,0.3286,13,138,138,-0.012673742281710254,signatures x13 (+composite),0.0,0,holding
+STLD,Basic Materials,4,0.3261,0,4,0.3261,0,139,139,-0.011906717545335344,composite 0.79,0.0,0,holding
+AAL,Industrials,4,0.3261,1,4,0.3261,1,140,140,0.013250200881126606,composite 0.79 (+signatures),0.0,0,holding
+HWM,Industrials,4,0.3261,1,4,0.3261,1,141,141,0.008842613209616434,composite 0.78 (+signatures),0.0,0,holding
+TPR,Consumer Cyclical,4,0.3261,0,4,0.3261,0,142,142,-0.0017101064853443093,composite 0.78,0.0,0,holding
+PLTR,Technology,4,0.3261,3,4,0.3261,3,143,143,0.014097220241694686,composite 0.78 (+signatures),0.0,0,holding
+ELF,Consumer Defensive,4,0.3261,10,4,0.3261,10,144,144,-0.009253003223832823,composite 0.78 (+signatures),0.0,0,holding
+ST,Technology,4,0.3261,1,4,0.3261,1,145,145,0.017373176553422187,composite 0.78 (+signatures),0.0,0,holding
+VEEV,Healthcare,4,0.3254,4,4,0.3254,4,146,146,0.00017635488028222568,signatures x4 (+composite),0.0,0,holding
+LYB,Basic Materials,4,0.3254,5,4,0.3254,5,147,147,-0.004897009617520265,signatures x5 (+composite),0.0,0,holding
+ALGN,Healthcare,4,0.3254,2,4,0.3254,2,148,148,0.005687899654987616,signatures x2 (+composite),0.0,0,holding
+NOV,Energy,4,0.3246,4,4,0.3246,4,149,149,-0.026140452224436728,signatures x4 (+composite),0.0,0,holding
+FSLR,Technology,4,0.3233,2,4,0.3233,2,150,150,0.0206630297115018,composite 0.77 (+signatures),0.0,0,holding
+CDNS,Technology,4,0.3233,1,4,0.3233,1,151,151,0.01717205108629294,composite 0.77 (+signatures),0.0,0,holding
+TEX,Industrials,4,0.3233,0,4,0.3233,0,152,152,-0.0022847287281021478,composite 0.77,0.0,0,holding
+NXPI,Technology,4,0.3233,0,4,0.3233,0,153,153,0.009959927470146068,composite 0.77,0.0,0,holding
+ALB,Basic Materials,4,0.3222,4,4,0.3222,4,154,154,0.018970927234203794,signatures x4 (+composite),0.0,0,holding
+ECHO,Communication Services,4,0.3175,3,4,0.3175,3,155,155,0.018328103742365265,signatures x3 (+composite),0.0,0,holding
+HALO,Healthcare,4,0.317,3,4,0.317,3,156,156,0.013018222637726451,signatures x3 (+composite),0.0,0,holding
+HAL,Energy,4,0.317,5,4,0.317,5,157,157,-0.0018303099703482761,signatures x5 (+composite),0.0,0,holding
+GOOGL,Communication Services,4,0.315,0,4,0.315,0,158,158,0.0034923411862932685,composite 0.76,0.0,0,holding
+WWD,Industrials,4,0.315,0,4,0.315,0,159,159,-0.0012013272067203928,composite 0.75,0.0,0,holding
+ENS,Industrials,4,0.3135,9,4,0.3135,9,160,160,-0.0027458230627160907,signatures x9 (+composite),0.0,0,holding
+SLB,Energy,4,0.3135,4,4,0.3135,4,161,161,-0.0055687904951216005,signatures x4 (+composite),0.0,0,holding
+FDX,Industrials,4,0.3135,2,4,0.3135,2,162,162,-0.0003458862858461975,signatures x2 (+composite),0.0,0,holding
+LEA,Consumer Cyclical,4,0.3135,2,4,0.3135,2,163,163,0.005522114553976998,signatures x2 (+composite),0.0,0,holding
+WFRD,Energy,4,0.3121,4,4,0.3121,4,164,164,-0.02891153136833169,signatures x4 (+composite),0.0,0,holding
+SKYD,Communication Services,4,0.3121,11,4,0.3121,11,165,165,-0.025562372886082874,signatures x11 (+composite),0.0,0,holding
+LII,Industrials,4,0.3115,1,4,0.3115,1,166,166,0.01240484857272972,composite 0.75 (+signatures),0.0,0,holding
+BROS,Consumer Cyclical,4,0.3106,0,4,0.3106,0,167,167,0.02171074656011185,composite 0.75,0.0,0,holding
+SPXC,Industrials,4,0.3106,0,4,0.3106,0,168,168,-0.005542962164158838,composite 0.75,0.0,0,holding
+RDDT,Communication Services,4,0.3106,1,4,0.3106,1,169,169,-0.009772644851731016,composite 0.75 (+signatures),0.0,0,holding
+CMI,Industrials,4,0.3106,0,4,0.3106,0,170,170,0.022813693090550258,composite 0.75,0.0,0,holding
+APH,Technology,4,0.3106,1,4,0.3106,1,171,171,0.015469303946889612,composite 0.75 (+signatures),0.0,0,holding
+GOOG,Communication Services,4,0.3106,0,4,0.3106,0,172,172,0.0022104231605908353,composite 0.75,0.0,0,holding
+IBKR,Financial,4,0.3106,1,4,0.3106,1,173,173,0.017181344490326378,composite 0.75 (+signatures),0.0,0,holding
+EXPE,Consumer Cyclical,4,0.3072,3,4,0.3072,3,174,174,-0.00038438750952907164,signatures x3 (+composite),0.0,0,holding
+PCG,Utilities,4,0.3072,5,4,0.3072,5,175,175,0.012145717724457494,signatures x5 (+composite),0.0,0,holding
+NYT,Communication Services,4,0.3072,5,4,0.3072,5,176,176,0.001093745231628418,signatures x5 (+composite),0.0,0,holding
+AVTR,Healthcare,4,0.306,7,4,0.306,7,177,177,-0.02403542722044605,signatures x7 (+composite),0.0,0,holding
+ROIV,Healthcare,4,0.306,5,4,0.306,5,178,178,-0.006987143894053305,signatures x5 (+composite),0.0,0,holding
+FOUR,Technology,4,0.306,4,4,0.306,4,179,179,0.025299621364621272,signatures x4 (+composite),0.0,0,holding
+BBY,Consumer Cyclical,4,0.306,4,4,0.306,4,180,180,-0.02906512110387094,signatures x4 (+composite),0.0,0,holding
+FLR,Industrials,4,0.306,6,4,0.306,6,181,181,0.02746491548874097,signatures x6 (+composite),0.0,0,holding
+ORCL,Technology,4,0.306,5,4,0.306,5,182,182,0.016072491673153833,signatures x5 (+composite),0.0,0,holding
+CRM,Technology,4,0.306,7,4,0.306,7,183,183,-0.020888584939344312,signatures x7 (+composite),0.0,0,holding
+HXL,Industrials,4,0.306,6,4,0.306,6,184,184,0.0012805658719159396,signatures x6 (+composite),0.0,0,holding
+COIN,Financial,4,0.306,6,4,0.306,6,185,185,-0.013176047770986132,signatures x6 (+composite),0.0,0,holding
+BILL,Technology,4,0.306,7,4,0.306,7,186,186,-0.011912847246545732,signatures x7 (+composite),0.0,0,holding
+CBOE,Financial,4,0.306,5,4,0.306,5,187,187,0.0026309546369571724,signatures x5 (+composite),0.0,0,holding
+WEX,Technology,4,0.306,7,4,0.306,7,188,188,-0.005797773798531747,signatures x7 (+composite),0.0,0,holding
+CDW,Technology,4,0.306,3,4,0.306,3,189,189,0.013067503165526517,signatures x3 (+composite),0.0,0,holding
+ROK,Industrials,4,0.306,4,4,0.306,4,190,190,-0.009754388402059666,signatures x4 (+composite),0.0,0,holding
+JKHY,Technology,4,0.306,5,4,0.306,5,191,191,-0.004754702760629614,signatures x5 (+composite),0.0,0,holding
+CELH,Consumer Defensive,4,0.306,3,4,0.306,3,192,192,-0.008357541366662447,signatures x3 (+composite),0.0,0,holding
+THC,Healthcare,4,0.306,2,4,0.306,2,193,193,-0.0038540100793749144,signatures x2 (+composite),0.0,0,holding
+DAL,Industrials,4,0.306,3,4,0.306,3,194,194,0.006981244803462294,signatures x3 (+composite),0.0,0,holding
+ROKU,Communication Services,4,0.306,3,4,0.306,3,195,195,-0.0087999874277368,signatures x3 (+composite),0.0,0,holding
+ESAB,Industrials,4,0.3059,1,4,0.3059,1,196,196,0.0051777603039799835,signatures x1 (+composite),0.0,0,holding
+FND,Consumer Cyclical,4,0.3059,1,4,0.3059,1,197,197,0.008807730486184218,signatures x1 (+composite),0.0,0,holding
+ALK,Industrials,4,0.3059,1,4,0.3059,1,198,198,0.01786171950673121,signatures x1 (+composite),0.0,0,holding
+EVR,Financial,4,0.3059,2,4,0.3059,2,199,199,0.010288224631451515,signatures x2 (+composite),0.0,0,holding
+CF,Basic Materials,4,0.3059,5,4,0.3059,5,200,200,0.0,signatures x5 (+composite),0.0,0,holding
+RGLD,Basic Materials,4,0.3059,5,4,0.3059,5,201,201,0.003038891952242606,signatures x5 (+composite),0.0,0,holding
+CTSH,Technology,4,0.3059,8,4,0.3059,8,202,202,-0.01633139037555198,signatures x8 (+composite),0.0,0,holding
+ACM,Industrials,4,0.3059,5,4,0.3059,5,203,203,0.006693466149827021,signatures x5 (+composite),0.0,0,holding
+GEN,Technology,4,0.3059,5,4,0.3059,5,204,204,0.023339251992336107,signatures x5 (+composite),0.0,0,holding
+NVST,Healthcare,4,0.3051,4,4,0.3051,4,205,205,-0.002999130007137474,signatures x4 (+composite),0.0,0,holding
+ODFL,Industrials,4,0.3051,3,4,0.3051,3,206,206,-0.00752629136129801,signatures x3 (+composite),0.0,0,holding
+DOW,Basic Materials,4,0.3051,3,4,0.3051,3,207,207,-0.012276407529283717,signatures x3 (+composite),0.0,0,holding
+DOCU,Technology,4,0.3051,2,4,0.3051,2,208,208,-0.025846031559961236,signatures x2 (+composite),0.0,0,holding
+MANH,Technology,4,0.3051,2,4,0.3051,2,209,209,-0.01270382404049919,signatures x2 (+composite),0.0,0,holding
+ISRG,Healthcare,4,0.3051,2,4,0.3051,2,210,210,-0.004231453390609596,signatures x2 (+composite),0.0,0,holding
+RH,Consumer Cyclical,4,0.3051,2,4,0.3051,2,211,211,-0.0024690787030041683,signatures x2 (+composite),0.0,0,holding
+DKS,Consumer Cyclical,4,0.3041,0,4,0.3041,0,212,212,-0.016407787645911553,composite 0.74,0.0,0,holding
+YETI,Consumer Cyclical,4,0.3041,0,4,0.3041,0,213,213,-0.006663387332512705,composite 0.74,0.0,0,holding
+ETN,Industrials,4,0.3041,0,4,0.3041,0,214,214,0.028871914142752697,composite 0.74,0.0,0,holding
+NEM,Basic Materials,4,0.3041,0,4,0.3041,0,215,215,0.004921427182922766,composite 0.74,0.0,0,holding
+FLS,Industrials,4,0.3037,0,4,0.3037,0,216,216,-0.012920682024715968,composite 0.73,0.0,0,holding
+FFIV,Technology,4,0.3037,0,4,0.3037,0,217,217,0.024556757018300956,composite 0.73,0.0,0,holding
+APP,Communication Services,4,0.3025,1,4,0.3025,1,218,218,-0.011313268885328576,composite 0.73 (+signatures),0.0,0,holding
+CRL,Healthcare,4,0.3025,0,4,0.3025,0,219,219,-0.018695491083401072,composite 0.73,0.0,0,holding
+UAL,Industrials,4,0.3025,0,4,0.3025,0,220,220,0.017000024968927496,composite 0.73,0.0,0,holding
+CVNA,Consumer Cyclical,4,0.3025,2,4,0.3025,2,221,221,0.002510983119066834,composite 0.72 (+signatures),0.0,0,holding
+AVAV,Industrials,4,0.3025,1,4,0.3025,1,222,222,0.030437833032922468,composite 0.72 (+signatures),0.0,0,holding
+NRG,Utilities,4,0.3025,1,4,0.3025,1,223,223,0.0702478843799974,composite 0.71 (+signatures),0.0,0,holding
+CSCO,Technology,5,0.2993,0,5,0.2993,0,224,224,0.04538204893132014,composite 0.71,0.0,0,holding
+ADI,Technology,5,0.2993,2,5,0.2993,2,225,225,0.0034597510578298074,composite 0.71 (+signatures),0.0,0,holding
+NVDA,Technology,5,0.2993,2,5,0.2993,2,226,226,0.001423238197431731,composite 0.71 (+signatures),0.0,0,holding
+CAVA,Consumer Cyclical,5,0.2993,1,5,0.2993,1,227,227,-0.026987044836443985,composite 0.71 (+signatures),0.0,0,holding
+CNH,Industrials,5,0.2993,0,5,0.2993,0,228,228,-0.002255618988042607,composite 0.70,0.0,0,holding
+TSLA,Consumer Cyclical,5,0.2993,1,5,0.2993,1,229,229,0.00514873823802553,composite 0.70 (+signatures),0.0,0,holding
+SAIA,Industrials,5,0.2993,0,5,0.2993,0,230,230,-0.012971689379840945,composite 0.70,0.0,0,holding
+KNF,Basic Materials,5,0.2993,0,5,0.2993,0,231,231,0.024244723724025308,composite 0.70,0.0,0,holding
+HGV,Consumer Cyclical,5,0.299,0,5,0.299,0,232,232,0.019970640834424902,composite 0.69,0.0,0,holding
+FBIN,Industrials,5,0.2963,0,5,0.2963,0,233,233,0.017847869359346902,composite 0.68,0.0,0,holding
+PII,Consumer Cyclical,5,0.2963,0,5,0.2963,0,234,234,0.002468687210253062,composite 0.68,0.0,0,holding
+APTV,Consumer Cyclical,5,0.2963,0,5,0.2963,0,235,235,0.01891095562991607,composite 0.67,0.0,0,holding
+CMC,Industrials,5,0.2963,0,5,0.2963,0,236,236,-0.009158883446124366,composite 0.67,0.0,0,holding
+LIVN,Healthcare,5,0.2963,0,5,0.2963,0,237,237,-0.019625801308526536,composite 0.67,0.0,0,holding
+META,Communication Services,5,0.2963,1,5,0.2963,1,238,238,-0.004070655656919775,composite 0.67 (+signatures),0.0,0,holding
+AVGO,Technology,5,0.2963,0,5,0.2963,0,239,239,0.03668860840992405,composite 0.66,0.0,0,holding
+GXO,Industrials,5,0.2963,0,5,0.2963,0,240,240,0.008914977874507901,composite 0.66,0.0,0,holding
+C,Financial,5,0.2963,0,5,0.2963,0,241,241,-0.00023336272722451756,composite 0.65,0.0,0,holding
+TLN,Utilities,5,0.2963,1,5,0.2963,1,242,242,0.12426549805990339,composite 0.65 (+signatures),0.0,0,holding
+MAS,Industrials,5,0.2963,0,5,0.2963,0,243,243,0.021472410756086857,composite 0.65,0.0,0,holding
+AXON,Industrials,5,0.2963,1,5,0.2963,1,244,244,0.016536746555369408,composite 0.64 (+signatures),0.0,0,holding
+IVZ,Financial,5,0.2963,1,5,0.2963,1,245,245,-0.00393445374535728,composite 0.64 (+signatures),0.0,0,holding
+NCLH,Consumer Cyclical,5,0.2963,1,5,0.2963,1,246,246,0.04303970062194051,composite 0.64 (+signatures),0.0,0,holding
+BDC,Technology,5,0.2963,0,5,0.2963,0,247,247,0.016704091924921283,composite 0.63,0.0,0,holding
+CW,Industrials,5,0.2963,0,5,0.2963,0,248,248,0.02322527796171303,composite 0.63,0.0,0,holding
+SW,Consumer Cyclical,5,0.2963,0,5,0.2963,0,249,249,-0.00047159768534854596,composite 0.63,0.0,0,holding
+GS,Financial,5,0.2963,0,5,0.2963,0,250,250,0.004163555852126244,composite 0.62,0.0,0,holding
+WING,Consumer Cyclical,5,0.2963,0,5,0.2963,0,251,251,0.05016848365849902,composite 0.61,0.0,0,holding
+CARR,Industrials,5,0.2963,0,5,0.2963,0,252,252,0.006639133948033837,composite 0.60,0.0,0,holding
+EMR,Industrials,5,0.2963,0,5,0.2963,0,253,253,-0.0057291192267602264,composite 0.60,0.0,0,holding
+CR,Industrials,5,0.2963,0,5,0.2963,0,254,254,-0.003291839317766665,composite 0.60,0.0,0,holding
+SWK,Industrials,5,0.2963,1,5,0.2963,1,255,255,0.0034567078226901415,composite 0.60 (+signatures),0.0,0,holding
+PYPL,Financial,5,0.2962,0,5,0.2962,0,256,256,0.003675808922998236,composite 0.59,0.0,0,holding
+RVTY,Healthcare,5,0.2962,0,5,0.2962,0,257,257,-0.025800696128916223,composite 0.59,0.0,0,holding
+JCI,Industrials,5,0.2962,0,5,0.2962,0,258,258,0.012177164992010159,composite 0.59,0.0,0,holding
+AVNT,Basic Materials,5,0.2962,0,5,0.2962,0,259,259,-0.002644153838676777,composite 0.59,0.0,0,holding
+LULU,Consumer Cyclical,5,0.2962,0,5,0.2962,0,260,260,0.005046180199517636,composite 0.58,0.0,0,holding
+WSO,Industrials,5,0.2962,0,5,0.2962,0,261,261,-0.004518252102673204,composite 0.58,0.0,0,holding
+DASH,Consumer Cyclical,5,0.2962,0,5,0.2962,0,262,262,0.009646924980499794,composite 0.58,0.0,0,holding
+BBWI,Consumer Cyclical,5,0.292,1,5,0.292,1,263,263,0.02691874257433957,signatures x1 (+composite),0.0,0,holding
+XYZ,Technology,5,0.292,2,5,0.292,2,264,264,0.004066608224352786,signatures x2 (+composite),0.0,0,holding
+BAH,Industrials,5,0.292,2,5,0.292,2,265,265,-0.0068503310963710096,signatures x2 (+composite),0.0,0,holding
+CG,Financial,5,0.292,2,5,0.292,2,266,266,-0.011190199138452761,signatures x2 (+composite),0.0,0,holding
+BX,Financial,5,0.292,1,5,0.292,1,267,267,0.01531571035470436,signatures x1 (+composite),0.0,0,holding
+OPCH,Healthcare,5,0.292,1,5,0.292,1,268,268,0.32648690144492476,signatures x1 (+composite),0.0,0,holding
+PTC,Technology,5,0.292,1,5,0.292,1,269,269,0.0038489832222363685,signatures x1 (+composite),0.0,0,holding
+ELAN,Healthcare,5,0.2918,0,5,0.2918,0,270,270,-0.0013327714944674218,composite 0.57,0.0,0,holding
+BAX,Healthcare,5,0.2918,0,5,0.2918,0,271,271,0.005780400535349228,composite 0.57,0.0,0,holding
+HLNE,Financial,5,0.2908,2,5,0.2908,2,272,272,-0.00950420031663779,signatures x2 (+composite),0.0,0,holding
+FTI,Energy,5,0.2902,2,5,0.2902,2,273,273,-0.00512456384842086,signatures x2 (+composite),0.0,0,holding
+OSK,Industrials,5,0.2896,0,5,0.2896,0,274,274,-0.004070198941626413,composite 0.57,0.0,0,holding
+OC,Industrials,5,0.2896,0,5,0.2896,0,275,275,0.019577760952009138,composite 0.56,0.0,0,holding
+AMG,Financial,5,0.2896,0,5,0.2896,0,276,276,-0.002574234186772717,composite 0.56,0.0,0,holding
+GE,Industrials,5,0.2896,0,5,0.2896,0,277,277,0.009956317643820656,composite 0.55,0.0,0,holding
+LECO,Industrials,5,0.2896,0,5,0.2896,0,278,278,0.002182316498827719,composite 0.55,0.0,0,holding
+BWXT,Industrials,5,0.2896,0,5,0.2896,0,279,279,0.07646834413003933,composite 0.55,0.0,0,holding
+VMI,Industrials,5,0.2896,0,5,0.2896,0,280,280,0.02105485669794116,composite 0.55,0.0,0,holding
+MIDD,Industrials,5,0.2896,0,5,0.2896,0,281,281,0.007706189267341568,composite 0.55,0.0,0,holding
+RBC,Industrials,5,0.2896,0,5,0.2896,0,282,282,0.003121416232769514,composite 0.55,0.0,0,holding
+GM,Consumer Cyclical,5,0.2896,0,5,0.2896,0,283,283,0.022186198489583475,composite 0.54,0.0,0,holding
+CXT,Industrials,5,0.2896,0,5,0.2896,0,284,284,0.012408474618489596,composite 0.54,0.0,0,holding
+IDCC,Technology,5,0.2896,0,5,0.2896,0,285,285,0.0032526275039908015,composite 0.54,0.0,0,holding
+MS,Financial,5,0.2896,0,5,0.2896,0,286,286,0.0043640665671182965,composite 0.53,0.0,0,holding
+CPRI,Consumer Cyclical,5,0.2896,0,5,0.2896,0,287,287,0.012422381505799773,composite 0.53,0.0,0,holding
+IRM,Real Estate,5,0.2896,0,5,0.2896,0,288,288,0.037122746380944927,composite 0.52,0.0,0,holding
+F,Consumer Cyclical,5,0.2896,0,5,0.2896,0,289,289,0.010699598232303709,composite 0.52,0.0,0,holding
+STT,Financial,5,0.2896,0,5,0.2896,0,290,290,-0.0035153094877365954,composite 0.52,0.0,0,holding
+AMZN,Consumer Cyclical,5,0.2896,0,5,0.2896,0,291,291,0.019451132725369025,composite 0.51,0.0,0,holding
+XPO,Industrials,5,0.2896,0,5,0.2896,0,292,292,0.003445285358797179,composite 0.51,0.0,0,holding
+M,Consumer Cyclical,5,0.2896,0,5,0.2896,0,293,293,-0.0022212858241122957,composite 0.51,0.0,0,holding
+PPG,Basic Materials,5,0.2896,0,5,0.2896,0,294,294,0.011874228553823363,composite 0.51,0.0,0,holding
+APG,Industrials,5,0.2896,0,5,0.2896,0,295,295,0.018199746218491297,composite 0.50,0.0,0,holding
+IP,Consumer Cyclical,5,0.2896,0,5,0.2896,0,296,296,0.002808117152271805,composite 0.50,0.0,0,holding
+GPN,Technology,5,0.2896,0,5,0.2896,0,297,297,-0.004745672769532416,composite 0.49,0.0,0,holding
+ALSN,Consumer Cyclical,5,0.2896,0,5,0.2896,0,298,298,-0.008639308855291628,composite 0.49,0.0,0,holding
+TDY,Technology,5,0.2896,0,5,0.2896,0,299,299,0.004163636940314852,composite 0.49,0.0,0,holding
+TEL,Technology,5,0.2896,0,5,0.2896,0,300,300,0.0026492570705634044,composite 0.49,0.0,0,holding
+BWA,Consumer Cyclical,5,0.2896,0,5,0.2896,0,301,301,0.05144378319225096,composite 0.48,0.0,0,holding
+ITT,Industrials,5,0.2896,0,5,0.2896,0,302,302,0.005383126221045309,composite 0.48,0.0,0,holding
+WSM,Consumer Cyclical,5,0.2896,0,5,0.2896,0,303,303,0.014872237524693244,composite 0.48,0.0,0,holding
+CRUS,Technology,5,0.2896,0,5,0.2896,0,304,304,-0.02043671824246407,composite 0.48,0.0,0,holding
+PVH,Consumer Cyclical,5,0.2896,0,5,0.2896,0,305,305,0.04419222284595148,composite 0.48,0.0,0,holding
+SGI,Consumer Cyclical,5,0.2896,0,5,0.2896,0,306,306,0.007224285701162625,composite 0.48,0.0,0,holding
+EQH,Financial,5,0.2896,0,5,0.2896,0,307,307,0.0092592592592593,composite 0.47,0.0,0,holding
+RL,Consumer Cyclical,5,0.2896,0,5,0.2896,0,308,308,0.008562687557162052,composite 0.47,0.0,0,holding
+CRH,Basic Materials,5,0.2896,0,5,0.2896,0,309,309,0.011494215737488211,composite 0.47,0.0,0,holding
+CRBG,Financial,5,0.2896,0,5,0.2896,0,310,310,0.009471814434906412,composite 0.46,0.0,0,holding
+DD,Basic Materials,5,0.2874,0,5,0.2874,0,311,311,0.01981786127100138,composite 0.46,0.0,0,holding
+GAP,Consumer Cyclical,5,0.2863,0,5,0.2863,0,312,312,0.021030115644270486,composite 0.46,0.0,0,holding
+AXTA,Basic Materials,5,0.2863,0,5,0.2863,0,313,313,0.022031860892886668,composite 0.46,0.0,0,holding
+TREX,Industrials,5,0.2863,0,5,0.2863,0,314,314,0.014702590801618065,composite 0.46,0.0,0,holding
+BC,Consumer Cyclical,5,0.2863,0,5,0.2863,0,315,315,0.002313767108472531,composite 0.46,0.0,0,holding
+ARES,Financial,5,0.2863,0,5,0.2863,0,316,316,0.0052078940037179056,composite 0.45,0.0,0,holding
+BEN,Financial,5,0.2843,0,5,0.2843,0,317,317,-0.013382068951114934,composite 0.45,0.0,0,holding
+CSL,Industrials,5,0.2843,0,5,0.2843,0,318,318,-0.015831834485526053,composite 0.45,0.0,0,holding
+IR,Industrials,5,0.2843,0,5,0.2843,0,319,319,0.008402240701123276,composite 0.44,0.0,0,holding
+RCL,Consumer Cyclical,5,0.2843,0,5,0.2843,0,320,320,0.04999454627141953,composite 0.44,0.0,0,holding
+SARO,Industrials,5,0.2843,0,5,0.2843,0,321,321,-0.00475286963490229,composite 0.44,0.0,0,holding
+WMS,Industrials,5,0.2843,0,5,0.2843,0,322,322,0.004944871240476045,composite 0.43,0.0,0,holding
+AYI,Industrials,5,0.2843,0,5,0.2843,0,323,323,-0.00610151349529886,composite 0.43,0.0,0,holding
+LPX,Industrials,5,0.2843,0,5,0.2843,0,324,324,0.02450602621665121,composite 0.43,0.0,0,holding
+XRAY,Healthcare,5,0.2829,0,5,0.2829,0,325,325,-0.004672892510771409,composite 0.43,0.0,0,holding
+DECK,Consumer Cyclical,5,0.2829,0,5,0.2829,0,326,326,0.018077603717582047,composite 0.42,0.0,0,holding
+HUBB,Industrials,5,0.2829,0,5,0.2829,0,327,327,0.009903276450784926,composite 0.42,0.0,0,holding
+KKR,Financial,5,0.2829,0,5,0.2829,0,328,328,0.007892386523992378,composite 0.42,0.0,0,holding
+CNC,Healthcare,5,0.2819,1,5,0.2819,1,329,329,0.004821112657556581,signatures x1 (+composite),0.0,0,holding
+R,Industrials,5,0.2799,0,5,0.2799,0,330,330,0.0009748059894854055,composite 0.41,0.0,0,holding
+VC,Consumer Cyclical,5,0.2799,0,5,0.2799,0,331,331,0.0004480891344409432,composite 0.39,0.0,0,holding
+APO,Financial,5,0.2799,0,5,0.2799,0,332,332,0.005201547308695487,composite 0.39,0.0,0,holding
+URI,Industrials,5,0.2799,0,5,0.2799,0,333,333,0.005901595159003348,composite 0.39,0.0,0,holding
+EXP,Basic Materials,5,0.2799,0,5,0.2799,0,334,334,0.010128288115252904,composite 0.39,0.0,0,holding
+TRMB,Technology,5,0.2799,0,5,0.2799,0,335,335,0.03638835809686514,composite 0.38,0.0,0,holding
+TOST,Technology,5,0.2799,0,5,0.2799,0,336,336,0.006990648404544775,composite 0.38,0.0,0,holding
+CFG,Financial,5,0.2799,0,5,0.2799,0,337,337,-0.0034209489823519013,composite 0.37,0.0,0,holding
+VNO,Real Estate,5,0.2799,0,5,0.2799,0,338,338,0.009334579398888154,composite 0.37,0.0,0,holding
+ALLY,Financial,5,0.2799,0,5,0.2799,0,339,339,-0.0002658021776923425,composite 0.37,0.0,0,holding
+TT,Industrials,5,0.2799,0,5,0.2799,0,340,340,0.011959394948639401,composite 0.37,0.0,0,holding
+FERG,Industrials,5,0.2799,0,5,0.2799,0,341,341,0.001794326328513396,composite 0.36,0.0,0,holding
+SHC,Healthcare,5,0.2766,0,5,0.2766,0,342,342,-0.01617246627488733,composite 0.36,0.0,0,holding
+SYF,Financial,5,0.2694,0,5,0.2694,0,343,343,0.003895470497921938,composite 0.35,0.0,0,holding
+CCL,Consumer Cyclical,5,0.2694,0,5,0.2694,0,344,344,0.03990612202957111,composite 0.35,0.0,0,holding
+VNT,Technology,5,0.2694,0,5,0.2694,0,345,345,0.029789927285098106,composite 0.35,0.0,0,holding
+COF,Financial,5,0.2694,0,5,0.2694,0,346,346,0.003484718339126891,composite 0.35,0.0,0,holding
+ALV,Consumer Cyclical,5,0.2664,0,5,0.2664,0,347,347,0.008744564643546227,composite 0.33,0.0,0,holding
+OLED,Technology,5,0.2664,0,5,0.2664,0,348,348,-0.0017543782493044668,composite 0.32,0.0,0,holding
+BLK,Financial,5,0.2664,0,5,0.2664,0,349,349,0.012161932924452001,composite 0.32,0.0,0,holding
+TOL,Consumer Cyclical,5,0.2664,0,5,0.2664,0,350,350,0.019352895720866847,composite 0.31,0.0,0,holding
+BA,Industrials,5,0.2664,0,5,0.2664,0,351,351,-0.015047705884784102,composite 0.29,0.0,0,holding
+SF,Financial,5,0.2664,0,5,0.2664,0,352,352,-0.00722065024307017,composite 0.29,0.0,0,holding
+CEG,Utilities,5,0.2664,0,5,0.2664,0,353,353,0.12248710626028858,composite 0.26,0.0,0,holding
+JEF,Financial,5,0.2664,0,5,0.2664,0,354,354,-0.01919723091592429,composite 0.26,0.0,0,holding
+SLM,Financial,5,0.2664,0,5,0.2664,0,355,355,-0.007036053167217893,composite 0.24,0.0,0,holding
+WAL,Financial,5,0.2664,0,5,0.2664,0,356,356,0.0009208063393226773,composite 0.23,0.0,0,holding
+CNM,Industrials,5,0.2664,0,5,0.2664,0,357,357,0.006695331930658188,composite 0.18,0.0,0,holding
+THO,Consumer Cyclical,5,0.2664,0,5,0.2664,0,358,358,0.005800110083860943,composite 0.17,0.0,0,holding
+MGM,Consumer Cyclical,5,0.2658,1,5,0.2658,1,359,359,0.01226386603572216,signatures x1 (+composite),0.0,0,holding
+BNY,Financial,5,0.2642,2,5,0.2642,2,360,360,-0.00013916015625003997,signatures x2 (+composite),0.0,0,holding
+VTRS,Healthcare,5,0.2525,0,5,0.2525,0,361,361,-0.004540290572967676,composite 0.87,0.0,0,holding
+LNTH,Healthcare,6,0.2447,0,6,0.2447,0,362,362,-0.002395503416664946,composite 0.82,0.0,0,holding
+NUE,Basic Materials,6,0.2447,0,6,0.2447,0,363,363,-0.0013523580324495965,composite 0.82,0.0,0,holding
+TGT,Consumer Defensive,6,0.2447,0,6,0.2447,0,364,364,0.008758718150059241,composite 0.80,0.0,0,holding
+PK,Real Estate,6,0.2447,0,6,0.2447,0,365,365,-0.0006553229837381602,composite 0.79,0.0,0,holding
+FCFS,Financial,6,0.2447,0,6,0.2447,0,366,366,0.007902324111464187,composite 0.79,0.0,0,holding
+JAZZ,Healthcare,6,0.2447,0,6,0.2447,0,367,367,-0.019700025541212196,composite 0.76,0.0,0,holding
+EXEL,Healthcare,6,0.2447,0,6,0.2447,0,368,368,-0.008835966976194043,composite 0.75,0.0,0,holding
+TROW,Financial,6,0.2447,0,6,0.2447,0,369,369,-0.0031752316952341486,composite 0.75,0.0,0,holding
+KEX,Industrials,6,0.2447,0,6,0.2447,0,370,370,-0.00965324307899107,composite 0.74,0.0,0,holding
+RS,Basic Materials,6,0.2447,0,6,0.2447,0,371,371,-0.01653439192991546,composite 0.73,0.0,0,holding
+DLTR,Consumer Defensive,6,0.2447,0,6,0.2447,0,372,372,0.026504107565091584,composite 0.73,0.0,0,holding
+HUM,Healthcare,6,0.2447,0,6,0.2447,0,373,373,0.0004949184196505474,composite 0.72,0.0,0,holding
+DXCM,Healthcare,6,0.2447,0,6,0.2447,0,374,374,-0.040391278188702806,composite 0.71,0.0,0,holding
+HST,Real Estate,6,0.2447,0,6,0.2447,0,375,375,0.0017824869530642662,composite 0.71,0.0,0,holding
+SON,Consumer Cyclical,6,0.2426,0,6,0.2426,0,376,376,-0.004147672291090365,composite 0.69,0.0,0,holding
+CPAY,Technology,6,0.2426,0,6,0.2426,0,377,377,0.012620749051111657,composite 0.69,0.0,0,holding
+CBT,Basic Materials,6,0.2424,0,6,0.2424,0,378,378,-0.0034892304555422804,composite 0.68,0.0,0,holding
+BIO,Healthcare,6,0.2424,0,6,0.2424,0,379,379,-0.02893481264817077,composite 0.68,0.0,0,holding
+CROX,Consumer Cyclical,6,0.2424,0,6,0.2424,0,380,380,0.01717572330454309,composite 0.68,0.0,0,holding
+DT,Technology,6,0.2424,0,6,0.2424,0,381,381,0.013951173648240722,composite 0.67,0.0,0,holding
+ASH,Basic Materials,6,0.2424,0,6,0.2424,0,382,382,0.031840687413118296,composite 0.67,0.0,0,holding
+WAT,Healthcare,6,0.2424,0,6,0.2424,0,383,383,-0.008384082710043095,composite 0.67,0.0,0,holding
+DG,Consumer Defensive,6,0.2424,0,6,0.2424,0,384,384,0.0331042319673549,composite 0.66,0.0,0,holding
+FTV,Technology,6,0.2424,0,6,0.2424,0,385,385,0.008888084908325267,composite 0.66,0.0,0,holding
+IFF,Basic Materials,6,0.2418,0,6,0.2418,0,386,386,0.007926927885912871,composite 0.65,0.0,0,holding
+CASY,Consumer Cyclical,6,0.2382,0,6,0.2382,0,387,387,0.00562093306183753,composite 0.84,0.0,0,holding
+VRSK,Industrials,6,0.2382,0,6,0.2382,0,388,388,0.011758930568958048,composite 0.76,0.0,0,holding
+ROL,Consumer Cyclical,6,0.2382,0,6,0.2382,0,389,389,0.022229701432811222,composite 0.73,0.0,0,holding
+PAYX,Technology,6,0.2382,0,6,0.2382,0,390,390,0.012427318890956052,composite 0.71,0.0,0,holding
+CACI,Technology,6,0.2382,0,6,0.2382,0,391,391,-0.039330953230500176,composite 0.70,0.0,0,holding
+ACI,Consumer Defensive,6,0.2382,0,6,0.2382,0,392,392,-0.0026064887966055217,composite 0.70,0.0,0,holding
+ESNT,Financial,6,0.2382,0,6,0.2382,0,393,393,0.013095420446265216,composite 0.67,0.0,0,holding
+FNF,Financial,6,0.2382,0,6,0.2382,0,394,394,0.002051329001402147,composite 0.65,0.0,0,holding
+VTR,Real Estate,6,0.2382,0,6,0.2382,0,395,395,0.006145526010927549,composite 0.65,0.0,0,holding
+MUSA,Consumer Cyclical,6,0.2382,0,6,0.2382,0,396,396,0.002638439337903087,composite 0.65,0.0,0,holding
+MTG,Financial,6,0.2382,0,6,0.2382,0,397,397,0.008849548808677277,composite 0.65,0.0,0,holding
+SFM,Consumer Defensive,6,0.2382,0,6,0.2382,0,398,398,0.0038508935158840796,composite 0.65,0.0,0,holding
+DRI,Consumer Cyclical,6,0.2382,0,6,0.2382,0,399,399,0.017123964290216565,composite 0.65,0.0,0,holding
+POR,Utilities,6,0.2382,0,6,0.2382,0,400,400,0.00045198774607158043,composite 0.64,0.0,0,holding
+YUM,Consumer Cyclical,6,0.2382,0,6,0.2382,0,401,401,0.020953457630207728,composite 0.64,0.0,0,holding
+GIS,Consumer Defensive,6,0.2382,0,6,0.2382,0,402,402,0.015782828130791238,composite 0.63,0.0,0,holding
+FCN,Industrials,6,0.2382,0,6,0.2382,0,403,403,-0.0029706104145599266,composite 0.63,0.0,0,holding
+ABT,Healthcare,6,0.2382,0,6,0.2382,0,404,404,-0.019380567847993246,composite 0.62,0.0,0,holding
+MORN,Financial,6,0.2382,0,6,0.2382,0,405,405,0.034521033267483014,composite 0.61,0.0,0,holding
+NWS,Communication Services,6,0.2382,0,6,0.2382,0,406,406,-0.014999985694885254,composite 0.61,0.0,0,holding
+BR,Technology,6,0.2382,0,6,0.2382,0,407,407,-0.002640169500320755,composite 0.61,0.0,0,holding
+BRO,Financial,6,0.2382,0,6,0.2382,0,408,408,0.0006565060779089027,composite 0.61,0.0,0,holding
+USFD,Consumer Defensive,6,0.2382,0,6,0.2382,0,409,409,0.020078216009990157,composite 0.60,0.0,0,holding
+WY,Real Estate,6,0.2382,0,6,0.2382,0,410,410,0.005949194792494561,composite 0.60,0.0,0,holding
+FDS,Financial,6,0.2382,0,6,0.2382,0,411,411,-0.016025150617339556,composite 0.60,0.0,0,holding
+ALL,Financial,6,0.2382,0,6,0.2382,0,412,412,-0.0019580901084058633,composite 0.60,0.0,0,holding
+WTW,Financial,6,0.2382,0,6,0.2382,0,413,413,0.013432459239631322,composite 0.60,0.0,0,holding
+EIX,Utilities,6,0.2382,0,6,0.2382,0,414,414,0.00018433483082236357,composite 0.59,0.0,0,holding
+RYAN,Financial,6,0.2382,0,6,0.2382,0,415,415,0.008425479164852367,composite 0.58,0.0,0,holding
+AJG,Financial,6,0.2382,0,6,0.2382,0,416,416,0.011485656342452799,composite 0.58,0.0,0,holding
+FOX,Communication Services,6,0.2382,0,6,0.2382,0,417,417,-0.019753067315950057,composite 0.57,0.0,0,holding
+DPZ,Consumer Cyclical,6,0.2382,0,6,0.2382,0,418,418,0.01883811454394091,composite 0.57,0.0,0,holding
+TRGP,Energy,6,0.2382,0,6,0.2382,0,419,419,-0.005845486121987653,composite 0.57,0.0,0,holding
+MNST,Consumer Defensive,6,0.2382,0,6,0.2382,0,420,420,-0.005975599438360124,composite 0.57,0.0,0,holding
+TMUS,Communication Services,6,0.2382,0,6,0.2382,0,421,421,0.007835236217899944,composite 0.57,0.0,0,holding
+CLX,Consumer Defensive,6,0.2382,0,6,0.2382,0,422,422,0.018412321271832344,composite 0.56,0.0,0,holding
+NNN,Real Estate,6,0.2382,0,6,0.2382,0,423,423,0.0032193474487205442,composite 0.56,0.0,0,holding
+RLI,Financial,6,0.2382,0,6,0.2382,0,424,424,-0.0007132830638603149,composite 0.56,0.0,0,holding
+AHR,Real Estate,6,0.2382,0,6,0.2382,0,425,425,0.00039628407529090914,composite 0.55,0.0,0,holding
+INTU,Technology,6,0.2382,0,6,0.2382,0,426,426,0.018020250859901443,composite 0.55,0.0,0,holding
+EXLS,Technology,6,0.2382,0,6,0.2382,0,427,427,-0.01364907124345316,composite 0.55,0.0,0,holding
+PPC,Consumer Defensive,6,0.2382,0,6,0.2382,0,428,428,-0.003572718195336111,composite 0.55,0.0,0,holding
+CHTR,Communication Services,6,0.2382,0,6,0.2382,0,429,429,0.008072773254911292,composite 0.55,0.0,0,holding
+CMCSA,Communication Services,6,0.2382,0,6,0.2382,0,430,430,-0.0004636174790598746,composite 0.55,0.0,0,holding
+MSCI,Financial,6,0.2382,0,6,0.2382,0,431,431,0.004652860392529989,composite 0.54,0.0,0,holding
+SAIC,Technology,6,0.2382,0,6,0.2382,0,432,432,-0.018203350356281844,composite 0.54,0.0,0,holding
+CTRE,Real Estate,6,0.2382,0,6,0.2382,0,433,433,0.00966846593217241,composite 0.54,0.0,0,holding
+KNSL,Financial,6,0.2382,0,6,0.2382,0,434,434,0.012123213454393822,composite 0.54,0.0,0,holding
+ERIE,Financial,6,0.2382,0,6,0.2382,0,435,435,0.007947234053460095,composite 0.54,0.0,0,holding
+TYL,Technology,6,0.2382,0,6,0.2382,0,436,436,0.00788863389410488,composite 0.53,0.0,0,holding
+RTX,Industrials,6,0.2382,0,6,0.2382,0,437,437,-0.005642101310643244,composite 0.52,0.0,0,holding
+MMS,Industrials,6,0.2382,0,6,0.2382,0,438,438,0.004962331529514197,composite 0.52,0.0,0,holding
+PNW,Utilities,6,0.2382,0,6,0.2382,0,439,439,0.02167571749582531,composite 0.52,0.0,0,holding
+DAR,Consumer Defensive,6,0.2382,0,6,0.2382,0,440,440,-0.024401954950190263,composite 0.52,0.0,0,holding
+NFLX,Communication Services,6,0.2382,0,6,0.2382,0,441,441,0.017629665798611027,composite 0.51,0.0,0,holding
+TRV,Financial,6,0.2382,0,6,0.2382,0,442,442,-0.00016633644736141484,composite 0.51,0.0,0,holding
+PLNT,Consumer Cyclical,6,0.2382,0,6,0.2382,0,443,443,0.00427859059856206,composite 0.51,0.0,0,holding
+BSX,Healthcare,6,0.2382,0,6,0.2382,0,444,444,-0.004952898387084903,composite 0.51,0.0,0,holding
+HAE,Healthcare,6,0.2382,0,6,0.2382,0,445,445,-0.011081425857160765,composite 0.50,0.0,0,holding
+CVS,Healthcare,6,0.2382,0,6,0.2382,0,446,446,-0.006665921351738269,composite 0.50,0.0,0,holding
+G,Technology,6,0.2382,0,6,0.2382,0,447,447,-0.002088296356452024,composite 0.50,0.0,0,holding
+APA,Energy,6,0.2382,0,6,0.2382,0,448,448,0.005701254474331119,composite 0.50,0.0,0,holding
+SRE,Utilities,6,0.2382,0,6,0.2382,0,449,449,0.023157593062795634,composite 0.49,0.0,0,holding
+MRK,Healthcare,6,0.2382,0,6,0.2382,0,450,450,0.017199435794382767,composite 0.49,0.0,0,holding
+T,Communication Services,6,0.2382,0,6,0.2382,0,451,451,0.007838305934474654,composite 0.49,0.0,0,holding
+CAH,Healthcare,6,0.2382,0,6,0.2382,0,452,452,0.0013727150434172941,composite 0.49,0.0,0,holding
+OVV,Energy,6,0.2382,0,6,0.2382,0,453,453,0.008695632037122758,composite 0.49,0.0,0,holding
+MPC,Energy,6,0.2382,0,6,0.2382,0,454,454,-0.0025607674487615473,composite 0.48,0.0,0,holding
+ELV,Healthcare,6,0.2382,0,6,0.2382,0,455,455,0.014144093772375133,composite 0.48,0.0,0,holding
+DINO,Energy,6,0.2382,0,6,0.2382,0,456,456,-0.005381034021987419,composite 0.48,0.0,0,holding
+FANG,Energy,6,0.2382,0,6,0.2382,0,457,457,0.004889145412495077,composite 0.48,0.0,0,holding
+NWSA,Communication Services,6,0.2382,0,6,0.2382,0,458,458,-0.013816978077284547,composite 0.48,0.0,0,holding
+VLO,Energy,6,0.2382,0,6,0.2382,0,459,459,-0.0002622883053547964,composite 0.48,0.0,0,holding
+BMY,Healthcare,6,0.2382,0,6,0.2382,0,460,460,0.013263029435178986,composite 0.48,0.0,0,holding
+DGX,Healthcare,6,0.2382,0,6,0.2382,0,461,461,-0.016492988592376356,composite 0.48,0.0,0,holding
+POST,Consumer Defensive,6,0.2382,0,6,0.2382,0,462,462,0.008805715285651328,composite 0.48,0.0,0,holding
+UNP,Industrials,6,0.2382,0,6,0.2382,0,463,463,-0.0016242409983276973,composite 0.48,0.0,0,holding
+CSGP,Real Estate,6,0.2382,0,6,0.2382,0,464,464,-0.0010846235289591055,composite 0.48,0.0,0,holding
+KO,Consumer Defensive,6,0.2382,0,6,0.2382,0,465,465,-0.003930227244125395,composite 0.48,0.0,0,holding
+OKE,Energy,6,0.2382,0,6,0.2382,0,466,466,0.007338016622743249,composite 0.48,0.0,0,holding
+PGR,Financial,6,0.2382,0,6,0.2382,0,467,467,-0.002680801799076038,composite 0.48,0.0,0,holding
+AON,Financial,6,0.2382,0,6,0.2382,0,468,468,0.007131051381934261,composite 0.47,0.0,0,holding
+TXRH,Consumer Cyclical,6,0.2382,0,6,0.2382,0,469,469,0.028936315456960182,composite 0.47,0.0,0,holding
+PR,Energy,6,0.2382,0,6,0.2382,0,470,470,0.00539814852471765,composite 0.47,0.0,0,holding
+SPGI,Financial,6,0.2382,0,6,0.2382,0,471,471,0.013327512729253588,composite 0.47,0.0,0,holding
+SCI,Consumer Cyclical,6,0.2382,0,6,0.2382,0,472,472,0.017908882889500877,composite 0.47,0.0,0,holding
+ETR,Utilities,6,0.2382,0,6,0.2382,0,473,473,0.02410236374262298,composite 0.46,0.0,0,holding
+SJM,Consumer Defensive,6,0.2382,0,6,0.2382,0,474,474,0.004904066750078151,composite 0.46,0.0,0,holding
+KDP,Consumer Defensive,6,0.2382,0,6,0.2382,0,475,475,0.007769497438015138,composite 0.46,0.0,0,holding
+PSX,Energy,6,0.2369,0,6,0.2369,0,476,476,0.00025955555354406634,composite 0.46,0.0,0,holding
+AGCO,Industrials,6,0.2366,0,6,0.2366,0,477,477,0.0,composite 0.65,0.0,0,holding
+AMGN,Healthcare,6,0.2366,0,6,0.2366,0,478,478,-0.0009429869285139114,composite 0.64,0.0,0,holding
+IQV,Healthcare,6,0.2366,0,6,0.2366,0,479,479,-0.02296210092695039,composite 0.64,0.0,0,holding
+ULTA,Consumer Cyclical,6,0.2366,0,6,0.2366,0,480,480,0.00842056229900301,composite 0.64,0.0,0,holding
+EQIX,Real Estate,6,0.2366,0,6,0.2366,0,481,481,0.02337213989398057,composite 0.64,0.0,0,holding
+PH,Industrials,6,0.2366,0,6,0.2366,0,482,482,0.009460048927965481,composite 0.63,0.0,0,holding
+ROST,Consumer Cyclical,6,0.2366,0,6,0.2366,0,483,483,-0.009541849405448444,composite 0.63,0.0,0,holding
+GPC,Consumer Cyclical,6,0.2366,0,6,0.2366,0,484,484,0.009030413568912321,composite 0.62,0.0,0,holding
+CART,Consumer Cyclical,6,0.2366,0,6,0.2366,0,485,485,-0.004379175744705477,composite 0.62,0.0,0,holding
+SIRI,Communication Services,6,0.2366,0,6,0.2366,0,486,486,0.0019004616276752095,composite 0.62,0.0,0,holding
+CYTK,Healthcare,6,0.2366,0,6,0.2366,0,487,487,-0.021531136720756017,composite 0.62,0.0,0,holding
+AAPL,Technology,6,0.2366,0,6,0.2366,0,488,488,0.002222927098478822,composite 0.61,0.0,0,holding
+SOLV,Healthcare,6,0.2364,0,6,0.2364,0,489,489,-0.011246141968621282,composite 0.61,0.0,0,holding
+H,Consumer Cyclical,6,0.2364,0,6,0.2364,0,490,490,0.014990054096333028,composite 0.60,0.0,0,holding
+DE,Industrials,6,0.2364,0,6,0.2364,0,491,491,0.0008647989002577017,composite 0.60,0.0,0,holding
+NTRS,Financial,6,0.2364,0,6,0.2364,0,492,492,-0.007089655288332275,composite 0.60,0.0,0,holding
+REGN,Healthcare,6,0.2364,0,6,0.2364,0,493,493,0.016862362511892437,composite 0.60,0.0,0,holding
+DOV,Industrials,6,0.2364,0,6,0.2364,0,494,494,0.0030318966116156254,composite 0.60,0.0,0,holding
+WTS,Industrials,6,0.2364,0,6,0.2364,0,495,495,-0.0008269821997760607,composite 0.60,0.0,0,holding
+ARMK,Industrials,6,0.2364,0,6,0.2364,0,496,496,0.0039833645215745506,composite 0.60,0.0,0,holding
+CAR,Industrials,6,0.2364,0,6,0.2364,0,497,497,0.04324873146658814,composite 0.60,0.0,0,holding
+TNL,Consumer Cyclical,6,0.2364,0,6,0.2364,0,498,498,0.017822398774550052,composite 0.60,0.0,0,holding
+PINS,Communication Services,6,0.2364,0,6,0.2364,0,499,499,-0.0014954526468361484,composite 0.59,0.0,0,holding
+INCY,Healthcare,6,0.2364,0,6,0.2364,0,500,500,-0.012266660213578917,composite 0.59,0.0,0,holding
+UPS,Industrials,6,0.2364,0,6,0.2364,0,501,501,-0.00032208266580913136,composite 0.59,0.0,0,holding
+HQY,Healthcare,6,0.2364,0,6,0.2364,0,502,502,-0.005461496267971988,composite 0.59,0.0,0,holding
+GMED,Healthcare,6,0.2364,0,6,0.2364,0,503,503,-0.001828384356881485,composite 0.59,0.0,0,holding
+TPL,Energy,6,0.2364,0,6,0.2364,0,504,504,0.030434879234350287,composite 0.59,0.0,0,holding
+MAR,Consumer Cyclical,6,0.2364,0,6,0.2364,0,505,505,0.015145083899540834,composite 0.57,0.0,0,holding
+IEX,Industrials,6,0.2364,0,6,0.2364,0,506,506,0.004207597098955906,composite 0.57,0.0,0,holding
+GEF,Consumer Cyclical,6,0.2364,0,6,0.2364,0,507,507,0.00597194205416951,composite 0.57,0.0,0,holding
+NTNX,Technology,6,0.2364,0,6,0.2364,0,508,508,0.0,composite 0.57,0.0,0,holding
+APPF,Technology,6,0.2364,0,6,0.2364,0,509,509,-0.004602215135403931,composite 0.56,0.0,0,holding
+A,Healthcare,6,0.2364,0,6,0.2364,0,510,510,-0.011442533317191694,composite 0.56,0.0,0,holding
+OMC,Communication Services,6,0.2364,0,6,0.2364,0,511,511,-0.0019933757591881207,composite 0.56,0.0,0,holding
+LNT,Utilities,6,0.2361,0,6,0.2361,0,512,512,0.018665374570750126,composite 0.45,0.0,0,holding
+OXY,Energy,6,0.2361,0,6,0.2361,0,513,513,0.00034300218303262575,composite 0.45,0.0,0,holding
+RRC,Energy,6,0.2361,0,6,0.2361,0,514,514,0.03491084439467351,composite 0.45,0.0,0,holding
+VZ,Communication Services,6,0.2361,0,6,0.2361,0,515,515,0.0028353559965461628,composite 0.45,0.0,0,holding
+BDX,Healthcare,6,0.2361,0,6,0.2361,0,516,516,-0.0020479056895850167,composite 0.45,0.0,0,holding
+COP,Energy,6,0.2361,0,6,0.2361,0,517,517,0.007398849316123446,composite 0.45,0.0,0,holding
+DVN,Energy,6,0.2361,0,6,0.2361,0,518,518,0.0008336997896827292,composite 0.45,0.0,0,holding
+EOG,Energy,6,0.2361,0,6,0.2361,0,519,519,0.001388096513745829,composite 0.45,0.0,0,holding
+ZBH,Healthcare,6,0.2361,0,6,0.2361,0,520,520,-0.020639940984462646,composite 0.45,0.0,0,holding
+CPRT,Industrials,6,0.2361,0,6,0.2361,0,521,521,-0.030018080837506123,composite 0.44,0.0,0,holding
+CTAS,Industrials,6,0.2361,0,6,0.2361,0,522,522,0.002865981754735847,composite 0.44,0.0,0,holding
+PRI,Financial,6,0.2361,0,6,0.2361,0,523,523,0.0041731253625039155,composite 0.44,0.0,0,holding
+KMB,Consumer Defensive,6,0.2361,0,6,0.2361,0,524,524,0.014254196926491991,composite 0.44,0.0,0,holding
+PCTY,Technology,6,0.2361,0,6,0.2361,0,525,525,-0.008345177641851942,composite 0.44,0.0,0,holding
+PODD,Healthcare,6,0.2361,0,6,0.2361,0,526,526,-0.0065624496511698105,composite 0.44,0.0,0,holding
+NI,Utilities,6,0.2361,0,6,0.2361,0,527,527,0.0283185576103695,composite 0.44,0.0,0,holding
+CNP,Utilities,6,0.2361,0,6,0.2361,0,528,528,0.021456990020954025,composite 0.44,0.0,0,holding
+FOXA,Communication Services,6,0.2361,0,6,0.2361,0,529,529,-0.019737880370422567,composite 0.44,0.0,0,holding
+HRL,Consumer Defensive,6,0.2361,0,6,0.2361,0,530,530,-0.009960197395386228,composite 0.44,0.0,0,holding
+LH,Healthcare,6,0.2361,0,6,0.2361,0,531,531,0.009914134518402173,composite 0.43,0.0,0,holding
+UTHR,Healthcare,6,0.2361,0,6,0.2361,0,532,532,0.00973148856364614,composite 0.43,0.0,0,holding
+HIG,Financial,6,0.2361,0,6,0.2361,0,533,533,0.004595529952159172,composite 0.43,0.0,0,holding
+JNJ,Healthcare,6,0.2361,0,6,0.2361,0,534,534,0.0073143010203897685,composite 0.43,0.0,0,holding
+EEFT,Technology,6,0.2357,0,6,0.2357,0,535,535,-0.011050569408134758,composite 0.56,0.0,0,holding
+TTC,Industrials,6,0.2339,0,6,0.2339,0,536,536,-0.0005053876139473612,composite 0.56,0.0,0,holding
+NDSN,Industrials,6,0.2339,0,6,0.2339,0,537,537,-0.0006279085598692724,composite 0.56,0.0,0,holding
+AMCR,Consumer Cyclical,6,0.2339,0,6,0.2339,0,538,538,-0.0007176741589572933,composite 0.55,0.0,0,holding
+AIT,Industrials,6,0.2339,0,6,0.2339,0,539,539,-0.0023135957973838828,composite 0.55,0.0,0,holding
+DLR,Real Estate,6,0.2338,0,6,0.2338,0,540,540,0.026574742364242843,composite 0.55,0.0,0,holding
+WST,Healthcare,6,0.233,0,6,0.233,0,541,541,-0.01093533021126758,composite 0.54,0.0,0,holding
+WAB,Industrials,6,0.233,0,6,0.233,0,542,542,-0.00239834757961066,composite 0.53,0.0,0,holding
+IBM,Technology,6,0.233,0,6,0.233,0,543,543,-0.0013088209338629753,composite 0.53,0.0,0,holding
+VRTX,Healthcare,6,0.233,0,6,0.233,0,544,544,-0.00236346065820503,composite 0.53,0.0,0,holding
+COLB,Financial,6,0.233,0,6,0.233,0,545,545,0.0017336767266300512,composite 0.53,0.0,0,holding
+LYV,Communication Services,6,0.233,0,6,0.233,0,546,546,0.006620993114993201,composite 0.53,0.0,0,holding
+DHR,Healthcare,6,0.233,0,6,0.233,0,547,547,-0.02531533806587316,composite 0.53,0.0,0,holding
+BMRN,Healthcare,6,0.233,0,6,0.233,0,548,548,-0.022940557417822527,composite 0.52,0.0,0,holding
+UNH,Healthcare,6,0.233,0,6,0.233,0,549,549,-0.0059696215547714315,composite 0.52,0.0,0,holding
+BURL,Consumer Cyclical,6,0.233,0,6,0.233,0,550,550,0.01699714932741414,composite 0.52,0.0,0,holding
+GRMN,Technology,6,0.233,0,6,0.233,0,551,551,-0.022100020318688074,composite 0.51,0.0,0,holding
+MSFT,Technology,6,0.233,0,6,0.233,0,552,552,0.007844920169552072,composite 0.51,0.0,0,holding
+ORA,Utilities,6,0.233,0,6,0.233,0,553,553,0.01949828854689084,composite 0.51,0.0,0,holding
+TTEK,Industrials,6,0.233,0,6,0.233,0,554,554,0.0015001270421162172,composite 0.51,0.0,0,holding
+GBCI,Financial,6,0.233,0,6,0.233,0,555,555,-0.003885672433035725,composite 0.50,0.0,0,holding
+BAC,Financial,6,0.233,0,6,0.233,0,556,556,0.0016666694923683778,composite 0.50,0.0,0,holding
+LAD,Consumer Cyclical,6,0.233,0,6,0.233,0,557,557,-0.03462042981641911,composite 0.50,0.0,0,holding
+NBIX,Healthcare,6,0.233,0,6,0.233,0,558,558,0.009014546372971832,composite 0.50,0.0,0,holding
+CHRW,Industrials,6,0.233,0,6,0.233,0,559,559,-0.0395419780560361,composite 0.50,0.0,0,holding
+HOG,Consumer Cyclical,6,0.233,0,6,0.233,0,560,560,0.028636883723033746,composite 0.50,0.0,0,holding
+MLI,Industrials,6,0.233,0,6,0.233,0,561,561,0.0025408900160464043,composite 0.50,0.0,0,holding
+MEDP,Healthcare,6,0.233,0,6,0.233,0,562,562,-0.02837985701183776,composite 0.49,0.0,0,holding
+FLG,Financial,6,0.233,0,6,0.233,0,563,563,-0.0008642416137653042,composite 0.49,0.0,0,holding
+BKR,Energy,6,0.233,0,6,0.233,0,564,564,-0.004356918705930801,composite 0.49,0.0,0,holding
+PFG,Financial,6,0.233,0,6,0.233,0,565,565,-0.011978761106702707,composite 0.49,0.0,0,holding
+ADP,Technology,6,0.2318,0,6,0.2318,0,566,566,0.00806876011350588,composite 0.43,0.0,0,holding
+VOYA,Financial,6,0.2315,0,6,0.2315,0,567,567,-0.0028542179781047006,composite 0.48,0.0,0,holding
+ZION,Financial,6,0.2315,0,6,0.2315,0,568,568,-0.006795200908196963,composite 0.48,0.0,0,holding
+GWW,Industrials,6,0.2315,0,6,0.2315,0,569,569,-0.008765586651151236,composite 0.48,0.0,0,holding
+TECH,Healthcare,6,0.2315,0,6,0.2315,0,570,570,-0.0020667060084686995,composite 0.48,0.0,0,holding
+FITB,Financial,6,0.2315,0,6,0.2315,0,571,571,0.003937022951637115,composite 0.48,0.0,0,holding
+EW,Healthcare,6,0.2315,0,6,0.2315,0,572,572,-0.008597959086750206,composite 0.48,0.0,0,holding
+USB,Financial,6,0.2315,0,6,0.2315,0,573,573,0.0003492309691601747,composite 0.48,0.0,0,holding
+VLY,Financial,6,0.2315,0,6,0.2315,0,574,574,-0.007053303367830499,composite 0.48,0.0,0,holding
+HLT,Consumer Cyclical,6,0.2315,0,6,0.2315,0,575,575,0.0205301478382256,composite 0.47,0.0,0,holding
+SSB,Financial,6,0.2315,0,6,0.2315,0,576,576,-0.001779890339804191,composite 0.47,0.0,0,holding
+KEY,Financial,6,0.2315,0,6,0.2315,0,577,577,-0.0019822058930833997,composite 0.47,0.0,0,holding
+MTB,Financial,6,0.2315,0,6,0.2315,0,578,578,0.00219926234036949,composite 0.47,0.0,0,holding
+PNR,Industrials,6,0.2315,0,6,0.2315,0,579,579,0.003031448486407795,composite 0.46,0.0,0,holding
+OLN,Basic Materials,6,0.2315,0,6,0.2315,0,580,580,-0.0036878532023878474,composite 0.46,0.0,0,holding
+RF,Financial,6,0.2315,0,6,0.2315,0,581,581,-0.0007388421865219819,composite 0.46,0.0,0,holding
+SSD,Basic Materials,6,0.2315,0,6,0.2315,0,582,582,0.01302309396515211,composite 0.46,0.0,0,holding
+SCHW,Financial,6,0.2315,0,6,0.2315,0,583,583,-0.01184152759857171,composite 0.46,0.0,0,holding
+EXPD,Industrials,6,0.2315,0,6,0.2315,0,584,584,-0.0119513297124757,composite 0.45,0.0,0,holding
+NEU,Basic Materials,6,0.2315,0,6,0.2315,0,585,585,0.0020880118590516084,composite 0.45,0.0,0,holding
+PNC,Financial,6,0.2315,0,6,0.2315,0,586,586,-0.0005447390496298166,composite 0.45,0.0,0,holding
+HSIC,Healthcare,6,0.2315,0,6,0.2315,0,587,587,0.00724199164960404,composite 0.45,0.0,0,holding
+CFR,Financial,6,0.2315,0,6,0.2315,0,588,588,-0.0056555620284201025,composite 0.45,0.0,0,holding
+WTFC,Financial,6,0.2315,0,6,0.2315,0,589,589,-0.0017905958147410583,composite 0.45,0.0,0,holding
+CNO,Financial,6,0.2315,0,6,0.2315,0,590,590,0.0001851219036914653,composite 0.44,0.0,0,holding
+HAS,Consumer Cyclical,6,0.2315,0,6,0.2315,0,591,591,-0.014613536634102253,composite 0.44,0.0,0,holding
+JLL,Real Estate,6,0.2315,0,6,0.2315,0,592,592,0.004001162132288627,composite 0.44,0.0,0,holding
+SBUX,Consumer Cyclical,6,0.2315,0,6,0.2315,0,593,593,0.017790959438170217,composite 0.44,0.0,0,holding
+SEIC,Financial,6,0.2306,0,6,0.2306,0,594,594,-0.00387373152821735,composite 0.44,0.0,0,holding
+CCK,Consumer Cyclical,6,0.2306,0,6,0.2306,0,595,595,0.010414717501235238,composite 0.44,0.0,0,holding
+OLLI,Consumer Defensive,6,0.2306,0,6,0.2306,0,596,596,0.010362712051711576,composite 0.44,0.0,0,holding
+PFGC,Consumer Defensive,6,0.2306,0,6,0.2306,0,597,597,0.012961729579915149,composite 0.43,0.0,0,holding
+PCAR,Industrials,6,0.2292,0,6,0.2292,0,598,598,-0.00036577281733807254,composite 0.43,0.0,0,holding
+DOC,Real Estate,6,0.2292,0,6,0.2292,0,599,599,0.008492560834195695,composite 0.43,0.0,0,holding
+PKG,Consumer Cyclical,6,0.2292,0,6,0.2292,0,600,600,0.001875225411663184,composite 0.43,0.0,0,holding
+SLAB,Technology,6,0.2292,0,6,0.2292,0,601,601,-0.0008079350633065641,composite 0.43,0.0,0,holding
+SLGN,Consumer Cyclical,6,0.2292,0,6,0.2292,0,602,602,0.006287436280440373,composite 0.43,0.0,0,holding
+CSX,Industrials,6,0.2292,0,6,0.2292,0,603,603,0.0014758527171372382,composite 0.43,0.0,0,holding
+CHH,Consumer Cyclical,6,0.2292,0,6,0.2292,0,604,604,0.03494673291373451,composite 0.43,0.0,0,holding
+MTD,Healthcare,6,0.2292,0,6,0.2292,0,605,605,-0.005552602483499758,composite 0.42,0.0,0,holding
+PNFP,Financial,6,0.2292,0,6,0.2292,0,606,606,0.0012497682855385772,composite 0.42,0.0,0,holding
+RYN,Real Estate,6,0.2291,0,6,0.2291,0,607,607,0.004441972386972193,composite 0.42,0.0,0,holding
+TJX,Consumer Cyclical,6,0.2291,0,6,0.2291,0,608,608,0.019492560418150617,composite 0.42,0.0,0,holding
+LHX,Industrials,6,0.2291,0,6,0.2291,0,609,609,0.004305931242176708,composite 0.42,0.0,0,holding
+AR,Energy,6,0.2291,0,6,0.2291,0,610,610,0.029691629713732848,composite 0.42,0.0,0,holding
+KHC,Consumer Defensive,6,0.2291,0,6,0.2291,0,611,611,0.008699658092039986,composite 0.42,0.0,0,holding
+BALL,Consumer Cyclical,6,0.2291,0,6,0.2291,0,612,612,0.005603216449033166,composite 0.42,0.0,0,holding
+SPG,Real Estate,6,0.2291,0,6,0.2291,0,613,613,0.001688240352452297,composite 0.42,0.0,0,holding
+IDA,Utilities,6,0.2291,0,6,0.2291,0,614,614,0.00721169801149224,composite 0.41,0.0,0,holding
+LAMR,Real Estate,6,0.2291,0,6,0.2291,0,615,615,0.0056278250441341715,composite 0.41,0.0,0,holding
+COKE,Consumer Defensive,6,0.2291,0,6,0.2291,0,616,616,0.0018017405199881598,composite 0.41,0.0,0,holding
+BG,Consumer Defensive,6,0.2291,0,6,0.2291,0,617,617,9.319918243488878e-05,composite 0.41,0.0,0,holding
+VRSN,Technology,6,0.2291,0,6,0.2291,0,618,618,0.0028741405249532725,composite 0.41,0.0,0,holding
+D,Utilities,6,0.2291,0,6,0.2291,0,619,619,0.016060300473361266,composite 0.41,0.0,0,holding
+SBAC,Real Estate,6,0.2291,0,6,0.2291,0,620,620,0.048696015741955145,composite 0.41,0.0,0,holding
+AM,Energy,6,0.2291,0,6,0.2291,0,621,621,0.028210113753496247,composite 0.41,0.0,0,holding
+BHF,Financial,6,0.2291,0,6,0.2291,0,622,622,0.004215156277780352,composite 0.41,0.0,0,holding
+DTE,Utilities,6,0.2291,0,6,0.2291,0,623,623,0.025431864058638842,composite 0.41,0.0,0,holding
+WELL,Real Estate,6,0.2291,0,6,0.2291,0,624,624,0.007226958827273311,composite 0.41,0.0,0,holding
+KRG,Real Estate,6,0.2291,0,6,0.2291,0,625,625,0.0,composite 0.40,0.0,0,holding
+FHI,Financial,6,0.2282,0,6,0.2282,0,626,626,0.0010619712086905597,composite 0.41,0.0,0,holding
+PLD,Real Estate,6,0.2282,0,6,0.2282,0,627,627,0.004684500594542396,composite 0.41,0.0,0,holding
+MMM,Industrials,6,0.2282,0,6,0.2282,0,628,628,0.002757503165083719,composite 0.41,0.0,0,holding
+FAF,Financial,6,0.2282,0,6,0.2282,0,629,629,0.005486528092471632,composite 0.40,0.0,0,holding
+ULS,Industrials,6,0.2282,0,6,0.2282,0,630,630,0.0017582820012018718,composite 0.40,0.0,0,holding
+DLB,Industrials,6,0.2282,0,6,0.2282,0,631,631,-0.015161750616996428,composite 0.40,0.0,0,holding
+SMG,Basic Materials,6,0.2282,0,6,0.2282,0,632,632,0.028920611563583165,composite 0.40,0.0,0,holding
+AME,Industrials,6,0.2282,0,6,0.2282,0,633,633,0.007145137602575957,composite 0.39,0.0,0,holding
+J,Industrials,6,0.2282,0,6,0.2282,0,634,634,0.004038346909844837,composite 0.39,0.0,0,holding
+FAST,Industrials,6,0.2282,0,6,0.2282,0,635,635,0.0023673850825238762,composite 0.38,0.0,0,holding
+WMG,Communication Services,6,0.2282,0,6,0.2282,0,636,636,-0.0007237984445339629,composite 0.38,0.0,0,holding
+AMP,Financial,6,0.2282,0,6,0.2282,0,637,637,0.003374111815409364,composite 0.38,0.0,0,holding
+KRC,Real Estate,6,0.2282,0,6,0.2282,0,638,638,0.0186298909051561,composite 0.38,0.0,0,holding
+CMG,Consumer Cyclical,6,0.2282,0,6,0.2282,0,639,639,0.0016207207922946942,composite 0.38,0.0,0,holding
+SHW,Basic Materials,6,0.2282,0,6,0.2282,0,640,640,0.008478340386478767,composite 0.37,0.0,0,holding
+TMO,Healthcare,6,0.2282,0,6,0.2282,0,641,641,-0.02981853594270434,composite 0.37,0.0,0,holding
+ADSK,Technology,6,0.2282,0,6,0.2282,0,642,642,0.04387074078267483,composite 0.37,0.0,0,holding
+COLM,Consumer Cyclical,6,0.2282,0,6,0.2282,0,643,643,0.009134032232148037,composite 0.37,0.0,0,holding
+HLI,Financial,6,0.2282,0,6,0.2282,0,644,644,0.008195436588038563,composite 0.37,0.0,0,holding
+EBAY,Consumer Cyclical,6,0.2282,0,6,0.2282,0,645,645,-0.0007467036728620036,composite 0.36,0.0,0,holding
+ASB,Financial,6,0.2282,0,6,0.2282,0,646,646,-0.004135108109596719,composite 0.36,0.0,0,holding
+PSA,Real Estate,6,0.2282,0,6,0.2282,0,647,647,0.014876100216318688,composite 0.36,0.0,0,holding
+MTN,Consumer Cyclical,6,0.2282,0,6,0.2282,0,648,648,0.04235458555081428,composite 0.36,0.0,0,holding
+RMD,Healthcare,6,0.2282,0,6,0.2282,0,649,649,-0.0097370464103127,composite 0.36,0.0,0,holding
+WFC,Financial,6,0.2282,0,6,0.2282,0,650,650,0.0008595247142162421,composite 0.36,0.0,0,holding
+FHN,Financial,6,0.2282,0,6,0.2282,0,651,651,-0.0008561839572388541,composite 0.36,0.0,0,holding
+PAG,Consumer Cyclical,6,0.2282,0,6,0.2282,0,652,652,-0.007876772819683353,composite 0.36,0.0,0,holding
+FNB,Financial,6,0.2282,0,6,0.2282,0,653,653,-0.006896490489400442,composite 0.35,0.0,0,holding
+ARE,Real Estate,6,0.2282,0,6,0.2282,0,654,654,0.0008717763709442661,composite 0.35,0.0,0,holding
+RBA,Industrials,6,0.2282,0,6,0.2282,0,655,655,-0.015188334795247616,composite 0.35,0.0,0,holding
+PRU,Financial,6,0.2282,0,6,0.2282,0,656,656,0.0005287059994616428,composite 0.35,0.0,0,holding
+WLK,Basic Materials,6,0.2282,0,6,0.2282,0,657,657,-0.018882544639810206,composite 0.34,0.0,0,holding
+CHDN,Consumer Cyclical,6,0.2282,0,6,0.2282,0,658,658,0.00825060451419768,composite 0.34,0.0,0,holding
+CHWY,Consumer Cyclical,6,0.2282,0,6,0.2282,0,659,659,-0.0043907753414358375,composite 0.34,0.0,0,holding
+EWBC,Financial,6,0.2282,0,6,0.2282,0,660,660,0.0022075561082917083,composite 0.34,0.0,0,holding
+CUZ,Real Estate,6,0.2282,0,6,0.2282,0,661,661,0.012074640491301691,composite 0.34,0.0,0,holding
+ALLE,Industrials,6,0.2282,0,6,0.2282,0,662,662,0.009956392253058999,composite 0.34,0.0,0,holding
+WH,Consumer Cyclical,6,0.2282,0,6,0.2282,0,663,663,0.020078633539254875,composite 0.34,0.0,0,holding
+MSA,Industrials,6,0.2282,0,6,0.2282,0,664,664,-0.003713252424175195,composite 0.34,0.0,0,holding
+UMBF,Financial,6,0.2282,0,6,0.2282,0,665,665,0.002157155413819334,composite 0.34,0.0,0,holding
+BKNG,Consumer Cyclical,6,0.2282,0,6,0.2282,0,666,666,-0.004421126382535556,composite 0.33,0.0,0,holding
+IDXX,Healthcare,6,0.2282,0,6,0.2282,0,667,667,-0.022122363286960933,composite 0.33,0.0,0,holding
+MET,Financial,6,0.2282,0,6,0.2282,0,668,668,0.0028902396431635946,composite 0.33,0.0,0,holding
+GPK,Consumer Cyclical,6,0.2282,0,6,0.2282,0,669,669,0.0,composite 0.33,0.0,0,holding
+BCO,Industrials,6,0.2282,0,6,0.2282,0,670,670,0.0072012246826203,composite 0.33,0.0,0,holding
+UBER,Technology,6,0.2282,0,6,0.2282,0,671,671,-0.005757074072435087,composite 0.33,0.0,0,holding
+MSM,Industrials,6,0.2282,0,6,0.2282,0,672,672,0.0012292844007959491,composite 0.32,0.0,0,holding
+FIS,Technology,6,0.2282,0,6,0.2282,0,673,673,-0.004764849713659203,composite 0.32,0.0,0,holding
+BXP,Real Estate,6,0.2282,0,6,0.2282,0,674,674,0.007074313478166783,composite 0.32,0.0,0,holding
+ONB,Financial,6,0.2282,0,6,0.2282,0,675,675,0.0016089705227946283,composite 0.32,0.0,0,holding
+HII,Industrials,6,0.2282,0,6,0.2282,0,676,676,-0.010244712075113904,composite 0.31,0.0,0,holding
+HWC,Financial,6,0.2282,0,6,0.2282,0,677,677,-0.006285857919573146,composite 0.31,0.0,0,holding
+HON,Industrials,6,0.2282,0,6,0.2282,0,678,678,-0.005930719510977678,composite 0.31,0.0,0,holding
+KD,Technology,6,0.2282,0,6,0.2282,0,679,679,-0.011197253943599494,composite 0.30,0.0,0,holding
+REXR,Real Estate,6,0.2282,0,6,0.2282,0,680,680,0.0029981088707777825,composite 0.30,0.0,0,holding
+LVS,Consumer Cyclical,6,0.2282,0,6,0.2282,0,681,681,-0.008194461405600761,composite 0.29,0.0,0,holding
+TCBI,Financial,6,0.2282,0,6,0.2282,0,682,682,-0.0076849311766580275,composite 0.29,0.0,0,holding
+UBSI,Financial,6,0.2282,0,6,0.2282,0,683,683,-0.007968962512445166,composite 0.29,0.0,0,holding
+MOS,Basic Materials,6,0.2282,0,6,0.2282,0,684,684,-0.016439660235733622,composite 0.29,0.0,0,holding
+LDOS,Technology,6,0.2282,0,6,0.2282,0,685,685,-0.023105856654243806,composite 0.28,0.0,0,holding
+GD,Industrials,6,0.2279,0,6,0.2279,0,686,686,-0.0011757344959673066,composite 0.28,0.0,0,holding
+AVY,Consumer Cyclical,6,0.2279,0,6,0.2279,0,687,687,-0.00911766501034006,composite 0.27,0.0,0,holding
+TRU,Financial,6,0.2279,0,6,0.2279,0,688,688,-0.006267651641987504,composite 0.27,0.0,0,holding
+HBAN,Financial,6,0.2279,0,6,0.2279,0,689,689,0.0026160864586541877,composite 0.27,0.0,0,holding
+GEHC,Healthcare,6,0.2279,0,6,0.2279,0,690,690,-0.014755114880186326,composite 0.27,0.0,0,holding
+AES,Utilities,6,0.2279,0,6,0.2279,0,691,691,0.0020134689539319517,composite 0.27,0.0,0,holding
+NDAQ,Financial,6,0.2276,0,6,0.2276,0,692,692,0.0008677101588212555,composite 0.27,0.0,0,holding
+CME,Financial,6,0.2272,0,6,0.2272,0,693,693,0.0005554712334274736,composite 0.40,0.0,0,holding
+MKC,Consumer Defensive,6,0.2272,0,6,0.2272,0,694,694,-0.003074207001183993,composite 0.40,0.0,0,holding
+WMT,Consumer Defensive,6,0.2272,0,6,0.2272,0,695,695,0.02027217340444043,composite 0.39,0.0,0,holding
+VNOM,Energy,6,0.2272,0,6,0.2272,0,696,696,0.017616864191826842,composite 0.39,0.0,0,holding
+PHM,Consumer Cyclical,6,0.2256,0,6,0.2256,0,697,697,0.0185997109558651,composite 0.26,0.0,0,holding
+DIS,Communication Services,6,0.2256,0,6,0.2256,0,698,698,0.004053645077416901,composite 0.26,0.0,0,holding
+FICO,Technology,6,0.2256,0,6,0.2256,0,699,699,0.008483108924403737,composite 0.26,0.0,0,holding
+GNTX,Consumer Cyclical,6,0.2256,0,6,0.2256,0,700,700,-0.016430881463200153,composite 0.26,0.0,0,holding
+NOC,Industrials,6,0.2238,0,6,0.2238,0,701,701,0.01470248517226791,composite 0.38,0.0,0,holding
+SBRA,Real Estate,6,0.2238,0,6,0.2238,0,702,702,0.002621979297815713,composite 0.38,0.0,0,holding
+CB,Financial,6,0.2238,0,6,0.2238,0,703,703,0.011256017823913611,composite 0.38,0.0,0,holding
+DTM,Energy,6,0.2238,0,6,0.2238,0,704,704,0.020307858432376813,composite 0.38,0.0,0,holding
+ORI,Financial,6,0.2238,0,6,0.2238,0,705,705,0.005821577154698332,composite 0.38,0.0,0,holding
+STAG,Real Estate,6,0.2238,0,6,0.2238,0,706,706,0.0019417391485616609,composite 0.38,0.0,0,holding
+FISV,Technology,6,0.2236,0,6,0.2236,0,707,707,-0.014304288169543877,composite 0.26,0.0,0,holding
+UNM,Financial,6,0.2234,0,6,0.2234,0,708,708,0.021127560540768142,composite 0.38,0.0,0,holding
+BIIB,Healthcare,6,0.2232,0,6,0.2232,0,709,709,-0.003130716757042906,composite 0.37,0.0,0,holding
+WMB,Energy,6,0.2232,0,6,0.2232,0,710,710,0.022313259222290993,composite 0.37,0.0,0,holding
+VMRK,Real Estate,6,0.2232,0,6,0.2232,0,711,711,0.004659656824527625,composite 0.36,0.0,0,holding
+NJR,Utilities,6,0.2232,0,6,0.2232,0,712,712,0.012969146302374668,composite 0.36,0.0,0,holding
+WM,Industrials,6,0.2232,0,6,0.2232,0,713,713,0.005903422041440676,composite 0.35,0.0,0,holding
+ADM,Consumer Defensive,6,0.2232,0,6,0.2232,0,714,714,-0.003152687430362233,composite 0.35,0.0,0,holding
+CCI,Real Estate,6,0.2232,0,6,0.2232,0,715,715,0.01035804867232959,composite 0.35,0.0,0,holding
+XOM,Energy,6,0.2232,0,6,0.2232,0,716,716,0.002926803216701579,composite 0.35,0.0,0,holding
+STZ,Consumer Defensive,6,0.2232,0,6,0.2232,0,717,717,0.020827823327162154,composite 0.34,0.0,0,holding
+GL,Financial,6,0.2232,0,6,0.2232,0,718,718,0.002169724049689181,composite 0.34,0.0,0,holding
+EXC,Utilities,6,0.2232,0,6,0.2232,0,719,719,0.021068118980427375,composite 0.34,0.0,0,holding
+SIGI,Financial,6,0.2232,0,6,0.2232,0,720,720,-0.005043991849569274,composite 0.34,0.0,0,holding
+VICI,Real Estate,6,0.2232,0,6,0.2232,0,721,721,0.008877001753016645,composite 0.34,0.0,0,holding
+HSY,Consumer Defensive,6,0.2232,0,6,0.2232,0,722,722,-0.0013042137894688777,composite 0.33,0.0,0,holding
+LMT,Industrials,6,0.2232,0,6,0.2232,0,723,723,0.006888637073878545,composite 0.33,0.0,0,holding
+MO,Consumer Defensive,6,0.2232,0,6,0.2232,0,724,724,0.00987044527769343,composite 0.33,0.0,0,holding
+BJ,Consumer Defensive,6,0.2232,0,6,0.2232,0,725,725,0.01940298118988304,composite 0.33,0.0,0,holding
+FE,Utilities,6,0.2232,0,6,0.2232,0,726,726,0.014207125127316811,composite 0.33,0.0,0,holding
+CNX,Energy,6,0.2232,0,6,0.2232,0,727,727,0.031017368112232546,composite 0.33,0.0,0,holding
+SYK,Healthcare,6,0.2232,0,6,0.2232,0,728,728,-0.024612541138865685,composite 0.33,0.0,0,holding
+THG,Financial,6,0.2232,0,6,0.2232,0,729,729,-0.0016333966439248115,composite 0.33,0.0,0,holding
+OTIS,Industrials,6,0.2232,0,6,0.2232,0,730,730,0.008652090446082283,composite 0.33,0.0,0,holding
+FRT,Real Estate,6,0.2232,0,6,0.2232,0,731,731,0.0021703852495014164,composite 0.33,0.0,0,holding
+PM,Consumer Defensive,6,0.2232,0,6,0.2232,0,732,732,0.004590276593630982,composite 0.33,0.0,0,holding
+CVX,Energy,6,0.2232,0,6,0.2232,0,733,733,0.005376086616888376,composite 0.33,0.0,0,holding
+NSC,Industrials,6,0.2232,0,6,0.2232,0,734,734,0.0002529379549276456,composite 0.33,0.0,0,holding
+IRT,Real Estate,6,0.2232,0,6,0.2232,0,735,735,0.0006792985751444824,composite 0.33,0.0,0,holding
+VLTO,Industrials,6,0.2232,0,6,0.2232,0,736,736,-0.0012426503775629927,composite 0.32,0.0,0,holding
+PPL,Utilities,6,0.2232,0,6,0.2232,0,737,737,0.02276175971575589,composite 0.32,0.0,0,holding
+AFL,Financial,6,0.2232,0,6,0.2232,0,738,738,0.011122975890284437,composite 0.32,0.0,0,holding
+GLPI,Real Estate,6,0.2232,0,6,0.2232,0,739,739,0.004484357275833295,composite 0.32,0.0,0,holding
+HR,Real Estate,6,0.2232,0,6,0.2232,0,740,740,-0.0023418623160058605,composite 0.32,0.0,0,holding
+UHS,Healthcare,6,0.2232,0,6,0.2232,0,741,741,0.005850603586721181,composite 0.31,0.0,0,holding
+AIZ,Financial,6,0.2232,0,6,0.2232,0,742,742,0.017078892423047165,composite 0.31,0.0,0,holding
+AEP,Utilities,6,0.2232,0,6,0.2232,0,743,743,0.016203079909956175,composite 0.31,0.0,0,holding
+ES,Utilities,6,0.2232,0,6,0.2232,0,744,744,0.008811248621307444,composite 0.31,0.0,0,holding
+KVUE,Consumer Defensive,6,0.2232,0,6,0.2232,0,745,745,0.01150090684065841,composite 0.30,0.0,0,holding
+CUBE,Real Estate,6,0.2232,0,6,0.2232,0,746,746,0.01532669308610446,composite 0.30,0.0,0,holding
+OGE,Utilities,6,0.2232,0,6,0.2232,0,747,747,0.01934620654366892,composite 0.30,0.0,0,holding
+AEE,Utilities,6,0.2232,0,6,0.2232,0,748,748,0.01985961301444661,composite 0.29,0.0,0,holding
+ADC,Real Estate,6,0.2232,0,6,0.2232,0,749,749,0.0032021817415262,composite 0.29,0.0,0,holding
+EXE,Energy,6,0.2232,0,6,0.2232,0,750,750,0.02082613728337601,composite 0.29,0.0,0,holding
+MCK,Healthcare,6,0.2232,0,6,0.2232,0,751,751,0.006794440570413451,composite 0.29,0.0,0,holding
+MSI,Technology,6,0.2232,0,6,0.2232,0,752,752,0.0019983830113250445,composite 0.29,0.0,0,holding
+ORLY,Consumer Cyclical,6,0.2232,0,6,0.2232,0,753,753,0.014779473673633525,composite 0.28,0.0,0,holding
+BF-B,Consumer Defensive,6,0.2232,0,6,0.2232,0,754,754,0.003045295862658115,composite 0.28,0.0,0,holding
+UGI,Utilities,6,0.2232,0,6,0.2232,0,755,755,0.010059890126758342,composite 0.28,0.0,0,holding
+OHI,Real Estate,6,0.2232,0,6,0.2232,0,756,756,-0.013007057862632565,composite 0.28,0.0,0,holding
+NEE,Utilities,6,0.2232,0,6,0.2232,0,757,757,0.020975334291108316,composite 0.27,0.0,0,holding
+SO,Utilities,6,0.2232,0,6,0.2232,0,758,758,0.01969210535684751,composite 0.27,0.0,0,holding
+EPR,Real Estate,6,0.2232,0,6,0.2232,0,759,759,-0.005756425507211005,composite 0.27,0.0,0,holding
+LLY,Healthcare,6,0.2232,0,6,0.2232,0,760,760,0.012570854484716065,composite 0.27,0.0,0,holding
+VVV,Consumer Cyclical,6,0.2228,0,6,0.2228,0,761,761,0.017468710744231952,composite 0.25,0.0,0,holding
+NXST,Communication Services,6,0.2228,0,6,0.2228,0,762,762,0.004468255661170373,composite 0.25,0.0,0,holding
+BSY,Technology,6,0.2228,0,6,0.2228,0,763,763,0.03510794879721213,composite 0.25,0.0,0,holding
+AN,Consumer Cyclical,6,0.2228,0,6,0.2228,0,764,764,-0.021834594045136435,composite 0.24,0.0,0,holding
+EFX,Industrials,6,0.2228,0,6,0.2228,0,765,765,-0.0008415874532953227,composite 0.24,0.0,0,holding
+SNA,Industrials,6,0.2228,0,6,0.2228,0,766,766,0.0032933899705480663,composite 0.24,0.0,0,holding
+CINF,Financial,6,0.2222,0,6,0.2222,0,767,767,0.005797474065281527,composite 0.26,0.0,0,holding
+MRSH,Financial,6,0.2219,0,6,0.2219,0,768,768,0.007686515717189035,composite 0.26,0.0,0,holding
+PEG,Utilities,6,0.2219,0,6,0.2219,0,769,769,0.044408896887089266,composite 0.26,0.0,0,holding
+SYY,Consumer Defensive,6,0.2219,0,6,0.2219,0,770,770,0.014008899362409233,composite 0.26,0.0,0,holding
+KR,Consumer Defensive,6,0.2219,0,6,0.2219,0,771,771,-0.006294640006271779,composite 0.25,0.0,0,holding
+WEC,Utilities,6,0.2219,0,6,0.2219,0,772,772,0.01865744652231416,composite 0.25,0.0,0,holding
+XEL,Utilities,6,0.2219,0,6,0.2219,0,773,773,0.017345160584939512,composite 0.25,0.0,0,holding
+ATO,Utilities,6,0.2219,0,6,0.2219,0,774,774,0.01069283396883458,composite 0.25,0.0,0,holding
+EVRG,Utilities,6,0.2219,0,6,0.2219,0,775,775,0.01593124534798873,composite 0.25,0.0,0,holding
+EGP,Real Estate,6,0.2219,0,6,0.2219,0,776,776,-0.015216481736435306,composite 0.25,0.0,0,holding
+EXPO,Industrials,6,0.2215,0,6,0.2215,0,777,777,0.006254549893465855,composite 0.24,0.0,0,holding
+RGA,Financial,6,0.2214,0,6,0.2214,0,778,778,0.00039836721713748524,composite 0.24,0.0,0,holding
+REG,Real Estate,6,0.2214,0,6,0.2214,0,779,779,0.0012616898300912283,composite 0.24,0.0,0,holding
+ENSG,Healthcare,6,0.2214,0,6,0.2214,0,780,780,-0.004800750962952405,composite 0.24,0.0,0,holding
+MCD,Consumer Cyclical,6,0.2214,0,6,0.2214,0,781,781,-0.002531738563716024,composite 0.24,0.0,0,holding
+CI,Healthcare,6,0.2214,0,6,0.2214,0,782,782,0.01135311465684019,composite 0.24,0.0,0,holding
+NWE,Utilities,6,0.2214,0,6,0.2214,0,783,783,0.002326876494242347,composite 0.23,0.0,0,holding
+ED,Utilities,6,0.2214,0,6,0.2214,0,784,784,0.01683116211445368,composite 0.23,0.0,0,holding
+EHC,Healthcare,6,0.2214,0,6,0.2214,0,785,785,0.030751435754027945,composite 0.23,0.0,0,holding
+COR,Healthcare,6,0.2214,0,6,0.2214,0,786,786,0.004572452528802895,composite 0.23,0.0,0,holding
+L,Financial,6,0.2214,0,6,0.2214,0,787,787,0.0074761136483061374,composite 0.23,0.0,0,holding
+UDR,Real Estate,6,0.2214,0,6,0.2214,0,788,788,0.0020685488920975104,composite 0.22,0.0,0,holding
+HCA,Healthcare,6,0.2214,0,6,0.2214,0,789,789,-0.006254026342145003,composite 0.22,0.0,0,holding
+DUK,Utilities,6,0.2214,0,6,0.2214,0,790,790,0.01598741551973304,composite 0.22,0.0,0,holding
+EQT,Energy,6,0.2214,0,6,0.2214,0,791,791,0.02640849602945372,composite 0.22,0.0,0,holding
+CBSH,Financial,6,0.2214,0,6,0.2214,0,792,792,-0.006528846832362212,composite 0.22,0.0,0,holding
+GILD,Healthcare,6,0.2214,0,6,0.2214,0,793,793,-0.0027657411447752356,composite 0.22,0.0,0,holding
+ICE,Financial,6,0.2214,0,6,0.2214,0,794,794,0.008807174830328002,composite 0.22,0.0,0,holding
+SWX,Utilities,6,0.2214,0,6,0.2214,0,795,795,0.0064017245251348776,composite 0.21,0.0,0,holding
+TSN,Consumer Defensive,6,0.2214,0,6,0.2214,0,796,796,0.00502808239864283,composite 0.21,0.0,0,holding
+CMS,Utilities,6,0.2214,0,6,0.2214,0,797,797,0.01624240098945018,composite 0.21,0.0,0,holding
+CHE,Healthcare,6,0.2214,0,6,0.2214,0,798,798,-0.0028554498140713758,composite 0.21,0.0,0,holding
+CLH,Industrials,6,0.2214,0,6,0.2214,0,799,799,-0.013369723063174632,composite 0.20,0.0,0,holding
+SUI,Real Estate,6,0.2214,0,6,0.2214,0,800,800,0.0020565393818390287,composite 0.20,0.0,0,holding
+BKH,Utilities,6,0.2214,0,6,0.2214,0,801,801,0.0036889116693035184,composite 0.19,0.0,0,holding
+RNR,Financial,6,0.2214,0,6,0.2214,0,802,802,0.0031850048939099374,composite 0.19,0.0,0,holding
+APD,Basic Materials,6,0.2214,0,6,0.2214,0,803,803,0.005546565486711952,composite 0.19,0.0,0,holding
+SAM,Consumer Defensive,6,0.2214,0,6,0.2214,0,804,804,0.01598182740034071,composite 0.19,0.0,0,holding
+MDT,Healthcare,6,0.2214,0,6,0.2214,0,805,805,-0.010003465620111784,composite 0.19,0.0,0,holding
+LIN,Basic Materials,6,0.2214,0,6,0.2214,0,806,806,0.0156930371234143,composite 0.19,0.0,0,holding
+MZTI,Consumer Defensive,6,0.2214,0,6,0.2214,0,807,807,0.007136386568676434,composite 0.18,0.0,0,holding
+NFG,Energy,6,0.2214,0,6,0.2214,0,808,808,0.02632960744894386,composite 0.17,0.0,0,holding
+O,Real Estate,6,0.2214,0,6,0.2214,0,809,809,0.008926902327504482,composite 0.17,0.0,0,holding
+PFE,Healthcare,6,0.2214,0,6,0.2214,0,810,810,0.003283478770117032,composite 0.16,0.0,0,holding
+V,Financial,6,0.2214,0,6,0.2214,0,811,811,0.0025155479020164684,composite 0.16,0.0,0,holding
+AZO,Consumer Cyclical,6,0.2214,0,6,0.2214,0,812,812,0.032353569795717796,composite 0.16,0.0,0,holding
+AMT,Real Estate,6,0.2214,0,6,0.2214,0,813,813,0.015530656710054158,composite 0.15,0.0,0,holding
+BRX,Real Estate,6,0.2214,0,6,0.2214,0,814,814,0.015157111237562582,composite 0.15,0.0,0,holding
+LOPE,Consumer Defensive,6,0.2214,0,6,0.2214,0,815,815,0.004001874429014229,composite 0.15,0.0,0,holding
+TFC,Financial,6,0.2177,0,6,0.2177,0,816,816,-0.00172678238490942,composite 0.24,0.0,0,holding
+KMI,Energy,6,0.2152,0,6,0.2152,0,817,817,0.023877746056779836,composite 0.15,0.0,0,holding
+CL,Consumer Defensive,6,0.2152,0,6,0.2152,0,818,818,0.012298381814229042,composite 0.14,0.0,0,holding
+MA,Financial,6,0.2152,0,6,0.2152,0,819,819,0.0035246641628765563,composite 0.14,0.0,0,holding
+UFPI,Basic Materials,6,0.2145,0,6,0.2145,0,820,820,0.012301372029861701,composite 0.24,0.0,0,holding
+RPM,Basic Materials,6,0.2145,0,6,0.2145,0,821,821,0.03158441144226609,composite 0.23,0.0,0,holding
+HOMB,Financial,6,0.2145,0,6,0.2145,0,822,822,-0.0007000510317574093,composite 0.23,0.0,0,holding
+DCI,Industrials,6,0.2145,0,6,0.2145,0,823,823,0.010315036929724464,composite 0.23,0.0,0,holding
+OZK,Financial,6,0.2145,0,6,0.2145,0,824,824,-0.043142269048083604,composite 0.23,0.0,0,holding
+TTWO,Communication Services,6,0.2145,0,6,0.2145,0,825,825,-0.00457096187890238,composite 0.22,0.0,0,holding
+RJF,Financial,6,0.2145,0,6,0.2145,0,826,826,-0.00851996486303297,composite 0.22,0.0,0,holding
+KBH,Consumer Cyclical,6,0.2145,0,6,0.2145,0,827,827,0.007992908593113635,composite 0.21,0.0,0,holding
+MAT,Consumer Cyclical,6,0.2145,0,6,0.2145,0,828,828,-0.007476569320182924,composite 0.21,0.0,0,holding
+CBRE,Real Estate,6,0.2145,0,6,0.2145,0,829,829,0.009737324768600564,composite 0.20,0.0,0,holding
+TXT,Industrials,6,0.2145,0,6,0.2145,0,830,830,-0.0029043065439356974,composite 0.20,0.0,0,holding
+COO,Healthcare,6,0.2145,0,6,0.2145,0,831,831,-0.005989081378303784,composite 0.20,0.0,0,holding
+ZTS,Healthcare,6,0.2145,0,6,0.2145,0,832,832,-0.0011203168597110347,composite 0.20,0.0,0,holding
+WYNN,Consumer Cyclical,6,0.2145,0,6,0.2145,0,833,833,-0.007127062788821137,composite 0.19,0.0,0,holding
+DHI,Consumer Cyclical,6,0.2145,0,6,0.2145,0,834,834,0.026420508784369412,composite 0.19,0.0,0,holding
+KBR,Industrials,6,0.2145,0,6,0.2145,0,835,835,0.0026071886267211575,composite 0.19,0.0,0,holding
+AOS,Industrials,6,0.2145,0,6,0.2145,0,836,836,-0.0012287114854191428,composite 0.19,0.0,0,holding
+PB,Financial,6,0.2145,0,6,0.2145,0,837,837,-0.001785223808432046,composite 0.19,0.0,0,holding
+FFIN,Financial,6,0.2145,0,6,0.2145,0,838,838,-0.003434239999847599,composite 0.19,0.0,0,holding
+MLM,Basic Materials,6,0.2145,0,6,0.2145,0,839,839,0.007229680258753923,composite 0.18,0.0,0,holding
+OGS,Utilities,6,0.2144,0,6,0.2144,0,840,840,0.007992308577838614,composite 0.14,0.0,0,holding
+RSG,Industrials,6,0.2142,0,6,0.2142,0,841,841,0.00897431586560593,composite 0.14,0.0,0,holding
+COST,Consumer Defensive,6,0.2142,0,6,0.2142,0,842,842,0.013166983809082211,composite 0.14,0.0,0,holding
+ACGL,Financial,6,0.2142,0,6,0.2142,0,843,843,0.004874937277418612,composite 0.13,0.0,0,holding
+PG,Consumer Defensive,6,0.2142,0,6,0.2142,0,844,844,0.01692477168276607,composite 0.13,0.0,0,holding
+CPT,Real Estate,6,0.2142,0,6,0.2142,0,845,845,0.002875616425991101,composite 0.13,0.0,0,holding
+SR,Utilities,6,0.2142,0,6,0.2142,0,846,846,0.009817781564166683,composite 0.13,0.0,0,holding
+MCO,Financial,6,0.2135,0,6,0.2135,0,847,847,0.009304950316919136,composite 0.17,0.0,0,holding
+KIM,Real Estate,6,0.2108,0,6,0.2108,0,848,848,0.00499313207328278,composite 0.12,0.0,0,holding
+MAA,Real Estate,6,0.2108,0,6,0.2108,0,849,849,0.004464640144383969,composite 0.11,0.0,0,holding
+WPC,Real Estate,6,0.2108,0,6,0.2108,0,850,850,0.0012513973200811712,composite 0.11,0.0,0,holding
+ELS,Real Estate,6,0.2108,0,6,0.2108,0,851,851,0.004274234789294562,composite 0.10,0.0,0,holding
+AIG,Financial,6,0.2108,0,6,0.2108,0,852,852,-0.00013314877349257515,composite 0.10,0.0,0,holding
+MDLZ,Consumer Defensive,6,0.2108,0,6,0.2108,0,853,853,0.019319494289465444,composite 0.10,0.0,0,holding
+INGR,Consumer Defensive,6,0.2108,0,6,0.2108,0,854,854,-0.0010325087836507985,composite 0.10,0.0,0,holding
+AWK,Utilities,6,0.2108,0,6,0.2108,0,855,855,0.001564431742579142,composite 0.09,0.0,0,holding
+BRK-B,Financial,6,0.2108,0,6,0.2108,0,856,856,0.0025383705915760224,composite 0.09,0.0,0,holding
+ESS,Real Estate,6,0.2108,0,6,0.2108,0,857,857,0.002059344587492573,composite 0.08,0.0,0,holding
+AMH,Real Estate,6,0.2108,0,6,0.2108,0,858,858,0.012965405273857034,composite 0.08,0.0,0,holding
+CHD,Consumer Defensive,6,0.2108,0,6,0.2108,0,859,859,0.009199218270221854,composite 0.08,0.0,0,holding
+AFG,Financial,6,0.2108,0,6,0.2108,0,860,860,0.005311171201026532,composite 0.08,0.0,0,holding
+INVH,Real Estate,6,0.2108,0,6,0.2108,0,861,861,0.012663082519910551,composite 0.08,0.0,0,holding
+ABBV,Healthcare,6,0.2108,0,6,0.2108,0,862,862,0.0034993702649297465,composite 0.07,0.0,0,holding
+PEP,Consumer Defensive,6,0.2108,0,6,0.2108,0,863,863,0.00047749747604575177,composite 0.07,0.0,0,holding
+EG,Financial,6,0.2108,0,6,0.2108,0,864,864,8.178288349980356e-05,composite 0.06,0.0,0,holding
+WRB,Financial,6,0.2108,0,6,0.2108,0,865,865,-0.001719867033982747,composite 0.04,0.0,0,holding
+WTRG,Utilities,6,0.2108,0,6,0.2108,0,866,866,0.003620460588956931,composite 0.04,0.0,0,holding
+PEN,Healthcare,6,0.2108,0,6,0.2108,0,867,867,-0.00018920110171627424,composite 0.03,0.0,0,holding
+TXNM,Utilities,6,0.2108,0,6,0.2108,0,868,868,0.0006836594885462066,composite 0.01,0.0,0,holding
+ECL,Basic Materials,6,0.2105,0,6,0.2105,0,869,869,0.013534485512218808,composite 0.16,0.0,0,holding
+GATX,Industrials,6,0.2105,0,6,0.2105,0,870,870,-0.008068725577147107,composite 0.16,0.0,0,holding
+EXR,Real Estate,6,0.2105,0,6,0.2105,0,871,871,0.007373378229907024,composite 0.16,0.0,0,holding
+STE,Healthcare,6,0.2105,0,6,0.2105,0,872,872,-0.011465453848291451,composite 0.15,0.0,0,holding
+ITW,Industrials,6,0.2105,0,6,0.2105,0,873,873,0.011166252241833208,composite 0.15,0.0,0,holding
+FR,Real Estate,6,0.2105,0,6,0.2105,0,874,874,0.0006753985141103591,composite 0.15,0.0,0,holding
+IBOC,Financial,6,0.2105,0,6,0.2105,0,875,875,-0.007914742254583329,composite 0.15,0.0,0,holding
+JPM,Financial,6,0.2105,0,6,0.2105,0,876,876,-0.003309483384547951,composite 0.15,0.0,0,holding
+TDG,Industrials,6,0.2105,0,6,0.2105,0,877,877,0.009765088445840675,composite 0.15,0.0,0,holding
+TSCO,Consumer Cyclical,6,0.2105,0,6,0.2105,0,878,878,0.027689396471065164,composite 0.14,0.0,0,holding
+LEN,Consumer Cyclical,6,0.2105,0,6,0.2105,0,879,879,0.03989791944245158,composite 0.13,0.0,0,holding
+XYL,Industrials,6,0.2105,0,6,0.2105,0,880,880,0.020992009024764835,composite 0.13,0.0,0,holding
+AXP,Financial,6,0.2105,0,6,0.2105,0,881,881,0.0017433024092143867,composite 0.13,0.0,0,holding
+VMC,Basic Materials,6,0.2105,0,6,0.2105,0,882,882,0.01335667500700266,composite 0.13,0.0,0,holding
+ATR,Healthcare,6,0.2105,0,6,0.2105,0,883,883,-0.0029848321741958728,composite 0.13,0.0,0,holding
+GGG,Industrials,6,0.2105,0,6,0.2105,0,884,884,0.0007611005607019994,composite 0.13,0.0,0,holding
+BYD,Consumer Cyclical,6,0.2105,0,6,0.2105,0,885,885,0.024741734831734252,composite 0.12,0.0,0,holding
+LOW,Consumer Cyclical,6,0.2105,0,6,0.2105,0,886,886,0.023231187570726064,composite 0.11,0.0,0,holding
+NLY,Real Estate,6,0.2105,0,6,0.2105,0,887,887,0.008210159538695194,composite 0.10,0.0,0,holding
+HD,Consumer Cyclical,6,0.2105,0,6,0.2105,0,888,888,0.01970481474369734,composite 0.10,0.0,0,holding
+TKO,Communication Services,6,0.2105,0,6,0.2105,0,889,889,-0.0032760200760302283,composite 0.08,0.0,0,holding
+GHC,Industrials,6,0.2056,0,6,0.2056,0,890,890,0.001999427557677791,composite 0.07,0.0,0,holding
+NKE,Consumer Cyclical,6,0.2014,0,6,0.2014,0,891,891,0.019140210347535103,composite 0.07,0.0,0,holding
+NVR,Consumer Cyclical,6,0.1978,0,6,0.1978,0,892,892,0.012795217792768376,composite 0.06,0.0,0,holding
+STWD,Real Estate,6,0.184,0,6,0.184,0,893,893,-0.003852021481037138,composite 0.03,0.0,0,holding

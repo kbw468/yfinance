@@ -170,11 +170,42 @@ def write_text(asof, mv: pd.DataFrame, ex: pd.DataFrame, snaps: list, sc: pd.Dat
     print("\n".join(L[:60]))
 
 
+def projection_accuracy(asof) -> pd.DataFrame | None:
+    """How close the latest intraday projection for this session came to the actual close list."""
+    lg = RESULTS_DIR / "intraday" / "projection_log.csv"
+    if not lg.exists():
+        return None
+    log = pd.read_csv(lg); log = log[log.asof == str(pd.Timestamp(asof).date())]
+    if log.empty:
+        return None
+    last_t = sorted(log.time_ny.unique())[-1]
+    proj = log[log.time_ny == last_t].set_index("ticker")
+    act = load_snapshot(asof).set_index("ticker")
+    j = proj.join(act[["tier", "P_topq_42d", "n_signatures"]], how="inner")
+    t12p, t12a = set(j.index[j.tier_proj <= 2]), set(j.index[j.tier <= 2])
+    row = {"asof": pd.Timestamp(asof).date(), "time_ny": last_t, "names": len(j), "tier_match": round((j.tier_proj == j.tier).mean(), 3),
+           "mean_abs_dP_pts": round((j.P_proj - j.P_topq_42d).abs().mean() * 100, 2), "mean_abs_dP_t12_pts": round((j.loc[list(t12p | t12a)].P_proj - j.loc[list(t12p | t12a)].P_topq_42d).abs().mean() * 100, 2) if (t12p | t12a) else np.nan,
+           "t12_projected": len(t12p), "t12_actual": len(t12a), "t12_overlap": len(t12p & t12a)}
+    ap = HIST / "projection_accuracy.csv"
+    acc = pd.read_csv(ap) if ap.exists() else pd.DataFrame()
+    acc = pd.concat([acc[acc.asof.astype(str) != str(row["asof"])] if len(acc) else acc, pd.DataFrame([row])])
+    acc.to_csv(ap, index=False)
+    return pd.DataFrame([row])
+
+
 def main(asof=None):
     asof = record(asof)
     mv, ex, snaps = movers(asof)
     sc = scorecard(asof)
     write_text(asof, mv, ex, snaps, sc)
+    pa = projection_accuracy(asof)
+    if pa is not None:
+        r = pa.iloc[0]
+        line = (f"\nintraday projection at {r.time_ny} ET vs the close: tier matched for {r.tier_match:.0%} of names; mean |ΔP| {r.mean_abs_dP_pts:.2f} pts "
+                f"(Tier 1-2 names {r.mean_abs_dP_t12_pts:.2f}); Tier 1-2 projected {int(r.t12_projected)}, actual {int(r.t12_actual)}, overlap {int(r.t12_overlap)}.")
+        with open(RESULTS_DIR / "MOVERS.txt", "a") as f:
+            f.write(line + "\n")
+        print(line)
 
 
 if __name__ == "__main__":

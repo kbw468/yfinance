@@ -41,7 +41,8 @@ def _mask_zero_volume_stubs(panel: dict) -> tuple[dict, dict]:
     return panel, cutoffs
 
 
-def clean_panel(panel: dict, today: dt.date | None = None, verbose=True) -> tuple[dict, dict]:
+def clean_panel(panel: dict, today: dt.date | None = None, verbose=True, keep_partial: bool = False) -> tuple[dict, dict]:
+    """keep_partial=True keeps a current-session (intraday) bar: used only by the intraday projection."""
     panel = {k: v.copy() for k, v in panel.items()}
     report = {}
 
@@ -51,7 +52,7 @@ def clean_panel(panel: dict, today: dt.date | None = None, verbose=True) -> tupl
     today = today or now.date()
     last = panel["Close"].index[-1].date()
     session_final = now >= dt.datetime.combine(today, dt.time(21, 30))
-    if last > today or (last == today and not session_final):
+    if not keep_partial and (last > today or (last == today and not session_final)):
         for k in panel:
             panel[k] = panel[k].iloc[:-1]
         report["dropped_partial_row"] = str(last)
