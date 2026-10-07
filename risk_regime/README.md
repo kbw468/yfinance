@@ -350,3 +350,13 @@ Per-ticker RV10/RV21 top-vs-bottom quintile has no predictive power for SPY draw
 ### 9e. Current realized-vol read (2026-10-07)
 
 VIX ÷ HYG 21d realized is at the **10th percentile** (level z -1.11, 5d ROC z -0.72): credit is realizing more vol than equity implied is pricing. That rule is live, the only live rule across all three layers. MOVE ÷ TLT realized is at the 93rd percentile (level z +1.46) while IEF's is at the 47th: MOVE is rich to long-bond realized, not to the belly. SPY RV10/RV21 is below 1 with breadth at 0% of tickers expanding (z -1.02): realized is compressed across the entire list, which is the tops configuration from 9a if the cyclical/energy names start expanding first. Watch XLY, XLB, XES, XLE, XOP RV10/RV21 z crossing +0.4 while SPY's stays negative.
+
+---
+
+## 10. Analogs to the 2026-10-07 reading
+
+Nearest-neighbor search of today's 29-feature state (percentile levels, 5d and 21d ROC z of every index, term structure, cross-vol ratios, SPY position, realized vol, credit IV/RV) against every day since 2008, grouped into distinct episodes; plus a reduced 14-feature search back to 1991 and coarse rule-based matches. Output in `results/analog_out.txt` and `results/coarse_out.txt`.
+
+Weighted toward today's extremes (rates and bond vol at 1-year highs, equity vol and VVIX at lows, SPY at its high): 2021-03-15, 2016-11-28, 2026-05-22, 2015-05-20, 2022-04-20, 2022-09-12, 2021-10-22, 2023-03-03, 2022-01-12, 2010-12-14, 2018-10-03, 2013-02-01. Median forward: 63d 0.0%, 126d -0.1%, max drawdown 63d -3.2%, 126d -8.1%. Share with a 5%+ drawdown within 63 days 0.33 (base 0.31); 10%+ within 126 days 0.42 (base 0.22). The set splits cleanly: the analogs that occurred with SPY at its high and VIX near its lows (Mar 2021, Nov 2016, Feb 2013, Dec 2010) went straight up; the analogs that occurred with SPY already 3-4% off and VIX mid-range (Apr 2022, Sep 2022, Jan 2022, Oct 2018) were the start of 12-21% drawdowns within 5 to 14 sessions. Today sits with the first group on SPY position and VIX, and with the second group on rates and bond vol.
+
+Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% of high, 1991+): 13 episodes, median 63d max drawdown -3.9%, 38% had a 5%+ drawdown within 63 days, 15% a 10%+ within 126 days. Adding MOVE pct >= 80 narrows to 5 episodes (Jul 2013, Nov 2016, Feb 2021, Oct 2021, Jan 2022), four benign and one (Jan 2022) the start of the 2022 bear. Adding VVIX pct <= 25 leaves 4, all benign over 63 days, with the Oct 2021 one making a 7.6% drawdown 87 days later.
