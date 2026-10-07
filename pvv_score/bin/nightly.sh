@@ -5,6 +5,7 @@ cd "$(dirname "$0")/../.."
 export PVV_TARGET=smooth_42
 export PVV_CACHE="${PVV_CACHE:-$PWD/pvv_score/.cache}"
 mkdir -p "$PVV_CACHE"
+cp -n pvv_score/results/model/factor_registry.csv "$PVV_CACHE/factor_registry.csv" 2>/dev/null || true   # frozen copy of the factor registry for a fresh cache
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
 log "prices"
 python -m pvv_score.data_io

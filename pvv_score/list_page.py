@@ -32,7 +32,8 @@ def chip(cond: str, reg: dict) -> dict:
 
 
 def main():
-    reg = pd.read_csv(CACHE_DIR / "factor_registry.csv", index_col=0)["group"].to_dict()
+    rp = CACHE_DIR / "factor_registry.csv"
+    reg = pd.read_csv(rp if rp.exists() else RESULTS_DIR / "model" / "factor_registry.csv", index_col=0)["group"].to_dict()
     L = pd.read_csv(RESULTS_DIR / "THE_LIST.csv")
     sig = pd.read_csv(RESULTS_DIR / "signatures_today.csv").set_index("ticker")
     asof = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv")["asof"].iloc[0]

@@ -11,7 +11,10 @@ RESULTS_DIR.mkdir(exist_ok=True)
 
 def load_registry() -> dict:
     """FACTORS registry is populated at compute time; build.py persists it."""
-    reg = pd.read_csv(CACHE_DIR / "factor_registry.csv", index_col=0)
+    path = CACHE_DIR / "factor_registry.csv"
+    if not path.exists():                                   # fresh session: the frozen copy in results/model is the same file
+        path = RESULTS_DIR / "model" / "factor_registry.csv"
+    reg = pd.read_csv(path, index_col=0)
     return {f: (r.group, int(r.prior_sign), r.desc) for f, r in reg.iterrows()}
 
 
