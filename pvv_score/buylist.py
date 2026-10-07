@@ -12,7 +12,7 @@ from .calib import BinnedIsotonic
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
-from .regime import tag, today_regime
+from .regime import tag, today_regime, same_regime
 
 TIERS = [0, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0]
 MIN_CELL_N = 500   # a (bucket, tier) cell thinner than this is replaced by the pooled "this tier and above" cell
@@ -43,8 +43,8 @@ def main():
         d[c + "_p"] = d.groupby("date")[c].rank(pct=True)
     d["avg_p"] = (d.state_p + d.level_p) / 2
     d["tier"] = pd.cut(d.avg_p, TIERS, labels=TIER_LABELS, include_lowest=True)
-    rec = d[(d.date >= RECENT_START) & (d.regime == reg)]
-    print(f"regime today: {reg}; cells measured on {rec.date.nunique()} same-regime sessions since {RECENT_START}")
+    rec = d[(d.date >= RECENT_START) & same_regime(d, reg)]
+    print(f"MOVE band today: {reg}; rate-sensitive sectors measured on {rec[rec.regime != 'all'].date.nunique()} same-band sessions, others on all {rec.date.nunique()} sessions since {RECENT_START}")
     tab = rec.groupby(["beta_bucket", "tier"], observed=True).agg(n=("u_top_q_42", "size"), p_top_q_42=("u_top_q_42", "mean"), p_top_half_42=("u_top_half_42", "mean"),
                                                                    p_top_q_63=("u_top_q_63", "mean"), p_top_half_63=("u_top_half_63", "mean"))
     # thin cells -> pooled downward within the bucket: widen the tier's lower edge until the pool holds MIN_CELL_N rows

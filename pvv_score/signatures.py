@@ -16,7 +16,7 @@ import pandas as pd
 
 from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
-from .regime import tag, today_regime
+from .regime import tag, today_regime, same_regime
 
 CONFIRM_START = "2021-01-01"     # confirmation half; discovery half is SAMPLE_START .. DISCOVER_END
 DISCOVER_END = "2020-12-31"      # discovery 2015-01 .. 2020-12 less the COVID window (regime-matched days), confirmation 2021-01 onward
@@ -66,10 +66,12 @@ def build_conditions(df: pd.DataFrame) -> dict:
 def main():
     need = ["date", "ticker", "sector", "beta_252", "vol_roc_21", "vol_roc_10", "rv20_roc_21", "rv20_roc_10", "ret_21", "ret_5", "dvol_roc_21", "vol_accel_5", "rv_accel_5",
             "fwd_sharpe_42", "fwd_mdd_42", "fwd_r2_42", "fwd_up_42", "fwd_sharpe_63", "fwd_mdd_63", "fwd_r2_63", "fwd_up_63"] + QUINTILE_FACTORS
+    from .volindex import load_vol_indices
+    load_vol_indices(refresh=True)
     df = tag(load_research()[list(dict.fromkeys(need))].reset_index(drop=True))
     reg = today_regime()
-    same = (df.regime == reg).values
-    print(f"today's regime: {reg}; same-regime share of sample: {same.mean():.2f}", file=sys.stderr)
+    same = same_regime(df, reg)
+    print(f"MOVE band today: {reg}; comparable share of sample: {same.mean():.2f}", file=sys.stderr)
     y42 = smooth_top_quartile(df, 42).astype(float).values
     y63 = smooth_top_quartile(df, 63).astype(float).values
     disc = (df.date <= DISCOVER_END).values & ~np.isnan(y42) & same

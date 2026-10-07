@@ -49,8 +49,12 @@ def main():
     mc = pd.read_csv(UNIVERSE_CSV)[["Ticker", "Market Cap", "Index"]]
     mc["Ticker"] = mc.Ticker.str.replace(".", "-", regex=False)
     L = L.merge(mc.rename(columns={"Ticker": "ticker", "Market Cap": "mcap_m"}), on="ticker", how="left")
-    lead = (f"{len(L)} names (S&P 500 + S&P 400). P = probability that the next 42 / 63 sessions trace a top-quartile smooth climb against the whole "
-            "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration ({RECENT_START[:4]} onward, today's market regime; "
+    from .volindex import today_readings
+    from .regime import today_regime
+    v = today_readings()
+    lead = (f"VIX {v['vix']:.1f} &nbsp; VXN {v['vxn']:.1f} &nbsp; IWM 20d realised {v['iwm_rv20']:.1f} &nbsp; MOVE {v['move']:.0f} ({today_regime().replace('move_', '')} band).<br>"
+            f"{len(L)} names (S&P 500 + S&P 400). P = probability that the next 42 / 63 sessions trace a top-quartile smooth climb against the whole "
+            "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration ({RECENT_START[:4]} onward, COVID Feb-Jun 2020 excluded; rate-sensitive sectors on same-MOVE-band sessions; "
             "every step of the curve rests on at least 500 historical cases). Baseline 25%. Score = multi-factor composite (0-1). sigs = confirmed three-condition "
             "signatures firing. Below the signature region, names are ordered by Score; in low beta the composite carried no out-of-sample edge, so those "
             "probabilities are flat by evidence, not by omission.")

@@ -51,10 +51,11 @@ def main():
     ranked.insert(1, "tier", pd.cut(ranked.P_topq_42d, [-1, .25, .30, .35, .40, .45, 2], labels=[6, 5, 4, 3, 2, 1]).astype(int))
     cols = ["rank", "tier", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "P_topq_42d", "P_topq_63d", "basis", "n_signatures", "best_signature", "avg_score", "top_states"]
     ranked[cols].to_csv(RESULTS_DIR / "THE_LIST.csv", index=False)
-    from .regime import today_regime
-    reg = today_regime()
-    lines = [f"THE LIST, {asof} close. Market regime today: {reg}; all probabilities measured on {reg} sessions.",
-             f" P42 / P63 = probability (realised out of sample, {RECENT_START[:4]} onward, same regime) that the next 42 / 63 sessions are a top-quartile",
+    from .regime import today_regime, today_move
+    from .volindex import today_readings
+    v = today_readings(); reg = today_regime()
+    lines = [f"THE LIST, {asof} close. VIX {v['vix']:.1f}  VXN {v['vxn']:.1f}  IWM 20d rv {v['iwm_rv20']:.1f}  MOVE {v['move']:.0f} ({reg}). Rate-sensitive sectors (utilities, REITs, staples, financials) measured on {reg} sessions; all other sectors on every session.",
+             f" P42 / P63 = probability (realised out of sample, {RECENT_START[:4]} onward, COVID Feb-Jun 2020 excluded) that the next 42 / 63 sessions are a top-quartile",
              "smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.",
              "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).", "",
              "Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.", "",

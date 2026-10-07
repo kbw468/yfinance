@@ -35,6 +35,12 @@ def main():
     L = pd.read_csv(RESULTS_DIR / "THE_LIST.csv")
     sig = pd.read_csv(RESULTS_DIR / "signatures_today.csv").set_index("ticker")
     asof = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv")["asof"].iloc[0]
+    from .volindex import today_readings
+    from .regime import today_regime
+    v = today_readings(); band = today_regime()
+    vix_cls = "vhot" if v["vix"] > 30 else ("vwarm" if v["vix"] > 20 else "")
+    volline = (f'<p class="vol">VIX <span class="{vix_cls}">{v["vix"]:.1f}</span> &nbsp; VXN {v["vxn"]:.1f} &nbsp; IWM 20d realised {v["iwm_rv20"]:.1f} &nbsp; '
+               f'MOVE <b>{v["move"]:.0f}</b> ({band.replace("move_", "")} band: rate-sensitive sectors measured on these sessions only)</p>')
     rows = []
     for _, r in L.iterrows():
         sigs = []
@@ -80,9 +86,11 @@ tr.detail td{{background:var(--row);font-size:.8rem;padding:8px 12px 10px 40px}}
 .sigline{{margin:3px 0}} .sigp{{font-family:var(--mono);color:var(--muted);margin-right:8px}}
 .states{{color:var(--muted);font-size:.78rem;white-space:normal}}
 .count{{color:var(--muted);font-size:.85rem}}
+.vol{{font-family:var(--mono);font-size:.9rem;margin:0 0 8px}} .vwarm{{color:var(--volume);font-weight:700}} .vhot{{color:var(--fg);font-weight:800;text-decoration:underline}}
 </style>
 <h1>THE LIST</h1>
-<p class="sub">{asof} close. Every name ranked by the probability that its next 42 / 63 sessions trace a top-quartile smooth climb against the whole universe (Sharpe, max drawdown, straightness, up-day share). Probabilities are realised out-of-sample frequencies, {RECENT_START[:4]} onward, same market regime as today. Baseline 25%. Click a row to see the confirmed signatures firing on it; each signature is three conditions that must all hold, colored by what they measure.</p>
+{volline}
+<p class="sub">{asof} close. Every name ranked by the probability that its next 42 / 63 sessions trace a top-quartile smooth climb against the whole universe (Sharpe, max drawdown, straightness, up-day share). Probabilities are realised out-of-sample frequencies, {RECENT_START[:4]} onward (COVID Feb–Jun 2020 excluded); utilities, REITs, staples and financials are measured on sessions in the same MOVE band as today, every other sector on all sessions. Baseline 25%. Click a row to see the confirmed signatures firing on it; each signature is three conditions that must all hold, colored by what they measure.</p>
 <div class="legend"><b>Condition family:</b> <span class="chip price">price / trend / structure</span> <span class="chip volume">volume / participation</span> <span class="chip volatility">volatility</span> <span class="chip relative">relative to market (beta, correlation, capture, RS)</span>
 </div>
 <div class="legend"><b>Tiers (P 42d):</b> <span class="chip tier1">Tier 1 &ge; 45%</span> <span class="chip tier2">Tier 2 40–45%</span> <span class="chip tier3" style="color:var(--fg)">Tier 3 35–40%</span> <span class="chip tier4" style="color:var(--fg)">Tier 4 30–35%</span> <span class="chip tier5" style="color:var(--fg)">Tier 5 25–30%</span> <span style="color:var(--muted)">Tier 6 &lt; 25% (below baseline)</span></div>
