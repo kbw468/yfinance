@@ -1,0 +1,5 @@
+test,discovered,confirmed,base_disc,base_conf,median_p_conf_confirmed,overlap_with_forward,jaccard,max_lift_disc
+forward (as deployed),859,719,0.2578565113923987,0.2564381339975065,0.38503253796095444,,,
+reversed halves,3005,1496,0.2564381339975065,0.2578565113923987,0.3454951592654331,215.0,0.1075,
+"permuted targets, seed 0",0,0,0.2506226818893209,0.25060583270660985,,,,
+"permuted targets, seed 1",0,0,0.2509329193470889,0.25059419977456965,,,,
