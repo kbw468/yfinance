@@ -23,9 +23,6 @@ def render(df, sig, title, lead, mcap_first):
         t = int(r.tier)
         best = sig["best_signature_plain"].get(r.ticker, "") if r.ticker in sig.index else ""
         best = best if isinstance(best, str) else ""
-        nm = sig["near_miss_n"].get(r.ticker, 0) if r.ticker in sig.index else 0
-        nmp = sig["near_miss_piece"].get(r.ticker, "") if r.ticker in sig.index else ""
-        nmp = nmp if isinstance(nmp, str) else ""
         tail = best.replace(" AND ", " + ") if best else "none firing"
         wt = [f'<td class="n">{r.wt_universe*100:.2f}%</td>', f'<td class="n">{r.wt_tier*100:.1f}%</td>'] if mcap_first else []
         deltas = [f'<td class="n">{dv(r.get("d_rank_1", float("nan")), 0)}</td>', f'<td class="n">{dv(r.get("d_p42_1", float("nan")), 1, 100)}</td>', f'<td class="n">{dv(r.get("d_p42_5", float("nan")), 1, 100)}</td>']
@@ -65,10 +62,14 @@ def main():
     v = today_readings()
     lead = (f"VIX {v['vix']:.1f} &nbsp; VXN {v['vxn']:.1f} &nbsp; IWM 20d realised {v['iwm_rv20']:.1f} &nbsp; MOVE {v['move']:.0f} ({today_regime().replace('move_', '')} band).<br>"
             f"{len(L)} names (S&P 500 + S&P 400). P = probability that the next 42 / 63 sessions trace a top-quartile smooth climb against the whole "
-            "universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration ({RECENT_START[:4]} onward, COVID Feb-Jun 2020 excluded; rate-sensitive sectors on same-MOVE-band sessions; "
+            f"universe (Sharpe, max drawdown, straightness, up-day share), read off a monotone out-of-sample calibration ({RECENT_START[:4]} onward, COVID Feb-Jun 2020 excluded; rate-sensitive sectors on same-MOVE-band sessions; "
             "every step of the curve rests on at least 500 historical cases). Baseline 25%. Score = multi-factor composite (0-1). sigs = confirmed three-condition "
             "signatures firing. Below the signature region, names are ordered by Score; in low beta the composite carried no out-of-sample edge, so those "
-            "probabilities are flat by evidence, not by omission.")
+            "probabilities are flat by evidence, not by omission. Δrk 1d / ΔP 1d / ΔP 5d = change in rank and in probability (points) since the previous session and five sessions back.")
+    import json
+    if (RESULTS_DIR / "model" / "model.json").exists():
+        mj = json.load(open(RESULTS_DIR / "model" / "model.json"))
+        lead += f" Model {mj['sha256']}, fitted through {mj['fitted_through']}."
     tmp = RESULTS_DIR / "_tmp"
     tmp.mkdir(exist_ok=True)
     for name, df, mf, title in [("THE_LIST", L.sort_values("rank"), False, f"THE LIST, {asof} close"),

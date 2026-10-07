@@ -88,7 +88,7 @@ table{{border-collapse:collapse;font-size:.82rem;font-variant-numeric:tabular-nu
 th{{background:var(--th);text-align:left;padding:7px 9px;cursor:pointer;position:sticky;top:0;user-select:none;white-space:nowrap}}
 td{{padding:5px 9px;border-top:1px solid var(--rule);vertical-align:top}}
 tr.main{{cursor:pointer}} tr.main:hover td{{background:var(--row)}}
-td.p{{font-family:var(--mono);font-weight:600;text-align:right}}
+td.p{{font-family:var(--mono);font-weight:600;text-align:right;white-space:nowrap}}
 .tier1{{background:var(--t1);color:#fff}} .tier2{{background:var(--t2);color:#fff}} .tier3{{background:var(--t3)}} .tier4{{background:var(--t4)}} .tier5{{background:var(--t5)}} .tier6{{color:var(--muted)}}
 tr.tier1row td{{background:color-mix(in srgb,var(--t1) 22%,var(--bg))}} tr.tier2row td{{background:color-mix(in srgb,var(--t2) 18%,var(--bg))}} tr.tier3row td{{background:color-mix(in srgb,var(--t3) 22%,var(--bg))}} tr.tier4row td{{background:color-mix(in srgb,var(--t4) 35%,var(--bg))}} tr.tier5row td{{background:color-mix(in srgb,var(--t5) 60%,var(--bg))}}
 tr.main.tier1row:hover td,tr.main.tier2row:hover td,tr.main.tier3row:hover td,tr.main.tier4row:hover td,tr.main.tier5row:hover td{{filter:brightness(0.93)}}
