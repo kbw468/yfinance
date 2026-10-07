@@ -40,29 +40,31 @@ C1={'rates_pressure_vix_asleep':-5,'complacency_both_compressed':-5,'vol_collaps
 # drawdown-first: longer windows on risk-off, bigger points, smaller/shorter risk-on adds, cap while in drawdown, slow re-entry
 W2={k:(int(w*1.5) if p<0 else w, int(p*1.4) if p<0 else int(p*0.7)) for k,(w,p) in W1.items()}
 C2={'rates_pressure_vix_asleep':-8,'complacency_both_compressed':-8,'vol_collapsing_from_high':6,'at_highs':3,'vix_floor_vvix_floor':-5}
-
-# ===== chosen: drawdown-first dial (V10) =====
-W=W1.copy()
-W={k:(int(w*1.5),p) if p<0 else (max(10,w//2),p) for k,(w,p) in W.items()}   # risk-off fires persist 1.5x longer, risk-on adds persist half as long
-SCORE,PARTS=build(W,C1,dd_cap=30,reentry=4)
-pd.to_pickle({'score':SCORE,'parts':PARTS},'SCORE.pkl')
-r=R['SPY']; m=~EX&(idx>=pd.Timestamp('2008-01-01')); bh=r[m]; w=(SCORE.shift(1)/100)[m]
+V={}
+V['V1 current']=build(W1,C1)
+V['V2 heavier/longer']=build(W2,C2)
+V['V3 V2 + cap30 in drawdown']=build(W2,C2,dd_cap=30)
+V['V4 V3 + slow re-entry 4/day']=build(W2,C2,dd_cap=30,reentry=4)
+V['V5 V3 + slow re-entry 2/day']=build(W2,C2,dd_cap=30,reentry=2)
+r=R['SPY']; m=~EX&(idx>=pd.Timestamp('2008-01-01'))
 def stats(x):
-    c=x.cumsum(); dd=(c-c.cummax()); return dict(ann=round(x.mean()*252*100,2),vol=round(x.std()*np.sqrt(252)*100,2),sharpe=round(x.mean()/x.std()*np.sqrt(252),2),maxDD=round(dd.min()*100,1),ulcer=round(np.sqrt((dd**2).mean())*100,2))
-print('TODAY',idx[-1].date(),'dial',int(SCORE.iloc[-1])); today=PARTS.iloc[-1]; print(today[today!=0].to_string())
-cap_today=bool(((dd63<=-0.05)&~recent(SIG['ONCONF_collapse']|CAPANY,10)).iloc[-1])
-print('strategy',stats(w*bh),'avg exposure',round(w.mean(),2)); print('buy&hold',stats(bh))
-ok=L['ok21']&~EX&(idx>=pd.Timestamp('2008-01-01'))
-b=pd.cut(SCORE[ok],[-1,30,45,55,65,75,101],labels=['0-30','31-45','46-55','56-65','66-75','76-100'])
-d=pd.DataFrame({'b':b,'off':L.loc[ok,'riskoff21'],'f21':L.loc[ok,'fwd21']*100,'f63':L.loc[ok,'fwd63']*100,'dd21':L.loc[ok,'fwdDD21']*100,'dd63':L.loc[ok,'fwdDD63']*100})
-B=d.groupby('b').agg(n=('off','count'),P_off=('off','mean'),fwd21=('f21','mean'),fwd63=('f63','mean'),DD21=('dd21','mean'),DD63=('dd63','mean')).round(3); print(B.to_string()); print((d.b.value_counts(normalize=True).sort_index()*100).round(1).to_string())
+    c=x.cumsum(); dd=(c-c.cummax()); ulcer=np.sqrt((dd**2).mean())
+    return dict(ann=round(x.mean()*252*100,2),vol=round(x.std()*np.sqrt(252)*100,2),sharpe=round(x.mean()/x.std()*np.sqrt(252),2),maxDD=round(dd.min()*100,1),ulcer=round(ulcer*100,2),calmar=round((x.mean()*252)/(-dd.min()),2))
+rows=[]; bh=r[m]
+rows.append({'variant':'SPY buy & hold',**stats(bh),'avg_exp':1.0})
+for k,(s,_) in V.items():
+    w=(s.shift(1)/100)[m]; rows.append({'variant':k,**stats(w*bh),'avg_exp':round(w.mean(),2)})
+print('=== 2008+ ex-2020 window, exposure = dial/100 in SPY lagged a day, rest cash ==='); print(pd.DataFrame(rows).set_index('variant').to_string())
+# ---- episodes: major drawdowns since 2008 (peak -> trough) and the 42d recovery capture after the trough
 EP=[('2008-05-19','2009-03-09'),('2010-04-23','2010-07-02'),('2011-04-29','2011-10-03'),('2015-07-20','2015-08-25'),('2015-11-03','2016-02-11'),('2018-01-26','2018-02-08'),('2018-09-20','2018-12-24'),('2022-01-03','2022-10-12'),('2023-07-31','2023-10-27'),('2024-07-16','2024-08-05'),('2025-02-19','2025-04-08'),('2026-01-27','2026-03-30')]
-ww=SCORE.shift(1)/100; eps=[]
-for a,bb in EP:
-    a=pd.Timestamp(a); bb=pd.Timestamp(bb); seg=r.loc[a:bb].iloc[1:]; st=(ww.loc[seg.index]*seg).sum()*100; sp=seg.sum()*100
-    q=idx.get_loc(bb); rec=r.iloc[q+1:q+43]; st2=(ww.loc[rec.index]*rec).sum()*100; sp2=rec.sum()*100
-    eps.append({'peak':str(a.date()),'trough':str(bb.date()),'spy':round(sp,1),'strat':round(st,1),'capt_loss':round(st/sp,2),'reb_spy':round(sp2,1),'reb_strat':round(st2,1),'capt_gain':round(st2/sp2,2),'d_pk':int(SCORE.loc[a]),'d_tr':int(SCORE.loc[bb]),'d_21':int(SCORE.iloc[q+21])})
-E=pd.DataFrame(eps); print(E.to_string())
-yr=pd.DataFrame({'SPY':bh,'dial':w*bh}); Y=(yr.groupby(yr.index.year).sum()*100).round(1); print(Y.to_string())
-json.dump({'asof':str(idx[-1].date()),'score':int(SCORE.iloc[-1]),'base':60,'cap_active':cap_today,'components':{k:float(v) for k,v in today[today!=0].items()},'hist':[int(v) for v in SCORE.iloc[-504:]],
-  'buckets':B.reset_index().astype({'b':str}).to_dict(orient='records'),'strategy':stats(w*bh),'buyhold':stats(bh),'avg_exposure':round(float(w.mean()),2),'episodes':eps,'yearly':{str(k):{'spy':float(v.SPY),'dial':float(v.dial)} for k,v in Y.iterrows()}},open('score_data.json','w'))
+print('\n=== EPISODES: strategy loss peak->trough vs SPY, and 42d recovery capture after trough (strategy gain / SPY gain), plus dial at peak, at trough, 10d after ===')
+for k,(s,_) in V.items():
+    w=s.shift(1)/100; rows=[]
+    for a,b in EP:
+        a=pd.Timestamp(a); b=pd.Timestamp(b); seg=r.loc[a:b].iloc[1:]; st=(w.loc[seg.index]*seg).sum()*100; sp=seg.sum()*100
+        q=idx.get_loc(b); rec=r.iloc[q+1:q+43]; st2=(w.loc[rec.index]*rec).sum()*100; sp2=rec.sum()*100
+        rows.append({'peak':a.date(),'trough':b.date(),'SPY%':round(sp,1),'strat%':round(st,1),'captured_loss':round(st/sp,2) if sp else np.nan,'rebound42 SPY%':round(sp2,1),'strat%_r':round(st2,1),'captured_gain':round(st2/sp2,2) if sp2 else np.nan,'dial@peak':int(s.loc[a]),'dial@trough':int(s.loc[b]),'dial+10':int(s.iloc[q+10])})
+    T=pd.DataFrame(rows); print(f'\n--- {k} ---'); print(T.to_string()); print('median captured loss',T.captured_loss.median(),' median captured gain',T.captured_gain.median())
+# today's values
+print('\nTODAY by variant:',{k:int(s.iloc[-1]) for k,(s,_) in V.items()})
+pd.to_pickle({k:s for k,(s,_) in V.items()},'SCORE_VARIANTS.pkl')

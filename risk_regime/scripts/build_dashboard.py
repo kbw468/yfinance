@@ -122,7 +122,7 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
 </header>
 
 <section id="scoresec">
-  <h2>Exposure dial, 0 to 100</h2>
+  <h2>Exposure dial, 0 to 100 (drawdown-first)</h2>
   <div class="chartcard" style="display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:16px;align-items:center">
     <div><div class="k sub" style="letter-spacing:.06em;text-transform:uppercase">today</div><div id="scorebig" class="num" style="font-size:56px;font-weight:600;line-height:1"></div><div id="scorelabel" class="sub" style="margin-top:4px"></div><div id="scoreparts" style="margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);display:grid;gap:2px"></div></div>
     <div><svg id="scorechart" viewBox="0 0 700 170" role="img" aria-label="Exposure dial, last two years"></svg><div class="sub" id="scorebuckets" style="margin-top:6px"></div></div>
@@ -328,7 +328,9 @@ if(TK){
 const SC=D.score;
 if(SC){
   const v=SC.score; document.getElementById('scorebig').textContent=v;
-  const lab=v<=30?'0-30: drawdown regime. Historically 50% odds of a 5% drop in 21d, mean 63d max drawdown -12.7%.':v<=45?'31-45: reduced. P(5% DD/21d) 0.21, fwd21 +1.3%.':v<=55?'46-55: neutral. P 0.17, fwd21 +1.5%, fwd63 +3.4%.':v<=65?'56-65: constructive. P 0.15.':v<=75?'66-75: long. P 0.11, fwd63 +3.6%.':'76-100: max long. P 0.12, time share 30%.';
+  const bk=SC.buckets.find(b=>{const [lo,hi]=b.b.split('-').map(Number);return v>=lo&&v<=hi;});
+  const names={'0-30':'drawdown regime','31-45':'reduced','46-55':'neutral','56-65':'constructive','66-75':'long','76-100':'max long'};
+  const lab=bk?`${bk.b}: ${names[bk.b]}. Since 2008 this band had ${Math.round(bk.P_off*100)}% odds of a 5% drop within 21d, mean next 21d ${bk.fwd21>0?'+':''}${bk.fwd21.toFixed(1)}%, mean 63d max drawdown ${bk.DD63.toFixed(1)}%.`+(SC.cap_active?' Drawdown cap active (SPY 5%+ off its high, no confirmation yet).':'') : '';
   document.getElementById('scorelabel').textContent=lab;
   const parts=Object.entries(SC.components).sort((a,b)=>a[1]-b[1]);
   document.getElementById('scoreparts').innerHTML=`<div>base ${SC.base}</div>`+parts.map(([k,p])=>`<div><span style="color:${p<0?'var(--orange)':'var(--blue)'};font-weight:600">${p>0?'+':''}${p}</span> ${k.replace(/_/g,' ')}</div>`).join('');
@@ -341,7 +343,7 @@ if(SC){
   g+=`<path d="${h.map((q,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(q).toFixed(1)).join('')}" fill="none" stroke="${css('--ink2')}" stroke-width="1.5"/><circle cx="${x(n-1)}" cy="${y(h[n-1])}" r="4" fill="${v<=45?css('--orange'):css('--blue')}" stroke="${css('--surface')}" stroke-width="2"/>`;
   svg.innerHTML=g;
   svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((px-Lm)/(W-Lm-Rm)*(n-1))));showTip(e,`${D.dates[D.dates.length-n+i]}<br>dial ${h[i]}`);}; svg.onmouseleave=hideTip;
-  document.getElementById('scorebuckets').innerHTML='Backtest 2008+ by bucket, P(5% DD in 21d) / mean fwd 21d: '+SC.buckets.map(b=>`${b.b}: ${b.P_off.toFixed(2)} / ${b.fwd21>0?'+':''}${b.fwd21.toFixed(1)}%`).join(' · ');
+  document.getElementById('scorebuckets').innerHTML=`Drawdown-first tuning. Holding SPY at dial/100 since 2008: ${SC.strategy.ann}% a year, max drawdown ${SC.strategy.maxDD}%, vs buy-and-hold ${SC.buyhold.ann}% and ${SC.buyhold.maxDD}%. By band, P(5% DD in 21d) / mean fwd 21d: `+SC.buckets.map(b=>`${b.b}: ${b.P_off.toFixed(2)} / ${b.fwd21>0?'+':''}${b.fwd21.toFixed(1)}%`).join(' · ');
 }
 // ---- realized vol layer
 const RVD=D.rv;
