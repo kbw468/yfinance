@@ -6,7 +6,7 @@ Also writes plain-English descriptions of the conditions and tonight's firing na
 import numpy as np
 import pandas as pd
 from .calib import BinnedIsotonic
-from .config import RESULTS_DIR, RECENT_START
+from .config import RESULTS_DIR, RECENT_START, CACHE_DIR
 from .run_eval import load_research
 from .composite import tercile_series
 from .signatures import QUINTILE_FACTORS, FIXED, build_conditions, smooth_top_quartile
@@ -24,6 +24,9 @@ PLAIN = {
     "dn_vol_63": "downside vol", "parkinson_cc_20": "range vol / close vol", "skew_63": "skew", "idio_vol_63": "idiosyncratic vol", "sharpe_126": "126d Sharpe",
     "corr_spy_63": "corr to SPY", "beta_252": "beta", "up_capture_63": "up-capture", "capture_spread_63": "up minus down capture",
 }
+
+COMP_Q = [0, .2, .4, .6, .8, 1.0]     # composite quintiles the signature calibrations condition on
+MIN_GROUP_N = 1500                  # a quintile with fewer firing rows than this uses the unconditional curve
 
 
 def plain(cond: str) -> str:
@@ -74,16 +77,33 @@ def main():
             m &= conds[p]
         cnt += m; liftsum += m * (r.lift_conf - 1.0); bestp = np.maximum(bestp, m * r.p_conf)
     df["n_fire"] = cnt; df["liftsum"] = liftsum; df["bestp"] = bestp
+    # composite percentile on the same night (out-of-sample walk-forward preds), so the signature calibrations condition on it:
+    # a strong signature on a bottom-quintile composite realised ~baseline; pooled across composite levels it read 44%
+    st = pd.read_parquet(CACHE_DIR / "composite_state_smooth_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "c_state"})
+    lv = pd.read_parquet(CACHE_DIR / "composite_level_smooth_oos_preds.parquet")[["date", "ticker", "comp_bucketed"]].rename(columns={"comp_bucketed": "c_level"})
+    cp = st.merge(lv, on=["date", "ticker"]).dropna()
+    cp["comp_p"] = (cp.groupby("date")["c_state"].rank(pct=True) + cp.groupby("date")["c_level"].rank(pct=True)) / 2
+    df["comp_p"] = cp.set_index(["date", "ticker"])["comp_p"].reindex(pd.MultiIndex.from_arrays([df.date, df.ticker])).values
+    df["comp_q"] = pd.cut(df.comp_p, COMP_Q, labels=range(len(COMP_Q) - 1), include_lowest=True)
     rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42) & same_regime(df, reg)]
     depth = rec.groupby(pd.cut(rec.n_fire, [-1, 0, 2, 5, 10, 20, 50, 10000], labels=["0", "1-2", "3-5", "6-10", "11-20", "21-50", "50+"]), observed=True).agg(
         n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))
     depth.to_csv(RESULTS_DIR / "signature_depth_oos.csv")
     # signature-quality calibrations (held-out test: max(composite, lift-weighted sum, best signature) beat the count rule)
+    # fitted inside composite quintiles (key (c, q)); q="all" is the unconditional curve, used where a quintile is thin
+    # or where the night has no out-of-sample composite (before the first walk-forward test year)
     iso_sig = {}
     for c, xcol, src in [("ls_iso_q42", "liftsum", "y42"), ("ls_iso_q63", "liftsum", "y63"), ("bp_iso_q42", "bestp", "y42"), ("bp_iso_q63", "bestp", "y63")]:
-        ok_ = rec[src].notna() & (rec.n_fire > 0)
-        x = np.log1p(rec[xcol].values[ok_]) if xcol == "liftsum" else rec[xcol].values[ok_]
-        iso_sig[c] = BinnedIsotonic(500).fit(x, rec[src].values[ok_])
+        ok_ = (rec[src].notna() & (rec.n_fire > 0)).values
+        x = np.log1p(rec[xcol].values) if xcol == "liftsum" else rec[xcol].values
+        iso_sig[(c, "all")] = BinnedIsotonic(500).fit(x[ok_], rec[src].values[ok_])
+        for q in range(len(COMP_Q) - 1):
+            mq = ok_ & (rec.comp_q == q).values
+            iso_sig[(c, q)] = BinnedIsotonic(500).fit(x[mq], rec[src].values[mq]) if mq.sum() >= MIN_GROUP_N else iso_sig[(c, "all")]
+    # transparency table: realised P by composite quintile x best-signature probability band
+    f = rec[rec.n_fire > 0]
+    byc = f.groupby([f.comp_q.astype(str), pd.cut(f.bestp, [0, .30, .35, .40, .46, 1.0])], observed=True).agg(n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))
+    byc.to_csv(RESULTS_DIR / "signature_by_composite_oos.csv")
     # tonight
     today = df[df.date == df.date.max()].copy()
     # top-5 confirmed signatures per name tonight (ordered by discovery probability), for display
@@ -113,16 +133,21 @@ def main():
                 cnt += 1; misses[m[0]] += 1
         near_n[tk] = cnt
         near_miss[tk] = plain(misses.most_common(1)[0][0]) if misses else ""
-    for c, m in iso_sig.items():
+    # tonight's composite percentile comes from the live scoring (same construction: mean of state and level percentiles)
+    live = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv").set_index("ticker")["avg_score"]
+    today["comp_p"] = today.ticker.map(live).values
+    today["comp_q"] = pd.cut(today.comp_p, COMP_Q, labels=range(len(COMP_Q) - 1), include_lowest=True)
+    for c in ["ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]:
         x = np.log1p(today.liftsum.values) if c.startswith("ls_") else today.bestp.values
-        today[c] = np.where(today.n_fire.values > 0, m.predict(x), np.nan)
+        pred = np.array([iso_sig[(c, int(q) if pd.notna(q) else "all")].predict([xi])[0] for xi, q in zip(x, today.comp_q)])
+        today[c] = np.where(today.n_fire.values > 0, pred, np.nan)
     today["near_miss_n"] = today.ticker.map(near_n)
     today["near_miss_piece"] = today.ticker.map(near_miss)
     today["best_signature"] = today.best_sig_idx.map(lambda i: conf.signature.iloc[i] if i >= 0 else "")
     today["best_signature_plain"] = today.best_signature.map(lambda s: " AND ".join(plain(c) for c in s.split(" & ")) if s else "")
     today["best_p_conf"] = today.best_sig_idx.map(lambda i: conf.p_conf.iloc[i] if i >= 0 else np.nan)
     today["best_n_conf"] = today.best_sig_idx.map(lambda i: conf.n_conf.iloc[i] if i >= 0 else np.nan)
-    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "liftsum", "bestp", "ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]].sort_values(["n_fire"], ascending=False)
+    today = today[["ticker", "sector", "beta_bucket", "comp_p", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "liftsum", "bestp", "ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
     print(f"RULE as applied ({RECENT_START[:4]}+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")
