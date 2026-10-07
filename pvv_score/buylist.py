@@ -108,7 +108,7 @@ def main():
     scored.insert(0, "rank", scored.index + 1)
     out_cols = ["rank", "ticker", "Company", "Sector", "beta_bucket", "beta_252", "signature", "p_top_q_42", "p_top_half_42", "p_top_q_63", "p_top_half_63",
                 "avg_score", "state_score_pooled", "level_score", "top_states"]
-    scored[out_cols].round(3).to_csv(RESULTS_DIR / "buylist.csv", index=False)
+    scored[[c for c in out_cols if c in scored.columns]].round(3).to_csv(RESULTS_DIR / "buylist.csv", index=False)
     u.to_csv(RESULTS_DIR / "universe_scores_smooth.csv", index=False)   # carries the isotonic composite probabilities to final_list
     lines = [f"BUY LIST as of {asof} close. Every name ranked by the probability that its next 42 sessions are a top-quartile smooth climb",
              "against the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline for any name: 25% (Q) / 50% (H).",
