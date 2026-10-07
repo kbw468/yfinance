@@ -21,6 +21,6 @@ def to_state(F: dict[str, pd.DataFrame], skip: tuple = ()) -> dict[str, pd.DataF
         f = f.astype("float64")
         mu = f.rolling(NORM_WINDOW, min_periods=MIN_OBS).mean().shift(1)
         sd = f.rolling(NORM_WINDOW, min_periods=MIN_OBS).std().shift(1)
-        z = (f - mu) / sd.where(sd > 1e-9)
+        z = (f - mu) / sd.where(sd > 1e-6 * np.maximum(mu.abs(), 1.0))   # a factor flat over its norm window carries no state (relative floor: build-invariant)
         out[f"z_{name}"] = z.clip(-6, 6).astype("float32")
     return out
