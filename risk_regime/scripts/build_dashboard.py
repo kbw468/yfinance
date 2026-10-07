@@ -8,6 +8,8 @@ import json, sys, os
 src = sys.argv[1] if len(sys.argv) > 1 else 'dash_data.json'
 out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(os.path.dirname(__file__), '..', 'dashboard.html')
 DATA = json.load(open(src))
+tick_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'tick_data.json')
+DATA['tick'] = json.load(open(tick_src)) if os.path.exists(tick_src) else None
 
 RULE_META = {
  'SETUP_rates':   ('SETUP',  'Yields ripping, VIX asleep',          'TNX 5d chg z > 1 and VIX 5d ROC z < -0.3', 'P(5% DD/21d) 0.25 vs 0.17 base. 56% of tops, median 18d lead to the -5% break.'),
@@ -96,6 +98,15 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
 .bar .trk{height:10px;position:relative;background:var(--grid);border-radius:2px}
 .bar .fill{position:absolute;top:0;height:100%;border-radius:2px}
 .note{font-size:12.5px;color:var(--ink2);max-width:70ch}
+.heat td{padding:3px 6px;text-align:center;font-family:var(--mono);font-size:11px;min-width:46px}
+.heat th{padding:4px 6px;text-align:center;font-size:10px}
+.heat td:first-child{text-align:left}
+.hc{display:inline-block;width:100%;border-radius:3px;padding:2px 0}
+.lead{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.lead .col{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0}
+.lead h3{font-family:var(--mono);font-size:12px;font-weight:600;margin:0 0 6px;color:var(--ink2)}
+.lead ol{margin:0;padding-left:18px;font-family:var(--mono);font-size:12px}
+.lead li{display:flex;justify-content:space-between;gap:8px}
 :focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
 </style>
@@ -145,6 +156,28 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
   <div class="row"><label for="pbsel" class="sub">rule</label><select id="pbsel"></select><span class="sub" id="pbn"></span></div>
   <div class="pb" id="pb"></div>
   <p class="note">Bars are median relative return (%) over the 10 sessions after the fire; the right-hand number is the share of fires where the ticker beat SPY. Orange = lagged SPY, blue = led SPY.</p>
+</section>
+
+<section id="ticksec">
+  <h2>Ticker-side ROC: pair rules (ticker relative ROC × index ROC)</h2>
+  <div class="board" id="tickboard"></div>
+</section>
+
+<section>
+  <h2>Relative-to-SPY ROC tape, 38 tickers (z vs own trailing 252d)</h2>
+  <div class="tablewrap"><table id="ticktape"></table></div>
+  <p class="note">Historical context columns: median relative ROC5 z three days before the 36 risk-off peaks, on the peak day, on the 40 trough days, and three days after. P(off) is the chance of a 5% SPY drawdown in 21d when the ticker's 21d relative ROC z is in its top vs bottom quintile (base 0.174).</p>
+</section>
+
+<section>
+  <h2>Ticker × index ROC matrix: median 10d forward return relative to SPY (%) when the index 5d ROC z is above +1 (up) or below -1 (down)</h2>
+  <div class="tablewrap"><table id="heat" class="heat"></table></div>
+  <p class="note">Blue = ticker beats SPY after that index move, orange = lags. Read a row to see what a ticker does when each dimension of the vol complex moves; read a column to see who to hold when it does.</p>
+</section>
+
+<section>
+  <h2>Stress-regime ROC beta: % change in ticker/SPY ratio per 100% move in the index (per 1 pct-pt for TNX/TYX), VIX pct &gt; 75</h2>
+  <div class="tablewrap"><table id="beta" class="heat"></table></div>
 </section>
 </div>
 <div class="tip" id="tip"></div>
@@ -245,7 +278,23 @@ function drawPB(){
   document.getElementById('pb').innerHTML=`<div class="col">${Array.from({length:half},(_,i)=>row(i)).join('')}</div><div class="col">${Array.from({length:n-half},(_,i)=>row(i+half)).join('')}</div>`;
 }
 pbsel.onchange=drawPB; drawPB();
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawSpy();drawZ();});
+// ---- ticker side
+const TK=D.tick;
+if(TK){
+  const tb=document.getElementById('tickboard');
+  tb.innerHTML=Object.entries(TK.tick_rules).map(([k,r])=>{const st=r.live?'live':r.recent?'recent':'quiet';const bear=r.P_off!=null&&r.P_off>0.174;
+    return `<div class="rule ${bear?'ONSET':'CAP'}"><div class="t"><span class="tag">PAIR</span><span class="state ${st}">${st==='live'?'LIVE':st==='recent'?'last 10d':'quiet'}</span></div><div class="name">${k.replace(/_/g,' ')}</div><div class="def">${r.def}</div><div class="stat">${r.note} P(5% DD/21d) ${r.P_off==null?'n/a':r.P_off.toFixed(2)} vs 0.17 · fwd21 ${r.fwd21==null?'':f2(r.fwd21)+'%'} · n=${r.n}</div><div class="last">last first-fire ${r.last}</div></div>`;}).join('');
+  const Lx=TK.lead; const pr=TK.pred;
+  const rows=TK.tape.slice().sort((a,b)=>(a.z5??0)-(b.z5??0));
+  document.getElementById('ticktape').innerHTML=`<tr><th>ticker</th><th>rel 5d %</th><th>rel 10d %</th><th>rel 21d %</th><th>z 5d</th><th>z 10d</th><th>z 21d</th><th>peak -3</th><th>peak 0</th><th>trough 0</th><th>trough +3</th><th>P(off) top/bottom Q</th></tr>`+
+    rows.map(r=>`<tr><td>${r.t}</td><td class="num">${f2(r.rel5)}</td><td class="num">${f2(r.rel10)}</td><td class="num">${f2(r.rel21)}</td><td class="num">${zc(r.z5)}</td><td class="num">${zc(r.z10)}</td><td class="num">${zc(r.z21)}</td><td class="num">${f2(Lx.peak_m3[r.t])}</td><td class="num">${f2(Lx.peak_0[r.t])}</td><td class="num">${f2(Lx.trough_0[r.t])}</td><td class="num">${f2(Lx.trough_p3[r.t])}</td><td class="num">${pr[r.t]?pr[r.t].topQ.toFixed(2)+' / '+pr[r.t].bottomQ.toFixed(2):''}</td></tr>`).join('');
+  function heat(id,M,scale){
+    const mx=scale; const cell=v=>{if(v==null)return '<td></td>';const a=Math.min(1,Math.abs(v)/mx);const col=v>0?css('--blue'):css('--orange');const bg=`color-mix(in srgb, ${col} ${Math.round(a*70)}%, var(--surface))`;const ink=a>0.5?'#fff':'var(--ink)';return `<td><span class="hc" style="background:${bg};color:${ink}">${f2(v)}</span></td>`;};
+    document.getElementById(id).innerHTML=`<tr><th>ticker</th>${M.cols.map(c=>`<th>${c}</th>`).join('')}</tr>`+M.rows.map((r,i)=>`<tr><td>${r}</td>${M.vals[i].map(cell).join('')}</tr>`).join('');
+  }
+  heat('heat',TK.mat,1.0); heat('beta',TK.beta,12);
+}
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawSpy();drawZ();if(TK){heat('heat',TK.mat,1.0);heat('beta',TK.beta,12);}});
 </script>
 """
 html = HTML.replace('__DATA__', json.dumps(DATA).replace('</', '<\\/'))

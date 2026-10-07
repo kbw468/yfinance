@@ -203,4 +203,79 @@ What did not work, so you do not have to re-test it: a binarized "pre-top setup 
 
 SPY 777 at -0.24% from its 63-day high. VIX 15.08 (12th pctile), VIX 5d ROC -8%, 21d ROC -4%. VIX9D/VIX 0.78 (7th pctile), VVIX 83 (2nd pctile). MOVE 102.6 at the **95th percentile** with 21d ROC +30% (z +1.56). TNX 5.28% at the 99th percentile, 21d chg +47bp (z **+2.43**); TYX 5.66%, 21d z +2.48. TNX 5d chg z is -0.46 and MOVE 5d z is -0.81, so the SETUP rule is not live today; it requires a fresh 5-day yield impulse. The rate-led tag printed on Oct 2 and Oct 5. Configuration: yields and bond vol at 1-year extremes on a 21-day basis, equity vol compressed, VVIX at its lows. That is the section 3a shape on a slower clock. The trigger to watch is TNX/TYX 5d chg z crossing +1 while VIX 5d ROC z stays below -0.3 (SETUP), and then any VIX 5d ROC z > 1 print where VVIX/VIX 5d ROC z is below -1 (ONSET). If that VIX print comes with VVIX/VIX ROC z above -0.3, it is a dip.
 
-The dashboard (`dashboard.html`) renders this state, every rule's live/not-live status, the last two years of fires on the SPY chart, and the per-rule ticker playbook. Regenerate with `python scripts/fetch.py && python scripts/rebuild.py && python scripts/features_roc.py && python scripts/events.py && python scripts/scorecard.py && python scripts/playbook.py && python scripts/snapshot.py && python scripts/build_dashboard.py`.
+The dashboard (`dashboard.html`) renders this state, every rule's live/not-live status, the last two years of fires on the SPY chart, and the per-rule ticker playbook. Regenerate with `python scripts/fetch.py && python scripts/rebuild.py && python scripts/features_roc.py && python scripts/events.py && python scripts/scorecard.py && python scripts/playbook.py && python scripts/snapshot.py && python scripts/tick_roc.py && python scripts/tick_snapshot.py && python scripts/build_dashboard.py`.
+
+---
+
+## 8. Ticker-side ROC pass (the 38 as signals, not just as responders)
+
+Each ticker's log ratio to SPY was differenced at 5/10/21 days and z-scored against its own trailing 252 days ("relative ROC z"). Full output in `results/tick_roc_out.txt`.
+
+### 8a. Who is already moving before the top (median relative ROC5 z, offsets vs the 36 peaks)
+
+| | -5 | -3 | -1 | 0 | +3 | +5 |
+|---|---|---|---|---|---|---|
+| HYG | -0.25 | -0.13 | -0.31 | **-0.94** | -0.15 | +0.68 |
+| IEF | -0.36 | -0.25 | -0.58 | -0.65 | +0.29 | +0.99 |
+| TLT | -0.48 | -0.32 | -0.40 | -0.35 | +0.22 | +0.73 |
+| XLP | -0.14 | -0.21 | -0.57 | -0.55 | +0.38 | +1.02 |
+| XLU | -0.09 | -0.27 | +0.10 | -0.03 | +0.32 | +0.54 |
+| IWM | +0.21 | **+0.56** | +0.23 | +0.24 | -0.20 | -0.05 |
+| KBE | -0.01 | +0.54 | +0.06 | +0.12 | 0.00 | +0.16 |
+| KIE | +0.19 | +0.60 | +0.14 | +0.15 | -0.15 | +0.39 |
+| XLI | +0.29 | +0.59 | +0.01 | +0.02 | +0.20 | +0.23 |
+| XME | +0.30 | +0.20 | -0.07 | -0.05 | **-0.77** | -0.63 |
+| XSD | -0.17 | +0.12 | +0.27 | +0.54 | -0.28 | -0.38 |
+| QQQ | +0.08 | +0.34 | +0.25 | +0.31 | +0.18 | -0.40 |
+
+Tops are a beta chase: small caps, banks, insurers, industrials are winning relative into the high while duration, credit and staples are losing relative. **HYG cracks on the peak day itself** (-0.94 z), the sharpest single-ticker tell in the set. The rotation flips within three sessions.
+
+### 8b. Troughs (median relative ROC5 z vs the 40 troughs)
+
+| | -3 | -1 | 0 | +2 | +3 | +5 |
+|---|---|---|---|---|---|---|
+| IEF | +0.94 | +1.42 | **+1.88** | +0.14 | -0.29 | **-1.76** |
+| TLT | +1.10 | +1.40 | +1.87 | -0.19 | -0.43 | -1.72 |
+| GLD | +0.77 | +1.36 | +1.74 | -0.05 | -0.06 | -1.53 |
+| XLP | +0.80 | +1.10 | +1.45 | -0.13 | -0.31 | -1.09 |
+| HYG | +0.65 | +1.21 | +1.43 | -0.08 | -0.28 | -1.48 |
+| XLU | +0.64 | +0.90 | +1.21 | -0.25 | -0.41 | -0.87 |
+| KCE | -0.43 | -0.57 | -0.65 | +0.08 | **+0.48** | +0.38 |
+| XLF | -0.16 | -0.40 | -0.67 | +0.22 | +0.19 | +0.55 |
+| XSD | -0.53 | -0.34 | -0.69 | -0.03 | +0.10 | +0.41 |
+| QQQ | -0.74 | -0.55 | -0.43 | -0.02 | +0.27 | +0.39 |
+| XHB | -0.16 | -0.10 | -0.11 | -0.22 | +0.26 | +0.74 |
+
+The low is the day the safety trade climaxes: duration, gold, staples, credit all print +1.2 to +1.9 relative ROC z on day 0 and are at -0.9 to -1.8 by day +5. First bounce leaders in order: KCE, XLRE, XLY, XLK, QQQ, KBE, XHB.
+
+### 8c. Single-ticker relative ROC as a SPY drawdown predictor (P of 5% DD in 21d, bottom vs top quintile; base 0.174)
+
+| Ticker | ROC window | Bottom Q | Top Q | Direction |
+|---|---|---|---|---|
+| **XLU** | 21d | 0.119 | **0.269** | utilities outperforming = risk-off ahead |
+| KBE | 21d | **0.244** | 0.119 | banks underperforming = risk-off ahead |
+| GLD | 10d | 0.122 | 0.230 | gold outperforming = risk-off ahead |
+| XRT | 10d | 0.238 | 0.132 | retail underperforming |
+| KRE | 21d | 0.252 | 0.149 | regionals underperforming |
+| HYG | 21d | 0.165 | 0.243 | credit outperforming (late-cycle grab) |
+| XLV | 21d | 0.165 | 0.243 | health care outperforming |
+
+### 8d. Ticker relative ROC × index ROC pair rules (first-fires, ex-2020)
+
+| Pair | First-fires | P(5% DD/21d) | Fwd 21d | Note |
+|---|---|---|---|---|
+| **HYG rel ROC5 z < -1 and VIX 5d ROC z > 1** | 7 | **0.71** | **-10.6%** | credit breaking relative while vol spikes. 7 fires, all inside major breaks (last: 2018-01-16). Standout cell in the whole study. |
+| **KRE rel ROC5 z < -1 and TNX 5d chg z > 1** | 35 | **0.46** | -1.8% | regionals breaking while yields rip. Last fire 2026-05-15. |
+| TLT rel ROC5 z > 1 and VIX 5d ROC z < -1 | 6 | 0.50 | -0.6% | duration bid while vol collapses; TLT itself then gives back 3.4% relative in 10d |
+| XLU rel ROC5 z > 1 and TNX 5d chg z > 1 | 37 | 0.38 | -0.5% | utilities bid into rising yields. Last fire 2026-07-22. |
+| XLRE rel ROC5 z > 1 and TNX 5d chg z > 1 | 13 | 0.31 | +0.1% | REITs bid into rising yields |
+| IWM rel ROC5 z > 1 and VIX 5d ROC z > 1 | 53 | 0.30 | -0.4% | small-cap beta chase into a vol rise |
+| XLU rel ROC21 z > 1 | 197 | 0.31 | +0.2% | utilities outperforming for a month |
+
+These are small-n cells (the full 4×4 grids with counts are in `results/tick_roc_out.txt`). They are live on the dashboard as the "pair rules" board.
+
+### 8e. Ticker × index ROC matrix (median 10d forward return relative to SPY, index 5d ROC z > 1)
+
+Consistent across every index spike: **XSD, QQQ, XLK, XAR, XSW outperform SPY in the 10 days after any vol-complex impulse** (+0.2 to +0.6% rel); **TLT, IEF, XES, HYG, GLD, BNO underperform** (-0.5 to -1.0% rel). Dimension-specific: XME +0.60 after a MOVE spike but -0.55 after a GVZ spike; XOP -0.77 after GVZ up but +0.27 after GVZ down; XHB -0.53 after TYX up, +0.33 after GVZ down; XLU +0.37 after MOVE down, -0.42 after VIX9D/VIX up. Full 38×26 matrix and the stress-regime ROC beta matrix are on the dashboard.
+
+Stress-regime ROC betas (per 100% move in VIX): TLT +21, IEF +19, GLD +16.5, HYG +11, XLP +8, XLU +7 on the hedge side; XES -6.3, XME -6.1, XSD -5.3, KCE -5.1, XOP -4.8, KBE -3.3 on the beta side. Per 1 pct-pt in TYX in stress: XES +10.2, XOP +10.1, XME +8.6, KBE +7.6, KCE +6.4 vs TLT -28, IEF -19, GLD -13, XLU -6.3, XLRE -5.5.
