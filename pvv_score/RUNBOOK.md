@@ -9,10 +9,12 @@
 
 The model is frozen between refits on purpose: a name moving up or down the list between two sessions is then tape, not refit noise. When a refit lands, `MOVERS.txt` says so on the first line and the comparison against the previous session carries that caveat.
 
-A routine fires a fresh container with no checkout and only the base image: the routine first attaches the repository with the
-session's `add_repo` tool (plain `git clone` is refused by the git proxy until then), clones, checks out the branch, and the
-script installs pyarrow, scikit-learn, scipy, lightgbm and yfinance's own dependencies if they are missing (about two
-minutes). Pre-installing them in the environment's setup script removes that step.
+The routines fire into the build session (the one that holds the repository with push rights), not into a fresh session: a
+rehearsal from a fresh container ran the whole chain and passed every gate, but its `git push` was refused because a
+routine-spawned session carries no repository credentials, and without the push each night's snapshot would die with its
+container. If the session's container has been reclaimed it is re-provisioned on fire; the script then installs pyarrow,
+scikit-learn, scipy, lightgbm and yfinance's own dependencies if missing (about two minutes) and rebuilds the cache from the
+download. Pre-installing the packages in the environment's setup script removes that step.
 
 Cache lives in `PVV_CACHE` (default `pvv_score/.cache`, not committed). A fresh container rebuilds it from the download in a few minutes.
 
@@ -31,8 +33,8 @@ it is the data source, not the code, and it is an order of magnitude below a nor
 
 | Routine | Cron (UTC) | Fires |
 |---|---|---|
-| THE LIST nightly | `35 22 * * 1-5` | a fresh session runs `nightly.sh`, publishes the page, sends the three PDFs, posts a summary |
-| THE LIST weekly refit | `48 12 * * 6` | a fresh session runs `refit.sh`, publishes, sends, summarises the model change |
+| THE LIST nightly | `35 22 * * 1-5` | the build session runs `nightly.sh`, publishes the page, sends the three PDFs, posts a summary |
+| THE LIST weekly refit | `48 12 * * 6` | the build session runs `refit.sh`, publishes, sends, summarises the model change |
 
 ## The frozen model (`results/model/`)
 
