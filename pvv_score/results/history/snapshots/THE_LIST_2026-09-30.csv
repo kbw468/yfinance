@@ -1,0 +1,896 @@
+asof,rank,tier,ticker,Sector,beta_bucket,P_topq_42d,P_topq_63d,basis,n_signatures,avg_score,model
+2026-09-30,1,1,MRVL,Technology,high,0.5329,0.5469,composite 1.00 (+signatures),38,1.0,26e6bcfe15ccfc8f
+2026-09-30,2,1,TTMI,Technology,high,0.5329,0.5469,composite 1.00 (+signatures),43,0.99832402,26e6bcfe15ccfc8f
+2026-09-30,3,1,AMKR,Technology,high,0.5325,0.5449,composite 1.00 (+signatures),41,0.99664804,26e6bcfe15ccfc8f
+2026-09-30,4,1,MTSI,Technology,high,0.5302,0.5245,composite 0.99 (+signatures),53,0.99162011,26e6bcfe15ccfc8f
+2026-09-30,5,1,GLW,Technology,high,0.5302,0.5245,composite 0.99 (+signatures),40,0.98882682,26e6bcfe15ccfc8f
+2026-09-30,6,1,ENTG,Technology,high,0.5302,0.5245,composite 0.99 (+signatures),22,0.98882682,26e6bcfe15ccfc8f
+2026-09-30,7,1,MRNA,Healthcare,high,0.5302,0.5245,composite 0.99 (+signatures),93,0.98603352,26e6bcfe15ccfc8f
+2026-09-30,8,1,MKSI,Technology,high,0.5302,0.5245,composite 0.99 (+signatures),43,0.98603352,26e6bcfe15ccfc8f
+2026-09-30,9,1,WDC,Technology,high,0.5172,0.5221,composite 0.98 (+signatures),62,0.98268156,26e6bcfe15ccfc8f
+2026-09-30,10,1,MU,Technology,high,0.5056,0.5233,signatures x31 (+composite),31,0.97653631,26e6bcfe15ccfc8f
+2026-09-30,11,1,HPE,Technology,high,0.5056,0.5233,signatures x97 (+composite),97,0.97206704,26e6bcfe15ccfc8f
+2026-09-30,12,1,COHR,Technology,high,0.5056,0.5233,signatures x38 (+composite),38,0.97206704,26e6bcfe15ccfc8f
+2026-09-30,13,1,SANM,Technology,high,0.5056,0.5233,signatures x31 (+composite),31,0.96145251,26e6bcfe15ccfc8f
+2026-09-30,14,1,LSCC,Technology,high,0.5056,0.5233,signatures x26 (+composite),26,0.95530726,26e6bcfe15ccfc8f
+2026-09-30,15,1,SITM,Technology,high,0.5056,0.5233,signatures x56 (+composite),56,0.94748603,26e6bcfe15ccfc8f
+2026-09-30,16,1,NVT,Industrials,high,0.5056,0.5233,signatures x29 (+composite),29,0.92960894,26e6bcfe15ccfc8f
+2026-09-30,17,1,P,Technology,high,0.5056,0.5233,signatures x92 (+composite),92,0.91899441,26e6bcfe15ccfc8f
+2026-09-30,18,1,AMD,Technology,high,0.5056,0.5233,signatures x67 (+composite),67,0.90782123,26e6bcfe15ccfc8f
+2026-09-30,19,1,ANET,Technology,high,0.5056,0.5233,signatures x47 (+composite),47,0.85195531,26e6bcfe15ccfc8f
+2026-09-30,20,1,RMBS,Technology,high,0.5056,0.5233,signatures x9 (+composite),9,0.83575419,26e6bcfe15ccfc8f
+2026-09-30,21,1,SMTC,Technology,high,0.4929,0.5001,composite 0.98 (+signatures),64,0.97765363,26e6bcfe15ccfc8f
+2026-09-30,22,1,DELL,Technology,high,0.492,0.4939,signatures x91 (+composite),91,0.96536313,26e6bcfe15ccfc8f
+2026-09-30,23,1,KLAC,Technology,high,0.4708,0.4823,composite 0.97 (+signatures),40,0.97150838,26e6bcfe15ccfc8f
+2026-09-30,24,1,STX,Technology,high,0.4708,0.4823,composite 0.97 (+signatures),23,0.96927374,26e6bcfe15ccfc8f
+2026-09-30,25,1,AMAT,Technology,high,0.4708,0.4823,composite 0.97 (+signatures),44,0.96871508,26e6bcfe15ccfc8f
+2026-09-30,26,1,LITE,Technology,high,0.4708,0.4823,composite 0.97 (+signatures),31,0.96871508,26e6bcfe15ccfc8f
+2026-09-30,27,1,ALGM,Technology,high,0.4708,0.4823,composite 0.97 (+signatures),21,0.96871508,26e6bcfe15ccfc8f
+2026-09-30,28,1,RRX,Industrials,high,0.4671,0.4939,signatures x14 (+composite),14,0.92011173,26e6bcfe15ccfc8f
+2026-09-30,29,1,NXT,Technology,high,0.4671,0.4939,signatures x11 (+composite),11,0.87039106,26e6bcfe15ccfc8f
+2026-09-30,30,1,MP,Basic Materials,high,0.4671,0.4939,signatures x6 (+composite),6,0.83854749,26e6bcfe15ccfc8f
+2026-09-30,31,1,SYNA,Technology,high,0.4608,0.4939,signatures x57 (+composite),57,0.96424581,26e6bcfe15ccfc8f
+2026-09-30,32,1,FLEX,Technology,high,0.4608,0.4939,signatures x46 (+composite),46,0.96424581,26e6bcfe15ccfc8f
+2026-09-30,33,1,AEIS,Industrials,high,0.4608,0.4939,signatures x29 (+composite),29,0.95977654,26e6bcfe15ccfc8f
+2026-09-30,34,1,ONTO,Technology,high,0.4608,0.4939,signatures x14 (+composite),14,0.95083799,26e6bcfe15ccfc8f
+2026-09-30,35,1,LRCX,Technology,high,0.4608,0.4939,signatures x25 (+composite),25,0.93798883,26e6bcfe15ccfc8f
+2026-09-30,36,1,ON,Technology,high,0.4608,0.4939,signatures x49 (+composite),49,0.93463687,26e6bcfe15ccfc8f
+2026-09-30,37,1,CIEN,Technology,high,0.4608,0.4939,signatures x37 (+composite),37,0.92681564,26e6bcfe15ccfc8f
+2026-09-30,38,1,INTC,Technology,high,0.4608,0.4939,signatures x22 (+composite),22,0.92458101,26e6bcfe15ccfc8f
+2026-09-30,39,1,BE,Industrials,high,0.4608,0.4939,signatures x30 (+composite),30,0.91675978,26e6bcfe15ccfc8f
+2026-09-30,40,1,VRT,Industrials,high,0.4608,0.4939,signatures x42 (+composite),42,0.87988827,26e6bcfe15ccfc8f
+2026-09-30,41,1,JBL,Technology,high,0.4608,0.4939,signatures x18 (+composite),18,0.87430168,26e6bcfe15ccfc8f
+2026-09-30,42,1,NOVT,Technology,high,0.4608,0.4939,signatures x12 (+composite),12,0.84748603,26e6bcfe15ccfc8f
+2026-09-30,43,1,SMCI,Technology,high,0.4608,0.4939,signatures x42 (+composite),42,0.82402235,26e6bcfe15ccfc8f
+2026-09-30,44,1,PATH,Technology,high,0.4531,0.4624,signatures x107 (+composite),107,0.92458101,26e6bcfe15ccfc8f
+2026-09-30,45,1,TWLO,Technology,high,0.4531,0.4624,signatures x104 (+composite),104,0.85921788,26e6bcfe15ccfc8f
+2026-09-30,46,1,TER,Technology,high,0.4523,0.4762,composite 0.96 (+signatures),9,0.96480447,26e6bcfe15ccfc8f
+2026-09-30,47,1,VICR,Technology,high,0.4523,0.4762,composite 0.96 (+signatures),29,0.96201117,26e6bcfe15ccfc8f
+2026-09-30,48,1,VIAV,Technology,high,0.4523,0.4762,composite 0.96 (+signatures),31,0.95865922,26e6bcfe15ccfc8f
+2026-09-30,49,2,OKTA,Technology,high,0.4494,0.4624,signatures x81 (+composite),81,0.91117318,26e6bcfe15ccfc8f
+2026-09-30,50,2,CRWD,Technology,high,0.4421,0.4604,signatures x53 (+composite),53,0.82067039,26e6bcfe15ccfc8f
+2026-09-30,51,2,DUOL,Technology,mid,0.4396,0.4317,signatures x43 (+composite),43,0.62960894,26e6bcfe15ccfc8f
+2026-09-30,52,2,CGNX,Technology,high,0.4338,0.4155,signatures x9 (+composite),9,0.87486034,26e6bcfe15ccfc8f
+2026-09-30,53,2,ESAB,Industrials,high,0.4316,0.4165,signatures x12 (+composite),12,0.68659218,26e6bcfe15ccfc8f
+2026-09-30,54,2,WHR,Consumer Cyclical,high,0.4309,0.4209,signatures x12 (+composite),12,0.47318436,26e6bcfe15ccfc8f
+2026-09-30,55,2,DDOG,Technology,high,0.4306,0.4364,composite 0.94 (+signatures),33,0.94189944,26e6bcfe15ccfc8f
+2026-09-30,56,2,BRKR,Healthcare,high,0.4306,0.4364,composite 0.94 (+signatures),23,0.94189944,26e6bcfe15ccfc8f
+2026-09-30,57,2,KEYS,Technology,high,0.4164,0.4188,composite 0.94 (+signatures),3,0.93798883,26e6bcfe15ccfc8f
+2026-09-30,58,2,PBF,Energy,low,0.4106,0.4426,signatures x84 (+composite),84,0.50167598,26e6bcfe15ccfc8f
+2026-09-30,59,2,SNDK,Technology,high,0.408,0.4155,signatures x31 (+composite),31,0.90167598,26e6bcfe15ccfc8f
+2026-09-30,60,2,HIMS,Healthcare,high,0.408,0.4155,signatures x23 (+composite),23,0.9,26e6bcfe15ccfc8f
+2026-09-30,61,2,DOCN,Technology,high,0.4008,0.4154,signatures x18 (+composite),18,0.88659218,26e6bcfe15ccfc8f
+2026-09-30,62,2,IPGP,Technology,high,0.4008,0.4154,signatures x5 (+composite),5,0.87486034,26e6bcfe15ccfc8f
+2026-09-30,63,2,AAL,Industrials,high,0.4008,0.4154,signatures x5 (+composite),5,0.84916201,26e6bcfe15ccfc8f
+2026-09-30,64,2,DVA,Healthcare,low,0.4008,0.4154,signatures x21 (+composite),21,0.84636872,26e6bcfe15ccfc8f
+2026-09-30,65,2,AAON,Industrials,high,0.4008,0.4154,signatures x8 (+composite),8,0.82960894,26e6bcfe15ccfc8f
+2026-09-30,66,2,CDE,Basic Materials,high,0.4008,0.4154,signatures x6 (+composite),6,0.8273743,26e6bcfe15ccfc8f
+2026-09-30,67,2,VFC,Consumer Cyclical,high,0.4008,0.4154,signatures x9 (+composite),9,0.81452514,26e6bcfe15ccfc8f
+2026-09-30,68,2,GEV,Industrials,high,0.4008,0.3944,signatures x13 (+composite),13,0.88100559,26e6bcfe15ccfc8f
+2026-09-30,69,2,LFUS,Technology,high,0.4008,0.3944,signatures x5 (+composite),5,0.86368715,26e6bcfe15ccfc8f
+2026-09-30,70,2,CRS,Industrials,high,0.4008,0.3944,signatures x22 (+composite),22,0.80614525,26e6bcfe15ccfc8f
+2026-09-30,71,3,GWRE,Technology,mid,0.3945,0.3958,signatures x78 (+composite),78,0.52513966,26e6bcfe15ccfc8f
+2026-09-30,72,3,IESC,Industrials,high,0.3888,0.4075,composite 0.92 (+signatures),11,0.92178771,26e6bcfe15ccfc8f
+2026-09-30,73,3,FN,Technology,high,0.3888,0.4075,composite 0.92 (+signatures),2,0.92067039,26e6bcfe15ccfc8f
+2026-09-30,74,3,STRL,Industrials,high,0.3888,0.4075,composite 0.92 (+signatures),10,0.91899441,26e6bcfe15ccfc8f
+2026-09-30,75,3,CAT,Industrials,high,0.3888,0.4075,composite 0.91 (+signatures),7,0.91452514,26e6bcfe15ccfc8f
+2026-09-30,76,3,AVT,Technology,high,0.3888,0.4075,composite 0.90,0,0.89776536,26e6bcfe15ccfc8f
+2026-09-30,77,3,FCX,Basic Materials,high,0.3888,0.4075,composite 0.90 (+signatures),1,0.89664804,26e6bcfe15ccfc8f
+2026-09-30,78,3,MTZ,Industrials,high,0.3888,0.4075,composite 0.90 (+signatures),1,0.89664804,26e6bcfe15ccfc8f
+2026-09-30,79,3,ATI,Industrials,high,0.3888,0.4013,composite 0.89 (+signatures),5,0.89441341,26e6bcfe15ccfc8f
+2026-09-30,80,3,ARW,Technology,high,0.3888,0.4013,composite 0.89 (+signatures),3,0.89329609,26e6bcfe15ccfc8f
+2026-09-30,81,3,VAL,Energy,mid,0.3876,0.3958,signatures x60 (+composite),60,0.59553073,26e6bcfe15ccfc8f
+2026-09-30,82,3,ZBRA,Technology,high,0.3852,0.4165,signatures x10 (+composite),10,0.72849162,26e6bcfe15ccfc8f
+2026-09-30,83,3,BTSG,Healthcare,high,0.3837,0.4019,signatures x13 (+composite),13,0.8849162,26e6bcfe15ccfc8f
+2026-09-30,84,3,QLYS,Technology,low,0.3769,0.3915,signatures x41 (+composite),41,0.54469274,26e6bcfe15ccfc8f
+2026-09-30,85,3,MTDR,Energy,low,0.3769,0.3915,signatures x10 (+composite),10,0.48100559,26e6bcfe15ccfc8f
+2026-09-30,86,3,NTAP,Technology,high,0.3767,0.3906,composite 0.88,0,0.88435754,26e6bcfe15ccfc8f
+2026-09-30,87,3,FIX,Industrials,high,0.3767,0.3906,composite 0.88 (+signatures),6,0.88379888,26e6bcfe15ccfc8f
+2026-09-30,88,3,WCC,Industrials,high,0.3767,0.3826,composite 0.88 (+signatures),3,0.87877095,26e6bcfe15ccfc8f
+2026-09-30,89,3,ENS,Industrials,high,0.3756,0.3826,composite 0.87 (+signatures),8,0.87318436,26e6bcfe15ccfc8f
+2026-09-30,90,3,SWKS,Technology,high,0.3701,0.3721,signatures x73 (+composite),73,0.72625698,26e6bcfe15ccfc8f
+2026-09-30,91,3,HL,Basic Materials,high,0.3694,0.3692,signatures x49 (+composite),49,0.75251397,26e6bcfe15ccfc8f
+2026-09-30,92,3,SN,Consumer Cyclical,high,0.3686,0.3826,composite 0.87 (+signatures),5,0.86927374,26e6bcfe15ccfc8f
+2026-09-30,93,3,LYB,Basic Materials,low,0.3658,0.3694,signatures x40 (+composite),40,0.57094972,26e6bcfe15ccfc8f
+2026-09-30,94,3,GME,Consumer Cyclical,mid,0.3658,0.3694,signatures x37 (+composite),37,0.43296089,26e6bcfe15ccfc8f
+2026-09-30,95,3,PANW,Technology,high,0.3652,0.3692,signatures x42 (+composite),42,0.78044693,26e6bcfe15ccfc8f
+2026-09-30,96,3,DOCS,Healthcare,mid,0.3652,0.3692,signatures x41 (+composite),41,0.62346369,26e6bcfe15ccfc8f
+2026-09-30,97,3,CLF,Basic Materials,high,0.3652,0.3692,signatures x41 (+composite),41,0.62011173,26e6bcfe15ccfc8f
+2026-09-30,98,3,EME,Industrials,high,0.3627,0.3756,signatures x4 (+composite),4,0.56089385,26e6bcfe15ccfc8f
+2026-09-30,99,3,ALGN,Healthcare,high,0.3627,0.3756,signatures x4 (+composite),4,0.45977654,26e6bcfe15ccfc8f
+2026-09-30,100,3,AKAM,Technology,high,0.3605,0.401,signatures x18 (+composite),18,0.63854749,26e6bcfe15ccfc8f
+2026-09-30,101,3,QCOM,Technology,high,0.3593,0.3532,signatures x12 (+composite),12,0.74189944,26e6bcfe15ccfc8f
+2026-09-30,102,3,HOOD,Financial,high,0.3593,0.3532,signatures x23 (+composite),23,0.64134078,26e6bcfe15ccfc8f
+2026-09-30,103,3,WDAY,Technology,mid,0.3593,0.3532,signatures x25 (+composite),25,0.62625698,26e6bcfe15ccfc8f
+2026-09-30,104,3,BDC,Technology,high,0.3573,0.348,signatures x7 (+composite),7,0.60167598,26e6bcfe15ccfc8f
+2026-09-30,105,3,OLLI,Consumer Defensive,mid,0.3561,0.3363,signatures x23 (+composite),23,0.3972067,26e6bcfe15ccfc8f
+2026-09-30,106,3,MCHP,Technology,high,0.3541,0.3775,composite 0.86 (+signatures),8,0.85530726,26e6bcfe15ccfc8f
+2026-09-30,107,4,ARWR,Healthcare,high,0.3494,0.3525,signatures x32 (+composite),32,0.72458101,26e6bcfe15ccfc8f
+2026-09-30,108,4,CVLT,Technology,mid,0.3494,0.3375,signatures x22 (+composite),22,0.72402235,26e6bcfe15ccfc8f
+2026-09-30,109,4,ANF,Consumer Cyclical,high,0.3478,0.3569,composite 0.84 (+signatures),3,0.84134078,26e6bcfe15ccfc8f
+2026-09-30,110,4,TPR,Consumer Cyclical,high,0.3478,0.3569,composite 0.84 (+signatures),2,0.83798883,26e6bcfe15ccfc8f
+2026-09-30,111,4,MPWR,Technology,high,0.3455,0.3562,composite 0.83 (+signatures),6,0.83072626,26e6bcfe15ccfc8f
+2026-09-30,112,4,SNX,Technology,high,0.3455,0.3562,composite 0.83 (+signatures),8,0.82960894,26e6bcfe15ccfc8f
+2026-09-30,113,4,TKR,Industrials,high,0.3455,0.3562,composite 0.83 (+signatures),5,0.8273743,26e6bcfe15ccfc8f
+2026-09-30,114,4,MOG-A,Industrials,high,0.3455,0.3562,composite 0.83,0,0.82681564,26e6bcfe15ccfc8f
+2026-09-30,115,4,DY,Industrials,high,0.3455,0.3536,composite 0.82 (+signatures),1,0.82178771,26e6bcfe15ccfc8f
+2026-09-30,116,4,GDDY,Technology,low,0.3433,0.3458,signatures x29 (+composite),29,0.49888268,26e6bcfe15ccfc8f
+2026-09-30,117,4,MOH,Healthcare,low,0.3433,0.3421,signatures x11 (+composite),11,0.59497207,26e6bcfe15ccfc8f
+2026-09-30,118,4,PEGA,Technology,mid,0.3433,0.3421,signatures x6 (+composite),6,0.59329609,26e6bcfe15ccfc8f
+2026-09-30,119,4,DOW,Basic Materials,low,0.3433,0.3421,signatures x12 (+composite),12,0.53407821,26e6bcfe15ccfc8f
+2026-09-30,120,4,CTSH,Technology,low,0.3433,0.3421,signatures x8 (+composite),8,0.50558659,26e6bcfe15ccfc8f
+2026-09-30,121,4,JBHT,Industrials,mid,0.3433,0.3404,signatures x21 (+composite),21,0.58603352,26e6bcfe15ccfc8f
+2026-09-30,122,4,NOW,Technology,mid,0.3433,0.3404,signatures x18 (+composite),18,0.57988827,26e6bcfe15ccfc8f
+2026-09-30,123,4,IT,Technology,mid,0.3433,0.3404,signatures x25 (+composite),25,0.55586592,26e6bcfe15ccfc8f
+2026-09-30,124,4,MUR,Energy,low,0.3433,0.3404,signatures x21 (+composite),21,0.51117318,26e6bcfe15ccfc8f
+2026-09-30,125,4,KTOS,Industrials,high,0.3422,0.348,signatures x8 (+composite),8,0.7547486,26e6bcfe15ccfc8f
+2026-09-30,126,4,PSN,Technology,high,0.3422,0.348,signatures x8 (+composite),8,0.71173184,26e6bcfe15ccfc8f
+2026-09-30,127,4,FLR,Industrials,high,0.3422,0.348,signatures x12 (+composite),12,0.66312849,26e6bcfe15ccfc8f
+2026-09-30,128,4,COIN,Financial,high,0.3421,0.3242,signatures x18 (+composite),18,0.60670391,26e6bcfe15ccfc8f
+2026-09-30,129,4,KRYS,Healthcare,mid,0.3419,0.3603,signatures x4 (+composite),4,0.87374302,26e6bcfe15ccfc8f
+2026-09-30,130,4,FTNT,Technology,mid,0.3419,0.3467,signatures x4 (+composite),4,0.81396648,26e6bcfe15ccfc8f
+2026-09-30,131,4,TLN,Utilities,high,0.3392,0.3348,signatures x3 (+composite),3,0.73519553,26e6bcfe15ccfc8f
+2026-09-30,132,4,AA,Basic Materials,high,0.3392,0.3326,signatures x7 (+composite),7,0.69385475,26e6bcfe15ccfc8f
+2026-09-30,133,4,IBKR,Financial,high,0.3392,0.3326,signatures x2 (+composite),2,0.64860335,26e6bcfe15ccfc8f
+2026-09-30,134,4,LUV,Industrials,high,0.3387,0.3334,composite 0.81,0,0.80502793,26e6bcfe15ccfc8f
+2026-09-30,135,4,PWR,Industrials,high,0.3387,0.3334,composite 0.80 (+signatures),4,0.80055866,26e6bcfe15ccfc8f
+2026-09-30,136,4,OVV,Energy,low,0.3325,0.3326,signatures x12 (+composite),12,0.5122905,26e6bcfe15ccfc8f
+2026-09-30,137,4,BILL,Technology,high,0.3302,0.3326,signatures x10 (+composite),10,0.56089385,26e6bcfe15ccfc8f
+2026-09-30,138,4,CHRD,Energy,low,0.3302,0.331,signatures x10 (+composite),10,0.51173184,26e6bcfe15ccfc8f
+2026-09-30,139,4,TXN,Technology,high,0.3277,0.3223,composite 0.79 (+signatures),2,0.79106145,26e6bcfe15ccfc8f
+2026-09-30,140,4,STLD,Basic Materials,high,0.3273,0.3223,composite 0.78,0,0.78156425,26e6bcfe15ccfc8f
+2026-09-30,141,4,ELF,Consumer Defensive,high,0.3273,0.3223,composite 0.78 (+signatures),5,0.78044693,26e6bcfe15ccfc8f
+2026-09-30,142,4,FLS,Industrials,high,0.3273,0.3223,composite 0.78,0,0.77877095,26e6bcfe15ccfc8f
+2026-09-30,143,4,CAVA,Consumer Cyclical,high,0.3273,0.3223,composite 0.78 (+signatures),1,0.77765363,26e6bcfe15ccfc8f
+2026-09-30,144,4,DKS,Consumer Cyclical,high,0.3273,0.3223,composite 0.77,0,0.77094972,26e6bcfe15ccfc8f
+2026-09-30,145,4,ADBE,Technology,mid,0.3262,0.2965,signatures x14 (+composite),14,0.38156425,26e6bcfe15ccfc8f
+2026-09-30,146,4,NOV,Energy,mid,0.3247,0.3147,signatures x3 (+composite),3,0.77821229,26e6bcfe15ccfc8f
+2026-09-30,147,4,EXPE,Consumer Cyclical,high,0.3247,0.3147,signatures x7 (+composite),7,0.72905028,26e6bcfe15ccfc8f
+2026-09-30,148,4,SLB,Energy,mid,0.3244,0.3225,signatures x13 (+composite),13,0.70614525,26e6bcfe15ccfc8f
+2026-09-30,149,4,ALB,Basic Materials,high,0.3244,0.3147,signatures x3 (+composite),3,0.61955307,26e6bcfe15ccfc8f
+2026-09-30,150,4,FIVE,Consumer Cyclical,high,0.324,0.3225,signatures x11 (+composite),11,0.66759777,26e6bcfe15ccfc8f
+2026-09-30,151,4,ABNB,Consumer Cyclical,high,0.324,0.3225,signatures x11 (+composite),11,0.66145251,26e6bcfe15ccfc8f
+2026-09-30,152,4,CRM,Technology,mid,0.324,0.3225,signatures x12 (+composite),12,0.65083799,26e6bcfe15ccfc8f
+2026-09-30,153,4,VEEV,Healthcare,mid,0.3204,0.3246,signatures x4 (+composite),4,0.55195531,26e6bcfe15ccfc8f
+2026-09-30,154,4,ODFL,Industrials,high,0.3204,0.3226,signatures x5 (+composite),5,0.52122905,26e6bcfe15ccfc8f
+2026-09-30,155,4,TEX,Industrials,high,0.3199,0.3223,composite 0.77,0,0.76871508,26e6bcfe15ccfc8f
+2026-09-30,156,4,HWM,Industrials,high,0.3194,0.3223,composite 0.76 (+signatures),8,0.76424581,26e6bcfe15ccfc8f
+2026-09-30,157,4,ST,Technology,high,0.3194,0.3189,composite 0.76,0,0.76256983,26e6bcfe15ccfc8f
+2026-09-30,158,4,YETI,Consumer Cyclical,high,0.3194,0.3189,composite 0.76,0,0.76201117,26e6bcfe15ccfc8f
+2026-09-30,159,4,ACN,Technology,low,0.3185,0.3226,signatures x4 (+composite),4,0.5,26e6bcfe15ccfc8f
+2026-09-30,160,4,HALO,Healthcare,mid,0.3185,0.3226,signatures x3 (+composite),3,0.49888268,26e6bcfe15ccfc8f
+2026-09-30,161,4,KD,Technology,mid,0.3185,0.3226,signatures x5 (+composite),5,0.44748603,26e6bcfe15ccfc8f
+2026-09-30,162,4,NXPI,Technology,high,0.3128,0.3178,composite 0.75,0,0.7547486,26e6bcfe15ccfc8f
+2026-09-30,163,4,NEM,Basic Materials,high,0.3128,0.3167,composite 0.75,0,0.75083799,26e6bcfe15ccfc8f
+2026-09-30,164,4,PCG,Utilities,low,0.3126,0.3147,signatures x5 (+composite),5,0.74916201,26e6bcfe15ccfc8f
+2026-09-30,165,4,ILMN,Healthcare,mid,0.3126,0.3147,signatures x5 (+composite),5,0.70949721,26e6bcfe15ccfc8f
+2026-09-30,166,4,KNX,Industrials,high,0.3126,0.3147,signatures x5 (+composite),5,0.67709497,26e6bcfe15ccfc8f
+2026-09-30,167,4,LIVN,Healthcare,high,0.3126,0.3147,signatures x4 (+composite),4,0.66368715,26e6bcfe15ccfc8f
+2026-09-30,168,4,NYT,Communication Services,low,0.3126,0.3147,signatures x5 (+composite),5,0.63296089,26e6bcfe15ccfc8f
+2026-09-30,169,4,LEA,Consumer Cyclical,high,0.3126,0.3147,signatures x2 (+composite),2,0.61452514,26e6bcfe15ccfc8f
+2026-09-30,170,4,AN,Consumer Cyclical,mid,0.3124,0.2912,signatures x9 (+composite),9,0.18268156,26e6bcfe15ccfc8f
+2026-09-30,171,4,CHRW,Industrials,mid,0.3098,0.3043,signatures x2 (+composite),2,0.82402235,26e6bcfe15ccfc8f
+2026-09-30,172,4,APP,Communication Services,high,0.3089,0.3167,composite 0.75 (+signatures),1,0.74804469,26e6bcfe15ccfc8f
+2026-09-30,173,4,GNRC,Industrials,high,0.3075,0.3167,composite 0.75 (+signatures),5,0.7452514,26e6bcfe15ccfc8f
+2026-09-30,174,4,CMI,Industrials,high,0.3075,0.3167,composite 0.75,0,0.7452514,26e6bcfe15ccfc8f
+2026-09-30,175,4,GOOGL,Communication Services,high,0.3075,0.3167,composite 0.74,0,0.74469274,26e6bcfe15ccfc8f
+2026-09-30,176,4,AVAV,Industrials,high,0.3075,0.3167,composite 0.74 (+signatures),7,0.74134078,26e6bcfe15ccfc8f
+2026-09-30,177,4,PLTR,Technology,high,0.3075,0.3115,composite 0.73 (+signatures),3,0.73351955,26e6bcfe15ccfc8f
+2026-09-30,178,4,FSLR,Technology,high,0.3075,0.3115,composite 0.73 (+signatures),2,0.73240223,26e6bcfe15ccfc8f
+2026-09-30,179,4,ETN,Industrials,high,0.3075,0.3115,composite 0.73,0,0.73240223,26e6bcfe15ccfc8f
+2026-09-30,180,4,SPXC,Industrials,high,0.3075,0.3115,composite 0.73,0,0.73184358,26e6bcfe15ccfc8f
+2026-09-30,181,4,ACM,Industrials,mid,0.3071,0.3129,signatures x7 (+composite),7,0.51675978,26e6bcfe15ccfc8f
+2026-09-30,182,4,APPF,Technology,mid,0.3071,0.3117,signatures x6 (+composite),6,0.57765363,26e6bcfe15ccfc8f
+2026-09-30,183,4,FDS,Financial,low,0.3071,0.3117,signatures x7 (+composite),7,0.56592179,26e6bcfe15ccfc8f
+2026-09-30,184,4,CF,Basic Materials,low,0.3071,0.3117,signatures x5 (+composite),5,0.54022346,26e6bcfe15ccfc8f
+2026-09-30,185,4,AVTR,Healthcare,mid,0.3055,0.3116,signatures x7 (+composite),7,0.78100559,26e6bcfe15ccfc8f
+2026-09-30,186,4,FOUR,Technology,high,0.3055,0.3116,signatures x4 (+composite),4,0.69217877,26e6bcfe15ccfc8f
+2026-09-30,187,4,ROIV,Healthcare,high,0.3055,0.3116,signatures x6 (+composite),6,0.65363128,26e6bcfe15ccfc8f
+2026-09-30,188,4,WEX,Technology,mid,0.3055,0.3116,signatures x9 (+composite),9,0.62849162,26e6bcfe15ccfc8f
+2026-09-30,189,4,CELH,Consumer Defensive,high,0.3055,0.3085,signatures x3 (+composite),3,0.71117318,26e6bcfe15ccfc8f
+2026-09-30,190,4,CDNS,Technology,high,0.3055,0.3085,signatures x3 (+composite),3,0.70558659,26e6bcfe15ccfc8f
+2026-09-30,191,4,HPQ,Technology,mid,0.3055,0.3085,signatures x2 (+composite),2,0.70391061,26e6bcfe15ccfc8f
+2026-09-30,192,4,AXON,Industrials,high,0.3055,0.3085,signatures x3 (+composite),3,0.6972067,26e6bcfe15ccfc8f
+2026-09-30,193,4,THC,Healthcare,mid,0.3055,0.3085,signatures x2 (+composite),2,0.67653631,26e6bcfe15ccfc8f
+2026-09-30,194,4,ORCL,Technology,high,0.3051,0.3147,signatures x2 (+composite),2,0.67150838,26e6bcfe15ccfc8f
+2026-09-30,195,4,ALK,Industrials,high,0.3051,0.3147,signatures x1 (+composite),1,0.64916201,26e6bcfe15ccfc8f
+2026-09-30,196,4,AVGO,Technology,high,0.3051,0.3147,signatures x1 (+composite),1,0.6301676,26e6bcfe15ccfc8f
+2026-09-30,197,4,FND,Consumer Cyclical,high,0.3051,0.3147,signatures x1 (+composite),1,0.6150838,26e6bcfe15ccfc8f
+2026-09-30,198,4,EVR,Financial,high,0.3051,0.3147,signatures x2 (+composite),2,0.61284916,26e6bcfe15ccfc8f
+2026-09-30,199,4,GEN,Technology,mid,0.3038,0.2984,signatures x4 (+composite),4,0.46648045,26e6bcfe15ccfc8f
+2026-09-30,200,4,ISRG,Healthcare,mid,0.3038,0.2963,signatures x3 (+composite),3,0.59441341,26e6bcfe15ccfc8f
+2026-09-30,201,4,PINS,Communication Services,mid,0.3038,0.2963,signatures x4 (+composite),4,0.54357542,26e6bcfe15ccfc8f
+2026-09-30,202,4,BAH,Industrials,low,0.3038,0.2963,signatures x4 (+composite),4,0.44972067,26e6bcfe15ccfc8f
+2026-09-30,203,4,G,Technology,low,0.3038,0.2963,signatures x5 (+composite),5,0.44860335,26e6bcfe15ccfc8f
+2026-09-30,204,4,RH,Consumer Cyclical,high,0.3038,0.2784,signatures x2 (+composite),2,0.57821229,26e6bcfe15ccfc8f
+2026-09-30,205,4,HAL,Energy,low,0.3038,0.2784,signatures x2 (+composite),2,0.50167598,26e6bcfe15ccfc8f
+2026-09-30,206,4,DOCU,Technology,mid,0.3038,0.2784,signatures x2 (+composite),2,0.49217877,26e6bcfe15ccfc8f
+2026-09-30,207,4,MANH,Technology,low,0.3038,0.2784,signatures x2 (+composite),2,0.46703911,26e6bcfe15ccfc8f
+2026-09-30,208,4,LII,Industrials,high,0.3031,0.3074,composite 0.73 (+signatures),1,0.7273743,26e6bcfe15ccfc8f
+2026-09-30,209,4,WWD,Industrials,high,0.3031,0.3074,composite 0.73,0,0.72513966,26e6bcfe15ccfc8f
+2026-09-30,210,4,RGEN,Healthcare,high,0.3031,0.3074,composite 0.72,0,0.72458101,26e6bcfe15ccfc8f
+2026-09-30,211,4,BROS,Consumer Cyclical,high,0.3031,0.3074,composite 0.72 (+signatures),1,0.72234637,26e6bcfe15ccfc8f
+2026-09-30,212,4,UAL,Industrials,high,0.3031,0.3074,composite 0.72,0,0.72234637,26e6bcfe15ccfc8f
+2026-09-30,213,4,GOOG,Communication Services,high,0.3031,0.3074,composite 0.72,0,0.72178771,26e6bcfe15ccfc8f
+2026-09-30,214,4,NRG,Utilities,high,0.3031,0.3074,composite 0.72 (+signatures),1,0.71955307,26e6bcfe15ccfc8f
+2026-09-30,215,4,CRL,Healthcare,high,0.3031,0.3074,composite 0.72,0,0.71955307,26e6bcfe15ccfc8f
+2026-09-30,216,4,CVNA,Consumer Cyclical,high,0.3031,0.3074,composite 0.72 (+signatures),2,0.71899441,26e6bcfe15ccfc8f
+2026-09-30,217,4,CSCO,Technology,high,0.3031,0.3074,composite 0.72 (+signatures),1,0.71675978,26e6bcfe15ccfc8f
+2026-09-30,218,5,PII,Consumer Cyclical,high,0.2968,0.3022,composite 0.71,0,0.71005587,26e6bcfe15ccfc8f
+2026-09-30,219,5,ADI,Technology,high,0.2968,0.3022,composite 0.70 (+signatures),1,0.70055866,26e6bcfe15ccfc8f
+2026-09-30,220,5,SW,Consumer Cyclical,high,0.2968,0.3022,composite 0.70,0,0.7,26e6bcfe15ccfc8f
+2026-09-30,221,5,TSLA,Consumer Cyclical,high,0.2968,0.3022,composite 0.69 (+signatures),2,0.6877095,26e6bcfe15ccfc8f
+2026-09-30,222,5,APH,Technology,high,0.2968,0.3022,composite 0.69 (+signatures),1,0.68715084,26e6bcfe15ccfc8f
+2026-09-30,223,5,HGV,Consumer Cyclical,high,0.2968,0.3022,composite 0.68,0,0.68435754,26e6bcfe15ccfc8f
+2026-09-30,224,5,IVZ,Financial,high,0.2965,0.2962,composite 0.67 (+signatures),1,0.66703911,26e6bcfe15ccfc8f
+2026-09-30,225,5,META,Communication Services,high,0.2965,0.2962,composite 0.67 (+signatures),1,0.66703911,26e6bcfe15ccfc8f
+2026-09-30,226,5,ROK,Industrials,high,0.2965,0.2962,composite 0.67,0,0.66703911,26e6bcfe15ccfc8f
+2026-09-30,227,5,RDDT,Communication Services,high,0.2965,0.2962,composite 0.66 (+signatures),1,0.66480447,26e6bcfe15ccfc8f
+2026-09-30,228,5,FBIN,Industrials,high,0.2965,0.2962,composite 0.66,0,0.65921788,26e6bcfe15ccfc8f
+2026-09-30,229,5,SAIA,Industrials,high,0.2965,0.2962,composite 0.65,0,0.65418994,26e6bcfe15ccfc8f
+2026-09-30,230,5,SWK,Industrials,high,0.2965,0.2962,composite 0.65 (+signatures),1,0.65363128,26e6bcfe15ccfc8f
+2026-09-30,231,5,FFIV,Technology,high,0.2965,0.2962,composite 0.65,0,0.64972067,26e6bcfe15ccfc8f
+2026-09-30,232,5,GXO,Industrials,high,0.2965,0.2962,composite 0.65,0,0.64860335,26e6bcfe15ccfc8f
+2026-09-30,233,5,NCLH,Consumer Cyclical,high,0.2965,0.2962,composite 0.65,0,0.64804469,26e6bcfe15ccfc8f
+2026-09-30,234,5,WING,Consumer Cyclical,high,0.2965,0.2962,composite 0.65 (+signatures),1,0.64692737,26e6bcfe15ccfc8f
+2026-09-30,235,5,CMC,Industrials,high,0.2965,0.2962,composite 0.65,0,0.64692737,26e6bcfe15ccfc8f
+2026-09-30,236,5,KNF,Basic Materials,high,0.2965,0.2962,composite 0.64,0,0.64301676,26e6bcfe15ccfc8f
+2026-09-30,237,5,EMR,Industrials,high,0.2965,0.2962,composite 0.64,0,0.64134078,26e6bcfe15ccfc8f
+2026-09-30,238,5,ELAN,Healthcare,high,0.2965,0.2962,composite 0.63,0,0.63240223,26e6bcfe15ccfc8f
+2026-09-30,239,5,ROKU,Communication Services,high,0.2965,0.2962,composite 0.63 (+signatures),2,0.63184358,26e6bcfe15ccfc8f
+2026-09-30,240,5,MAS,Industrials,high,0.2965,0.2962,composite 0.63,0,0.62960894,26e6bcfe15ccfc8f
+2026-09-30,241,5,MIDD,Industrials,high,0.2965,0.2962,composite 0.63,0,0.62960894,26e6bcfe15ccfc8f
+2026-09-30,242,5,GE,Industrials,high,0.2965,0.2962,composite 0.63,0,0.62793296,26e6bcfe15ccfc8f
+2026-09-30,243,5,AVNT,Basic Materials,high,0.2965,0.2962,composite 0.63,0,0.62513966,26e6bcfe15ccfc8f
+2026-09-30,244,5,NVDA,Technology,high,0.2965,0.2962,composite 0.62 (+signatures),2,0.62346369,26e6bcfe15ccfc8f
+2026-09-30,245,5,APTV,Consumer Cyclical,high,0.2965,0.2962,composite 0.62,0,0.62346369,26e6bcfe15ccfc8f
+2026-09-30,246,5,DAL,Industrials,high,0.2965,0.2962,composite 0.62 (+signatures),1,0.62290503,26e6bcfe15ccfc8f
+2026-09-30,247,5,CW,Industrials,high,0.2965,0.2962,composite 0.62,0,0.61620112,26e6bcfe15ccfc8f
+2026-09-30,248,5,CNH,Industrials,high,0.2965,0.2962,composite 0.61,0,0.6122905,26e6bcfe15ccfc8f
+2026-09-30,249,5,GPN,Technology,high,0.2965,0.2962,composite 0.61,0,0.61005587,26e6bcfe15ccfc8f
+2026-09-30,250,5,BAX,Healthcare,high,0.2965,0.2962,composite 0.61,0,0.60782123,26e6bcfe15ccfc8f
+2026-09-30,251,5,C,Financial,high,0.2965,0.2962,composite 0.61,0,0.60670391,26e6bcfe15ccfc8f
+2026-09-30,252,5,CARR,Industrials,high,0.2965,0.2962,composite 0.60,0,0.59888268,26e6bcfe15ccfc8f
+2026-09-30,253,5,M,Consumer Cyclical,high,0.2965,0.2962,composite 0.60,0,0.59832402,26e6bcfe15ccfc8f
+2026-09-30,254,5,GS,Financial,high,0.2965,0.2962,composite 0.59,0,0.59050279,26e6bcfe15ccfc8f
+2026-09-30,255,5,IBM,Technology,mid,0.2923,0.2809,signatures x2 (+composite),2,0.57430168,26e6bcfe15ccfc8f
+2026-09-30,256,5,CPRI,Consumer Cyclical,high,0.2923,0.2809,signatures x1 (+composite),1,0.56145251,26e6bcfe15ccfc8f
+2026-09-30,257,5,BBWI,Consumer Cyclical,high,0.2923,0.2809,signatures x1 (+composite),1,0.52234637,26e6bcfe15ccfc8f
+2026-09-30,258,5,CMG,Consumer Cyclical,mid,0.2923,0.2809,signatures x2 (+composite),2,0.4877095,26e6bcfe15ccfc8f
+2026-09-30,259,5,CR,Industrials,high,0.2922,0.2962,composite 0.58,0,0.58379888,26e6bcfe15ccfc8f
+2026-09-30,260,5,WSO,Industrials,high,0.292,0.2962,composite 0.58,0,0.58100559,26e6bcfe15ccfc8f
+2026-09-30,261,5,FTI,Energy,mid,0.2913,0.2927,signatures x2 (+composite),2,0.78212291,26e6bcfe15ccfc8f
+2026-09-30,262,5,CDW,Technology,mid,0.2913,0.2927,signatures x1 (+composite),1,0.67877095,26e6bcfe15ccfc8f
+2026-09-30,263,5,FDX,Industrials,mid,0.2913,0.2927,signatures x2 (+composite),2,0.6575419,26e6bcfe15ccfc8f
+2026-09-30,264,5,CHWY,Consumer Cyclical,mid,0.2913,0.2842,signatures x4 (+composite),4,0.3698324,26e6bcfe15ccfc8f
+2026-09-30,265,5,LDOS,Technology,mid,0.2913,0.2842,signatures x6 (+composite),6,0.31787709,26e6bcfe15ccfc8f
+2026-09-30,266,5,COO,Healthcare,mid,0.2913,0.2842,signatures x4 (+composite),4,0.22122905,26e6bcfe15ccfc8f
+2026-09-30,267,5,RBA,Industrials,mid,0.2913,0.282,signatures x3 (+composite),3,0.36703911,26e6bcfe15ccfc8f
+2026-09-30,268,5,WFRD,Energy,high,0.2913,0.282,signatures x3 (+composite),3,0.30111732,26e6bcfe15ccfc8f
+2026-09-30,269,5,RGLD,Basic Materials,high,0.2911,0.2913,composite 0.58,0,0.57932961,26e6bcfe15ccfc8f
+2026-09-30,270,5,BWXT,Industrials,high,0.2911,0.2913,composite 0.57,0,0.56536313,26e6bcfe15ccfc8f
+2026-09-30,271,5,PYPL,Financial,high,0.2911,0.2913,composite 0.56,0,0.56368715,26e6bcfe15ccfc8f
+2026-09-30,272,5,LECO,Industrials,high,0.2911,0.2913,composite 0.56,0,0.55810056,26e6bcfe15ccfc8f
+2026-09-30,273,5,DASH,Consumer Cyclical,high,0.2904,0.2913,composite 0.55,0,0.55418994,26e6bcfe15ccfc8f
+2026-09-30,274,5,AMG,Financial,high,0.2904,0.2913,composite 0.55,0,0.55363128,26e6bcfe15ccfc8f
+2026-09-30,275,5,RVTY,Healthcare,high,0.2904,0.2913,composite 0.55,0,0.55083799,26e6bcfe15ccfc8f
+2026-09-30,276,5,OSK,Industrials,high,0.2904,0.2913,composite 0.54,0,0.5424581,26e6bcfe15ccfc8f
+2026-09-30,277,5,SNPS,Technology,high,0.2904,0.2913,composite 0.54,0,0.53910615,26e6bcfe15ccfc8f
+2026-09-30,278,5,VMI,Industrials,high,0.2904,0.2913,composite 0.54,0,0.53631285,26e6bcfe15ccfc8f
+2026-09-30,279,5,NVST,Healthcare,high,0.2904,0.2913,composite 0.53,0,0.53351955,26e6bcfe15ccfc8f
+2026-09-30,280,5,RBC,Industrials,high,0.2904,0.2913,composite 0.53,0,0.52905028,26e6bcfe15ccfc8f
+2026-09-30,281,5,SARO,Industrials,high,0.2904,0.2913,composite 0.53,0,0.52849162,26e6bcfe15ccfc8f
+2026-09-30,282,5,IP,Consumer Cyclical,high,0.2904,0.2913,composite 0.52,0,0.52290503,26e6bcfe15ccfc8f
+2026-09-30,283,5,SYF,Financial,high,0.2904,0.2913,composite 0.52,0,0.52067039,26e6bcfe15ccfc8f
+2026-09-30,284,5,IDCC,Technology,high,0.2904,0.2913,composite 0.52,0,0.51675978,26e6bcfe15ccfc8f
+2026-09-30,285,5,WAB,Industrials,high,0.2904,0.2913,composite 0.52,0,0.51620112,26e6bcfe15ccfc8f
+2026-09-30,286,5,CG,Financial,high,0.2904,0.2913,composite 0.51,0,0.51284916,26e6bcfe15ccfc8f
+2026-09-30,287,5,IRM,Real Estate,high,0.2904,0.2913,composite 0.51,0,0.51284916,26e6bcfe15ccfc8f
+2026-09-30,288,5,CXT,Industrials,high,0.2904,0.2913,composite 0.51,0,0.51005587,26e6bcfe15ccfc8f
+2026-09-30,289,5,PPG,Basic Materials,high,0.2904,0.2913,composite 0.51,0,0.50949721,26e6bcfe15ccfc8f
+2026-09-30,290,5,JCI,Industrials,high,0.2904,0.2913,composite 0.51,0,0.50837989,26e6bcfe15ccfc8f
+2026-09-30,291,5,EL,Consumer Defensive,high,0.2904,0.2913,composite 0.51 (+signatures),1,0.50782123,26e6bcfe15ccfc8f
+2026-09-30,292,5,RL,Consumer Cyclical,high,0.2904,0.2913,composite 0.51,0,0.50670391,26e6bcfe15ccfc8f
+2026-09-30,293,5,GAP,Consumer Cyclical,high,0.2904,0.2913,composite 0.51,0,0.50614525,26e6bcfe15ccfc8f
+2026-09-30,294,5,STT,Financial,high,0.2904,0.2913,composite 0.51,0,0.50614525,26e6bcfe15ccfc8f
+2026-09-30,295,5,ITT,Industrials,high,0.2904,0.2913,composite 0.51,0,0.50558659,26e6bcfe15ccfc8f
+2026-09-30,296,5,AXTA,Basic Materials,high,0.2904,0.2913,composite 0.49,0,0.49162011,26e6bcfe15ccfc8f
+2026-09-30,297,5,F,Consumer Cyclical,high,0.2904,0.2913,composite 0.49,0,0.49162011,26e6bcfe15ccfc8f
+2026-09-30,298,5,BWA,Consumer Cyclical,high,0.2904,0.2913,composite 0.49,0,0.49050279,26e6bcfe15ccfc8f
+2026-09-30,299,5,VST,Utilities,high,0.2904,0.2913,composite 0.49,0,0.48882682,26e6bcfe15ccfc8f
+2026-09-30,300,5,SGI,Consumer Cyclical,high,0.2904,0.2913,composite 0.49,0,0.48826816,26e6bcfe15ccfc8f
+2026-09-30,301,5,OC,Industrials,high,0.2904,0.2913,composite 0.49,0,0.48659218,26e6bcfe15ccfc8f
+2026-09-30,302,5,MS,Financial,high,0.2904,0.2909,composite 0.48,0,0.48435754,26e6bcfe15ccfc8f
+2026-09-30,303,5,APG,Industrials,high,0.2904,0.2909,composite 0.48,0,0.47988827,26e6bcfe15ccfc8f
+2026-09-30,304,5,AMZN,Consumer Cyclical,high,0.2904,0.29,composite 0.48,0,0.47877095,26e6bcfe15ccfc8f
+2026-09-30,305,5,TDY,Technology,high,0.2904,0.29,composite 0.48,0,0.47541899,26e6bcfe15ccfc8f
+2026-09-30,306,5,PVH,Consumer Cyclical,high,0.2904,0.29,composite 0.47,0,0.47430168,26e6bcfe15ccfc8f
+2026-09-30,307,5,DD,Basic Materials,high,0.2904,0.29,composite 0.47,0,0.47318436,26e6bcfe15ccfc8f
+2026-09-30,308,5,ECHO,Communication Services,high,0.2904,0.29,composite 0.47,0,0.47206704,26e6bcfe15ccfc8f
+2026-09-30,309,5,GM,Consumer Cyclical,high,0.2904,0.29,composite 0.47,0,0.46815642,26e6bcfe15ccfc8f
+2026-09-30,310,5,LPX,Industrials,high,0.2904,0.29,composite 0.47,0,0.46815642,26e6bcfe15ccfc8f
+2026-09-30,311,5,CSL,Industrials,high,0.2904,0.29,composite 0.47,0,0.46648045,26e6bcfe15ccfc8f
+2026-09-30,312,5,KKR,Financial,high,0.2904,0.29,composite 0.46,0,0.4575419,26e6bcfe15ccfc8f
+2026-09-30,313,5,CRUS,Technology,high,0.2904,0.2851,composite 0.45,0,0.4547486,26e6bcfe15ccfc8f
+2026-09-30,314,5,WSM,Consumer Cyclical,high,0.2904,0.2851,composite 0.45,0,0.4547486,26e6bcfe15ccfc8f
+2026-09-30,315,5,XYZ,Technology,high,0.2904,0.2835,composite 0.45,0,0.45139665,26e6bcfe15ccfc8f
+2026-09-30,316,5,CRH,Basic Materials,high,0.2904,0.2835,composite 0.45,0,0.44972067,26e6bcfe15ccfc8f
+2026-09-30,317,5,HLNE,Financial,high,0.2904,0.2784,signatures x2 (+composite),2,0.4424581,26e6bcfe15ccfc8f
+2026-09-30,318,5,XRAY,Healthcare,high,0.2864,0.2835,composite 0.44,0,0.44301676,26e6bcfe15ccfc8f
+2026-09-30,319,5,AYI,Industrials,high,0.2855,0.2835,composite 0.44,0,0.4424581,26e6bcfe15ccfc8f
+2026-09-30,320,5,RCL,Consumer Cyclical,high,0.2855,0.2835,composite 0.44,0,0.4424581,26e6bcfe15ccfc8f
+2026-09-30,321,5,ALSN,Consumer Cyclical,high,0.2849,0.2835,composite 0.44,0,0.44134078,26e6bcfe15ccfc8f
+2026-09-30,322,5,BC,Consumer Cyclical,high,0.2849,0.2835,composite 0.44,0,0.43854749,26e6bcfe15ccfc8f
+2026-09-30,323,5,TREX,Industrials,high,0.2849,0.2835,composite 0.44,0,0.43743017,26e6bcfe15ccfc8f
+2026-09-30,324,5,TEL,Technology,high,0.2849,0.2835,composite 0.44,0,0.43519553,26e6bcfe15ccfc8f
+2026-09-30,325,5,BX,Financial,high,0.2849,0.2835,composite 0.43,0,0.43463687,26e6bcfe15ccfc8f
+2026-09-30,326,5,R,Industrials,high,0.2849,0.2835,composite 0.43,0,0.43463687,26e6bcfe15ccfc8f
+2026-09-30,327,5,XPO,Industrials,high,0.2849,0.2835,composite 0.43,0,0.43184358,26e6bcfe15ccfc8f
+2026-09-30,328,5,BEN,Financial,high,0.2801,0.2807,composite 0.43,0,0.42793296,26e6bcfe15ccfc8f
+2026-09-30,329,5,LULU,Consumer Cyclical,high,0.2801,0.2807,composite 0.43,0,0.42793296,26e6bcfe15ccfc8f
+2026-09-30,330,5,ARES,Financial,high,0.2797,0.2807,composite 0.42,0,0.42458101,26e6bcfe15ccfc8f
+2026-09-30,331,5,TOST,Technology,high,0.2797,0.2807,composite 0.42,0,0.42178771,26e6bcfe15ccfc8f
+2026-09-30,332,5,EQH,Financial,high,0.2797,0.2807,composite 0.42,0,0.41843575,26e6bcfe15ccfc8f
+2026-09-30,333,5,IR,Industrials,high,0.2797,0.2807,composite 0.42,0,0.41564246,26e6bcfe15ccfc8f
+2026-09-30,334,5,CRBG,Financial,high,0.2797,0.2807,composite 0.41,0,0.41452514,26e6bcfe15ccfc8f
+2026-09-30,335,5,SHC,Healthcare,high,0.2797,0.2738,composite 0.41,0,0.41061453,26e6bcfe15ccfc8f
+2026-09-30,336,5,VNO,Real Estate,high,0.2797,0.2735,composite 0.41,0,0.40558659,26e6bcfe15ccfc8f
+2026-09-30,337,5,TRMB,Technology,high,0.2797,0.2734,composite 0.39,0,0.39441341,26e6bcfe15ccfc8f
+2026-09-30,338,5,HUBB,Industrials,high,0.2797,0.2734,composite 0.39,0,0.39217877,26e6bcfe15ccfc8f
+2026-09-30,339,5,TT,Industrials,high,0.2797,0.2731,composite 0.39,0,0.38659218,26e6bcfe15ccfc8f
+2026-09-30,340,5,EXP,Basic Materials,high,0.2797,0.2731,composite 0.39,0,0.38603352,26e6bcfe15ccfc8f
+2026-09-30,341,5,WMS,Industrials,high,0.2797,0.2731,composite 0.38,0,0.37932961,26e6bcfe15ccfc8f
+2026-09-30,342,5,FERG,Industrials,high,0.2797,0.2731,composite 0.37,0,0.3726257,26e6bcfe15ccfc8f
+2026-09-30,343,5,CEG,Utilities,high,0.2797,0.2731,composite 0.37,0,0.37150838,26e6bcfe15ccfc8f
+2026-09-30,344,5,CFG,Financial,high,0.276,0.2678,composite 0.36,0,0.36368715,26e6bcfe15ccfc8f
+2026-09-30,345,5,COF,Financial,high,0.276,0.2645,composite 0.35,0,0.35307263,26e6bcfe15ccfc8f
+2026-09-30,346,5,APO,Financial,high,0.276,0.2627,composite 0.35,0,0.34972067,26e6bcfe15ccfc8f
+2026-09-30,347,5,VC,Consumer Cyclical,high,0.2663,0.2625,composite 0.34,0,0.34022346,26e6bcfe15ccfc8f
+2026-09-30,348,5,CCL,Consumer Cyclical,high,0.2663,0.257,composite 0.33,0,0.33407821,26e6bcfe15ccfc8f
+2026-09-30,349,5,DECK,Consumer Cyclical,high,0.2663,0.257,composite 0.33,0,0.33407821,26e6bcfe15ccfc8f
+2026-09-30,350,5,VNT,Technology,high,0.2663,0.257,composite 0.33,0,0.33296089,26e6bcfe15ccfc8f
+2026-09-30,351,5,ALLY,Financial,high,0.2663,0.257,composite 0.33,0,0.32625698,26e6bcfe15ccfc8f
+2026-09-30,352,5,BLK,Financial,high,0.2663,0.257,composite 0.32,0,0.32234637,26e6bcfe15ccfc8f
+2026-09-30,353,5,TOL,Consumer Cyclical,high,0.2663,0.257,composite 0.31,0,0.31340782,26e6bcfe15ccfc8f
+2026-09-30,354,5,BA,Industrials,high,0.2663,0.257,composite 0.30,0,0.30223464,26e6bcfe15ccfc8f
+2026-09-30,355,5,ALV,Consumer Cyclical,high,0.2663,0.257,composite 0.30,0,0.30055866,26e6bcfe15ccfc8f
+2026-09-30,356,5,OLED,Technology,high,0.2663,0.257,composite 0.30,0,0.29832402,26e6bcfe15ccfc8f
+2026-09-30,357,5,JEF,Financial,high,0.2663,0.257,composite 0.29 (+signatures),1,0.29441341,26e6bcfe15ccfc8f
+2026-09-30,358,5,WAL,Financial,high,0.2663,0.257,composite 0.27,0,0.26759777,26e6bcfe15ccfc8f
+2026-09-30,359,5,SLM,Financial,high,0.2663,0.257,composite 0.26,0,0.2603352,26e6bcfe15ccfc8f
+2026-09-30,360,5,SF,Financial,high,0.2663,0.257,composite 0.25,0,0.25251397,26e6bcfe15ccfc8f
+2026-09-30,361,5,THO,Consumer Cyclical,high,0.2663,0.257,composite 0.18,0,0.18156425,26e6bcfe15ccfc8f
+2026-09-30,362,5,CNM,Industrials,high,0.2663,0.257,composite 0.17,0,0.17430168,26e6bcfe15ccfc8f
+2026-09-30,363,5,VTRS,Healthcare,mid,0.2521,0.2488,composite 0.88,0,0.87541899,26e6bcfe15ccfc8f
+2026-09-30,364,6,TGT,Consumer Defensive,mid,0.2462,0.2464,composite 0.86,0,0.85977654,26e6bcfe15ccfc8f
+2026-09-30,365,6,LNTH,Healthcare,mid,0.2438,0.2452,composite 0.85,0,0.84692737,26e6bcfe15ccfc8f
+2026-09-30,366,6,PK,Real Estate,mid,0.2438,0.2452,composite 0.82,0,0.82290503,26e6bcfe15ccfc8f
+2026-09-30,367,6,NUE,Basic Materials,mid,0.2438,0.2452,composite 0.80,0,0.80446927,26e6bcfe15ccfc8f
+2026-09-30,368,6,FCFS,Financial,mid,0.2438,0.2452,composite 0.78,0,0.78435754,26e6bcfe15ccfc8f
+2026-09-30,369,6,HUM,Healthcare,mid,0.2438,0.2452,composite 0.78,0,0.77877095,26e6bcfe15ccfc8f
+2026-09-30,370,6,JAZZ,Healthcare,mid,0.2438,0.2452,composite 0.77,0,0.77486034,26e6bcfe15ccfc8f
+2026-09-30,371,6,TROW,Financial,mid,0.2438,0.2452,composite 0.77,0,0.77430168,26e6bcfe15ccfc8f
+2026-09-30,372,6,LSTR,Industrials,mid,0.2438,0.2452,composite 0.77,0,0.77094972,26e6bcfe15ccfc8f
+2026-09-30,373,6,KEX,Industrials,mid,0.2438,0.2452,composite 0.77,0,0.76759777,26e6bcfe15ccfc8f
+2026-09-30,374,6,WAT,Healthcare,mid,0.2438,0.2452,composite 0.76,0,0.76145251,26e6bcfe15ccfc8f
+2026-09-30,375,6,HST,Real Estate,mid,0.2438,0.2452,composite 0.73,0,0.73463687,26e6bcfe15ccfc8f
+2026-09-30,376,6,CBT,Basic Materials,mid,0.2438,0.2452,composite 0.73,0,0.72960894,26e6bcfe15ccfc8f
+2026-09-30,377,6,OLN,Basic Materials,mid,0.2438,0.2452,composite 0.73,0,0.72625698,26e6bcfe15ccfc8f
+2026-09-30,378,6,EXEL,Healthcare,mid,0.2438,0.2452,composite 0.73,0,0.72569832,26e6bcfe15ccfc8f
+2026-09-30,379,6,ROST,Consumer Cyclical,mid,0.2438,0.2452,composite 0.71,0,0.71173184,26e6bcfe15ccfc8f
+2026-09-30,380,6,RS,Basic Materials,mid,0.2438,0.2452,composite 0.71,0,0.71117318,26e6bcfe15ccfc8f
+2026-09-30,381,6,FTV,Technology,mid,0.2438,0.2452,composite 0.70,0,0.70167598,26e6bcfe15ccfc8f
+2026-09-30,382,6,DXCM,Healthcare,mid,0.2427,0.2452,composite 0.68,0,0.68435754,26e6bcfe15ccfc8f
+2026-09-30,383,6,HXL,Industrials,mid,0.2427,0.2452,composite 0.68,0,0.68435754,26e6bcfe15ccfc8f
+2026-09-30,384,6,CPAY,Technology,mid,0.2422,0.2452,composite 0.68,0,0.68044693,26e6bcfe15ccfc8f
+2026-09-30,385,6,HOG,Consumer Cyclical,mid,0.2422,0.2452,composite 0.68,0,0.68044693,26e6bcfe15ccfc8f
+2026-09-30,386,6,ASH,Basic Materials,mid,0.2422,0.2452,composite 0.67,0,0.6726257,26e6bcfe15ccfc8f
+2026-09-30,387,6,CROX,Consumer Cyclical,mid,0.2422,0.2449,composite 0.66,0,0.66424581,26e6bcfe15ccfc8f
+2026-09-30,388,6,IFF,Basic Materials,mid,0.2422,0.2449,composite 0.66,0,0.66424581,26e6bcfe15ccfc8f
+2026-09-30,389,6,DLTR,Consumer Defensive,mid,0.2422,0.2449,composite 0.66,0,0.66312849,26e6bcfe15ccfc8f
+2026-09-30,390,6,CYTK,Healthcare,mid,0.2422,0.2442,composite 0.65,0,0.65307263,26e6bcfe15ccfc8f
+2026-09-30,391,6,BBY,Consumer Cyclical,mid,0.2422,0.2442,composite 0.65,0,0.65083799,26e6bcfe15ccfc8f
+2026-09-30,392,6,CASY,Consumer Cyclical,low,0.2402,0.2433,composite 0.85,0,0.84692737,26e6bcfe15ccfc8f
+2026-09-30,393,6,VRSK,Industrials,low,0.238,0.2397,composite 0.74,0,0.73854749,26e6bcfe15ccfc8f
+2026-09-30,394,6,DRI,Consumer Cyclical,low,0.238,0.2397,composite 0.73,0,0.73463687,26e6bcfe15ccfc8f
+2026-09-30,395,6,YUM,Consumer Cyclical,low,0.238,0.2397,composite 0.73,0,0.73240223,26e6bcfe15ccfc8f
+2026-09-30,396,6,BIO,Healthcare,mid,0.2377,0.2442,composite 0.65,0,0.64636872,26e6bcfe15ccfc8f
+2026-09-30,397,6,SON,Consumer Cyclical,mid,0.2377,0.2442,composite 0.65,0,0.64636872,26e6bcfe15ccfc8f
+2026-09-30,398,6,INCY,Healthcare,mid,0.2377,0.2442,composite 0.63,0,0.63240223,26e6bcfe15ccfc8f
+2026-09-30,399,6,SOLV,Healthcare,mid,0.2377,0.2442,composite 0.63,0,0.63184358,26e6bcfe15ccfc8f
+2026-09-30,400,6,PH,Industrials,mid,0.2377,0.2442,composite 0.63,0,0.62569832,26e6bcfe15ccfc8f
+2026-09-30,401,6,NTRS,Financial,mid,0.2377,0.2442,composite 0.63,0,0.62513966,26e6bcfe15ccfc8f
+2026-09-30,402,6,DG,Consumer Defensive,mid,0.2377,0.2442,composite 0.62,0,0.62458101,26e6bcfe15ccfc8f
+2026-09-30,403,6,ULTA,Consumer Cyclical,mid,0.2377,0.2442,composite 0.62,0,0.62458101,26e6bcfe15ccfc8f
+2026-09-30,404,6,TNL,Consumer Cyclical,mid,0.2377,0.2442,composite 0.62,0,0.62346369,26e6bcfe15ccfc8f
+2026-09-30,405,6,WTS,Industrials,mid,0.2377,0.2442,composite 0.62,0,0.62178771,26e6bcfe15ccfc8f
+2026-09-30,406,6,UPS,Industrials,mid,0.2377,0.2442,composite 0.62,0,0.62122905,26e6bcfe15ccfc8f
+2026-09-30,407,6,DE,Industrials,mid,0.2377,0.2442,composite 0.62,0,0.62067039,26e6bcfe15ccfc8f
+2026-09-30,408,6,AMCR,Consumer Cyclical,mid,0.2377,0.2442,composite 0.62,0,0.61731844,26e6bcfe15ccfc8f
+2026-09-30,409,6,EIX,Utilities,low,0.2377,0.2397,composite 0.69,0,0.69162011,26e6bcfe15ccfc8f
+2026-09-30,410,6,PAYX,Technology,low,0.2377,0.2397,composite 0.68,0,0.68435754,26e6bcfe15ccfc8f
+2026-09-30,411,6,ROL,Consumer Cyclical,low,0.2377,0.2397,composite 0.68,0,0.68156425,26e6bcfe15ccfc8f
+2026-09-30,412,6,MUSA,Consumer Cyclical,low,0.2377,0.2397,composite 0.67,0,0.67430168,26e6bcfe15ccfc8f
+2026-09-30,413,6,FNF,Financial,low,0.2377,0.2397,composite 0.66,0,0.65977654,26e6bcfe15ccfc8f
+2026-09-30,414,6,WTW,Financial,low,0.2377,0.2397,composite 0.66,0,0.65977654,26e6bcfe15ccfc8f
+2026-09-30,415,6,MORN,Financial,low,0.2377,0.2397,composite 0.66,0,0.6575419,26e6bcfe15ccfc8f
+2026-09-30,416,6,POR,Utilities,low,0.2377,0.2397,composite 0.66,0,0.65586592,26e6bcfe15ccfc8f
+2026-09-30,417,6,WY,Real Estate,low,0.2377,0.2397,composite 0.65,0,0.65251397,26e6bcfe15ccfc8f
+2026-09-30,418,6,ESNT,Financial,low,0.2377,0.2397,composite 0.65,0,0.65027933,26e6bcfe15ccfc8f
+2026-09-30,419,6,MTG,Financial,low,0.2377,0.2397,composite 0.64,0,0.64301676,26e6bcfe15ccfc8f
+2026-09-30,420,6,HRB,Consumer Cyclical,low,0.2377,0.2397,composite 0.64,0,0.63854749,26e6bcfe15ccfc8f
+2026-09-30,421,6,TRGP,Energy,low,0.2377,0.2397,composite 0.63,0,0.63296089,26e6bcfe15ccfc8f
+2026-09-30,422,6,SFM,Consumer Defensive,low,0.2377,0.2397,composite 0.63,0,0.63128492,26e6bcfe15ccfc8f
+2026-09-30,423,6,CBOE,Financial,low,0.2377,0.2397,composite 0.63,0,0.62793296,26e6bcfe15ccfc8f
+2026-09-30,424,6,TMUS,Communication Services,low,0.2377,0.2397,composite 0.62,0,0.62402235,26e6bcfe15ccfc8f
+2026-09-30,425,6,ALL,Financial,low,0.2377,0.2397,composite 0.61,0,0.60949721,26e6bcfe15ccfc8f
+2026-09-30,426,6,BRO,Financial,low,0.2377,0.2397,composite 0.61,0,0.60893855,26e6bcfe15ccfc8f
+2026-09-30,427,6,JKHY,Technology,low,0.2377,0.2397,composite 0.60,0,0.59664804,26e6bcfe15ccfc8f
+2026-09-30,428,6,SPGI,Financial,low,0.2377,0.2397,composite 0.60,0,0.59664804,26e6bcfe15ccfc8f
+2026-09-30,429,6,ACI,Consumer Defensive,low,0.2377,0.2397,composite 0.59,0,0.59273743,26e6bcfe15ccfc8f
+2026-09-30,430,6,RLI,Financial,low,0.2377,0.2397,composite 0.59,0,0.5877095,26e6bcfe15ccfc8f
+2026-09-30,431,6,RTX,Industrials,low,0.2377,0.2397,composite 0.59,0,0.58715084,26e6bcfe15ccfc8f
+2026-09-30,432,6,T,Communication Services,low,0.2377,0.2397,composite 0.58,0,0.5849162,26e6bcfe15ccfc8f
+2026-09-30,433,6,CLX,Consumer Defensive,low,0.2377,0.2397,composite 0.58,0,0.58100559,26e6bcfe15ccfc8f
+2026-09-30,434,6,MNST,Consumer Defensive,low,0.2377,0.2397,composite 0.57,0,0.5726257,26e6bcfe15ccfc8f
+2026-09-30,435,6,AJG,Financial,low,0.2377,0.2397,composite 0.57,0,0.57206704,26e6bcfe15ccfc8f
+2026-09-30,436,6,UNM,Financial,low,0.2377,0.2397,composite 0.57,0,0.57206704,26e6bcfe15ccfc8f
+2026-09-30,437,6,CAH,Healthcare,low,0.2377,0.2397,composite 0.57,0,0.57039106,26e6bcfe15ccfc8f
+2026-09-30,438,6,NWS,Communication Services,low,0.2377,0.2397,composite 0.57,0,0.56648045,26e6bcfe15ccfc8f
+2026-09-30,439,6,HIG,Financial,low,0.2377,0.2397,composite 0.56,0,0.56145251,26e6bcfe15ccfc8f
+2026-09-30,440,6,MSCI,Financial,low,0.2377,0.2397,composite 0.55,0,0.55418994,26e6bcfe15ccfc8f
+2026-09-30,441,6,CMCSA,Communication Services,low,0.2377,0.2397,composite 0.55,0,0.55307263,26e6bcfe15ccfc8f
+2026-09-30,442,6,BDX,Healthcare,low,0.2377,0.2397,composite 0.55,0,0.54748603,26e6bcfe15ccfc8f
+2026-09-30,443,6,BR,Technology,low,0.2377,0.2397,composite 0.55,0,0.54748603,26e6bcfe15ccfc8f
+2026-09-30,444,6,CB,Financial,low,0.2377,0.2397,composite 0.55,0,0.54692737,26e6bcfe15ccfc8f
+2026-09-30,445,6,CHTR,Communication Services,low,0.2377,0.2397,composite 0.55,0,0.54692737,26e6bcfe15ccfc8f
+2026-09-30,446,6,RYAN,Financial,low,0.2377,0.2397,composite 0.55,0,0.5452514,26e6bcfe15ccfc8f
+2026-09-30,447,6,GIS,Consumer Defensive,low,0.2377,0.2397,composite 0.54,0,0.54469274,26e6bcfe15ccfc8f
+2026-09-30,448,6,FOX,Communication Services,low,0.2377,0.2396,composite 0.54,0,0.5396648,26e6bcfe15ccfc8f
+2026-09-30,449,6,DPZ,Consumer Cyclical,low,0.2377,0.2392,composite 0.54,0,0.53798883,26e6bcfe15ccfc8f
+2026-09-30,450,6,FANG,Energy,low,0.2377,0.2392,composite 0.54,0,0.53798883,26e6bcfe15ccfc8f
+2026-09-30,451,6,ELV,Healthcare,low,0.2377,0.236,composite 0.54,0,0.53631285,26e6bcfe15ccfc8f
+2026-09-30,452,6,CACI,Technology,low,0.2377,0.236,composite 0.53,0,0.53296089,26e6bcfe15ccfc8f
+2026-09-30,453,6,RRC,Energy,low,0.2377,0.236,composite 0.53,0,0.53072626,26e6bcfe15ccfc8f
+2026-09-30,454,6,USFD,Consumer Defensive,low,0.2377,0.236,composite 0.53,0,0.52905028,26e6bcfe15ccfc8f
+2026-09-30,455,6,KNSL,Financial,low,0.2377,0.236,composite 0.53,0,0.52849162,26e6bcfe15ccfc8f
+2026-09-30,456,6,BSX,Healthcare,low,0.2377,0.236,composite 0.53,0,0.52793296,26e6bcfe15ccfc8f
+2026-09-30,457,6,EXLS,Technology,low,0.2377,0.236,composite 0.53,0,0.52793296,26e6bcfe15ccfc8f
+2026-09-30,458,6,CINF,Financial,low,0.2377,0.236,composite 0.53,0,0.52681564,26e6bcfe15ccfc8f
+2026-09-30,459,6,ABT,Healthcare,low,0.2377,0.236,composite 0.52,0,0.52458101,26e6bcfe15ccfc8f
+2026-09-30,460,6,ERIE,Financial,low,0.2377,0.236,composite 0.52,0,0.52290503,26e6bcfe15ccfc8f
+2026-09-30,461,6,VRSN,Technology,low,0.2377,0.236,composite 0.52,0,0.52122905,26e6bcfe15ccfc8f
+2026-09-30,462,6,NOC,Industrials,low,0.2377,0.236,composite 0.52,0,0.51620112,26e6bcfe15ccfc8f
+2026-09-30,463,6,TSN,Consumer Defensive,low,0.2377,0.236,composite 0.52,0,0.5150838,26e6bcfe15ccfc8f
+2026-09-30,464,6,CPRT,Industrials,low,0.2377,0.236,composite 0.51,0,0.51396648,26e6bcfe15ccfc8f
+2026-09-30,465,6,TRV,Financial,low,0.2377,0.236,composite 0.51,0,0.50837989,26e6bcfe15ccfc8f
+2026-09-30,466,6,APA,Energy,low,0.2377,0.236,composite 0.51,0,0.50670391,26e6bcfe15ccfc8f
+2026-09-30,467,6,INTU,Technology,low,0.2377,0.236,composite 0.50,0,0.5027933,26e6bcfe15ccfc8f
+2026-09-30,468,6,PRI,Financial,low,0.2377,0.236,composite 0.50,0,0.50167598,26e6bcfe15ccfc8f
+2026-09-30,469,6,CNC,Healthcare,low,0.2377,0.236,composite 0.50,0,0.49832402,26e6bcfe15ccfc8f
+2026-09-30,470,6,BG,Consumer Defensive,low,0.2377,0.236,composite 0.50,0,0.4972067,26e6bcfe15ccfc8f
+2026-09-30,471,6,CTRE,Real Estate,low,0.2377,0.236,composite 0.50,0,0.49553073,26e6bcfe15ccfc8f
+2026-09-30,472,6,DAR,Consumer Defensive,low,0.2377,0.236,composite 0.49,0,0.49273743,26e6bcfe15ccfc8f
+2026-09-30,473,6,OXY,Energy,low,0.2377,0.236,composite 0.49,0,0.49162011,26e6bcfe15ccfc8f
+2026-09-30,474,6,LMT,Industrials,low,0.2377,0.236,composite 0.49,0,0.48826816,26e6bcfe15ccfc8f
+2026-09-30,475,6,SPG,Real Estate,low,0.2377,0.236,composite 0.49,0,0.48826816,26e6bcfe15ccfc8f
+2026-09-30,476,6,DVN,Energy,low,0.2377,0.236,composite 0.49,0,0.4877095,26e6bcfe15ccfc8f
+2026-09-30,477,6,DINO,Energy,low,0.2377,0.236,composite 0.49,0,0.48715084,26e6bcfe15ccfc8f
+2026-09-30,478,6,HAE,Healthcare,low,0.2377,0.236,composite 0.49,0,0.48715084,26e6bcfe15ccfc8f
+2026-09-30,479,6,POST,Consumer Defensive,low,0.2377,0.236,composite 0.49,0,0.48715084,26e6bcfe15ccfc8f
+2026-09-30,480,6,DBX,Technology,low,0.2377,0.236,composite 0.49,0,0.48659218,26e6bcfe15ccfc8f
+2026-09-30,481,6,PLNT,Consumer Cyclical,low,0.2377,0.236,composite 0.49,0,0.48547486,26e6bcfe15ccfc8f
+2026-09-30,482,6,PR,Energy,low,0.2377,0.236,composite 0.48,0,0.48435754,26e6bcfe15ccfc8f
+2026-09-30,483,6,TXRH,Consumer Cyclical,low,0.2377,0.236,composite 0.48,0,0.48435754,26e6bcfe15ccfc8f
+2026-09-30,484,6,COKE,Consumer Defensive,low,0.2377,0.236,composite 0.48,0,0.48379888,26e6bcfe15ccfc8f
+2026-09-30,485,6,MPC,Energy,low,0.2377,0.236,composite 0.48,0,0.48212291,26e6bcfe15ccfc8f
+2026-09-30,486,6,VLO,Energy,low,0.2377,0.236,composite 0.48,0,0.48212291,26e6bcfe15ccfc8f
+2026-09-30,487,6,VTR,Real Estate,low,0.2377,0.236,composite 0.48,0,0.48100559,26e6bcfe15ccfc8f
+2026-09-30,488,6,RYN,Real Estate,low,0.2377,0.236,composite 0.48,0,0.47821229,26e6bcfe15ccfc8f
+2026-09-30,489,6,CVS,Healthcare,low,0.2377,0.236,composite 0.48,0,0.47653631,26e6bcfe15ccfc8f
+2026-09-30,490,6,TJX,Consumer Cyclical,low,0.2377,0.236,composite 0.47,0,0.47206704,26e6bcfe15ccfc8f
+2026-09-30,491,6,OKE,Energy,low,0.2377,0.236,composite 0.47,0,0.4698324,26e6bcfe15ccfc8f
+2026-09-30,492,6,SAIC,Technology,low,0.2377,0.236,composite 0.47,0,0.46703911,26e6bcfe15ccfc8f
+2026-09-30,493,6,NFLX,Communication Services,low,0.2377,0.236,composite 0.47,0,0.46592179,26e6bcfe15ccfc8f
+2026-09-30,494,6,CME,Financial,low,0.2377,0.236,composite 0.47,0,0.46536313,26e6bcfe15ccfc8f
+2026-09-30,495,6,VNOM,Energy,low,0.2377,0.236,composite 0.46,0,0.46480447,26e6bcfe15ccfc8f
+2026-09-30,496,6,MMS,Industrials,low,0.2377,0.236,composite 0.46,0,0.46312849,26e6bcfe15ccfc8f
+2026-09-30,497,6,BALL,Consumer Cyclical,low,0.2377,0.236,composite 0.46,0,0.46256983,26e6bcfe15ccfc8f
+2026-09-30,498,6,PCTY,Technology,low,0.2377,0.236,composite 0.46,0,0.46145251,26e6bcfe15ccfc8f
+2026-09-30,499,6,TYL,Technology,low,0.2377,0.236,composite 0.46,0,0.46089385,26e6bcfe15ccfc8f
+2026-09-30,500,6,AHR,Real Estate,low,0.2377,0.236,composite 0.46,0,0.4603352,26e6bcfe15ccfc8f
+2026-09-30,501,6,ORI,Financial,low,0.2377,0.236,composite 0.46,0,0.45977654,26e6bcfe15ccfc8f
+2026-09-30,502,6,PSX,Energy,low,0.2377,0.236,composite 0.46,0,0.45977654,26e6bcfe15ccfc8f
+2026-09-30,503,6,FCN,Industrials,low,0.2377,0.236,composite 0.46,0,0.45921788,26e6bcfe15ccfc8f
+2026-09-30,504,6,SCI,Consumer Cyclical,low,0.2377,0.236,composite 0.46,0,0.45698324,26e6bcfe15ccfc8f
+2026-09-30,505,6,BIIB,Healthcare,low,0.2377,0.236,composite 0.46,0,0.45530726,26e6bcfe15ccfc8f
+2026-09-30,506,6,VZ,Communication Services,low,0.2377,0.236,composite 0.45,0,0.45418994,26e6bcfe15ccfc8f
+2026-09-30,507,6,PODD,Healthcare,low,0.2377,0.236,composite 0.45,0,0.45195531,26e6bcfe15ccfc8f
+2026-09-30,508,6,EOG,Energy,low,0.2377,0.236,composite 0.45,0,0.45139665,26e6bcfe15ccfc8f
+2026-09-30,509,6,KDP,Consumer Defensive,low,0.2377,0.236,composite 0.45,0,0.44581006,26e6bcfe15ccfc8f
+2026-09-30,510,6,AR,Energy,low,0.2377,0.236,composite 0.44,0,0.44413408,26e6bcfe15ccfc8f
+2026-09-30,511,6,PGR,Financial,low,0.2377,0.236,composite 0.44,0,0.44413408,26e6bcfe15ccfc8f
+2026-09-30,512,6,PNW,Utilities,low,0.2377,0.236,composite 0.44,0,0.44357542,26e6bcfe15ccfc8f
+2026-09-30,513,6,LH,Healthcare,low,0.2377,0.236,composite 0.44,0,0.44134078,26e6bcfe15ccfc8f
+2026-09-30,514,6,D,Utilities,low,0.2377,0.2358,composite 0.44,0,0.43798883,26e6bcfe15ccfc8f
+2026-09-30,515,6,SJM,Consumer Defensive,low,0.2377,0.2358,composite 0.44,0,0.43798883,26e6bcfe15ccfc8f
+2026-09-30,516,6,AON,Financial,low,0.2377,0.2358,composite 0.44,0,0.43743017,26e6bcfe15ccfc8f
+2026-09-30,517,6,COP,Energy,low,0.2377,0.2358,composite 0.44,0,0.43631285,26e6bcfe15ccfc8f
+2026-09-30,518,6,SYK,Healthcare,low,0.2377,0.2358,composite 0.43,0,0.43463687,26e6bcfe15ccfc8f
+2026-09-30,519,6,FOXA,Communication Services,low,0.2377,0.2358,composite 0.43,0,0.43351955,26e6bcfe15ccfc8f
+2026-09-30,520,6,SIGI,Financial,low,0.2377,0.2358,composite 0.43,0,0.43351955,26e6bcfe15ccfc8f
+2026-09-30,521,6,MRK,Healthcare,low,0.2377,0.2358,composite 0.43,0,0.43296089,26e6bcfe15ccfc8f
+2026-09-30,522,6,PPC,Consumer Defensive,low,0.2377,0.2358,composite 0.43,0,0.43240223,26e6bcfe15ccfc8f
+2026-09-30,523,6,LHX,Industrials,low,0.2377,0.2358,composite 0.43,0,0.43128492,26e6bcfe15ccfc8f
+2026-09-30,524,6,AAPL,Technology,mid,0.2375,0.2442,composite 0.61,0,0.60726257,26e6bcfe15ccfc8f
+2026-09-30,525,6,GMED,Healthcare,mid,0.2366,0.2426,composite 0.60,0,0.60446927,26e6bcfe15ccfc8f
+2026-09-30,526,6,DT,Technology,mid,0.2366,0.2426,composite 0.59,0,0.59273743,26e6bcfe15ccfc8f
+2026-09-30,527,6,IEX,Industrials,mid,0.2366,0.2426,composite 0.59,0,0.59217877,26e6bcfe15ccfc8f
+2026-09-30,528,6,UNH,Healthcare,mid,0.2366,0.2426,composite 0.59,0,0.59050279,26e6bcfe15ccfc8f
+2026-09-30,529,6,H,Consumer Cyclical,mid,0.2366,0.2426,composite 0.59,0,0.58826816,26e6bcfe15ccfc8f
+2026-09-30,530,6,MEDP,Healthcare,mid,0.2366,0.2426,composite 0.59,0,0.58826816,26e6bcfe15ccfc8f
+2026-09-30,531,6,DHR,Healthcare,mid,0.2366,0.2426,composite 0.59,0,0.58547486,26e6bcfe15ccfc8f
+2026-09-30,532,6,EQIX,Real Estate,mid,0.2366,0.2426,composite 0.58,0,0.5849162,26e6bcfe15ccfc8f
+2026-09-30,533,6,NTNX,Technology,mid,0.2366,0.2426,composite 0.58,0,0.58324022,26e6bcfe15ccfc8f
+2026-09-30,534,6,A,Healthcare,mid,0.2366,0.2426,composite 0.58,0,0.58268156,26e6bcfe15ccfc8f
+2026-09-30,535,6,HAS,Consumer Cyclical,mid,0.2366,0.2426,composite 0.58,0,0.58212291,26e6bcfe15ccfc8f
+2026-09-30,536,6,WST,Healthcare,mid,0.2366,0.2426,composite 0.58,0,0.58044693,26e6bcfe15ccfc8f
+2026-09-30,537,6,VRTX,Healthcare,mid,0.2366,0.2426,composite 0.57,0,0.57486034,26e6bcfe15ccfc8f
+2026-09-30,538,6,IQV,Healthcare,mid,0.2366,0.2426,composite 0.57,0,0.57374302,26e6bcfe15ccfc8f
+2026-09-30,539,6,GEF,Consumer Cyclical,mid,0.2366,0.2426,composite 0.57,0,0.57318436,26e6bcfe15ccfc8f
+2026-09-30,540,6,LAMR,Real Estate,mid,0.2366,0.2426,composite 0.57,0,0.5726257,26e6bcfe15ccfc8f
+2026-09-30,541,6,ARMK,Industrials,mid,0.2366,0.2426,composite 0.57,0,0.57206704,26e6bcfe15ccfc8f
+2026-09-30,542,6,DOV,Industrials,mid,0.2366,0.2426,composite 0.57,0,0.5698324,26e6bcfe15ccfc8f
+2026-09-30,543,6,AMGN,Healthcare,mid,0.2366,0.2426,composite 0.57,0,0.56815642,26e6bcfe15ccfc8f
+2026-09-30,544,6,GPC,Consumer Cyclical,mid,0.2366,0.2426,composite 0.57,0,0.56536313,26e6bcfe15ccfc8f
+2026-09-30,545,6,NDSN,Industrials,mid,0.2366,0.2426,composite 0.56,0,0.56480447,26e6bcfe15ccfc8f
+2026-09-30,546,6,DLR,Real Estate,mid,0.2366,0.2426,composite 0.56,0,0.56256983,26e6bcfe15ccfc8f
+2026-09-30,547,6,KHC,Consumer Defensive,low,0.2343,0.2358,composite 0.43,0,0.4273743,26e6bcfe15ccfc8f
+2026-09-30,548,6,KO,Consumer Defensive,low,0.2343,0.2358,composite 0.43,0,0.4273743,26e6bcfe15ccfc8f
+2026-09-30,549,6,EW,Healthcare,mid,0.2329,0.2374,composite 0.55,0,0.5547486,26e6bcfe15ccfc8f
+2026-09-30,550,6,CAR,Industrials,mid,0.2329,0.2374,composite 0.55,0,0.55418994,26e6bcfe15ccfc8f
+2026-09-30,551,6,AIT,Industrials,mid,0.2329,0.2374,composite 0.55,0,0.55083799,26e6bcfe15ccfc8f
+2026-09-30,552,6,CART,Consumer Cyclical,mid,0.2329,0.2374,composite 0.55,0,0.54972067,26e6bcfe15ccfc8f
+2026-09-30,553,6,NBIX,Healthcare,mid,0.2329,0.2374,composite 0.54,0,0.5424581,26e6bcfe15ccfc8f
+2026-09-30,554,6,GBCI,Financial,mid,0.2329,0.2374,composite 0.54,0,0.54134078,26e6bcfe15ccfc8f
+2026-09-30,555,6,REGN,Healthcare,mid,0.2329,0.2374,composite 0.54,0,0.5396648,26e6bcfe15ccfc8f
+2026-09-30,556,6,HQY,Healthcare,mid,0.2329,0.2374,composite 0.53,0,0.52960894,26e6bcfe15ccfc8f
+2026-09-30,557,6,WLK,Basic Materials,mid,0.2329,0.2374,composite 0.53,0,0.52849162,26e6bcfe15ccfc8f
+2026-09-30,558,6,URI,Industrials,mid,0.2329,0.2374,composite 0.53,0,0.52793296,26e6bcfe15ccfc8f
+2026-09-30,559,6,LAD,Consumer Cyclical,mid,0.2329,0.2374,composite 0.52,0,0.52402235,26e6bcfe15ccfc8f
+2026-09-30,560,6,TTEK,Industrials,mid,0.2329,0.2374,composite 0.52,0,0.52402235,26e6bcfe15ccfc8f
+2026-09-30,561,6,EEFT,Technology,mid,0.2329,0.2374,composite 0.52,0,0.52067039,26e6bcfe15ccfc8f
+2026-09-30,562,6,BMRN,Healthcare,mid,0.2329,0.2374,composite 0.52,0,0.52011173,26e6bcfe15ccfc8f
+2026-09-30,563,6,JLL,Real Estate,mid,0.2329,0.2374,composite 0.52,0,0.52011173,26e6bcfe15ccfc8f
+2026-09-30,564,6,PNC,Financial,mid,0.2329,0.2374,composite 0.52,0,0.51955307,26e6bcfe15ccfc8f
+2026-09-30,565,6,FLG,Financial,mid,0.2329,0.2374,composite 0.52,0,0.51787709,26e6bcfe15ccfc8f
+2026-09-30,566,6,ORA,Utilities,mid,0.2329,0.2374,composite 0.52,0,0.51787709,26e6bcfe15ccfc8f
+2026-09-30,567,6,HSIC,Healthcare,mid,0.2329,0.2374,composite 0.52,0,0.51675978,26e6bcfe15ccfc8f
+2026-09-30,568,6,TECH,Healthcare,mid,0.2329,0.2374,composite 0.51,0,0.51284916,26e6bcfe15ccfc8f
+2026-09-30,569,6,TPL,Energy,mid,0.2329,0.2374,composite 0.51,0,0.51284916,26e6bcfe15ccfc8f
+2026-09-30,570,6,EXPD,Industrials,mid,0.2329,0.2374,composite 0.51,0,0.5122905,26e6bcfe15ccfc8f
+2026-09-30,571,6,GRMN,Technology,mid,0.2329,0.2374,composite 0.51,0,0.5122905,26e6bcfe15ccfc8f
+2026-09-30,572,6,USB,Financial,mid,0.2329,0.2374,composite 0.51,0,0.5122905,26e6bcfe15ccfc8f
+2026-09-30,573,6,WTFC,Financial,mid,0.2329,0.2374,composite 0.50,0,0.50335196,26e6bcfe15ccfc8f
+2026-09-30,574,6,MAR,Consumer Cyclical,mid,0.2329,0.2374,composite 0.50,0,0.50223464,26e6bcfe15ccfc8f
+2026-09-30,575,6,VLY,Financial,mid,0.2329,0.2374,composite 0.50,0,0.49944134,26e6bcfe15ccfc8f
+2026-09-30,576,6,LYV,Communication Services,mid,0.2329,0.2374,composite 0.50,0,0.49776536,26e6bcfe15ccfc8f
+2026-09-30,577,6,COLB,Financial,mid,0.2329,0.2374,composite 0.50,0,0.49664804,26e6bcfe15ccfc8f
+2026-09-30,578,6,MSFT,Technology,mid,0.2329,0.2374,composite 0.49,0,0.49162011,26e6bcfe15ccfc8f
+2026-09-30,579,6,RF,Financial,mid,0.2329,0.2374,composite 0.49,0,0.49106145,26e6bcfe15ccfc8f
+2026-09-30,580,6,PAG,Consumer Cyclical,mid,0.232,0.2355,composite 0.49,0,0.48603352,26e6bcfe15ccfc8f
+2026-09-30,581,6,FITB,Financial,mid,0.232,0.2355,composite 0.48,0,0.48212291,26e6bcfe15ccfc8f
+2026-09-30,582,6,ZION,Financial,mid,0.232,0.2355,composite 0.48,0,0.48212291,26e6bcfe15ccfc8f
+2026-09-30,583,6,MMM,Industrials,mid,0.232,0.2355,composite 0.48,0,0.47932961,26e6bcfe15ccfc8f
+2026-09-30,584,6,CHH,Consumer Cyclical,mid,0.232,0.2355,composite 0.48,0,0.47821229,26e6bcfe15ccfc8f
+2026-09-30,585,6,SSB,Financial,mid,0.2317,0.2355,composite 0.47,0,0.47206704,26e6bcfe15ccfc8f
+2026-09-30,586,6,NEU,Basic Materials,mid,0.2317,0.2355,composite 0.47,0,0.4698324,26e6bcfe15ccfc8f
+2026-09-30,587,6,GWW,Industrials,mid,0.2317,0.2355,composite 0.47,0,0.46871508,26e6bcfe15ccfc8f
+2026-09-30,588,6,PNFP,Financial,mid,0.2317,0.2355,composite 0.47,0,0.46703911,26e6bcfe15ccfc8f
+2026-09-30,589,6,SBUX,Consumer Cyclical,mid,0.2317,0.2355,composite 0.47,0,0.46703911,26e6bcfe15ccfc8f
+2026-09-30,590,6,BURL,Consumer Cyclical,mid,0.2317,0.2355,composite 0.47,0,0.46536313,26e6bcfe15ccfc8f
+2026-09-30,591,6,PKG,Consumer Cyclical,mid,0.2317,0.2355,composite 0.46,0,0.46312849,26e6bcfe15ccfc8f
+2026-09-30,592,6,PNR,Industrials,mid,0.2317,0.2355,composite 0.46,0,0.46312849,26e6bcfe15ccfc8f
+2026-09-30,593,6,SIRI,Communication Services,mid,0.2317,0.2355,composite 0.46,0,0.46145251,26e6bcfe15ccfc8f
+2026-09-30,594,6,AGCO,Industrials,mid,0.2317,0.2355,composite 0.46,0,0.45642458,26e6bcfe15ccfc8f
+2026-09-30,595,6,PFGC,Consumer Defensive,mid,0.2317,0.2355,composite 0.46,0,0.45642458,26e6bcfe15ccfc8f
+2026-09-30,596,6,SLAB,Technology,mid,0.2317,0.2355,composite 0.45,0,0.45363128,26e6bcfe15ccfc8f
+2026-09-30,597,6,BAC,Financial,mid,0.2317,0.2355,composite 0.45,0,0.44916201,26e6bcfe15ccfc8f
+2026-09-30,598,6,MLI,Industrials,mid,0.2317,0.2355,composite 0.45,0,0.44860335,26e6bcfe15ccfc8f
+2026-09-30,599,6,KEY,Financial,mid,0.2317,0.2355,composite 0.45,0,0.44581006,26e6bcfe15ccfc8f
+2026-09-30,600,6,PLD,Real Estate,mid,0.2317,0.2355,composite 0.44,0,0.44022346,26e6bcfe15ccfc8f
+2026-09-30,601,6,WH,Consumer Cyclical,mid,0.2317,0.2355,composite 0.44,0,0.44022346,26e6bcfe15ccfc8f
+2026-09-30,602,6,MTB,Financial,mid,0.2317,0.2355,composite 0.44,0,0.4396648,26e6bcfe15ccfc8f
+2026-09-30,603,6,OMC,Communication Services,mid,0.2317,0.2355,composite 0.43,0,0.43128492,26e6bcfe15ccfc8f
+2026-09-30,604,6,THG,Financial,low,0.2308,0.2356,composite 0.42,0,0.42290503,26e6bcfe15ccfc8f
+2026-09-30,605,6,ICE,Financial,low,0.2292,0.2354,composite 0.42,0,0.42234637,26e6bcfe15ccfc8f
+2026-09-30,606,6,ZBH,Healthcare,low,0.2292,0.2354,composite 0.42,0,0.41955307,26e6bcfe15ccfc8f
+2026-09-30,607,6,IDA,Utilities,low,0.2292,0.2354,composite 0.42,0,0.41843575,26e6bcfe15ccfc8f
+2026-09-30,608,6,BMY,Healthcare,low,0.2292,0.2354,composite 0.42,0,0.41620112,26e6bcfe15ccfc8f
+2026-09-30,609,6,CSGP,Real Estate,low,0.2292,0.2354,composite 0.41,0,0.41452514,26e6bcfe15ccfc8f
+2026-09-30,610,6,AFL,Financial,low,0.2292,0.2354,composite 0.41,0,0.41117318,26e6bcfe15ccfc8f
+2026-09-30,611,6,NWSA,Communication Services,low,0.2292,0.2354,composite 0.41,0,0.41117318,26e6bcfe15ccfc8f
+2026-09-30,612,6,UNP,Industrials,low,0.2292,0.2354,composite 0.41,0,0.41061453,26e6bcfe15ccfc8f
+2026-09-30,613,6,ADP,Technology,low,0.2292,0.2354,composite 0.41,0,0.40949721,26e6bcfe15ccfc8f
+2026-09-30,614,6,BHF,Financial,low,0.2292,0.2354,composite 0.41,0,0.40949721,26e6bcfe15ccfc8f
+2026-09-30,615,6,SRE,Utilities,low,0.2292,0.2354,composite 0.41,0,0.40949721,26e6bcfe15ccfc8f
+2026-09-30,616,6,HRL,Consumer Defensive,low,0.2292,0.2354,composite 0.41,0,0.40782123,26e6bcfe15ccfc8f
+2026-09-30,617,6,LNT,Utilities,low,0.2292,0.2354,composite 0.41,0,0.40614525,26e6bcfe15ccfc8f
+2026-09-30,618,6,BKR,Energy,mid,0.2287,0.2355,composite 0.43,0,0.42960894,26e6bcfe15ccfc8f
+2026-09-30,619,6,J,Industrials,mid,0.2287,0.2355,composite 0.43,0,0.42849162,26e6bcfe15ccfc8f
+2026-09-30,620,6,HLT,Consumer Cyclical,mid,0.2287,0.2355,composite 0.43,0,0.42681564,26e6bcfe15ccfc8f
+2026-09-30,621,6,SMG,Basic Materials,mid,0.2287,0.2355,composite 0.43,0,0.42681564,26e6bcfe15ccfc8f
+2026-09-30,622,6,COLM,Consumer Cyclical,mid,0.2287,0.2355,composite 0.43,0,0.42625698,26e6bcfe15ccfc8f
+2026-09-30,623,6,DOC,Real Estate,mid,0.2287,0.2355,composite 0.43,0,0.42569832,26e6bcfe15ccfc8f
+2026-09-30,624,6,SCHW,Financial,mid,0.2287,0.2355,composite 0.42,0,0.42402235,26e6bcfe15ccfc8f
+2026-09-30,625,6,CCK,Consumer Cyclical,mid,0.2287,0.2355,composite 0.42,0,0.42346369,26e6bcfe15ccfc8f
+2026-09-30,626,6,RMD,Healthcare,mid,0.2287,0.2355,composite 0.42,0,0.41843575,26e6bcfe15ccfc8f
+2026-09-30,627,6,ULS,Industrials,mid,0.2287,0.2355,composite 0.42,0,0.41843575,26e6bcfe15ccfc8f
+2026-09-30,628,6,FNB,Financial,mid,0.2287,0.2355,composite 0.42,0,0.4150838,26e6bcfe15ccfc8f
+2026-09-30,629,6,SSD,Basic Materials,mid,0.2287,0.2355,composite 0.42,0,0.4150838,26e6bcfe15ccfc8f
+2026-09-30,630,6,RPM,Basic Materials,mid,0.2287,0.2355,composite 0.41,0,0.40893855,26e6bcfe15ccfc8f
+2026-09-30,631,6,SHW,Basic Materials,mid,0.2287,0.2355,composite 0.41,0,0.40837989,26e6bcfe15ccfc8f
+2026-09-30,632,6,PCAR,Industrials,mid,0.2287,0.2355,composite 0.41,0,0.40726257,26e6bcfe15ccfc8f
+2026-09-30,633,6,MGM,Consumer Cyclical,mid,0.2287,0.2355,composite 0.41,0,0.40502793,26e6bcfe15ccfc8f
+2026-09-30,634,6,AME,Industrials,mid,0.2287,0.2355,composite 0.40,0,0.4,26e6bcfe15ccfc8f
+2026-09-30,635,6,MTD,Healthcare,mid,0.2287,0.2355,composite 0.40,0,0.39944134,26e6bcfe15ccfc8f
+2026-09-30,636,6,CSX,Industrials,mid,0.2287,0.2355,composite 0.39,0,0.39441341,26e6bcfe15ccfc8f
+2026-09-30,637,6,VOYA,Financial,mid,0.2287,0.2355,composite 0.39,0,0.39217877,26e6bcfe15ccfc8f
+2026-09-30,638,6,SLGN,Consumer Cyclical,mid,0.2287,0.2355,composite 0.39,0,0.39050279,26e6bcfe15ccfc8f
+2026-09-30,639,6,FHI,Financial,mid,0.2287,0.2355,composite 0.39,0,0.38994413,26e6bcfe15ccfc8f
+2026-09-30,640,6,TTC,Industrials,mid,0.2287,0.2355,composite 0.39,0,0.38994413,26e6bcfe15ccfc8f
+2026-09-30,641,6,FAF,Financial,mid,0.2287,0.2355,composite 0.38,0,0.38435754,26e6bcfe15ccfc8f
+2026-09-30,642,6,TMO,Healthcare,mid,0.2277,0.2354,composite 0.38,0,0.38156425,26e6bcfe15ccfc8f
+2026-09-30,643,6,PSA,Real Estate,mid,0.2277,0.2297,composite 0.38,0,0.37541899,26e6bcfe15ccfc8f
+2026-09-30,644,6,CFR,Financial,mid,0.2277,0.2297,composite 0.37,0,0.37486034,26e6bcfe15ccfc8f
+2026-09-30,645,6,PHM,Consumer Cyclical,mid,0.2277,0.2297,composite 0.37,0,0.3698324,26e6bcfe15ccfc8f
+2026-09-30,646,6,FAST,Industrials,mid,0.2277,0.2297,composite 0.37,0,0.36871508,26e6bcfe15ccfc8f
+2026-09-30,647,6,AMP,Financial,mid,0.2277,0.2297,composite 0.36,0,0.36201117,26e6bcfe15ccfc8f
+2026-09-30,648,6,PRU,Financial,mid,0.2277,0.2297,composite 0.36,0,0.3603352,26e6bcfe15ccfc8f
+2026-09-30,649,6,IDXX,Healthcare,mid,0.2277,0.2297,composite 0.36,0,0.35810056,26e6bcfe15ccfc8f
+2026-09-30,650,6,ALLE,Industrials,mid,0.2277,0.2297,composite 0.36,0,0.35698324,26e6bcfe15ccfc8f
+2026-09-30,651,6,MTN,Consumer Cyclical,mid,0.2277,0.2297,composite 0.36,0,0.35586592,26e6bcfe15ccfc8f
+2026-09-30,652,6,UMBF,Financial,mid,0.2277,0.2297,composite 0.35,0,0.3547486,26e6bcfe15ccfc8f
+2026-09-30,653,6,FHN,Financial,mid,0.2277,0.2297,composite 0.35,0,0.35418994,26e6bcfe15ccfc8f
+2026-09-30,654,6,SEIC,Financial,mid,0.2277,0.2297,composite 0.35,0,0.35195531,26e6bcfe15ccfc8f
+2026-09-30,655,6,HII,Industrials,mid,0.2277,0.2297,composite 0.35,0,0.35139665,26e6bcfe15ccfc8f
+2026-09-30,656,6,MET,Financial,mid,0.2277,0.2297,composite 0.35,0,0.35139665,26e6bcfe15ccfc8f
+2026-09-30,657,6,BKNG,Consumer Cyclical,mid,0.2277,0.2297,composite 0.35,0,0.34636872,26e6bcfe15ccfc8f
+2026-09-30,658,6,WMG,Communication Services,mid,0.2277,0.2297,composite 0.34,0,0.34413408,26e6bcfe15ccfc8f
+2026-09-30,659,6,DLB,Industrials,mid,0.2277,0.2297,composite 0.34,0,0.34301676,26e6bcfe15ccfc8f
+2026-09-30,660,6,ONB,Financial,mid,0.2277,0.2297,composite 0.34,0,0.34301676,26e6bcfe15ccfc8f
+2026-09-30,661,6,UBER,Technology,mid,0.2277,0.2297,composite 0.34,0,0.34301676,26e6bcfe15ccfc8f
+2026-09-30,662,6,OZK,Financial,mid,0.2277,0.2297,composite 0.34,0,0.3424581,26e6bcfe15ccfc8f
+2026-09-30,663,6,ARE,Real Estate,mid,0.2277,0.2297,composite 0.34,0,0.33743017,26e6bcfe15ccfc8f
+2026-09-30,664,6,GPK,Consumer Cyclical,mid,0.2277,0.2297,composite 0.33,0,0.33463687,26e6bcfe15ccfc8f
+2026-09-30,665,6,REXR,Real Estate,mid,0.2277,0.2297,composite 0.33,0,0.33072626,26e6bcfe15ccfc8f
+2026-09-30,666,6,BNY,Financial,mid,0.2277,0.2297,composite 0.33,0,0.32569832,26e6bcfe15ccfc8f
+2026-09-30,667,6,FIS,Technology,mid,0.2277,0.2297,composite 0.32,0,0.31675978,26e6bcfe15ccfc8f
+2026-09-30,668,6,EWBC,Financial,mid,0.2277,0.2297,composite 0.32,0,0.31564246,26e6bcfe15ccfc8f
+2026-09-30,669,6,MSM,Industrials,mid,0.2277,0.2297,composite 0.32,0,0.3150838,26e6bcfe15ccfc8f
+2026-09-30,670,6,TCBI,Financial,mid,0.2277,0.2297,composite 0.31,0,0.31396648,26e6bcfe15ccfc8f
+2026-09-30,671,6,HWC,Financial,mid,0.2277,0.2297,composite 0.31,0,0.31284916,26e6bcfe15ccfc8f
+2026-09-30,672,6,HLI,Financial,mid,0.2277,0.2297,composite 0.31,0,0.30893855,26e6bcfe15ccfc8f
+2026-09-30,673,6,ASB,Financial,mid,0.2277,0.2297,composite 0.31,0,0.30837989,26e6bcfe15ccfc8f
+2026-09-30,674,6,GEHC,Healthcare,mid,0.2277,0.2297,composite 0.31,0,0.30837989,26e6bcfe15ccfc8f
+2026-09-30,675,6,AES,Utilities,mid,0.2277,0.2297,composite 0.30,0,0.30167598,26e6bcfe15ccfc8f
+2026-09-30,676,6,MOS,Basic Materials,mid,0.2277,0.2297,composite 0.30,0,0.29944134,26e6bcfe15ccfc8f
+2026-09-30,677,6,CUZ,Real Estate,mid,0.2277,0.2297,composite 0.30,0,0.29832402,26e6bcfe15ccfc8f
+2026-09-30,678,6,ADSK,Technology,mid,0.2277,0.2297,composite 0.30,0,0.29776536,26e6bcfe15ccfc8f
+2026-09-30,679,6,BCO,Industrials,mid,0.2277,0.2297,composite 0.30,0,0.2972067,26e6bcfe15ccfc8f
+2026-09-30,680,6,TXT,Industrials,mid,0.2277,0.2297,composite 0.30,0,0.2972067,26e6bcfe15ccfc8f
+2026-09-30,681,6,PTC,Technology,mid,0.2277,0.2297,composite 0.29,0,0.29217877,26e6bcfe15ccfc8f
+2026-09-30,682,6,HON,Industrials,mid,0.2277,0.2297,composite 0.28,0,0.28324022,26e6bcfe15ccfc8f
+2026-09-30,683,6,UBSI,Financial,mid,0.2277,0.2297,composite 0.28,0,0.27877095,26e6bcfe15ccfc8f
+2026-09-30,684,6,MSA,Industrials,mid,0.2277,0.2297,composite 0.28,0,0.27765363,26e6bcfe15ccfc8f
+2026-09-30,685,6,TFC,Financial,mid,0.2277,0.2297,composite 0.28,0,0.27541899,26e6bcfe15ccfc8f
+2026-09-30,686,6,HBAN,Financial,mid,0.2277,0.2297,composite 0.27,0,0.27039106,26e6bcfe15ccfc8f
+2026-09-30,687,6,GNTX,Consumer Cyclical,mid,0.2277,0.2297,composite 0.27,0,0.26927374,26e6bcfe15ccfc8f
+2026-09-30,688,6,DIS,Communication Services,mid,0.2277,0.2297,composite 0.27,0,0.26759777,26e6bcfe15ccfc8f
+2026-09-30,689,6,AVY,Consumer Cyclical,mid,0.2277,0.2297,composite 0.27,0,0.26703911,26e6bcfe15ccfc8f
+2026-09-30,690,6,KRC,Real Estate,mid,0.2277,0.2297,composite 0.27,0,0.26592179,26e6bcfe15ccfc8f
+2026-09-30,691,6,STZ,Consumer Defensive,low,0.227,0.2354,composite 0.40,0,0.4,26e6bcfe15ccfc8f
+2026-09-30,692,6,NNN,Real Estate,low,0.227,0.2354,composite 0.40,0,0.39944134,26e6bcfe15ccfc8f
+2026-09-30,693,6,CCI,Real Estate,low,0.227,0.2354,composite 0.40,0,0.39776536,26e6bcfe15ccfc8f
+2026-09-30,694,6,CTAS,Industrials,low,0.227,0.2354,composite 0.39,0,0.39441341,26e6bcfe15ccfc8f
+2026-09-30,695,6,DTM,Energy,low,0.227,0.2354,composite 0.39,0,0.39441341,26e6bcfe15ccfc8f
+2026-09-30,696,6,GL,Financial,low,0.227,0.2354,composite 0.39,0,0.39273743,26e6bcfe15ccfc8f
+2026-09-30,697,6,CNO,Financial,mid,0.2258,0.2297,composite 0.26,0,0.26424581,26e6bcfe15ccfc8f
+2026-09-30,698,6,CHDN,Consumer Cyclical,mid,0.2258,0.2297,composite 0.26,0,0.26368715,26e6bcfe15ccfc8f
+2026-09-30,699,6,TSCO,Consumer Cyclical,mid,0.2258,0.2297,composite 0.26,0,0.26312849,26e6bcfe15ccfc8f
+2026-09-30,700,6,BXP,Real Estate,mid,0.2258,0.2297,composite 0.26,0,0.2603352,26e6bcfe15ccfc8f
+2026-09-30,701,6,WFC,Financial,mid,0.2258,0.2297,composite 0.26,0,0.25921788,26e6bcfe15ccfc8f
+2026-09-30,702,6,DHI,Consumer Cyclical,mid,0.2258,0.2297,composite 0.26,0,0.25810056,26e6bcfe15ccfc8f
+2026-09-30,703,6,SNA,Industrials,mid,0.2258,0.2297,composite 0.25,0,0.25139665,26e6bcfe15ccfc8f
+2026-09-30,704,6,VVV,Consumer Cyclical,mid,0.2258,0.2297,composite 0.25,0,0.25027933,26e6bcfe15ccfc8f
+2026-09-30,705,6,VMRK,Real Estate,low,0.2252,0.2354,composite 0.39,0,0.39050279,26e6bcfe15ccfc8f
+2026-09-30,706,6,HSY,Consumer Defensive,low,0.2252,0.2354,composite 0.38,0,0.3849162,26e6bcfe15ccfc8f
+2026-09-30,707,6,WMT,Consumer Defensive,low,0.2252,0.2338,composite 0.38,0,0.37988827,26e6bcfe15ccfc8f
+2026-09-30,708,6,KRG,Real Estate,low,0.2252,0.2338,composite 0.38,0,0.37877095,26e6bcfe15ccfc8f
+2026-09-30,709,6,DGX,Healthcare,low,0.2252,0.2338,composite 0.38,0,0.37821229,26e6bcfe15ccfc8f
+2026-09-30,710,6,GD,Industrials,mid,0.2248,0.2297,composite 0.25,0,0.24972067,26e6bcfe15ccfc8f
+2026-09-30,711,6,GLPI,Real Estate,low,0.2234,0.2275,composite 0.38,0,0.37541899,26e6bcfe15ccfc8f
+2026-09-30,712,6,ORLY,Consumer Cyclical,low,0.2234,0.2275,composite 0.37,0,0.3726257,26e6bcfe15ccfc8f
+2026-09-30,713,6,MSI,Technology,low,0.2234,0.2275,composite 0.37,0,0.37206704,26e6bcfe15ccfc8f
+2026-09-30,714,6,CNP,Utilities,low,0.2234,0.2275,composite 0.37,0,0.3698324,26e6bcfe15ccfc8f
+2026-09-30,715,6,IRT,Real Estate,low,0.2234,0.2275,composite 0.37,0,0.36703911,26e6bcfe15ccfc8f
+2026-09-30,716,6,WMB,Energy,low,0.2234,0.2275,composite 0.36,0,0.36480447,26e6bcfe15ccfc8f
+2026-09-30,717,6,AEP,Utilities,low,0.2234,0.2275,composite 0.36,0,0.36256983,26e6bcfe15ccfc8f
+2026-09-30,718,6,AIZ,Financial,low,0.2234,0.2275,composite 0.36,0,0.3603352,26e6bcfe15ccfc8f
+2026-09-30,719,6,UTHR,Healthcare,low,0.2234,0.2275,composite 0.36,0,0.35977654,26e6bcfe15ccfc8f
+2026-09-30,720,6,ADM,Consumer Defensive,low,0.2234,0.2275,composite 0.36,0,0.35698324,26e6bcfe15ccfc8f
+2026-09-30,721,6,WELL,Real Estate,low,0.2234,0.2275,composite 0.35,0,0.35363128,26e6bcfe15ccfc8f
+2026-09-30,722,6,ETR,Utilities,low,0.2234,0.2275,composite 0.35,0,0.35195531,26e6bcfe15ccfc8f
+2026-09-30,723,6,RGA,Financial,low,0.2234,0.2275,composite 0.35,0,0.35195531,26e6bcfe15ccfc8f
+2026-09-30,724,6,NI,Utilities,low,0.2234,0.2275,composite 0.35,0,0.35083799,26e6bcfe15ccfc8f
+2026-09-30,725,6,AM,Energy,low,0.2234,0.2275,composite 0.35,0,0.34972067,26e6bcfe15ccfc8f
+2026-09-30,726,6,STAG,Real Estate,low,0.2234,0.2275,composite 0.34,0,0.34078212,26e6bcfe15ccfc8f
+2026-09-30,727,6,JNJ,Healthcare,low,0.2234,0.2275,composite 0.34,0,0.34022346,26e6bcfe15ccfc8f
+2026-09-30,728,6,BF-B,Consumer Defensive,low,0.2234,0.2275,composite 0.34,0,0.3396648,26e6bcfe15ccfc8f
+2026-09-30,729,6,NJR,Utilities,low,0.2234,0.2275,composite 0.34,0,0.33743017,26e6bcfe15ccfc8f
+2026-09-30,730,6,MKC,Consumer Defensive,low,0.2234,0.2275,composite 0.34,0,0.33575419,26e6bcfe15ccfc8f
+2026-09-30,731,6,UHS,Healthcare,low,0.2234,0.2275,composite 0.33,0,0.33463687,26e6bcfe15ccfc8f
+2026-09-30,732,6,OPCH,Healthcare,low,0.2234,0.2275,composite 0.33,0,0.33407821,26e6bcfe15ccfc8f
+2026-09-30,733,6,VLTO,Industrials,low,0.2234,0.221,composite 0.33,0,0.33184358,26e6bcfe15ccfc8f
+2026-09-30,734,6,CTVA,Basic Materials,low,0.2234,0.221,composite 0.33,0,0.32960894,26e6bcfe15ccfc8f
+2026-09-30,735,6,MO,Consumer Defensive,low,0.2234,0.221,composite 0.32,0,0.32346369,26e6bcfe15ccfc8f
+2026-09-30,736,6,WM,Industrials,low,0.2234,0.221,composite 0.32,0,0.32346369,26e6bcfe15ccfc8f
+2026-09-30,737,6,SBAC,Real Estate,low,0.2234,0.221,composite 0.32,0,0.32290503,26e6bcfe15ccfc8f
+2026-09-30,738,6,DTE,Utilities,low,0.2234,0.221,composite 0.32,0,0.32178771,26e6bcfe15ccfc8f
+2026-09-30,739,6,LIN,Basic Materials,low,0.2234,0.221,composite 0.32,0,0.32178771,26e6bcfe15ccfc8f
+2026-09-30,740,6,CVX,Energy,low,0.2234,0.221,composite 0.32,0,0.32122905,26e6bcfe15ccfc8f
+2026-09-30,741,6,RNR,Financial,low,0.2234,0.221,composite 0.32,0,0.32122905,26e6bcfe15ccfc8f
+2026-09-30,742,6,KMB,Consumer Defensive,low,0.2234,0.221,composite 0.32,0,0.32011173,26e6bcfe15ccfc8f
+2026-09-30,743,6,OTIS,Industrials,low,0.2234,0.221,composite 0.32,0,0.31899441,26e6bcfe15ccfc8f
+2026-09-30,744,6,EXC,Utilities,low,0.2234,0.221,composite 0.31,0,0.31173184,26e6bcfe15ccfc8f
+2026-09-30,745,6,BJ,Consumer Defensive,low,0.2234,0.221,composite 0.31,0,0.31117318,26e6bcfe15ccfc8f
+2026-09-30,746,6,FRT,Real Estate,low,0.2234,0.221,composite 0.31,0,0.31005587,26e6bcfe15ccfc8f
+2026-09-30,747,6,PM,Consumer Defensive,low,0.2234,0.221,composite 0.31,0,0.31005587,26e6bcfe15ccfc8f
+2026-09-30,748,6,FE,Utilities,low,0.2234,0.221,composite 0.30,0,0.30335196,26e6bcfe15ccfc8f
+2026-09-30,749,6,XOM,Energy,low,0.2234,0.221,composite 0.30,0,0.3027933,26e6bcfe15ccfc8f
+2026-09-30,750,6,OGE,Utilities,low,0.2234,0.221,composite 0.29,0,0.29497207,26e6bcfe15ccfc8f
+2026-09-30,751,6,XEL,Utilities,low,0.2234,0.221,composite 0.28,0,0.27932961,26e6bcfe15ccfc8f
+2026-09-30,752,6,AEE,Utilities,low,0.2234,0.221,composite 0.28,0,0.27653631,26e6bcfe15ccfc8f
+2026-09-30,753,6,ES,Utilities,low,0.2234,0.221,composite 0.27,0,0.27486034,26e6bcfe15ccfc8f
+2026-09-30,754,6,SO,Utilities,low,0.2234,0.221,composite 0.27,0,0.27486034,26e6bcfe15ccfc8f
+2026-09-30,755,6,WEC,Utilities,low,0.2234,0.221,composite 0.27,0,0.27318436,26e6bcfe15ccfc8f
+2026-09-30,756,6,PPL,Utilities,low,0.2234,0.221,composite 0.27,0,0.2726257,26e6bcfe15ccfc8f
+2026-09-30,757,6,MCK,Healthcare,low,0.2234,0.221,composite 0.27,0,0.27094972,26e6bcfe15ccfc8f
+2026-09-30,758,6,ENSG,Healthcare,low,0.2234,0.221,composite 0.27,0,0.2698324,26e6bcfe15ccfc8f
+2026-09-30,759,6,COR,Healthcare,low,0.2234,0.221,composite 0.27,0,0.26703911,26e6bcfe15ccfc8f
+2026-09-30,760,6,MCD,Consumer Cyclical,low,0.2234,0.221,composite 0.27,0,0.26648045,26e6bcfe15ccfc8f
+2026-09-30,761,6,ATO,Utilities,low,0.2234,0.221,composite 0.27,0,0.26536313,26e6bcfe15ccfc8f
+2026-09-30,762,6,EXE,Energy,low,0.2231,0.221,composite 0.26,0,0.26256983,26e6bcfe15ccfc8f
+2026-09-30,763,6,VICI,Real Estate,low,0.223,0.221,composite 0.26,0,0.25921788,26e6bcfe15ccfc8f
+2026-09-30,764,6,ED,Utilities,low,0.223,0.2208,composite 0.26,0,0.25865922,26e6bcfe15ccfc8f
+2026-09-30,765,6,LLY,Healthcare,low,0.223,0.2208,composite 0.26,0,0.25865922,26e6bcfe15ccfc8f
+2026-09-30,766,6,KMI,Energy,low,0.223,0.22,composite 0.26,0,0.25810056,26e6bcfe15ccfc8f
+2026-09-30,767,6,MRSH,Financial,low,0.223,0.219,composite 0.25,0,0.25251397,26e6bcfe15ccfc8f
+2026-09-30,768,6,ACGL,Financial,low,0.2228,0.219,composite 0.25,0,0.24972067,26e6bcfe15ccfc8f
+2026-09-30,769,6,KVUE,Consumer Defensive,low,0.2223,0.219,composite 0.25,0,0.24860335,26e6bcfe15ccfc8f
+2026-09-30,770,6,MZTI,Consumer Defensive,low,0.2221,0.2173,composite 0.24,0,0.24469274,26e6bcfe15ccfc8f
+2026-09-30,771,6,REG,Real Estate,low,0.2221,0.2173,composite 0.24,0,0.24357542,26e6bcfe15ccfc8f
+2026-09-30,772,6,HCA,Healthcare,low,0.2221,0.2173,composite 0.24,0,0.2424581,26e6bcfe15ccfc8f
+2026-09-30,773,6,CMS,Utilities,low,0.2221,0.2173,composite 0.24,0,0.24022346,26e6bcfe15ccfc8f
+2026-09-30,774,6,CUBE,Real Estate,low,0.2221,0.2173,composite 0.24,0,0.24022346,26e6bcfe15ccfc8f
+2026-09-30,775,6,HR,Real Estate,low,0.2221,0.2173,composite 0.24,0,0.23910615,26e6bcfe15ccfc8f
+2026-09-30,776,6,NWE,Utilities,low,0.2221,0.2173,composite 0.24,0,0.23910615,26e6bcfe15ccfc8f
+2026-09-30,777,6,PEG,Utilities,low,0.2221,0.2173,composite 0.24,0,0.23854749,26e6bcfe15ccfc8f
+2026-09-30,778,6,L,Financial,low,0.2221,0.2173,composite 0.23,0,0.23463687,26e6bcfe15ccfc8f
+2026-09-30,779,6,NEE,Utilities,low,0.2221,0.2173,composite 0.23,0,0.23463687,26e6bcfe15ccfc8f
+2026-09-30,780,6,NSC,Industrials,low,0.2221,0.2164,composite 0.23,0,0.23407821,26e6bcfe15ccfc8f
+2026-09-30,781,6,SYY,Consumer Defensive,low,0.2221,0.2133,composite 0.23,0,0.23351955,26e6bcfe15ccfc8f
+2026-09-30,782,6,DUK,Utilities,low,0.2221,0.2128,composite 0.23,0,0.23240223,26e6bcfe15ccfc8f
+2026-09-30,783,6,CHE,Healthcare,low,0.2221,0.2128,composite 0.23,0,0.22905028,26e6bcfe15ccfc8f
+2026-09-30,784,6,MDT,Healthcare,low,0.2221,0.2128,composite 0.23,0,0.22905028,26e6bcfe15ccfc8f
+2026-09-30,785,6,APD,Basic Materials,low,0.2221,0.2128,composite 0.23,0,0.22625698,26e6bcfe15ccfc8f
+2026-09-30,786,6,EVRG,Utilities,low,0.2221,0.2128,composite 0.23,0,0.22569832,26e6bcfe15ccfc8f
+2026-09-30,787,6,SAM,Consumer Defensive,low,0.2221,0.2128,composite 0.22,0,0.21955307,26e6bcfe15ccfc8f
+2026-09-30,788,6,UGI,Utilities,low,0.2221,0.2128,composite 0.22,0,0.21731844,26e6bcfe15ccfc8f
+2026-09-30,789,6,EHC,Healthcare,low,0.2221,0.2128,composite 0.22,0,0.21675978,26e6bcfe15ccfc8f
+2026-09-30,790,6,SBRA,Real Estate,low,0.2221,0.2128,composite 0.22,0,0.21675978,26e6bcfe15ccfc8f
+2026-09-30,791,6,NFG,Energy,low,0.2221,0.2128,composite 0.22,0,0.21620112,26e6bcfe15ccfc8f
+2026-09-30,792,6,CLH,Industrials,low,0.2221,0.2128,composite 0.22,0,0.21564246,26e6bcfe15ccfc8f
+2026-09-30,793,6,COST,Consumer Defensive,low,0.2221,0.2128,composite 0.21,0,0.21396648,26e6bcfe15ccfc8f
+2026-09-30,794,6,GILD,Healthcare,low,0.2221,0.2128,composite 0.21,0,0.21284916,26e6bcfe15ccfc8f
+2026-09-30,795,6,PFE,Healthcare,low,0.2221,0.2128,composite 0.21,0,0.21173184,26e6bcfe15ccfc8f
+2026-09-30,796,6,EG,Financial,low,0.2221,0.2128,composite 0.21,0,0.21117318,26e6bcfe15ccfc8f
+2026-09-30,797,6,MA,Financial,low,0.2221,0.2128,composite 0.21,0,0.20893855,26e6bcfe15ccfc8f
+2026-09-30,798,6,CNX,Energy,low,0.2221,0.2128,composite 0.21,0,0.20837989,26e6bcfe15ccfc8f
+2026-09-30,799,6,CI,Healthcare,low,0.2221,0.2128,composite 0.21,0,0.20782123,26e6bcfe15ccfc8f
+2026-09-30,800,6,CBSH,Financial,low,0.2221,0.2128,composite 0.21,0,0.20558659,26e6bcfe15ccfc8f
+2026-09-30,801,6,UDR,Real Estate,low,0.2221,0.2128,composite 0.21,0,0.20558659,26e6bcfe15ccfc8f
+2026-09-30,802,6,KR,Consumer Defensive,low,0.2221,0.2128,composite 0.21,0,0.20502793,26e6bcfe15ccfc8f
+2026-09-30,803,6,SWX,Utilities,low,0.2221,0.2128,composite 0.19,0,0.19385475,26e6bcfe15ccfc8f
+2026-09-30,804,6,BKH,Utilities,low,0.2221,0.2128,composite 0.19,0,0.19329609,26e6bcfe15ccfc8f
+2026-09-30,805,6,AFG,Financial,low,0.2221,0.2128,composite 0.19,0,0.19162011,26e6bcfe15ccfc8f
+2026-09-30,806,6,ABBV,Healthcare,low,0.2221,0.2128,composite 0.19,0,0.18547486,26e6bcfe15ccfc8f
+2026-09-30,807,6,AMT,Real Estate,low,0.2221,0.2128,composite 0.18,0,0.17765363,26e6bcfe15ccfc8f
+2026-09-30,808,6,AZO,Consumer Cyclical,low,0.2221,0.2128,composite 0.18,0,0.17765363,26e6bcfe15ccfc8f
+2026-09-30,809,6,V,Financial,low,0.2221,0.2128,composite 0.18,0,0.17709497,26e6bcfe15ccfc8f
+2026-09-30,810,6,EGP,Real Estate,low,0.2221,0.2128,composite 0.18,0,0.17541899,26e6bcfe15ccfc8f
+2026-09-30,811,6,BRK-B,Financial,low,0.2221,0.2128,composite 0.17,0,0.17374302,26e6bcfe15ccfc8f
+2026-09-30,812,6,EPR,Real Estate,low,0.2221,0.2107,composite 0.17,0,0.16592179,26e6bcfe15ccfc8f
+2026-09-30,813,6,AIG,Financial,low,0.2221,0.2107,composite 0.16,0,0.16368715,26e6bcfe15ccfc8f
+2026-09-30,814,6,OHI,Real Estate,low,0.2221,0.2107,composite 0.16,0,0.16201117,26e6bcfe15ccfc8f
+2026-09-30,815,6,MDLZ,Consumer Defensive,low,0.2221,0.2107,composite 0.16,0,0.16145251,26e6bcfe15ccfc8f
+2026-09-30,816,6,ESS,Real Estate,low,0.2221,0.2107,composite 0.16,0,0.1603352,26e6bcfe15ccfc8f
+2026-09-30,817,6,PFG,Financial,mid,0.2205,0.2297,composite 0.24,0,0.24301676,26e6bcfe15ccfc8f
+2026-09-30,818,6,ECL,Basic Materials,mid,0.2205,0.2297,composite 0.24,0,0.24078212,26e6bcfe15ccfc8f
+2026-09-30,819,6,NXST,Communication Services,mid,0.2196,0.2297,composite 0.24,0,0.2396648,26e6bcfe15ccfc8f
+2026-09-30,820,6,KBR,Industrials,mid,0.2176,0.2297,composite 0.24,0,0.23798883,26e6bcfe15ccfc8f
+2026-09-30,821,6,TRU,Financial,mid,0.2176,0.2297,composite 0.24,0,0.23798883,26e6bcfe15ccfc8f
+2026-09-30,822,6,DCI,Industrials,mid,0.2176,0.2297,composite 0.24,0,0.23687151,26e6bcfe15ccfc8f
+2026-09-30,823,6,MCO,Financial,mid,0.2176,0.2297,composite 0.24,0,0.23687151,26e6bcfe15ccfc8f
+2026-09-30,824,6,EXPO,Industrials,mid,0.2176,0.2297,composite 0.23,0,0.23407821,26e6bcfe15ccfc8f
+2026-09-30,825,6,EFX,Industrials,mid,0.2176,0.2297,composite 0.23,0,0.23296089,26e6bcfe15ccfc8f
+2026-09-30,826,6,SKYD,Communication Services,mid,0.2176,0.2297,composite 0.23,0,0.23128492,26e6bcfe15ccfc8f
+2026-09-30,827,6,KBH,Consumer Cyclical,mid,0.2176,0.2297,composite 0.23,0,0.22849162,26e6bcfe15ccfc8f
+2026-09-30,828,6,EBAY,Consumer Cyclical,mid,0.2176,0.2297,composite 0.23,0,0.2273743,26e6bcfe15ccfc8f
+2026-09-30,829,6,UFPI,Basic Materials,mid,0.2176,0.2297,composite 0.22,0,0.22122905,26e6bcfe15ccfc8f
+2026-09-30,830,6,TTWO,Communication Services,mid,0.2176,0.2297,composite 0.22,0,0.21955307,26e6bcfe15ccfc8f
+2026-09-30,831,6,HOMB,Financial,mid,0.2176,0.2297,composite 0.22,0,0.21731844,26e6bcfe15ccfc8f
+2026-09-30,832,6,NLY,Real Estate,mid,0.2157,0.2297,composite 0.21,0,0.21284916,26e6bcfe15ccfc8f
+2026-09-30,833,6,ZTS,Healthcare,mid,0.2157,0.2297,composite 0.21,0,0.21117318,26e6bcfe15ccfc8f
+2026-09-30,834,6,PB,Financial,mid,0.2157,0.2297,composite 0.21,0,0.21061453,26e6bcfe15ccfc8f
+2026-09-30,835,6,MLM,Basic Materials,mid,0.2157,0.2297,composite 0.21,0,0.20726257,26e6bcfe15ccfc8f
+2026-09-30,836,6,FFIN,Financial,mid,0.2152,0.2297,composite 0.21,0,0.20670391,26e6bcfe15ccfc8f
+2026-09-30,837,6,CPT,Real Estate,low,0.2144,0.2046,composite 0.15,0,0.14860335,26e6bcfe15ccfc8f
+2026-09-30,838,6,SUI,Real Estate,low,0.2144,0.2046,composite 0.14,0,0.14357542,26e6bcfe15ccfc8f
+2026-09-30,839,6,EQT,Energy,low,0.2144,0.2046,composite 0.14,0,0.14022346,26e6bcfe15ccfc8f
+2026-09-30,840,6,PG,Consumer Defensive,low,0.2144,0.2046,composite 0.14,0,0.13798883,26e6bcfe15ccfc8f
+2026-09-30,841,6,CHD,Consumer Defensive,low,0.2144,0.2035,composite 0.13,0,0.13407821,26e6bcfe15ccfc8f
+2026-09-30,842,6,CL,Consumer Defensive,low,0.2144,0.2024,composite 0.13,0,0.13351955,26e6bcfe15ccfc8f
+2026-09-30,843,6,RSG,Industrials,low,0.2144,0.2024,composite 0.13,0,0.1301676,26e6bcfe15ccfc8f
+2026-09-30,844,6,OGS,Utilities,low,0.2144,0.2024,composite 0.12,0,0.12178771,26e6bcfe15ccfc8f
+2026-09-30,845,6,WBD,Communication Services,mid,0.214,0.2297,composite 0.21,0,0.20558659,26e6bcfe15ccfc8f
+2026-09-30,846,6,FISV,Technology,mid,0.2138,0.2297,composite 0.20,0,0.20111732,26e6bcfe15ccfc8f
+2026-09-30,847,6,LVS,Consumer Cyclical,mid,0.2138,0.2297,composite 0.20,0,0.19944134,26e6bcfe15ccfc8f
+2026-09-30,848,6,BSY,Technology,mid,0.2138,0.2297,composite 0.20,0,0.19832402,26e6bcfe15ccfc8f
+2026-09-30,849,6,NDAQ,Financial,mid,0.2138,0.2297,composite 0.20,0,0.19608939,26e6bcfe15ccfc8f
+2026-09-30,850,6,STE,Healthcare,mid,0.2138,0.2297,composite 0.19,0,0.19217877,26e6bcfe15ccfc8f
+2026-09-30,851,6,CBRE,Real Estate,mid,0.2138,0.2297,composite 0.19,0,0.18826816,26e6bcfe15ccfc8f
+2026-09-30,852,6,GATX,Industrials,mid,0.2138,0.2297,composite 0.19,0,0.18547486,26e6bcfe15ccfc8f
+2026-09-30,853,6,NKE,Consumer Cyclical,mid,0.2138,0.2297,composite 0.18,0,0.18044693,26e6bcfe15ccfc8f
+2026-09-30,854,6,AOS,Industrials,mid,0.2138,0.2297,composite 0.18,0,0.17988827,26e6bcfe15ccfc8f
+2026-09-30,855,6,ITW,Industrials,mid,0.2138,0.2297,composite 0.18,0,0.17597765,26e6bcfe15ccfc8f
+2026-09-30,856,6,AXP,Financial,mid,0.2138,0.2297,composite 0.17,0,0.17318436,26e6bcfe15ccfc8f
+2026-09-30,857,6,FICO,Technology,mid,0.2138,0.2297,composite 0.17,0,0.17150838,26e6bcfe15ccfc8f
+2026-09-30,858,6,FR,Real Estate,mid,0.2112,0.2297,composite 0.17,0,0.16648045,26e6bcfe15ccfc8f
+2026-09-30,859,6,WYNN,Consumer Cyclical,mid,0.2112,0.2297,composite 0.16,0,0.1603352,26e6bcfe15ccfc8f
+2026-09-30,860,6,BYD,Consumer Cyclical,mid,0.2112,0.2297,composite 0.16,0,0.15977654,26e6bcfe15ccfc8f
+2026-09-30,861,6,JPM,Financial,mid,0.2112,0.2297,composite 0.15,0,0.15363128,26e6bcfe15ccfc8f
+2026-09-30,862,6,EXR,Real Estate,mid,0.2112,0.2297,composite 0.15,0,0.15307263,26e6bcfe15ccfc8f
+2026-09-30,863,6,RJF,Financial,mid,0.2112,0.2297,composite 0.15,0,0.15251397,26e6bcfe15ccfc8f
+2026-09-30,864,6,IBOC,Financial,mid,0.2112,0.2297,composite 0.14,0,0.14301676,26e6bcfe15ccfc8f
+2026-09-30,865,6,VMC,Basic Materials,mid,0.2112,0.2297,composite 0.14,0,0.13910615,26e6bcfe15ccfc8f
+2026-09-30,866,6,ATR,Healthcare,mid,0.2112,0.2297,composite 0.14,0,0.13687151,26e6bcfe15ccfc8f
+2026-09-30,867,6,TDG,Industrials,mid,0.2112,0.2297,composite 0.13,0,0.13072626,26e6bcfe15ccfc8f
+2026-09-30,868,6,LOW,Consumer Cyclical,mid,0.2112,0.2297,composite 0.12,0,0.12458101,26e6bcfe15ccfc8f
+2026-09-30,869,6,XYL,Industrials,mid,0.2112,0.2297,composite 0.12,0,0.11564246,26e6bcfe15ccfc8f
+2026-09-30,870,6,LEN,Consumer Cyclical,mid,0.2112,0.2282,composite 0.11,0,0.10502793,26e6bcfe15ccfc8f
+2026-09-30,871,6,HD,Consumer Cyclical,mid,0.2112,0.2273,composite 0.10,0,0.1027933,26e6bcfe15ccfc8f
+2026-09-30,872,6,GGG,Industrials,mid,0.2112,0.2267,composite 0.09,0,0.09162011,26e6bcfe15ccfc8f
+2026-09-30,873,6,MAT,Consumer Cyclical,mid,0.2112,0.2238,composite 0.08,0,0.07653631,26e6bcfe15ccfc8f
+2026-09-30,874,6,ADC,Real Estate,low,0.2103,0.201,composite 0.12,0,0.11955307,26e6bcfe15ccfc8f
+2026-09-30,875,6,MAA,Real Estate,low,0.2103,0.2002,composite 0.12,0,0.11899441,26e6bcfe15ccfc8f
+2026-09-30,876,6,LOPE,Consumer Defensive,low,0.2103,0.2002,composite 0.12,0,0.11843575,26e6bcfe15ccfc8f
+2026-09-30,877,6,ELS,Real Estate,low,0.2103,0.2002,composite 0.11,0,0.11284916,26e6bcfe15ccfc8f
+2026-09-30,878,6,BRX,Real Estate,low,0.2103,0.2002,composite 0.11,0,0.11061453,26e6bcfe15ccfc8f
+2026-09-30,879,6,SR,Utilities,low,0.2103,0.2002,composite 0.11,0,0.11061453,26e6bcfe15ccfc8f
+2026-09-30,880,6,KIM,Real Estate,low,0.2103,0.2002,composite 0.11,0,0.10614525,26e6bcfe15ccfc8f
+2026-09-30,881,6,O,Real Estate,low,0.2103,0.2002,composite 0.11,0,0.10558659,26e6bcfe15ccfc8f
+2026-09-30,882,6,PEP,Consumer Defensive,low,0.2103,0.2002,composite 0.09,0,0.08715084,26e6bcfe15ccfc8f
+2026-09-30,883,6,PEN,Healthcare,low,0.2103,0.2002,composite 0.08,0,0.08044693,26e6bcfe15ccfc8f
+2026-09-30,884,6,WPC,Real Estate,low,0.2103,0.2002,composite 0.08,0,0.07877095,26e6bcfe15ccfc8f
+2026-09-30,885,6,WRB,Financial,low,0.2103,0.2002,composite 0.08,0,0.07765363,26e6bcfe15ccfc8f
+2026-09-30,886,6,INGR,Consumer Defensive,low,0.2103,0.2002,composite 0.08,0,0.07709497,26e6bcfe15ccfc8f
+2026-09-30,887,6,AMH,Real Estate,low,0.2103,0.2002,composite 0.07,0,0.07486034,26e6bcfe15ccfc8f
+2026-09-30,888,6,INVH,Real Estate,low,0.2103,0.2002,composite 0.06,0,0.05530726,26e6bcfe15ccfc8f
+2026-09-30,889,6,AWK,Utilities,low,0.2103,0.1982,composite 0.03,0,0.03128492,26e6bcfe15ccfc8f
+2026-09-30,890,6,TXNM,Utilities,low,0.2103,0.1982,composite 0.01,0,0.01173184,26e6bcfe15ccfc8f
+2026-09-30,891,6,WTRG,Utilities,low,0.2103,0.1982,composite 0.01,0,0.01005587,26e6bcfe15ccfc8f
+2026-09-30,892,6,GHC,Industrials,mid,0.2094,0.219,composite 0.07,0,0.0726257,26e6bcfe15ccfc8f
+2026-09-30,893,6,NVR,Consumer Cyclical,mid,0.1995,0.1963,composite 0.05,0,0.05418994,26e6bcfe15ccfc8f
+2026-09-30,894,6,TKO,Communication Services,mid,0.1977,0.1921,composite 0.05,0,0.05083799,26e6bcfe15ccfc8f
+2026-09-30,895,6,STWD,Real Estate,mid,0.196,0.192,composite 0.02,0,0.02122905,26e6bcfe15ccfc8f
