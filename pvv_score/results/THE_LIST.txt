@@ -1,7 +1,7 @@
 THE LIST, 2026-10-06 close. VIX 15.0  VXN 21.1  IWM 20d rv 11.8  MOVE 105 (move_mid). Rate-sensitive sectors (utilities, REITs, staples, financials) measured on move_mid sessions; all other sectors on every session.
  P42 / P63 = probability (realised out of sample, 2015 onward, COVID Feb-Jun 2020 excluded) that the next 42 / 63 sessions are a top-quartile
 smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.
-basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).
+model frozen 2026-10-07 03:12 UTC, fitted through 2026-10-06, 719 confirmed signatures, id 10abb74c5ba4b955.
 
 Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.
 
@@ -278,8 +278,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 270   5  PYPL   Financial              high  29.1% 29.1% composite 0.58            0  
 271   5  BAX    Healthcare             high  29.1% 29.1% composite 0.57            0  
 272   5  ELAN   Healthcare             high  29.1% 29.1% composite 0.57            0  
-273   5  WSO    Industrials            high  29.1% 29.1% composite 0.57            0  
-274   5  DASH   Consumer Cyclical      high  29.1% 29.1% composite 0.57            0  
+273   5  DASH   Consumer Cyclical      high  29.1% 29.1% composite 0.57            0  
+274   5  WSO    Industrials            high  29.1% 29.1% composite 0.57            0  
 275   5  OSK    Industrials            high  29.1% 29.1% composite 0.57            0  
 276   5  LULU   Consumer Cyclical      high  29.0% 28.9% composite 0.56            0  
 277   5  AMG    Financial              high  29.0% 28.9% composite 0.56            0  
@@ -312,13 +312,13 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 304   5  WSM    Consumer Cyclical      high  28.9% 28.9% composite 0.48            0  
 305   5  IP     Consumer Cyclical      high  28.9% 28.9% composite 0.48            0  
 306   5  SGI    Consumer Cyclical      high  28.9% 28.9% composite 0.47            0  
-307   5  RL     Consumer Cyclical      high  28.9% 28.9% composite 0.47            0  
-308   5  CRUS   Technology             high  28.9% 28.9% composite 0.47            0  
+307   5  CRUS   Technology             high  28.9% 28.9% composite 0.47            0  
+308   5  RL     Consumer Cyclical      high  28.9% 28.9% composite 0.47            0  
 309   5  PVH    Consumer Cyclical      high  28.8% 28.9% composite 0.47            0  
 310   5  CRBG   Financial              high  28.8% 28.5% composite 0.46            0  
-311   5  EQH    Financial              high  28.8% 28.5% composite 0.46            0  
+311   5  CRH    Basic Materials        high  28.8% 28.5% composite 0.46            0  
 312   5  DD     Basic Materials        high  28.8% 28.5% composite 0.46            0  
-313   5  CRH    Basic Materials        high  28.8% 28.5% composite 0.46            0  
+313   5  EQH    Financial              high  28.8% 28.5% composite 0.46            0  
 314   5  BC     Consumer Cyclical      high  28.8% 28.5% composite 0.46            0  
 315   5  TREX   Industrials            high  28.8% 28.5% composite 0.45            0  
 316   5  GAP    Consumer Cyclical      high  28.8% 28.5% composite 0.45            0  
@@ -326,8 +326,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 318   5  AXTA   Basic Materials        high  28.8% 28.5% composite 0.44            0  
 319   5  ARES   Financial              high  28.8% 28.5% composite 0.44            0  
 320   5  SARO   Industrials            high  28.7% 28.5% composite 0.43            0  
-321   5  WMS    Industrials            high  28.7% 28.5% composite 0.43            0  
-322   5  RCL    Consumer Cyclical      high  28.7% 28.5% composite 0.43            0  
+321   5  RCL    Consumer Cyclical      high  28.7% 28.5% composite 0.43            0  
+322   5  WMS    Industrials            high  28.7% 28.5% composite 0.43            0  
 323   5  BEN    Financial              high  28.7% 28.5% composite 0.43            0  
 324   5  IR     Industrials            high  28.7% 28.5% composite 0.43            0  
 325   5  LPX    Industrials            high  28.6% 28.5% composite 0.43            0  
@@ -340,8 +340,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 332   5  R      Industrials            high  28.1% 27.4% composite 0.39            0  
 333   5  TRMB   Technology             high  28.1% 27.4% composite 0.38            0  
 334   5  URI    Industrials            high  28.1% 27.4% composite 0.38            0  
-335   5  VC     Consumer Cyclical      high  28.1% 27.4% composite 0.38            0  
-336   5  APO    Financial              high  28.1% 27.4% composite 0.38            0  
+335   5  APO    Financial              high  28.1% 27.4% composite 0.38            0  
+336   5  VC     Consumer Cyclical      high  28.1% 27.4% composite 0.38            0  
 337   5  EXP    Basic Materials        high  28.1% 27.4% composite 0.38            0  
 338   5  TOST   Technology             high  28.1% 27.4% composite 0.37            0  
 339   5  CFG    Financial              high  27.5% 26.3% composite 0.36            0  
@@ -385,8 +385,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 377   6  DXCM   Healthcare             mid   24.2% 24.6% composite 0.70            0  
 378   6  CART   Consumer Cyclical      mid   24.2% 24.6% composite 0.70            0  
 379   6  WAT    Healthcare             mid   24.2% 24.5% composite 0.69            0  
-380   6  SON    Consumer Cyclical      mid   24.2% 24.5% composite 0.69            0  
-381   6  CYTK   Healthcare             mid   24.2% 24.5% composite 0.69            0  
+380   6  CYTK   Healthcare             mid   24.2% 24.5% composite 0.69            0  
+381   6  SON    Consumer Cyclical      mid   24.2% 24.5% composite 0.69            0  
 382   6  CPAY   Technology             mid   24.2% 24.5% composite 0.68            0  
 383   6  CBT    Basic Materials        mid   24.2% 24.5% composite 0.68            0  
 384   6  FTV    Technology             mid   24.2% 24.5% composite 0.68            0  
@@ -409,8 +409,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 401   6  MUSA   Consumer Cyclical      low   23.8% 23.9% composite 0.63            0  
 402   6  YUM    Consumer Cyclical      low   23.8% 23.9% composite 0.63            0  
 403   6  MTG    Financial              low   23.8% 23.9% composite 0.63            0  
-404   6  POR    Utilities              low   23.8% 23.9% composite 0.62            0  
-405   6  DRI    Consumer Cyclical      low   23.8% 23.9% composite 0.62            0  
+404   6  DRI    Consumer Cyclical      low   23.8% 23.9% composite 0.62            0  
+405   6  POR    Utilities              low   23.8% 23.9% composite 0.62            0  
 406   6  FOX    Communication Services low   23.8% 23.9% composite 0.62            0  
 407   6  PPC    Consumer Defensive     low   23.8% 23.9% composite 0.62            0  
 408   6  GIS    Consumer Defensive     low   23.8% 23.9% composite 0.61            0  
@@ -448,8 +448,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 440   6  TYL    Technology             low   23.8% 23.7% composite 0.51            0  
 441   6  TXRH   Consumer Cyclical      low   23.8% 23.7% composite 0.51            0  
 442   6  PNW    Utilities              low   23.8% 23.7% composite 0.50            0  
-443   6  MMS    Industrials            low   23.8% 23.7% composite 0.50            0  
-444   6  HAE    Healthcare             low   23.8% 23.7% composite 0.50            0  
+443   6  HAE    Healthcare             low   23.8% 23.7% composite 0.50            0  
+444   6  MMS    Industrials            low   23.8% 23.7% composite 0.50            0  
 445   6  APA    Energy                 low   23.8% 23.7% composite 0.49            0  
 446   6  BSX    Healthcare             low   23.8% 23.7% composite 0.49            0  
 447   6  TRV    Financial              low   23.8% 23.7% composite 0.49            0  
@@ -467,8 +467,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 459   6  DGX    Healthcare             low   23.8% 23.7% composite 0.47            0  
 460   6  PR     Energy                 low   23.8% 23.7% composite 0.47            0  
 461   6  OXY    Energy                 low   23.8% 23.7% composite 0.47            0  
-462   6  NWSA   Communication Services low   23.8% 23.7% composite 0.46            0  
-463   6  BMY    Healthcare             low   23.8% 23.7% composite 0.46            0  
+462   6  BMY    Healthcare             low   23.8% 23.7% composite 0.46            0  
+463   6  NWSA   Communication Services low   23.8% 23.7% composite 0.46            0  
 464   6  FOXA   Communication Services low   23.8% 23.7% composite 0.46            0  
 465   6  FANG   Energy                 low   23.8% 23.7% composite 0.46            0  
 466   6  ROST   Consumer Cyclical      mid   23.7% 24.5% composite 0.65            0  
@@ -489,8 +489,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 481   6  UPS    Industrials            mid   23.6% 24.3% composite 0.61            0  
 482   6  MAR    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
 483   6  BURL   Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
-484   6  TNL    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
-485   6  CAR    Industrials            mid   23.6% 24.3% composite 0.60            0  
+484   6  CAR    Industrials            mid   23.6% 24.3% composite 0.60            0  
+485   6  TNL    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
 486   6  GEF    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
 487   6  SOLV   Healthcare             mid   23.6% 24.3% composite 0.60            0  
 488   6  H      Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
@@ -505,10 +505,10 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 497   6  AMCR   Consumer Cyclical      mid   23.6% 24.3% composite 0.58            0  
 498   6  NTNX   Technology             mid   23.6% 24.3% composite 0.58            0  
 499   6  MEDP   Healthcare             mid   23.6% 24.3% composite 0.56            0  
-500   6  TTC    Industrials            mid   23.6% 24.3% composite 0.56            0  
-501   6  WAB    Industrials            mid   23.6% 24.3% composite 0.56            0  
+500   6  FLG    Financial              mid   23.6% 24.3% composite 0.56            0  
+501   6  TTC    Industrials            mid   23.6% 24.3% composite 0.56            0  
 502   6  VRTX   Healthcare             mid   23.6% 24.3% composite 0.56            0  
-503   6  FLG    Financial              mid   23.6% 24.3% composite 0.56            0  
+503   6  WAB    Industrials            mid   23.6% 24.3% composite 0.56            0  
 504   6  DHR    Healthcare             mid   23.6% 24.3% composite 0.55            0  
 505   6  LYV    Communication Services mid   23.6% 24.3% composite 0.55            0  
 506   6  A      Healthcare             mid   23.6% 24.3% composite 0.55            0  
@@ -524,8 +524,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 516   6  DVN    Energy                 low   23.6% 23.7% composite 0.45            0  
 517   6  OKE    Energy                 low   23.6% 23.7% composite 0.45            0  
 518   6  SJM    Consumer Defensive     low   23.6% 23.7% composite 0.45            0  
-519   6  LNT    Utilities              low   23.6% 23.7% composite 0.45            0  
-520   6  INTU   Technology             low   23.6% 23.7% composite 0.45            0  
+519   6  INTU   Technology             low   23.6% 23.7% composite 0.45            0  
+520   6  LNT    Utilities              low   23.6% 23.7% composite 0.45            0  
 521   6  ETR    Utilities              low   23.6% 23.7% composite 0.45            0  
 522   6  SPGI   Financial              low   23.6% 23.7% composite 0.44            0  
 523   6  DTM    Energy                 low   23.6% 23.7% composite 0.44            0  
@@ -534,8 +534,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 526   6  KDP    Consumer Defensive     low   23.6% 23.7% composite 0.44            0  
 527   6  RRC    Energy                 low   23.6% 23.7% composite 0.44            0  
 528   6  BDX    Healthcare             low   23.5% 23.6% composite 0.44            0  
-529   6  NI     Utilities              low   23.5% 23.6% composite 0.44            0  
-530   6  EOG    Energy                 low   23.5% 23.6% composite 0.44            0  
+529   6  EOG    Energy                 low   23.5% 23.6% composite 0.44            0  
+530   6  NI     Utilities              low   23.5% 23.6% composite 0.44            0  
 531   6  PCTY   Technology             low   23.5% 23.6% composite 0.43            0  
 532   6  UTHR   Healthcare             low   23.5% 23.6% composite 0.43            0  
 533   6  ZBH    Healthcare             low   23.5% 23.6% composite 0.43            0  
@@ -550,8 +550,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 542   6  FITB   Financial              mid   23.2% 23.7% composite 0.54            0  
 543   6  NBIX   Healthcare             mid   23.2% 23.7% composite 0.54            0  
 544   6  HOG    Consumer Cyclical      mid   23.2% 23.7% composite 0.54            0  
-545   6  TTEK   Industrials            mid   23.2% 23.7% composite 0.53            0  
-546   6  IBM    Technology             mid   23.2% 23.7% composite 0.53            0  
+545   6  IBM    Technology             mid   23.2% 23.7% composite 0.53            0  
+546   6  TTEK   Industrials            mid   23.2% 23.7% composite 0.53            0  
 547   6  ORA    Utilities              mid   23.2% 23.7% composite 0.52            0  
 548   6  SSD    Basic Materials        mid   23.2% 23.7% composite 0.52            0  
 549   6  COLB   Financial              mid   23.2% 23.7% composite 0.52            0  
@@ -559,15 +559,15 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 551   6  UNH    Healthcare             mid   23.2% 23.7% composite 0.52            0  
 552   6  MSFT   Technology             mid   23.2% 23.7% composite 0.51            0  
 553   6  CHRW   Industrials            mid   23.2% 23.7% composite 0.51            0  
-554   6  VLY    Financial              mid   23.2% 23.7% composite 0.51            0  
+554   6  JLL    Real Estate            mid   23.2% 23.7% composite 0.51            0  
 555   6  LAD    Consumer Cyclical      mid   23.2% 23.7% composite 0.51            0  
-556   6  JLL    Real Estate            mid   23.2% 23.7% composite 0.51            0  
+556   6  VLY    Financial              mid   23.2% 23.7% composite 0.51            0  
 557   6  GWW    Industrials            mid   23.2% 23.7% composite 0.51            0  
 558   6  PNR    Industrials            mid   23.2% 23.7% composite 0.50            0  
 559   6  USB    Financial              mid   23.2% 23.7% composite 0.50            0  
 560   6  PNFP   Financial              mid   23.2% 23.7% composite 0.50            0  
-561   6  EW     Healthcare             mid   23.2% 23.4% composite 0.49            0  
-562   6  BKR    Energy                 mid   23.2% 23.4% composite 0.49            0  
+561   6  BKR    Energy                 mid   23.2% 23.4% composite 0.49            0  
+562   6  EW     Healthcare             mid   23.2% 23.4% composite 0.49            0  
 563   6  BAC    Financial              mid   23.2% 23.4% composite 0.49            0  
 564   6  RF     Financial              mid   23.2% 23.4% composite 0.49            0  
 565   6  ULS    Industrials            mid   23.2% 23.4% composite 0.48            0  
@@ -578,14 +578,14 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 570   6  PFG    Financial              mid   23.2% 23.4% composite 0.47            0  
 571   6  MMM    Industrials            mid   23.2% 23.4% composite 0.47            0  
 572   6  WTFC   Financial              mid   23.2% 23.4% composite 0.47            0  
-573   6  VOYA   Financial              mid   23.2% 23.4% composite 0.47            0  
-574   6  CFR    Financial              mid   23.2% 23.4% composite 0.47            0  
+573   6  CFR    Financial              mid   23.2% 23.4% composite 0.47            0  
+574   6  VOYA   Financial              mid   23.2% 23.4% composite 0.47            0  
 575   6  TECH   Healthcare             mid   23.2% 23.4% composite 0.47            0  
 576   6  PCAR   Industrials            mid   23.2% 23.4% composite 0.47            0  
 577   6  PKG    Consumer Cyclical      mid   23.2% 23.4% composite 0.47            0  
 578   6  HLT    Consumer Cyclical      mid   23.2% 23.4% composite 0.46            0  
-579   6  KEY    Financial              mid   23.2% 23.4% composite 0.46            0  
-580   6  CCK    Consumer Cyclical      mid   23.2% 23.4% composite 0.46            0  
+579   6  CCK    Consumer Cyclical      mid   23.2% 23.4% composite 0.46            0  
+580   6  KEY    Financial              mid   23.2% 23.4% composite 0.46            0  
 581   6  GBCI   Financial              mid   23.2% 23.4% composite 0.46            0  
 582   6  NEU    Basic Materials        mid   23.2% 23.4% composite 0.46            0  
 583   6  OLN    Basic Materials        mid   23.2% 23.4% composite 0.46            0  
@@ -605,10 +605,10 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 597   6  HIG    Financial              low   23.1% 23.6% composite 0.42            0  
 598   6  LHX    Industrials            low   23.1% 23.6% composite 0.42            0  
 599   6  VNOM   Energy                 low   23.1% 23.6% composite 0.42            0  
-600   6  CTAS   Industrials            low   23.1% 23.6% composite 0.41            0  
-601   6  COKE   Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
-602   6  HRL    Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
-603   6  BALL   Consumer Cyclical      low   23.1% 23.6% composite 0.41            0  
+600   6  COKE   Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
+601   6  CTAS   Industrials            low   23.1% 23.6% composite 0.41            0  
+602   6  BALL   Consumer Cyclical      low   23.1% 23.6% composite 0.41            0  
+603   6  HRL    Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
 604   6  JNJ    Healthcare             low   23.1% 23.6% composite 0.41            0  
 605   6  ELV    Healthcare             low   23.1% 23.6% composite 0.41            0  
 606   6  ADP    Technology             low   23.1% 23.6% composite 0.41            0  
@@ -684,8 +684,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 676   6  CUZ    Real Estate            mid   22.6% 22.9% composite 0.33            0  
 677   6  FIS    Technology             mid   22.6% 22.9% composite 0.33            0  
 678   6  UMBF   Financial              mid   22.6% 22.9% composite 0.33            0  
-679   6  MSM    Industrials            mid   22.6% 22.9% composite 0.32            0  
-680   6  BXP    Real Estate            mid   22.6% 22.9% composite 0.32            0  
+679   6  BXP    Real Estate            mid   22.6% 22.9% composite 0.32            0  
+680   6  MSM    Industrials            mid   22.6% 22.9% composite 0.32            0  
 681   6  MOS    Basic Materials        mid   22.6% 22.9% composite 0.32            0  
 682   6  UBSI   Financial              mid   22.6% 22.9% composite 0.32            0  
 683   6  TCBI   Financial              mid   22.6% 22.9% composite 0.31            0  
@@ -726,8 +726,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 718   6  UHS    Healthcare             low   22.4% 22.1% composite 0.32            0  
 719   6  VICI   Real Estate            low   22.4% 22.1% composite 0.32            0  
 720   6  THG    Financial              low   22.4% 22.1% composite 0.31            0  
-721   6  MO     Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
-722   6  HSY    Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
+721   6  HSY    Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
+722   6  MO     Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
 723   6  FE     Utilities              low   22.4% 22.1% composite 0.31            0  
 724   6  SIGI   Financial              low   22.4% 22.1% composite 0.31            0  
 725   6  SYK    Healthcare             low   22.4% 22.1% composite 0.31            0  
@@ -741,8 +741,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 733   6  AFL    Financial              low   22.4% 22.1% composite 0.30            0  
 734   6  GLPI   Real Estate            low   22.4% 22.1% composite 0.30            0  
 735   6  AIZ    Financial              low   22.4% 22.1% composite 0.30            0  
-736   6  HR     Real Estate            low   22.4% 22.1% composite 0.30            0  
-737   6  KVUE   Consumer Defensive     low   22.4% 22.1% composite 0.30            0  
+736   6  KVUE   Consumer Defensive     low   22.4% 22.1% composite 0.30            0  
+737   6  HR     Real Estate            low   22.4% 22.1% composite 0.30            0  
 738   6  ES     Utilities              low   22.4% 22.1% composite 0.30            0  
 739   6  PPL    Utilities              low   22.4% 22.1% composite 0.30            0  
 740   6  LLY    Healthcare             low   22.4% 22.1% composite 0.29            0  
@@ -759,8 +759,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 751   6  VVV    Consumer Cyclical      mid   22.3% 22.9% composite 0.28            0  
 752   6  GEHC   Healthcare             mid   22.3% 22.9% composite 0.27            0  
 753   6  DCI    Industrials            mid   22.3% 22.9% composite 0.27            0  
-754   6  RPM    Basic Materials        mid   22.3% 22.9% composite 0.27            0  
-755   6  NDAQ   Financial              mid   22.3% 22.9% composite 0.27            0  
+754   6  NDAQ   Financial              mid   22.3% 22.9% composite 0.27            0  
+755   6  RPM    Basic Materials        mid   22.3% 22.9% composite 0.27            0  
 756   6  GD     Industrials            mid   22.3% 22.9% composite 0.26            0  
 757   6  AN     Consumer Cyclical      mid   22.3% 22.9% composite 0.26            0  
 758   6  CBRE   Real Estate            mid   22.3% 22.9% composite 0.26            0  
@@ -769,8 +769,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 761   6  EFX    Industrials            mid   22.3% 22.9% composite 0.26            0  
 762   6  AES    Utilities              mid   22.3% 22.9% composite 0.25            0  
 763   6  BSY    Technology             mid   22.3% 22.9% composite 0.25            0  
-764   6  EXPO   Industrials            mid   22.3% 22.9% composite 0.25            0  
-765   6  DHI    Consumer Cyclical      mid   22.3% 22.9% composite 0.25            0  
+764   6  DHI    Consumer Cyclical      mid   22.3% 22.9% composite 0.25            0  
+765   6  EXPO   Industrials            mid   22.3% 22.9% composite 0.25            0  
 766   6  WYNN   Consumer Cyclical      mid   22.3% 22.9% composite 0.25            0  
 767   6  UFPI   Basic Materials        mid   22.3% 22.9% composite 0.24            0  
 768   6  SNA    Industrials            mid   22.3% 22.9% composite 0.24            0  
@@ -780,8 +780,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 772   6  SO     Utilities              low   22.2% 21.9% composite 0.25            0  
 773   6  EPR    Real Estate            low   22.2% 21.8% composite 0.24            0  
 774   6  CINF   Financial              low   22.2% 21.8% composite 0.24            0  
-775   6  SYY    Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
-776   6  KR     Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
+775   6  KR     Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
+776   6  SYY    Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
 777   6  MRSH   Financial              low   22.2% 21.8% composite 0.24            0  
 778   6  PEG    Utilities              low   22.2% 21.8% composite 0.24            0  
 779   6  RGA    Financial              low   22.2% 21.8% composite 0.24            0  
@@ -791,8 +791,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 783   6  ATO    Utilities              low   22.2% 21.5% composite 0.23            0  
 784   6  CI     Healthcare             low   22.2% 21.4% composite 0.23            0  
 785   6  EQT    Energy                 low   22.2% 21.3% composite 0.23            0  
-786   6  MCD    Consumer Cyclical      low   22.2% 21.3% composite 0.23            0  
-787   6  EHC    Healthcare             low   22.2% 21.3% composite 0.23            0  
+786   6  EHC    Healthcare             low   22.2% 21.3% composite 0.23            0  
+787   6  MCD    Consumer Cyclical      low   22.2% 21.3% composite 0.23            0  
 788   6  EVRG   Utilities              low   22.2% 21.3% composite 0.22            0  
 789   6  ENSG   Healthcare             low   22.2% 21.3% composite 0.22            0  
 790   6  HCA    Healthcare             low   22.2% 21.3% composite 0.22            0  
@@ -806,8 +806,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 798   6  CHE    Healthcare             low   22.2% 21.3% composite 0.20            0  
 799   6  DUK    Utilities              low   22.2% 21.3% composite 0.20            0  
 800   6  UDR    Real Estate            low   22.2% 21.3% composite 0.20            0  
-801   6  CMS    Utilities              low   22.2% 21.3% composite 0.20            0  
-802   6  CBSH   Financial              low   22.2% 21.3% composite 0.20            0  
+801   6  CBSH   Financial              low   22.2% 21.3% composite 0.20            0  
+802   6  CMS    Utilities              low   22.2% 21.3% composite 0.20            0  
 803   6  TSN    Consumer Defensive     low   22.2% 21.3% composite 0.19            0  
 804   6  LMT    Industrials            low   22.2% 21.3% composite 0.19            0  
 805   6  SWX    Utilities              low   22.2% 21.3% composite 0.19            0  
@@ -822,8 +822,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 814   6  PFE    Healthcare             low   22.0% 20.6% composite 0.15            0  
 815   6  TFC    Financial              mid   21.9% 22.9% composite 0.24            0  
 816   6  REXR   Real Estate            mid   21.9% 22.9% composite 0.23            0  
-817   6  KBR    Industrials            mid   21.9% 22.9% composite 0.23            0  
-818   6  AOS    Industrials            mid   21.9% 22.9% composite 0.23            0  
+817   6  AOS    Industrials            mid   21.9% 22.9% composite 0.23            0  
+818   6  KBR    Industrials            mid   21.9% 22.9% composite 0.23            0  
 819   6  TTWO   Communication Services mid   21.9% 22.9% composite 0.23            0  
 820   6  PB     Financial              mid   21.9% 22.9% composite 0.23            0  
 821   6  MAT    Consumer Cyclical      mid   21.9% 22.9% composite 0.22            0  
@@ -834,8 +834,8 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 826   6  V      Financial              low   21.7% 20.6% composite 0.15            0  
 827   6  RJF    Financial              mid   21.6% 22.9% composite 0.22            0  
 828   6  ICE    Financial              low   21.6% 20.4% composite 0.15            0  
-829   6  AZO    Consumer Cyclical      low   21.6% 20.4% composite 0.15            0  
-830   6  AMT    Real Estate            low   21.6% 20.4% composite 0.15            0  
+829   6  AMT    Real Estate            low   21.6% 20.4% composite 0.15            0  
+830   6  AZO    Consumer Cyclical      low   21.6% 20.4% composite 0.15            0  
 831   6  MLM    Basic Materials        mid   21.6% 22.9% composite 0.22            0  
 832   6  OZK    Financial              mid   21.4% 22.9% composite 0.22            0  
 833   6  COO    Healthcare             mid   21.4% 22.9% composite 0.21            0  
@@ -852,9 +852,9 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 844   6  CL     Consumer Defensive     low   21.2% 20.4% composite 0.13            0  
 845   6  PG     Consumer Defensive     low   21.1% 20.0% composite 0.13            0  
 846   6  OGS    Utilities              low   21.1% 20.0% composite 0.12            0  
-847   6  CPT    Real Estate            low   21.1% 20.0% composite 0.12            0  
-848   6  RSG    Industrials            low   21.1% 20.0% composite 0.12            0  
-849   6  COST   Consumer Defensive     low   21.1% 20.0% composite 0.12            0  
+847   6  COST   Consumer Defensive     low   21.1% 20.0% composite 0.12            0  
+848   6  CPT    Real Estate            low   21.1% 20.0% composite 0.12            0  
+849   6  RSG    Industrials            low   21.1% 20.0% composite 0.12            0  
 850   6  SR     Utilities              low   21.1% 20.0% composite 0.11            0  
 851   6  KIM    Real Estate            low   21.1% 20.0% composite 0.11            0  
 852   6  MAA    Real Estate            low   21.1% 20.0% composite 0.11            0  
@@ -901,10 +901,10 @@ Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 
 893   6  STWD   Real Estate            mid   17.0% 17.6% composite 0.05            0  
 
 not ranked:
-    CTVA   fails liquidity / price eligibility today or no completed session (e.g. CTVA unadjusted spin-off)
-    FDXF   insufficient history (72 sessions; 252 needed)
-    HONA   insufficient history (59 sessions; 252 needed)
-    Q      insufficient history (217 sessions; 252 needed)
-    VYLR   insufficient history (0 sessions; 252 needed)
-    WBD    fails liquidity / price eligibility today or no completed session (e.g. CTVA unadjusted spin-off)
-    SOLS   insufficient history (222 sessions; 252 needed)
+    CTVA   fails liquidity / price eligibility today or no completed session
+    FDXF   insufficient history (92 sessions; 252 needed)
+    HONA   insufficient history (79 sessions; 252 needed)
+    Q      insufficient history (237 sessions; 252 needed)
+    VYLR   insufficient history (4 sessions; 252 needed)
+    WBD    fails liquidity / price eligibility today or no completed session
+    SOLS   insufficient history (242 sessions; 252 needed)

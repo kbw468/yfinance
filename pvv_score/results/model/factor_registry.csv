@@ -1,0 +1,122 @@
+,desc,group,prior_sign
+dist_52w_high,close vs 252d high (0 = at high),price,1
+days_since_52w_high,sessions since last 52w high print,price,-1
+base_depth_126,depth below 126d high,price,1
+base_depth_63,depth below 63d high,price,1
+base_tightness_63,63d high-low range / close (tight base = small),price,-1
+range_comp_10_252,10d avg daily range vs own 252d median (compression < 1),price,-1
+range_comp_z,z-score of 10d avg range vs 252d,price,-1
+bbw_pct_252,Bollinger width vs own 252d median,price,-1
+bbw_squeeze_126,Bollinger width / 126d min width (1 = tightest in 6m),price,-1
+nr7_count_20,number of NR7 days in last 20,price,1
+higher_low_cadence,share of 6 successive 10d-lows that were higher than the prior,price,1
+gap_share_21,share of 21d absolute movement that occurred overnight,price,0
+net_gap_21,sum of overnight gaps 21d,price,1
+up_gap_freq_21,"frequency of >0.5% up gaps, 21d",price,1
+clv_21,"mean close location in daily range, 21d",price,1
+clv_5,"mean close location in daily range, 5d",price,1
+mom_12_1,12-1 month momentum,price,1
+mom_6_1,6-1 month momentum,price,1
+ret_63,63d return,price,1
+ret_21,21d return,price,1
+ret_5,5d return (short-term reversal prior),price,-1
+pos_in_20d_range,close position within 20d high-low range,price,1
+up_day_frac_21,"fraction of up days, 21d",price,1
+up_day_frac_63,"fraction of up days, 63d",price,1
+pullback_21,pullback from 21d high,run,1
+pullback_duration_21,sessions since 21d high,run,-1
+mdd_63,worst 63d drawdown (less negative = smoother),run,1
+dist_52w_low,gain off 252d low,run,0
+ceiling_2x_low,already >= 100% off 52w low (user ceiling),run,-1
+days_since_2x_low,sessions since crossing 2x the 52w low (252 if not),run,0
+streak_now,signed length of current consecutive close streak,run,0
+max_up_streak_21,longest up-streak within 21d,run,1
+days_since_20pct_dd,sessions since drawdown from 252d high exceeded 20%,run,1
+dd_from_252_high,current drawdown from 252d closing high,run,1
+vol_dry_10_50,10d avg volume / 50d avg (dry-up < 1),volume,-1
+vol_dry_20_250,20d avg volume / 250d avg,volume,-1
+vol_ratio_5_50,5d avg volume / 50d avg,volume,0
+vol_z_1,today's volume z-score vs 50d,volume,0
+accum_dist_50,"accumulation days minus distribution days, 50d",volume,1
+updown_vol_ratio_50,"log up-volume / down-volume, 50d",volume,1
+updown_vol_ratio_21,"log up-volume / down-volume, 21d",volume,1
+ignition_mult_10,max volume multiple on a +2sd up day within last 10 sessions (0 if none),volume,1
+days_since_ignition,sessions since last +2sd up day on 1.5x volume (63 cap),volume,0
+pullback_vol_21,"log avg volume on down days / up days, 21d (quiet pullbacks < 0)",volume,-1
+net_vol_flow_63,"signed volume / total volume, 63d (OBV slope normalised)",volume,1
+obv_price_div_63,OBV-flow z minus price-return z (positive = volume leading price),volume,1
+dvol_trend_21_126,21d dollar volume / 126d dollar volume,volume,0
+vol_cv_20,"coefficient of variation of volume, 20d",volume,0
+big_vol_updays_net_21,"1.5x-volume up days minus 1.5x-volume down days, 21d",volume,1
+amihud_21,"log Amihud illiquidity (|ret| / $vol), 21d",volume,0
+log_dvol_63,log median dollar volume 63d (size/liquidity control),volume,0
+rv20,20d realised vol (annualised),vol,0
+rv20_pct_252,20d RV vs own 252d median RV,vol,-1
+rv20_vs_min_126,20d RV / 126d minimum of 20d RV (1 = most compressed),vol,-1
+rv_ratio_5_20,5d RV / 20d RV (expansion > 1),vol,0
+rv_ratio_20_60,20d RV / 60d RV,vol,-1
+vol_of_vol_63,std / mean of 20d RV over 63d,vol,-1
+comp_then_exp,compressed 20d RV x nascent 5d expansion (sequence factor),vol,1
+dn_up_vol_asym_63,"log downside semi-vol / upside semi-vol, 63d",vol,-1
+dn_vol_63,downside semi-vol 63d,vol,-1
+parkinson_cc_20,"Parkinson (range) vol / close-close vol, 20d",vol,0
+overnight_intraday_vol_20,"log overnight vol / intraday vol, 20d",vol,0
+skew_63,return skewness 63d,vol,0
+kurt_63,return excess kurtosis 63d,vol,0
+sharpe_63,trailing 63d Sharpe,vol,1
+sharpe_126,trailing 126d Sharpe,vol,1
+sharpe_21,trailing 21d Sharpe,vol,0
+jump_21,"largest |daily move| / daily sd, 21d",vol,0
+rs_spy_21,21d return relative to SPY,relative,1
+rs_spy_63,63d return relative to SPY,relative,1
+rs_spy_126,126d return relative to SPY,relative,1
+rs_sec_21,21d return relative to sector ETF,relative,1
+rs_sec_63,63d return relative to sector ETF,relative,1
+rs_dist_high_126,RS line vs its 126d high,relative,1
+rs_lead_126,RS line nearer its high than price is (RS leading price),relative,1
+rs_newhigh_price_not_20,days in last 20 where RS made 126d high while price >3% below its high,relative,1
+beta_63,63d beta to SPY,relative,0
+beta_252,252d beta to SPY,relative,0
+beta_shift,63d beta minus 252d beta,relative,0
+corr_spy_63,63d correlation to SPY,relative,-1
+idio_vol_63,idiosyncratic vol 63d,relative,0
+up_capture_63,up-market capture ratio 63d,relative,1
+down_capture_63,down-market capture ratio 63d,relative,-1
+capture_spread_63,up capture minus down capture 63d,relative,1
+px_accel_5,5d return minus 5d return five sessions earlier (price acceleration),roc,0
+px_accel_21,21d return minus prior 21d return (momentum acceleration),roc,0
+rs_slope_21,change in 21d RS vs SPY over 21 sessions,roc,0
+dist_high_roc_10,10-session change in distance to 52w high (closing in > 0),roc,1
+range_pos_roc_10,10-session change in position within 20d range,roc,0
+vol_roc_5,5d avg volume vs 5d avg volume five sessions earlier,roc,0
+vol_roc_10,10d avg volume vs ten sessions earlier,roc,0
+vol_roc_21,21d avg volume vs 21 sessions earlier,roc,0
+vol_accel_5,volume ROC(5) minus its value five sessions earlier (volume acceleration),roc,0
+dvol_roc_21,21d avg dollar volume vs 21 sessions earlier,roc,0
+updown_vol_roc_21,21-session change in log up/down volume ratio,roc,1
+nvf_roc_21,21-session change in 63d net volume flow (OBV slope change),roc,1
+accum_roc_21,21-session change in accumulation-minus-distribution count,roc,1
+vol_dry_roc_5,5-session change in the 10d/50d volume ratio (dry-up turning),roc,0
+vol_cv_roc_10,10-session change in volume coefficient of variation,roc,0
+rv20_roc_5,20d RV vs five sessions earlier,roc,0
+rv20_roc_10,20d RV vs ten sessions earlier,roc,0
+rv20_roc_21,20d RV vs 21 sessions earlier,roc,0
+rv10_roc_5,10d RV vs five sessions earlier (fast vol ROC),roc,0
+rv_accel_5,RV ROC(5) minus its value five sessions earlier (vol acceleration),roc,0
+park_roc_10,Parkinson range vol vs ten sessions earlier,roc,0
+range_roc_10,10d avg daily range vs ten sessions earlier,roc,0
+bbw_roc_10,Bollinger width vs ten sessions earlier,roc,0
+dnvol_roc_21,downside semi-vol vs 21 sessions earlier,roc,-1
+asym_roc_21,21-session change in downside/upside vol asymmetry,roc,-1
+beta_roc_21,21-session change in 63d beta,roc,0
+corr_roc_21,21-session change in 63d correlation to SPY,roc,0
+idio_roc_21,idiosyncratic vol vs 21 sessions earlier,roc,0
+vov_roc_21,vol-of-vol vs 21 sessions earlier,roc,0
+vol_turn_off_dryup,"volume ROC(5) when 20d/250d volume < 0.8 (volume turning up off a dry-up), else 0",roc,1
+rv_turn_off_compression,"RV ROC(5) when 20d RV < 0.8x its 252d median (vol expanding off compression), else 0",roc,1
+vol_confirms_price_21,sign of 21d return x volume ROC(21): rising volume on an up move > 0,roc,1
+quiet_accum_21,volume ROC(21) weighted toward flat price (volume rising while price goes nowhere),roc,1
+vol_roc_x_rv_roc,volume ROC(10) x RV ROC(10),roc,0
+vol_up_rv_down,volume ROC(10) minus RV ROC(10): participation rising while vol falls,roc,1
+dryup_x_tight,rank sum: volume dry-up + range compression + proximity to 52w high (VCP-style),interaction,1
+ignite_x_rs,rank sum: recent ignition volume + 63d RS + up/down volume,interaction,1
