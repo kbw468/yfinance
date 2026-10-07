@@ -5,6 +5,8 @@ cd "$(dirname "$0")/../.."
 export PVV_TARGET=smooth_42
 export PVV_CACHE="${PVV_CACHE:-$PWD/pvv_score/.cache}"
 mkdir -p "$PVV_CACHE"
+# dependencies: the image carries pandas/numpy/pyarrow/scikit-learn; yfinance (this repo) needs requests & co. Install if missing.
+python -c "import requests, multitasking, platformdirs, peewee, bs4, curl_cffi, websockets, pandas, pyarrow, sklearn" 2>/dev/null || pip install -q -e . 2>&1 | tail -1
 cp -n pvv_score/results/model/factor_registry.csv "$PVV_CACHE/factor_registry.csv" 2>/dev/null || true   # frozen copy of the factor registry for a fresh cache
 log() { echo "[$(date -u +%H:%M:%S)] $*"; }
 log "prices"
