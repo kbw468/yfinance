@@ -48,7 +48,7 @@ def main(tickers):
         row, rr = t.loc[tk], rk.loc[tk]
         live = live_conditions(row, rr)
         li = L.loc[tk]; ui = u.loc[tk]
-        print(f"\n{'=' * 100}\n{tk}  {row.sector}  |  rank {int(li['rank'])}  tier {int(li.tier)}  P42 {li.P_topq_42d:.0%}  P63 {li.P_topq_63d:.0%}  |  beta {row.beta_252:.2f} ({ui.beta_bucket})  composite {ui.avg_score:.2f} (state {ui.state_score_pooled:.2f} level {ui.level_score:.2f})")
+        print(f"\n{'=' * 100}\n{tk}  {row.sector}  |  rank {int(li['rank'])}  tier {int(li.tier)}  P42 {li.P_topq_42d:.0%}  P63 {li.P_topq_63d:.0%}  |  beta {row.beta_252:.2f} ({ui.beta_bucket})  composite {ui.avg_score:.2f} (walk-forward; final-weight diagnostics: state {ui.state_score_pooled:.2f} level {ui.level_score:.2f})")
         print(f"state readings vs own norm: {ui.top_states}")
         top = sorted([f for f in QUINTILE_FACTORS if rr[f] >= 0.8], key=lambda f: -rr[f]); bot = sorted([f for f in QUINTILE_FACTORS if rr[f] <= 0.2], key=lambda f: rr[f])
         print("TOP 20% of universe:   " + ", ".join(f"{plain(f + ':TOP')[:-8]} ({rr[f]:.0%})" for f in top))

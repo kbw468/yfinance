@@ -13,6 +13,7 @@ from .config import CACHE_DIR, RESULTS_DIR, RECENT_START
 from .run_eval import load_research
 from .composite import tercile_series
 from .regime import tag, today_regime, same_regime
+from .livecomp import live_composite_percentile
 
 TIERS = [0, 0.5, 0.7, 0.8, 0.9, 0.95, 1.0]
 MIN_CELL_N = 500   # a (bucket, tier) cell thinner than this is replaced by the pooled "this tier and above" cell
@@ -81,6 +82,14 @@ def main():
             iso[b_][c] = BinnedIsotonic(MIN_CELL_N).fit(s_.avg_p.values[ok_], s_[src].values[ok_])
     u = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv")
     asof = u["asof"].iloc[0]
+    # tonight's composite percentile on the calibration tables' own scale (walk-forward preds, universe-ranked); the
+    # final-weight score from score_state stays in the file as a diagnostic under its own name
+    live = live_composite_percentile(asof)
+    if "avg_score_final_weights" not in u.columns:
+        u["avg_score_final_weights"] = u["avg_score"]
+    u["avg_score"] = u.ticker.map(live).where(u.state_score.notna())
+    missing = u[u.state_score.notna() & u.avg_score.isna()].ticker.tolist()
+    assert not missing, f"scored names without a walk-forward composite tonight: {missing}"
     for c in ["iso_q42", "iso_h42", "iso_q63", "iso_h63"]:
         u[c] = [iso[b_][c].predict([x])[0] if (isinstance(b_, str) and b_ in iso and pd.notna(x)) else np.nan for b_, x in zip(u.beta_bucket, u.avg_score)]
     u["tier"] = pd.cut(u.avg_score, TIERS, labels=TIER_LABELS, include_lowest=True)

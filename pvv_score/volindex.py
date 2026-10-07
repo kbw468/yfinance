@@ -4,16 +4,14 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 from .config import CACHE_DIR
-from .data_io import load_panel
 
-YAHOO = {"vix": "^VIX", "vxn": "^VXN", "move": "^MOVE", "vvix": "^VVIX", "ovx": "^OVX"}
+YAHOO = {"vix": "^VIX", "vxn": "^VXN", "move": "^MOVE", "vvix": "^VVIX", "ovx": "^OVX", "iwm": "IWM"}   # IWM close feeds the realised-vol proxy
 PATH = CACHE_DIR / "volindices.parquet"
 COLS = list(YAHOO) + ["iwm_rv20"]
 
 
-def _iwm_rv20() -> pd.Series:
-    panel = load_panel()
-    c = panel["Close"]["IWM"].dropna()
+def _iwm_rv20(close: pd.Series) -> pd.Series:
+    c = close.dropna()
     return (np.log(c).diff().rolling(20).std() * np.sqrt(252) * 100).rename("iwm_rv20")
 
 
@@ -25,14 +23,18 @@ def load_vol_indices(refresh: bool = False) -> pd.DataFrame:
     px = yf.download(list(YAHOO.values()), start=start, progress=False, auto_adjust=False)["Close"]
     px = px.rename(columns={v: k for k, v in YAHOO.items()})
     px.index = pd.to_datetime(px.index).tz_localize(None)
-    new = old[list(YAHOO)].combine_first(px[list(YAHOO)]) if len(old) else px[list(YAHOO)]
+    have = [c for c in YAHOO if c in old.columns]
+    new = old[have].combine_first(px[list(YAHOO)]) if len(old) else px[list(YAHOO)]
     new.update(px[list(YAHOO)])
-    try:
-        rv = _iwm_rv20()
-        out = new.join(rv, how="outer")
-    except Exception:
-        out = new.join(old["iwm_rv20"], how="left") if "iwm_rv20" in old else new.assign(iwm_rv20=np.nan)
-    out = out.sort_index()[COLS]
+    new = new.sort_index()
+    if new["iwm"].notna().sum() < 25:                       # first refresh after the IWM column was added: fetch its full history
+        full = yf.download("IWM", start="2005-01-01", progress=False, auto_adjust=False)["Close"]
+        full = full.iloc[:, 0] if isinstance(full, pd.DataFrame) else full
+        full.index = pd.to_datetime(full.index).tz_localize(None)
+        new["iwm"] = full.reindex(new.index.union(full.index)).reindex(new.index) if len(new) else full
+        new = new.combine_first(full.to_frame("iwm"))
+    out = new.assign(iwm_rv20=_iwm_rv20(new["iwm"])).sort_index()[COLS]
+    assert out["iwm_rv20"].dropna().index.max() >= out["vix"].dropna().index.max() - pd.Timedelta(days=5), "IWM realised vol is stale"
     out.to_parquet(PATH)
     return out
 

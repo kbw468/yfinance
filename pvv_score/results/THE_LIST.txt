@@ -1,4 +1,4 @@
-THE LIST, 2026-10-06 close. VIX 15.0  VXN 21.1  IWM 20d rv 11.6  MOVE 105 (move_mid). Rate-sensitive sectors (utilities, REITs, staples, financials) measured on move_mid sessions; all other sectors on every session.
+THE LIST, 2026-10-06 close. VIX 15.0  VXN 21.1  IWM 20d rv 11.8  MOVE 105 (move_mid). Rate-sensitive sectors (utilities, REITs, staples, financials) measured on move_mid sessions; all other sectors on every session.
  P42 / P63 = probability (realised out of sample, 2015 onward, COVID Feb-Jun 2020 excluded) that the next 42 / 63 sessions are a top-quartile
 smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.
 basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).
@@ -6,899 +6,899 @@ basis = which rule produced the number: 'signatures xN' = N confirmed conjunctio
 Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.
 
   # tier tkr    sector                 beta    P42   P63 basis                  sigs  strongest confirmed signature firing tonight
-  1   1  MRVL   Technology             high  53.3% 53.6% composite 0.99 (+signatures)   50  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
-  2   1  HPE    Technology             high  53.2% 52.7% composite 0.99 (+signatures)   95  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
-  3   1  SMTC   Technology             high  52.8% 52.7% composite 0.98 (+signatures)   73  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
-  4   1  P      Technology             high  51.3% 52.1% signatures x81 (+composite)   81  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
-  5   1  MTSI   Technology             high  51.3% 52.1% signatures x41 (+composite)   41  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
-  6   1  ENTG   Technology             high  51.3% 52.1% signatures x30 (+composite)   30  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
-  7   1  SANM   Technology             high  51.3% 52.1% signatures x33 (+composite)   33  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
-  8   1  LSCC   Technology             high  51.3% 52.1% signatures x30 (+composite)   30  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
-  9   1  AMD    Technology             high  51.3% 52.1% signatures x73 (+composite)   73  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 10   1  TTMI   Technology             high  51.3% 52.1% signatures x51 (+composite)   51  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
- 11   1  SITM   Technology             high  51.3% 52.1% signatures x65 (+composite)   65  time since 20% drawdown bottom 20% AND OBV leading price top 20% AND 126d Sharpe top 20%
- 12   1  MKSI   Technology             high  51.3% 52.1% signatures x67 (+composite)   67  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
- 13   1  NVT    Industrials            high  51.3% 52.1% signatures x54 (+composite)   54  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 14   1  COHR   Technology             high  51.3% 52.1% signatures x25 (+composite)   25  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
- 15   1  DELL   Technology             high  49.1% 49.8% signatures x64 (+composite)   64  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 16   1  CGNX   Technology             high  49.1% 49.8% signatures x7 (+composite)    7  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 17   1  MRNA   Healthcare             high  48.0% 49.4% composite 0.97 (+signatures)  121  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 18   1  KEYS   Technology             high  46.5% 48.1% composite 0.96 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
- 19   1  GLW    Technology             high  46.2% 49.1% signatures x36 (+composite)   36  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND pullback from 21d high top 20%
- 20   1  SYNA   Technology             high  46.2% 49.1% signatures x38 (+composite)   38  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 21   1  ON     Technology             high  46.2% 49.1% signatures x77 (+composite)   77  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
- 22   1  AMAT   Technology             high  46.2% 49.1% signatures x47 (+composite)   47  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 23   1  FLEX   Technology             high  46.2% 49.1% signatures x41 (+composite)   41  downside vol top 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
- 24   1  AMKR   Technology             high  46.2% 49.1% signatures x39 (+composite)   39  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 25   1  BE     Industrials            high  46.2% 49.1% signatures x54 (+composite)   54  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
- 26   1  INTC   Technology             high  46.2% 49.1% signatures x47 (+composite)   47  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 27   1  MU     Technology             high  46.2% 49.1% signatures x31 (+composite)   31  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume vs own norm top 20%
- 28   1  ONTO   Technology             high  46.2% 49.1% signatures x10 (+composite)   10  corr to SPY top 20% AND idiosyncratic vol top 20% AND 12-1m momentum top 20%
- 29   1  KLAC   Technology             high  46.2% 49.1% signatures x38 (+composite)   38  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 30   1  AEIS   Industrials            high  46.2% 49.1% signatures x19 (+composite)   19  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
- 31   1  LRCX   Technology             high  46.2% 49.1% signatures x31 (+composite)   31  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 32   1  OKTA   Technology             high  45.0% 46.3% signatures x81 (+composite)   81  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 33   1  VICR   Technology             high  45.0% 46.3% signatures x65 (+composite)   65  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND 12-1m momentum vs own norm top 20%
- 34   1  STX    Technology             high  45.0% 46.3% signatures x69 (+composite)   69  downside vol top 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
- 35   1  TWLO   Technology             high  45.0% 46.3% signatures x89 (+composite)   89  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 36   1  SWKS   Technology             high  45.0% 46.3% signatures x70 (+composite)   70  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
- 37   1  RGEN   Healthcare             high  45.0% 46.3% signatures x87 (+composite)   87  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
- 38   2  CRWD   Technology             high  44.6% 46.3% signatures x58 (+composite)   58  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 39   2  LITE   Technology             high  44.1% 46.0% composite 0.95 (+signatures)   43  distance to 52w high top 20% AND downside vol top 20% AND share of up days 63d top 20%
- 40   2  RMBS   Technology             high  43.0% 42.1% signatures x11 (+composite)   11  corr to SPY top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
- 41   2  PWR    Industrials            high  43.0% 42.1% signatures x11 (+composite)   11  corr to SPY top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
- 42   2  SMCI   Technology             high  43.0% 42.1% signatures x56 (+composite)   56  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
- 43   2  NXT    Technology             high  42.7% 41.3% signatures x9 (+composite)    9  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
- 44   2  VIAV   Technology             high  42.4% 42.9% composite 0.94 (+signatures)   24  up minus down capture top 20% AND downside vol top 20% AND OBV leading price top 20%
- 45   2  SNPS   Technology             high  41.9% 41.1% signatures x7 (+composite)    7  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume top 20%
- 46   2  NTAP   Technology             high  41.7% 42.6% composite 0.94            0  
- 47   2  PANW   Technology             high  41.0% 41.5% signatures x44 (+composite)   44  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 48   2  DDOG   Technology             high  41.0% 40.8% signatures x36 (+composite)   36  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
- 49   2  GME    Consumer Cyclical      mid   41.0% 40.8% signatures x43 (+composite)   43  distance to 52w high top 20% AND downside vol top 20% AND share of up days 63d top 20%
- 50   2  WDC    Technology             high  41.0% 40.8% signatures x39 (+composite)   39  distance to 52w high bottom 20% AND gain off 52w low top 20% AND volume vs 50d top 20%
- 51   2  BRKR   Healthcare             high  40.8% 41.8% signatures x20 (+composite)   20  up minus down capture top 20% AND downside vol top 20% AND 126d Sharpe top 20%
- 52   2  ALGM   Technology             high  40.8% 41.8% signatures x32 (+composite)   32  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
- 53   2  PBF    Energy                 low   40.4% 43.8% signatures x84 (+composite)   84  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
- 54   2  DVA    Healthcare             low   40.1% 41.8% signatures x30 (+composite)   30  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
- 55   2  CVLT   Technology             mid   40.1% 41.8% signatures x19 (+composite)   19  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
- 56   2  TER    Technology             high  40.1% 41.8% signatures x17 (+composite)   17  up minus down capture top 20% AND downside vol top 20% AND 12-1m momentum top 20%
- 57   2  DUOL   Technology             mid   40.1% 41.8% signatures x24 (+composite)   24  up minus down capture top 20% AND distance to 52w high bottom 20% AND 126d Sharpe top 20%
- 58   2  GWRE   Technology             mid   40.1% 38.9% signatures x12 (+composite)   12  distance to 52w high bottom 20% AND gain off 52w low top 20% AND 20d RV vs norm top 20%
- 59   2  KTOS   Industrials            high  40.0% 42.0% signatures x8 (+composite)    8  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
- 60   2  PSN    Technology             high  40.0% 42.0% signatures x10 (+composite)   10  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
- 61   3  ILMN   Healthcare             mid   39.7% 40.7% signatures x36 (+composite)   36  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%
- 62   3  HPQ    Technology             mid   39.7% 40.7% signatures x21 (+composite)   21  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%
- 63   3  JBHT   Industrials            mid   39.7% 40.7% signatures x33 (+composite)   33  depth below 126d high bottom 20% AND gain off 52w low top 20% AND volROC21>+50%
- 64   3  ZBRA   Technology             high  39.4% 40.7% signatures x9 (+composite)    9  corr to SPY top 20% AND gain off 52w low top 20% AND idiosyncratic vol top 20%
- 65   3  HL     Basic Materials        high  38.9% 40.4% signatures x50 (+composite)   50  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND 63d RS vs SPY top 20%
- 66   3  AVT    Technology             high  38.8% 40.8% composite 0.92            0  
- 67   3  ARW    Technology             high  38.8% 40.8% composite 0.92 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
- 68   3  SNDK   Technology             high  38.3% 39.3% signatures x54 (+composite)   54  depth below 126d high bottom 20% AND higher-low cadence top 20% AND 126d Sharpe top 20%
- 69   3  QLYS   Technology             low   38.3% 39.3% signatures x50 (+composite)   50  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 70   3  HIMS   Healthcare             high  37.8% 39.5% signatures x38 (+composite)   38  accumulation-distribution days top 20% AND depth below 126d high bottom 20% AND 126d Sharpe top 20%
- 71   3  HOOD   Financial              high  37.8% 39.5% signatures x40 (+composite)   40  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
- 72   3  WDAY   Technology             mid   37.7% 39.5% signatures x28 (+composite)   28  downside vol top 20% AND higher-low cadence top 20% AND 126d Sharpe top 20%
- 73   3  EL     Consumer Defensive     high  37.7% 39.5% signatures x20 (+composite)   20  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND 12-1m momentum vs own norm top 20%
- 74   3  VRT    Industrials            high  37.1% 37.0% signatures x46 (+composite)   46  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
- 75   3  SKYD   Communication Services mid   36.5% 38.1% signatures x11 (+composite)   11  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
- 76   3  CRS    Industrials            high  36.4% 33.8% signatures x29 (+composite)   29  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND range vol / close vol top 20%
- 77   3  ARWR   Healthcare             high  36.2% 36.6% signatures x42 (+composite)   42  distance to 52w high bottom 20% AND gain off 52w low top 20% AND dvolROC21>+30%
- 78   3  AAON   Industrials            high  36.2% 37.3% signatures x8 (+composite)    8  corr to SPY top 20% AND idiosyncratic vol top 20% AND skew bottom 20%
- 79   3  VFC    Consumer Cyclical      high  36.2% 37.3% signatures x8 (+composite)    8  corr to SPY top 20% AND idiosyncratic vol top 20% AND rvROC21>+20%
- 80   3  CDE    Basic Materials        high  36.2% 37.3% signatures x28 (+composite)   28  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume vs own norm top 20%
- 81   3  EME    Industrials            high  36.1% 35.4% signatures x5 (+composite)    5  close location in range top 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
- 82   3  JBL    Technology             high  36.1% 40.7% signatures x36 (+composite)   36  depth below 126d high bottom 20% AND corr to SPY top 20% AND gain off 52w low top 20%
- 83   3  CIEN   Technology             high  36.1% 40.7% signatures x30 (+composite)   30  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
- 84   3  DOCS   Healthcare             mid   36.0% 36.6% signatures x41 (+composite)   41  downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume bottom 20%
- 85   3  QCOM   Technology             high  35.9% 34.9% signatures x21 (+composite)   21  dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volROC21>+50%
- 86   3  MTDR   Energy                 low   35.9% 34.9% signatures x7 (+composite)    7  up minus down capture top 20% AND downside vol top 20% AND 21d return bottom 20%
- 87   3  DOCN   Technology             high  35.9% 36.1% signatures x35 (+composite)   35  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
- 88   3  GNRC   Industrials            high  35.9% 36.1% signatures x34 (+composite)   34  depth below 126d high bottom 20% AND gain off 52w low top 20% AND dollar-volume trend top 20%
- 89   3  PATH   Technology             high  35.4% 35.9% signatures x29 (+composite)   29  depth below 126d high bottom 20% AND 63d return top 20% AND dollar volume vs own norm top 20%
- 90   3  IESC   Industrials            high  35.4% 35.9% signatures x29 (+composite)   29  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
- 91   3  GDDY   Technology             low   35.4% 35.9% signatures x30 (+composite)   30  downside vol top 20% AND dollar-volume trend top 20% AND higher-low cadence top 20%
- 92   3  LFUS   Technology             high  35.4% 37.1% composite 0.86 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
- 93   3  SN     Consumer Cyclical      high  35.4% 36.9% composite 0.85 (+signatures)    4  beta top 20% AND dollar-volume trend top 20% AND 126d Sharpe top 20%
- 94   3  SNX    Technology             high  35.4% 36.9% composite 0.85 (+signatures)    7  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
- 95   3  NUE    Basic Materials        mid   35.3% 37.7% composite 0.99            0  
- 96   3  VAL    Energy                 mid   35.1% 33.9% signatures x28 (+composite)   28  depth below 126d high bottom 20% AND up minus down capture top 20% AND dollar-volume trend top 20%
- 97   4  HRB    Consumer Cyclical      low   34.9% 34.9% signatures x15 (+composite)   15  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
- 98   4  FN     Technology             high  34.9% 34.9% signatures x6 (+composite)    6  corr to SPY top 20% AND idiosyncratic vol top 20% AND skew bottom 20%
- 99   4  BTSG   Healthcare             high  34.8% 34.9% signatures x18 (+composite)   18  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
-100   4  STRL   Industrials            high  34.8% 33.7% signatures x23 (+composite)   23  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
-101   4  WCC    Industrials            high  34.6% 35.8% composite 0.84 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
-102   4  FTNT   Technology             mid   34.5% 37.2% composite 0.99 (+signatures)    4  idiosyncratic vol top 20% AND dollar volume top 20% AND 126d Sharpe top 20%
-103   4  ACN    Technology             low   34.4% 34.0% signatures x23 (+composite)   23  distance to 52w high bottom 20% AND gain off 52w low top 20% AND dvolROC21>+30%
-104   4  CLF    Basic Materials        high  34.4% 34.0% signatures x18 (+composite)   18  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
-105   4  NOW    Technology             mid   34.4% 32.9% signatures x18 (+composite)   18  Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%
-106   4  MOH    Healthcare             low   34.4% 32.9% signatures x19 (+composite)   19  up minus down capture bottom 20% AND gain off 52w low top 20% AND distance to 52w high vs own norm top 20%
-107   4  AKAM   Technology             high  34.4% 34.1% signatures x8 (+composite)    8  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
-108   4  IPGP   Technology             high  34.4% 34.1% signatures x7 (+composite)    7  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
-109   4  MP     Basic Materials        high  34.4% 34.1% signatures x4 (+composite)    4  corr to SPY top 20% AND idiosyncratic vol top 20% AND pullback from 21d high bottom 20%
-110   4  MUR    Energy                 low   34.4% 34.1% signatures x15 (+composite)   15  corr to SPY bottom 20% AND downside vol top 20% AND 63d return top 20%
-111   4  NOVT   Technology             high  34.1% 33.5% signatures x7 (+composite)    7  downside vol top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
-112   4  PEGA   Technology             mid   34.1% 33.5% signatures x6 (+composite)    6  up minus down capture top 20% AND downside vol top 20% AND dollar volume bottom 20%
-113   4  MOG-A  Industrials            high  34.1% 33.5% signatures x5 (+composite)    5  downside vol top 20% AND 126d Sharpe top 20%
-114   4  GEV    Industrials            high  34.1% 33.5% signatures x11 (+composite)   11  gain off 52w low top 20% AND downside vol top 20% AND share of up days 63d top 20%
-115   4  VST    Utilities              high  34.0% 31.7% signatures x12 (+composite)   12  depth below 126d high top 20% AND downside vol top 20% AND share of up days 63d top 20%
-116   4  AA     Basic Materials        high  34.0% 31.7% signatures x8 (+composite)    8  corr to SPY top 20% AND distance to 52w high bottom 20% AND 12-1m momentum top 20%
-117   4  ALB    Basic Materials        high  34.0% 31.7% signatures x4 (+composite)    4  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND NR7 count top 20%
-118   4  TXN    Technology             high  34.0% 33.8% composite 0.81 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
-119   4  CSCO   Technology             high  34.0% 33.5% composite 0.80            0  
-120   4  RVTY   Healthcare             high  34.0% 33.5% composite 0.79            0  
-121   4  ABNB   Consumer Cyclical      high  33.8% 34.0% signatures x17 (+composite)   17  idiosyncratic vol top 20% AND dollar volume top 20% AND 126d Sharpe top 20%
-122   4  KNX    Industrials            high  33.8% 34.0% signatures x14 (+composite)   14  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-123   4  DBX    Technology             low   33.8% 34.0% signatures x18 (+composite)   18  pullback from 21d high bottom 20% AND 63d return top 20% AND 126d Sharpe top 20%
-124   4  FIVE   Consumer Cyclical      high  33.8% 34.0% signatures x16 (+composite)   16  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND 63d RS vs SPY top 20%
-125   4  CHRD   Energy                 low   33.0% 33.5% signatures x12 (+composite)   12  12-1m momentum top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
-126   4  ELF    Consumer Defensive     high  33.0% 33.5% signatures x10 (+composite)   10  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND skew top 20%
-127   4  LSTR   Industrials            mid   32.9% 32.6% signatures x13 (+composite)   13  depth below 126d high bottom 20% AND dollar volume bottom 20% AND 12-1m momentum top 20%
-128   4  ATI    Industrials            high  32.8% 32.5% composite 0.78 (+signatures)    5  gain off 52w low top 20% AND higher-low cadence bottom 20% AND share of up days 63d top 20%
-129   4  FCX    Basic Materials        high  32.8% 32.5% composite 0.78 (+signatures)    1  gain off 52w low top 20% AND beta top 20%
-130   4  STLD   Basic Materials        high  32.8% 32.5% composite 0.77            0  
-131   4  VEEV   Healthcare             mid   32.8% 33.7% signatures x4 (+composite)    4  idiosyncratic vol top 20% AND volume on pullbacks top 20% AND 126d Sharpe top 20%
-132   4  PCG    Utilities              low   32.8% 33.7% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
-133   4  AVTR   Healthcare             mid   32.8% 33.7% signatures x7 (+composite)    7  corr to SPY bottom 20% AND 126d Sharpe top 20% AND up-capture top 20%
-134   4  BBY    Consumer Cyclical      mid   32.7% 33.7% signatures x4 (+composite)    4  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND volume vs 250d vs own norm bottom 20%
-135   4  JKHY   Technology             low   32.7% 33.7% signatures x5 (+composite)    5  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-136   4  WHR    Consumer Cyclical      high  32.6% 33.3% signatures x16 (+composite)   16  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
-137   4  TKR    Industrials            high  32.5% 32.5% composite 0.77 (+signatures)    5  gain off 52w low top 20% AND up minus down capture bottom 20%
-138   4  CAT    Industrials            high  32.5% 32.5% composite 0.77 (+signatures)    2  gain off 52w low top 20% AND up minus down capture bottom 20%
-139   4  LEA    Consumer Cyclical      high  32.5% 32.5% signatures x2 (+composite)    2  downside vol top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
-140   4  NOV    Energy                 mid   32.0% 31.5% signatures x4 (+composite)    4  gain off 52w low top 20% AND dollar volume bottom 20% AND pullback from 21d high bottom 20%
-141   4  MPWR   Technology             high  31.7% 31.6% composite 0.75 (+signatures)    6  63d return top 20% AND downside vol top 20%
-142   4  ECHO   Communication Services high  31.6% 30.4% signatures x3 (+composite)    3  depth below 126d high bottom 20% AND dvolROC21>+30% AND up-capture top 20%
-143   4  EXPE   Consumer Cyclical      high  31.6% 32.2% signatures x3 (+composite)    3  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
-144   4  ANF    Consumer Cyclical      high  31.6% 32.2% signatures x2 (+composite)    2  12-1m momentum top 20% AND idiosyncratic vol top 20%
-145   4  HXL    Industrials            mid   31.6% 32.2% signatures x6 (+composite)    6  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-146   4  SLB    Energy                 mid   31.6% 32.2% signatures x4 (+composite)    4  time since ignition day bottom 20% AND gain off 52w low top 20% AND 21d return bottom 20%
-147   4  ADBE   Technology             mid   31.6% 31.4% signatures x10 (+composite)   10  downside vol top 20% AND higher-low cadence top 20% AND net volume flow top 20%
-148   4  KRYS   Healthcare             mid   31.5% 31.5% signatures x6 (+composite)    6  downside vol top 20% AND overnight share of moves bottom 20% AND 12-1m momentum vs own norm top 20%
-149   4  NYT    Communication Services low   31.5% 31.5% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
-150   4  ENS    Industrials            high  31.5% 31.5% signatures x9 (+composite)    9  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
-151   4  MCHP   Technology             high  31.5% 31.5% signatures x6 (+composite)    6  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
-152   4  FDX    Industrials            mid   31.5% 31.5% signatures x2 (+composite)    2  gain off 52w low top 20% AND dollar volume top 20% AND 21d return bottom 20%
-153   4  LYB    Basic Materials        low   31.5% 31.5% signatures x5 (+composite)    5  up minus down capture top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
-154   4  CRL    Healthcare             high  31.0% 31.6% composite 0.75            0  
-155   4  ADI    Technology             high  31.0% 31.6% composite 0.74 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
-156   4  BILL   Technology             high  31.0% 31.0% signatures x7 (+composite)    7  beta top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
-157   4  IT     Technology             mid   30.9% 31.4% signatures x9 (+composite)    9  downside vol top 20% AND higher-low cadence top 20% AND skew top 20%
-158   4  CDW    Technology             mid   30.6% 31.5% signatures x3 (+composite)    3  downside vol top 20% AND overnight share of moves bottom 20% AND distance to 52w high vs own norm top 20%
-159   4  FFIV   Technology             high  30.6% 31.1% composite 0.74            0  
-160   4  WEX    Technology             mid   30.6% 31.0% signatures x7 (+composite)    7  overnight share of moves bottom 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
-161   4  FLR    Industrials            high  30.6% 31.0% signatures x6 (+composite)    6  downside vol top 20% AND 20d/60d RV bottom 20% AND skew top 20%
-162   4  CTSH   Technology             low   30.6% 31.0% signatures x8 (+composite)    8  corr to SPY bottom 20% AND pullback from 21d high bottom 20% AND 63d return top 20%
-163   4  ACM    Industrials            mid   30.6% 31.0% signatures x5 (+composite)    5  downside vol top 20% AND overnight share of moves bottom 20% AND share of up days 63d top 20%
-164   4  CRM    Technology             mid   30.6% 31.0% signatures x7 (+composite)    7  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
-165   4  ORCL   Technology             high  30.6% 31.0% signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up-capture top 20% AND volROC21>+50%
-166   4  COIN   Financial              high  30.6% 31.0% signatures x6 (+composite)    6  downside vol top 20% AND higher-low cadence top 20% AND dollar volume top 20%
-167   4  ROKU   Communication Services high  30.6% 29.9% signatures x3 (+composite)    3  beta top 20% AND volume on pullbacks top 20% AND 126d Sharpe top 20%
-168   4  PLTR   Technology             high  30.6% 29.9% signatures x3 (+composite)    3  gain off 52w low top 20% AND idiosyncratic vol top 20%
-169   4  DOW    Basic Materials        low   30.6% 29.8% signatures x3 (+composite)    3  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-170   4  DAL    Industrials            high  30.6% 29.8% signatures x3 (+composite)    3  beta top 20% AND 126d Sharpe top 20% AND OBV leading price vs own norm top 20%
-171   4  THC    Healthcare             mid   30.6% 28.1% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
-172   4  MANH   Technology             low   30.6% 28.1% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
-173   4  CF     Basic Materials        low   30.6% 31.1% signatures x5 (+composite)    5  corr to SPY bottom 20% AND gain off 52w low top 20% AND 21d return bottom 20%
-174   4  GEN    Technology             mid   30.6% 31.1% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND higher-low cadence top 20%
-175   4  HAL    Energy                 low   30.6% 31.1% signatures x5 (+composite)    5  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-176   4  FIX    Industrials            high  30.6% 31.1% signatures x6 (+composite)    6  gain off 52w low top 20% AND downside vol top 20%
-177   4  ROIV   Healthcare             high  30.6% 31.1% signatures x5 (+composite)    5  time since 20% drawdown top 20% AND idiosyncratic vol top 20% AND 12-1m momentum top 20%
-178   4  CBOE   Financial              low   30.6% 31.1% signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up minus down capture top 20% AND volume vs 50d top 20%
-179   4  ISRG   Healthcare             mid   30.6% 31.0% signatures x2 (+composite)    2  net volume flow top 20% AND downside vol top 20%
-180   4  DOCU   Technology             mid   30.6% 31.0% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
-181   4  RRX    Industrials            high  30.6% 31.0% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20% AND dollar volume vs own norm top 20%
-182   4  DG     Consumer Defensive     mid   30.6% 31.0% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-183   4  ANET   Technology             high  30.6% 31.0% signatures x3 (+composite)    3  beta top 20% AND OBV leading price top 20% AND 126d Sharpe top 20%
-184   4  HALO   Healthcare             mid   30.6% 31.0% signatures x3 (+composite)    3  idiosyncratic vol top 20% AND 126d Sharpe top 20%
-185   4  ROK    Industrials            high  30.6% 31.0% signatures x4 (+composite)    4  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
-186   4  PTC    Technology             mid   30.5% 31.5% signatures x1 (+composite)    1  gain off 52w low top 20% AND idiosyncratic vol top 20%
-187   4  FSLR   Technology             high  30.4% 28.1% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND overnight share of moves bottom 20% AND up-capture top 20%
-188   4  ALGN   Healthcare             high  30.3% 29.2% signatures x2 (+composite)    2  beta top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
-189   4  WFRD   Energy                 high  30.3% 29.2% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND vol of vol bottom 20%
-190   5  EVR    Financial              high  30.0% 28.8% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
-191   5  BX     Financial              high  30.0% 28.8% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
-192   5  CG     Financial              high  30.0% 28.8% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
-193   5  CNH    Industrials            high  29.6% 29.7% composite 0.68            0  
-194   5  ST     Technology             high  29.6% 29.7% composite 0.67 (+signatures)    1  gain off 52w low top 20% AND beta top 20%
-195   5  META   Communication Services high  29.6% 29.7% composite 0.67 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-196   5  CDNS   Technology             high  29.6% 29.7% composite 0.67 (+signatures)    1  up/down volume top 20% AND downside vol top 20%
-197   5  LECO   Industrials            high  29.6% 29.7% composite 0.66            0  
-198   5  APH    Technology             high  29.6% 29.7% composite 0.65 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
-199   5  NXPI   Technology             high  29.6% 29.7% composite 0.65            0  
-200   5  YETI   Consumer Cyclical      high  29.6% 29.7% composite 0.64            0  
-201   5  MTZ    Industrials            high  29.6% 29.7% composite 0.64 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-202   5  JCI    Industrials            high  29.6% 29.7% composite 0.63            0  
-203   5  EMR    Industrials            high  29.6% 29.7% composite 0.62            0  
-204   5  ETN    Industrials            high  29.6% 29.7% composite 0.61            0  
-205   5  DY     Industrials            high  29.5% 29.7% composite 0.60 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-206   5  GOOGL  Communication Services high  29.5% 29.7% composite 0.59            0  
-207   5  LIVN   Healthcare             high  29.5% 29.7% composite 0.58            0  
-208   5  LUV    Industrials            high  29.5% 29.7% composite 0.58            0  
-209   5  FLS    Industrials            high  29.5% 29.7% composite 0.58            0  
-210   5  GOOG   Communication Services high  29.5% 29.1% composite 0.58            0  
-211   5  RGLD   Basic Materials        high  29.4% 26.6% signatures x5 (+composite)    5  up minus down capture top 20% AND pullback from 21d high bottom 20% AND vol of vol bottom 20%
-212   5  FTI    Energy                 mid   29.4% 28.2% signatures x2 (+composite)    2  gain off 52w low top 20% AND pullback from 21d high bottom 20%
-213   5  AAL    Industrials            high  29.4% 28.2% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
-214   5  BAH    Industrials            low   29.4% 28.2% signatures x2 (+composite)    2  up minus down capture top 20% AND distance to 52w high bottom 20% AND pullback from 21d high bottom 20%
-215   5  NVDA   Technology             high  29.4% 28.2% signatures x2 (+composite)    2  beta top 20% AND 20d/60d RV bottom 20% AND 126d Sharpe top 20%
-216   5  TLN    Utilities              high  29.4% 28.2% signatures x1 (+composite)    1  idiosyncratic vol top 20% AND beta top 20%
-217   5  OPCH   Healthcare             low   29.4% 28.2% signatures x1 (+composite)    1  gain off 52w low top 20% AND idiosyncratic vol top 20%
-218   5  ESAB   Industrials            high  29.4% 28.2% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
-219   5  NVST   Healthcare             high  29.2% 28.4% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-220   5  FOUR   Technology             high  29.2% 28.4% signatures x4 (+composite)    4  depth below 126d high bottom 20% AND dollar-volume trend top 20% AND up-capture top 20%
-221   5  CMC    Industrials            high  29.0% 28.9% composite 0.56            0  
-222   5  SWK    Industrials            high  29.0% 28.9% composite 0.56 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
-223   5  EQH    Financial              high  29.0% 28.9% composite 0.56            0  
-224   5  AMG    Financial              high  29.0% 28.9% composite 0.55            0  
-225   5  CRBG   Financial              high  29.0% 28.9% composite 0.54            0  
-226   5  CXT    Industrials            high  29.0% 28.9% composite 0.54            0  
-227   5  NEM    Basic Materials        high  29.0% 28.9% composite 0.53            0  
-228   5  STT    Financial              high  29.0% 28.9% composite 0.53            0  
-229   5  IVZ    Financial              high  29.0% 28.9% composite 0.53 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
-230   5  BAX    Healthcare             high  29.0% 28.9% composite 0.51            0  
-231   5  IBKR   Financial              high  29.0% 28.9% composite 0.50 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
-232   5  AVNT   Basic Materials        high  29.0% 28.9% composite 0.50            0  
-233   5  SW     Consumer Cyclical      high  29.0% 28.9% composite 0.49            0  
-234   5  UAL    Industrials            high  29.0% 28.9% composite 0.49            0  
-235   5  CR     Industrials            high  29.0% 28.9% composite 0.49            0  
-236   5  CELH   Consumer Defensive     high  29.0% 28.1% signatures x3 (+composite)    3  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
-237   5  ODFL   Industrials            high  29.0% 28.1% signatures x3 (+composite)    3  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
-238   5  TEX    Industrials            high  28.9% 28.9% composite 0.49            0  
-239   5  WWD    Industrials            high  28.9% 28.9% composite 0.48            0  
-240   5  MAS    Industrials            high  28.9% 28.9% composite 0.47            0  
-241   5  WSM    Consumer Cyclical      high  28.8% 28.9% composite 0.46            0  
-242   5  C      Financial              high  28.8% 28.9% composite 0.46            0  
-243   5  RBC    Industrials            high  28.8% 28.5% composite 0.46            0  
-244   5  PYPL   Financial              high  28.8% 28.5% composite 0.45            0  
-245   5  CMI    Industrials            high  28.8% 28.5% composite 0.44            0  
-246   5  HLNE   Financial              high  28.8% 28.1% signatures x2 (+composite)    2  63d return top 20% AND pullback from 21d high bottom 20%
-247   5  BNY    Financial              mid   28.8% 28.1% signatures x2 (+composite)    2  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
-248   5  VMI    Industrials            high  28.7% 28.5% composite 0.44            0  
-249   5  TPR    Consumer Cyclical      high  28.7% 28.5% composite 0.43            0  
-250   5  ITT    Industrials            high  28.7% 28.5% composite 0.43            0  
-251   5  GM     Consumer Cyclical      high  28.7% 28.5% composite 0.43            0  
-252   5  M      Consumer Cyclical      high  28.6% 28.5% composite 0.42            0  
-253   5  AVGO   Technology             high  28.6% 28.5% composite 0.42            0  
-254   5  BWA    Consumer Cyclical      high  28.6% 28.5% composite 0.42            0  
-255   5  APG    Industrials            high  28.6% 28.5% composite 0.42            0  
-256   5  FBIN   Industrials            high  28.6% 28.5% composite 0.42            0  
-257   5  CNC    Healthcare             mid   28.3% 25.6% signatures x1 (+composite)    1  gain off 52w low top 20% AND higher-low cadence bottom 20%
-258   5  RH     Consumer Cyclical      high  28.2% 25.0% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20%
-259   5  DKS    Consumer Cyclical      high  28.1% 27.6% composite 0.41            0  
-260   5  GPN    Technology             high  28.1% 27.6% composite 0.41            0  
-261   5  IRM    Real Estate            high  28.1% 27.6% composite 0.40            0  
-262   5  URI    Industrials            high  28.1% 27.6% composite 0.40            0  
-263   5  ALK    Industrials            high  28.1% 27.6% composite 0.40 (+signatures)    1  depth below 126d high bottom 20% AND up-capture top 20%
-264   5  AVAV   Industrials            high  28.1% 27.6% composite 0.40 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-265   5  SPXC   Industrials            high  28.1% 27.5% composite 0.40            0  
-266   5  BBWI   Consumer Cyclical      high  28.1% 27.4% composite 0.39 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-267   5  HWM    Industrials            high  28.1% 27.4% composite 0.39 (+signatures)    1  share of up days 63d top 20% AND downside vol top 20%
-268   5  PPG    Basic Materials        high  28.1% 27.4% composite 0.38            0  
-269   5  TSLA   Consumer Cyclical      high  28.1% 27.4% composite 0.37 (+signatures)    1  up/down volume top 20% AND downside vol top 20%
-270   5  RDDT   Communication Services high  28.1% 27.4% composite 0.37 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-271   5  CAVA   Consumer Cyclical      high  28.1% 27.4% composite 0.37 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-272   5  DASH   Consumer Cyclical      high  28.1% 27.4% composite 0.37            0  
-273   5  CVNA   Consumer Cyclical      high  28.1% 27.4% composite 0.37 (+signatures)    2  share of up days 63d top 20% AND downside vol top 20%
-274   5  DT     Technology             mid   27.7% 27.9% composite 0.97            0  
-275   5  PK     Real Estate            mid   27.7% 27.9% composite 0.97            0  
-276   5  XYZ    Technology             high  27.6% 24.6% signatures x2 (+composite)    2  126d Sharpe top 20% AND beta top 20%
-277   5  WING   Consumer Cyclical      high  27.5% 26.3% composite 0.36            0  
-278   5  TDY    Technology             high  27.0% 26.3% composite 0.35            0  
-279   5  TEL    Technology             high  27.0% 26.3% composite 0.35            0  
-280   5  BEN    Financial              high  27.0% 26.3% composite 0.35            0  
-281   5  PII    Consumer Cyclical      high  26.8% 26.0% composite 0.34            0  
-282   5  HGV    Consumer Cyclical      high  26.8% 26.0% composite 0.34            0  
-283   5  VTRS   Healthcare             mid   26.8% 25.5% composite 0.95            0  
-284   5  RL     Consumer Cyclical      high  26.7% 25.8% composite 0.33            0  
-285   5  AXTA   Basic Materials        high  26.7% 25.8% composite 0.33            0  
-286   5  GAP    Consumer Cyclical      high  26.7% 25.8% composite 0.33            0  
-287   5  SAIA   Industrials            high  26.7% 25.8% composite 0.32            0  
-288   5  IDCC   Technology             high  26.6% 25.8% composite 0.32            0  
-289   5  GXO    Industrials            high  26.6% 25.8% composite 0.32            0  
-290   5  AXON   Industrials            high  26.6% 25.8% composite 0.32 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-291   5  RCL    Consumer Cyclical      high  26.6% 25.8% composite 0.32            0  
-292   5  BDC    Technology             high  26.6% 25.8% composite 0.31            0  
-293   5  FND    Consumer Cyclical      high  26.6% 25.8% composite 0.31 (+signatures)    1  depth below 126d high bottom 20% AND up-capture top 20%
-294   5  GS     Financial              high  26.6% 25.8% composite 0.31            0  
-295   5  OC     Industrials            high  26.6% 25.8% composite 0.30            0  
-296   5  CPRI   Consumer Cyclical      high  26.6% 25.8% composite 0.29            0  
-297   5  APTV   Consumer Cyclical      high  26.6% 25.8% composite 0.29            0  
-298   5  KNF    Basic Materials        high  26.6% 25.8% composite 0.29            0  
-299   5  IR     Industrials            high  26.6% 25.8% composite 0.29            0  
-300   5  CEG    Utilities              high  26.6% 25.8% composite 0.28            0  
-301   5  DD     Basic Materials        high  26.6% 25.8% composite 0.28            0  
-302   5  MIDD   Industrials            high  26.6% 25.8% composite 0.28            0  
-303   5  AYI    Industrials            high  26.6% 25.8% composite 0.28            0  
-304   5  NRG    Utilities              high  26.6% 25.8% composite 0.27 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-305   5  MS     Financial              high  26.6% 25.8% composite 0.27            0  
-306   5  APP    Communication Services high  26.6% 25.8% composite 0.27 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-307   5  CARR   Industrials            high  26.6% 25.8% composite 0.27            0  
-308   5  VC     Consumer Cyclical      high  26.6% 25.8% composite 0.27            0  
-309   5  TREX   Industrials            high  26.6% 25.8% composite 0.27            0  
-310   5  BROS   Consumer Cyclical      high  26.6% 25.8% composite 0.26            0  
-311   5  GE     Industrials            high  26.6% 25.8% composite 0.26            0  
-312   5  SHC    Healthcare             high  26.6% 25.8% composite 0.26            0  
-313   5  ALSN   Consumer Cyclical      high  26.6% 25.8% composite 0.26            0  
-314   5  TT     Industrials            high  26.6% 25.8% composite 0.26            0  
-315   5  LII    Industrials            high  26.6% 25.8% composite 0.26 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-316   5  TOST   Technology             high  26.6% 25.8% composite 0.26            0  
-317   5  ELAN   Healthcare             high  26.6% 25.8% composite 0.25            0  
-318   5  PVH    Consumer Cyclical      high  26.6% 25.8% composite 0.25            0  
-319   5  TRMB   Technology             high  26.6% 25.8% composite 0.25            0  
-320   5  CRUS   Technology             high  26.6% 25.8% composite 0.25            0  
-321   5  CCL    Consumer Cyclical      high  26.6% 25.8% composite 0.24            0  
-322   5  HUBB   Industrials            high  26.6% 25.8% composite 0.24            0  
-323   5  AMZN   Consumer Cyclical      high  26.6% 25.8% composite 0.24            0  
-324   5  F      Consumer Cyclical      high  26.6% 25.8% composite 0.24            0  
-325   5  OSK    Industrials            high  26.6% 25.8% composite 0.24            0  
-326   5  ARES   Financial              high  26.6% 25.8% composite 0.23            0  
-327   5  CW     Industrials            high  26.6% 25.8% composite 0.22            0  
-328   5  NCLH   Consumer Cyclical      high  26.6% 25.8% composite 0.21 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
-329   5  CFG    Financial              high  26.6% 25.8% composite 0.20            0  
-330   5  CSL    Industrials            high  26.6% 25.8% composite 0.19            0  
-331   5  LPX    Industrials            high  26.6% 25.8% composite 0.19            0  
-332   5  WSO    Industrials            high  26.6% 25.8% composite 0.18            0  
-333   5  BWXT   Industrials            high  26.6% 25.8% composite 0.18            0  
-334   5  XPO    Industrials            high  26.6% 25.8% composite 0.17            0  
-335   5  OLED   Technology             high  26.6% 25.8% composite 0.17            0  
-336   5  WMS    Industrials            high  26.6% 25.8% composite 0.17            0  
-337   5  IP     Consumer Cyclical      high  26.6% 25.8% composite 0.16            0  
-338   5  ALV    Consumer Cyclical      high  26.6% 25.8% composite 0.16            0  
-339   5  VNT    Technology             high  26.6% 25.8% composite 0.15            0  
-340   5  SYF    Financial              high  26.6% 25.8% composite 0.15            0  
-341   5  COF    Financial              high  26.6% 25.8% composite 0.15            0  
-342   5  LULU   Consumer Cyclical      high  26.6% 25.8% composite 0.14            0  
-343   5  KKR    Financial              high  26.6% 25.8% composite 0.14            0  
-344   5  SGI    Consumer Cyclical      high  26.6% 25.8% composite 0.13            0  
-345   5  XRAY   Healthcare             high  26.6% 25.8% composite 0.13            0  
-346   5  BLK    Financial              high  26.6% 25.8% composite 0.13            0  
-347   5  BC     Consumer Cyclical      high  26.6% 25.8% composite 0.12            0  
-348   5  JEF    Financial              high  26.6% 25.8% composite 0.11            0  
-349   5  R      Industrials            high  26.6% 25.8% composite 0.11            0  
-350   5  VNO    Real Estate            high  26.6% 25.8% composite 0.11            0  
-351   5  APO    Financial              high  26.6% 25.8% composite 0.11            0  
-352   5  BA     Industrials            high  26.6% 25.8% composite 0.10            0  
-353   5  CRH    Basic Materials        high  26.6% 25.8% composite 0.09            0  
-354   5  RS     Basic Materials        mid   26.5% 25.5% composite 0.94            0  
-355   5  WAT    Healthcare             mid   26.5% 25.5% composite 0.93            0  
-356   5  A      Healthcare             mid   26.5% 25.5% composite 0.93            0  
-357   5  BIO    Healthcare             mid   26.2% 25.5% composite 0.92            0  
-358   5  AIT    Industrials            mid   26.2% 25.5% composite 0.92            0  
-359   5  FERG   Industrials            high  26.0% 25.7% composite 0.08            0  
-360   5  SARO   Industrials            high  26.0% 25.7% composite 0.08            0  
-361   5  DECK   Consumer Cyclical      high  26.0% 25.7% composite 0.07            0  
-362   5  TOL    Consumer Cyclical      high  26.0% 25.7% composite 0.07            0  
-363   5  ALLY   Financial              high  26.0% 25.7% composite 0.07            0  
-364   5  WAL    Financial              high  26.0% 25.7% composite 0.05            0  
-365   5  SF     Financial              high  26.0% 25.7% composite 0.05            0  
-366   5  EXP    Basic Materials        high  26.0% 25.7% composite 0.04            0  
-367   5  THO    Consumer Cyclical      high  26.0% 25.7% composite 0.03            0  
-368   5  CNM    Industrials            high  26.0% 25.7% composite 0.03            0  
-369   5  SLM    Financial              high  26.0% 25.7% composite 0.03            0  
-370   5  HST    Real Estate            mid   25.9% 25.5% composite 0.91            0  
-371   5  EXEL   Healthcare             mid   25.9% 25.5% composite 0.91            0  
-372   5  TGT    Consumer Defensive     mid   25.4% 25.2% composite 0.88            0  
-373   5  AME    Industrials            mid   25.4% 25.2% composite 0.88            0  
-374   5  AGCO   Industrials            mid   25.4% 25.2% composite 0.88            0  
-375   5  DLTR   Consumer Defensive     mid   25.4% 25.1% composite 0.87            0  
-376   5  IEX    Industrials            mid   25.1% 24.9% composite 0.87            0  
-377   5  NDSN   Industrials            mid   25.0% 24.9% composite 0.86            0  
-378   5  WST    Healthcare             mid   25.0% 24.9% composite 0.86            0  
-379   5  OLLI   Consumer Defensive     mid   25.0% 24.9% composite 0.86            0  
-380   5  MAR    Consumer Cyclical      mid   25.0% 24.9% composite 0.86            0  
-381   6  JAZZ   Healthcare             mid   24.8% 24.6% composite 0.85            0  
-382   6  CROX   Consumer Cyclical      mid   24.8% 24.6% composite 0.84            0  
-383   6  GMED   Healthcare             mid   24.8% 24.6% composite 0.83            0  
-384   6  NTRS   Financial              mid   24.8% 24.6% composite 0.83            0  
-385   6  APPF   Technology             mid   24.8% 24.6% composite 0.82            0  
-386   6  IQV    Healthcare             mid   24.8% 24.6% composite 0.82            0  
-387   6  PH     Industrials            mid   24.8% 24.6% composite 0.82            0  
-388   6  BURL   Consumer Cyclical      mid   24.8% 24.6% composite 0.81            0  
-389   6  DOV    Industrials            mid   24.8% 24.6% composite 0.81            0  
-390   6  MSM    Industrials            mid   24.8% 24.6% composite 0.81            0  
-391   6  EXPD   Industrials            mid   24.8% 24.6% composite 0.81            0  
-392   6  KEX    Industrials            mid   24.8% 24.6% composite 0.80            0  
-393   6  HUM    Healthcare             mid   24.8% 24.6% composite 0.80            0  
-394   6  WTS    Industrials            mid   24.8% 24.6% composite 0.80            0  
-395   6  NEU    Basic Materials        mid   24.8% 24.6% composite 0.80            0  
-396   6  CPAY   Technology             mid   24.8% 24.6% composite 0.80            0  
-397   6  EQIX   Real Estate            mid   24.8% 24.6% composite 0.79            0  
-398   6  NTNX   Technology             mid   24.7% 24.6% composite 0.79            0  
-399   6  DHR    Healthcare             mid   24.7% 24.6% composite 0.78            0  
-400   6  TTC    Industrials            mid   24.7% 24.6% composite 0.78            0  
-401   6  AMGN   Healthcare             mid   24.7% 24.6% composite 0.78            0  
-402   6  PINS   Communication Services mid   24.7% 24.6% composite 0.78            0  
-403   6  TMO    Healthcare             mid   24.7% 24.6% composite 0.77            0  
-404   6  MET    Financial              mid   24.6% 24.6% composite 0.77            0  
-405   6  MTD    Healthcare             mid   24.6% 24.6% composite 0.76            0  
-406   6  ASH    Basic Materials        mid   24.6% 24.6% composite 0.76            0  
-407   6  FCFS   Financial              mid   24.6% 24.6% composite 0.75            0  
-408   6  AAPL   Technology             mid   24.6% 24.6% composite 0.74            0  
-409   6  LNTH   Healthcare             mid   24.6% 24.6% composite 0.73            0  
-410   6  SEIC   Financial              mid   24.6% 24.6% composite 0.72            0  
-411   6  CASY   Consumer Cyclical      low   24.5% 25.9% composite 0.95            0  
-412   6  ROL    Consumer Cyclical      low   24.5% 25.5% composite 0.90            0  
-413   6  ACI    Consumer Defensive     low   24.5% 25.5% composite 0.89            0  
-414   6  VRSK   Industrials            low   24.5% 25.4% composite 0.88            0  
-415   6  MGM    Consumer Cyclical      mid   24.5% 23.6% signatures x1 (+composite)    1  time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
-416   6  MLI    Industrials            mid   24.4% 24.6% composite 0.71            0  
-417   6  SFM    Consumer Defensive     low   24.3% 24.3% composite 0.86            0  
-418   6  FNF    Financial              low   24.3% 24.3% composite 0.85            0  
-419   6  MTG    Financial              low   24.3% 24.3% composite 0.85            0  
-420   6  BAC    Financial              mid   24.2% 24.6% composite 0.71            0  
-421   6  WAB    Industrials            mid   24.2% 24.6% composite 0.71            0  
-422   6  DLB    Industrials            mid   24.2% 24.6% composite 0.70            0  
-423   6  TECH   Healthcare             mid   24.2% 24.6% composite 0.70            0  
-424   6  ROST   Consumer Cyclical      mid   24.2% 24.6% composite 0.70            0  
-425   6  DXCM   Healthcare             mid   24.2% 24.6% composite 0.70            0  
-426   6  CHRW   Industrials            mid   24.2% 24.5% composite 0.69            0  
-427   6  H      Consumer Cyclical      mid   24.2% 24.5% composite 0.69            0  
-428   6  FAST   Industrials            mid   24.2% 24.5% composite 0.69            0  
-429   6  HOG    Consumer Cyclical      mid   24.2% 24.5% composite 0.69            0  
-430   6  AMP    Financial              mid   24.2% 24.5% composite 0.69            0  
-431   6  VOYA   Financial              mid   24.2% 24.5% composite 0.69            0  
-432   6  SON    Consumer Cyclical      mid   24.2% 24.5% composite 0.68            0  
-433   6  MSFT   Technology             mid   24.2% 24.5% composite 0.68            0  
-434   6  GEF    Consumer Cyclical      mid   24.2% 24.5% composite 0.67            0  
-435   6  CNO    Financial              mid   24.2% 24.5% composite 0.67            0  
-436   6  MTN    Consumer Cyclical      mid   24.2% 24.5% composite 0.67            0  
-437   6  BCO    Industrials            mid   24.2% 24.5% composite 0.67            0  
-438   6  IFF    Basic Materials        mid   24.2% 24.5% composite 0.66            0  
-439   6  REGN   Healthcare             mid   24.2% 24.5% composite 0.66            0  
-440   6  HQY    Healthcare             mid   24.2% 24.5% composite 0.66            0  
-441   6  J      Industrials            mid   24.2% 24.5% composite 0.65            0  
-442   6  COLB   Financial              mid   24.2% 24.5% composite 0.65            0  
-443   6  PLNT   Consumer Cyclical      low   24.1% 24.3% composite 0.84            0  
-444   6  ESNT   Financial              low   23.8% 24.3% composite 0.82            0  
-445   6  EIX    Utilities              low   23.8% 24.3% composite 0.82            0  
-446   6  ALL    Financial              low   23.8% 24.3% composite 0.82            0  
-447   6  VTR    Real Estate            low   23.8% 24.3% composite 0.81            0  
-448   6  GIS    Consumer Defensive     low   23.8% 24.3% composite 0.81            0  
-449   6  POR    Utilities              low   23.8% 24.3% composite 0.80            0  
-450   6  TXRH   Consumer Cyclical      low   23.8% 24.3% composite 0.80            0  
-451   6  PAYX   Technology             low   23.8% 24.3% composite 0.78            0  
-452   6  WY     Real Estate            low   23.8% 23.9% composite 0.77            0  
-453   6  CHTR   Communication Services low   23.8% 23.9% composite 0.77            0  
-454   6  BRO    Financial              low   23.8% 23.9% composite 0.76            0  
-455   6  MKC    Consumer Defensive     low   23.8% 23.9% composite 0.74            0  
-456   6  TMUS   Communication Services low   23.8% 23.9% composite 0.74            0  
-457   6  POST   Consumer Defensive     low   23.8% 23.9% composite 0.74            0  
-458   6  AHR    Real Estate            low   23.8% 23.9% composite 0.74            0  
-459   6  NFLX   Communication Services low   23.8% 23.9% composite 0.74            0  
-460   6  CACI   Technology             low   23.8% 23.9% composite 0.74            0  
-461   6  AON    Financial              low   23.8% 23.9% composite 0.74            0  
-462   6  RLI    Financial              low   23.8% 23.9% composite 0.73            0  
-463   6  DRI    Consumer Cyclical      low   23.8% 23.9% composite 0.73            0  
-464   6  KRG    Real Estate            low   23.8% 23.9% composite 0.73            0  
-465   6  RYN    Real Estate            low   23.8% 23.9% composite 0.73            0  
-466   6  CVS    Healthcare             low   23.8% 23.9% composite 0.72            0  
-467   6  CTRE   Real Estate            low   23.8% 23.9% composite 0.72            0  
-468   6  ERIE   Financial              low   23.8% 23.9% composite 0.72            0  
-469   6  USFD   Consumer Defensive     low   23.8% 23.9% composite 0.72            0  
-470   6  AJG    Financial              low   23.8% 23.9% composite 0.72            0  
-471   6  NNN    Real Estate            low   23.8% 23.9% composite 0.71            0  
-472   6  NWS    Communication Services low   23.8% 23.9% composite 0.71            0  
-473   6  MUSA   Consumer Cyclical      low   23.8% 23.9% composite 0.71            0  
-474   6  CMCSA  Communication Services low   23.8% 23.9% composite 0.71            0  
-475   6  KHC    Consumer Defensive     low   23.8% 23.9% composite 0.71            0  
-476   6  HR     Real Estate            low   23.8% 23.9% composite 0.71            0  
-477   6  YUM    Consumer Cyclical      low   23.8% 23.9% composite 0.70            0  
-478   6  HRL    Consumer Defensive     low   23.8% 23.9% composite 0.70            0  
-479   6  RTX    Industrials            low   23.8% 23.9% composite 0.70            0  
-480   6  BSX    Healthcare             low   23.8% 23.9% composite 0.70            0  
-481   6  WTW    Financial              low   23.8% 23.9% composite 0.70            0  
-482   6  PPC    Consumer Defensive     low   23.8% 23.9% composite 0.69            0  
-483   6  MNST   Consumer Defensive     low   23.8% 23.9% composite 0.69            0  
-484   6  BR     Technology             low   23.8% 23.9% composite 0.69            0  
-485   6  RYAN   Financial              low   23.8% 23.9% composite 0.68            0  
-486   6  FCN    Industrials            low   23.8% 23.9% composite 0.68            0  
-487   6  JNJ    Healthcare             low   23.8% 23.9% composite 0.67            0  
-488   6  LHX    Industrials            low   23.8% 23.9% composite 0.67            0  
-489   6  GL     Financial              low   23.8% 23.9% composite 0.67            0  
-490   6  DAR    Consumer Defensive     low   23.8% 23.9% composite 0.66            0  
-491   6  FOX    Communication Services low   23.8% 23.9% composite 0.66            0  
-492   6  D      Utilities              low   23.8% 23.9% composite 0.65            0  
-493   6  SPGI   Financial              low   23.8% 23.9% composite 0.65            0  
-494   6  FANG   Energy                 low   23.8% 23.9% composite 0.65            0  
-495   6  NOC    Industrials            low   23.8% 23.9% composite 0.65            0  
-496   6  FRT    Real Estate            low   23.8% 23.9% composite 0.64            0  
-497   6  MMS    Industrials            low   23.8% 23.9% composite 0.64            0  
-498   6  DTM    Energy                 low   23.8% 23.9% composite 0.64            0  
-499   6  CAH    Healthcare             low   23.8% 23.9% composite 0.64            0  
-500   6  PODD   Healthcare             low   23.8% 23.9% composite 0.64            0  
-501   6  MCD    Consumer Cyclical      low   23.8% 23.9% composite 0.64            0  
-502   6  SYK    Healthcare             low   23.8% 23.9% composite 0.63            0  
-503   6  KNSL   Financial              low   23.8% 23.9% composite 0.62            0  
-504   6  PRI    Financial              low   23.8% 23.9% composite 0.62            0  
-505   6  ADC    Real Estate            low   23.8% 23.9% composite 0.62            0  
-506   6  ETR    Utilities              low   23.8% 23.9% composite 0.62            0  
-507   6  NWSA   Communication Services low   23.8% 23.9% composite 0.62            0  
-508   6  CLX    Consumer Defensive     low   23.8% 23.9% composite 0.61            0  
-509   6  AM     Energy                 low   23.8% 23.9% composite 0.61            0  
-510   6  ABT    Healthcare             low   23.8% 23.9% composite 0.61            0  
-511   6  NI     Utilities              low   23.8% 23.9% composite 0.61            0  
-512   6  UNP    Industrials            low   23.8% 23.9% composite 0.60            0  
-513   6  G      Technology             low   23.8% 23.9% composite 0.60            0  
-514   6  VMRK   Real Estate            low   23.8% 23.9% composite 0.60            0  
-515   6  SAIC   Technology             low   23.8% 23.9% composite 0.60            0  
-516   6  STZ    Consumer Defensive     low   23.8% 23.9% composite 0.60            0  
-517   6  FDS    Financial              low   23.8% 23.9% composite 0.60            0  
-518   6  SBRA   Real Estate            low   23.8% 23.9% composite 0.60            0  
-519   6  CNP    Utilities              low   23.8% 23.9% composite 0.59            0  
-520   6  SRE    Utilities              low   23.8% 23.9% composite 0.59            0  
-521   6  TYL    Technology             low   23.8% 23.9% composite 0.59            0  
-522   6  BHF    Financial              low   23.8% 23.9% composite 0.59            0  
-523   6  MORN   Financial              low   23.8% 23.9% composite 0.59            0  
-524   6  TRGP   Energy                 low   23.8% 23.9% composite 0.59            0  
-525   6  WELL   Real Estate            low   23.8% 23.9% composite 0.59            0  
-526   6  CPRT   Industrials            low   23.8% 23.9% composite 0.59            0  
-527   6  BG     Consumer Defensive     low   23.8% 23.9% composite 0.59            0  
-528   6  SCI    Consumer Cyclical      low   23.8% 23.9% composite 0.59            0  
-529   6  DPZ    Consumer Cyclical      low   23.8% 23.9% composite 0.59            0  
-530   6  SPG    Real Estate            low   23.8% 23.9% composite 0.59            0  
-531   6  KMB    Consumer Defensive     low   23.8% 23.9% composite 0.59            0  
-532   6  T      Communication Services low   23.8% 23.9% composite 0.58            0  
-533   6  NJR    Utilities              low   23.8% 23.9% composite 0.58            0  
-534   6  FOXA   Communication Services low   23.8% 23.9% composite 0.58            0  
-535   6  VNOM   Energy                 low   23.8% 23.9% composite 0.58            0  
-536   6  IRT    Real Estate            low   23.8% 23.9% composite 0.58            0  
-537   6  BMY    Healthcare             low   23.8% 23.9% composite 0.58            0  
-538   6  DTE    Utilities              low   23.8% 23.9% composite 0.58            0  
-539   6  MSCI   Financial              low   23.8% 23.9% composite 0.58            0  
-540   6  OHI    Real Estate            low   23.8% 23.9% composite 0.57            0  
-541   6  TRV    Financial              low   23.8% 23.9% composite 0.57            0  
-542   6  CCI    Real Estate            low   23.8% 23.9% composite 0.57            0  
-543   6  VZ     Communication Services low   23.8% 23.9% composite 0.57            0  
-544   6  LNT    Utilities              low   23.8% 23.9% composite 0.56            0  
-545   6  OKE    Energy                 low   23.8% 23.9% composite 0.56            0  
-546   6  SJM    Consumer Defensive     low   23.8% 23.9% composite 0.56            0  
-547   6  PNW    Utilities              low   23.8% 23.9% composite 0.56            0  
-548   6  HIG    Financial              low   23.8% 23.9% composite 0.56            0  
-549   6  HSY    Consumer Defensive     low   23.8% 23.9% composite 0.55            0  
-550   6  VICI   Real Estate            low   23.8% 23.9% composite 0.55            0  
-551   6  CSGP   Real Estate            low   23.8% 23.9% composite 0.55            0  
-552   6  LAMR   Real Estate            low   23.8% 23.9% composite 0.55            0  
-553   6  IDA    Utilities              low   23.8% 23.9% composite 0.54            0  
-554   6  EPR    Real Estate            low   23.8% 23.9% composite 0.54            0  
-555   6  DGX    Healthcare             low   23.8% 23.9% composite 0.54            0  
-556   6  GLPI   Real Estate            low   23.8% 23.7% composite 0.53            0  
-557   6  CINF   Financial              low   23.8% 23.7% composite 0.53            0  
-558   6  ORI    Financial              low   23.8% 23.7% composite 0.53            0  
-559   6  OXY    Energy                 low   23.8% 23.7% composite 0.53            0  
-560   6  TJX    Consumer Cyclical      low   23.8% 23.7% composite 0.53            0  
-561   6  SIGI   Financial              low   23.8% 23.7% composite 0.53            0  
-562   6  ADP    Technology             low   23.8% 23.7% composite 0.52            0  
-563   6  MO     Consumer Defensive     low   23.8% 23.7% composite 0.52            0  
-564   6  EXLS   Technology             low   23.8% 23.7% composite 0.52            0  
-565   6  BALL   Consumer Cyclical      low   23.8% 23.7% composite 0.52            0  
-566   6  MRK    Healthcare             low   23.8% 23.7% composite 0.51            0  
-567   6  OVV    Energy                 low   23.8% 23.7% composite 0.51            0  
-568   6  HAE    Healthcare             low   23.8% 23.7% composite 0.51            0  
-569   6  COP    Energy                 low   23.8% 23.7% composite 0.51            0  
-570   6  CB     Financial              low   23.8% 23.7% composite 0.50            0  
-571   6  WMT    Consumer Defensive     low   23.8% 23.7% composite 0.50            0  
-572   6  INTU   Technology             low   23.8% 23.7% composite 0.50            0  
-573   6  APA    Energy                 low   23.8% 23.7% composite 0.50            0  
-574   6  PGR    Financial              low   23.8% 23.7% composite 0.50            0  
-575   6  SBAC   Real Estate            low   23.8% 23.7% composite 0.50            0  
-576   6  WM     Industrials            low   23.8% 23.7% composite 0.50            0  
-577   6  PR     Energy                 low   23.8% 23.7% composite 0.50            0  
-578   6  EOG    Energy                 low   23.8% 23.7% composite 0.50            0  
-579   6  NEE    Utilities              low   23.8% 23.7% composite 0.49            0  
-580   6  DINO   Energy                 low   23.8% 23.7% composite 0.49            0  
-581   6  KDP    Consumer Defensive     low   23.8% 23.7% composite 0.49            0  
-582   6  ELV    Healthcare             low   23.8% 23.7% composite 0.49            0  
-583   6  PCTY   Technology             low   23.8% 23.7% composite 0.49            0  
-584   6  WMB    Energy                 low   23.8% 23.7% composite 0.49            0  
-585   6  MPC    Energy                 low   23.8% 23.7% composite 0.49            0  
-586   6  ES     Utilities              low   23.8% 23.7% composite 0.49            0  
-587   6  ZBH    Healthcare             low   23.8% 23.7% composite 0.49            0  
-588   6  FE     Utilities              low   23.8% 23.7% composite 0.48            0  
-589   6  MAA    Real Estate            low   23.8% 23.7% composite 0.48            0  
-590   6  KO     Consumer Defensive     low   23.8% 23.7% composite 0.48            0  
-591   6  VLO    Energy                 low   23.8% 23.7% composite 0.48            0  
-592   6  DVN    Energy                 low   23.8% 23.7% composite 0.48            0  
-593   6  UDR    Real Estate            low   23.8% 23.7% composite 0.48            0  
-594   6  EXC    Utilities              low   23.8% 23.7% composite 0.47            0  
-595   6  AR     Energy                 low   23.8% 23.7% composite 0.47            0  
-596   6  RRC    Energy                 low   23.8% 23.7% composite 0.47            0  
-597   6  O      Real Estate            low   23.8% 23.7% composite 0.47            0  
-598   6  PM     Consumer Defensive     low   23.8% 23.7% composite 0.47            0  
-599   6  AEP    Utilities              low   23.8% 23.7% composite 0.46            0  
-600   6  TSN    Consumer Defensive     low   23.8% 23.7% composite 0.46            0  
-601   6  AFL    Financial              low   23.8% 23.7% composite 0.46            0  
-602   6  SLAB   Technology             mid   23.7% 24.5% composite 0.65            0  
-603   6  CHH    Consumer Cyclical      mid   23.7% 24.5% composite 0.65            0  
-604   6  IDXX   Healthcare             mid   23.7% 24.5% composite 0.64            0  
-605   6  SSD    Basic Materials        mid   23.7% 24.5% composite 0.64            0  
-606   6  DE     Industrials            mid   23.7% 24.5% composite 0.62            0  
-607   6  SIRI   Communication Services mid   23.6% 24.3% composite 0.62            0  
-608   6  DLR    Real Estate            mid   23.6% 24.3% composite 0.60            0  
-609   6  EW     Healthcare             mid   23.6% 24.3% composite 0.60            0  
-610   6  GPC    Consumer Cyclical      mid   23.6% 24.3% composite 0.59            0  
-611   6  FTV    Technology             mid   23.6% 24.3% composite 0.59            0  
-612   6  CBT    Basic Materials        mid   23.6% 24.3% composite 0.59            0  
-613   6  PNFP   Financial              mid   23.6% 24.3% composite 0.59            0  
-614   6  DCI    Industrials            mid   23.6% 24.3% composite 0.59            0  
-615   6  ULTA   Consumer Cyclical      mid   23.6% 24.3% composite 0.59            0  
-616   6  TROW   Financial              mid   23.6% 24.3% composite 0.59            0  
-617   6  EBAY   Consumer Cyclical      mid   23.6% 24.3% composite 0.57            0  
-618   6  LYV    Communication Services mid   23.6% 24.3% composite 0.56            0  
-619   6  USB    Financial              mid   23.6% 24.3% composite 0.56            0  
-620   6  UBSI   Financial              mid   23.6% 24.3% composite 0.56            0  
-621   6  FITB   Financial              mid   23.6% 24.3% composite 0.56            0  
-622   6  TPL    Energy                 mid   23.6% 24.3% composite 0.55            0  
-623   6  UNM    Financial              low   23.6% 23.7% composite 0.46            0  
-624   6  PSX    Energy                 low   23.6% 23.7% composite 0.46            0  
-625   6  REG    Real Estate            low   23.6% 23.7% composite 0.45            0  
-626   6  SYY    Consumer Defensive     low   23.6% 23.7% composite 0.45            0  
-627   6  LH     Healthcare             low   23.6% 23.7% composite 0.45            0  
-628   6  CBSH   Financial              low   23.6% 23.7% composite 0.45            0  
-629   6  STAG   Real Estate            low   23.6% 23.7% composite 0.45            0  
-630   6  UTHR   Healthcare             low   23.6% 23.7% composite 0.45            0  
-631   6  COKE   Consumer Defensive     low   23.6% 23.7% composite 0.44            0  
-632   6  SLGN   Consumer Cyclical      mid   23.5% 24.3% composite 0.55            0  
-633   6  ATO    Utilities              low   23.5% 23.6% composite 0.43            0  
-634   6  LLY    Healthcare             low   23.5% 23.6% composite 0.43            0  
-635   6  DUK    Utilities              low   23.5% 23.6% composite 0.43            0  
-636   6  WFC    Financial              mid   23.2% 24.1% composite 0.55            0  
-637   6  HWC    Financial              mid   23.2% 23.9% composite 0.55            0  
-638   6  EWBC   Financial              mid   23.2% 23.7% composite 0.54            0  
-639   6  EXPO   Industrials            mid   23.2% 23.7% composite 0.54            0  
-640   6  BKR    Energy                 mid   23.2% 23.7% composite 0.54            0  
-641   6  UPS    Industrials            mid   23.2% 23.7% composite 0.54            0  
-642   6  ZION   Financial              mid   23.2% 23.7% composite 0.54            0  
-643   6  PFG    Financial              mid   23.2% 23.7% composite 0.53            0  
-644   6  HLT    Consumer Cyclical      mid   23.2% 23.7% composite 0.53            0  
-645   6  CFR    Financial              mid   23.2% 23.7% composite 0.53            0  
-646   6  HLI    Financial              mid   23.2% 23.7% composite 0.53            0  
-647   6  TNL    Consumer Cyclical      mid   23.2% 23.7% composite 0.52            0  
-648   6  DIS    Communication Services mid   23.2% 23.7% composite 0.52            0  
-649   6  WH     Consumer Cyclical      mid   23.2% 23.7% composite 0.52            0  
-650   6  ALLE   Industrials            mid   23.2% 23.7% composite 0.51            0  
-651   6  ASB    Financial              mid   23.2% 23.7% composite 0.51            0  
-652   6  MEDP   Healthcare             mid   23.2% 23.7% composite 0.51            0  
-653   6  SOLV   Healthcare             mid   23.2% 23.7% composite 0.51            0  
-654   6  MSA    Industrials            mid   23.2% 23.7% composite 0.51            0  
-655   6  AVY    Consumer Cyclical      mid   23.2% 23.7% composite 0.51            0  
-656   6  CART   Consumer Cyclical      mid   23.2% 23.7% composite 0.50            0  
-657   6  ARMK   Industrials            mid   23.2% 23.7% composite 0.50            0  
-658   6  HSIC   Healthcare             mid   23.2% 23.7% composite 0.50            0  
-659   6  TTEK   Industrials            mid   23.2% 23.4% composite 0.49            0  
-660   6  ORA    Utilities              mid   23.2% 23.4% composite 0.49            0  
-661   6  GWW    Industrials            mid   23.2% 23.4% composite 0.48            0  
-662   6  KBR    Industrials            mid   23.2% 23.4% composite 0.47            0  
-663   6  PRU    Financial              mid   23.2% 23.4% composite 0.47            0  
-664   6  PNC    Financial              mid   23.2% 23.4% composite 0.47            0  
-665   6  ADSK   Technology             mid   23.2% 23.4% composite 0.47            0  
-666   6  COLM   Consumer Cyclical      mid   23.2% 23.4% composite 0.47            0  
-667   6  VRTX   Healthcare             mid   23.2% 23.4% composite 0.45            0  
-668   6  SBUX   Consumer Cyclical      mid   23.2% 23.4% composite 0.45            0  
-669   6  MMM    Industrials            mid   23.2% 23.4% composite 0.45            0  
-670   6  NBIX   Healthcare             mid   23.2% 23.4% composite 0.45            0  
-671   6  ULS    Industrials            mid   23.2% 23.4% composite 0.45            0  
-672   6  UNH    Healthcare             mid   23.2% 23.4% composite 0.45            0  
-673   6  CYTK   Healthcare             mid   23.2% 23.4% composite 0.45            0  
-674   6  CUZ    Real Estate            mid   23.2% 23.4% composite 0.44            0  
-675   6  KRC    Real Estate            mid   23.2% 23.4% composite 0.43            0  
-676   6  CI     Healthcare             low   23.1% 23.6% composite 0.42            0  
-677   6  CTAS   Industrials            low   23.1% 23.6% composite 0.42            0  
-678   6  KVUE   Consumer Defensive     low   23.1% 23.6% composite 0.42            0  
-679   6  CNX    Energy                 low   23.1% 23.6% composite 0.42            0  
-680   6  L      Financial              low   23.1% 23.6% composite 0.42            0  
-681   6  EXE    Energy                 low   23.1% 23.6% composite 0.41            0  
-682   6  SO     Utilities              low   23.1% 23.6% composite 0.41            0  
-683   6  AIZ    Financial              low   23.1% 23.6% composite 0.41            0  
-684   6  BDX    Healthcare             low   23.1% 23.6% composite 0.40            0  
-685   6  CPT    Real Estate            low   23.1% 23.6% composite 0.40            0  
-686   6  PPL    Utilities              low   23.1% 23.6% composite 0.40            0  
-687   6  CUBE   Real Estate            low   23.1% 23.6% composite 0.39            0  
-688   6  EGP    Real Estate            low   23.1% 23.6% composite 0.39            0  
-689   6  PEP    Consumer Defensive     low   23.1% 23.6% composite 0.39            0  
-690   6  ADM    Consumer Defensive     low   23.1% 23.6% composite 0.39            0  
-691   6  WPC    Real Estate            low   23.1% 23.6% composite 0.39            0  
-692   6  CMS    Utilities              low   23.1% 23.6% composite 0.39            0  
-693   6  CME    Financial              low   23.1% 23.6% composite 0.39            0  
-694   6  BIIB   Healthcare             low   23.0% 23.0% composite 0.38            0  
-695   6  DHI    Consumer Cyclical      mid   22.8% 23.4% composite 0.43            0  
-696   6  GHC    Industrials            mid   22.8% 23.4% composite 0.43            0  
-697   6  OLN    Basic Materials        mid   22.8% 23.4% composite 0.42            0  
-698   6  PHM    Consumer Cyclical      mid   22.8% 23.4% composite 0.42            0  
-699   6  CHDN   Consumer Cyclical      mid   22.8% 23.4% composite 0.42            0  
-700   6  RMD    Healthcare             mid   22.8% 23.4% composite 0.41            0  
-701   6  SCHW   Financial              mid   22.8% 23.4% composite 0.41            0  
-702   6  CMG    Consumer Cyclical      mid   22.8% 23.4% composite 0.41            0  
-703   6  BSY    Technology             mid   22.8% 23.4% composite 0.41            0  
-704   6  RBA    Industrials            mid   22.7% 23.4% composite 0.40            0  
-705   6  HON    Industrials            mid   22.7% 23.4% composite 0.40            0  
-706   6  IBM    Technology             mid   22.7% 23.4% composite 0.40            0  
-707   6  OZK    Financial              mid   22.7% 23.4% composite 0.39            0  
-708   6  KD     Technology             mid   22.7% 23.4% composite 0.39            0  
-709   6  MTB    Financial              mid   22.7% 23.4% composite 0.39            0  
-710   6  AMCR   Consumer Cyclical      mid   22.7% 23.4% composite 0.39            0  
-711   6  LEN    Consumer Cyclical      mid   22.6% 23.4% composite 0.39            0  
-712   6  WTFC   Financial              mid   22.6% 22.9% composite 0.38            0  
-713   6  OMC    Communication Services mid   22.6% 22.9% composite 0.38            0  
-714   6  LAD    Consumer Cyclical      mid   22.6% 22.9% composite 0.38            0  
-715   6  VLY    Financial              mid   22.6% 22.9% composite 0.37            0  
-716   6  XYL    Industrials            mid   22.6% 22.9% composite 0.37            0  
-717   6  CAR    Industrials            mid   22.6% 22.9% composite 0.37            0  
-718   6  GRMN   Technology             mid   22.6% 22.9% composite 0.37            0  
-719   6  KEY    Financial              mid   22.6% 22.9% composite 0.37            0  
-720   6  HBAN   Financial              mid   22.6% 22.9% composite 0.36            0  
-721   6  BMRN   Healthcare             mid   22.6% 22.9% composite 0.36            0  
-722   6  ONB    Financial              mid   22.6% 22.9% composite 0.36            0  
-723   6  UMBF   Financial              mid   22.6% 22.9% composite 0.36            0  
-724   6  HAS    Consumer Cyclical      mid   22.6% 22.9% composite 0.35            0  
-725   6  CSX    Industrials            mid   22.6% 22.9% composite 0.35            0  
-726   6  GATX   Industrials            mid   22.6% 22.9% composite 0.35            0  
-727   6  PLD    Real Estate            mid   22.6% 22.9% composite 0.34            0  
-728   6  COO    Healthcare             mid   22.6% 22.9% composite 0.34            0  
-729   6  PAG    Consumer Cyclical      mid   22.6% 22.9% composite 0.34            0  
-730   6  AES    Utilities              mid   22.6% 22.9% composite 0.34            0  
-731   6  FFIN   Financial              mid   22.6% 22.9% composite 0.34            0  
-732   6  MAT    Consumer Cyclical      mid   22.6% 22.9% composite 0.34            0  
-733   6  GPK    Consumer Cyclical      mid   22.6% 22.9% composite 0.34            0  
-734   6  INCY   Healthcare             mid   22.6% 22.9% composite 0.33            0  
-735   6  DOC    Real Estate            mid   22.6% 22.9% composite 0.33            0  
-736   6  UFPI   Basic Materials        mid   22.6% 22.9% composite 0.33            0  
-737   6  REXR   Real Estate            mid   22.6% 22.9% composite 0.33            0  
-738   6  WMG    Communication Services mid   22.6% 22.9% composite 0.31            0  
-739   6  MOS    Basic Materials        mid   22.6% 22.9% composite 0.31            0  
-740   6  RF     Financial              mid   22.6% 22.9% composite 0.31            0  
-741   6  ITW    Industrials            mid   22.6% 22.9% composite 0.31            0  
-742   6  MLM    Basic Materials        mid   22.6% 22.9% composite 0.31            0  
-743   6  JPM    Financial              mid   22.6% 22.9% composite 0.31            0  
-744   6  TFC    Financial              mid   22.6% 22.9% composite 0.30            0  
-745   6  ARE    Real Estate            mid   22.6% 22.9% composite 0.30            0  
-746   6  CCK    Consumer Cyclical      mid   22.6% 22.9% composite 0.30            0  
-747   6  FICO   Technology             mid   22.6% 22.9% composite 0.29            0  
-748   6  BXP    Real Estate            mid   22.6% 22.9% composite 0.29            0  
-749   6  EEFT   Technology             mid   22.6% 22.9% composite 0.29            0  
-750   6  LDOS   Technology             mid   22.6% 22.9% composite 0.28            0  
-751   6  VVV    Consumer Cyclical      mid   22.6% 22.9% composite 0.28            0  
-752   6  PKG    Consumer Cyclical      mid   22.6% 22.9% composite 0.28            0  
-753   6  KR     Consumer Defensive     low   22.6% 23.0% composite 0.38            0  
-754   6  OGE    Utilities              low   22.4% 23.0% composite 0.38            0  
-755   6  THG    Financial              low   22.4% 23.0% composite 0.37            0  
-756   6  EVRG   Utilities              low   22.4% 23.0% composite 0.37            0  
-757   6  AEE    Utilities              low   22.4% 23.0% composite 0.37            0  
-758   6  XOM    Energy                 low   22.4% 23.0% composite 0.37            0  
-759   6  OTIS   Industrials            low   22.4% 23.0% composite 0.37            0  
-760   6  KIM    Real Estate            low   22.4% 23.0% composite 0.37            0  
-761   6  BRX    Real Estate            low   22.4% 22.9% composite 0.36            0  
-762   6  ORLY   Consumer Cyclical      low   22.4% 22.9% composite 0.36            0  
-763   6  ENSG   Healthcare             low   22.4% 22.9% composite 0.36            0  
-764   6  MRSH   Financial              low   22.4% 22.9% composite 0.35            0  
-765   6  LMT    Industrials            low   22.4% 22.9% composite 0.35            0  
-766   6  MZTI   Consumer Defensive     low   22.4% 22.9% composite 0.35            0  
-767   6  SWX    Utilities              low   22.4% 22.9% composite 0.35            0  
-768   6  WEC    Utilities              low   22.4% 22.9% composite 0.35            0  
-769   6  PEG    Utilities              low   22.4% 22.9% composite 0.34            0  
-770   6  XEL    Utilities              low   22.4% 22.9% composite 0.34            0  
-771   6  GILD   Healthcare             low   22.4% 22.9% composite 0.34            0  
-772   6  OGS    Utilities              low   22.4% 22.9% composite 0.34            0  
-773   6  VRSN   Technology             low   22.4% 22.9% composite 0.34            0  
-774   6  RNR    Financial              low   22.4% 22.1% composite 0.33            0  
-775   6  CHE    Healthcare             low   22.4% 22.1% composite 0.32            0  
-776   6  INVH   Real Estate            low   22.4% 22.1% composite 0.32            0  
-777   6  NSC    Industrials            low   22.4% 22.1% composite 0.32            0  
-778   6  ACGL   Financial              low   22.4% 22.1% composite 0.32            0  
-779   6  CVX    Energy                 low   22.4% 22.1% composite 0.31            0  
-780   6  UHS    Healthcare             low   22.4% 22.1% composite 0.30            0  
-781   6  NWE    Utilities              low   22.4% 22.1% composite 0.30            0  
-782   6  AMH    Real Estate            low   22.4% 22.1% composite 0.29            0  
-783   6  ED     Utilities              low   22.4% 22.1% composite 0.29            0  
-784   6  COR    Healthcare             low   22.4% 22.1% composite 0.29            0  
-785   6  AZO    Consumer Cyclical      low   22.4% 22.1% composite 0.28            0  
-786   6  SAM    Consumer Defensive     low   22.4% 22.1% composite 0.28            0  
-787   6  VLTO   Industrials            low   22.4% 22.1% composite 0.28            0  
-788   6  LIN    Basic Materials        low   22.4% 22.1% composite 0.27            0  
-789   6  NFG    Energy                 low   22.4% 22.1% composite 0.27            0  
-790   6  BJ     Consumer Defensive     low   22.4% 22.1% composite 0.27            0  
-791   6  CHWY   Consumer Cyclical      mid   22.3% 22.9% composite 0.28            0  
-792   6  PNR    Industrials            mid   22.3% 22.9% composite 0.27            0  
-793   6  PFGC   Consumer Defensive     mid   22.3% 22.9% composite 0.25            0  
-794   6  PCAR   Industrials            mid   22.3% 22.9% composite 0.24            0  
-795   6  TCBI   Financial              mid   22.3% 22.9% composite 0.24            0  
-796   6  AWK    Utilities              low   22.2% 21.9% composite 0.26            0  
-797   6  HCA    Healthcare             low   22.2% 21.9% composite 0.26            0  
-798   6  EHC    Healthcare             low   22.2% 21.9% composite 0.26            0  
-799   6  SUI    Real Estate            low   22.2% 21.9% composite 0.26            0  
-800   6  MCK    Healthcare             low   22.2% 21.9% composite 0.26            0  
-801   6  CL     Consumer Defensive     low   22.2% 21.9% composite 0.26            0  
-802   6  RGA    Financial              low   22.2% 21.9% composite 0.25            0  
-803   6  BF-B   Consumer Defensive     low   22.2% 21.9% composite 0.25            0  
-804   6  BKH    Utilities              low   22.2% 21.8% composite 0.25            0  
-805   6  MSI    Technology             low   22.2% 21.8% composite 0.25            0  
-806   6  ELS    Real Estate            low   22.2% 21.5% composite 0.23            0  
-807   6  ESS    Real Estate            low   22.2% 21.3% composite 0.23            0  
-808   6  MDT    Healthcare             low   22.2% 21.3% composite 0.23            0  
-809   6  UGI    Utilities              low   22.2% 21.3% composite 0.22            0  
-810   6  APD    Basic Materials        low   22.2% 21.3% composite 0.22            0  
-811   6  PFE    Healthcare             low   22.2% 21.3% composite 0.22            0  
-812   6  AMT    Real Estate            low   22.2% 21.3% composite 0.21            0  
-813   6  EQT    Energy                 low   22.2% 21.3% composite 0.21            0  
-814   6  RSG    Industrials            low   22.2% 21.3% composite 0.19            0  
-815   6  LOPE   Consumer Defensive     low   22.2% 21.3% composite 0.19            0  
-816   6  SR     Utilities              low   22.0% 21.3% composite 0.18            0  
-817   6  KMI    Energy                 low   22.0% 21.3% composite 0.18            0  
-818   6  CLH    Industrials            low   22.0% 21.3% composite 0.18            0  
-819   6  ICE    Financial              low   22.0% 21.1% composite 0.17            0  
-820   6  AIG    Financial              low   22.0% 21.1% composite 0.17            0  
-821   6  BRK-B  Financial              low   22.0% 21.1% composite 0.16            0  
-822   6  PEN    Healthcare             low   22.0% 21.0% composite 0.16            0  
-823   6  EG     Financial              low   22.0% 21.0% composite 0.16            0  
-824   6  WRB    Financial              low   22.0% 20.6% composite 0.15            0  
-825   6  KBH    Consumer Cyclical      mid   21.9% 22.9% composite 0.23            0  
-826   6  JLL    Real Estate            mid   21.9% 22.9% composite 0.23            0  
-827   6  FNB    Financial              mid   21.9% 22.9% composite 0.23            0  
-828   6  PSA    Real Estate            mid   21.9% 22.9% composite 0.22            0  
-829   6  GGG    Industrials            mid   21.9% 22.9% composite 0.22            0  
-830   6  EXR    Real Estate            mid   21.9% 22.9% composite 0.22            0  
-831   6  HOMB   Financial              mid   21.8% 22.9% composite 0.22            0  
-832   6  V      Financial              low   21.7% 20.6% composite 0.15            0  
-833   6  SSB    Financial              mid   21.6% 22.9% composite 0.22            0  
-834   6  TXT    Industrials            mid   21.5% 22.9% composite 0.22            0  
-835   6  TSCO   Consumer Cyclical      mid   21.4% 22.9% composite 0.21            0  
-836   6  BKNG   Consumer Cyclical      mid   21.4% 22.9% composite 0.21            0  
-837   6  RPM    Basic Materials        mid   21.4% 22.9% composite 0.21            0  
-838   6  FR     Real Estate            mid   21.4% 22.9% composite 0.20            0  
-839   6  AN     Consumer Cyclical      mid   21.4% 22.9% composite 0.20            0  
-840   6  GD     Industrials            mid   21.4% 22.9% composite 0.19            0  
-841   6  FLG    Financial              mid   21.4% 22.9% composite 0.19            0  
-842   6  ECL    Basic Materials        mid   21.4% 22.9% composite 0.18            0  
-843   6  GBCI   Financial              mid   21.4% 22.9% composite 0.18            0  
-844   6  SHW    Basic Materials        mid   21.2% 22.9% composite 0.18            0  
-845   6  ABBV   Healthcare             low   21.2% 20.4% composite 0.14            0  
-846   6  MA     Financial              low   21.2% 20.4% composite 0.14            0  
-847   6  COST   Consumer Defensive     low   21.2% 20.4% composite 0.14            0  
-848   6  AFG    Financial              low   21.1% 20.0% composite 0.11            0  
-849   6  MDLZ   Consumer Defensive     low   21.1% 20.0% composite 0.10            0  
-850   6  INGR   Consumer Defensive     low   21.1% 20.0% composite 0.09            0  
-851   6  CHD    Consumer Defensive     low   21.1% 20.0% composite 0.08            0  
-852   6  WTRG   Utilities              low   21.1% 20.0% composite 0.07            0  
-853   6  PG     Consumer Defensive     low   21.0% 20.0% composite 0.07            0  
-854   6  TXNM   Utilities              low   21.0% 19.8% composite 0.01            0  
-855   6  FHN    Financial              mid   20.8% 22.9% composite 0.18            0  
-856   6  AXP    Financial              mid   20.8% 22.9% composite 0.18            0  
-857   6  TRU    Financial              mid   20.8% 22.9% composite 0.18            0  
-858   6  UBER   Technology             mid   20.8% 22.9% composite 0.17            0  
-859   6  NDAQ   Financial              mid   20.8% 22.9% composite 0.17            0  
-860   6  SMG    Basic Materials        mid   20.8% 22.9% composite 0.16            0  
-861   6  RJF    Financial              mid   20.8% 22.9% composite 0.16            0  
-862   6  FHI    Financial              mid   20.8% 22.9% composite 0.16            0  
-863   6  FAF    Financial              mid   20.8% 22.9% composite 0.14            0  
-864   6  CBRE   Real Estate            mid   20.8% 22.8% composite 0.14            0  
-865   6  SNA    Industrials            mid   20.8% 22.8% composite 0.13            0  
-866   6  VMC    Basic Materials        mid   20.8% 22.8% composite 0.13            0  
-867   6  PB     Financial              mid   20.8% 22.8% composite 0.12            0  
-868   6  WYNN   Consumer Cyclical      mid   20.8% 22.8% composite 0.12            0  
-869   6  NKE    Consumer Cyclical      mid   20.8% 22.8% composite 0.12            0  
-870   6  AOS    Industrials            mid   20.8% 22.8% composite 0.11            0  
-871   6  ATR    Healthcare             mid   20.8% 22.8% composite 0.11            0  
-872   6  GNTX   Consumer Cyclical      mid   20.8% 22.8% composite 0.11            0  
-873   6  NVR    Consumer Cyclical      mid   20.8% 22.8% composite 0.11            0  
-874   6  HII    Industrials            mid   20.7% 22.2% composite 0.10            0  
-875   6  GEHC   Healthcare             mid   20.6% 21.9% composite 0.10            0  
-876   6  TDG    Industrials            mid   20.4% 21.5% composite 0.10            0  
-877   6  TTWO   Communication Services mid   20.4% 21.5% composite 0.09            0  
-878   6  MCO    Financial              mid   20.4% 21.5% composite 0.09            0  
-879   6  ZTS    Healthcare             mid   20.4% 21.5% composite 0.09            0  
-880   6  EFX    Industrials            mid   20.4% 21.5% composite 0.09            0  
-881   6  IBOC   Financial              mid   19.6% 20.3% composite 0.08            0  
-882   6  LVS    Consumer Cyclical      mid   19.5% 20.1% composite 0.08            0  
-883   6  FIS    Technology             mid   18.8% 19.3% composite 0.07            0  
-884   6  HD     Consumer Cyclical      mid   18.5% 19.0% composite 0.07            0  
-885   6  NXST   Communication Services mid   18.2% 18.6% composite 0.07            0  
-886   6  WLK    Basic Materials        mid   17.5% 17.8% composite 0.06            0  
-887   6  BYD    Consumer Cyclical      mid   17.0% 17.6% composite 0.06            0  
-888   6  FISV   Technology             mid   17.0% 17.6% composite 0.05            0  
-889   6  STE    Healthcare             mid   17.0% 17.6% composite 0.04            0  
-890   6  TKO    Communication Services mid   17.0% 17.6% composite 0.04            0  
-891   6  NLY    Real Estate            mid   17.0% 17.6% composite 0.04            0  
-892   6  LOW    Consumer Cyclical      mid   17.0% 17.6% composite 0.03            0  
-893   6  STWD   Real Estate            mid   17.0% 17.6% composite 0.01            0  
+  1   1  MRVL   Technology             high  53.5% 54.7% composite 1.00 (+signatures)   50  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+  2   1  AMKR   Technology             high  53.4% 54.3% composite 1.00 (+signatures)   39  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+  3   1  TTMI   Technology             high  53.3% 53.1% composite 0.99 (+signatures)   51  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
+  4   1  GLW    Technology             high  53.3% 53.1% composite 0.99 (+signatures)   36  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND pullback from 21d high top 20%
+  5   1  LITE   Technology             high  53.2% 52.7% composite 0.99 (+signatures)   43  distance to 52w high top 20% AND downside vol top 20% AND share of up days 63d top 20%
+  6   1  ENTG   Technology             high  53.2% 52.7% composite 0.99 (+signatures)   30  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+  7   1  MRNA   Healthcare             high  53.2% 52.7% composite 0.99 (+signatures)  121  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+  8   1  DELL   Technology             high  53.2% 52.7% composite 0.99 (+signatures)   64  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+  9   1  HPE    Technology             high  53.2% 52.7% composite 0.98 (+signatures)   95  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 10   1  SMTC   Technology             high  53.2% 52.7% composite 0.98 (+signatures)   73  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 11   1  MKSI   Technology             high  52.3% 52.5% composite 0.98 (+signatures)   67  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
+ 12   1  MTSI   Technology             high  51.3% 52.1% signatures x41 (+composite)   41  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 13   1  COHR   Technology             high  51.3% 52.1% signatures x25 (+composite)   25  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
+ 14   1  SANM   Technology             high  51.3% 52.1% signatures x33 (+composite)   33  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 15   1  SITM   Technology             high  51.3% 52.1% signatures x65 (+composite)   65  time since 20% drawdown bottom 20% AND OBV leading price top 20% AND 126d Sharpe top 20%
+ 16   1  P      Technology             high  51.3% 52.1% signatures x81 (+composite)   81  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 17   1  LSCC   Technology             high  51.3% 52.1% signatures x30 (+composite)   30  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 18   1  NVT    Industrials            high  51.3% 52.1% signatures x54 (+composite)   54  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 19   1  AMD    Technology             high  51.3% 52.1% signatures x73 (+composite)   73  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 20   1  RMBS   Technology             high  51.3% 52.1% signatures x11 (+composite)   11  corr to SPY top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
+ 21   1  SMCI   Technology             high  51.3% 52.1% signatures x56 (+composite)   56  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
+ 22   1  CGNX   Technology             high  49.1% 49.8% signatures x7 (+composite)    7  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 23   1  FLEX   Technology             high  48.0% 49.4% composite 0.97 (+signatures)   41  downside vol top 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
+ 24   1  AMAT   Technology             high  48.0% 49.4% composite 0.97 (+signatures)   47  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 25   1  VIAV   Technology             high  47.4% 48.6% composite 0.97 (+signatures)   24  up minus down capture top 20% AND downside vol top 20% AND OBV leading price top 20%
+ 26   1  NXT    Technology             high  47.3% 49.8% signatures x9 (+composite)    9  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
+ 27   1  KLAC   Technology             high  46.9% 48.2% composite 0.96 (+signatures)   38  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 28   1  MU     Technology             high  46.9% 48.2% composite 0.96 (+signatures)   31  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume vs own norm top 20%
+ 29   1  AEIS   Industrials            high  46.2% 49.1% signatures x19 (+composite)   19  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
+ 30   1  ON     Technology             high  46.2% 49.1% signatures x77 (+composite)   77  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND net volume flow top 20%
+ 31   1  BE     Industrials            high  46.2% 49.1% signatures x54 (+composite)   54  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 32   1  ONTO   Technology             high  46.2% 49.1% signatures x10 (+composite)   10  corr to SPY top 20% AND idiosyncratic vol top 20% AND 12-1m momentum top 20%
+ 33   1  SYNA   Technology             high  46.2% 49.1% signatures x38 (+composite)   38  corr to SPY top 20% AND downside vol top 20% AND distance to 52w high vs own norm top 20%
+ 34   1  LRCX   Technology             high  46.2% 49.1% signatures x31 (+composite)   31  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 35   1  INTC   Technology             high  46.2% 49.1% signatures x47 (+composite)   47  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 36   1  VRT    Industrials            high  46.2% 49.1% signatures x46 (+composite)   46  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
+ 37   1  CIEN   Technology             high  46.2% 49.1% signatures x30 (+composite)   30  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 38   1  JBL    Technology             high  46.2% 49.1% signatures x36 (+composite)   36  depth below 126d high bottom 20% AND corr to SPY top 20% AND gain off 52w low top 20%
+ 39   1  STX    Technology             high  45.0% 46.3% signatures x69 (+composite)   69  downside vol top 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
+ 40   1  VICR   Technology             high  45.0% 46.3% signatures x65 (+composite)   65  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND 12-1m momentum vs own norm top 20%
+ 41   1  OKTA   Technology             high  45.0% 46.3% signatures x81 (+composite)   81  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 42   1  TWLO   Technology             high  45.0% 46.3% signatures x89 (+composite)   89  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 43   2  CRWD   Technology             high  44.6% 46.3% signatures x58 (+composite)   58  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 44   2  SNDK   Technology             high  44.5% 46.1% signatures x54 (+composite)   54  depth below 126d high bottom 20% AND higher-low cadence top 20% AND 126d Sharpe top 20%
+ 45   2  STRL   Industrials            high  44.1% 44.4% composite 0.95 (+signatures)   23  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+ 46   2  WDC    Technology             high  44.1% 43.7% composite 0.95 (+signatures)   39  distance to 52w high bottom 20% AND gain off 52w low top 20% AND volume vs 50d top 20%
+ 47   2  KEYS   Technology             high  44.1% 43.7% composite 0.95 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
+ 48   2  PWR    Industrials            high  43.0% 42.1% signatures x11 (+composite)   11  corr to SPY top 20% AND idiosyncratic vol top 20% AND share of up days 63d top 20%
+ 49   2  KTOS   Industrials            high  43.0% 42.1% signatures x8 (+composite)    8  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
+ 50   2  PSN    Technology             high  43.0% 42.1% signatures x10 (+composite)   10  accumulation-distribution days bottom 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
+ 51   2  WHR    Consumer Cyclical      high  42.7% 41.3% signatures x16 (+composite)   16  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
+ 52   2  PATH   Technology             high  42.4% 42.9% composite 0.94 (+signatures)   29  depth below 126d high bottom 20% AND 63d return top 20% AND dollar volume vs own norm top 20%
+ 53   2  SNPS   Technology             high  41.9% 41.1% signatures x7 (+composite)    7  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume top 20%
+ 54   2  IESC   Industrials            high  41.0% 41.7% composite 0.94 (+signatures)   29  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 55   2  DDOG   Technology             high  41.0% 41.4% composite 0.94 (+signatures)   36  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 56   2  TER    Technology             high  41.0% 41.1% composite 0.94 (+signatures)   17  up minus down capture top 20% AND downside vol top 20% AND 12-1m momentum top 20%
+ 57   2  PANW   Technology             high  41.0% 41.5% signatures x44 (+composite)   44  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 58   2  HIMS   Healthcare             high  41.0% 40.8% signatures x38 (+composite)   38  accumulation-distribution days top 20% AND depth below 126d high bottom 20% AND 126d Sharpe top 20%
+ 59   2  ALGM   Technology             high  40.8% 41.8% signatures x32 (+composite)   32  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
+ 60   2  BRKR   Healthcare             high  40.8% 41.8% signatures x20 (+composite)   20  up minus down capture top 20% AND downside vol top 20% AND 126d Sharpe top 20%
+ 61   2  PBF    Energy                 low   40.4% 43.8% signatures x84 (+composite)   84  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 62   2  DOCN   Technology             high  40.3% 40.7% signatures x35 (+composite)   35  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+ 63   2  BTSG   Healthcare             high  40.1% 41.8% signatures x18 (+composite)   18  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 64   2  FN     Technology             high  40.1% 41.8% signatures x6 (+composite)    6  corr to SPY top 20% AND idiosyncratic vol top 20% AND skew bottom 20%
+ 65   2  MP     Basic Materials        high  40.1% 41.8% signatures x4 (+composite)    4  corr to SPY top 20% AND idiosyncratic vol top 20% AND pullback from 21d high bottom 20%
+ 66   2  IPGP   Technology             high  40.1% 41.8% signatures x7 (+composite)    7  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
+ 67   2  AAON   Industrials            high  40.1% 41.8% signatures x8 (+composite)    8  corr to SPY top 20% AND idiosyncratic vol top 20% AND skew bottom 20%
+ 68   2  CDE    Basic Materials        high  40.1% 41.8% signatures x28 (+composite)   28  corr to SPY top 20% AND idiosyncratic vol top 20% AND dollar volume vs own norm top 20%
+ 69   2  GEV    Industrials            high  40.1% 38.9% signatures x11 (+composite)   11  gain off 52w low top 20% AND downside vol top 20% AND share of up days 63d top 20%
+ 70   2  CRS    Industrials            high  40.1% 38.9% signatures x29 (+composite)   29  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND range vol / close vol top 20%
+ 71   2  MOG-A  Industrials            high  40.1% 38.9% signatures x5 (+composite)    5  downside vol top 20% AND 126d Sharpe top 20%
+ 72   2  NOVT   Technology             high  40.1% 38.9% signatures x7 (+composite)    7  downside vol top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
+ 73   3  RRX    Industrials            high  39.7% 40.8% composite 0.93 (+signatures)    2  depth below 126d high bottom 20% AND up-capture top 20% AND dollar volume vs own norm top 20%
+ 74   3  ZBRA   Technology             high  39.4% 40.7% signatures x9 (+composite)    9  corr to SPY top 20% AND gain off 52w low top 20% AND idiosyncratic vol top 20%
+ 75   3  RGEN   Healthcare             high  39.1% 41.7% signatures x87 (+composite)   87  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 76   3  MTZ    Industrials            high  38.8% 40.8% composite 0.92 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+ 77   3  ARW    Technology             high  38.8% 40.8% composite 0.91 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
+ 78   3  CAT    Industrials            high  38.8% 40.8% composite 0.90 (+signatures)    2  gain off 52w low top 20% AND up minus down capture bottom 20%
+ 79   3  ATI    Industrials            high  38.8% 40.8% composite 0.90 (+signatures)    5  gain off 52w low top 20% AND higher-low cadence bottom 20% AND share of up days 63d top 20%
+ 80   3  SN     Consumer Cyclical      high  38.8% 40.8% composite 0.90 (+signatures)    4  beta top 20% AND dollar-volume trend top 20% AND 126d Sharpe top 20%
+ 81   3  AVT    Technology             high  38.8% 40.8% composite 0.89            0  
+ 82   3  NTAP   Technology             high  38.8% 39.7% composite 0.89            0  
+ 83   3  QLYS   Technology             low   38.3% 39.3% signatures x50 (+composite)   50  close location in range top 20% AND downside/upside vol bottom 20% AND downside vol top 20%
+ 84   3  EL     Consumer Defensive     high  37.7% 39.5% signatures x20 (+composite)   20  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND 12-1m momentum vs own norm top 20%
+ 85   3  MTDR   Energy                 low   37.7% 39.5% signatures x7 (+composite)    7  up minus down capture top 20% AND downside vol top 20% AND 21d return bottom 20%
+ 86   3  DY     Industrials            high  37.2% 38.6% composite 0.87 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+ 87   3  HL     Basic Materials        high  37.1% 37.0% signatures x50 (+composite)   50  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND 63d RS vs SPY top 20%
+ 88   3  SWKS   Technology             high  37.1% 37.0% signatures x70 (+composite)   70  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+ 89   3  ANET   Technology             high  37.1% 38.4% composite 0.87 (+signatures)    3  beta top 20% AND OBV leading price top 20% AND 126d Sharpe top 20%
+ 90   3  WCC    Industrials            high  37.1% 38.3% composite 0.87 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
+ 91   3  FCX    Basic Materials        high  37.1% 38.3% composite 0.87 (+signatures)    1  gain off 52w low top 20% AND beta top 20%
+ 92   3  HRB    Consumer Cyclical      low   36.9% 38.7% signatures x15 (+composite)   15  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
+ 93   3  GME    Consumer Cyclical      mid   36.2% 36.6% signatures x43 (+composite)   43  distance to 52w high top 20% AND downside vol top 20% AND share of up days 63d top 20%
+ 94   3  EME    Industrials            high  36.2% 37.3% signatures x5 (+composite)    5  close location in range top 20% AND corr to SPY top 20% AND idiosyncratic vol top 20%
+ 95   3  ARWR   Healthcare             high  36.0% 36.6% signatures x42 (+composite)   42  distance to 52w high bottom 20% AND gain off 52w low top 20% AND dvolROC21>+30%
+ 96   3  HOOD   Financial              high  36.0% 36.6% signatures x40 (+composite)   40  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
+ 97   3  DOCS   Healthcare             mid   36.0% 36.6% signatures x41 (+composite)   41  downside/upside vol bottom 20% AND downside vol top 20% AND dollar volume bottom 20%
+ 98   3  QCOM   Technology             high  35.9% 34.9% signatures x21 (+composite)   21  dollar-volume trend bottom 20% AND pullback from 21d high bottom 20% AND volROC21>+50%
+ 99   3  WDAY   Technology             mid   35.9% 34.9% signatures x28 (+composite)   28  downside vol top 20% AND higher-low cadence top 20% AND 126d Sharpe top 20%
+100   3  ILMN   Healthcare             mid   35.9% 36.1% signatures x36 (+composite)   36  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%
+101   3  GNRC   Industrials            high  35.9% 36.1% signatures x34 (+composite)   34  depth below 126d high bottom 20% AND gain off 52w low top 20% AND dollar-volume trend top 20%
+102   3  JBHT   Industrials            mid   35.9% 36.1% signatures x33 (+composite)   33  depth below 126d high bottom 20% AND gain off 52w low top 20% AND volROC21>+50%
+103   3  GDDY   Technology             low   35.6% 35.9% signatures x30 (+composite)   30  downside vol top 20% AND dollar-volume trend top 20% AND higher-low cadence top 20%
+104   3  DVA    Healthcare             low   35.6% 35.9% signatures x30 (+composite)   30  time since 20% drawdown bottom 20% AND gain off 52w low top 20% AND OBV leading price top 20%
+105   3  LFUS   Technology             high  35.4% 36.9% composite 0.85 (+signatures)    3  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
+106   3  MPWR   Technology             high  35.4% 36.9% composite 0.85 (+signatures)    6  63d return top 20% AND downside vol top 20%
+107   3  FIX    Industrials            high  35.4% 36.9% composite 0.85 (+signatures)    6  gain off 52w low top 20% AND downside vol top 20%
+108   3  MCHP   Technology             high  35.4% 36.9% composite 0.84 (+signatures)    6  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
+109   4  VFC    Consumer Cyclical      high  34.9% 34.9% signatures x8 (+composite)    8  corr to SPY top 20% AND idiosyncratic vol top 20% AND rvROC21>+20%
+110   4  CVLT   Technology             mid   34.8% 34.9% signatures x19 (+composite)   19  downside vol top 20% AND 126d Sharpe top 20% AND share of up days 63d top 20%
+111   4  DUOL   Technology             mid   34.8% 33.9% signatures x24 (+composite)   24  up minus down capture top 20% AND distance to 52w high bottom 20% AND 126d Sharpe top 20%
+112   4  SNX    Technology             high  34.6% 35.8% composite 0.83 (+signatures)    7  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
+113   4  TKR    Industrials            high  34.6% 35.8% composite 0.82 (+signatures)    5  gain off 52w low top 20% AND up minus down capture bottom 20%
+114   4  VAL    Energy                 mid   34.4% 34.0% signatures x28 (+composite)   28  depth below 126d high bottom 20% AND up minus down capture top 20% AND dollar-volume trend top 20%
+115   4  ACN    Technology             low   34.4% 34.0% signatures x23 (+composite)   23  distance to 52w high bottom 20% AND gain off 52w low top 20% AND dvolROC21>+30%
+116   4  MOH    Healthcare             low   34.4% 34.0% signatures x19 (+composite)   19  up minus down capture bottom 20% AND gain off 52w low top 20% AND distance to 52w high vs own norm top 20%
+117   4  HPQ    Technology             mid   34.4% 32.9% signatures x21 (+composite)   21  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 126d Sharpe top 20%
+118   4  NOW    Technology             mid   34.4% 32.9% signatures x18 (+composite)   18  Bollinger width vs norm bottom 20% AND time since 20% drawdown bottom 20% AND gain off 52w low top 20%
+119   4  ABNB   Consumer Cyclical      high  34.4% 32.9% signatures x17 (+composite)   17  idiosyncratic vol top 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+120   4  CLF    Basic Materials        high  34.4% 32.9% signatures x18 (+composite)   18  downside vol top 20% AND net volume flow top 20% AND OBV leading price bottom 20%
+121   4  MUR    Energy                 low   34.4% 34.1% signatures x15 (+composite)   15  corr to SPY bottom 20% AND downside vol top 20% AND 63d return top 20%
+122   4  AKAM   Technology             high  34.1% 33.5% signatures x8 (+composite)    8  corr to SPY top 20% AND downside vol top 20% AND skew top 20%
+123   4  PEGA   Technology             mid   34.1% 33.5% signatures x6 (+composite)    6  up minus down capture top 20% AND downside vol top 20% AND dollar volume bottom 20%
+124   4  AA     Basic Materials        high  34.1% 33.5% signatures x8 (+composite)    8  corr to SPY top 20% AND distance to 52w high bottom 20% AND 12-1m momentum top 20%
+125   4  GWRE   Technology             mid   34.1% 33.5% signatures x12 (+composite)   12  distance to 52w high bottom 20% AND gain off 52w low top 20% AND 20d RV vs norm top 20%
+126   4  VST    Utilities              high  34.0% 31.7% signatures x12 (+composite)   12  depth below 126d high top 20% AND downside vol top 20% AND share of up days 63d top 20%
+127   4  ANF    Consumer Cyclical      high  34.0% 33.5% composite 0.81 (+signatures)    2  12-1m momentum top 20% AND idiosyncratic vol top 20%
+128   4  TXN    Technology             high  34.0% 33.5% composite 0.80 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
+129   4  LUV    Industrials            high  34.0% 33.5% composite 0.80            0  
+130   4  DBX    Technology             low   33.8% 34.0% signatures x18 (+composite)   18  pullback from 21d high bottom 20% AND 63d return top 20% AND 126d Sharpe top 20%
+131   4  FTNT   Technology             mid   33.8% 35.9% signatures x4 (+composite)    4  idiosyncratic vol top 20% AND dollar volume top 20% AND 126d Sharpe top 20%
+132   4  IT     Technology             mid   33.0% 33.5% signatures x9 (+composite)    9  downside vol top 20% AND higher-low cadence top 20% AND skew top 20%
+133   4  ADBE   Technology             mid   33.0% 33.5% signatures x10 (+composite)   10  downside vol top 20% AND higher-low cadence top 20% AND net volume flow top 20%
+134   4  CHRD   Energy                 low   33.0% 33.5% signatures x12 (+composite)   12  12-1m momentum top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
+135   4  KNX    Industrials            high  33.0% 32.6% signatures x14 (+composite)   14  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+136   4  FIVE   Consumer Cyclical      high  33.0% 32.6% signatures x16 (+composite)   16  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND 63d RS vs SPY top 20%
+137   4  LSTR   Industrials            mid   32.9% 32.6% signatures x13 (+composite)   13  depth below 126d high bottom 20% AND dollar volume bottom 20% AND 12-1m momentum top 20%
+138   4  STLD   Basic Materials        high  32.8% 32.5% composite 0.79            0  
+139   4  AAL    Industrials            high  32.8% 32.5% composite 0.79 (+signatures)    1  depth below 126d high bottom 20% AND up-capture top 20%
+140   4  HWM    Industrials            high  32.8% 32.5% composite 0.78 (+signatures)    1  share of up days 63d top 20% AND downside vol top 20%
+141   4  TPR    Consumer Cyclical      high  32.8% 32.5% composite 0.78            0  
+142   4  ELF    Consumer Defensive     high  32.8% 32.5% composite 0.78 (+signatures)   10  time since 20% drawdown bottom 20% AND 126d Sharpe top 20% AND skew top 20%
+143   4  ST     Technology             high  32.8% 32.5% composite 0.78 (+signatures)    1  gain off 52w low top 20% AND beta top 20%
+144   4  PLTR   Technology             high  32.8% 32.5% composite 0.77 (+signatures)    3  gain off 52w low top 20% AND idiosyncratic vol top 20%
+145   4  FSLR   Technology             high  32.8% 32.5% composite 0.77 (+signatures)    2  depth below 126d high bottom 20% AND overnight share of moves bottom 20% AND up-capture top 20%
+146   4  TEX    Industrials            high  32.8% 32.5% composite 0.77            0  
+147   4  KRYS   Healthcare             mid   32.8% 33.7% signatures x6 (+composite)    6  downside vol top 20% AND overnight share of moves bottom 20% AND 12-1m momentum vs own norm top 20%
+148   4  FTI    Energy                 mid   32.7% 32.6% signatures x2 (+composite)    2  gain off 52w low top 20% AND pullback from 21d high bottom 20%
+149   4  LYB    Basic Materials        low   32.5% 32.5% signatures x5 (+composite)    5  up minus down capture top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
+150   4  NOV    Energy                 mid   32.0% 31.5% signatures x4 (+composite)    4  gain off 52w low top 20% AND dollar volume bottom 20% AND pullback from 21d high bottom 20%
+151   4  ALB    Basic Materials        high  32.0% 31.5% signatures x4 (+composite)    4  distance to 52w high bottom 20% AND 12-1m momentum top 20% AND NR7 count top 20%
+152   4  CDNS   Technology             high  31.9% 32.3% composite 0.76 (+signatures)    1  up/down volume top 20% AND downside vol top 20%
+153   4  NXPI   Technology             high  31.9% 32.3% composite 0.76            0  
+154   4  GOOGL  Communication Services high  31.9% 31.7% composite 0.76            0  
+155   4  WWD    Industrials            high  31.9% 31.7% composite 0.76            0  
+156   4  LII    Industrials            high  31.7% 31.6% composite 0.75 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+157   4  CMI    Industrials            high  31.7% 31.6% composite 0.75            0  
+158   4  ALGN   Healthcare             high  31.6% 30.4% signatures x2 (+composite)    2  beta top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
+159   4  ECHO   Communication Services high  31.6% 30.4% signatures x3 (+composite)    3  depth below 126d high bottom 20% AND dvolROC21>+30% AND up-capture top 20%
+160   4  HALO   Healthcare             mid   31.6% 32.2% signatures x3 (+composite)    3  idiosyncratic vol top 20% AND 126d Sharpe top 20%
+161   4  HAL    Energy                 low   31.6% 32.2% signatures x5 (+composite)    5  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+162   4  NYT    Communication Services low   31.6% 32.2% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
+163   4  SLB    Energy                 mid   31.5% 31.5% signatures x4 (+composite)    4  time since ignition day bottom 20% AND gain off 52w low top 20% AND 21d return bottom 20%
+164   4  ENS    Industrials            high  31.5% 31.5% signatures x9 (+composite)    9  close location in range top 20% AND time since 20% drawdown bottom 20% AND 12-1m momentum top 20%
+165   4  EXPE   Consumer Cyclical      high  31.5% 31.5% signatures x3 (+composite)    3  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
+166   4  FDX    Industrials            mid   31.5% 31.5% signatures x2 (+composite)    2  gain off 52w low top 20% AND dollar volume top 20% AND 21d return bottom 20%
+167   4  LEA    Consumer Cyclical      high  31.5% 31.5% signatures x2 (+composite)    2  downside vol top 20% AND dollar volume bottom 20% AND 12-1m momentum vs own norm top 20%
+168   4  PCG    Utilities              low   31.5% 31.5% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
+169   4  VEEV   Healthcare             mid   31.5% 31.5% signatures x4 (+composite)    4  idiosyncratic vol top 20% AND volume on pullbacks top 20% AND 126d Sharpe top 20%
+170   4  WFRD   Energy                 high  31.4% 30.4% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND 12-1m momentum top 20% AND vol of vol bottom 20%
+171   4  SKYD   Communication Services mid   31.4% 30.4% signatures x11 (+composite)   11  downside vol top 20% AND dollar-volume trend top 20% AND share of up days 63d top 20%
+172   4  BROS   Consumer Cyclical      high  31.0% 31.6% composite 0.75            0  
+173   4  SPXC   Industrials            high  31.0% 31.6% composite 0.75            0  
+174   4  GOOG   Communication Services high  31.0% 31.6% composite 0.75            0  
+175   4  APH    Technology             high  31.0% 31.6% composite 0.75 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
+176   4  DKS    Consumer Cyclical      high  31.0% 31.6% composite 0.74            0  
+177   4  IBKR   Financial              high  30.8% 31.3% composite 0.74 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
+178   4  ROIV   Healthcare             high  30.8% 31.1% composite 0.74 (+signatures)    5  time since 20% drawdown top 20% AND idiosyncratic vol top 20% AND 12-1m momentum top 20%
+179   4  RDDT   Communication Services high  30.8% 31.1% composite 0.74 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+180   4  CDW    Technology             mid   30.6% 31.5% signatures x3 (+composite)    3  downside vol top 20% AND overnight share of moves bottom 20% AND distance to 52w high vs own norm top 20%
+181   4  CF     Basic Materials        low   30.6% 31.0% signatures x5 (+composite)    5  corr to SPY bottom 20% AND gain off 52w low top 20% AND 21d return bottom 20%
+182   4  WEX    Technology             mid   30.6% 31.0% signatures x7 (+composite)    7  overnight share of moves bottom 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
+183   4  CBOE   Financial              low   30.6% 31.0% signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up minus down capture top 20% AND volume vs 50d top 20%
+184   4  ACM    Industrials            mid   30.6% 31.0% signatures x5 (+composite)    5  downside vol top 20% AND overnight share of moves bottom 20% AND share of up days 63d top 20%
+185   4  RGLD   Basic Materials        high  30.6% 31.0% signatures x5 (+composite)    5  up minus down capture top 20% AND pullback from 21d high bottom 20% AND vol of vol bottom 20%
+186   4  CTSH   Technology             low   30.6% 31.0% signatures x8 (+composite)    8  corr to SPY bottom 20% AND pullback from 21d high bottom 20% AND 63d return top 20%
+187   4  GEN    Technology             mid   30.6% 31.0% signatures x5 (+composite)    5  downside vol top 20% AND dollar-volume trend top 20% AND higher-low cadence top 20%
+188   4  ODFL   Industrials            high  30.6% 29.9% signatures x3 (+composite)    3  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+189   4  NVST   Healthcare             high  30.6% 29.9% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+190   4  DOW    Basic Materials        low   30.6% 29.8% signatures x3 (+composite)    3  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+191   4  RH     Consumer Cyclical      high  30.6% 28.1% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20%
+192   4  MANH   Technology             low   30.6% 28.1% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
+193   4  BBY    Consumer Cyclical      mid   30.6% 31.1% signatures x4 (+composite)    4  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND volume vs 250d vs own norm bottom 20%
+194   4  CRM    Technology             mid   30.6% 31.1% signatures x7 (+composite)    7  idiosyncratic vol top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
+195   4  AVTR   Healthcare             mid   30.6% 31.1% signatures x7 (+composite)    7  corr to SPY bottom 20% AND 126d Sharpe top 20% AND up-capture top 20%
+196   4  FOUR   Technology             high  30.6% 31.1% signatures x4 (+composite)    4  depth below 126d high bottom 20% AND dollar-volume trend top 20% AND up-capture top 20%
+197   4  FLR    Industrials            high  30.6% 31.1% signatures x6 (+composite)    6  downside vol top 20% AND 20d/60d RV bottom 20% AND skew top 20%
+198   4  ORCL   Technology             high  30.6% 31.1% signatures x5 (+composite)    5  depth below 126d high bottom 20% AND up-capture top 20% AND volROC21>+50%
+199   4  HXL    Industrials            mid   30.6% 31.1% signatures x6 (+composite)    6  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+200   4  BILL   Technology             high  30.6% 31.1% signatures x7 (+composite)    7  beta top 20% AND pullback from 21d high bottom 20% AND 63d RS vs SPY top 20%
+201   4  COIN   Financial              high  30.6% 31.1% signatures x6 (+composite)    6  downside vol top 20% AND higher-low cadence top 20% AND dollar volume top 20%
+202   4  THC    Healthcare             mid   30.6% 31.0% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
+203   4  CELH   Consumer Defensive     high  30.6% 31.0% signatures x3 (+composite)    3  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
+204   4  ROK    Industrials            high  30.6% 31.0% signatures x4 (+composite)    4  beta top 20% AND 126d Sharpe top 20% AND skew bottom 20%
+205   4  DG     Consumer Defensive     mid   30.6% 31.0% signatures x4 (+composite)    4  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+206   4  DOCU   Technology             mid   30.6% 31.0% signatures x2 (+composite)    2  idiosyncratic vol top 20% AND 126d Sharpe top 20%
+207   4  DAL    Industrials            high  30.6% 31.0% signatures x3 (+composite)    3  beta top 20% AND 126d Sharpe top 20% AND OBV leading price vs own norm top 20%
+208   4  ISRG   Healthcare             mid   30.6% 31.0% signatures x2 (+composite)    2  net volume flow top 20% AND downside vol top 20%
+209   4  JKHY   Technology             low   30.6% 31.0% signatures x5 (+composite)    5  time since 20% drawdown bottom 20% AND vol of vol bottom 20% AND 12-1m momentum vs own norm top 20%
+210   4  ROKU   Communication Services high  30.6% 31.0% signatures x3 (+composite)    3  beta top 20% AND volume on pullbacks top 20% AND 126d Sharpe top 20%
+211   4  ESAB   Industrials            high  30.5% 31.5% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
+212   4  FND    Consumer Cyclical      high  30.5% 31.5% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
+213   4  ALK    Industrials            high  30.5% 31.5% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
+214   4  EVR    Financial              high  30.5% 31.5% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
+215   4  ETN    Industrials            high  30.5% 31.1% composite 0.74            0  
+216   4  FLS    Industrials            high  30.5% 31.1% composite 0.73            0  
+217   4  NEM    Basic Materials        high  30.5% 31.1% composite 0.73            0  
+218   4  FFIV   Technology             high  30.5% 31.1% composite 0.73            0  
+219   4  YETI   Consumer Cyclical      high  30.5% 31.1% composite 0.73            0  
+220   4  CRL    Healthcare             high  30.5% 30.6% composite 0.73            0  
+221   4  UAL    Industrials            high  30.5% 30.4% composite 0.73            0  
+222   4  APP    Communication Services high  30.5% 30.4% composite 0.72 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+223   4  CVNA   Consumer Cyclical      high  30.5% 30.4% composite 0.72 (+signatures)    2  share of up days 63d top 20% AND downside vol top 20%
+224   4  CSCO   Technology             high  30.5% 30.4% composite 0.71            0  
+225   5  ADI    Technology             high  29.8% 30.4% composite 0.71 (+signatures)    2  126d Sharpe top 20% AND beta top 20%
+226   5  NRG    Utilities              high  29.8% 30.4% composite 0.71 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+227   5  AVAV   Industrials            high  29.8% 30.4% composite 0.71 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+228   5  CAVA   Consumer Cyclical      high  29.8% 30.4% composite 0.70 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+229   5  CNH    Industrials            high  29.8% 30.4% composite 0.70            0  
+230   5  NVDA   Technology             high  29.8% 30.4% composite 0.70 (+signatures)    2  beta top 20% AND 20d/60d RV bottom 20% AND 126d Sharpe top 20%
+231   5  SAIA   Industrials            high  29.8% 30.4% composite 0.70            0  
+232   5  KNF    Basic Materials        high  29.8% 30.4% composite 0.70            0  
+233   5  HGV    Consumer Cyclical      high  29.7% 29.7% composite 0.69            0  
+234   5  TSLA   Consumer Cyclical      high  29.6% 29.7% composite 0.69 (+signatures)    1  up/down volume top 20% AND downside vol top 20%
+235   5  CMC    Industrials            high  29.6% 29.7% composite 0.68            0  
+236   5  FBIN   Industrials            high  29.6% 29.7% composite 0.68            0  
+237   5  LIVN   Healthcare             high  29.6% 29.7% composite 0.68            0  
+238   5  APTV   Consumer Cyclical      high  29.6% 29.7% composite 0.67            0  
+239   5  PII    Consumer Cyclical      high  29.6% 29.7% composite 0.67            0  
+240   5  META   Communication Services high  29.6% 29.7% composite 0.67 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+241   5  GXO    Industrials            high  29.6% 29.7% composite 0.66            0  
+242   5  C      Financial              high  29.6% 29.7% composite 0.65            0  
+243   5  AVGO   Technology             high  29.6% 29.7% composite 0.65            0  
+244   5  MAS    Industrials            high  29.6% 29.7% composite 0.64            0  
+245   5  IVZ    Financial              high  29.6% 29.7% composite 0.64 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
+246   5  AXON   Industrials            high  29.6% 29.7% composite 0.64 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+247   5  TLN    Utilities              high  29.6% 29.7% composite 0.63 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+248   5  NCLH   Consumer Cyclical      high  29.6% 29.7% composite 0.63 (+signatures)    1  idiosyncratic vol top 20% AND beta top 20%
+249   5  SW     Consumer Cyclical      high  29.6% 29.7% composite 0.63            0  
+250   5  BDC    Technology             high  29.6% 29.7% composite 0.63            0  
+251   5  CW     Industrials            high  29.6% 29.7% composite 0.63            0  
+252   5  GS     Financial              high  29.6% 29.7% composite 0.62            0  
+253   5  WING   Consumer Cyclical      high  29.6% 29.7% composite 0.61            0  
+254   5  EMR    Industrials            high  29.5% 29.7% composite 0.60            0  
+255   5  CR     Industrials            high  29.5% 29.7% composite 0.60            0  
+256   5  JCI    Industrials            high  29.5% 29.7% composite 0.59            0  
+257   5  CARR   Industrials            high  29.5% 29.7% composite 0.59            0  
+258   5  SWK    Industrials            high  29.5% 29.7% composite 0.59 (+signatures)    1  126d Sharpe top 20% AND beta top 20%
+259   5  AVNT   Basic Materials        high  29.5% 29.7% composite 0.58            0  
+260   5  RVTY   Healthcare             high  29.5% 29.7% composite 0.58            0  
+261   5  BBWI   Consumer Cyclical      high  29.4% 28.2% signatures x1 (+composite)    1  idiosyncratic vol top 20% AND beta top 20%
+262   5  XYZ    Technology             high  29.4% 28.2% signatures x2 (+composite)    2  126d Sharpe top 20% AND beta top 20%
+263   5  BAH    Industrials            low   29.4% 28.2% signatures x2 (+composite)    2  up minus down capture top 20% AND distance to 52w high bottom 20% AND pullback from 21d high bottom 20%
+264   5  CG     Financial              high  29.4% 28.2% signatures x2 (+composite)    2  depth below 126d high bottom 20% AND up-capture top 20% AND RS line leading price vs own norm bottom 20%
+265   5  BX     Financial              high  29.4% 28.2% signatures x1 (+composite)    1  depth below 126d high bottom 20% AND up-capture top 20%
+266   5  OPCH   Healthcare             low   29.4% 28.2% signatures x1 (+composite)    1  gain off 52w low top 20% AND idiosyncratic vol top 20%
+267   5  PTC    Technology             mid   29.4% 28.2% signatures x1 (+composite)    1  gain off 52w low top 20% AND idiosyncratic vol top 20%
+268   5  HLNE   Financial              high  29.4% 28.1% signatures x2 (+composite)    2  63d return top 20% AND pullback from 21d high bottom 20%
+269   5  BNY    Financial              mid   29.4% 28.1% signatures x2 (+composite)    2  pullback from 21d high bottom 20% AND 126d Sharpe top 20% AND distance to 52w high vs own norm bottom 20%
+270   5  PYPL   Financial              high  29.1% 29.1% composite 0.58            0  
+271   5  BAX    Healthcare             high  29.1% 29.1% composite 0.57            0  
+272   5  ELAN   Healthcare             high  29.1% 29.1% composite 0.57            0  
+273   5  WSO    Industrials            high  29.1% 29.1% composite 0.57            0  
+274   5  DASH   Consumer Cyclical      high  29.1% 29.1% composite 0.57            0  
+275   5  OSK    Industrials            high  29.1% 29.1% composite 0.57            0  
+276   5  LULU   Consumer Cyclical      high  29.0% 28.9% composite 0.56            0  
+277   5  AMG    Financial              high  29.0% 28.9% composite 0.56            0  
+278   5  GE     Industrials            high  29.0% 28.9% composite 0.55            0  
+279   5  VMI    Industrials            high  29.0% 28.9% composite 0.55            0  
+280   5  MIDD   Industrials            high  29.0% 28.9% composite 0.55            0  
+281   5  RBC    Industrials            high  29.0% 28.9% composite 0.55            0  
+282   5  LECO   Industrials            high  29.0% 28.9% composite 0.55            0  
+283   5  OC     Industrials            high  29.0% 28.9% composite 0.55            0  
+284   5  CXT    Industrials            high  29.0% 28.9% composite 0.54            0  
+285   5  GM     Consumer Cyclical      high  29.0% 28.9% composite 0.54            0  
+286   5  BWXT   Industrials            high  29.0% 28.9% composite 0.53            0  
+287   5  IDCC   Technology             high  29.0% 28.9% composite 0.53            0  
+288   5  MS     Financial              high  29.0% 28.9% composite 0.53            0  
+289   5  IRM    Real Estate            high  29.0% 28.9% composite 0.52            0  
+290   5  CPRI   Consumer Cyclical      high  29.0% 28.9% composite 0.52            0  
+291   5  STT    Financial              high  29.0% 28.9% composite 0.51            0  
+292   5  AMZN   Consumer Cyclical      high  29.0% 28.9% composite 0.51            0  
+293   5  F      Consumer Cyclical      high  29.0% 28.9% composite 0.51            0  
+294   5  PPG    Basic Materials        high  29.0% 28.9% composite 0.50            0  
+295   5  APG    Industrials            high  29.0% 28.9% composite 0.50            0  
+296   5  XPO    Industrials            high  29.0% 28.9% composite 0.50            0  
+297   5  M      Consumer Cyclical      high  29.0% 28.9% composite 0.50            0  
+298   5  GPN    Technology             high  29.0% 28.9% composite 0.50            0  
+299   5  ALSN   Consumer Cyclical      high  29.0% 28.9% composite 0.49            0  
+300   5  TEL    Technology             high  28.9% 28.9% composite 0.48            0  
+301   5  TDY    Technology             high  28.9% 28.9% composite 0.48            0  
+302   5  ITT    Industrials            high  28.9% 28.9% composite 0.48            0  
+303   5  BWA    Consumer Cyclical      high  28.9% 28.9% composite 0.48            0  
+304   5  WSM    Consumer Cyclical      high  28.9% 28.9% composite 0.48            0  
+305   5  IP     Consumer Cyclical      high  28.9% 28.9% composite 0.48            0  
+306   5  SGI    Consumer Cyclical      high  28.9% 28.9% composite 0.47            0  
+307   5  RL     Consumer Cyclical      high  28.9% 28.9% composite 0.47            0  
+308   5  CRUS   Technology             high  28.9% 28.9% composite 0.47            0  
+309   5  PVH    Consumer Cyclical      high  28.8% 28.9% composite 0.47            0  
+310   5  CRBG   Financial              high  28.8% 28.5% composite 0.46            0  
+311   5  EQH    Financial              high  28.8% 28.5% composite 0.46            0  
+312   5  DD     Basic Materials        high  28.8% 28.5% composite 0.46            0  
+313   5  CRH    Basic Materials        high  28.8% 28.5% composite 0.46            0  
+314   5  BC     Consumer Cyclical      high  28.8% 28.5% composite 0.46            0  
+315   5  TREX   Industrials            high  28.8% 28.5% composite 0.45            0  
+316   5  GAP    Consumer Cyclical      high  28.8% 28.5% composite 0.45            0  
+317   5  CSL    Industrials            high  28.8% 28.5% composite 0.44            0  
+318   5  AXTA   Basic Materials        high  28.8% 28.5% composite 0.44            0  
+319   5  ARES   Financial              high  28.8% 28.5% composite 0.44            0  
+320   5  SARO   Industrials            high  28.7% 28.5% composite 0.43            0  
+321   5  WMS    Industrials            high  28.7% 28.5% composite 0.43            0  
+322   5  RCL    Consumer Cyclical      high  28.7% 28.5% composite 0.43            0  
+323   5  BEN    Financial              high  28.7% 28.5% composite 0.43            0  
+324   5  IR     Industrials            high  28.7% 28.5% composite 0.43            0  
+325   5  LPX    Industrials            high  28.6% 28.5% composite 0.43            0  
+326   5  XRAY   Healthcare             high  28.6% 28.5% composite 0.42            0  
+327   5  CNC    Healthcare             mid   28.3% 25.6% signatures x1 (+composite)    1  gain off 52w low top 20% AND higher-low cadence bottom 20%
+328   5  DECK   Consumer Cyclical      high  28.1% 27.6% composite 0.41            0  
+329   5  AYI    Industrials            high  28.1% 27.6% composite 0.40            0  
+330   5  KKR    Financial              high  28.1% 27.6% composite 0.40            0  
+331   5  HUBB   Industrials            high  28.1% 27.6% composite 0.40            0  
+332   5  R      Industrials            high  28.1% 27.4% composite 0.39            0  
+333   5  TRMB   Technology             high  28.1% 27.4% composite 0.38            0  
+334   5  URI    Industrials            high  28.1% 27.4% composite 0.38            0  
+335   5  VC     Consumer Cyclical      high  28.1% 27.4% composite 0.38            0  
+336   5  APO    Financial              high  28.1% 27.4% composite 0.38            0  
+337   5  EXP    Basic Materials        high  28.1% 27.4% composite 0.38            0  
+338   5  TOST   Technology             high  28.1% 27.4% composite 0.37            0  
+339   5  CFG    Financial              high  27.5% 26.3% composite 0.36            0  
+340   5  VNO    Real Estate            high  27.5% 26.3% composite 0.36            0  
+341   5  TT     Industrials            high  27.5% 26.3% composite 0.36            0  
+342   5  FERG   Industrials            high  27.5% 26.3% composite 0.36            0  
+343   5  ALLY   Financial              high  27.5% 26.3% composite 0.35            0  
+344   5  SHC    Healthcare             high  27.0% 26.3% composite 0.35            0  
+345   5  VNT    Technology             high  27.0% 26.3% composite 0.35            0  
+346   5  CCL    Consumer Cyclical      high  27.0% 26.3% composite 0.34            0  
+347   5  SYF    Financial              high  26.8% 26.0% composite 0.34            0  
+348   5  COF    Financial              high  26.6% 25.8% composite 0.31            0  
+349   5  ALV    Consumer Cyclical      high  26.6% 25.8% composite 0.29            0  
+350   5  OLED   Technology             high  26.6% 25.8% composite 0.29            0  
+351   5  TOL    Consumer Cyclical      high  26.6% 25.8% composite 0.29            0  
+352   5  BLK    Financial              high  26.6% 25.8% composite 0.28            0  
+353   5  BA     Industrials            high  26.6% 25.8% composite 0.27            0  
+354   5  SF     Financial              high  26.6% 25.8% composite 0.27            0  
+355   5  CEG    Utilities              high  26.6% 25.8% composite 0.25            0  
+356   5  JEF    Financial              high  26.6% 25.8% composite 0.25            0  
+357   5  SLM    Financial              high  26.6% 25.8% composite 0.22            0  
+358   5  WAL    Financial              high  26.6% 25.8% composite 0.22            0  
+359   5  CNM    Industrials            high  26.6% 25.8% composite 0.17            0  
+360   5  THO    Consumer Cyclical      high  26.6% 25.8% composite 0.16            0  
+361   5  MGM    Consumer Cyclical      mid   26.3% 25.2% signatures x1 (+composite)    1  time since 20% drawdown bottom 20% AND 12-1m momentum vs own norm top 20%
+362   5  VTRS   Healthcare             mid   25.0% 24.9% composite 0.87            0  
+363   6  LNTH   Healthcare             mid   24.8% 24.6% composite 0.82            0  
+364   6  NUE    Basic Materials        mid   24.8% 24.6% composite 0.82            0  
+365   6  PK     Real Estate            mid   24.8% 24.6% composite 0.81            0  
+366   6  EXEL   Healthcare             mid   24.8% 24.6% composite 0.80            0  
+367   6  TGT    Consumer Defensive     mid   24.7% 24.6% composite 0.79            0  
+368   6  FCFS   Financial              mid   24.7% 24.6% composite 0.78            0  
+369   6  JAZZ   Healthcare             mid   24.6% 24.6% composite 0.76            0  
+370   6  RS     Basic Materials        mid   24.6% 24.6% composite 0.75            0  
+371   6  CROX   Consumer Cyclical      mid   24.6% 24.6% composite 0.74            0  
+372   6  TROW   Financial              mid   24.6% 24.6% composite 0.74            0  
+373   6  HST    Real Estate            mid   24.6% 24.6% composite 0.73            0  
+374   6  KEX    Industrials            mid   24.6% 24.6% composite 0.73            0  
+375   6  DLTR   Consumer Defensive     mid   24.6% 24.6% composite 0.73            0  
+376   6  HUM    Healthcare             mid   24.2% 24.6% composite 0.71            0  
+377   6  DXCM   Healthcare             mid   24.2% 24.6% composite 0.70            0  
+378   6  CART   Consumer Cyclical      mid   24.2% 24.6% composite 0.70            0  
+379   6  WAT    Healthcare             mid   24.2% 24.5% composite 0.69            0  
+380   6  SON    Consumer Cyclical      mid   24.2% 24.5% composite 0.69            0  
+381   6  CYTK   Healthcare             mid   24.2% 24.5% composite 0.69            0  
+382   6  CPAY   Technology             mid   24.2% 24.5% composite 0.68            0  
+383   6  CBT    Basic Materials        mid   24.2% 24.5% composite 0.68            0  
+384   6  FTV    Technology             mid   24.2% 24.5% composite 0.68            0  
+385   6  BIO    Healthcare             mid   24.2% 24.5% composite 0.67            0  
+386   6  IQV    Healthcare             mid   24.2% 24.5% composite 0.67            0  
+387   6  PINS   Communication Services mid   24.2% 24.5% composite 0.67            0  
+388   6  SIRI   Communication Services mid   24.2% 24.5% composite 0.67            0  
+389   6  DT     Technology             mid   24.2% 24.5% composite 0.66            0  
+390   6  ASH    Basic Materials        mid   24.2% 24.5% composite 0.66            0  
+391   6  GPC    Consumer Cyclical      mid   24.2% 24.5% composite 0.65            0  
+392   6  CASY   Consumer Cyclical      low   24.1% 24.3% composite 0.85            0  
+393   6  VRSK   Industrials            low   23.8% 23.9% composite 0.76            0  
+394   6  ROL    Consumer Cyclical      low   23.8% 23.9% composite 0.73            0  
+395   6  CACI   Technology             low   23.8% 23.9% composite 0.72            0  
+396   6  SFM    Consumer Defensive     low   23.8% 23.9% composite 0.71            0  
+397   6  ACI    Consumer Defensive     low   23.8% 23.9% composite 0.68            0  
+398   6  VTR    Real Estate            low   23.8% 23.9% composite 0.65            0  
+399   6  ESNT   Financial              low   23.8% 23.9% composite 0.64            0  
+400   6  FNF    Financial              low   23.8% 23.9% composite 0.64            0  
+401   6  MUSA   Consumer Cyclical      low   23.8% 23.9% composite 0.63            0  
+402   6  YUM    Consumer Cyclical      low   23.8% 23.9% composite 0.63            0  
+403   6  MTG    Financial              low   23.8% 23.9% composite 0.63            0  
+404   6  POR    Utilities              low   23.8% 23.9% composite 0.62            0  
+405   6  DRI    Consumer Cyclical      low   23.8% 23.9% composite 0.62            0  
+406   6  FOX    Communication Services low   23.8% 23.9% composite 0.62            0  
+407   6  PPC    Consumer Defensive     low   23.8% 23.9% composite 0.62            0  
+408   6  GIS    Consumer Defensive     low   23.8% 23.9% composite 0.61            0  
+409   6  FCN    Industrials            low   23.8% 23.9% composite 0.61            0  
+410   6  ERIE   Financial              low   23.8% 23.9% composite 0.60            0  
+411   6  ABT    Healthcare             low   23.8% 23.9% composite 0.60            0  
+412   6  MORN   Financial              low   23.8% 23.9% composite 0.59            0  
+413   6  NWS    Communication Services low   23.8% 23.9% composite 0.59            0  
+414   6  NFLX   Communication Services low   23.8% 23.9% composite 0.59            0  
+415   6  ALL    Financial              low   23.8% 23.9% composite 0.58            0  
+416   6  AHR    Real Estate            low   23.8% 23.9% composite 0.58            0  
+417   6  WY     Real Estate            low   23.8% 23.9% composite 0.58            0  
+418   6  BR     Technology             low   23.8% 23.9% composite 0.58            0  
+419   6  FDS    Financial              low   23.8% 23.9% composite 0.58            0  
+420   6  USFD   Consumer Defensive     low   23.8% 23.9% composite 0.58            0  
+421   6  BRO    Financial              low   23.8% 23.9% composite 0.58            0  
+422   6  EIX    Utilities              low   23.8% 23.9% composite 0.57            0  
+423   6  PAYX   Technology             low   23.8% 23.9% composite 0.57            0  
+424   6  RYAN   Financial              low   23.8% 23.9% composite 0.56            0  
+425   6  AJG    Financial              low   23.8% 23.9% composite 0.56            0  
+426   6  TRGP   Energy                 low   23.8% 23.9% composite 0.56            0  
+427   6  MNST   Consumer Defensive     low   23.8% 23.9% composite 0.55            0  
+428   6  DPZ    Consumer Cyclical      low   23.8% 23.9% composite 0.55            0  
+429   6  TMUS   Communication Services low   23.8% 23.9% composite 0.55            0  
+430   6  CLX    Consumer Defensive     low   23.8% 23.9% composite 0.55            0  
+431   6  RLI    Financial              low   23.8% 23.7% composite 0.54            0  
+432   6  PLNT   Consumer Cyclical      low   23.8% 23.7% composite 0.54            0  
+433   6  EXLS   Technology             low   23.8% 23.7% composite 0.53            0  
+434   6  CHTR   Communication Services low   23.8% 23.7% composite 0.53            0  
+435   6  CTRE   Real Estate            low   23.8% 23.7% composite 0.53            0  
+436   6  SAIC   Technology             low   23.8% 23.7% composite 0.52            0  
+437   6  RTX    Industrials            low   23.8% 23.7% composite 0.52            0  
+438   6  KNSL   Financial              low   23.8% 23.7% composite 0.52            0  
+439   6  DAR    Consumer Defensive     low   23.8% 23.7% composite 0.51            0  
+440   6  TYL    Technology             low   23.8% 23.7% composite 0.51            0  
+441   6  TXRH   Consumer Cyclical      low   23.8% 23.7% composite 0.51            0  
+442   6  PNW    Utilities              low   23.8% 23.7% composite 0.50            0  
+443   6  MMS    Industrials            low   23.8% 23.7% composite 0.50            0  
+444   6  HAE    Healthcare             low   23.8% 23.7% composite 0.50            0  
+445   6  APA    Energy                 low   23.8% 23.7% composite 0.49            0  
+446   6  BSX    Healthcare             low   23.8% 23.7% composite 0.49            0  
+447   6  TRV    Financial              low   23.8% 23.7% composite 0.49            0  
+448   6  G      Technology             low   23.8% 23.7% composite 0.49            0  
+449   6  SRE    Utilities              low   23.8% 23.7% composite 0.49            0  
+450   6  OVV    Energy                 low   23.8% 23.7% composite 0.49            0  
+451   6  MRK    Healthcare             low   23.8% 23.7% composite 0.48            0  
+452   6  CVS    Healthcare             low   23.8% 23.7% composite 0.48            0  
+453   6  MPC    Energy                 low   23.8% 23.7% composite 0.48            0  
+454   6  DINO   Energy                 low   23.8% 23.7% composite 0.48            0  
+455   6  VLO    Energy                 low   23.8% 23.7% composite 0.48            0  
+456   6  CAH    Healthcare             low   23.8% 23.7% composite 0.47            0  
+457   6  T      Communication Services low   23.8% 23.7% composite 0.47            0  
+458   6  PODD   Healthcare             low   23.8% 23.7% composite 0.47            0  
+459   6  DGX    Healthcare             low   23.8% 23.7% composite 0.47            0  
+460   6  PR     Energy                 low   23.8% 23.7% composite 0.47            0  
+461   6  OXY    Energy                 low   23.8% 23.7% composite 0.47            0  
+462   6  NWSA   Communication Services low   23.8% 23.7% composite 0.46            0  
+463   6  BMY    Healthcare             low   23.8% 23.7% composite 0.46            0  
+464   6  FOXA   Communication Services low   23.8% 23.7% composite 0.46            0  
+465   6  FANG   Energy                 low   23.8% 23.7% composite 0.46            0  
+466   6  ROST   Consumer Cyclical      mid   23.7% 24.5% composite 0.65            0  
+467   6  TPL    Energy                 mid   23.7% 24.5% composite 0.65            0  
+468   6  ULTA   Consumer Cyclical      mid   23.7% 24.5% composite 0.64            0  
+469   6  APPF   Technology             mid   23.7% 24.5% composite 0.64            0  
+470   6  HQY    Healthcare             mid   23.7% 24.5% composite 0.64            0  
+471   6  AGCO   Industrials            mid   23.7% 24.5% composite 0.64            0  
+472   6  IFF    Basic Materials        mid   23.7% 24.5% composite 0.63            0  
+473   6  PH     Industrials            mid   23.7% 24.5% composite 0.63            0  
+474   6  AAPL   Technology             mid   23.7% 24.5% composite 0.63            0  
+475   6  AMGN   Healthcare             mid   23.7% 24.5% composite 0.63            0  
+476   6  DE     Industrials            mid   23.7% 24.5% composite 0.63            0  
+477   6  EQIX   Real Estate            mid   23.7% 24.5% composite 0.63            0  
+478   6  ARMK   Industrials            mid   23.7% 24.3% composite 0.62            0  
+479   6  DOV    Industrials            mid   23.7% 24.3% composite 0.62            0  
+480   6  GMED   Healthcare             mid   23.6% 24.3% composite 0.61            0  
+481   6  UPS    Industrials            mid   23.6% 24.3% composite 0.61            0  
+482   6  MAR    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
+483   6  BURL   Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
+484   6  TNL    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
+485   6  CAR    Industrials            mid   23.6% 24.3% composite 0.60            0  
+486   6  GEF    Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
+487   6  SOLV   Healthcare             mid   23.6% 24.3% composite 0.60            0  
+488   6  H      Consumer Cyclical      mid   23.6% 24.3% composite 0.60            0  
+489   6  INCY   Healthcare             mid   23.6% 24.3% composite 0.59            0  
+490   6  NTRS   Financial              mid   23.6% 24.3% composite 0.59            0  
+491   6  GRMN   Technology             mid   23.6% 24.3% composite 0.59            0  
+492   6  WST    Healthcare             mid   23.6% 24.3% composite 0.59            0  
+493   6  REGN   Healthcare             mid   23.6% 24.3% composite 0.59            0  
+494   6  IEX    Industrials            mid   23.6% 24.3% composite 0.59            0  
+495   6  WTS    Industrials            mid   23.6% 24.3% composite 0.58            0  
+496   6  NDSN   Industrials            mid   23.6% 24.3% composite 0.58            0  
+497   6  AMCR   Consumer Cyclical      mid   23.6% 24.3% composite 0.58            0  
+498   6  NTNX   Technology             mid   23.6% 24.3% composite 0.58            0  
+499   6  MEDP   Healthcare             mid   23.6% 24.3% composite 0.56            0  
+500   6  TTC    Industrials            mid   23.6% 24.3% composite 0.56            0  
+501   6  WAB    Industrials            mid   23.6% 24.3% composite 0.56            0  
+502   6  VRTX   Healthcare             mid   23.6% 24.3% composite 0.56            0  
+503   6  FLG    Financial              mid   23.6% 24.3% composite 0.56            0  
+504   6  DHR    Healthcare             mid   23.6% 24.3% composite 0.55            0  
+505   6  LYV    Communication Services mid   23.6% 24.3% composite 0.55            0  
+506   6  A      Healthcare             mid   23.6% 24.3% composite 0.55            0  
+507   6  OMC    Communication Services mid   23.6% 24.3% composite 0.55            0  
+508   6  CSGP   Real Estate            low   23.6% 23.7% composite 0.46            0  
+509   6  AON    Financial              low   23.6% 23.7% composite 0.46            0  
+510   6  WTW    Financial              low   23.6% 23.7% composite 0.46            0  
+511   6  PSX    Energy                 low   23.6% 23.7% composite 0.45            0  
+512   6  KO     Consumer Defensive     low   23.6% 23.7% composite 0.45            0  
+513   6  POST   Consumer Defensive     low   23.6% 23.7% composite 0.45            0  
+514   6  UNP    Industrials            low   23.6% 23.7% composite 0.45            0  
+515   6  COP    Energy                 low   23.6% 23.7% composite 0.45            0  
+516   6  DVN    Energy                 low   23.6% 23.7% composite 0.45            0  
+517   6  OKE    Energy                 low   23.6% 23.7% composite 0.45            0  
+518   6  SJM    Consumer Defensive     low   23.6% 23.7% composite 0.45            0  
+519   6  LNT    Utilities              low   23.6% 23.7% composite 0.45            0  
+520   6  INTU   Technology             low   23.6% 23.7% composite 0.45            0  
+521   6  ETR    Utilities              low   23.6% 23.7% composite 0.45            0  
+522   6  SPGI   Financial              low   23.6% 23.7% composite 0.44            0  
+523   6  DTM    Energy                 low   23.6% 23.7% composite 0.44            0  
+524   6  SCI    Consumer Cyclical      low   23.6% 23.7% composite 0.44            0  
+525   6  VZ     Communication Services low   23.6% 23.7% composite 0.44            0  
+526   6  KDP    Consumer Defensive     low   23.6% 23.7% composite 0.44            0  
+527   6  RRC    Energy                 low   23.6% 23.7% composite 0.44            0  
+528   6  BDX    Healthcare             low   23.5% 23.6% composite 0.44            0  
+529   6  NI     Utilities              low   23.5% 23.6% composite 0.44            0  
+530   6  EOG    Energy                 low   23.5% 23.6% composite 0.44            0  
+531   6  PCTY   Technology             low   23.5% 23.6% composite 0.43            0  
+532   6  UTHR   Healthcare             low   23.5% 23.6% composite 0.43            0  
+533   6  ZBH    Healthcare             low   23.5% 23.6% composite 0.43            0  
+534   6  AR     Energy                 low   23.5% 23.6% composite 0.43            0  
+535   6  CNP    Utilities              low   23.5% 23.6% composite 0.43            0  
+536   6  CPRT   Industrials            low   23.5% 23.6% composite 0.43            0  
+537   6  BMRN   Healthcare             mid   23.2% 23.7% composite 0.55            0  
+538   6  EEFT   Technology             mid   23.2% 23.7% composite 0.55            0  
+539   6  DLR    Real Estate            mid   23.2% 23.7% composite 0.54            0  
+540   6  AIT    Industrials            mid   23.2% 23.7% composite 0.54            0  
+541   6  ZION   Financial              mid   23.2% 23.7% composite 0.54            0  
+542   6  FITB   Financial              mid   23.2% 23.7% composite 0.54            0  
+543   6  NBIX   Healthcare             mid   23.2% 23.7% composite 0.54            0  
+544   6  HOG    Consumer Cyclical      mid   23.2% 23.7% composite 0.54            0  
+545   6  TTEK   Industrials            mid   23.2% 23.7% composite 0.53            0  
+546   6  IBM    Technology             mid   23.2% 23.7% composite 0.53            0  
+547   6  ORA    Utilities              mid   23.2% 23.7% composite 0.52            0  
+548   6  SSD    Basic Materials        mid   23.2% 23.7% composite 0.52            0  
+549   6  COLB   Financial              mid   23.2% 23.7% composite 0.52            0  
+550   6  MLI    Industrials            mid   23.2% 23.7% composite 0.52            0  
+551   6  UNH    Healthcare             mid   23.2% 23.7% composite 0.52            0  
+552   6  MSFT   Technology             mid   23.2% 23.7% composite 0.51            0  
+553   6  CHRW   Industrials            mid   23.2% 23.7% composite 0.51            0  
+554   6  VLY    Financial              mid   23.2% 23.7% composite 0.51            0  
+555   6  LAD    Consumer Cyclical      mid   23.2% 23.7% composite 0.51            0  
+556   6  JLL    Real Estate            mid   23.2% 23.7% composite 0.51            0  
+557   6  GWW    Industrials            mid   23.2% 23.7% composite 0.51            0  
+558   6  PNR    Industrials            mid   23.2% 23.7% composite 0.50            0  
+559   6  USB    Financial              mid   23.2% 23.7% composite 0.50            0  
+560   6  PNFP   Financial              mid   23.2% 23.7% composite 0.50            0  
+561   6  EW     Healthcare             mid   23.2% 23.4% composite 0.49            0  
+562   6  BKR    Energy                 mid   23.2% 23.4% composite 0.49            0  
+563   6  BAC    Financial              mid   23.2% 23.4% composite 0.49            0  
+564   6  RF     Financial              mid   23.2% 23.4% composite 0.49            0  
+565   6  ULS    Industrials            mid   23.2% 23.4% composite 0.48            0  
+566   6  SMG    Basic Materials        mid   23.2% 23.4% composite 0.48            0  
+567   6  SCHW   Financial              mid   23.2% 23.4% composite 0.48            0  
+568   6  CNO    Financial              mid   23.2% 23.4% composite 0.48            0  
+569   6  OLLI   Consumer Defensive     mid   23.2% 23.4% composite 0.48            0  
+570   6  PFG    Financial              mid   23.2% 23.4% composite 0.47            0  
+571   6  MMM    Industrials            mid   23.2% 23.4% composite 0.47            0  
+572   6  WTFC   Financial              mid   23.2% 23.4% composite 0.47            0  
+573   6  VOYA   Financial              mid   23.2% 23.4% composite 0.47            0  
+574   6  CFR    Financial              mid   23.2% 23.4% composite 0.47            0  
+575   6  TECH   Healthcare             mid   23.2% 23.4% composite 0.47            0  
+576   6  PCAR   Industrials            mid   23.2% 23.4% composite 0.47            0  
+577   6  PKG    Consumer Cyclical      mid   23.2% 23.4% composite 0.47            0  
+578   6  HLT    Consumer Cyclical      mid   23.2% 23.4% composite 0.46            0  
+579   6  KEY    Financial              mid   23.2% 23.4% composite 0.46            0  
+580   6  CCK    Consumer Cyclical      mid   23.2% 23.4% composite 0.46            0  
+581   6  GBCI   Financial              mid   23.2% 23.4% composite 0.46            0  
+582   6  NEU    Basic Materials        mid   23.2% 23.4% composite 0.46            0  
+583   6  OLN    Basic Materials        mid   23.2% 23.4% composite 0.46            0  
+584   6  SSB    Financial              mid   23.2% 23.4% composite 0.46            0  
+585   6  MTB    Financial              mid   23.2% 23.4% composite 0.46            0  
+586   6  HAS    Consumer Cyclical      mid   23.2% 23.4% composite 0.45            0  
+587   6  EXPD   Industrials            mid   23.2% 23.4% composite 0.44            0  
+588   6  FAF    Financial              mid   23.2% 23.4% composite 0.44            0  
+589   6  PNC    Financial              mid   23.2% 23.4% composite 0.44            0  
+590   6  DLB    Industrials            mid   23.2% 23.4% composite 0.44            0  
+591   6  HSIC   Healthcare             mid   23.2% 23.4% composite 0.44            0  
+592   6  NNN    Real Estate            low   23.1% 23.6% composite 0.42            0  
+593   6  CMCSA  Communication Services low   23.1% 23.6% composite 0.42            0  
+594   6  LH     Healthcare             low   23.1% 23.6% composite 0.42            0  
+595   6  PRI    Financial              low   23.1% 23.6% composite 0.42            0  
+596   6  KMB    Consumer Defensive     low   23.1% 23.6% composite 0.42            0  
+597   6  HIG    Financial              low   23.1% 23.6% composite 0.42            0  
+598   6  LHX    Industrials            low   23.1% 23.6% composite 0.42            0  
+599   6  VNOM   Energy                 low   23.1% 23.6% composite 0.42            0  
+600   6  CTAS   Industrials            low   23.1% 23.6% composite 0.41            0  
+601   6  COKE   Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
+602   6  HRL    Consumer Defensive     low   23.1% 23.6% composite 0.41            0  
+603   6  BALL   Consumer Cyclical      low   23.1% 23.6% composite 0.41            0  
+604   6  JNJ    Healthcare             low   23.1% 23.6% composite 0.41            0  
+605   6  ELV    Healthcare             low   23.1% 23.6% composite 0.41            0  
+606   6  ADP    Technology             low   23.1% 23.6% composite 0.41            0  
+607   6  KHC    Consumer Defensive     low   23.1% 23.6% composite 0.40            0  
+608   6  MSCI   Financial              low   23.1% 23.6% composite 0.40            0  
+609   6  RYN    Real Estate            low   23.1% 23.6% composite 0.40            0  
+610   6  SPG    Real Estate            low   23.1% 23.6% composite 0.40            0  
+611   6  TJX    Consumer Cyclical      low   23.1% 23.6% composite 0.40            0  
+612   6  UNM    Financial              low   23.1% 23.6% composite 0.40            0  
+613   6  IDA    Utilities              low   23.1% 23.6% composite 0.40            0  
+614   6  SBAC   Real Estate            low   23.1% 23.6% composite 0.39            0  
+615   6  VRSN   Technology             low   23.1% 23.6% composite 0.39            0  
+616   6  LAMR   Real Estate            low   23.1% 23.6% composite 0.39            0  
+617   6  BHF    Financial              low   23.1% 23.6% composite 0.39            0  
+618   6  BG     Consumer Defensive     low   23.1% 23.6% composite 0.39            0  
+619   6  KRG    Real Estate            low   23.1% 23.6% composite 0.39            0  
+620   6  DTE    Utilities              low   23.1% 23.6% composite 0.39            0  
+621   6  AM     Energy                 low   23.1% 23.6% composite 0.39            0  
+622   6  D      Utilities              low   23.1% 23.3% composite 0.38            0  
+623   6  GL     Financial              low   23.1% 23.0% composite 0.38            0  
+624   6  SBUX   Consumer Cyclical      mid   23.1% 23.4% composite 0.43            0  
+625   6  SLGN   Consumer Cyclical      mid   22.8% 23.4% composite 0.43            0  
+626   6  SLAB   Technology             mid   22.8% 23.4% composite 0.43            0  
+627   6  SEIC   Financial              mid   22.8% 23.4% composite 0.43            0  
+628   6  AME    Industrials            mid   22.8% 23.4% composite 0.43            0  
+629   6  MTD    Healthcare             mid   22.8% 23.4% composite 0.42            0  
+630   6  PFGC   Consumer Defensive     mid   22.8% 23.4% composite 0.42            0  
+631   6  CHWY   Consumer Cyclical      mid   22.8% 23.4% composite 0.42            0  
+632   6  CHH    Consumer Cyclical      mid   22.8% 23.4% composite 0.42            0  
+633   6  DOC    Real Estate            mid   22.8% 23.4% composite 0.42            0  
+634   6  CSX    Industrials            mid   22.8% 23.4% composite 0.41            0  
+635   6  CMG    Consumer Cyclical      mid   22.8% 23.4% composite 0.41            0  
+636   6  FHI    Financial              mid   22.8% 23.4% composite 0.41            0  
+637   6  TMO    Healthcare             mid   22.8% 23.4% composite 0.41            0  
+638   6  EWBC   Financial              mid   22.8% 23.4% composite 0.41            0  
+639   6  AMP    Financial              mid   22.8% 23.4% composite 0.41            0  
+640   6  UBER   Technology             mid   22.8% 23.4% composite 0.41            0  
+641   6  WELL   Real Estate            low   22.8% 23.0% composite 0.38            0  
+642   6  PLD    Real Estate            mid   22.7% 23.4% composite 0.40            0  
+643   6  MTN    Consumer Cyclical      mid   22.7% 23.4% composite 0.40            0  
+644   6  COLM   Consumer Cyclical      mid   22.7% 23.4% composite 0.39            0  
+645   6  J      Industrials            mid   22.7% 23.4% composite 0.39            0  
+646   6  PAG    Consumer Cyclical      mid   22.7% 23.4% composite 0.39            0  
+647   6  ASB    Financial              mid   22.6% 23.4% composite 0.39            0  
+648   6  RMD    Healthcare             mid   22.6% 23.0% composite 0.39            0  
+649   6  BKNG   Consumer Cyclical      mid   22.6% 22.9% composite 0.39            0  
+650   6  ADSK   Technology             mid   22.6% 22.9% composite 0.38            0  
+651   6  SHW    Basic Materials        mid   22.6% 22.9% composite 0.38            0  
+652   6  MSA    Industrials            mid   22.6% 22.9% composite 0.38            0  
+653   6  FAST   Industrials            mid   22.6% 22.9% composite 0.37            0  
+654   6  PRU    Financial              mid   22.6% 22.9% composite 0.37            0  
+655   6  WMG    Communication Services mid   22.6% 22.9% composite 0.37            0  
+656   6  KRC    Real Estate            mid   22.6% 22.9% composite 0.37            0  
+657   6  HLI    Financial              mid   22.6% 22.9% composite 0.37            0  
+658   6  MET    Financial              mid   22.6% 22.9% composite 0.37            0  
+659   6  BCO    Industrials            mid   22.6% 22.9% composite 0.37            0  
+660   6  EBAY   Consumer Cyclical      mid   22.6% 22.9% composite 0.36            0  
+661   6  HII    Industrials            mid   22.6% 22.9% composite 0.36            0  
+662   6  RBA    Industrials            mid   22.6% 22.9% composite 0.36            0  
+663   6  WLK    Basic Materials        mid   22.6% 22.9% composite 0.36            0  
+664   6  PSA    Real Estate            mid   22.6% 22.9% composite 0.35            0  
+665   6  PHM    Consumer Cyclical      mid   22.6% 22.9% composite 0.35            0  
+666   6  FHN    Financial              mid   22.6% 22.9% composite 0.35            0  
+667   6  WFC    Financial              mid   22.6% 22.9% composite 0.35            0  
+668   6  LDOS   Technology             mid   22.6% 22.9% composite 0.35            0  
+669   6  KD     Technology             mid   22.6% 22.9% composite 0.35            0  
+670   6  ALLE   Industrials            mid   22.6% 22.9% composite 0.34            0  
+671   6  FNB    Financial              mid   22.6% 22.9% composite 0.34            0  
+672   6  IDXX   Healthcare             mid   22.6% 22.9% composite 0.34            0  
+673   6  WH     Consumer Cyclical      mid   22.6% 22.9% composite 0.34            0  
+674   6  GPK    Consumer Cyclical      mid   22.6% 22.9% composite 0.33            0  
+675   6  CHDN   Consumer Cyclical      mid   22.6% 22.9% composite 0.33            0  
+676   6  CUZ    Real Estate            mid   22.6% 22.9% composite 0.33            0  
+677   6  FIS    Technology             mid   22.6% 22.9% composite 0.33            0  
+678   6  UMBF   Financial              mid   22.6% 22.9% composite 0.33            0  
+679   6  MSM    Industrials            mid   22.6% 22.9% composite 0.32            0  
+680   6  BXP    Real Estate            mid   22.6% 22.9% composite 0.32            0  
+681   6  MOS    Basic Materials        mid   22.6% 22.9% composite 0.32            0  
+682   6  UBSI   Financial              mid   22.6% 22.9% composite 0.32            0  
+683   6  TCBI   Financial              mid   22.6% 22.9% composite 0.31            0  
+684   6  HON    Industrials            mid   22.6% 22.9% composite 0.31            0  
+685   6  AVY    Consumer Cyclical      mid   22.6% 22.9% composite 0.31            0  
+686   6  TRU    Financial              mid   22.6% 22.9% composite 0.31            0  
+687   6  ARE    Real Estate            mid   22.6% 22.9% composite 0.31            0  
+688   6  LVS    Consumer Cyclical      mid   22.6% 22.9% composite 0.31            0  
+689   6  HBAN   Financial              mid   22.6% 22.9% composite 0.31            0  
+690   6  ONB    Financial              mid   22.6% 22.9% composite 0.30            0  
+691   6  HWC    Financial              mid   22.6% 22.9% composite 0.30            0  
+692   6  FICO   Technology             mid   22.6% 22.9% composite 0.30            0  
+693   6  GNTX   Consumer Cyclical      mid   22.6% 22.9% composite 0.29            0  
+694   6  NXST   Communication Services mid   22.6% 22.9% composite 0.29            0  
+695   6  KBH    Consumer Cyclical      mid   22.6% 22.9% composite 0.28            0  
+696   6  CME    Financial              low   22.4% 23.0% composite 0.38            0  
+697   6  CB     Financial              low   22.4% 23.0% composite 0.38            0  
+698   6  MKC    Consumer Defensive     low   22.4% 23.0% composite 0.38            0  
+699   6  WMT    Consumer Defensive     low   22.4% 23.0% composite 0.37            0  
+700   6  BIIB   Healthcare             low   22.4% 22.9% composite 0.36            0  
+701   6  NOC    Industrials            low   22.4% 22.9% composite 0.36            0  
+702   6  ORI    Financial              low   22.4% 22.9% composite 0.36            0  
+703   6  SBRA   Real Estate            low   22.4% 22.9% composite 0.36            0  
+704   6  XOM    Energy                 low   22.4% 22.9% composite 0.36            0  
+705   6  STAG   Real Estate            low   22.4% 22.9% composite 0.35            0  
+706   6  ADM    Consumer Defensive     low   22.4% 22.9% composite 0.35            0  
+707   6  VMRK   Real Estate            low   22.4% 22.9% composite 0.35            0  
+708   6  PGR    Financial              low   22.4% 22.9% composite 0.34            0  
+709   6  CNX    Energy                 low   22.4% 22.9% composite 0.34            0  
+710   6  NJR    Utilities              low   22.4% 22.9% composite 0.34            0  
+711   6  WMB    Energy                 low   22.4% 22.9% composite 0.34            0  
+712   6  WM     Industrials            low   22.4% 22.9% composite 0.34            0  
+713   6  CCI    Real Estate            low   22.4% 22.9% composite 0.34            0  
+714   6  STZ    Consumer Defensive     low   22.4% 22.1% composite 0.33            0  
+715   6  EXC    Utilities              low   22.4% 22.1% composite 0.32            0  
+716   6  BJ     Consumer Defensive     low   22.4% 22.1% composite 0.32            0  
+717   6  CVX    Energy                 low   22.4% 22.1% composite 0.32            0  
+718   6  UHS    Healthcare             low   22.4% 22.1% composite 0.32            0  
+719   6  VICI   Real Estate            low   22.4% 22.1% composite 0.32            0  
+720   6  THG    Financial              low   22.4% 22.1% composite 0.31            0  
+721   6  MO     Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
+722   6  HSY    Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
+723   6  FE     Utilities              low   22.4% 22.1% composite 0.31            0  
+724   6  SIGI   Financial              low   22.4% 22.1% composite 0.31            0  
+725   6  SYK    Healthcare             low   22.4% 22.1% composite 0.31            0  
+726   6  IRT    Real Estate            low   22.4% 22.1% composite 0.31            0  
+727   6  PM     Consumer Defensive     low   22.4% 22.1% composite 0.31            0  
+728   6  NSC    Industrials            low   22.4% 22.1% composite 0.31            0  
+729   6  OTIS   Industrials            low   22.4% 22.1% composite 0.31            0  
+730   6  FRT    Real Estate            low   22.4% 22.1% composite 0.31            0  
+731   6  EXE    Energy                 low   22.4% 22.1% composite 0.31            0  
+732   6  VLTO   Industrials            low   22.4% 22.1% composite 0.31            0  
+733   6  AFL    Financial              low   22.4% 22.1% composite 0.30            0  
+734   6  GLPI   Real Estate            low   22.4% 22.1% composite 0.30            0  
+735   6  AIZ    Financial              low   22.4% 22.1% composite 0.30            0  
+736   6  HR     Real Estate            low   22.4% 22.1% composite 0.30            0  
+737   6  KVUE   Consumer Defensive     low   22.4% 22.1% composite 0.30            0  
+738   6  ES     Utilities              low   22.4% 22.1% composite 0.30            0  
+739   6  PPL    Utilities              low   22.4% 22.1% composite 0.30            0  
+740   6  LLY    Healthcare             low   22.4% 22.1% composite 0.29            0  
+741   6  AEP    Utilities              low   22.4% 22.1% composite 0.29            0  
+742   6  CUBE   Real Estate            low   22.4% 22.1% composite 0.28            0  
+743   6  MCK    Healthcare             low   22.4% 22.1% composite 0.28            0  
+744   6  BF-B   Consumer Defensive     low   22.4% 22.1% composite 0.28            0  
+745   6  ADC    Real Estate            low   22.4% 22.1% composite 0.28            0  
+746   6  OGE    Utilities              low   22.4% 22.1% composite 0.28            0  
+747   6  MSI    Technology             low   22.4% 22.1% composite 0.27            0  
+748   6  AEE    Utilities              low   22.4% 22.1% composite 0.27            0  
+749   6  UGI    Utilities              low   22.4% 22.1% composite 0.27            0  
+750   6  ORLY   Consumer Cyclical      low   22.3% 22.1% composite 0.26            0  
+751   6  VVV    Consumer Cyclical      mid   22.3% 22.9% composite 0.28            0  
+752   6  GEHC   Healthcare             mid   22.3% 22.9% composite 0.27            0  
+753   6  DCI    Industrials            mid   22.3% 22.9% composite 0.27            0  
+754   6  RPM    Basic Materials        mid   22.3% 22.9% composite 0.27            0  
+755   6  NDAQ   Financial              mid   22.3% 22.9% composite 0.27            0  
+756   6  GD     Industrials            mid   22.3% 22.9% composite 0.26            0  
+757   6  AN     Consumer Cyclical      mid   22.3% 22.9% composite 0.26            0  
+758   6  CBRE   Real Estate            mid   22.3% 22.9% composite 0.26            0  
+759   6  FISV   Technology             mid   22.3% 22.9% composite 0.26            0  
+760   6  DIS    Communication Services mid   22.3% 22.9% composite 0.26            0  
+761   6  EFX    Industrials            mid   22.3% 22.9% composite 0.26            0  
+762   6  AES    Utilities              mid   22.3% 22.9% composite 0.25            0  
+763   6  BSY    Technology             mid   22.3% 22.9% composite 0.25            0  
+764   6  EXPO   Industrials            mid   22.3% 22.9% composite 0.25            0  
+765   6  DHI    Consumer Cyclical      mid   22.3% 22.9% composite 0.25            0  
+766   6  WYNN   Consumer Cyclical      mid   22.3% 22.9% composite 0.25            0  
+767   6  UFPI   Basic Materials        mid   22.3% 22.9% composite 0.24            0  
+768   6  SNA    Industrials            mid   22.3% 22.9% composite 0.24            0  
+769   6  TXT    Industrials            mid   22.2% 22.9% composite 0.24            0  
+770   6  OHI    Real Estate            low   22.2% 21.9% composite 0.26            0  
+771   6  NEE    Utilities              low   22.2% 21.9% composite 0.26            0  
+772   6  SO     Utilities              low   22.2% 21.9% composite 0.25            0  
+773   6  EPR    Real Estate            low   22.2% 21.8% composite 0.24            0  
+774   6  CINF   Financial              low   22.2% 21.8% composite 0.24            0  
+775   6  SYY    Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
+776   6  KR     Consumer Defensive     low   22.2% 21.8% composite 0.24            0  
+777   6  MRSH   Financial              low   22.2% 21.8% composite 0.24            0  
+778   6  PEG    Utilities              low   22.2% 21.8% composite 0.24            0  
+779   6  RGA    Financial              low   22.2% 21.8% composite 0.24            0  
+780   6  EGP    Real Estate            low   22.2% 21.6% composite 0.23            0  
+781   6  XEL    Utilities              low   22.2% 21.5% composite 0.23            0  
+782   6  WEC    Utilities              low   22.2% 21.5% composite 0.23            0  
+783   6  ATO    Utilities              low   22.2% 21.5% composite 0.23            0  
+784   6  CI     Healthcare             low   22.2% 21.4% composite 0.23            0  
+785   6  EQT    Energy                 low   22.2% 21.3% composite 0.23            0  
+786   6  MCD    Consumer Cyclical      low   22.2% 21.3% composite 0.23            0  
+787   6  EHC    Healthcare             low   22.2% 21.3% composite 0.23            0  
+788   6  EVRG   Utilities              low   22.2% 21.3% composite 0.22            0  
+789   6  ENSG   Healthcare             low   22.2% 21.3% composite 0.22            0  
+790   6  HCA    Healthcare             low   22.2% 21.3% composite 0.22            0  
+791   6  REG    Real Estate            low   22.2% 21.3% composite 0.22            0  
+792   6  NWE    Utilities              low   22.2% 21.3% composite 0.22            0  
+793   6  COR    Healthcare             low   22.2% 21.3% composite 0.21            0  
+794   6  GILD   Healthcare             low   22.2% 21.3% composite 0.21            0  
+795   6  L      Financial              low   22.2% 21.3% composite 0.21            0  
+796   6  ED     Utilities              low   22.2% 21.3% composite 0.21            0  
+797   6  CLH    Industrials            low   22.2% 21.3% composite 0.20            0  
+798   6  CHE    Healthcare             low   22.2% 21.3% composite 0.20            0  
+799   6  DUK    Utilities              low   22.2% 21.3% composite 0.20            0  
+800   6  UDR    Real Estate            low   22.2% 21.3% composite 0.20            0  
+801   6  CMS    Utilities              low   22.2% 21.3% composite 0.20            0  
+802   6  CBSH   Financial              low   22.2% 21.3% composite 0.20            0  
+803   6  TSN    Consumer Defensive     low   22.2% 21.3% composite 0.19            0  
+804   6  LMT    Industrials            low   22.2% 21.3% composite 0.19            0  
+805   6  SWX    Utilities              low   22.2% 21.3% composite 0.19            0  
+806   6  SAM    Consumer Defensive     low   22.2% 21.3% composite 0.19            0  
+807   6  APD    Basic Materials        low   22.0% 21.3% composite 0.18            0  
+808   6  BKH    Utilities              low   22.0% 21.1% composite 0.18            0  
+809   6  SUI    Real Estate            low   22.0% 21.1% composite 0.18            0  
+810   6  RNR    Financial              low   22.0% 21.1% composite 0.18            0  
+811   6  MZTI   Consumer Defensive     low   22.0% 21.1% composite 0.17            0  
+812   6  LIN    Basic Materials        low   22.0% 21.1% composite 0.17            0  
+813   6  ACGL   Financial              low   22.0% 20.6% composite 0.16            0  
+814   6  PFE    Healthcare             low   22.0% 20.6% composite 0.15            0  
+815   6  TFC    Financial              mid   21.9% 22.9% composite 0.24            0  
+816   6  REXR   Real Estate            mid   21.9% 22.9% composite 0.23            0  
+817   6  KBR    Industrials            mid   21.9% 22.9% composite 0.23            0  
+818   6  AOS    Industrials            mid   21.9% 22.9% composite 0.23            0  
+819   6  TTWO   Communication Services mid   21.9% 22.9% composite 0.23            0  
+820   6  PB     Financial              mid   21.9% 22.9% composite 0.23            0  
+821   6  MAT    Consumer Cyclical      mid   21.9% 22.9% composite 0.22            0  
+822   6  HOMB   Financial              mid   21.8% 22.9% composite 0.22            0  
+823   6  FFIN   Financial              mid   21.7% 22.9% composite 0.22            0  
+824   6  O      Real Estate            low   21.7% 20.6% composite 0.15            0  
+825   6  NFG    Energy                 low   21.7% 20.6% composite 0.15            0  
+826   6  V      Financial              low   21.7% 20.6% composite 0.15            0  
+827   6  RJF    Financial              mid   21.6% 22.9% composite 0.22            0  
+828   6  ICE    Financial              low   21.6% 20.4% composite 0.15            0  
+829   6  AZO    Consumer Cyclical      low   21.6% 20.4% composite 0.15            0  
+830   6  AMT    Real Estate            low   21.6% 20.4% composite 0.15            0  
+831   6  MLM    Basic Materials        mid   21.6% 22.9% composite 0.22            0  
+832   6  OZK    Financial              mid   21.4% 22.9% composite 0.22            0  
+833   6  COO    Healthcare             mid   21.4% 22.9% composite 0.21            0  
+834   6  ZTS    Healthcare             mid   21.4% 22.9% composite 0.20            0  
+835   6  GATX   Industrials            mid   21.4% 22.9% composite 0.19            0  
+836   6  EXR    Real Estate            mid   21.4% 22.9% composite 0.19            0  
+837   6  AXP    Financial              mid   21.4% 22.9% composite 0.19            0  
+838   6  MCO    Financial              mid   21.4% 22.9% composite 0.18            0  
+839   6  LOPE   Consumer Defensive     low   21.3% 20.4% composite 0.14            0  
+840   6  BRX    Real Estate            low   21.2% 20.4% composite 0.14            0  
+841   6  KMI    Energy                 low   21.2% 20.4% composite 0.13            0  
+842   6  MDT    Healthcare             low   21.2% 20.4% composite 0.13            0  
+843   6  MA     Financial              low   21.2% 20.4% composite 0.13            0  
+844   6  CL     Consumer Defensive     low   21.2% 20.4% composite 0.13            0  
+845   6  PG     Consumer Defensive     low   21.1% 20.0% composite 0.13            0  
+846   6  OGS    Utilities              low   21.1% 20.0% composite 0.12            0  
+847   6  CPT    Real Estate            low   21.1% 20.0% composite 0.12            0  
+848   6  RSG    Industrials            low   21.1% 20.0% composite 0.12            0  
+849   6  COST   Consumer Defensive     low   21.1% 20.0% composite 0.12            0  
+850   6  SR     Utilities              low   21.1% 20.0% composite 0.11            0  
+851   6  KIM    Real Estate            low   21.1% 20.0% composite 0.11            0  
+852   6  MAA    Real Estate            low   21.1% 20.0% composite 0.11            0  
+853   6  WPC    Real Estate            low   21.1% 20.0% composite 0.10            0  
+854   6  MDLZ   Consumer Defensive     low   21.1% 20.0% composite 0.10            0  
+855   6  ELS    Real Estate            low   21.1% 20.0% composite 0.09            0  
+856   6  AIG    Financial              low   21.1% 20.0% composite 0.08            0  
+857   6  AWK    Utilities              low   21.1% 20.0% composite 0.08            0  
+858   6  ESS    Real Estate            low   21.1% 20.0% composite 0.08            0  
+859   6  AMH    Real Estate            low   21.1% 20.0% composite 0.08            0  
+860   6  CHD    Consumer Defensive     low   21.1% 20.0% composite 0.08            0  
+861   6  BRK-B  Financial              low   21.1% 20.0% composite 0.08            0  
+862   6  AFG    Financial              low   21.1% 20.0% composite 0.07            0  
+863   6  INVH   Real Estate            low   21.1% 20.0% composite 0.07            0  
+864   6  ABBV   Healthcare             low   21.0% 20.0% composite 0.07            0  
+865   6  PEP    Consumer Defensive     low   21.0% 20.0% composite 0.06            0  
+866   6  EG     Financial              low   21.0% 20.0% composite 0.06            0  
+867   6  PEN    Healthcare             low   21.0% 19.8% composite 0.05            0  
+868   6  WRB    Financial              low   21.0% 19.8% composite 0.04            0  
+869   6  WTRG   Utilities              low   21.0% 19.8% composite 0.04            0  
+870   6  INGR   Consumer Defensive     low   21.0% 19.8% composite 0.04            0  
+871   6  TXNM   Utilities              low   21.0% 19.8% composite 0.01            0  
+872   6  TSCO   Consumer Cyclical      mid   20.8% 22.9% composite 0.18            0  
+873   6  ECL    Basic Materials        mid   20.8% 22.9% composite 0.17            0  
+874   6  LEN    Consumer Cyclical      mid   20.8% 22.9% composite 0.16            0  
+875   6  ITW    Industrials            mid   20.8% 22.9% composite 0.16            0  
+876   6  TDG    Industrials            mid   20.8% 22.9% composite 0.16            0  
+877   6  STE    Healthcare             mid   20.8% 22.9% composite 0.15            0  
+878   6  JPM    Financial              mid   20.8% 22.9% composite 0.15            0  
+879   6  XYL    Industrials            mid   20.8% 22.9% composite 0.15            0  
+880   6  IBOC   Financial              mid   20.8% 22.9% composite 0.15            0  
+881   6  LOW    Consumer Cyclical      mid   20.8% 22.9% composite 0.15            0  
+882   6  FR     Real Estate            mid   20.8% 22.9% composite 0.15            0  
+883   6  VMC    Basic Materials        mid   20.8% 22.8% composite 0.14            0  
+884   6  NLY    Real Estate            mid   20.8% 22.8% composite 0.13            0  
+885   6  HD     Consumer Cyclical      mid   20.8% 22.8% composite 0.13            0  
+886   6  ATR    Healthcare             mid   20.8% 22.8% composite 0.13            0  
+887   6  TKO    Communication Services mid   20.8% 22.8% composite 0.13            0  
+888   6  GGG    Industrials            mid   20.8% 22.8% composite 0.13            0  
+889   6  BYD    Consumer Cyclical      mid   20.8% 22.8% composite 0.13            0  
+890   6  GHC    Industrials            mid   20.8% 22.8% composite 0.11            0  
+891   6  NVR    Consumer Cyclical      mid   20.4% 21.5% composite 0.10            0  
+892   6  NKE    Consumer Cyclical      mid   17.0% 17.6% composite 0.05            0  
+893   6  STWD   Real Estate            mid   17.0% 17.6% composite 0.05            0  
 
 not ranked:
     CTVA   fails liquidity / price eligibility today or no completed session (e.g. CTVA unadjusted spin-off)

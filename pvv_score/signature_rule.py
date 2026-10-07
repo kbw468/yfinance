@@ -11,6 +11,7 @@ from .run_eval import load_research
 from .composite import tercile_series
 from .signatures import QUINTILE_FACTORS, FIXED, build_conditions, smooth_top_quartile
 from .regime import tag, today_regime, same_regime
+from .livecomp import live_composite_percentile
 
 PLAIN = {
     "mom_12_1": "12-1m momentum", "ret_21": "21d return", "ret_63": "63d return", "rs_lead_126": "RS line leading price", "rs_spy_63": "63d RS vs SPY",
@@ -133,8 +134,8 @@ def main():
                 cnt += 1; misses[m[0]] += 1
         near_n[tk] = cnt
         near_miss[tk] = plain(misses.most_common(1)[0][0]) if misses else ""
-    # tonight's composite percentile comes from the live scoring (same construction: mean of state and level percentiles)
-    live = pd.read_csv(RESULTS_DIR / "universe_scores_smooth.csv").set_index("ticker")["avg_score"]
+    # tonight's composite percentile on the calibration scale (walk-forward preds, universe-ranked), see livecomp.py
+    live = live_composite_percentile(df.date.max())
     today["comp_p"] = today.ticker.map(live).values
     today["comp_q"] = pd.cut(today.comp_p, COMP_Q, labels=range(len(COMP_Q) - 1), include_lowest=True)
     for c in ["ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]:
