@@ -67,21 +67,23 @@ def main():
     rule = pd.DataFrame(rows).set_index("bucket")
     rule.to_csv(RESULTS_DIR / "signature_rule_oos.csv")
     # by number of confirmed signatures firing (depth), recent
-    cnt = np.zeros(n, dtype=int)
+    cnt = np.zeros(n, dtype=int); liftsum = np.zeros(n); bestp = np.zeros(n)
     for i, r in conf.iterrows():
         m = np.ones(n, dtype=bool)
         for p in r.signature.split(" & "):
             m &= conds[p]
-        cnt += m
-    df["n_fire"] = cnt
+        cnt += m; liftsum += m * (r.lift_conf - 1.0); bestp = np.maximum(bestp, m * r.p_conf)
+    df["n_fire"] = cnt; df["liftsum"] = liftsum; df["bestp"] = bestp
     rec = df[(df.date >= RECENT_START) & ~np.isnan(df.y42) & (df.regime == reg)]
     depth = rec.groupby(pd.cut(rec.n_fire, [-1, 0, 2, 5, 10, 20, 50, 10000], labels=["0", "1-2", "3-5", "6-10", "11-20", "21-50", "50+"]), observed=True).agg(
         n=("y42", "size"), P_topq42=("y42", "mean"), P_topq63=("y63", "mean"))
     depth.to_csv(RESULTS_DIR / "signature_depth_oos.csv")
+    # signature-quality calibrations (held-out test: max(composite, lift-weighted sum, best signature) beat the count rule)
     iso_sig = {}
-    for c, src in [("sig_iso_q42", "y42"), ("sig_iso_q63", "y63")]:
-        ok_ = rec[src].notna()
-        iso_sig[c] = BinnedIsotonic(500).fit(np.log1p(rec.n_fire.values[ok_]), rec[src].values[ok_])
+    for c, xcol, src in [("ls_iso_q42", "liftsum", "y42"), ("ls_iso_q63", "liftsum", "y63"), ("bp_iso_q42", "bestp", "y42"), ("bp_iso_q63", "bestp", "y63")]:
+        ok_ = rec[src].notna() & (rec.n_fire > 0)
+        x = np.log1p(rec[xcol].values[ok_]) if xcol == "liftsum" else rec[xcol].values[ok_]
+        iso_sig[c] = BinnedIsotonic(500).fit(x, rec[src].values[ok_])
     # tonight
     today = df[df.date == df.date.max()].copy()
     # top-5 confirmed signatures per name tonight (ordered by discovery probability), for display
@@ -112,14 +114,15 @@ def main():
         near_n[tk] = cnt
         near_miss[tk] = plain(misses.most_common(1)[0][0]) if misses else ""
     for c, m in iso_sig.items():
-        today[c] = m.predict(np.log1p(today.n_fire.values))
+        x = np.log1p(today.liftsum.values) if c.startswith("ls_") else today.bestp.values
+        today[c] = np.where(today.n_fire.values > 0, m.predict(x), np.nan)
     today["near_miss_n"] = today.ticker.map(near_n)
     today["near_miss_piece"] = today.ticker.map(near_miss)
     today["best_signature"] = today.best_sig_idx.map(lambda i: conf.signature.iloc[i] if i >= 0 else "")
     today["best_signature_plain"] = today.best_signature.map(lambda s: " AND ".join(plain(c) for c in s.split(" & ")) if s else "")
     today["best_p_conf"] = today.best_sig_idx.map(lambda i: conf.p_conf.iloc[i] if i >= 0 else np.nan)
     today["best_n_conf"] = today.best_sig_idx.map(lambda i: conf.n_conf.iloc[i] if i >= 0 else np.nan)
-    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "sig_iso_q42", "sig_iso_q63"]].sort_values(["n_fire"], ascending=False)
+    today = today[["ticker", "sector", "beta_bucket", "n_fire", "best_signature", "best_signature_plain", "best_p_conf", "best_n_conf", "top5_signatures", "near_miss_n", "near_miss_piece", "liftsum", "bestp", "ls_iso_q42", "ls_iso_q63", "bp_iso_q42", "bp_iso_q63"]].sort_values(["n_fire"], ascending=False)
     today.to_csv(RESULTS_DIR / "signatures_today.csv", index=False)
     pd.set_option("display.width", 250, "display.max_colwidth", 110)
     print(f"RULE as applied (2024+, {reg} days only): P(top-quartile smooth path) when a confirmed signature fires vs not, by beta bucket")

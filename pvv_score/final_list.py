@@ -26,21 +26,24 @@ def main():
     u["best_signature"] = u.ticker.map(sig["best_signature_plain"]).fillna("")
     u["depth_bin"] = pd.cut(u.n_signatures, DEPTH_BINS, labels=DEPTH_LABELS).astype(str)
     p42, p63, basis = [], [], []
-    sq42 = u.ticker.map(sig["sig_iso_q42"]) if "sig_iso_q42" in sig.columns else pd.Series(np.nan, index=u.index)
-    sq63 = u.ticker.map(sig["sig_iso_q63"]) if "sig_iso_q63" in sig.columns else pd.Series(np.nan, index=u.index)
+    ls42 = u.ticker.map(sig["ls_iso_q42"]); ls63 = u.ticker.map(sig["ls_iso_q63"])
+    bp42 = u.ticker.map(sig["bp_iso_q42"]); bp63 = u.ticker.map(sig["bp_iso_q63"])
     for i, r in u.iterrows():
         if pd.isna(r.state_score):
             p42.append(np.nan); p63.append(np.nan); basis.append("unscored"); continue
         cands = []
         if pd.notna(r.get("iso_q42", np.nan)):
             cands.append((float(r.iso_q42), float(r.iso_q63), f"composite {r.avg_score:.2f}"))
-        if r.n_signatures > 0 and pd.notna(sq42.iloc[i]):
-            cands.append((float(sq42.iloc[i]), float(sq63.iloc[i]), f"signatures x{int(r.n_signatures)}"))
+        if r.n_signatures > 0 and pd.notna(ls42.iloc[i]):
+            cands.append((float(ls42.iloc[i]), float(ls63.iloc[i]), f"signatures x{int(r.n_signatures)}"))
+        if r.n_signatures > 0 and pd.notna(bp42.iloc[i]):
+            cands.append((float(bp42.iloc[i]), float(bp63.iloc[i]), f"signatures x{int(r.n_signatures)}"))
         if not cands:
             p42.append(np.nan); p63.append(np.nan); basis.append("no cell"); continue
         best = max(cands, key=lambda x: x[0])
         p42.append(best[0]); p63.append(best[1])
-        basis.append(best[2] + (" (+" + [x[2] for x in cands if x is not best][0].split(" ")[0] + ")" if len(cands) > 1 else ""))
+        others = sorted({x[2].split(" ")[0] for x in cands if x[2] != best[2]})
+        basis.append(best[2] + (f" (+{others[0]})" if others else ""))
     u["P_topq_42d"] = np.round(p42, 4); u["P_topq_63d"] = np.round(p63, 4); u["basis"] = basis
     ranked = u[u.P_topq_42d.notna()].sort_values(["P_topq_42d", "P_topq_63d", "avg_score", "n_signatures"], ascending=False).reset_index(drop=True)
     ranked = ranked.rename(columns={"tier": "score_tier"})
@@ -53,7 +56,7 @@ def main():
     lines = [f"THE LIST, {asof} close. Market regime today: {reg}; all probabilities measured on {reg} sessions.",
              f" P42 / P63 = probability (realised out of sample, 2024 onward, same regime) that the next 42 / 63 sessions are a top-quartile",
              "smooth climb vs the whole universe (Sharpe + max drawdown + straightness + up-day share). Baseline 25%. Every name ranked.",
-             "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight; 'composite s' = multi-factor score s. Probabilities are read off the monotone out-of-sample calibration curve (continuous), not tier bins.", "",
+             "basis = which rule produced the number: 'signatures xN' = N confirmed conjunction signatures fire tonight (probability from their lift-weighted strength or the best one); 'composite s' = multi-factor score s. Probabilities are read off monotone out-of-sample calibration curves (each step >= 500 cases).", "",
              "Tier 1 >= 45%, Tier 2 40-45%, Tier 3 35-40%, Tier 4 30-35%, Tier 5 25-30%, Tier 6 below baseline.", "",
              f"{'#':>3} tier {'tkr':<6} {'sector':<22} {'beta':<5} {'P42':>5} {'P63':>5} {'basis':<22} {'sigs':>4}  strongest confirmed signature firing tonight"]
     for _, r in ranked.iterrows():
