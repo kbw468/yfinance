@@ -118,7 +118,7 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
 <header>
   <div class="eyebrow" id="asof"></div>
   <h1>Drawdown Signal Board</h1>
-  <p class="sub">SPY drawdown tiers built from VIX, VXN and VVIX rate of change, duration-hedged HYG and Cboe dispersion (DSPX). Tiers only arm while SPY closes within 1.5% of its 52-week high. In a drawdown, VVIX/VIX compression is the severity read.</p>
+  <p class="sub">SPY drawdown tiers built from VIX, VXN and VVIX rate of change, duration-hedged HYG, Cboe dispersion (DSPX), with the dollar (DXY) as a size flag. Tiers only arm while SPY closes within 1.5% of its 52-week high. In a drawdown, VVIX/VIX compression is the severity read.</p>
 </header>
 
 <section aria-label="Status">
@@ -169,7 +169,7 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
 <section aria-label="Rules">
   <h2>Rules</h2>
   <div class="tbl"><table id="t-rules"></table></div>
-  <p class="note">Data: daily closes from Yahoo Finance via yfinance (SPY, QQQ, HYG, IEF adjusted for distributions; ^VIX, ^VVIX, ^VXN) and Cboe's DSPX history file. Duration-hedged HYG compounds HYG's daily return minus 0.45 × IEF's. DSPX percentile is its rank within the trailing 252 sessions. Cboe posts DSPX after the close, so DSPX-dependent tiers confirm once it prints. To refresh, re-run research/vol_signal_dashboard/build_dashboard.py and republish.</p>
+  <p class="note">Data: daily closes from Yahoo Finance via yfinance (SPY, QQQ, HYG, IEF adjusted for distributions; ^VIX, ^VVIX, ^VXN, DX-Y.NYB) and Cboe's DSPX history file. Duration-hedged HYG compounds HYG's daily return minus 0.45 × IEF's. DSPX percentile is its rank within the trailing 252 sessions. Cboe posts DSPX after the close, so DSPX-dependent tiers confirm once it prints. To refresh, re-run research/vol_signal_dashboard/build_dashboard.py and republish.</p>
 </section>
 </div>
 
@@ -209,6 +209,7 @@ chip('Watch', FL.watch, 'ON', 'off', `VIX ${sg(N.vix10)}% · VXN ${sg(N.vxn10)}%
 chip('Working', FL.working, 'ON', 'off', `credit ${sg(N.cred10, 2)}% · DSPX ${N.dspx_p1y == null ? '–' : ord(N.dspx_p1y)} pct`, 'alert');
 chip('High conviction', FL.high, 'ON', 'off', `needs Watch + credit < 0 + DSPX ≥ 60th`, 'alert');
 chip('Low-risk reading', FL.lowrisk, 'ON', 'off', `VXN/VIX ${sg(N.nv10)}% (on below −5%)`, 'calm');
+chip('Size flag (DXY)', FL.size, 'ON', 'off', `DXY ${f(N.dxy)} · ${N.dxy_p1y == null ? '–' : ord(N.dxy_p1y)} pct of 1y range (on at 80th)`, 'alert');
 const inDD = N.dd <= -3;
 const sevText = !inDD ? 'Not in drawdown' : (N.comp <= -40 ? '10%+ regime' : N.comp <= -25 ? 'Severe track' : 'Contained');
 chip('Drawdown severity', inDD && N.comp <= -25, sevText, sevText, `ratio ${f(N.ratio)} vs ${f(N.ratio_hi)} on high day (${sg(N.comp)}%)`, 'alert');
@@ -240,42 +241,45 @@ table('t-comp', ['Component', 'Now', '10 sessions back', 'Change', 'Rule', 'Stat
   ['VVIX', f(N.vvix), `${f(N.vvix_anchor)} (${an})`, `${sg(N.vvix10)}%`, 'below half of the VIX or VXN move', st(FL.v || FL.vn)],
   ['Credit: HYG − 0.45 × IEF', '–', '–', `${sg(N.cred10, 2)}%`, '< 0', st(FL.credit)],
   ['DSPX percentile, 1 year', f(N.dspx), `as of ${fd(D.dspx_date)}`, N.dspx_p1y == null ? '–' : ord(N.dspx_p1y), '≥ 60th (high), ≥ 80th (working)', st(FL.d60)],
+  ['DXY in 1-year range (size flag)', f(N.dxy), `range ${f(N.dxy_lo)}–${f(N.dxy_hi)}`, N.dxy_p1y == null ? '–' : ord(N.dxy_p1y), 'top 20%: a tier print carries ~3x the 8%+ odds', st(FL.size)],
   ['VXN/VIX', f(N.nv, 3), '–', `${sg(N.nv10)}%`, '< −5% = low-risk reading', st(FL.lowrisk, 'calm')],
   ['VVIX/VIX vs high day', f(N.ratio, 3), `${f(N.ratio_hi, 3)} (${fd(N.hi_day)})`, `${sg(N.comp)}%`, `−25% = ${f(N.ratio_25)} · −40% = ${f(N.ratio_40)}`, st(inDD && N.comp <= -25)],
 ], { left: [0, 4], wrap: [4] });
 
 const L = D.ladder;
-table('t-ladder', ['Close on', '10 sessions back', 'VIX ≥', 'VXN ≥', 'VVIX ≤ (at min trigger)', 'Credit: next return below', 'DSPX ≥ 60th / 80th'],
+table('t-ladder', ['Close on', '10 sessions back', 'VIX ≥', 'VXN ≥', 'VVIX ≤ (at min trigger)', 'Credit: next return below', 'DSPX ≥ 60th / 80th', 'DXY ≥ for size flag'],
   L.map((r, i) => [
     r.today ? `Today ${fds(r.date)} (live)` : fds(r.date), fd(r.anchor),
     `${f(r.vix_trig)}  (${f(r.vix_anchor)})`, `${f(r.vxn_trig)}  (${f(r.vxn_anchor)})`, `${f(r.vvix_ceiling)}  (${f(r.vvix_anchor)})`,
     r.credit_cutoff == null ? 'after prior close' : `${sg(r.credit_cutoff, 2)}%`,
     r.dspx60 == null ? '–' : `${f(r.dspx60)} / ${f(r.dspx80)}`,
+    r.dxy80 == null ? '–' : f(r.dxy80),
   ]), { hl: i => i === 0 });
 document.getElementById('ladder-note').textContent =
   `Watch fires on a close where VIX or VXN is at or above its trigger and VVIX stays under its ceiling. The ceiling rises with the move: 10-sessions-back VVIX × (1 + the VIX or VXN % change ÷ 2). ` +
-  `Working also needs credit below its cutoff or DSPX at the 80th-percentile level; high conviction needs both credit below the cutoff and DSPX at the 60th. ` +
+  `Working also needs credit below its cutoff or DSPX at the 80th-percentile level, ; high conviction needs both credit below the cutoff and DSPX at the 60th. The DXY level only sizes a print, it never blocks one. ` +
   `Credit and DSPX levels apply to the next close only; later rows depend on closes not yet printed.`;
 
-const REC = D.record, RL = { base: 'Any near-high session (base)', watch: 'Watch', working: 'Working', high: 'High conviction' };
+const REC = D.record, RL = { base: 'Any near-high session (base)', watch: 'Watch', working: 'Working', high: 'High conviction', working_size: 'Working, size flag on', working_nosize: 'Working, size flag off' };
 const recRow = tier => {
   const a = REC.find(r => r.period === 'since_2015' && r.tier === tier), b = REC.find(r => r.period === 'post_covid' && r.tier === tier);
   const cell = r => [`${f(r.per_year, 1)}`, `${f(r.hit5, 1)}% / ${f(r.hit8, 1)}%`, tier === 'base' ? '–' : `${r.caught5} of ${r.n5} / ${r.caught8} of ${r.n8}`];
   return [RL[tier], ...cell(a), ...cell(b)];
 };
 table('t-record', ['Tier', '2015→ per yr', '2015→ hit −5% / −8%', '2015→ caught 5%+ / 8%+', 'Post-COVID per yr', 'Post-COVID hit −5% / −8%', 'Post-COVID caught 5%+ / 8%+'],
-  ['base', 'watch', 'working', 'high'].map(recRow), { hl: i => i === 2 || i === 3 });
+  ['base', 'watch', 'working', 'high', 'working_size', 'working_nosize'].map(recRow), { hl: i => i === 2 || i === 3 });
 
 const HI = D.history.slice().reverse();
-table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10d', 'Credit 10d', 'DSPX pct', 'SPY low next 40'],
+table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10d', 'Credit 10d', 'DSPX pct', 'DXY pct', 'SPY low next 40'],
   HI.map(r => [fd(r.date), { tag: r.tier, cls: r.tier.includes('High') ? 'hi' : 'on' }, `${sg(r.dd, 2)}%`, `${sg(r.vix10)}%`, `${sg(r.vxn10)}%`, `${sg(r.vvix10)}%`,
-    `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
+    `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.dxy_p1y == null ? '–' : ord(r.dxy_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
 
 table('t-rules', ['Tier', 'Rule'], [
   ['Near-high gate', 'SPY closes within 1.5% of its 52-week closing high. All tiers below are evaluated only when this is armed.'],
   ['Watch', 'VIX up more than 10% over 10 sessions with VVIX up less than half as much, or the same test with VXN in place of VIX.'],
   ['Working', 'Watch + (duration-hedged HYG down over 10 sessions, or DSPX at or above the 80th percentile of its trailing year).'],
   ['High conviction', 'Watch + duration-hedged HYG down over 10 sessions + DSPX at or above the 60th percentile of its trailing year.'],
+  ['Size flag (DXY)', 'DXY in the top 20% of its trailing-year range. It sizes a print and never blocks one. Working prints with it on: 52.9% / 35.3% hit −5% / −8% since 2008 vs 30.8% / 11.5% with it off (since mid-2020: 57.1% / 28.6% vs 42.9% / 0.0%). Holds in every period, with UUP or EURUSD in place of DXY, and when any one episode is left out.'],
   ['Low-risk reading', 'VXN/VIX down more than 5% over 10 sessions (VIX outpacing VXN). Near-high sessions with this reading ran 9.4% / 5.2% odds of −5% / −8% vs 19.0% / 8.4% base.'],
   ['Drawdown severity', 'VVIX/VIX compression from its close on the SPY 52-week-high day. More than 25% by the first −5% close: severe track (6 of 8 went to −10% or worse). 40% or more: every case since 2007 was a 10%+ drawdown (9 of 9).'],
 ], { left: [0, 1], wrap: [1] });
@@ -288,6 +292,7 @@ const PANELS = [
   { title: '10-session change %: VIX, VXN, VVIX', h: 170, s: [{ k: 'vix10', c: 'blue', d: 1 }, { k: 'vxn10', c: 'orange', d: 1 }, { k: 'vvix10', c: 'ink', d: 1 }], refs: [10, 0] },
   { title: 'Credit: HYG − 0.45 × IEF, 10-session %', h: 120, s: [{ k: 'cred10', c: 'blue', d: 2 }], refs: [0] },
   { title: 'DSPX percentile, trailing year', h: 120, s: [{ k: 'dspx_p1y', c: 'blue', d: 0 }], refs: [60, 80], fixed: [0, 100] },
+  { title: 'DXY percentile, trailing year (size flag at 80)', h: 120, s: [{ k: 'dxy_p1y', c: 'blue', d: 0 }], refs: [80], fixed: [0, 100] },
   { title: 'VVIX/VIX', h: 130, s: [{ k: 'ratio', c: 'blue', d: 2 }] },
 ];
 const ML = 48, MR = 50, MT = 20, XB = 22;
@@ -359,7 +364,7 @@ function setCursor(i) {
   });
   const tier = S.hi[cur] ? 'High conviction' : S.wk[cur] ? 'Working' : S.watch[cur] ? 'Watch' : S.gate[cur] ? 'Armed, no tier' : 'Gate paused';
   const items = [['', fd(S.dates[cur])], ['SPY', f(S.spy[cur])], ['off high', `${sg(S.dd[cur], 2)}%`], ['VIX 10d', `${sg(S.vix10[cur])}%`], ['VXN 10d', `${sg(S.vxn10[cur])}%`],
-    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['tier', tier]];
+    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['DXY pct', S.dxy_p1y[cur] == null ? '–' : f(S.dxy_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['tier', tier]];
   readout.replaceChildren(...items.map(([k, v]) => { const s = h('span', null, k ? k + ' ' : ''); s.appendChild(h('b', null, v)); return s; }));
 }
 function idxAt(cx) {

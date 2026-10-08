@@ -1,6 +1,6 @@
 """Build the SPY drawdown signal dashboard (single self-contained HTML page).
 
-Data: Yahoo Finance via yfinance (SPY, QQQ, HYG, IEF, ^VIX, ^VVIX, ^VXN) and the
+Data: Yahoo Finance via yfinance (SPY, QQQ, HYG, IEF, ^VIX, ^VVIX, ^VXN, DX-Y.NYB) and the
 Cboe S&P 500 Dispersion Index (DSPX) history CSV.
 
 Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
@@ -11,6 +11,8 @@ Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
   High conviction  Watch + duration-hedged HYG 10-session change < 0
                          + DSPX >= 60th percentile of its trailing year
   Low-risk         VXN/VIX 10-session change < -5%
+  Size flag        DXY in the top 20% of its trailing-year range: when a tier fires with
+                   this on, the odds of an 8%+ drop have run about 3x higher (not a tier)
 In a drawdown, the VVIX/VIX ratio's compression from its close on the SPY
 52-week-high day is the severity read (25% by the first -5% close, 40% = 10%+).
 
@@ -54,7 +56,7 @@ NYSE_HOLIDAYS = {
 
 
 def fetch_yahoo(start):
-    tickers = ["SPY", "QQQ", "HYG", "IEF", "^VIX", "^VVIX", "^VXN"]
+    tickers = ["SPY", "QQQ", "HYG", "IEF", "^VIX", "^VVIX", "^VXN", "DX-Y.NYB"]
     raw = yf.download(tickers, start=start, auto_adjust=True, progress=False)["Close"]
     return raw
 
@@ -81,7 +83,7 @@ def pct_rank_1y(s):
 def build_frame(raw, dspx):
     d = pd.DataFrame(index=raw["SPY"].dropna().index)
     for col, tk in (("spy", "SPY"), ("qqq", "QQQ"), ("hyg", "HYG"), ("ief", "IEF"),
-                    ("vix", "^VIX"), ("vvix", "^VVIX"), ("vxn", "^VXN")):
+                    ("vix", "^VIX"), ("vvix", "^VVIX"), ("vxn", "^VXN"), ("dxy", "DX-Y.NYB")):
         d[col] = raw[tk].reindex(d.index).ffill(limit=3)
     d["dspx"] = dspx.reindex(d.index).ffill(limit=3)
     d["dspx_date"] = pd.Series(dspx.index, index=dspx.index).reindex(d.index).ffill(limit=3)
@@ -91,9 +93,10 @@ def build_frame(raw, dspx):
     d["nv"] = d.vxn / d.vix
     excess = (d.hyg.pct_change() - HEDGE_BETA * d.ief.pct_change()).fillna(0)
     d["cred"] = (1 + excess).cumprod()
-    for k in ("vix", "vvix", "vxn", "nv", "cred", "spy"):
+    for k in ("vix", "vvix", "vxn", "nv", "cred", "spy", "dxy"):
         d[f"{k}10"] = d[k].pct_change(ROC_WIN) * 100
     d["dspx_p1y"] = pct_rank_1y(d.dspx)
+    d["dxy_p1y"] = pct_rank_1y(d.dxy)
     fmin = d.spy[::-1].rolling(FWD, min_periods=FWD).min()[::-1].shift(-1)
     d["f40"] = (fmin / d.spy - 1) * 100
     return d
@@ -109,6 +112,7 @@ def tiers(d):
     d60 = d.dspx_p1y >= 60
     return pd.DataFrame({
         "gate": gate, "v": v, "vn": vn, "watch": watch, "credit": credit, "d80": d80, "d60": d60,
+        "size": d.dxy_p1y >= 80,
         "working": watch & (credit | d80),
         "high": watch & credit & d60,
         "lowrisk": gate & (d.nv10 < -5),
@@ -159,7 +163,8 @@ def record(d, t, eps):
         ts = t.loc[sub.index]
         years = (sub.index[-1] - sub.index[0]).days / 365.25
         E = [e for e in eps if e["peak"] >= pd.Timestamp(start) and e["c5"] <= sub.index[-1]]
-        for tier, mask in (("base", ts.gate), ("watch", ts.watch), ("working", ts.working), ("high", ts.high)):
+        for tier, mask in (("base", ts.gate), ("watch", ts.watch), ("working", ts.working), ("high", ts.high),
+                           ("working_size", ts.working & ts["size"]), ("working_nosize", ts.working & ~ts["size"])):
             prints = dedupe(mask)
             f = sub.loc[prints, "f40"]
             c5 = c8 = t8 = 0
@@ -186,7 +191,7 @@ def next_sessions(after, n):
 
 
 def dspx_level_for_pct(window, pct):
-    """Smallest next DSPX print whose percentile in (window + itself) reaches pct."""
+    """Smallest next print whose percentile in (window + itself) reaches pct."""
     w = np.sort(np.asarray(window, dtype=float))
     need = math.ceil(pct / 100 * (len(w) + 1)) - 1   # count of prior values <= x
     if need <= 0:
@@ -230,6 +235,7 @@ def build(out_path, start):
             window = d.dspx.dropna().loc[:d.dspx_date.dropna().iloc[-1]].iloc[-251:]
             item["dspx60"] = round(dspx_level_for_pct(window, 60), 2)
             item["dspx80"] = round(dspx_level_for_pct(window, 80), 2)
+            item["dxy80"] = round(dspx_level_for_pct(d.dxy.iloc[b - 250:b + 1].dropna(), 80), 2)
         ladder.append(item)
 
     # ---------- record + history ----------
@@ -244,6 +250,7 @@ def build(out_path, start):
         hist.append({"date": day.strftime("%Y-%m-%d"), "tier": tier, "dd": round(float(rr.dd), 2),
                      "vix10": round(float(rr.vix10), 1), "vxn10": round(float(rr.vxn10), 1), "vvix10": round(float(rr.vvix10), 1),
                      "cred10": round(float(rr.cred10), 2), "dspx_p1y": None if np.isnan(rr.dspx_p1y) else round(float(rr.dspx_p1y), 0),
+                     "dxy_p1y": None if np.isnan(rr.dxy_p1y) else round(float(rr.dxy_p1y), 0),
                      "f40": None if np.isnan(rr.f40) else round(float(rr.f40), 2)})
 
     # ---------- chart series ----------
@@ -258,6 +265,7 @@ def build(out_path, start):
         "dates": [x.strftime("%Y-%m-%d") for x in cs.index],
         "spy": col(cs.spy), "dd": col(cs.dd), "vix10": col(cs.vix10, 1), "vxn10": col(cs.vxn10, 1), "vvix10": col(cs.vvix10, 1),
         "cred10": col(cs.cred10, 2), "dspx_p1y": col(cs.dspx_p1y, 0), "ratio": col(cs.ratio, 2),
+        "dxy_p1y": col(cs.dxy_p1y, 0),
         "watch": [int(x) for x in ct.watch.fillna(False)], "gate": [int(x) for x in ct.gate.fillna(False)],
         "wk": [int(x) for x in ct.working.fillna(False)], "hi": [int(x) for x in ct.high.fillna(False)],
         "mw": [int(x in marks_w) for x in (i.strftime("%Y-%m-%d") for i in cs.index)],
@@ -281,6 +289,8 @@ def build(out_path, start):
             "vxn": fnum(r.vxn), "vxn10": fnum(r.vxn10, 1), "vxn_anchor": fnum(anchor_today.vxn),
             "vvix": fnum(r.vvix), "vvix10": fnum(r.vvix10, 1), "vvix_anchor": fnum(anchor_today.vvix),
             "cred10": fnum(r.cred10, 2), "dspx": fnum(r.dspx), "dspx_p1y": fnum(r.dspx_p1y, 1),
+            "dxy": fnum(r.dxy), "dxy10": fnum(r.dxy10, 2), "dxy_anchor": fnum(anchor_today.dxy), "dxy_p1y": fnum(r.dxy_p1y, 1),
+            "dxy_hi": fnum(d.dxy.iloc[max(0, cur - 251):cur + 1].max()), "dxy_lo": fnum(d.dxy.iloc[max(0, cur - 251):cur + 1].min()),
             "nv": fnum(r.nv, 3), "nv10": fnum(r.nv10, 1), "ratio": fnum(r.ratio, 3), "ratio_hi": round(ratio_hi, 3),
             "comp": round(comp, 1), "ratio_25": round(ratio_hi * 0.75, 2), "ratio_40": round(ratio_hi * 0.60, 2),
         },
