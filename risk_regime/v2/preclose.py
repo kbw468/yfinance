@@ -43,7 +43,10 @@ for p, lab in (('P_off', 'riskoff21'), ('P_on', 'riskon21'), ('P_vol', 'volexp21
 hist = PRED['P_off'].dropna().iloc[-756:]; q95 = float(hist.quantile(0.95)); q80 = float(hist.quantile(0.8))
 ref_prev = int(DEC['states']['C: OUT P_off>q0.95, IN P_off<q0.8'].iloc[-1]); pf = P_NOW['P_off']
 ref_now = 0 if (ref_prev == 1 and pf >= q95) else (1 if (ref_prev == 0 and pf < q80) else ref_prev)
-vix = O['I']['VIX']['Close'].reindex(idx); vvix = O['I']['VVIX']['Close'].reindex(idx); ratio = np.log(vix / vvix)
+vix = O['I']['VIX']['Close'].reindex(idx); vvix_raw = O['I']['VVIX']['Close'].reindex(idx)
+VVIX_NOTE = '' if not np.isnan(vvix_raw.iloc[-1]) else f'VVIX live bar missing at this run; used its last close {vvix_raw.dropna().index[-1].date()}'
+vvix = vvix_raw.ffill(limit=3); vix = vix.ffill(limit=3); ratio = np.log(vix / vvix)
+if VVIX_NOTE: print('NOTE:', VVIX_NOTE)
 rk = lambda s: s.rolling(504, min_periods=252).rank(pct=True)
 V21 = rk(np.log(vix / vix.shift(21))); R21 = rk(ratio - ratio.shift(21)); vr, rr = float(V21.iloc[-1]), float(R21.iloc[-1])
 vv_prev = int(VS['state'].iloc[-1]); vv_now = 0 if (vv_prev == 1 and vr >= 0.9 and rr >= 0.9) else (1 if (vv_prev == 0 and vr < 0.5) else vv_prev)
@@ -57,7 +60,7 @@ if ref_now != ref_prev: D['state_since'] = str(today.date())
 vt = D['vvsig']['today']; vt.update(live=bool(vv_now == 0), vix_roc21_rank=round(vr, 3), ratio_roc21_rank=round(rr, 3), vix=round(float(vix.iloc[-1]), 2), vvix=round(float(vvix.iloc[-1]), 2),
     vix_roc21_pct=round(float(np.log(vix.iloc[-1] / vix.iloc[-22]) * 100), 1), ratio_roc21_pct=round(float((ratio.iloc[-1] - ratio.iloc[-22]) * 100), 1))
 if vv_now == 0 and vv_prev == 1: vt['since'] = str(today.date())
-D['asof'] = str(today.date()); D['preclose'] = f"{now.strftime('%H:%M')} ET, prices delayed about 15 minutes"
+D['asof'] = str(today.date()); D['preclose'] = f"{now.strftime('%H:%M')} ET, prices delayed about 15 minutes" + (f'; {VVIX_NOTE}' if VVIX_NOTE else '')
 spy = O['T']['SPY']['Close'].reindex(idx); D['preclose_spy'] = {'last': round(float(spy.iloc[-1]), 2), 'chg_pct': round(float((spy.iloc[-1] / spy.iloc[-2] - 1) * 100), 2)}
 json.dump(D, open('preclose.json', 'w'))
 print(f"pre-close {now.strftime('%Y-%m-%d %H:%M')} ET | bar {today.date()} | SPY {D['preclose_spy']['last']} ({D['preclose_spy']['chg_pct']:+.2f}%) | P_off {pf:.3f} pct {tpct('P_off'):.2f} (q95 {q95:.3f}, q80 {q80:.3f}) ref {ref_prev}->{ref_now} | VIX {vt['vix']} VVIX {vt['vvix']} V21 {vr:.2f} R21 {rr:.2f} vv {vv_prev}->{vv_now} | check (refit, production) yesterday: {P_NOW['P_off_check']} {P_NOW['P_on_check']} {P_NOW['P_vol_check']}")
