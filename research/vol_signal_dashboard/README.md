@@ -37,6 +37,8 @@ python select_barometer.py --apply                                            # 
 
 ## Schedule (America/New_York, weekdays)
 
+- On demand ("update", "run update", "rerun"): same steps and the same three-line reply as a
+  scheduled run, using live prices if the session is open.
 - 9:56 AM and 2:56 PM: intraday refresh and republish.
 - 4:40 PM: after-close refresh and republish (DSPX may still show the prior day until Cboe posts).
 - 1st of each month, 5:10 PM: run `select_barometer.py --apply`; if it switches, commit, push,
