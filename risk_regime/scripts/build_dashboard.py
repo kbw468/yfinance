@@ -14,6 +14,11 @@ rv_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'rv_data.json')
 DATA['rv'] = json.load(open(rv_src)) if os.path.exists(rv_src) else None
 sc_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'score_data.json')
 DATA['score'] = json.load(open(sc_src)) if os.path.exists(sc_src) else None
+br_src = os.path.join(os.path.dirname(os.path.abspath(src)), 'breadth_data.json')
+DATA['breadth'] = json.load(open(br_src)) if os.path.exists(br_src) else None
+if DATA['breadth'] and DATA['breadth'].get('hist') and DATA['breadth']['hist'].get('dates') == DATA['dates']:
+    for k in ('RSP/SPY 21d', 'RSP/SPY 63d', 'TNX 21d'):
+        DATA['z'][k] = DATA['breadth']['hist'][k]
 
 RULE_META = {
  'SETUP_rates':   ('SETUP',  'Yields ripping, VIX asleep',          'TNX 5d chg z > 1 and VIX 5d ROC z < -0.3', 'P(5% DD/21d) 0.25 vs 0.17 base. 56% of tops, median 18d lead to the -5% break.'),
@@ -93,6 +98,7 @@ tr:last-child td{border-bottom:none}
 svg{display:block;width:100%;height:auto;max-width:100%}
 .tip{position:fixed;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:6px 8px;font-family:var(--mono);font-size:11.5px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.12);display:none;z-index:9;white-space:nowrap}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+select{max-width:100%}
 select,button{font:inherit;font-family:var(--mono);font-size:12px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:5px 8px}
 button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)}
 .pb{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -212,6 +218,14 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
   <div class="tablewrap"><table id="rvtape"></table></div>
   <p class="note">RV10/RV21 = realized term structure (short over 1-month), z vs own trailing 252d. rel RV = ticker 21d realized ÷ SPY 21d realized, with the 5d ROC z of that ratio. Right-hand four columns: the ticker's median 10d return relative to SPY historically when its own realized was expanding (z &gt; 1) or compressed (z &lt; -0.5) while VIX 5d ROC z was &gt; 1 (up) or &lt; -1 (down).</p>
 </section>
+
+<section id="brsec">
+  <h2>Breadth: equal weight vs cap weight, ratio rate of change (context, not in the dial)</h2>
+  <div class="tiles" id="brtiles"></div>
+  <div class="board" id="brboard" style="margin-top:10px"></div>
+  <div class="tablewrap" style="margin-top:10px"><table id="brtable"></table></div>
+  <p class="note">Ratio = log(equal-weight ETF / cap-weight ETF); ROC over 5, 21 and 63 sessions, z vs own trailing 252d. Negative = equal weight losing = narrowing. Week- and month-horizon ratio ROC sits at base rate on its own; the quarter horizon carries the slow-narrowing signature (RSP/SPY 63d ROC z runs -0.4 to -0.7 for ten sessions either side of every top; bottom quintile P(5% DD/21d) 0.23 vs top quintile 0.14). The cells that matter pair narrowing with a yield rip. None improved the stay-in dial, so this board is tape, not a rule.</p>
+</section>
 </div>
 <div class="tip" id="tip"></div>
 <script id="data" type="application/json">__DATA__</script>
@@ -284,6 +298,7 @@ function drawSpy(){
 drawSpy();
 // ---- z chart
 const ZSETS={'VIX vs VVIX/VIX (onset discriminator)':['VIX','VVIX/VIX'],'VIX vs TNX (setup)':['VIX','TNX'],'VIX vs MOVE (confirm / dimension)':['VIX','MOVE'],'VIX, GVZ, MOVE (capitulation)':['VIX','GVZ','MOVE'],'VIX 21d trend vs 5d impulse':['VIX21','VIX'],'VIX vs VIX/VIX3M (break)':['VIX','VIX/VIX3M'],'VIX vs OVX':['VIX','OVX'],'VIX vs VIX9D/VIX':['VIX','VIX9D/VIX'],'VIX vs SKEW (10d)':['VIX','SKEW']};
+if(D.z['RSP/SPY 63d']) ZSETS['Breadth: RSP/SPY ratio ROC vs TNX 21d']=['RSP/SPY 21d','RSP/SPY 63d','TNX 21d'];
 const zctl=document.getElementById('zctl'); const zsel=document.createElement('select'); zsel.id='zsel';
 Object.keys(ZSETS).forEach(k=>{const o=document.createElement('option');o.value=k;o.textContent=k;zsel.appendChild(o);}); zctl.appendChild(zsel);
 const ZCOL=['--blue','--orange','--teal','--violet'];
@@ -296,7 +311,7 @@ function drawZ(){
   for(let i=0;i<N;i+=63){s+=`<text x="${x(i)}" y="${H-8}" font-size="11" fill="${css('--muted')}" text-anchor="middle" font-family="${css('--mono')}">${D.dates[i].slice(0,7)}</text>`;}
   keys.forEach((k,j)=>{const a=D.z[k];let d='',pen=false;for(let i=0;i<N;i++){if(a[i]==null){pen=false;continue;}d+=(pen?'L':'M')+x(i).toFixed(1)+' '+y(a[i]).toFixed(1);pen=true;}s+=`<path d="${d}" fill="none" stroke="${css(ZCOL[j])}" stroke-width="1.6"/>`;const li=[...a].reverse().findIndex(v=>v!=null);if(li>=0){const i=N-1-li;s+=`<text x="${x(i)+6}" y="${y(a[i])+4}" font-size="11" fill="${css('--ink2')}" font-family="${css('--mono')}">${k} ${f2(a[i])}</text>`;}});
   svg.innerHTML=s;
-  document.getElementById('zlegend').innerHTML=keys.map((k,j)=>`<span style="--c:var(${ZCOL[j]})">${k}${k==='SKEW'?' (10d ROC z)':k==='VIX/VIX3M'?' (3d ROC z)':k==='VIX21'?' (21d ROC z)':k==='TNX'?' (5d chg z)':' (5d ROC z)'}</span>`).join('');
+  document.getElementById('zlegend').innerHTML=keys.map((k,j)=>`<span style="--c:var(${ZCOL[j]})">${k}${k==='SKEW'?' (10d ROC z)':k==='VIX/VIX3M'?' (3d ROC z)':k==='VIX21'?' (21d ROC z)':k==='TNX'?' (5d chg z)':k==='TNX 21d'?' (21d chg z)':k.startsWith('RSP/SPY')?' (ratio ROC z)':' (5d ROC z)'}</span>`).join('');
   svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(N-1,Math.round((px-L)/(W-L-R)*(N-1))));showTip(e,`${D.dates[i]}<br>`+keys.map(k=>`${k} ${f2(D.z[k][i])}`).join('<br>'));};
   svg.onmouseleave=hideTip;
 }
@@ -369,6 +384,24 @@ if(RVD){
   const rows=RVD.rv_tape.slice().sort((a,b)=>(b.rvr_z??-9)-(a.rvr_z??-9));
   document.getElementById('rvtape').innerHTML=`<tr><th>ticker</th><th>RV10</th><th>RV21</th><th>RV10/RV21</th><th>z</th><th>RV10 ROC5 z</th><th>rel RV</th><th>rel RV ROC5 z</th><th>P(off) RVR top/bot Q</th><th>exp · VIX up</th><th>exp · VIX dn</th><th>cmp · VIX up</th><th>cmp · VIX dn</th></tr>`+
     rows.map(r=>`<tr><td>${r.t}</td><td class="num">${r.rv10??''}</td><td class="num">${r.rv21??''}</td><td class="num">${r.rvr??''}</td><td class="num">${zc(r.rvr_z)}</td><td class="num">${zc(r.rv10_roc5z)}</td><td class="num">${r.relrv==null?'':r.relrv.toFixed(2)}</td><td class="num">${zc(r.relrv_roc5z)}</td><td class="num">${r.P_top==null?'':r.P_top.toFixed(2)+' / '+r.P_bot.toFixed(2)}</td><td class="num">${f2(r.exp_vixup)}</td><td class="num">${f2(r.exp_vixdn)}</td><td class="num">${f2(r.cmp_vixup)}</td><td class="num">${f2(r.cmp_vixdn)}</td></tr>`).join('');
+}
+// ---- breadth (equal weight vs cap weight), context only
+const BD=D.breadth;
+if(BD){
+  const g=k=>BD.pairs.find(r=>r.pair===k); const rs=g('RSP/SPY'), qq=g('QQQE/QQQ'); const pq=(a,b)=>(a==null||b==null)?'':`bottom-Q P(off) ${a.toFixed(2)} vs top-Q ${b.toFixed(2)}`;
+  document.getElementById('brtiles').innerHTML=[
+    ['RSP / SPY, 21d',`${f2(rs.chg21)}%`,`ratio ROC z ${f2(rs.roc21z)} · 5d z ${f2(rs.roc5z)} · accel z ${f2(rs.accel5z)}`],
+    ['RSP / SPY, 63d',`${f2(rs.chg63)}%`,`ratio ROC z ${f2(rs.roc63z)} · ${pq(rs.P_bot63,rs.P_top63)}`],
+    ['QQQE / QQQ, 21d',`${f2(qq.chg21)}%`,`ratio ROC z ${f2(qq.roc21z)} · 5d z ${f2(qq.roc5z)} · ${pq(qq.P_bot21,qq.P_top21)}`],
+    ['QQQE / QQQ, 63d',`${f2(qq.chg63)}%`,`ratio ROC z ${f2(qq.roc63z)}`],
+    ['Sectors EW > CW, 21d',`${Math.round(BD.composite.share*100)}%`,`share of 9 sectors · z ${f2(BD.composite.share_z)} · median sector ratio ROC z ${f2(BD.composite.med21)}`],
+    ['TNX 21d chg z',f2(BD.tnx21z),`the yield leg of the breadth cells · SPY 21d return z ${f2(BD.spy21z)}`],
+  ].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v num">${v}</div><div class="d">${d}</div></div>`).join('');
+  document.getElementById('brboard').innerHTML=Object.entries(BD.cells).map(([k,r])=>{const st=r.live?'live':r.recent?'recent':'quiet';const bear=r.P_days!=null&&r.P_days>0.174;
+    return `<div class="rule ${bear?'ONSET':'CAP'}"><div class="t"><span class="tag">BREADTH</span><span class="state ${st}">${st==='live'?'LIVE':st==='recent'?'last 10d':'quiet'}</span></div><div class="name">${k.replace(/_/g,' ')}</div><div class="def">${r.def}</div><div class="stat">${r.note} All days P(5% DD/21d) ${r.P_days==null?'n/a':r.P_days.toFixed(2)} vs 0.17 (2018+: ${r.P_days_2018==null?'n/a':r.P_days_2018.toFixed(2)}) · first-fires n=${r.n}, P ${r.P_off==null?'n/a':r.P_off.toFixed(2)}, fwd21 ${r.fwd21==null?'':f2(r.fwd21)+'%'}</div><div class="last">${r.live&&r.since?`live since ${r.since} · `:''}last scored first-fire ${r.last}</div></div>`;}).join('');
+  const rows=BD.pairs.slice().sort((a,b)=>(a.roc21z??0)-(b.roc21z??0));
+  document.getElementById('brtable').innerHTML=`<tr><th>pair (EW / CW)</th><th>21d %</th><th>63d %</th><th>ROC 5d z</th><th>ROC 21d z</th><th>ROC 63d z</th><th>accel 5d z</th><th>P(off) 21d bot/top Q</th><th>P(off) 63d bot/top Q</th></tr>`+
+    rows.map(r=>`<tr><td>${r.pair}</td><td class="num">${f2(r.chg21)}</td><td class="num">${f2(r.chg63)}</td><td class="num">${zc(r.roc5z)}</td><td class="num">${zc(r.roc21z)}</td><td class="num">${zc(r.roc63z)}</td><td class="num">${zc(r.accel5z)}</td><td class="num">${r.P_bot21==null?'':r.P_bot21.toFixed(2)+' / '+r.P_top21.toFixed(2)}</td><td class="num">${r.P_bot63==null?'':r.P_bot63.toFixed(2)+' / '+r.P_top63.toFixed(2)}</td></tr>`).join('');
 }
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawSpy();drawZ();if(TK){heat('heat',TK.mat,1.0);heat('beta',TK.beta,12);}});
 </script>
