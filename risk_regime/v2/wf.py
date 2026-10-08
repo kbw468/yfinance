@@ -5,8 +5,8 @@
 - Global percentile ranks are computed once; the per-window screen is a Pearson correlation of those
   ranks with the target inside each half of the training window (a monotone transform of the within-
   window Spearman), which makes selection cheap enough to repeat for every year and every null draw.
-- fit_predict_walk(): yearly refits on data whose labels end before the test year (100-calendar-day
-  purge), monotone depth-2 gradient-boosted trees on the K selected features, no parameter tuning.
+- fit_predict_walk(): yearly refits on data whose labels end before the test year (purge of 100 calendar
+  days by default, longer for longer label windows), monotone depth-2 gradient-boosted trees on the K selected features, no parameter tuning.
 """
 import pandas as pd, numpy as np, time, warnings; warnings.filterwarnings('ignore')
 from sklearn.ensemble import HistGradientBoostingClassifier
@@ -34,11 +34,11 @@ def screen(rows, y, k):
     ic1, ic2 = ics; valid = (np.sign(ic1) == np.sign(ic2)) & (NANSHARE < 0.5) & np.isfinite(ic1) & np.isfinite(ic2)
     score = np.where(valid, np.minimum(np.abs(ic1), np.abs(ic2)), 0.0); top = np.argsort(-score)[:k]
     return top, np.sign(ic1 + ic2)[top].astype(int), score[top]
-def fit_predict_walk(y, ok, k=15, first=2005, mono=True, depth=2, leaf=300, iters=200, keep_last=False, years=None):
+def fit_predict_walk(y, ok, k=15, first=2005, mono=True, depth=2, leaf=300, iters=200, keep_last=False, years=None, purge=100):
     pred = np.full(len(y), np.nan); last = None; selcount = {}
     for year in range(first, int(YEARS.max()) + 1):
         ts = pd.Timestamp(f'{year}-01-01'); te = pd.Timestamp(f'{year}-12-31')
-        tr = ok & np.asarray(DATES < ts - pd.Timedelta(days=100)) & (YEARS >= 1993); test = np.asarray((DATES >= ts) & (DATES <= te))
+        tr = ok & np.asarray(DATES < ts - pd.Timedelta(days=purge)) & (YEARS >= 1993); test = np.asarray((DATES >= ts) & (DATES <= te))
         if tr.sum() < 1000 or test.sum() == 0: continue
         rows = np.where(tr)[0]; top, signs, score = screen(rows, y, k)
         for f in top: selcount[f] = selcount.get(f, 0) + 1
