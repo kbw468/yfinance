@@ -361,6 +361,7 @@ if(RVD){
     ['VIX / HYG RV21',ivhyg.level.toFixed(2),`pct ${Math.round(ivhyg.pct252*100)} · bottom-Q P(off) 0.31`],
     ['MOVE / TLT RV21',ivtlt.level.toFixed(2),`pct ${Math.round(ivtlt.pct252*100)} · ROC5 z ${f2(ivtlt.roc5z)}`],
     ['Realized-vol breadth',`${Math.round(RVD.breadth.now*100)}%`,`share of 38 with RV10/RV21 > 1.2 · z ${f2(RVD.breadth.z)} · peaks at +1..+3 after lows`],
+    ...(RVD.rvroc?Object.entries(RVD.rvroc).map(([k,v])=>[k,f2(v),k.includes('premium')?'< -1 with VIX 21d ROC z > 1 = premium collapse (in the dial)':k.includes('21/63')?'> 1 with TNX 21d z > 1 = ratio into yields (P 0.40)':'realized rate of change, z vs own 252d']):[]),
   ].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v num">${v}</div><div class="d">${d}</div></div>`).join('');
   document.getElementById('rvboard').innerHTML=Object.entries(RVD.rv_rules).map(([k,r])=>{const st=r.live?'live':r.recent?'recent':'quiet';const bear=r.P_off!=null&&r.P_off>0.174;
     return `<div class="rule ${bear?'ONSET':'CAP'}"><div class="t"><span class="tag">RV</span><span class="state ${st}">${st==='live'?'LIVE':st==='recent'?'last 10d':'quiet'}</span></div><div class="name">${k.replace(/_/g,' ')}</div><div class="def">${r.def}</div><div class="stat">${r.note} P(5% DD/21d) ${r.P_off==null?'n/a':r.P_off.toFixed(2)} vs 0.17 · fwd21 ${r.fwd21==null?'':f2(r.fwd21)+'%'} · n=${r.n}</div><div class="last">last first-fire ${r.last}</div></div>`;}).join('');

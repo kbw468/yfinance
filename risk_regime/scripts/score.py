@@ -43,6 +43,9 @@ C2={'rates_pressure_vix_asleep':-8,'complacency_both_compressed':-8,'vol_collaps
 
 # ===== STAY-IN ENVIRONMENT: balanced weights, no at-the-highs softener, two states, OUT only at a deep reading =====
 C1={k:v for k,v in C1.items() if k!='at_highs'}
+S=pd.read_pickle('S.pkl'); _rv21=R['SPY'].rolling(21).std(); _vrp5=(lambda x:(x-x.rolling(252).mean())/x.rolling(252).std())((S['VIX']-_rv21*np.sqrt(252)*100).diff(5))
+SIG['RVX_premium_collapse']=(_vrp5<-1)&(z('VIX_roc21_z252')>1)      # VIX-realized premium collapsing while VIX has risen for a month: realized catching up to implied
+W1=dict(W1); W1['RVX_premium_collapse']=(15,-8)
 SCORE,PARTS=build(W1,C1)
 OUT_IN,OUT_EXIT=20,35
 def states2(S):

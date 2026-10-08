@@ -4,7 +4,10 @@ RV=pd.read_pickle('RV.pkl'); RVT=pd.read_pickle('RVT.pkl')
 EX=(idx>=pd.Timestamp('2020-02-01'))&(idx<=pd.Timestamp('2020-07-31')); ok=L['ok21']&~EX
 TICK=[c for c in P.columns if c not in ('LQD','SHY')]
 z=lambda k: G[k]; RVR_z=RV['RVR_z']; IVz=RV['IVRV_z']; IVr=RV['IVRV_roc5z']; IVp=RV['IVRV_pct']
+_rv21=P['SPY'].pipe(lambda p: np.log(p).diff()).rolling(21).std(); _zz=lambda x:(x-x.rolling(252).mean())/x.rolling(252).std()
+_vrp5=_zz((S['VIX']-_rv21*np.sqrt(252)*100).diff(5)); _rv5=_zz(np.log(_rv21).diff(5)); _rv21r=_zz(np.log(_rv21).diff(21)); _rat5=_zz(np.log(_rv21/P['SPY'].pipe(lambda p: np.log(p).diff()).rolling(63).std()).diff(5))
 RULES={
+ 'RVX_premium_collapse': ((_vrp5<-1)&(z('VIX_roc21_z252')>1),'VIX-minus-realized 5d change z < -1 and VIX 21d ROC z > 1','Realized catching up to a month of rising implied; premium collapsing. In the dial at -8 for 15 sessions.'),
  'SPY_realized_outruns_implied': ((IVr['SPY:VIX/RV']<-1)&(z('VIX_roc5_z252')>1),'SPY VIX/RV ROC5 z < -1 and VIX 5d ROC z > 1','Realized vol rising faster than VIX during the spike. Continuation.'),
  'SPY_implied_outruns_realized': ((IVr['SPY:VIX/RV']>1)&(z('VIX_roc5_z252')>1),'SPY VIX/RV ROC5 z > 1 and VIX 5d ROC z > 1','Fear premium: VIX up more than realized. Dip.'),
  'QQQ_realized_outruns_VXN': ((IVr['QQQ:VXN/RV']<-1)&(z('VXN_roc5_z252')>1),'QQQ VXN/RV ROC5 z < -1 and VXN 5d ROC z > 1','Nasdaq realized leading implied.'),
@@ -33,6 +36,7 @@ pairs=[]
 for c in RV['IVRV'].columns:
     pairs.append({'pair':c,'level':r(RV['IVRV'][c].iloc[-1]),'pct252':r(IVp[c].iloc[-1]),'lvl_z':r(IVz[c].iloc[-1]),'roc5z':r(IVr[c].iloc[-1])})
 breadth={'now':r(RV['BR'].iloc[-1]),'z':r(RV['BR_z'].iloc[-1]),'hist':[r(v) for v in RV['BR'].iloc[-504:]]}
-out={'rv_rules':stats,'rv_rules_hist':H,'rv_tape':tape,'ivrv':pairs,'breadth':breadth}
+rvroc={'RV21 5d ROC z':r(_rv5.iloc[-1]),'RV21 21d ROC z':r(_rv21r.iloc[-1]),'21/63 5d ROC z':r(_rat5.iloc[-1]),'VIX-RV premium 5d chg z':r(_vrp5.iloc[-1])}
+out={'rvroc':rvroc,'rv_rules':stats,'rv_rules_hist':H,'rv_tape':tape,'ivrv':pairs,'breadth':breadth}
 json.dump(out,open('rv_data.json','w')); import os; print('KB',os.path.getsize('rv_data.json')//1024)
 print(pd.DataFrame(pairs).to_string()); print('breadth',breadth['now'],breadth['z'])
