@@ -134,6 +134,8 @@ if os.path.exists('BIG.pkl') and os.path.exists('PRED15.pkl') and os.path.exists
 if os.path.exists('EARLY.pkl'):
     EA = pd.read_pickle('EARLY.pkl'); out['early'] = {'yearly': EA['yearly'], 'ties': EA['ties'], 'auc_early': EA['auc_early'], 'tables': {k: jsafe(v.to_dict(orient='records')) for k, v in EA['tables'].items()}}
 if os.path.exists('PATH2020.pkl'): out['path2020'] = jsafe(pd.read_pickle('PATH2020.pkl')['table'].to_dict(orient='records'))
+if os.path.exists('ADDBOOK.pkl'):
+    AB = pd.read_pickle('ADDBOOK.pkl'); out['addbook'] = {'sleeve': jsafe(AB['sleeve'].to_dict(orient='records')), 'book': jsafe(AB['book'].to_dict(orient='records'))}
 json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))
