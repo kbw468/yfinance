@@ -255,17 +255,21 @@ if (BR.reading == null) {
 } else {
   bn.textContent = BR.reading; bb.textContent = BR.band.label;
   bb.style.color = zone(BR.reading) >= 4 ? 'var(--orange)' : zone(BR.reading) <= 2 ? 'var(--blue)' : 'var(--fg)';
-  odds.replaceChildren(document.createTextNode(`Out of sample since ${fd(BR.oos_from)}, readings of ${BR.band.lo}–${BR.band.hi} were followed by a 5% SPY drop within 40 sessions `),
-    h('b', null, `${f(BR.band.p5, 1)}%`), document.createTextNode(' of the time and an 8% drop '), h('b', null, `${f(BR.band.p8, 1)}%`),
-    document.createTextNode(`. All near-high sessions: ${f(BR.base5, 1)}% / ${f(BR.base8, 1)}%.`));
+  const bs = BR.size_now ? BR.band.on : BR.band.off;
+  odds.replaceChildren(document.createTextNode(`Out of sample since ${fd(BR.oos_from)}, readings of ${BR.band.lo}–${BR.band.hi} with the DXY size flag ${BR.size_now ? 'on' : 'off'} were followed by a 5% SPY drop within 40 sessions `),
+    h('b', null, `${f(bs.p5, 1)}%`), document.createTextNode(' of the time and an 8% drop '), h('b', null, `${f(bs.p8, 1)}%`),
+    document.createTextNode(` (${bs.sessions} sessions). Same band, either flag: ${f(BR.band.all.p5, 1)}% / ${f(BR.band.all.p8, 1)}%. All near-high sessions: ${f(BR.base5, 1)}% / ${f(BR.base8, 1)}%.`));
 }
 const drv = document.getElementById('baro-drivers');
-BR.drivers.slice(0, 4).forEach(x => {
+BR.drivers.forEach(x => {
   const e = h('span', 'drv ' + (x.push > 0.05 ? 'up' : x.push < -0.05 ? 'dn' : ''));
   e.appendChild(document.createTextNode(`${x.name} `)); e.appendChild(h('b', null, f(x.value, Math.abs(x.value) >= 10 ? 0 : 2)));
   e.appendChild(document.createTextNode(x.push > 0.05 ? ' · raises' : x.push < -0.05 ? ' · lowers' : ' · neutral'));
   drv.appendChild(e);
 });
+{ const e = h('span', 'drv ' + (BR.size_now ? 'up' : ''));
+  e.appendChild(document.createTextNode('DXY size flag ')); e.appendChild(h('b', null, BR.size_now ? 'ON' : 'off'));
+  e.appendChild(document.createTextNode(` · ${N.dxy_p1y == null ? '–' : ord(N.dxy_p1y)} pct · sizes the odds`)); drv.appendChild(e); }
 
 // ---------- chips ----------
 const chips = document.getElementById('chips');
@@ -342,9 +346,10 @@ const recRow = tier => {
 table('t-record', ['Tier', '2015→ per yr', '2015→ hit −5% / −8%', '2015→ caught 5%+ / 8%+', 'Post-COVID per yr', 'Post-COVID hit −5% / −8%', 'Post-COVID caught 5%+ / 8%+'],
   ['base', 'watch', 'working', 'high', 'working_size', 'working_nosize'].map(recRow), { hl: i => i === 2 || i === 3 });
 
-document.getElementById('cal-sub').textContent = `Each year from 2018 is scored by a model fit only on earlier years, so these are out-of-sample outcomes for near-high sessions since ${BR.oos_from ? fd(BR.oos_from) : '–'}. Today's reading uses a model fit on all completed history. Readings are deciles of the model's own fitted scores.`;
-table('t-cal', ['Reading', 'Band', 'Sessions', 'SPY −5% within 40', 'SPY −8% within 40', 'Median 40-session low'],
-  BR.cal.map(c => [`${c.lo}–${c.hi}`, c.label, c.sessions, `${f(c.p5, 1)}%`, `${f(c.p8, 1)}%`, c.med40 == null ? '–' : `${sg(c.med40, 2)}%`]),
+document.getElementById('cal-sub').textContent = `Each year from 2018 is scored by a model fit only on earlier years, so these are out-of-sample outcomes for near-high sessions since ${BR.oos_from ? fd(BR.oos_from) : '–'}. Today's reading uses a model fit on all completed history. Readings are deciles of the model's own fitted scores. Each cell shows the odds of a 5% / 8% SPY drop within 40 sessions and the session count.`;
+const cc = x => x.sessions ? `${f(x.p5, 0)}% / ${f(x.p8, 0)}%  (${x.sessions})` : '–';
+table('t-cal', ['Reading', 'Band', 'All: −5% / −8%', 'Size flag on', 'Size flag off', 'Median 40-session low'],
+  BR.cal.map(c => [`${c.lo}–${c.hi}`, c.label, cc(c.all), cc(c.on), cc(c.off), c.all.med40 == null ? '–' : `${sg(c.all.med40, 2)}%`]),
   { left: [1], hl: i => BR.band && BR.cal[i].lo === BR.band.lo });
 const HI = D.history.slice().reverse();
 table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10d', 'Credit 10d', 'DSPX pct', 'DXY pct', 'SPY low next 40'],
@@ -352,7 +357,7 @@ table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10
     `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.dxy_p1y == null ? '–' : ord(r.dxy_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
 
 table('t-rules', ['Tier', 'Rule'], [
-  ['Barometer', 'Ridge logistic on the VIX/VXN 10-session move, VVIX lag, VXN/VIX, hedged credit, DSPX percentile and DXY percentile, fit on near-high sessions since mid-2015 to the odds of a 5% SPY drop within 40 sessions. The 1–10 reading is the decile of today\'s score among the model\'s fitted scores; the calibration table gives what each band was followed by out of sample.'],
+  ['Barometer', 'Ridge logistic on DSPX percentile and the VVIX lag behind the VIX/VXN move, fit on near-high sessions since mid-2015 to the odds of a 5% SPY drop within 40 sessions. The VIX/VXN move, VXN/VIX and hedged credit were tested as inputs and dropped because they added nothing out of sample; DXY sharpened the 8% odds but not the 5% odds, so it splits the barometer\'s odds through the size flag instead of moving the reading. The 1–10 reading is the decile of today\'s score among the model\'s fitted scores.'],
   ['Near-high gate', 'SPY closes within 1.5% of its 52-week closing high. All tiers below are evaluated only when this is armed.'],
   ['Watch', 'VIX up more than 10% over 10 sessions with VVIX up less than half as much, or the same test with VXN in place of VIX.'],
   ['Working', 'Watch + (duration-hedged HYG down over 10 sessions, or DSPX at or above the 80th percentile of its trailing year).'],

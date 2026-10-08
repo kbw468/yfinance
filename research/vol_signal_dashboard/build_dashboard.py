@@ -13,8 +13,9 @@ Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
   Low-risk         VXN/VIX 10-session change < -5%
   Size flag        DXY in the top 20% of its trailing-year range: when a tier fires with
                    this on, the odds of an 8%+ drop have run about 3x higher (not a tier)
-Barometer (1-10): ridge logistic on the same inputs (VIX/VXN move, VVIX lag, VXN/VIX,
-  hedged credit, DSPX and DXY percentiles), scored as a decile of its own fitted values.
+Barometer (1-10): ridge logistic on DSPX percentile and the VVIX lag behind the VIX/VXN
+  move (the inputs that held up out of sample), scored as a decile of its own fitted values.
+  Its odds are shown split by the DXY size flag.
   History is walk-forward (each year scored by a model fit on earlier years); the odds
   shown for each band are what happened out of sample.
 In a drawdown, the VVIX/VIX ratio's compression from its close on the SPY
@@ -186,9 +187,10 @@ def record(d, t, eps):
 
 
 # ---------- barometer ----------
-BARO_COLS = ["vol10", "lagx", "nv10", "cred10", "dspx_p1y", "dxy_p1y"]
-BARO_LABELS = {"vol10": "VIX/VXN 10-session move", "lagx": "VVIX lag vs that move", "nv10": "VXN/VIX 10-session",
-               "cred10": "Credit (hedged HYG) 10-session", "dspx_p1y": "DSPX percentile", "dxy_p1y": "DXY percentile"}
+# Direction inputs only. VIX/VXN move, VXN/VIX and hedged credit were tested and added nothing out of sample;
+# DXY improved the 8% odds but not the 5% odds, so it sizes the reading through the size flag instead.
+BARO_COLS = ["dspx_p1y", "lagx"]
+BARO_LABELS = {"dspx_p1y": "DSPX percentile", "lagx": "VVIX lag behind the VIX/VXN move"}
 BARO_START = "2015-06-01"      # DSPX history
 BARO_RIDGE = 20.0
 BARO_BANDS = [(1, 2, "Low"), (3, 4, "Below average"), (5, 6, "Average"), (7, 8, "Elevated"), (9, 10, "High")]
@@ -244,16 +246,21 @@ def barometer(d, t):
             continue
         _, r = baro_read(baro_model(train), test)
         reading.loc[test.index] = r
-    # calibration: realized outcomes by out-of-sample reading
+    # calibration: realized outcomes by out-of-sample reading, split by the DXY size flag
     cal = []
     oos = hist.index.intersection(reading.dropna().index)
     base5 = rate(hist.loc[oos, "f40"], -5)
     base8 = rate(hist.loc[oos, "f40"], -8)
+    size = t["size"].reindex(oos).fillna(False)
+    r_oos = reading.loc[oos]
     for lo, hi, lab in BARO_BANDS:
-        idx = [i for i in oos if lo <= reading[i] <= hi]
-        f = hist.loc[idx, "f40"]
-        cal.append({"lo": lo, "hi": hi, "label": lab, "sessions": len(idx), "p5": rate(f, -5), "p8": rate(f, -8),
-                    "med40": None if len(f) == 0 else round(float(f.median()), 2)})
+        inb = (r_oos >= lo) & (r_oos <= hi)
+        row = {"lo": lo, "hi": hi, "label": lab}
+        for key, m in (("all", inb), ("on", inb & size), ("off", inb & ~size)):
+            f = hist.loc[m[m].index, "f40"]
+            row[key] = {"sessions": int(m.sum()), "p5": rate(f, -5), "p8": rate(f, -8),
+                        "med40": None if len(f) == 0 else round(float(f.median()), 2)}
+        cal.append(row)
     # live reading from a model fit on all completed history
     final = baro_model(hist)
     cur = d.iloc[[-1]]
@@ -268,7 +275,8 @@ def barometer(d, t):
     else:
         drivers = []
     band = next((b for b in cal if live is not None and b["lo"] <= live <= b["hi"]), None)
-    return {"reading": live, "band": band, "cal": cal, "drivers": drivers, "base5": base5, "base8": base8,
+    size_now = bool(t["size"].iloc[-1])
+    return {"reading": live, "band": band, "cal": cal, "drivers": drivers, "base5": base5, "base8": base8, "size_now": size_now,
             "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None,
             "series": reading}
 
