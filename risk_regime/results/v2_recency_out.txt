@@ -1,0 +1,53 @@
+wf: X (8480, 4038), candidates exclude KRE, ranks ready in 12s
+P_off done
+P_on done
+P_vol done
+=== out-of-sample AUC by year ===
+                                             2015   2016   2017   2018   2019   2020   2021   2022   2023   2024   2025   2026
+P_off expanding, equal weight (production)  0.525  0.548    NaN  0.540  0.227  0.364  0.761  0.414  0.595  0.448  0.748  0.623
+      all history, half-life 3 years        0.579  0.522    NaN  0.546  0.225  0.524  0.658  0.404  0.523  0.388  0.745  0.678
+      all history, half-life 5 years        0.536  0.506    NaN  0.544  0.238  0.397  0.424  0.328  0.656  0.470  0.730  0.654
+P_on  expanding, equal weight (production)  0.921  0.884  0.505  0.821  0.875  0.713  0.827  0.778  0.681  0.660  0.874  0.709
+      all history, half-life 3 years        0.855  0.845  0.338  0.835  0.840  0.658  0.755  0.740  0.670  0.703  0.845  0.746
+      all history, half-life 5 years        0.911  0.842  0.437  0.823  0.877  0.733  0.796  0.773  0.693  0.672  0.883  0.764
+P_vol expanding, equal weight (production)  0.754  0.868  0.890  0.748  0.857  0.932  0.949  0.862  0.799  0.835  0.705  0.747
+      all history, half-life 3 years        0.782  0.863  0.894  0.704  0.844  0.914  0.953  0.831  0.740  0.797  0.549  0.791
+      all history, half-life 5 years        0.748  0.867  0.904  0.739  0.842  0.939  0.954  0.805  0.851  0.826  0.606  0.792
+
+=== pooled out-of-sample AUC ===
+                                            2015-26  2020-26  2023-26
+P_off expanding, equal weight (production)    0.664    0.716    0.657
+      all history, half-life 3 years          0.549    0.492    0.634
+      all history, half-life 5 years          0.623    0.628    0.670
+P_on  expanding, equal weight (production)    0.779    0.751    0.712
+      all history, half-life 3 years          0.734    0.687    0.670
+      all history, half-life 5 years          0.768    0.736    0.714
+P_vol expanding, equal weight (production)    0.803    0.819    0.752
+      all history, half-life 3 years          0.780    0.767    0.675
+      all history, half-life 5 years          0.793    0.796    0.718
+
+=== features in the 2026 fit ===
+P_off half-life 3y: XLY:pk10_rank, XLK:cc21_rank, XLK:pk21_rank, XLY:pk5_rank, QQQ:pk10_rank, QQQ:pk10, QQQ:pk21_rank, XLP:cc63_rank, XLY:pk21_rank, XLK:pk10_rank, XLV:rel63, XLY:pk10, QQQ:pk21, XLK:cc21, SPY:amihud21_rank
+P_off half-life 5y: XLY:pk10_rank, QQQ:pk10, XLY:pk5_rank, QQQ:pk10_rank, XLY:pk10, QQQ:pk21, QQQ:pk5, XLK:cc21_rank, XLY:pk5, QQQ:pk21_rank, XLK:pk21_rank, XLY:pk21_rank, XLK:cc21, XLK:pk10_rank, XLK:pk21
+P_on half-life 3y: SPY:gk21, SPY:pk21, SPY:pk10, SPY:gk10, XLV:gk21, SPY:cc10, XLV:pk21, SPY:cc21, SPY:gk5, SPY:pk5, XLV:gk10, XLV:pk10, IWM:dd63, VIX:lvl_rank1260, SPY:cc63
+P_on half-life 5y: SPY:pk21, SPY:gk21, SPY:pk10, SPY:gk10, SPY:cc10, SPY:cc21, SPY:pk5, SPY:gk5, XLV:gk21, VIX:lvl_rank1260, XLV:pk21, SPY:cc63, XLV:gk10, XLV:cc21, SPY:cc5
+P_vol half-life 3y: IWM:VIX/cc21_rank, QQQ:VXN/cc21, QQQ:VXN/cc21_rank, XLB:pk21_cc21, KCE:relrv21, IWM:pk21_cc21, IWM:VIX/cc21, KCE:pk21_cc21, OVX/VIX:roc21_rank, SPY:VIX/cc21, QQQ:pk21_cc21, SPY:VIX/cc21_rank, XLY:pk21_cc21_rank, XLI:pk21_cc21_rank, OVX/VIX:roc10_rank
+P_vol half-life 5y: SPY:VIX/cc21, IWM:VIX/cc21_rank, SPY:VIX/cc21_rank, QQQ:VXN/cc21_rank, QQQ:VXN/cc21, SPY:pk21_cc21, IWM:VIX/cc21, IWM:pk21_cc21, SPY:VIX_prem_chg21_rank, XLK:pk21_cc21, KCE:relrv21, XLB:pk21_cc21, SPY:pk21_cc21_rank, QQQ:pk21_cc21, KCE:pk21_cc21
+
+=== reference rule (OUT at trailing 95th, IN below 80th) on each fit, 2020 included ===
+         rule on from  ann %  max DD %  times OUT
+SPY buy and hold 2016   14.1     -33.7          0
+    half-life 3y 2016   11.5     -24.5          9
+    half-life 5y 2016   11.3     -26.8          6
+      production 2016   12.1     -22.2          9
+SPY buy and hold 2023   20.2     -18.8          0
+    half-life 3y 2023   15.1     -10.1          4
+    half-life 5y 2023   16.0     -19.0          1
+      production 2023   16.6     -17.5          2
+
+=== OUT spells since 2023 ===
+production: 2025-04-07 to 2025-05-08 (SPY +11.4%); 2026-06-11 to 2026-07-13 (SPY +1.8%)
+half-life 3y: 2023-01-03 to 2023-03-06 (SPY +6.0%); 2024-08-07 to 2024-08-30 (SPY +8.3%); 2025-03-19 to 2025-05-19 (SPY +5.1%); 2026-07-27 to 2026-09-01 (SPY +3.0%)
+half-life 5y: 2025-04-07 to 2025-05-14 (SPY +15.3%)
+
+today (value, trailing percentile): {'P_off half-life 3y': (0.088, 0.36), 'P_off half-life 5y': (0.046, 0.01), 'P_on half-life 3y': (0.058, 0.38), 'P_on half-life 5y': (0.02, 0.07), 'P_vol half-life 3y': (0.273, 0.88), 'P_vol half-life 5y': (0.228, 0.84)}
