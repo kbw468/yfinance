@@ -23,6 +23,9 @@ python select_barometer.py --apply                                            # 
 6. **No silent model changes.** Scheduled refreshes never change the model. Only the monthly re-check
    may switch barometer inputs, and only when `select_barometer.py` says switch (a different set beats
    the live one by at least 0.01 AUC on both 5% and 8% odds since mid-2020). Every switch is reported.
+8. **Short status, with a rate-of-change call.** Status replies are three lines max: what changed, the
+   barometer and tiers, and whether 10-session rate of change is setting up better or worse than the prior
+   run (VIX, VXN, VVIX, VXN/VIX, credit), in one phrase. Longer analysis only when asked.
 7. **Presentation.** Deutan-safe blue/orange only, no red/green. Status lines lead with what changed,
    then the barometer reading, its band and its odds, then the tier flags and next-close triggers.
    No risk warnings, no narrative, no hedging language.
