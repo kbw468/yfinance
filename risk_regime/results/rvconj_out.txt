@@ -1,0 +1,120 @@
+base P(5% DD/21d) 0.178  fwd21 0.93  DD21 -2.72
+
+=== CELLS with n>=40 and P>=0.30 (danger) ===
+          realized                 index   n  P5_21  fwd21  DD10  DD21
+    RV21 level >20         TNX chg21z >1 156   0.53  -1.97 -3.86 -6.52
+    RV21 level >20          VIX roc5z >1 115   0.48   0.38 -4.20 -6.82
+    RV21 level >20           VVIX pct q4 362   0.46  -0.17 -4.05 -6.14
+    RV21 roc5z <-1         VIX pct252 q4  68   0.46   1.47 -3.02 -4.33
+    RV21 level >20        VIX roc21z <-1 136   0.45  -0.40 -2.67 -4.52
+    RV21 level >20    VIX/VIX3M roc3z >1  90   0.44  -0.18 -4.10 -6.88
+    RV21 level >20   VIX/VIX3M roc3z <-1 141   0.42   0.23 -3.16 -5.38
+    RV21 level >20         VIX roc21z >1 195   0.41  -1.33 -4.11 -6.57
+    RV21 level >20         OVX roc5z <-1 150   0.41   0.70 -3.73 -5.16
+    RV21 level >20           MOVE pct q4 439   0.41  -0.00 -3.52 -5.62
+    RV21 level >20          TNX chg5z >1 167   0.41  -0.81 -3.53 -5.54
+    RV21 level >20         MOVE roc5z >1 143   0.41  -1.20 -3.29 -6.81
+    RV21 level >20         VIX pct252 q4 539   0.40   0.67 -3.44 -5.33
+    RV21 level >20  VIX-RV21 (VRP) z <-1 384   0.40  -0.92 -3.61 -5.63
+    RV21 level >20        SKEW roc10z >1 142   0.39  -1.00 -3.62 -5.89
+    RV21 level >20    VVIX/VIX roc5z <-1 147   0.38   1.73 -3.45 -5.23
+    RV21 level >20         TNX chg5z <-1 183   0.38   1.15 -3.37 -5.30
+    RV21 level >20   VIX-RV21 (VRP) z >1  62   0.37   4.20 -2.70 -3.82
+    RV21 level >20   VVIX/VIX roc5z 0..1 328   0.36   0.84 -3.13 -4.62
+    RV21 level >20        OVX roc5z 0..1 279   0.36   0.48 -3.30 -5.16
+    RV21 level >20      TNX chg21z -1..0 275   0.36   1.20 -3.12 -4.66
+ 21/63 ratio .85-1         VIX pct252 q4 155   0.35   1.58 -2.54 -3.49
+    RV21 level >20      SKEW roc10z 0..1 344   0.35   0.21 -3.01 -4.71
+  RV21 level 16-20         TNX chg21z >1 110   0.35   0.35 -1.95 -3.61
+    RV21 level >20       MOVE roc5z 0..1 256   0.35   1.12 -3.21 -4.77
+    RV21 level >20         GVZ roc5z <-1 120   0.35   0.94 -2.62 -3.78
+  RV21 level 16-20          TNX chg5z >1  95   0.35  -0.51 -1.83 -3.57
+    RV21 level >20           MOVE pct q3 215   0.35   1.02 -3.21 -4.71
+ 21/63 ratio >1.15         VIX pct252 q4 459   0.34   0.42 -3.13 -4.90
+    RV21 level >20     SKEW roc10z -1..0 307   0.34   1.17 -2.86 -4.54
+  RV21 level 16-20 VIX-RV21 (VRP) z 0..1 231   0.34   1.04 -2.20 -3.39
+    RV21 level >20        GVZ roc5z 0..1 190   0.33   1.77 -2.16 -3.27
+    RV21 level >20 VIX/VIX3M roc3z -1..0 400   0.33   1.01 -2.91 -4.21
+    RV21 level >20        TNX chg21z <-1 232   0.33   0.98 -2.40 -4.25
+    RV21 level >20  VVIX/VIX roc5z -1..0 288   0.33   0.69 -2.77 -4.83
+    RV21 level >20       OVX roc5z -1..0 342   0.33   0.79 -2.71 -4.41
+    RV21 level >20          OVX roc5z >1 125   0.33   1.65 -2.91 -4.89
+     RV21 roc5z >1  VIX-RV21 (VRP) z <-1  67   0.33  -1.17 -4.94 -6.25
+     RV21 roc5z >1         VIX pct252 q4 216   0.33   0.62 -3.27 -4.69
+     RV21 roc5z >1         TNX chg21z >1  99   0.32   1.49 -2.46 -3.16
+  RV21 roc5z -1..0         VIX pct252 q4 302   0.32   1.72 -2.62 -3.96
+    RV21 level >20        TNX chg5z 0..1 319   0.32   1.11 -3.06 -4.38
+    RV21 level >20       VIX roc5z -1..0 404   0.32   0.84 -2.82 -4.29
+    RV21 level >20         VIX roc5z <-1 168   0.32   0.63 -2.58 -4.11
+    RV21 level >20         VIX pct252 q3 214   0.32   0.63 -3.26 -4.93
+  RV21 level 16-20         VIX pct252 q4 155   0.32   0.74 -2.19 -3.74
+    RV21 level >20        MOVE roc5z <-1 166   0.32   1.18 -3.59 -4.66
+    RV21 level >20       VIX roc21z 0..1 265   0.32   1.96 -2.67 -4.37
+    RV21 level >20        VIX roc5z 0..1 256   0.32   1.14 -3.01 -4.81
+  RV21 level 16-20    VVIX/VIX roc5z <-1  96   0.32  -0.10 -2.16 -3.87
+    RV21 level >20      MOVE roc5z -1..0 378   0.32   1.24 -2.49 -3.89
+21/63 ratio 1-1.15           MOVE pct q2 165   0.32  -0.94 -2.55 -4.97
+  RV21 level 16-20       SKEW roc10z <-1  87   0.31   0.44 -2.04 -3.66
+21/63 ratio 1-1.15         TNX chg21z >1 163   0.31   1.06 -2.44 -3.63
+    RV21 level >20     VVIX/VIX roc5z >1 180   0.31   0.30 -2.75 -4.23
+    RV21 level >20  VIX9D/VIX roc5z 0..1 147   0.31   2.23 -2.72 -3.50
+  RV21 level 16-20           MOVE pct q4 205   0.31   0.45 -1.75 -3.22
+  RV21 level 16-20    VIX/VIX3M roc3z >1  87   0.31   0.20 -2.32 -3.61
+ 21/63 ratio >1.15        SKEW roc10z >1 159   0.30   0.04 -2.65 -4.59
+    RV21 level >20       TNX chg5z -1..0 274   0.30   1.28 -2.35 -4.19
+     RV21 roc5z >1         VIX roc21z >1 256   0.30   0.61 -3.01 -4.41
+
+=== CELLS with n>=40 and P<=0.07 (safe) ===
+         realized                index   n  P5_21  fwd21  DD10  DD21
+ RV21 level 13-16       VIX roc21z <-1 103   0.07   1.23 -0.86 -1.56
+  RV21 roc5z 0..1  VIX9D/VIX roc5z <-1 200   0.07   1.30 -0.86 -1.62
+   RV21 roc5z <-1        MOVE roc5z >1  58   0.07   1.60 -0.83 -1.64
+21/63 ratio .85-1        VIX pct252 q1 369   0.07   1.35 -1.00 -1.65
+   RV21 roc5z <-1      TNX chg21z 0..1 216   0.07   1.49 -1.04 -1.68
+   RV21 roc5z <-1          MOVE pct q1 227   0.07   1.34 -0.92 -1.50
+ RV21 level 13-16  VIX/VIX3M roc3z <-1 127   0.06   1.25 -1.11 -1.76
+ RV21 level 13-16          VVIX pct q1 203   0.06   1.45 -0.96 -1.58
+    RV21 roc5z >1          VVIX pct q1  66   0.06   1.88 -1.37 -1.66
+   RV21 roc5z <-1        VIX pct252 q1 265   0.06   1.02 -0.87 -1.58
+ 21/63 ratio <.85         GVZ roc5z >1 133   0.06   1.33 -1.04 -1.79
+ RV21 level 13-16        OVX roc5z <-1  84   0.06   1.51 -1.21 -1.70
+ RV21 level 13-16 VIX-RV21 (VRP) z <-1 163   0.06   1.11 -0.76 -1.46
+ RV21 level 13-16        VIX roc5z <-1 117   0.05   1.57 -0.89 -1.49
+   RV21 level <13          MOVE pct q4 356   0.05   1.21 -1.04 -1.82
+   RV21 roc5z <-1       GVZ roc5z 0..1 182   0.05   1.75 -0.71 -1.46
+   RV21 level <13 VIX-RV21 (VRP) z <-1  61   0.03   1.22 -0.46 -0.93
+ RV21 level 13-16  VIX9D/VIX roc5z <-1  97   0.03   1.47 -0.79 -1.29
+   RV21 roc5z <-1   VIX9D/VIX roc5z >1  60   0.03   1.57 -0.97 -1.75
+   RV21 roc5z <-1         OVX roc5z >1  60   0.03   1.39 -0.87 -1.59
+ 21/63 ratio <.85        VIX roc21z >1  62   0.03   2.48 -0.97 -1.26
+   RV21 roc5z <-1          MOVE pct q2 113   0.01   1.91 -0.85 -1.30
+
+=== WHO MOVES FIRST: RV21 5d ROC z (rows) x VIX 5d ROC z (cols) : P | fwd21 | DD21 | n ===
+          P                   fwd21                   DD21                    n                
+B       <-1 -1..0  0..1    >1   <-1 -1..0  0..1    >1  <-1 -1..0 0..1   >1  <-1 -1..0 0..1   >1
+A                                                                                              
+<-1    0.24  0.14  0.08  0.23  0.10  1.03  1.24  1.71 -2.8  -2.1 -1.9 -3.3   42   266  219   35
+-1..0  0.20  0.18  0.19  0.18  0.85  0.80  0.83  2.41 -2.9  -2.7 -2.8 -2.6  173   864  647  103
+0..1   0.12  0.19  0.17  0.22  1.40  0.64  0.79  0.66 -2.1  -2.9 -2.7 -3.2  265   630  521  255
+>1     0.16  0.15  0.23  0.25  1.47  2.03  0.78  1.06 -2.6  -1.9 -3.2 -3.7   68    94  155  216
+
+=== RV21 LEVEL (rows) x VIX-RV21 premium z (cols): the implied/realized gap at each realized level ===
+          P                   fwd21                   DD21                    n                 
+B       <-1 -1..0  0..1    >1   <-1 -1..0  0..1    >1  <-1 -1..0 0..1   >1  <-1 -1..0  0..1   >1
+A                                                                                               
+<13    0.03  0.09  0.10  0.12  1.22  0.84  0.62  1.57 -0.9  -1.7 -2.1 -2.1   61   498  1288  375
+13-16  0.06  0.15  0.16  0.15  1.11  0.92  1.08  3.53 -1.5  -2.4 -2.7 -2.0  163   299   233   52
+16-20  0.11  0.24  0.34  0.16  1.18  0.68  1.04  2.69 -1.8  -3.0 -3.4 -2.5  115   244   231   51
+>20    0.40  0.29  0.30  0.37 -0.92  1.56  2.02  4.20 -5.6  -3.9 -4.4 -3.8  384   286   211   62
+
+=== candidate conjunction rules, first-fires ===
+RV21 crosses 16 with VIX roc5z<0 (realized leads)                      n=  20 P5/21 0.10 fwd21  2.36 DD10 -0.62 DD21 -1.44 P(fwd21<0) 0.25
+RV21 crosses 16 with VIX roc5z>1 (implied confirms)                    n=  20 P5/21 0.35 fwd21  0.38 DD10 -2.22 DD21 -4.15 P(fwd21<0) 0.35
+RV21 crosses 20 with VVIX/VIX roc5z<-1                                 n=  11 P5/21 0.55 fwd21 -1.91 DD10 -3.57 DD21 -5.22 P(fwd21<0) 0.55
+RV21 crosses 20 with VVIX/VIX roc5z>0                                  n=  15 P5/21 0.27 fwd21  0.76 DD10 -2.02 DD21 -3.22 P(fwd21<0) 0.33
+RV21 roc5z>1 & VIX roc5z<0 & VIX pct<0.5 (realized up, implied asleep, calm) n=  51 P5/21 0.08 fwd21  1.86 DD10 -1.00 DD21 -1.53 P(fwd21<0) 0.25
+RV21 roc5z>1 & TNX chg5z>1                                             n=  51 P5/21 0.24 fwd21  0.38 DD10 -2.51 DD21 -3.48 P(fwd21<0) 0.37
+RV21 roc5z>1 & MOVE roc5z>1                                            n=  58 P5/21 0.33 fwd21  0.30 DD10 -2.85 DD21 -4.28 P(fwd21<0) 0.29
+RV21>16 & VRP z<-1 (implied below realized)                            n=  88 P5/21 0.30 fwd21 -0.27 DD10 -2.82 DD21 -4.40 P(fwd21<0) 0.38
+RV21>16 & VRP z>1 (implied well above realized)                        n=  44 P5/21 0.27 fwd21  2.97 DD10 -2.67 DD21 -3.58 P(fwd21<0) 0.32
+RV21<13 & VIX roc5z>1 (spike from quiet realized)                      n= 125 P5/21 0.09 fwd21  1.56 DD10 -1.06 DD21 -1.84 P(fwd21<0) 0.26
