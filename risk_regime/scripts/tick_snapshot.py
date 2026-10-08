@@ -8,7 +8,6 @@ z=lambda k: G[k]
 # ---- ticker-pair rules (ticker rel ROC5 z x index ROC z) ----
 TR={
  'HYG_credit_crack': ((RR[('HYG',5)]<-1)&(z('VIX_roc5_z252')>1), 'HYG rel ROC5 z < -1 and VIX 5d ROC z > 1', 'Credit breaking relative while vol spikes.'),
- 'KRE_banks_vs_yields': ((RR[('KRE',5)]<-1)&(z('TNX_chg5_z252')>1), 'KRE rel ROC5 z < -1 and TNX 5d chg z > 1', 'Regional banks breaking while yields rip.'),
  'TLT_duration_bid_calm': ((RR[('TLT',5)]>1)&(z('VIX_roc5_z252')<-1), 'TLT rel ROC5 z > 1 and VIX 5d ROC z < -1', 'Duration ripping relative while vol collapses. Fwd10 rel TLT -3.4%.'),
  'XLU_defensive_bid': ((RR[('XLU',5)]>1)&(z('TNX_chg5_z252')>1), 'XLU rel ROC5 z > 1 and TNX 5d chg z > 1', 'Utilities bid into rising yields.'),
  'XLRE_bid_yields_up': ((RR[('XLRE',5)]>1)&(z('TNX_chg5_z252')>1), 'XLRE rel ROC5 z > 1 and TNX 5d chg z > 1', 'REITs bid into rising yields.'),

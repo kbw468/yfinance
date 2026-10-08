@@ -265,7 +265,7 @@ The low is the day the safety trade climaxes: duration, gold, staples, credit al
 | Pair | First-fires | P(5% DD/21d) | Fwd 21d | Note |
 |---|---|---|---|---|
 | **HYG rel ROC5 z < -1 and VIX 5d ROC z > 1** | 7 | **0.71** | **-10.6%** | credit breaking relative while vol spikes. 7 fires, all inside major breaks (last: 2018-01-16). Standout cell in the whole study. |
-| **KRE rel ROC5 z < -1 and TNX 5d chg z > 1** | 35 | **0.46** | -1.8% | regionals breaking while yields rip. Last fire 2026-05-15. |
+| KRE rel ROC5 z < -1 and TNX 5d chg z > 1 | 35 | 0.46 | -1.8% | regionals breaking while yields rip. **Removed from the dial and the pair board on 2026-10-08 at the user's direction** (regional banks are not a 2026 macro channel). Its edge was 2007-09: 14 of 35 fires; the 2018-26 fires were P 0.27 with fwd21 +1.45%. See section 16. |
 | TLT rel ROC5 z > 1 and VIX 5d ROC z < -1 | 6 | 0.50 | -0.6% | duration bid while vol collapses; TLT itself then gives back 3.4% relative in 10d |
 | XLU rel ROC5 z > 1 and TNX 5d chg z > 1 | 37 | 0.38 | -0.5% | utilities bid into rising yields. Last fire 2026-07-22. |
 | XLRE rel ROC5 z > 1 and TNX 5d chg z > 1 | 13 | 0.31 | +0.1% | REITs bid into rising yields |
@@ -367,53 +367,54 @@ Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% 
 
 Objective restated by the user: err on the side of being in; drawdowns are secondary. Tested in `scripts/stayin.py` (output in `results/stayin_out.txt`): event-driven OUT spells of 5 to 21 sessions after the high-conviction onset configurations (with and without price confirmation, with and without early re-entry), the previous drawdown-first state book, a price-only break rule, and the balanced dial with OUT at progressively deeper readings. The event-driven versions whipsaw (7 to 10 OUT spells a year, 7 to 9% annual return, max drawdown -29 to -37%) and the price-only rule is worthless (5% a year, -70% drawdown). The balanced dial with a deep OUT threshold dominates everything tested.
 
-**The method.** The component score with balanced weights (risk-off and risk-on fires persist 10 to 42 sessions as in section 1; no at-the-highs softener), plus one realized-vol ROC rule adopted after the section 13 tests: the VIX-minus-realized premium's 5-day change z below -1 while VIX 21-day ROC z is above 1 (realized catching up to a month of rising implied), -8 for 15 sessions. Two states:
+**The method.** The component score with balanced weights (risk-off and risk-on fires persist 10 to 42 sessions as in section 1; no at-the-highs softener), plus one realized-vol ROC rule adopted after the section 13 tests: the VIX-minus-realized premium's 5-day change z below -1 while VIX 21-day ROC z is above 1 (realized catching up to a month of rising implied), -8 for 15 sessions. The regional-banks-vs-yields pair rule was removed on 2026-10-08 (section 16); the figures below are the current dial without it. Two states:
 
 - **OUT** when the dial reads 20 or below. Back **IN** only when it is above 35.
 - **IN** otherwise.
 
-No middle state. About 2.5 state changes a year, 23 OUT spells in 18 years. Definitions in `scripts/score.py`.
+No middle state. About 2.3 state changes a year, 21 OUT spells in 18 years. Definitions in `scripts/score.py`.
 
 What each state meant, 2008 to date (Feb-Jul 2020 excluded):
 
 | State | Time share | P(5% DD in 21d) | P(10% DD in 63d) | Mean fwd 21d | Mean fwd 63d | Mean 63d max DD | Worst 5% of 63d outcomes |
 |---|---|---|---|---|---|---|---|
-| IN | 91% | 0.14 | 0.12 | +1.2% | +3.1% | -4.3% | -8.6% |
-| OUT | 9% | **0.50** | **0.46** | **-1.9%** | **-1.3%** | **-13.1%** | **-30.5%** |
+| IN | 91% | 0.14 | 0.12 | +1.2% | +3.1% | -4.3% | -8.7% |
+| OUT | 9% | **0.52** | **0.48** | **-2.3%** | **-1.5%** | **-13.6%** | **-30.8%** |
 
 Fully invested in SPY when IN, cash when OUT, lagged a day:
 
 | | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer | Time invested |
 |---|---|---|---|---|---|---|
-| Stay-in book (with premium-collapse rule) | **15.0%** | 14.6% | 1.03 | **-20.9%** | 4.99 | 90% |
-| Stay-in book, before that rule | 14.8% | 14.8% | 1.00 | -24.5% | 5.29 | 91% |
+| **Stay-in book, current** (premium-collapse rule in, regional-bank rule out) | **14.7%** | 14.8% | 1.00 | **-20.9%** | 5.27 | 91% |
+| Stay-in book with the regional-bank rule (to 2026-10-08) | 15.0% | 14.6% | 1.03 | -20.9% | 4.99 | 90% |
+| Stay-in book, before the premium-collapse rule | 14.8% | 14.8% | 1.00 | -24.5% | 5.29 | 91% |
 | Drawdown-first book (section 11, prior) | 12.0% | 11.5% | 1.05 | -20.0% | 4.01 | 66% |
 | SPY buy and hold | 10.9% | 18.6% | 0.59 | -73.1% | 13.47 | 100% |
 
-Yearly, book vs SPY: 2008 -4.3 vs -45.9; 2009 +40.7 vs +23.4; 2018 +3.2 vs -4.7; 2022 -11.4 vs -20.1; 2026 +19.0 vs +13.9; identical to SPY in 2012, 2016, 2017, 2019, 2021, 2023, 2024; within 2 points everywhere else. The 2009 figure is the book being back IN from mid-March 2009 at full size.
+Yearly, book vs SPY: 2008 -5.3 vs -45.9; 2009 +40.7 vs +23.4; 2014 +14.4 vs +12.6; 2018 +1.5 vs -4.7; 2022 -11.8 vs -20.1; identical to SPY in 2012, 2016, 2017, 2019, 2021, 2023, 2024 and 2026; within 2 points everywhere else. The 2009 figure is the book being back IN from mid-March 2009 at full size.
 
-The 23 OUT spells and what SPY did while the book was out: 2008 (six spells, SPY -7.0, -5.2, +2.6, -2.3, **-33.8**, -13.3); Apr 2010 -0.7; Jul 2010 +3.9; Aug 2011 +2.4; Feb 2013 +0.1; Sep 2013 +2.0; Sep 2014 -1.0; Sep 2015 +0.2; Jan-Mar 2018 -4.0; Oct 2018 -4.5; Sep 2020 -2.1; May 2022 +0.4; Jun 2022 -9.1; Sep 2022 -9.6; Oct-Nov 2022 **+9.6** (the one costly miss); Mar 2025 -2.6; Apr 2025 **+11.8** (out for the rebound); Mar 2026 -5.7. Fourteen of 23 spells avoided a loss; the two costly ones were both rebounds the dial was slow to release.
+The 21 OUT spells and what SPY did while the book was out: 2008 (six spells, SPY -7.0, -5.5, +1.5, +0.8, **-33.8**, -13.3); Apr 2010 -0.7; Jul 2010 +3.9; Aug 2011 +0.2; Feb 2013 +0.1; Jun 2013 -2.3; Sep 2014 -1.0; Sep 2015 +2.1 (one session); Jan-Mar 2018 -3.7; Oct 2018 -3.0; Sep 2020 -2.1; May-Jun 2022 -13.8; Aug-Sep 2022 -5.9; Nov 2022 **+8.1** (the one costly miss, 14 sessions); Mar 2025 -2.6; Apr 2025 **+11.0** (out for the rebound). Thirteen of 21 spells avoided a loss; the two costly ones were both rebounds the dial was slow to release. The March 2026 spell in the previous version (SPY -5.7% while out) was the regional-bank rule's doing and is gone with it.
 
 Episodes (share of SPY's peak-to-trough loss the book took; share of the 42-day rebound it caught):
 
 | Peak | SPY | Book | Loss captured | Rebound captured | Sessions to OUT |
 |---|---|---|---|---|---|
-| 2008-05 | -72.3% | -11.3% | 16% | 64% | 24 |
+| 2008-05 | -72.3% | -14.0% | 19% | 64% | 29 |
 | 2010-04 | -17.1% | -14.3% | 84% | 13% | 0 |
-| 2011-04 | -20.6% | -24.5% | 119% | 100% | 82 |
-| 2015-07 | -12.7% | -12.7% | 100% | 109% | never |
+| 2011-04 | -20.6% | -19.4% | 94% | 100% | 81 |
+| 2015-07 | -12.7% | -12.7% | 100% | 92% | never |
 | 2015-11 | -13.7% | -13.7% | 100% | 100% | never |
 | 2018-01 | -10.6% | 0.0% | 0% | -100% | 0 |
-| 2018-09 | -21.5% | -17.6% | 82% | 100% | 17 |
-| 2022-01 | -28.1% | -12.2% | 44% | 36% | 87 |
+| 2018-09 | -21.5% | -19.1% | 89% | 100% | 17 |
+| 2022-01 | -28.1% | -13.1% | 47% | 41% | 85 |
 | 2023-07 | -10.5% | -10.5% | 100% | 100% | never |
 | 2024-07 | -8.8% | -8.8% | 100% | 100% | never |
-| 2025-02 | -20.8% | -20.9% | 100% | 91% | 13 |
-| 2026-01 | -9.3% | -4.1% | 44% | 100% | 26 |
+| 2025-02 | -20.8% | -20.9% | 100% | 95% | 13 |
+| 2026-01 | -9.3% | -9.3% | 100% | 100% | never |
 
-Median loss captured 92%, median rebound captured 100%. This is the trade: it rides every ordinary correction in full, including the 2025 Q1 one (it went OUT on day 13, SPY fell 2.6% during the spell, then it came back IN on April 9 and missed the first +11.8% of the rebound before re-entering). What it does is sidestep the bulk of 2008 and 2022 and the February 2018 event, and catch the rebounds in full everywhere else.
+Median loss captured 100%, median rebound captured 100%. This is the trade: it rides every ordinary correction in full, the 2025 Q1 one and the 2026 Q1 one included (in 2025 it went OUT on day 13, SPY fell 2.6% during the spell, then it came back IN on April 9 and missed the first +11.0% of the rebound before re-entering). What it does is sidestep the bulk of 2008 and 2022 and the February 2018 event, and catch the rebounds in full everywhere else.
 
-**2026-10-07: dial 44, state IN.** Components: base 60, plus 10 flip confirmation (late September), minus 10 regional banks vs yields, minus 8 equity implied cheap vs credit realized (live), minus 5 rates pressure with VIX asleep, minus 3 VIX and VVIX at the floor. OUT needs a reading of 20 or below: from here that is a VVIX-lagging VIX spike (-15) plus one more onset or the rally-failure tell, or the credit crack (-20) on its own with the flip confirmation expired.
+**2026-10-07: dial 54, state IN** (363 sessions, since April 2025). Components: base 60, plus 10 flip confirmation (late September), minus 8 equity implied cheap vs credit realized (live), minus 5 rates pressure with VIX asleep, minus 3 VIX and VVIX at the floor. OUT needs a reading of 20 or below: from here that takes the credit crack (-20) plus a VVIX-lagging VIX spike (-15), or three onset-class fires stacked, with the flip confirmation expired.
 
 ## 12. Volume
 
@@ -482,3 +483,9 @@ Scripts `fetch_ew.py`, `breadth.py`, `breadth_snapshot.py` (in the `run_all.sh` 
 **Regeneration.** `run_all.sh` rebuilds everything from an empty `work/` directory (equal-weight data goes to `work/data_ew/`, everything else to `work/data/`), installing the yfinance fork and scikit-learn, statsmodels and scipy if they are missing. Verified: a from-scratch run reproduces the committed result files to two decimals; a second run in the same directory reproduces them again. Day-to-day differences at the third decimal come from Yahoo's adjusted-price revisions.
 
 **Not verified yet.** An unattended scheduled fire while the session is idle, and a fire after the session's container has been reclaimed (the repository is re-cloned and the routine re-fetches and reinstalls; the path is the same as the from-scratch run above, but it has not been observed under the scheduler).
+
+---
+
+## 16. Change log
+
+**2026-10-08: regional-banks-vs-yields rule removed.** The user's call: regional banks are not a channel of the 2026 economy, the largest money-center bank alone outweighs the whole KRE index, and a rule built on them would not survive a room of allocators. The data agrees more than it disagrees. Of the rule's 35 first-fires since 2005, 14 came in 2007-09, where it was right (2008-17: P 0.61, fwd21 -4.5%); the 15 fires of 2018-26 carried P 0.27 with a mean next month of +1.45%, which is no edge. In the dial it only ever pushed OUT; the sessions it changed were Feb, Apr and Jun 2008, Sep 2013, Aug-Sep 2015, Mar 2020, Oct-Nov 2022, Apr 2025 and Mar 2026. Without it the stay-in book goes from 15.03% to 14.70% a year at the same -20.9% max drawdown, 23 to 21 OUT spells, the Oct-Nov 2022 miss shrinks from +9.6% to +8.1% of SPY sat out, and the book rides the Jan-Mar 2026 drawdown in full (-9.3%) instead of 44% of it. Today's dial moves from 44 to 54, state IN either way. Removed from `scripts/score.py`, the pair-rule board in `scripts/tick_snapshot.py`, the dashboard and the PDF; the research scripts that reference the earlier baseline (`score2.py`, `addrv.py`, `addbreadth*.py`) are left as the record of what was tested against. KRE stays in the 38-ticker tape.

@@ -10,7 +10,7 @@ SIG={
  'SETUP_rates':RU['SETUP_rates'],'SETUP_complac':RU['SETUP_complac'],'ONSET_impulse':RU['ONSET_impulse'],'ONSET_vvixlag':RU['ONSET_vvixlag'],'ONSET_movelag':RU['ONSET_movelag'],'ONSET_ovxdiv':RU['ONSET_ovxdiv'],
  'CONT_2ndleg':RU['CONT_2ndleg'],'FAIL_yieldsup':RU['FAIL_yieldsup'],'CAP_alldims':RU['CAP_alldims'],'CAP_vix_gvz':RU['CAP_vix_gvz'],'CAP_vvixout':RU['CAP_vvixout'],'ONCONF_collapse':RU['ONCONF_collapse'],
  'VVIX_confirms_spike':(z('VIX_roc5_z252')>1)&(z('X_VVIX_VIX_roc5_z252')>-0.3),
- 'HYG_credit_crack':(RR[('HYG',5)]<-1)&(z('VIX_roc5_z252')>1),'KRE_banks_vs_yields':(RR[('KRE',5)]<-1)&(z('TNX_chg5_z252')>1),'TLT_duration_bid_calm':(RR[('TLT',5)]>1)&(z('VIX_roc5_z252')<-1),
+ 'HYG_credit_crack':(RR[('HYG',5)]<-1)&(z('VIX_roc5_z252')>1),'TLT_duration_bid_calm':(RR[('TLT',5)]>1)&(z('VIX_roc5_z252')<-1),
  'XLU_defensive_bid':(RR[('XLU',5)]>1)&(z('TNX_chg5_z252')>1),'IWM_beta_chase':(RR[('IWM',5)]>1)&(z('VIX_roc5_z252')>1),'XLU_month_lead':RR[('XLU',21)]>1,
  'SPY_realized_outruns_implied':(IVr['SPY:VIX/RV']<-1)&(z('VIX_roc5_z252')>1),'SPY_implied_outruns_realized':(IVr['SPY:VIX/RV']>1)&(z('VIX_roc5_z252')>1),'QQQ_realized_outruns_VXN':(IVr['QQQ:VXN/RV']<-1)&(z('VXN_roc5_z252')>1),
  'HYG_credit_vol_cheap_VIX':IVp['HYG:VIX/RV']<0.2,'XLE_energy_vol_cheap_OVX':IVp['XLE:OVX/RV']<0.2,'TLT_MOVE_leads_realized':(RVR_z['TLT']<-1)&(z('MOVE_roc5_z252')>1),'HYG_realized_expanding_spike':(RVR_z['HYG']>1)&(z('VIX_roc5_z252')>1),
@@ -34,7 +34,7 @@ def build(W,ctxw,base=60,dd_cap=None,reentry=None):
         s=pd.Series(out,index=s.index)
     return s.clip(0,100),PARTS
 W1={'SETUP_rates':(10,-8),'SETUP_complac':(10,-5),'ONSET_impulse':(15,-10),'ONSET_vvixlag':(15,-15),'ONSET_movelag':(15,-10),'ONSET_ovxdiv':(15,-8),'CONT_2ndleg':(15,-15),'FAIL_yieldsup':(15,-20),'CAP_alldims':(42,25),'CAP_vix_gvz':(42,12),'CAP_vvixout':(42,12),'ONCONF_collapse':(21,10),'VVIX_confirms_spike':(15,8),
-    'HYG_credit_crack':(21,-20),'KRE_banks_vs_yields':(15,-10),'TLT_duration_bid_calm':(15,-8),'XLU_defensive_bid':(15,-8),'IWM_beta_chase':(10,-5),'XLU_month_lead':(1,-5),
+    'HYG_credit_crack':(21,-20),'TLT_duration_bid_calm':(15,-8),'XLU_defensive_bid':(15,-8),'IWM_beta_chase':(10,-5),'XLU_month_lead':(1,-5),
     'SPY_realized_outruns_implied':(15,-10),'SPY_implied_outruns_realized':(15,8),'QQQ_realized_outruns_VXN':(15,-10),'HYG_credit_vol_cheap_VIX':(1,-8),'XLE_energy_vol_cheap_OVX':(1,-4),'TLT_MOVE_leads_realized':(15,-6),'HYG_realized_expanding_spike':(15,-6)}
 C1={'rates_pressure_vix_asleep':-5,'complacency_both_compressed':-5,'vol_collapsing_from_high':10,'at_highs':5,'vix_floor_vvix_floor':-3}
 # drawdown-first: longer windows on risk-off, bigger points, smaller/shorter risk-on adds, cap while in drawdown, slow re-entry
@@ -46,6 +46,9 @@ C1={k:v for k,v in C1.items() if k!='at_highs'}
 S=pd.read_pickle('S.pkl'); _rv21=R['SPY'].rolling(21).std(); _vrp5=(lambda x:(x-x.rolling(252).mean())/x.rolling(252).std())((S['VIX']-_rv21*np.sqrt(252)*100).diff(5))
 SIG['RVX_premium_collapse']=(_vrp5<-1)&(z('VIX_roc21_z252')>1)      # VIX-realized premium collapsing while VIX has risen for a month: realized catching up to implied
 W1=dict(W1); W1['RVX_premium_collapse']=(15,-8)
+# 2026-10-08: the regional-banks-vs-yields pair rule (KRE rel ROC5 z < -1 with TNX 5d chg z > 1, -10 for 15 sessions) was removed at the user's direction.
+# Its edge was 2007-09 (14 of 35 fires; 2018-26 fires: P 0.27, fwd21 +1.45%). Removing it: 15.03% -> 14.70% a year, same -20.9% max DD, 23 -> 21 OUT spells.
+W1.pop('KRE_banks_vs_yields',None)
 SCORE,PARTS=build(W1,C1)
 OUT_IN,OUT_EXIT=20,35
 def states2(S):

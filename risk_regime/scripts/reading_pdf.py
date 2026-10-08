@@ -30,7 +30,7 @@ RULE_META = {
  'ONCONF_collapse':('ONCONF','Flip confirmed',                       'VIX 5d ROC z < -1, VVIX/VIX 5d ROC z > 0.3, VIX/VIX3M 5d ROC z < -0.5', 'median day +4 after trough; confirmation, not edge'),
 }
 PLAIN = {
- 'ONCONF_collapse': 'the flip confirmation', 'KRE_banks_vs_yields': 'regional banks weak against rising yields',
+ 'ONCONF_collapse': 'the flip confirmation',
  'HYG_credit_vol_cheap_VIX': 'equity implied vol cheap against credit realized vol', 'rates_pressure_vix_asleep': 'month-long rates pressure with the VIX asleep',
  'vix_floor_vvix_floor': 'VIX and VVIX both on the floor', 'complacency_both_compressed': 'VIX compressed over both the week and the month',
  'vol_collapsing_from_high': 'vol collapsing from a high', 'drawdown_no_capitulation': 'a drawdown without a capitulation print',
