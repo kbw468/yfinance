@@ -1,0 +1,87 @@
+
+=== 2006-2026 (2020 included) ===
+                                                                      book  ann %  worst DD %  times OUT  exposure
+                                                          XLK buy and hold   15.5       -53.0          0      1.00
+                          XLK, tech-break exit, re-entry roc5 above median   12.2       -54.3         71      0.93
+                                XLK, tech-break exit, re-entry 21 sessions   14.7       -33.8         48      0.81
+                        XLK, tech-break exit, re-entry back above 21d high    5.2       -20.2         15      0.26
+      XLK, tech-break exit, re-entry earlier of roc5 median or 21 sessions   12.2       -54.3         71      0.93
+                                                          SPY buy and hold   10.7       -55.2          0      1.00
+                    SPY, tech-break exit alone, re-entry roc5 above median    8.7       -56.5         71      0.93
+                          SPY, tech-break exit alone, re-entry 21 sessions   10.1       -38.6         48      0.81
+                  SPY, tech-break exit alone, re-entry back above 21d high    3.7       -13.9         15      0.26
+SPY, tech-break exit alone, re-entry earlier of roc5 median or 21 sessions    8.7       -56.5         71      0.93
+
+=== 2006-2015 (2020 included) ===
+                                                                      book  ann %  worst DD %  times OUT  exposure
+                                                          XLK buy and hold    8.6       -53.0          0      1.00
+                          XLK, tech-break exit, re-entry roc5 above median    5.5       -54.3         35      0.93
+                                XLK, tech-break exit, re-entry 21 sessions   10.2       -30.4         22      0.82
+                        XLK, tech-break exit, re-entry back above 21d high    0.0         0.0          1      0.00
+      XLK, tech-break exit, re-entry earlier of roc5 median or 21 sessions    5.5       -54.3         35      0.93
+                                                          SPY buy and hold    7.0       -55.2          0      1.00
+                    SPY, tech-break exit alone, re-entry roc5 above median    3.7       -56.5         35      0.93
+                          SPY, tech-break exit alone, re-entry 21 sessions    7.5       -38.6         22      0.82
+                  SPY, tech-break exit alone, re-entry back above 21d high    0.0         0.0          1      0.00
+SPY, tech-break exit alone, re-entry earlier of roc5 median or 21 sessions    3.7       -56.5         35      0.93
+
+=== 2016-2026 (2020 included) ===
+                                                                                  book  ann %  worst DD %  times OUT  exposure
+                                                                      XLK buy and hold   22.0       -33.6          0      1.00
+                                      XLK, tech-break exit, re-entry roc5 above median   18.5       -37.7         36      0.92
+                                            XLK, tech-break exit, re-entry 21 sessions   18.8       -33.8         26      0.80
+                                    XLK, tech-break exit, re-entry back above 21d high   10.0       -20.2         15      0.49
+                  XLK, tech-break exit, re-entry earlier of roc5 median or 21 sessions   18.5       -37.7         36      0.92
+                                                                      SPY buy and hold   14.1       -33.7          0      1.00
+                           SPY, current instruction (reference OR VIX outrunning VVIX)   12.9       -16.8         27      0.77
+                                SPY, tech-break exit alone, re-entry roc5 above median   13.5       -27.7         36      0.92
+                    SPY, current instruction OR tech-break, re-entry roc5 above median   13.0       -16.8         36      0.75
+                                      SPY, tech-break exit alone, re-entry 21 sessions   12.4       -24.2         26      0.80
+                          SPY, current instruction OR tech-break, re-entry 21 sessions   11.4       -19.3         34      0.69
+                              SPY, tech-break exit alone, re-entry back above 21d high    7.1       -13.9         15      0.49
+                  SPY, current instruction OR tech-break, re-entry back above 21d high    6.4       -14.1         26      0.44
+            SPY, tech-break exit alone, re-entry earlier of roc5 median or 21 sessions   13.5       -27.7         36      0.92
+SPY, current instruction OR tech-break, re-entry earlier of roc5 median or 21 sessions   13.0       -16.8         36      0.75
+
+=== 2023-2026 (2020 included) ===
+                                                                                  book  ann %  worst DD %  times OUT  exposure
+                                                                      XLK buy and hold   32.0       -25.7          0      1.00
+                                      XLK, tech-break exit, re-entry roc5 above median   29.2       -17.9         10      0.93
+                                            XLK, tech-break exit, re-entry 21 sessions   29.1       -18.4          8      0.82
+                                    XLK, tech-break exit, re-entry back above 21d high   11.7       -20.2          6      0.52
+                  XLK, tech-break exit, re-entry earlier of roc5 median or 21 sessions   29.2       -17.9         10      0.93
+                                                                      SPY buy and hold   20.2       -18.8          0      1.00
+                           SPY, current instruction (reference OR VIX outrunning VVIX)   16.2       -12.5          9      0.86
+                                SPY, tech-break exit alone, re-entry roc5 above median   19.5       -10.5         10      0.93
+                    SPY, current instruction OR tech-break, re-entry roc5 above median   16.3       -10.0         13      0.83
+                                      SPY, tech-break exit alone, re-entry 21 sessions   17.6       -10.0          8      0.82
+                          SPY, current instruction OR tech-break, re-entry 21 sessions   15.4       -10.0         12      0.76
+                              SPY, tech-break exit alone, re-entry back above 21d high    9.4       -10.0          6      0.52
+                  SPY, current instruction OR tech-break, re-entry back above 21d high    7.1       -11.0         10      0.48
+            SPY, tech-break exit alone, re-entry earlier of roc5 median or 21 sessions   19.5       -10.5         10      0.93
+SPY, current instruction OR tech-break, re-entry earlier of roc5 median or 21 sessions   16.3       -10.0         13      0.83
+
+=== 2010-2026 (2020 included) ===
+                                                                                  book  ann %  worst DD %  times OUT  exposure
+                                                                      XLK buy and hold   18.4       -33.6          0      1.00
+                                      XLK, tech-break exit, re-entry roc5 above median   14.7       -37.7         51      0.93
+                                            XLK, tech-break exit, re-entry 21 sessions   15.1       -33.8         35      0.83
+                                    XLK, tech-break exit, re-entry back above 21d high    6.4       -20.2         15      0.32
+                  XLK, tech-break exit, re-entry earlier of roc5 median or 21 sessions   14.7       -37.7         51      0.93
+                                                                      SPY buy and hold   13.4       -33.7          0      1.00
+                           SPY, current instruction (reference OR VIX outrunning VVIX)   12.1       -16.8         39      0.79
+                                SPY, tech-break exit alone, re-entry roc5 above median   11.5       -27.7         51      0.93
+                    SPY, current instruction OR tech-break, re-entry roc5 above median   12.0       -17.1         50      0.78
+                                      SPY, tech-break exit alone, re-entry 21 sessions   11.2       -24.2         35      0.83
+                          SPY, current instruction OR tech-break, re-entry 21 sessions   11.0       -19.3         46      0.73
+                              SPY, tech-break exit alone, re-entry back above 21d high    4.6       -13.9         15      0.32
+                  SPY, current instruction OR tech-break, re-entry back above 21d high    4.1       -14.1         26      0.28
+            SPY, tech-break exit alone, re-entry earlier of roc5 median or 21 sessions   11.5       -27.7         51      0.93
+SPY, current instruction OR tech-break, re-entry earlier of roc5 median or 21 sessions   12.0       -17.1         50      0.78
+
+trigger sessions since 2023: ['2024-07-25', '2024-07-29', '2024-08-02', '2024-09-03', '2025-01-30', '2025-02-27', '2025-03-10', '2025-03-31', '2025-04-03', '2025-04-16', '2025-04-21', '2025-11-18', '2026-02-03', '2026-06-05']
+June-July 2026 with re-entry "roc5 above median": [('2026-05-26', 1, 184.7), ('2026-06-05', 0, 179.88), ('2026-06-12', 1, 184.36)]
+  roc5 above median: 2026-06-01 IN @ 195.30, 2026-06-05 OUT @ 179.88, 2026-06-12 IN @ 184.36
+  21 sessions: 2026-06-01 IN @ 195.30, 2026-06-05 OUT @ 179.88, 2026-07-08 IN @ 181.19
+  back above 21d high: 2026-06-01 IN @ 195.30, 2026-06-05 OUT @ 179.88
+  earlier of roc5 median or 21 sessions: 2026-06-01 IN @ 195.30, 2026-06-05 OUT @ 179.88, 2026-06-12 IN @ 184.36
