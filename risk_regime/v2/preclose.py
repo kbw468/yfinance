@@ -44,7 +44,11 @@ hist = PRED['P_off'].dropna().iloc[-756:]; q95 = float(hist.quantile(0.95)); q80
 ref_prev = int(DEC['states']['C: OUT P_off>q0.95, IN P_off<q0.8'].iloc[-1]); pf = P_NOW['P_off']
 ref_now = 0 if (ref_prev == 1 and pf >= q95) else (1 if (ref_prev == 0 and pf < q80) else ref_prev)
 vix = O['I']['VIX']['Close'].reindex(idx); vvix_raw = O['I']['VVIX']['Close'].reindex(idx)
-VVIX_NOTE = '' if not np.isnan(vvix_raw.iloc[-1]) else f'VVIX live bar missing at this run; used its last close {vvix_raw.dropna().index[-1].date()}'
+def _last(sym):
+    try: return pd.read_csv(f'data/{sym}.csv', index_col=0, parse_dates=True)['Close'].dropna().index[-1].date()
+    except Exception: return None
+_stale = [k for k in ('VIX', 'VVIX', 'SPY') if _last(k) is not None and _last(k) < today.date()]
+VVIX_NOTE = ('live bar missing for ' + ', '.join(f'{k} (last {_last(k)})' for k in _stale) + '; used the last close') if _stale else ''
 vvix = vvix_raw.ffill(limit=3); vix = vix.ffill(limit=3); ratio = np.log(vix / vvix)
 if VVIX_NOTE: print('NOTE:', VVIX_NOTE)
 rk = lambda s: s.rolling(504, min_periods=252).rank(pct=True)
