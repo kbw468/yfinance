@@ -155,6 +155,29 @@ The tape in ranks: VIX level 0.14, VIX 5-day ROC 0.28, VVIX/VIX 5-day ROC 0.53, 
 
 The 15% declines are the loss that matters, and section 12 shows that the ones starting from a quiet tape are not caught before they are 5 to 10% in; the dedicated 15% model does not clear its permutation null. The drawdown probability is weak: a pooled AUC of 0.64 with a year-bootstrap interval that reaches 0.54, no better than the raw VIX level rank, and its calibration in the middle deciles is not monotone. The stay-in rule's advantage over buy-and-hold is 2008 and, on the included path, March 2020; everywhere else it costs return. The equal-weight breadth, volume, volatility-of-volume, range-compression and multifractal features were all built and screened, and none of them earns a place in the drawdown model; they are on the page as tape. The rally and vol-expansion probabilities are the robust outputs of this work. The research scripts in `v2/` reproduce every number here from the raw downloads, and `results/v2_*_out.txt` hold the full tables. Nothing in v1 (`README_v1.md`) should be relied on.
 
+## 13. VIX outrunning VVIX: the second REDUCE leg (`v2/vvsig.py`, `v2/vix_vvix.py`, `results/v2_vvsig_out.txt`)
+
+Every time VIX's 21-day rate of change reached the top 10% of its trailing two years, split by whether the 21-day rate of change of the VIX/VVIX ratio was also in its top 10% (VIX climbing faster than the vol of vol):
+
+| VIX 21-day ROC fires | fires | 5% SPY drop within 21 sessions | 5% rally |
+|---|---|---|---|
+| any day, since 2006 | | 17% | 17% |
+| VIX outrunning VVIX, since 2006 | 27 | 44% | 22% |
+| VVIX keeping up, since 2006 | 39 | 13% | 23% |
+| VIX outrunning VVIX, since 2023 | 4 | 50% | 25% |
+| VVIX keeping up, since 2023 | 8 | 12% | 12% |
+
+The 12 drops among the 27 come from 2008, 2011, 2014, 2015 (two), 2016, 2018 (three), 2022 (two), Feb 2025 and Mar 2026. As an exit, live until VIX's 21-day rate of change is back below its median, 2020 included:
+
+| book | 2010-26 ann / worst DD | 2018-26 | 2023-26 |
+|---|---|---|---|
+| SPY buy and hold | 13.4% / -33.7% | 13.7% / -33.7% | 20.2% / -18.8% |
+| reference rule alone | 11.6% / -22.2% | 11.8% / -22.2% | 16.6% / -17.5% |
+| VIX outrunning VVIX alone | 13.8% / -17.4% | 14.8% / -17.4% | 16.8% / -13.2% |
+| instruction: reference OR VIX outrunning VVIX | 12.1% / -16.8% | 12.8% / -16.8% | 16.2% / -12.5% |
+
+On the user's decision this became the second REDUCE leg on the action page: REDUCE when the reference rule is OUT or VIX is outrunning VVIX. The reference leg stays because the signal does not exist before 2009 and the reference rule's value is the 2008 kind of tape. Limits: the signal was found in this project's research and adopted after its record was seen, one of many cuts tried, so the split and the books are in-sample for that choice; the 90th-percentile thresholds and the median re-entry were picked from four re-entry variants (all four are in the research log); August 2024 is a miss (VVIX kept pace and SPY still fell 6%); it has been live 42 times since 2009, about two and a half a year.
+
 ## 12. The 15% question (`v2/big.py`, `v2/onset.py`, `results/v2_big_out.txt`, `results/v2_big_null_out.txt`, `results/v2_onset_out.txt`)
 
 The loss that matters is 15%, not 5%. Stage 8 rebuilt the target around it and scored everything above on it.

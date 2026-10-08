@@ -69,6 +69,12 @@ svg{display:block;width:100%;height:auto;max-width:100%} .legend{display:flex;fl
 <p class="note" id="earlynote"></p>
 </section>
 
+<section class="pb"><h2>VIX outrunning VVIX: the second REDUCE leg</h2>
+<div class="tiles" id="vvtiles"></div>
+<div class="grid2" style="margin-top:10px"><div class="tablewrap"><table id="vvsplit"></table></div><div class="tablewrap"><table id="vvbooks"></table></div></div>
+<p class="note" id="vvnote"></p>
+</section>
+
 <section class="pb"><h2>15% declines: the loss that matters</h2>
 <div class="tiles" id="t15"></div>
 <p class="note" id="note15"></p>
@@ -151,6 +157,12 @@ const R=D.rules; document.getElementById('rules').innerHTML=`<tr><th>rule</th><t
 document.getElementById('rulesnote').innerHTML=`Blue row: the reference rule shown above. Orange row: the rule that was pre-registered before the grid was run (vol expansion likely with no rebound setup) and failed, because an expected vol expansion is a low-drawdown state out of sample. The reference rule was chosen from the pre-specified grid after the grid was run, and its re-entry threshold was moved from the 60th to the 80th percentile after the slow version sat out 2009 and 2016; both versions are in the table. Drawdowns are in log units (-80 log = -55% price).`;
 const Y=D.yearly&&D.yearly.C95; if(Y){document.getElementById('yearly').innerHTML=`<tr><th>year</th>${Y.map(r=>`<th>${String(r.year).slice(0,4)}</th>`).join('')}</tr><tr><td>book %</td>${Y.map(r=>`<td class="num">${r['book %']}</td>`).join('')}</tr><tr><td>SPY %</td>${Y.map(r=>`<td class="num">${r['SPY %']}</td>`).join('')}</tr><tr><td>diff</td>${Y.map(r=>`<td class="num"><span class="z ${r.diff>=5?'cold':(r.diff<=-5?'hot':'')}">${f1(r.diff)}</span></td>`).join('')}</tr>`;}
 const S=D.spells&&D.spells.C95; if(S){document.getElementById('spells').innerHTML=S.map(s=>`${s.from} to ${s.to} · ${s.sessions}d · <span style="color:${s.spy_while_out>0?'var(--orange)':'var(--blue)'}">${f1(s.spy_while_out)}%</span>`).join('<br>');}
+// ---- VIX outrunning VVIX
+const VS=D.vvsig; if(VS){const t=VS.today;const pc2=x=>x==null?'':Math.round(x*100);
+ document.getElementById('vvtiles').innerHTML=[['signal',t.live?'LIVE':'quiet',t.live?`since ${t.since}`:`last live ${t.last_spell?t.last_spell.from+' to '+t.last_spell.to:''}`],['VIX 21-day rate of change',`${t.vix_roc21_pct>0?'+':''}${t.vix_roc21_pct}%`,`${pc2(t.vix_roc21_rank)}th percentile of two years; fires at the 90th`],['VIX/VVIX 21-day rate of change',`${t.ratio_roc21_pct>0?'+':''}${t.ratio_roc21_pct}%`,`${pc2(t.ratio_roc21_rank)}th percentile; fires at the 90th`],['instruction today',D.instruction||'',`${VS.n_spells} live spells since 2009`]].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+ document.getElementById('vvsplit').innerHTML=`<tr><th>from</th><th>VIX 21-day ROC in its top 10%</th><th>fires</th><th>5% drop within 21</th><th>5% rally within 21</th></tr>`+VS.split.map(r=>`<tr class="${r.case.includes('outrunning')?'hl':''}"><td>${r.from}</td><td>${esc(r.case)}</td><td class="num">${r.n==null?'':r.n}</td><td class="num">${pc2(r['5% drop within 21'])}%</td><td class="num">${pc2(r['5% rally within 21'])}%</td></tr>`).join('');
+ document.getElementById('vvbooks').innerHTML=`<tr><th>window</th><th>book</th><th>ann %</th><th>worst DD %</th><th>times OUT</th><th>exposure</th></tr>`+VS.books.map(r=>`<tr class="${r.book.startsWith('instruction')?'hl':''}"><td>${r.window}</td><td>${esc(r.book)}</td><td class="num">${r['ann %']}</td><td class="num">${r['worst DD %']}</td><td class="num">${r['times OUT']}</td><td class="num">${r.exposure}</td></tr>`).join('');
+ document.getElementById('vvnote').textContent=`The signal: VIX's 21-day rate of change and the VIX/VVIX ratio's 21-day rate of change both in the top 10% of their trailing two years, live until VIX's 21-day rate of change falls back below its median. When VIX climbs and VVIX lags, the level of risk is being repriced; when VVIX keeps pace, it is a spike in tail insurance, and those mostly faded. It starts in 2009 because VVIX does. The split and the books are in-sample for the choice of this signal: it was found in this project's research and adopted after its record was seen, one of many cuts tried. August 2024 is a miss: VVIX kept pace and SPY still fell 6%. Since 2009 it has been live ${VS.n_spells} times; 2020 is included in the books.`;}
 // ---- fifteen
 const FT=D.fifteen; if(FT){const a=FT.dd15_63,b=FT.dd15_126,da=a.deciles[a.today_decile],db=b.deciles[b.today_decile];const md=(FT.models||[]).find(m=>m.model==='dd15_63 K15 d2 mono')||{};
  const tile=([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`;

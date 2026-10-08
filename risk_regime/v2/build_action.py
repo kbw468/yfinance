@@ -5,6 +5,9 @@ Logic, fixed from the out-of-sample record and nothing else:
   REDUCE  the reference rule is OUT: the drawdown probability reached its trailing 95th percentile and has not yet
           fallen back below the 80th. The only exit signal with a record (kept the book out of four of the five
           2008-09 legs; fires about 14 times in 20 years).
+  REDUCE  VIX outrunning VVIX: VIX's 21-day rate of change and the VIX/VVIX 21-day rate of change are both in the top
+          10% of their trailing two years; stays live until VIX's 21-day rate of change falls back below its median.
+          Adopted from vvsig.py after its record was seen (see the evidence page).
   HOLD    everything else. Full size, nothing to do. Quiet-tape dips are not sold: the record priced that at 3 to 5
           points a year.
 ADD was removed from the instruction: scored as its own book (addbook.py) it beats sitting on cash but not holding
@@ -23,8 +26,12 @@ def bucket_note(p, key, hit_word):
     if i == worst: txt += f" (the weakest bucket in this table; the curve is not monotone, deciles {', '.join(str(k+1) for k in range(10) if means[k] > 0)} average positive)"
     elif i == best: txt += " (the strongest bucket in this table)"
     return txt
-if state == 'OUT': action, why = 'REDUCE', f'The drawdown probability hit its trailing 95th percentile and is still above the 80th (now the {ordn(p_off)}). Stay reduced until it drops below the 80th.'
-else: action, why = 'HOLD', f'Rule is IN, dial {dial}. Drawdown probability at the {ordn(p_off)} percentile, rally probability at the {ordn(p_on)}. Full size. REDUCE needs the drawdown probability at its trailing 95th percentile.'
+VV = D.get('vvsig', {}).get('today', {}); vv_live = bool(VV.get('live')); vr = VV.get('vix_roc21_rank'); rr = VV.get('ratio_roc21_rank')
+legs = []
+if state == 'OUT': legs.append(f'The drawdown probability hit its trailing 95th percentile and is still above the 80th (now the {ordn(p_off)}); that leg clears when it drops below the 80th.')
+if vv_live: legs.append(f"VIX is outrunning VVIX since {VV.get('since')}: VIX's 21-day rate of change is at the {ordn(vr)} percentile and the VIX/VVIX ratio's at the {ordn(rr)}; that leg clears when VIX's 21-day rate of change falls below its median.")
+if legs: action, why = 'REDUCE', ' '.join(legs)
+else: action, why = 'HOLD', f"Rule is IN, dial {dial}. Drawdown probability at the {ordn(p_off)} percentile; VIX 21-day rate of change at the {ordn(vr)}, VIX/VVIX at the {ordn(rr)}. Full size. REDUCE needs the drawdown probability at its 95th, or both rates of change at their 90th." if vr is not None else f'Rule is IN, dial {dial}. Drawdown probability at the {ordn(p_off)} percentile. Full size.'
 dec = lambda p: P[p]['deciles'][P[p]['today_decile']]
 tiles = [
     ('5% drawdown within a month', P['P_off']['today'], f"{ordn(p_off)} percentile of its trailing three years · {bucket_note('P_off', 'P_off', 'drew down 5%')}"),
@@ -54,9 +61,10 @@ a{{color:var(--blue)}}
 <div class="action">{action}</div>
 <div class="why">{why}</div>
 <div class="dial">stay-in dial <b>{dial}</b> · OUT at 5 or below, back IN above 20 · {'inside a vol episode' if D.get('inside_episode') else 'no vol episode in progress'}</div>
+<div class="dial">VIX outrunning VVIX <b style="font-size:20px;color:{'var(--orange)' if vv_live else 'var(--ink)'}">{'LIVE since ' + str(VV.get('since')) if vv_live else 'quiet'}</b> · VIX {VV.get('vix')} ({VV.get('vix_roc21_pct'):+.1f}% in 21 sessions, {ordn(vr) if vr is not None else '-'} percentile) · VIX/VVIX {VV.get('ratio_roc21_pct'):+.1f}% ({ordn(rr) if rr is not None else '-'}) · fires at the 90th on both</div>
 <div class="tiles">{''.join(f'<div class="tile"><div class="k">{k}</div><div class="v">{v:.3f}</div><div class="d">{d}</div></div>' for k, v, d in tiles)}</div>
-<div class="sub">The decile lines are history for the bucket each probability sits in today. The instruction does not act on them: REDUCE waits for the drawdown probability to reach its trailing 95th percentile. A below-average bucket with HOLD printed is a normal reading.</div>
-<div class="rules"><b>REDUCE</b> when the drawdown probability reaches its trailing 95th percentile, until it falls below the 80th. <b>HOLD</b> otherwise; dips are not sold. Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
+<div class="sub">The decile lines are history for the bucket each probability sits in today. The instruction does not act on them: REDUCE waits for the drawdown probability to reach its trailing 95th percentile, or for VIX to outrun VVIX. A below-average bucket with HOLD printed is a normal reading.</div>
+<div class="rules"><b>REDUCE</b> when the drawdown probability reaches its trailing 95th percentile, until it falls below the 80th; or when VIX's 21-day rate of change and the VIX/VVIX ratio's are both in their top 10%, until VIX's falls back below its median. <b>HOLD</b> otherwise; dips are not sold. Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
 </div>
 """
 open(out, 'w').write(html); print('wrote', out, '|', action, '|', why)
