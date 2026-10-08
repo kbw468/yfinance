@@ -1,0 +1,435 @@
+riskoff21 2005: train 2935 rows, test 252, top feature SPY:roc63_rank (0.209), 4s
+riskoff21 2006: train 3188 rows, test 251, top feature QQQ:gk10 (0.384), 7s
+riskoff21 2007: train 3440 rows, test 251, top feature QQQ:cc126 (0.404), 11s
+riskoff21 2008: train 3690 rows, test 253, top feature XLP:gk21 (0.291), 15s
+riskoff21 2009: train 3942 rows, test 252, top feature IWM:relrv21 (0.318), 20s
+riskoff21 2010: train 4194 rows, test 252, top feature MF:QQQ:alpha_abs (0.366), 24s
+riskoff21 2011: train 4446 rows, test 252, top feature MF:QQQ:alpha_abs (0.334), 29s
+riskoff21 2012: train 4699 rows, test 250, top feature MF:QQQ:vr5_rank (0.258), 34s
+riskoff21 2013: train 4951 rows, test 252, top feature SPY:gk10 (0.273), 38s
+riskoff21 2014: train 5200 rows, test 252, top feature TLT:gk21 (0.266), 43s
+riskoff21 2015: train 5452 rows, test 252, top feature VXN:lvl_rank504 (0.280), 48s
+riskoff21 2016: train 5704 rows, test 252, top feature SPY:gk10 (0.265), 54s
+riskoff21 2017: train 5957 rows, test 251, top feature XLK:gk10 (0.281), 59s
+riskoff21 2018: train 6209 rows, test 251, top feature XLK:gk5 (0.307), 65s
+riskoff21 2019: train 6460 rows, test 252, top feature XLU:amihud21_rank (0.302), 72s
+riskoff21 2020: train 6710 rows, test 253, top feature XLY:pk10 (0.286), 78s
+riskoff21 2021: train 6816 rows, test 252, top feature XLY:pk10 (0.284), 85s
+riskoff21 2022: train 7068 rows, test 251, top feature XLY:pk10 (0.272), 92s
+riskoff21 2023: train 7320 rows, test 250, top feature QQQ:pk10 (0.307), 99s
+riskoff21 2024: train 7571 rows, test 252, top feature QQQ:pk10 (0.296), 107s
+riskoff21 2025: train 7821 rows, test 250, top feature QQQ:pk10 (0.286), 115s
+riskoff21 2026: train 8071 rows, test 192, top feature QQQ:pk10 (0.231), 124s
+
+=== riskoff21 out-of-sample ===
+    era    n  base   auc  brier  brier_base  top_decile_real  bottom_decile_real  top_decile_pred  bottom_decile_pred
+2005-12 2013 0.215 0.492 0.2182      0.1688            0.173               0.178            0.658               0.008
+2013-19 1762 0.102 0.439 0.1297      0.0917            0.079               0.153            0.569               0.011
+2020-26 1532 0.164 0.553 0.1673      0.1370            0.123               0.091            0.604               0.024
+    all 5307 0.163 0.498 0.1741      0.1363            0.137               0.179            0.616               0.011
+calibration deciles (all OOS):
+    pred   real    n
+0  0.011  0.179  531
+1  0.025  0.177  531
+2  0.040  0.123  530
+3  0.059  0.169  531
+4  0.084  0.168  531
+5  0.121  0.111  530
+6  0.180  0.211  531
+7  0.280  0.164  530
+8  0.407  0.188  531
+9  0.616  0.137  531
+most-selected features across windows:
+SPY:gk5      22
+SPY:cc21     22
+SPY:pk10     22
+SPY:gk10     22
+SPY:cc10     22
+SPY:pk5      22
+SPY:dd63     22
+SPY:gk21     22
+SPY:pk21     22
+SPY:cc63     21
+SPY:dd252    21
+SPY:cc126    21
+SPY:cc5      20
+XLB:gk10     19
+XLK:gk10     18
+XLB:pk10     18
+QQQ:pk5      17
+QQQ:gk10     17
+QQQ:pk10     17
+XLB:cc21     17
+QQQ:gk5      17
+XLB:gk5      16
+QQQ:pk21     16
+XLB:pk21     16
+XLB:gk21     16
+ year   n  base   auc  brier  brier_base
+ 2006 251 0.032 0.639 0.0325      0.0496
+ 2007 251 0.263 0.643 0.2407      0.2047
+ 2008 253 0.538 0.497 0.4767      0.3941
+ 2009 252 0.214 0.472 0.2063      0.1698
+ 2010 252 0.262 0.375 0.2475      0.1985
+ 2011 252 0.306 0.654 0.2164      0.2244
+ 2012 250 0.104 0.300 0.3075      0.1018
+ 2013 252 0.004 0.598 0.0255      0.0403
+ 2014 252 0.103 0.438 0.0993      0.0995
+ 2015 252 0.175 0.352 0.2168      0.1442
+ 2016 252 0.044 0.674 0.0493      0.0602
+ 2018 251 0.323 0.519 0.2489      0.2420
+ 2019 252 0.067 0.159 0.0847      0.0732
+ 2020 106 0.179 0.348 0.2697      0.1472
+ 2021 252 0.040 0.490 0.1182      0.0552
+ 2022 251 0.478 0.252 0.3515      0.3470
+ 2023 250 0.100 0.622 0.1102      0.0958
+ 2024 252 0.075 0.235 0.0848      0.0795
+ 2025 250 0.172 0.411 0.1768      0.1424
+ 2026 171 0.088 0.514 0.0965      0.0871
+riskoff63 2005: train 2935 rows, test 252, top feature FVX:lvl_rank504 (0.287), 126s
+riskoff63 2006: train 3188 rows, test 251, top feature TNX:lvl_rank504 (0.298), 130s
+riskoff63 2007: train 3440 rows, test 251, top feature TNX:lvl_rank504 (0.285), 133s
+riskoff63 2008: train 3690 rows, test 253, top feature XLI:pk21_rank (0.280), 138s
+riskoff63 2009: train 3942 rows, test 252, top feature XLI:cc126_rank (0.346), 141s
+riskoff63 2010: train 4194 rows, test 252, top feature XLK:cc126 (0.390), 145s
+riskoff63 2011: train 4446 rows, test 252, top feature XLK:cc126 (0.394), 150s
+riskoff63 2012: train 4699 rows, test 250, top feature XLV:rel63 (0.339), 155s
+riskoff63 2013: train 4951 rows, test 252, top feature SPY:dd252 (0.325), 159s
+riskoff63 2014: train 5200 rows, test 252, top feature SHY:cc63 (0.375), 164s
+riskoff63 2015: train 5452 rows, test 252, top feature SHY:cc63 (0.395), 170s
+riskoff63 2016: train 5704 rows, test 252, top feature XLK:cc63 (0.316), 175s
+riskoff63 2017: train 5957 rows, test 251, top feature XLK:cc63 (0.325), 180s
+riskoff63 2018: train 6209 rows, test 251, top feature XLK:cc63 (0.338), 186s
+riskoff63 2019: train 6460 rows, test 252, top feature XLK:cc63 (0.315), 192s
+riskoff63 2020: train 6710 rows, test 253, top feature XLY:pk10 (0.315), 199s
+riskoff63 2021: train 6774 rows, test 252, top feature XLY:pk10 (0.313), 205s
+riskoff63 2022: train 7026 rows, test 251, top feature XLY:pk10 (0.298), 212s
+riskoff63 2023: train 7278 rows, test 250, top feature XLY:pk10 (0.327), 220s
+riskoff63 2024: train 7529 rows, test 252, top feature SHY:cc63 (0.310), 228s
+riskoff63 2025: train 7779 rows, test 250, top feature KCE:dd252 (0.299), 236s
+riskoff63 2026: train 8029 rows, test 192, top feature KCE:roc63 (0.257), 244s
+
+=== riskoff63 out-of-sample ===
+    era    n  base   auc  brier  brier_base  top_decile_real  bottom_decile_real  top_decile_pred  bottom_decile_pred
+2005-12 2013 0.176 0.415 0.2203      0.1449            0.015               0.094            0.688               0.001
+2013-19 1720 0.088 0.366 0.0893      0.0801            0.064               0.163            0.196               0.001
+2020-26 1490 0.118 0.608 0.1379      0.1042            0.181               0.007            0.687               0.002
+    all 5223 0.130 0.466 0.1537      0.1134            0.099               0.113            0.601               0.001
+calibration deciles (all OOS):
+    pred   real    n
+0  0.001  0.113  523
+1  0.004  0.197  522
+2  0.006  0.167  522
+3  0.011  0.126  522
+4  0.019  0.136  523
+5  0.033  0.096  522
+6  0.057  0.105  522
+7  0.106  0.123  522
+8  0.240  0.142  522
+9  0.601  0.099  523
+most-selected features across windows:
+SPY:pk5             22
+SPY:cc10            22
+SPY:gk5             22
+SPY:pk10            22
+SPY:pk21            22
+SPY:gk21            22
+SPY:gk10            22
+SPY:cc21            22
+SPY:cc5             20
+SPY:dd63            20
+SPY:roc63           20
+MF:VIX:vr21_rank    20
+SPY:cc63            19
+QQQ:cc63            19
+SPY:dd252           18
+XLK:cc63            18
+XLK:dd252           18
+XLK:dd63            18
+XLK:roc63           17
+XLK:gk5             17
+XLK:pk5             17
+QQQ:gk21            17
+XLK:cc21            17
+QQQ:pk21            17
+SPY:cc126           17
+ year   n  base   auc  brier  brier_base
+ 2007 251 0.191 0.825 0.1894      0.1594
+ 2008 253 0.696 0.675 0.6496      0.5502
+ 2009 252 0.143 0.190 0.3491      0.1225
+ 2010 252 0.127 0.138 0.1315      0.1121
+ 2011 252 0.246 0.315 0.3435      0.1929
+ 2015 252 0.345 0.235 0.3418      0.2674
+ 2018 251 0.255 0.185 0.2559      0.2035
+ 2021 252 0.060 0.648 0.0592      0.0619
+ 2022 251 0.398 0.426 0.3351      0.3108
+ 2025 250 0.244 0.583 0.2068      0.1966
+riskon21 2005: train 2935 rows, test 252, top feature SPY:pk5 (0.319), 247s
+riskon21 2006: train 3188 rows, test 251, top feature SPY:gk5 (0.359), 250s
+riskon21 2007: train 3440 rows, test 251, top feature SPY:pk5 (0.377), 254s
+riskon21 2008: train 3690 rows, test 253, top feature XLF:dd252 (0.391), 257s
+riskon21 2009: train 3942 rows, test 252, top feature SPY:pk21 (0.359), 262s
+riskon21 2010: train 4194 rows, test 252, top feature XLI:dd252 (0.414), 266s
+riskon21 2011: train 4446 rows, test 252, top feature IWM:dd252 (0.422), 270s
+riskon21 2012: train 4699 rows, test 250, top feature IWM:dd252 (0.414), 275s
+riskon21 2013: train 4951 rows, test 252, top feature IWM:dd252 (0.409), 280s
+riskon21 2014: train 5200 rows, test 252, top feature XLV:dd252 (0.381), 284s
+riskon21 2015: train 5452 rows, test 252, top feature XLV:dd252 (0.394), 290s
+riskon21 2016: train 5704 rows, test 252, top feature XLF:dd252 (0.380), 295s
+riskon21 2017: train 5957 rows, test 251, top feature XLV:dd252 (0.383), 301s
+riskon21 2018: train 6209 rows, test 251, top feature XLV:dd252 (0.390), 307s
+riskon21 2019: train 6460 rows, test 252, top feature IWM:dd252 (0.369), 313s
+riskon21 2020: train 6710 rows, test 253, top feature IWM:dd252 (0.369), 320s
+riskon21 2021: train 6816 rows, test 252, top feature IWM:dd252 (0.374), 326s
+riskon21 2022: train 7068 rows, test 251, top feature SPY:gk10 (0.369), 333s
+riskon21 2023: train 7320 rows, test 250, top feature SPY:pk10 (0.375), 341s
+riskon21 2024: train 7571 rows, test 252, top feature IWM:dd252 (0.379), 348s
+riskon21 2025: train 7821 rows, test 250, top feature XLV:dd252 (0.366), 356s
+riskon21 2026: train 8071 rows, test 192, top feature IWM:dd252 (0.382), 364s
+
+=== riskon21 out-of-sample ===
+    era    n  base   auc  brier  brier_base  top_decile_real  bottom_decile_real  top_decile_pred  bottom_decile_pred
+2005-12 2013 0.179 0.762 0.1422      0.1469            0.426               0.005            0.661               0.004
+2013-19 1762 0.101 0.776 0.0847      0.0908            0.311               0.068            0.496               0.002
+2020-26 1532 0.229 0.714 0.1632      0.1766            0.552               0.045            0.521               0.008
+    all 5307 0.168 0.764 0.1292      0.1395            0.420               0.032            0.572               0.003
+calibration deciles (all OOS):
+    pred   real    n
+0  0.003  0.032  531
+1  0.007  0.017  531
+2  0.012  0.040  530
+3  0.021  0.073  531
+4  0.037  0.149  531
+5  0.062  0.142  530
+6  0.105  0.185  531
+7  0.181  0.251  530
+8  0.317  0.367  531
+9  0.572  0.420  531
+most-selected features across windows:
+SPY:gk21             22
+SPY:gk5              22
+SPY:cc5              22
+SPY:cc63             22
+VIX:lvl_rank504      22
+VIX:lvl_rank1260     22
+SPY:pk5              22
+SPY:pk10             22
+SPY:cc10             22
+SPY:gk10             22
+SPY:pk21             22
+SPY:cc21             22
+SKEW/VIX:lvl_rank    22
+XLF:pk5              21
+XLI:dd63             21
+XLF:dd63             21
+XLY:dd63             21
+SPY:dd63             21
+SPY:cc126            21
+SPY:pk10_rank        21
+XLY:cc5              20
+XLB:dd63             20
+XLV:dd63             20
+XLF:cc10             19
+XLI:dd252            19
+ year   n  base   auc  brier  brier_base
+ 2005 252 0.048 0.922 0.0370      0.0743
+ 2006 251 0.004 0.688 0.0063      0.0446
+ 2007 251 0.124 0.805 0.0960      0.1132
+ 2008 253 0.225 0.734 0.2427      0.1760
+ 2009 252 0.421 0.854 0.3382      0.3006
+ 2010 252 0.274 0.706 0.1906      0.2039
+ 2011 252 0.242 0.835 0.1479      0.1848
+ 2012 250 0.092 0.764 0.0771      0.0960
+ 2013 252 0.139 0.848 0.1118      0.1237
+ 2014 252 0.087 0.934 0.0502      0.0925
+ 2015 252 0.071 0.951 0.0458      0.0813
+ 2016 252 0.111 0.884 0.0768      0.1048
+ 2017 251 0.052 0.317 0.0521      0.0672
+ 2018 251 0.096 0.702 0.1426      0.0937
+ 2019 252 0.151 0.890 0.1136      0.1287
+ 2020 106 0.396 0.733 0.3077      0.2874
+ 2021 252 0.155 0.831 0.1246      0.1313
+ 2022 251 0.355 0.762 0.1899      0.2601
+ 2023 250 0.252 0.655 0.1805      0.1935
+ 2024 252 0.163 0.776 0.1296      0.1367
+ 2025 250 0.160 0.537 0.1410      0.1351
+ 2026 171 0.216 0.831 0.1480      0.1705
+volexp21 2005: train 2935 rows, test 252, top feature SPY:VIX/cc21_rank (0.323), 366s
+volexp21 2006: train 3188 rows, test 251, top feature SPY:VIX/cc21_rank (0.320), 370s
+volexp21 2007: train 3440 rows, test 251, top feature SPY:VIX/cc21 (0.311), 374s
+volexp21 2008: train 3690 rows, test 253, top feature SPY:VIX/cc21 (0.265), 377s
+volexp21 2009: train 3942 rows, test 252, top feature SPY:VIX_prem_chg21_rank (0.223), 382s
+volexp21 2010: train 4194 rows, test 252, top feature IWM:pk21_cc21 (0.202), 385s
+volexp21 2011: train 4446 rows, test 252, top feature IWM:VIX/cc21_rank (0.267), 390s
+volexp21 2012: train 4699 rows, test 250, top feature IWM:VIX/cc21_rank (0.268), 395s
+volexp21 2013: train 4951 rows, test 252, top feature IWM:VIX/cc21_rank (0.246), 399s
+volexp21 2014: train 5200 rows, test 252, top feature IWM:VIX/cc21_rank (0.272), 404s
+volexp21 2015: train 5452 rows, test 252, top feature IWM:VIX/cc21_rank (0.276), 409s
+volexp21 2016: train 5704 rows, test 252, top feature SPY:VIX/cc21 (0.294), 415s
+volexp21 2017: train 5957 rows, test 251, top feature SPY:VIX/cc21 (0.323), 421s
+volexp21 2018: train 6209 rows, test 251, top feature SPY:VIX/cc21 (0.314), 426s
+volexp21 2019: train 6460 rows, test 252, top feature SPY:VIX/cc21 (0.313), 432s
+volexp21 2020: train 6710 rows, test 253, top feature SPY:VIX/cc21 (0.315), 439s
+volexp21 2021: train 6816 rows, test 252, top feature SPY:VIX/cc21 (0.316), 445s
+volexp21 2022: train 7068 rows, test 251, top feature SPY:VIX/cc21 (0.301), 452s
+volexp21 2023: train 7320 rows, test 250, top feature SPY:VIX/cc21 (0.301), 459s
+volexp21 2024: train 7571 rows, test 252, top feature SPY:VIX/cc21 (0.306), 467s
+volexp21 2025: train 7821 rows, test 250, top feature SPY:VIX/cc21 (0.308), 474s
+volexp21 2026: train 8071 rows, test 192, top feature SPY:VIX/cc21 (0.273), 482s
+
+=== volexp21 out-of-sample ===
+    era    n  base   auc  brier  brier_base  top_decile_real  bottom_decile_real  top_decile_pred  bottom_decile_pred
+2005-12 2013 0.142 0.605 0.1326      0.1215            0.208               0.020            0.477               0.001
+2013-19 1762 0.172 0.762 0.1384      0.1424            0.401               0.034            0.719               0.002
+2020-26 1532 0.140 0.779 0.0937      0.1202            0.610               0.071            0.523               0.003
+    all 5307 0.151 0.708 0.1233      0.1283            0.433               0.055            0.587               0.002
+calibration deciles (all OOS):
+    pred   real    n
+0  0.002  0.055  531
+1  0.004  0.058  531
+2  0.009  0.062  530
+3  0.017  0.094  531
+4  0.032  0.104  531
+5  0.059  0.143  530
+6  0.097  0.183  531
+7  0.159  0.179  530
+8  0.282  0.200  531
+9  0.587  0.433  531
+most-selected features across windows:
+SPY:pk21_cc21_rank         22
+SPY:VIX/cc21               22
+SPY:VIX_prem_chg21_rank    22
+SPY:pk21_cc21              22
+SPY:VIX/cc21_rank          22
+SPY:VIX/pk21               21
+SPY:cc21                   21
+XLK:pk21_cc21              20
+XLU:relrv21                20
+SPY:cc21_63                20
+XLP:cc21_63                20
+SPY:cc21_63_rank           20
+XLK:pk21_cc21_rank         19
+QQQ:pk21_cc21              19
+XLK:cc21_63                19
+VIX:roc10_rank             19
+XLI:pk21_cc21_rank         19
+SPY:cc21_roc21_rank        18
+SPY:VIX/pk21_rank          18
+QQQ:cc21_63_rank           18
+IWM:cc21_63                18
+IWM:VIX/cc21               18
+QQQ:pk21_cc21_rank         18
+XLP:cc21_63_rank           18
+SKEW/VIX:roc10_rank        18
+ year   n  base   auc  brier  brier_base
+ 2005 252 0.111 0.757 0.0959      0.0992
+ 2006 251 0.060 0.520 0.0770      0.0604
+ 2007 251 0.279 0.740 0.2611      0.2251
+ 2008 253 0.198 0.534 0.1937      0.1631
+ 2009 252 0.020 0.715 0.0679      0.0328
+ 2010 252 0.194 0.829 0.1580      0.1606
+ 2011 252 0.198 0.790 0.1359      0.1632
+ 2012 250 0.072 0.800 0.0705      0.0713
+ 2013 252 0.159 0.820 0.1236      0.1341
+ 2014 252 0.282 0.835 0.1818      0.2236
+ 2015 252 0.123 0.686 0.1087      0.1081
+ 2016 252 0.163 0.812 0.1058      0.1367
+ 2017 251 0.092 0.901 0.2091      0.0859
+ 2018 251 0.223 0.834 0.1106      0.1803
+ 2019 252 0.163 0.798 0.1295      0.1367
+ 2020 106 0.226 0.692 0.1754      0.1819
+ 2021 252 0.179 0.959 0.0795      0.1478
+ 2022 251 0.084 0.836 0.0673      0.0804
+ 2023 250 0.020 0.955 0.0245      0.0353
+ 2024 252 0.155 0.869 0.1000      0.1310
+ 2025 250 0.224 0.674 0.1678      0.1809
+ 2026 171 0.140 0.918 0.0865      0.1207
+
+riskoff21: permutation importance (AUC drop) on 2024-2026 test, final-window model
+XHB:dd252            0.0166
+XSD:rel63_rank       0.0152
+MOVE:lvl_rank1260    0.0129
+XPH:relrv21          0.0128
+VXN:lvl_rank1260     0.0110
+VXN:lvl_rank504      0.0081
+SPY:cc63             0.0063
+XLB:cc63             0.0059
+XLY:gk10             0.0057
+XLK:cc21_rank        0.0053
+KIE:pk10             0.0048
+SPY:dd252            0.0047
+SHY:gk21             0.0044
+QQQ:cc21             0.0041
+XRT:dd63             0.0034
+KCE:gk21             0.0033
+XLI:cc63             0.0032
+XLI:cc21             0.0032
+XLY:gk21             0.0031
+KIE:cc10             0.0028
+
+riskoff63: permutation importance (AUC drop) on 2024-2026 test, final-window model
+SPY:pk21             0.0375
+XLV:rel63_rank       0.0368
+XPH:relrv21          0.0336
+XRT:roc63            0.0327
+XLI:cc63_rank        0.0268
+XLK:cc126_rank       0.0213
+XSD:roc63_rank       0.0208
+MOVE:lvl_rank1260    0.0203
+XLK:cc10_rank        0.0184
+XLK:cc63_rank        0.0170
+QQQ:pk21_rank        0.0151
+KCE:gk10             0.0140
+SHY:pk21             0.0112
+XLY:gk21             0.0099
+XLY:cc21             0.0078
+XHB:dd252            0.0067
+XRT:dd63             0.0051
+XME:pk21             0.0045
+XME:pk10             0.0043
+XSD:cc63_rank        0.0042
+
+riskon21: permutation importance (AUC drop) on 2024-2026 test, final-window model
+SPY:dd63             0.0574
+XLV:dd252            0.0301
+XLV:dd63             0.0237
+IWM:cc21             0.0196
+IWM:dd252            0.0179
+KCE:dd63             0.0142
+SPY:cc126            0.0134
+SPY:cc10             0.0133
+XLI:dd252            0.0129
+VIX:lvl_rank1260     0.0121
+XLI:dd63             0.0117
+XLB:dd252            0.0110
+XLV:gk21             0.0104
+SPY:pk21             0.0099
+SPY:gk5              0.0091
+XLP:dd63             0.0078
+SPY:gk10             0.0073
+XLY:dd63             0.0054
+SPY:pk5              0.0050
+SKEW/VIX:lvl_rank    0.0049
+
+volexp21: permutation importance (AUC drop) on 2024-2026 test, final-window model
+SPY:VIX/cc21           0.0626
+SPY:pk21_cc21          0.0210
+KCE:cc126              0.0185
+XOP:relrv21            0.0117
+XES:cc126              0.0114
+XPH:cc126              0.0091
+XLU:relrv21            0.0090
+IWM:VIX/pk21_rank      0.0060
+SPY:cc21_roc21_rank    0.0050
+SPY:pk21_cc21_rank     0.0049
+SPY:cc21_roc21         0.0044
+KRE:cc21_63            0.0039
+KRE:pk21_cc21          0.0033
+HYG:rel21              0.0032
+XPH:cc21_rank          0.0031
+XLP:cc21_roc21         0.0031
+XLI:pk21_cc21_rank     0.0024
+SPY:cc21_rank          0.0024
+XPH:pk21_cc21_rank     0.0024
+XLP:cc21_rank          0.0024
+done 537s
