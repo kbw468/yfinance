@@ -1,43 +1,43 @@
 === per-ETF own-feature screen: era-consistent rank IC with the ETF's own 21d drawdown depth (negative = high value precedes deeper drawdown) and 21d return ===
         eras  n_consistent_|ic|>=0.05 deepest_dd_feature     ic      safest_feature  ic_safe    best_ret_feature  ic_ret
 ticker                                                                                                                  
-QQQ        3                        6         range_rank -0.113          signedvol5    0.071   relrv21_roc5_rank  -0.030
-TLT        3                        2         range_rank -0.073                dd63    0.030    amihud_roc5_rank   0.037
+QQQ        3                        6         range_rank -0.113          signedvol5    0.071   relrv21_roc5_rank  -0.031
+TLT        3                        2         range_rank -0.073                dd63    0.030    amihud_roc5_rank   0.038
 IEF        3                        0         range_rank -0.039               dd252    0.000     volofvol21_rank  -0.040
-HYG        3                        9          pk21_rank -0.187               dd252    0.180                dd63  -0.094
+HYG        3                        9          pk21_rank -0.187               dd252    0.180                dd63  -0.093
 IWM        3                        1      amihud21_rank -0.066     volofvol21_rank    0.040               dd252  -0.073
 GLD        3                        1         roc21_rank -0.018               dd252    0.063          vroc5_rank   0.021
 SPY        3                        3         range_rank -0.087                 nr5    0.054         signedvol21  -0.099
 XLY        3                        1         range_rank -0.058  volvol21_roc5_rank    0.034               dd252  -0.068
 XLP        3                        1         rel63_rank -0.053       volvol21_rank    0.045         signedvol21  -0.136
-XLE        3                        0          cc21_rank -0.016      pk21_cc21_rank    0.017          roc63_rank  -0.052
+XLE        3                        0          cc21_rank -0.015      pk21_cc21_rank    0.017          roc63_rank  -0.052
 XLF        3                        2         range_rank -0.051     volofvol21_rank    0.055               dd252  -0.064
 XLV        3                        1         rel63_rank -0.073         signedvol21    0.040          roc63_rank  -0.117
 XLI        3                        1        cc5_21_rank -0.000           roc5_rank    0.054        cc21_63_rank   0.071
 XLB        3                        0  relrv21_roc5_rank -0.019        cc21_63_rank    0.023               dd252  -0.106
-XLRE       2                        2               clv5 -0.030   compress5_63_rank    0.073                dd63  -0.145
+XLRE       2                        2               clv5 -0.029   compress5_63_rank    0.073                dd63  -0.144
 RWR        3                        0               clv5 -0.024          roc63_rank    0.026                clv5  -0.089
-XAR        2                        0                nr5 -0.031         cc5_21_rank    0.043                dd63  -0.126
-KBE        3                        2  compress5_63_rank -0.024       amihud21_rank    0.095       amihud21_rank   0.134
-XBI        3                        3          cc21_rank -0.094               dd252    0.060     cc21_roc21_rank  -0.033
+XAR        2                        0                nr5 -0.031         cc5_21_rank    0.043                dd63  -0.124
+KBE        3                        2  compress5_63_rank -0.024       amihud21_rank    0.094       amihud21_rank   0.133
+XBI        3                        3          cc21_rank -0.094               dd252    0.060     cc21_roc21_rank  -0.034
 KCE        3                        6          pk21_rank -0.056          rel63_rank    0.128     volofvol21_rank   0.038
-XHE        3                        3       cc21_63_rank -0.067          rel21_rank    0.022                dd63  -0.118
+XHE        3                        3       cc21_63_rank -0.067          rel21_rank    0.022                dd63  -0.117
 XHS        2                        6    volofvol21_rank -0.065               dd252    0.077     volofvol21_rank  -0.071
 XHB        3                        3        vol_rank252 -0.058                 nr5    0.053     volofvol21_rank   0.043
 KIE        3                        0        vol_rank252 -0.039     volofvol21_rank    0.038               dd252  -0.060
-XME        3                        3          cc21_rank -0.065     volofvol21_rank    0.052          rel63_rank   0.092
+XME        3                        3          cc21_rank -0.065     volofvol21_rank    0.053          rel63_rank   0.092
 XES        3                        0     cc21_roc5_rank -0.022          roc21_rank    0.049       amihud21_rank   0.053
-XOP        3                        1        cc5_21_rank  0.000       volvol21_rank    0.094  volvol21_roc5_rank   0.022
-XPH        3                        1    cc21_roc21_rank -0.052          roc21_rank    0.016         pk5_21_rank   0.062
+XOP        3                        1        cc5_21_rank  0.000       volvol21_rank    0.095  volvol21_roc5_rank   0.022
+XPH        3                        1    cc21_roc21_rank -0.052          roc21_rank    0.016         pk5_21_rank   0.061
 KRE        3                        1     pk21_cc21_rank -0.067   relrv21_roc5_rank    0.034         signedvol21  -0.074
 XRT        3                        1         range_rank -0.002               dd252    0.063       amihud21_rank   0.063
 XSD        3                        0  compress5_63_rank -0.048                 nr5    0.038         vroc21_rank   0.055
-XSW        2                        4          pk21_rank -0.150          rel63_rank    0.066        gap5abs_rank   0.075
+XSW        2                        4          pk21_rank -0.150          rel63_rank    0.067        gap5abs_rank   0.075
 XTL        3                        0                nr5 -0.047          rel63_rank    0.029           pk21_rank   0.112
 XTN        3                        3  relrv21_roc5_rank -0.059          roc63_rank    0.055        gap5abs_rank   0.116
 XLK        3                        4         range_rank -0.108                 nr5    0.072          vol_rank63   0.022
-XLU        3                        0  relrv21_roc5_rank -0.029       volvol21_rank    0.010        cc21_63_rank   0.069
-BNO        3                        6       cc21_63_rank -0.118          roc21_rank    0.054      pk21_cc21_rank  -0.066
+XLU        3                        0  relrv21_roc5_rank -0.030       volvol21_rank    0.010        cc21_63_rank   0.069
+BNO        3                        6       cc21_63_rank -0.119          roc21_rank    0.054      pk21_cc21_rank  -0.066
 
 === the same own-feature across tickers: how often it is consistently risky (negative) or safe (positive) for the ETF's own drawdowns ===
                       tickers  share_negative(|ic|>=.05)  share_positive(|ic|>=.05)  median_ic
@@ -124,14 +124,14 @@ XAR          0.48         0.45         0.40         0.42         0.43         0.
 === median forward 10d return relative to SPY by XS:disp5_rank tercile (low <0.2, high >0.8) ===
 XS:disp5_rank   low   mid  high
 IEF           -0.67 -0.68 -0.60
-BNO           -0.01 -0.11 -0.51
+BNO           -0.01 -0.10 -0.51
 TLT           -0.63 -0.64 -0.47
-HYG           -0.43 -0.41 -0.45
+HYG           -0.43 -0.42 -0.45
 KBE           -0.28 -0.28 -0.45
 GLD           -0.29 -0.34 -0.39
-XES            0.08 -0.21 -0.37
+XES            0.08 -0.22 -0.37
 KRE           -0.31 -0.33 -0.35
-KCE           -0.10 -0.01 -0.29
+KCE           -0.10 -0.02 -0.29
 XLRE          -0.47 -0.27 -0.24
 KIE           -0.06 -0.05 -0.21
 XHB           -0.21 -0.29 -0.16
@@ -148,57 +148,57 @@ XHE            0.03 -0.03  0.00
 IWM            0.13  0.07  0.00
 XME           -0.12 -0.12  0.01
 XLE           -0.06 -0.10  0.03
-XTN           -0.10 -0.19  0.03
+XTN           -0.10 -0.20  0.03
 XHS            0.04 -0.00  0.06
 QQQ            0.08  0.14  0.08
-XLI            0.07  0.05  0.08
+XLI            0.07  0.04  0.08
 XLB           -0.14  0.07  0.10
 XOP            0.05 -0.30  0.15
 XLK            0.04  0.11  0.17
 XLU           -0.09 -0.01  0.27
 XAR            0.12  0.18  0.32
 XSW            0.13  0.12  0.34
-XSD            0.40  0.26  0.38
+XSD            0.40  0.27  0.38
 XBI           -0.28 -0.01  0.42
 
 === median forward 10d return relative to SPY by XS:avgcorr21_rank tercile (low <0.2, high >0.8) ===
 XS:avgcorr21_rank   low   mid  high
 IEF               -0.49 -0.65 -0.91
-TLT               -0.42 -0.65 -0.81
+TLT               -0.43 -0.65 -0.81
 BNO               -0.20  0.00 -0.75
 GLD               -0.48 -0.24 -0.50
 HYG               -0.37 -0.46 -0.46
 XHB               -0.03 -0.25 -0.39
-XOP               -0.22 -0.08 -0.29
+XOP               -0.23 -0.08 -0.29
 KBE               -0.36 -0.30 -0.28
 XTL               -0.11 -0.07 -0.25
 XLC                0.20 -0.03 -0.24
-XES               -0.34 -0.13 -0.20
+XES               -0.35 -0.13 -0.20
 XLP               -0.11 -0.18 -0.12
 XLE               -0.15 -0.04 -0.10
-KRE               -0.42 -0.37 -0.09
+KRE               -0.43 -0.37 -0.09
 XRT               -0.04 -0.09 -0.09
 XPH                0.22 -0.07 -0.08
 XLF                0.04 -0.10 -0.07
 QQQ                0.14  0.19 -0.06
 XHS                0.19 -0.04 -0.06
 XLV               -0.01 -0.07 -0.05
-XLK                0.12  0.14 -0.02
+XLK                0.13  0.14 -0.02
 KIE               -0.18 -0.07  0.03
 XLY               -0.01  0.05  0.05
 KCE               -0.19 -0.08  0.05
-XLRE              -0.41 -0.38  0.05
+XLRE              -0.42 -0.38  0.05
 XHE                0.02 -0.08  0.08
 XLU                0.13 -0.07  0.11
 IWM                0.02  0.07  0.14
 XLB               -0.17  0.06  0.18
 RWR               -0.02 -0.07  0.18
 XTN               -0.19 -0.14  0.19
-XBI                0.17 -0.16  0.23
+XBI                0.15 -0.16  0.23
 XLI               -0.04  0.01  0.37
 XSW                0.16  0.09  0.44
 XSD                0.18  0.34  0.48
-XAR               -0.15  0.27  0.51
+XAR               -0.16  0.27  0.51
 XME               -0.55 -0.20  0.69
 
 === median forward 10d return relative to SPY by XS:rv_breadth_rank tercile (low <0.2, high >0.8) ===
@@ -211,7 +211,7 @@ HYG                -0.35 -0.46 -0.47
 KBE                -0.06 -0.33 -0.45
 GLD                -0.24 -0.37 -0.39
 KRE                -0.20 -0.34 -0.37
-BNO                -0.28 -0.06 -0.32
+BNO                -0.28 -0.05 -0.32
 XLE                 0.18 -0.08 -0.27
 XTN                 0.13 -0.15 -0.27
 XOP                -0.12 -0.13 -0.24
@@ -219,20 +219,20 @@ XLRE               -0.37 -0.30 -0.21
 KIE                 0.01 -0.07 -0.17
 KCE                 0.13 -0.13 -0.16
 XHB                -0.24 -0.28 -0.15
-XRT                -0.08 -0.07 -0.06
+XRT                -0.08 -0.08 -0.06
 XPH                 0.01 -0.01 -0.06
 XLK                 0.10  0.21 -0.05
 XLF                 0.01 -0.13 -0.03
 XLV                -0.05 -0.09 -0.02
-XLP                -0.21 -0.23 -0.00
+XLP                -0.21 -0.24 -0.00
 XLU                -0.15 -0.03  0.04
 XLC                 0.17 -0.05  0.04
 XTL                -0.44 -0.04  0.07
 QQQ                -0.00  0.25  0.10
 XHS                -0.10  0.04  0.11
-IWM                -0.17  0.16  0.11
-XLB                -0.02 -0.02  0.12
-RWR                -0.10 -0.01  0.12
+IWM                -0.17  0.15  0.11
+XLB                -0.02 -0.03  0.12
+RWR                -0.10 -0.02  0.12
 XLY                -0.15  0.08  0.12
 XLI                 0.04  0.02  0.14
 XHE                 0.11 -0.14  0.14
@@ -244,7 +244,7 @@ XAR                 0.14  0.11  0.50
 === median forward 10d return relative to SPY by XS:vol_breadth_rank tercile (low <0.2, high >0.8) ===
 XS:vol_breadth_rank   low   mid  high
 TLT                 -0.37 -0.61 -0.83
-IEF                 -0.47 -0.65 -0.81
+IEF                 -0.47 -0.66 -0.81
 HYG                 -0.18 -0.43 -0.67
 GLD                 -0.41 -0.29 -0.40
 BNO                 -0.25 -0.06 -0.35
@@ -253,7 +253,7 @@ XES                 -0.39 -0.07 -0.29
 KRE                 -0.34 -0.34 -0.23
 KBE                 -0.41 -0.31 -0.22
 XLP                 -0.12 -0.20 -0.20
-KCE                  0.01 -0.06 -0.19
+KCE                  0.01 -0.07 -0.19
 XLE                 -0.11 -0.00 -0.19
 XLRE                -0.15 -0.39 -0.15
 KIE                 -0.07 -0.05 -0.14
@@ -268,7 +268,7 @@ XTL                 -0.18 -0.12 -0.01
 RWR                 -0.01 -0.01 -0.01
 XPH                  0.08 -0.07 -0.00
 XLY                  0.02  0.03  0.05
-XHB                 -0.62 -0.19  0.05
+XHB                 -0.62 -0.20  0.05
 XLI                  0.01  0.07  0.05
 XLK                  0.13  0.15  0.07
 XLB                 -0.02 -0.00  0.07
@@ -285,15 +285,15 @@ XBI                  0.20 -0.18  0.39
 XS:compress_median_rank   low   mid  high
 IEF                     -0.38 -0.75 -0.66
 TLT                     -0.39 -0.69 -0.54
-XES                     -0.43  0.00 -0.44
+XES                     -0.43 -0.00 -0.44
 KBE                     -0.48 -0.21 -0.43
 HYG                     -0.19 -0.50 -0.36
-XLE                     -0.07  0.02 -0.34
+XLE                     -0.07  0.01 -0.34
 KCE                      0.05 -0.02 -0.29
 BNO                     -0.27 -0.08 -0.29
 XHB                     -0.36 -0.20 -0.25
 GLD                     -0.17 -0.45 -0.23
-XHE                      0.47 -0.11 -0.19
+XHE                      0.47 -0.12 -0.19
 XLV                      0.03 -0.05 -0.15
 XLF                     -0.22 -0.03 -0.13
 KRE                     -0.61 -0.24 -0.13
@@ -317,7 +317,7 @@ XLB                     -0.18  0.01  0.17
 QQQ                      0.28  0.12  0.17
 XLU                     -0.01 -0.11  0.23
 XTL                     -0.11 -0.22  0.23
-XSD                      0.40  0.30  0.30
+XSD                      0.40  0.31  0.30
 XBI                      0.40 -0.28  0.60
 XAR                      0.09  0.10  0.73
-4s
+3s

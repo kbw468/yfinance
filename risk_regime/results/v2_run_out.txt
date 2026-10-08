@@ -5,10 +5,16 @@
 == labels
 == model2
 == decision
+== vvsig
+== lhll
+== fastleg
+== path2020
+== addbook
 == tickers
 == big
 == onset
 == snapshot
-wrote /home/user/yfinance/risk_regime/dashboard_v2.html 251 KB
-wrote /home/user/yfinance/risk_regime/results/VOL_TAPE_READING_v2.pdf 301 KB
-done: 2026-10-08 2026-10-07
+wrote /home/user/yfinance/risk_regime/dashboard_v2.html 293 KB
+wrote /home/user/yfinance/risk_regime/action.html | HOLD | Dial 54. Fast leg at the 49th percentile. Lower-highs/lower-lows probability at the 46th percentile; VIX 21-day rate of change at the 37th, VIX/VVIX at the 56th. Full size. REDUCE needs the lower-highs/lower-lows or fast reading at its 95th, or both VIX rates of change at their 90th.
+wrote /home/user/yfinance/risk_regime/results/VOL_TAPE_READING_v2.pdf 332 KB
+done: 2026-10-08 2026-10-08

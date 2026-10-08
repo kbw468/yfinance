@@ -1,17 +1,17 @@
-wf: X (8480, 4038), candidates exclude KRE, ranks ready in 8s
+wf: X (8481, 4038), candidates exclude KRE, ranks ready in 7s
 from                                               book  ann %  worst DD %  exits/yr  exposure
-2010                                   SPY buy and hold   13.4       -33.7       0.0      1.00
-2010 two legs (lower highs/lows OR VIX outrunning VVIX)   12.1       -15.8       3.5      0.83
-2010                                     fast leg alone   14.6       -25.0       5.1      0.93
-2010                            instruction: three legs   11.7       -16.1       6.2      0.79
-2016                                   SPY buy and hold   14.1       -33.7       0.0      1.00
+2010                                   SPY buy and hold   13.3       -33.7       0.0      1.00
+2010 two legs (lower highs/lows OR VIX outrunning VVIX)   11.9       -15.8       3.5      0.83
+2010                                     fast leg alone   14.4       -25.0       5.0      0.93
+2010                            instruction: three legs   11.4       -16.1       6.1      0.79
+2016                                   SPY buy and hold   14.0       -33.7       0.0      1.00
 2016 two legs (lower highs/lows OR VIX outrunning VVIX)   12.7       -15.8       3.6      0.82
-2016                                     fast leg alone   16.9       -25.0       5.9      0.92
-2016                            instruction: three legs   13.3       -15.5       6.7      0.78
-2023                                   SPY buy and hold   20.2       -18.8       0.0      1.00
-2023 two legs (lower highs/lows OR VIX outrunning VVIX)   16.1       -13.2       2.7      0.88
-2023                                     fast leg alone   22.0       -10.0       4.8      0.93
-2023                            instruction: three legs   17.9        -9.4       5.6      0.84
+2016                                     fast leg alone   16.6       -25.0       5.8      0.92
+2016                            instruction: three legs   13.2       -15.5       6.6      0.78
+2023                                   SPY buy and hold   20.1       -18.8       0.0      1.00
+2023 two legs (lower highs/lows OR VIX outrunning VVIX)   15.9       -13.2       2.7      0.88
+2023                                     fast leg alone   21.9       -10.0       4.8      0.93
+2023                            instruction: three legs   17.8        -9.4       5.6      0.84
 last fit: XLU:rel5_rank (+), XSD:rel5_rank (-), XSD:roc5_rank (-), XSD:roc5 (-), XSD:rel5 (-), XLU:rel5 (+), XLU:rel3_rank (+), XLB:cc10_roc5_rank (+), XSD:rel3_rank (-), XSD:rel3 (-), XSD:roc3_rank (-), XLY:amihud_roc5_rank (+), GLD:rel5_rank (+), SPY:cc10_roc5_rank (+), GLD:rel5 (+)
-today: {'P_fast': 0.1735, 'P_fast_pct': 0.435, 'q95': 0.3702, 'q80': 0.2748, 'live': False, 'since': None, 'instruction': 'HOLD', 'state_since': '2026-07-31'}
+today: {'P_fast': 0.1825, 'P_fast_pct': 0.488, 'q95': 0.37, 'q80': 0.2748, 'live': False, 'since': None, 'instruction': 'HOLD', 'state_since': '2026-07-31'}
 last spells: [{'from': '2025-04-14', 'to': '2025-04-17', 'spy_while_out': -2.4}, {'from': '2025-10-07', 'to': '2025-10-14', 'spy_while_out': -1.0}, {'from': '2026-02-09', 'to': '2026-02-09', 'spy_while_out': 0.0}, {'from': '2026-03-30', 'to': '2026-04-01', 'spy_while_out': 3.6}, {'from': '2026-06-05', 'to': '2026-06-11', 'spy_while_out': 0.0}, {'from': '2026-07-28', 'to': '2026-07-30', 'spy_while_out': 0.1}]

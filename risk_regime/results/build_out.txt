@@ -1,20 +1,20 @@
-VIX    n= 9261 first=1990-01-02 zeros=  0 min=    9.14 p1=   10.16 med=   17.58 p99=   46.71 max=   82.69 maxabs_dlog=0.77
-MOVE   n= 5911 first=2002-11-12 zeros=  0 min=   36.62 p1=   44.16 med=   80.20 p99=  188.29 max=  264.60 maxabs_dlog=0.37
-VXN    n= 6465 first=2001-01-23 zeros=  0 min=   10.31 p1=   12.51 med=   21.24 p99=   69.06 max=   82.49 maxabs_dlog=0.47
-VVIX   n= 4963 first=2007-01-03 zeros=  0 min=   59.74 p1=   66.38 med=   91.16 p99=  143.09 max=  207.59 maxabs_dlog=0.45
-TNX    n= 9228 first=1990-01-02 zeros=  0 min=    0.50 p1=    0.68 med=    4.18 p99=    8.64 max=    9.09 maxabs_dlog=0.40
-TYX    n= 9228 first=1990-01-02 zeros=  0 min=    0.94 p1=    1.42 med=    4.69 p99=    8.64 max=    9.18 maxabs_dlog=0.26
-GVZ    n= 4616 first=2008-06-03 zeros=  0 min=    8.88 p1=    9.79 med=   17.47 p99=   46.90 max=   64.53 maxabs_dlog=0.48
-OVX    n= 4884 first=2007-05-10 zeros=  0 min=   14.50 p1=   16.91 med=   35.58 p99=   98.81 max=  325.15 maxabs_dlog=0.86
-VIX1D  n=  868 first=2023-04-24 zeros=  0 min=    7.01 p1=    7.61 med=   12.66 p99=   34.52 max=   81.89 maxabs_dlog=1.24
-VIX9D  n= 3963 first=2011-01-04 zeros=  0 min=    7.10 p1=    8.34 med=   15.24 p99=   45.87 max=  106.66 maxabs_dlog=1.15
-VIX3M  n= 5089 first=2006-07-17 zeros=  0 min=   11.03 p1=   12.07 med=   19.53 p99=   50.94 max=   72.98 maxabs_dlog=0.50
-VIX6M  n= 4721 first=2008-01-02 zeros=  0 min=   13.75 p1=   14.49 med=   21.49 p99=   47.25 max=   61.47 maxabs_dlog=0.34
-SKEW   n= 9185 first=1990-01-02 zeros=  0 min=  101.23 p1=  107.35 med=  119.87 p99=  159.02 max=  183.12 maxabs_dlog=0.27
-FVX    n= 9228 first=1990-01-02 zeros=  0 min=    0.19 p1=    0.33 med=    3.75 p99=    8.49 max=    9.10 maxabs_dlog=0.38
-IRX    n= 9228 first=1990-01-02 zeros=  0 min=   -0.10 p1=    0.00 med=    2.82 p99=    7.71 max=    7.99 maxabs_dlog=4.01
+VIX    n= 9262 first=1990-01-02 zeros=  0 min=    9.14 p1=   10.16 med=   17.57 p99=   46.71 max=   82.69 maxabs_dlog=0.77
+MOVE   n= 5912 first=2002-11-12 zeros=  0 min=   36.62 p1=   44.16 med=   80.20 p99=  188.28 max=  264.60 maxabs_dlog=0.37
+VXN    n= 6466 first=2001-01-23 zeros=  0 min=   10.31 p1=   12.51 med=   21.24 p99=   69.06 max=   82.49 maxabs_dlog=0.47
+VVIX   n= 4964 first=2007-01-03 zeros=  0 min=   59.74 p1=   66.38 med=   91.16 p99=  143.08 max=  207.59 maxabs_dlog=0.45
+TNX    n= 9229 first=1990-01-02 zeros=  0 min=    0.50 p1=    0.68 med=    4.18 p99=    8.64 max=    9.09 maxabs_dlog=0.40
+TYX    n= 9229 first=1990-01-02 zeros=  0 min=    0.94 p1=    1.42 med=    4.69 p99=    8.64 max=    9.18 maxabs_dlog=0.26
+GVZ    n= 4617 first=2008-06-03 zeros=  0 min=    8.88 p1=    9.79 med=   17.48 p99=   46.90 max=   64.53 maxabs_dlog=0.48
+OVX    n= 4885 first=2007-05-10 zeros=  0 min=   14.50 p1=   16.91 med=   35.58 p99=   98.81 max=  325.15 maxabs_dlog=0.86
+VIX1D  n=  869 first=2023-04-24 zeros=  0 min=    7.01 p1=    7.61 med=   12.65 p99=   34.51 max=   81.89 maxabs_dlog=1.24
+VIX9D  n= 3964 first=2011-01-04 zeros=  0 min=    7.10 p1=    8.34 med=   15.24 p99=   45.86 max=  106.66 maxabs_dlog=1.15
+VIX3M  n= 5090 first=2006-07-17 zeros=  0 min=   11.03 p1=   12.07 med=   19.53 p99=   50.93 max=   72.98 maxabs_dlog=0.50
+VIX6M  n= 4722 first=2008-01-02 zeros=  0 min=   13.75 p1=   14.49 med=   21.49 p99=   47.25 max=   61.47 maxabs_dlog=0.34
+SKEW   n= 9186 first=1990-01-02 zeros=  0 min=  101.23 p1=  107.35 med=  119.87 p99=  159.02 max=  183.12 maxabs_dlog=0.27
+FVX    n= 9229 first=1990-01-02 zeros=  0 min=    0.19 p1=    0.33 med=    3.75 p99=    8.49 max=    9.10 maxabs_dlog=0.38
+IRX    n= 9229 first=1990-01-02 zeros=  0 min=   -0.10 p1=    0.00 med=    2.82 p99=    7.71 max=    7.99 maxabs_dlog=4.01
 
 MOVE gaps>7d: [('2013-03-25', 10)]
 SKEW gaps>7d: [('2000-10-02', 13)]
-(8480, 41) ['BNO', 'GLD', 'HYG', 'IEF', 'IWM', 'KBE', 'KCE', 'KIE', 'KRE', 'LQD', 'QQQ', 'RWR', 'SHY', 'SPY', 'TLT', 'VIX1Y', 'XAR', 'XBI', 'XES', 'XHB', 'XHE', 'XHS', 'XLB', 'XLC', 'XLE', 'XLF', 'XLI', 'XLK', 'XLP', 'XLRE', 'XLU', 'XLV', 'XLY', 'XME', 'XOP', 'XPH', 'XRT', 'XSD', 'XSW', 'XTL', 'XTN']
+(8481, 41) ['BNO', 'GLD', 'HYG', 'IEF', 'IWM', 'KBE', 'KCE', 'KIE', 'KRE', 'LQD', 'QQQ', 'RWR', 'SHY', 'SPY', 'TLT', 'VIX1Y', 'XAR', 'XBI', 'XES', 'XHB', 'XHE', 'XHS', 'XLB', 'XLC', 'XLE', 'XLF', 'XLI', 'XLK', 'XLP', 'XLRE', 'XLU', 'XLV', 'XLY', 'XME', 'XOP', 'XPH', 'XRT', 'XSD', 'XSW', 'XTL', 'XTN']
 universe check ok: 40 tickers (38 + LQD, SHY), 15 index series
