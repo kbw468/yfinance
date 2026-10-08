@@ -4,7 +4,7 @@ G=pd.read_pickle('G.pkl'); L=pd.read_pickle('L.pkl'); P=pd.read_pickle('P.pkl');
 OFF=pd.read_pickle('OFF.pkl'); ON=pd.read_pickle('ON.pkl')
 EX=(idx>=pd.Timestamp('2020-02-01'))&(idx<=pd.Timestamp('2020-07-31')); ok=L['ok21']&~EX
 def z(x,w=252): return (x-x.rolling(w).mean())/x.rolling(w).std()
-ld=lambda s: np.log(pd.read_csv(f'data/{s}.csv',index_col=0,parse_dates=True)['Close'].reindex(idx))
+ld=lambda s: np.log(pd.read_csv(f'data_ew/{s}.csv',index_col=0,parse_dates=True)['Close'].reindex(idx))
 PAIRS={'RSP/SPY':('RSP','SPY'),'QQQE/QQQ':('QQQE','QQQ'),'RSPT/XLK':('RSPT','XLK'),'RSPS/XLP':('RSPS','XLP'),'RSPH/XLV':('RSPH','XLV'),'RSPF/XLF':('RSPF','XLF'),'RSPD/XLY':('RSPD','XLY'),'RSPG/XLE':('RSPG','XLE'),'RSPU/XLU':('RSPU','XLU'),'RSPM/XLB':('RSPM','XLB'),'RSPN/XLI':('RSPN','XLI'),'RSPR/XLRE':('RSPR','XLRE'),'RSPC/XLC':('RSPC','XLC')}
 RAT={}; F={}
 for k,(a,b) in PAIRS.items():
