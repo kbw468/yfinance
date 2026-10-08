@@ -25,7 +25,8 @@ python select_barometer.py --apply                                            # 
    the live one by at least 0.01 AUC on both 5% and 8% odds since mid-2020). Every switch is reported.
 7. **Short status, with a rate-of-change call.** Status replies are three lines max: what changed, the
    barometer and tiers, and whether 10-session rate of change is setting up better or worse than the prior
-   run (VIX, VXN, VVIX, VXN/VIX, credit), in one phrase. Longer analysis only when asked.
+   run (VIX, VXN, VVIX, VXN/VIX, credit), in one phrase, with the 1/2/3-day moves of VIX, VXN, VVIX and
+   VXN/VIX alongside (the owner reads short horizons first). Longer analysis only when asked.
 8. **Presentation.** Deutan-safe blue/orange only, no red/green. Status lines lead with what changed,
    then the barometer reading, its band and its odds, then the tier flags and next-close triggers.
    No risk warnings, no narrative, no hedging language.

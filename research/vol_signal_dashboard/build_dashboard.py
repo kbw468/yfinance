@@ -425,6 +425,8 @@ def build(out_path, start):
             "comp": round(comp, 1), "ratio_25": round(ratio_hi * 0.75, 2), "ratio_40": round(ratio_hi * 0.60, 2),
         },
         "flags": {k: bool(tnow[k]) for k in t.columns},
+        "roc_short": {f"{w}d": {k: fnum((d[k].iloc[cur] / d[k].iloc[cur - w] - 1) * 100, 1) for k in ("spy", "vix", "vxn", "vvix", "nv")}
+                      for w in (1, 2, 3)},
         "baro": {k: v for k, v in baro.items() if k != "series"},
         "ladder": ladder, "record": rec, "history": hist, "series": series, "dd_eps": dd_eps,
     }
