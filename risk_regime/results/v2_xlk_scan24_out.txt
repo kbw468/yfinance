@@ -1,0 +1,29 @@
+scoring window 2024-01-01 to 2026-05-18 (the June event excluded); XLK base rate there: 5% decline within 21 sessions 0.29, 10% within 63 0.24
+1264 signals were lit between 19 May and 4 Jun 2026 and fired at least 6 times in the window
+expected by chance at p < 0.05: about 63; observed: 7; smallest false-discovery q: 1.00
+                  signal       tail  fires 2024-May26  XLK -5%/21 hits  hit rate  lift  p (binomial)  XLK -10%/63      first lit before the break  BH q
+     XBI:volofvol21_rank bottom 10%                 7                5      0.71  2.48        0.0243         0.43 2026-06-03 (XLK -1.0% off high)   1.0
+     SPY:volofvol21_rank bottom 10%                 7                5      0.71  2.48        0.0243         0.43 2026-05-21 (XLK -0.5% off high)   1.0
+        SKEW:accel5_rank    top 10%                17                9      0.53  1.83        0.0316         0.29  2026-05-28 (XLK 0.0% off high)   1.0
+           RWR:roc3_rank    top 10%                17                9      0.53  1.83        0.0316         0.29 2026-05-20 (XLK -1.3% off high)   1.0
+            XLE:pk5_rank    top 10%                10                6      0.60  2.08        0.0395         0.40 2026-05-20 (XLK -1.3% off high)   1.0
+  VIX1D/VIX9D:roc21_rank bottom 10%                15                8      0.53  1.85        0.0402         0.40  2026-06-02 (XLK 0.0% off high)   1.0
+      XTN:pk21_cc21_rank    top 10%                 8                5      0.62  2.17        0.0495         0.38 2026-05-19 (XLK -3.5% off high)   1.0
+           QQQ:rel5_rank    top 10%                13                7      0.54  1.87        0.0514         0.46  2026-05-26 (XLK 0.0% off high)   1.0
+        MOVE:accel5_rank    top 10%                21               10      0.48  1.65        0.0532         0.33 2026-05-19 (XLK -3.5% off high)   1.0
+          XLV:range_rank    top 10%                16                8      0.50  1.73        0.0605         0.38 2026-05-19 (XLK -3.5% off high)   1.0
+        XLY:cc10_21_rank    top 10%                16                8      0.50  1.73        0.0605         0.31  2026-05-28 (XLK 0.0% off high)   1.0
+          XHE:rel10_rank    top 10%                11                6      0.55  1.89        0.0660         0.27  2026-05-26 (XLK 0.0% off high)   1.0
+          BNO:range_rank    top 10%                11                6      0.55  1.89        0.0660         0.45 2026-05-20 (XLK -1.3% off high)   1.0
+           XPH:roc1_rank    top 10%                19                9      0.47  1.64        0.0676         0.32 2026-05-20 (XLK -1.3% off high)   1.0
+         TLT:vol_rank252 bottom 10%                14                7      0.50  1.73        0.0778         0.29  2026-06-02 (XLK 0.0% off high)   1.0
+   XHB:compress5_63_rank    top 10%                14                7      0.50  1.73        0.0778         0.43 2026-05-21 (XLK -0.5% off high)   1.0
+          XLV:vol_rank63 bottom 10%                14                7      0.50  1.73        0.0778         0.29  2026-05-26 (XLK 0.0% off high)   1.0
+           XME:roc1_rank    top 10%                17                8      0.47  1.63        0.0862         0.29 2026-05-20 (XLK -1.3% off high)   1.0
+           XHB:rel3_rank bottom 10%                20                9      0.45  1.56        0.0923         0.20 2026-05-19 (XLK -3.5% off high)   1.0
+          MOVE:roc5_rank bottom 10%                20                9      0.45  1.56        0.0923         0.35  2026-05-26 (XLK 0.0% off high)   1.0
+           XTL:rel1_rank bottom 10%                20                9      0.45  1.56        0.0923         0.30  2026-05-28 (XLK 0.0% off high)   1.0
+   VIX1D/VIX9D:roc3_rank    top 10%                20                9      0.45  1.56        0.0923         0.30  2026-05-22 (XLK 0.0% off high)   1.0
+           XLC:roc5_rank bottom 10%                12                6      0.50  1.73        0.1006         0.42 2026-06-03 (XLK -1.0% off high)   1.0
+         XPH:cc5_21_rank    top 10%                15                7      0.47  1.62        0.1106         0.27 2026-05-20 (XLK -1.3% off high)   1.0
+XPH:volofvol21_roc5_rank bottom 10%                15                7      0.47  1.62        0.1106         0.27 2026-05-19 (XLK -3.5% off high)   1.0
