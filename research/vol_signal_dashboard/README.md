@@ -23,13 +23,17 @@ python select_barometer.py --apply                                            # 
 6. **No silent model changes.** Scheduled refreshes never change the model. Only the monthly re-check
    may switch barometer inputs, and only when `select_barometer.py` says switch (a different set beats
    the live one by at least 0.01 AUC on both 5% and 8% odds since mid-2020). Every switch is reported.
-7. **Short status, with a rate-of-change call.** Status replies are three lines max: what changed, the
-   barometer and tiers, and whether 10-session rate of change is setting up better or worse than the prior
-   run (VIX, VXN, VVIX, VXN/VIX, credit), in one phrase, with the 1/2/3-day moves of VIX, VXN, VVIX and
-   VXN/VIX alongside (the owner reads short horizons first). Longer analysis only when asked.
-8. **Presentation.** Deutan-safe blue/orange only, no red/green. Status lines lead with what changed,
-   then the barometer reading, its band and its odds, then the tier flags and next-close triggers.
-   No risk warnings, no narrative, no hedging language.
+7. **Short status, led by the call.** Status replies are three lines max: (1) the call, BUY, HOLD or
+   SELL, and what flips it at the next close; (2) what changed, then the barometer reading and the
+   call's odds; (3) whether rate of change is setting up better or worse than the prior run, with the
+   1/2/3-day moves of VIX, VXN, VVIX and VXN/VIX first (the owner reads short horizons first), then the
+   10-session moves and credit. Longer analysis only when asked.
+8. **Presentation.** Deutan-safe blue/orange only, no red/green. No risk warnings, no narrative, no
+   hedging language.
+9. **One call: BUY, HOLD or SELL. No other labels.** SELL is a Working or High conviction print in the
+   last 10 sessions. Otherwise, with SPY within 1.5% of its high, it's HOLD at barometer 7+ and BUY at 6 or
+   lower. With SPY more than 1.5% off its high, it's BUY down to −5% and HOLD below. The barometer feeds
+   the call and is never the headline.
 
 ## Schedule (America/New_York, weekdays)
 

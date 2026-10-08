@@ -53,24 +53,23 @@ section { display: grid; gap: 14px; min-width: 0; }
 /* barometer */
 .baro { background: var(--surface); border: 1px solid var(--ring); border-radius: 8px; padding: 18px 20px; display: grid; grid-template-columns: minmax(150px, 210px) 1fr; gap: 18px 28px; align-items: center; }
 .baro .k { font-size: 12px; color: var(--muted); font-family: var(--font-data); letter-spacing: 0.04em; text-transform: uppercase; }
-.baro-num { font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
-.baro-num .of { font-size: 22px; font-weight: 500; color: var(--muted); margin-left: 4px; }
 .baro-band { font: 600 15px var(--font-body); margin-top: 6px; }
+.call-word { font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: 0.01em; }
+.call-word.buy { color: var(--blue); } .call-word.sell { color: var(--orange); }
+.calls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.calls .c { border: 1px solid var(--ring); border-radius: 6px; padding: 8px 10px; font: 12.5px var(--font-data); color: var(--fg2); display: grid; gap: 2px; }
+.calls .c .w { font: 700 15px var(--font-body); color: var(--fg); }
+.calls .c.buy .w { color: var(--blue); } .calls .c.sell .w { color: var(--orange); }
+.calls .c.cur { outline: 3px solid var(--fg); outline-offset: 1px; }
+.drv-k { font: 600 12.5px var(--font-data); color: var(--fg); padding: 2px 0; }
 .baro-right { display: grid; gap: 12px; min-width: 0; }
-.scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
-.scale .cell { height: 26px; border-radius: 3px; display: grid; place-items: center; font: 600 12px var(--font-data); color: var(--fg); position: relative; }
-.scale .cell.z1 { background: var(--blue); color: var(--surface); } .scale .cell.z2 { background: var(--blue-mid); }
-.scale .cell.z3 { background: var(--grid); } .scale .cell.z4 { background: var(--orange-mid); }
-.scale .cell.z5 { background: var(--orange); color: var(--surface); }
-.scale .cell.cur { outline: 3px solid var(--fg); outline-offset: 1px; z-index: 1; }
-.scale-labels { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; font: 11.5px var(--font-data); color: var(--muted); text-align: center; }
 .baro p { margin: 0; color: var(--fg2); max-width: 80ch; }
 .baro p b { color: var(--fg); }
 .drivers { display: flex; flex-wrap: wrap; gap: 6px 8px; }
 .drv { font: 12.5px var(--font-data); border: 1px solid var(--axis); border-radius: 4px; padding: 2px 8px; color: var(--fg2); }
 .drv.up { border-color: var(--orange); } .drv.dn { border-color: var(--blue); }
 .drv b { color: var(--fg); font-weight: 600; }
-@media (max-width: 640px) { .baro { grid-template-columns: 1fr; } .baro-num { font-size: 52px; } }
+@media (max-width: 640px) { .baro { grid-template-columns: 1fr; } .call-word { font-size: 52px; } .calls { grid-template-columns: 1fr; } }
 
 /* status chips */
 .chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(138px, 1fr)); gap: 10px; }
@@ -145,19 +144,20 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
 <header>
   <div class="eyebrow" id="asof"></div>
   <h1>Drawdown Signal Board</h1>
-  <p class="sub">SPY drawdown tiers built from VIX, VXN and VVIX rate of change, duration-hedged HYG, Cboe dispersion (DSPX), with the dollar (DXY) as a size flag. Tiers only arm while SPY closes within 1.5% of its 52-week high. In a drawdown, VVIX/VIX compression is the severity read.</p>
+  <p class="sub">One SPY call: BUY, HOLD or SELL, from VIX, VXN and VVIX rate of change, duration-hedged HYG, Cboe dispersion (DSPX) and the dollar (DXY). Rules and evidence below.</p>
 </header>
 
-<section aria-label="Barometer" class="baro" id="baro">
+<section aria-label="SPY call" class="baro" id="call">
   <div>
-    <div class="k">Drawdown barometer</div>
-    <div class="baro-num"><span id="baro-n">–</span><span class="of">/ 10</span></div>
-    <div class="baro-band" id="baro-band"></div>
+    <div class="k">SPY call</div>
+    <div class="call-word" id="call-word">–</div>
+    <div class="baro-band" id="call-since"></div>
   </div>
   <div class="baro-right">
-    <div class="scale" id="baro-scale" role="img" aria-label="Barometer scale from 1 to 10"></div>
-    <div class="scale-labels"><span>Low</span><span>Below avg</span><span>Average</span><span>Elevated</span><span>High</span></div>
-    <p id="baro-odds"></p>
+    <p id="call-why"></p>
+    <p id="call-flip"></p>
+    <div class="calls" id="call-cells"></div>
+    <p class="note" id="call-note"></p>
     <div class="drivers" id="baro-drivers"></div>
   </div>
 </section>
@@ -202,6 +202,12 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
   <div class="tbl"><table id="t-record"></table></div>
 </section>
 
+<section aria-label="Call record">
+  <h2>Call record</h2>
+  <p class="sub" id="call-sub"></p>
+  <div class="tbl"><table id="t-call"></table></div>
+</section>
+
 <section aria-label="Barometer calibration">
   <h2>Barometer calibration</h2>
   <p class="sub" id="cal-sub"></p>
@@ -242,24 +248,38 @@ asof.appendChild(h('span', null, `Built ${D.built_et}`));
 asof.appendChild(h('span', D.live ? 'live' : 'closed', D.live ? 'LIVE SESSION · confirms on close' : `CLOSE ${fd(D.last_bar)}`));
 asof.appendChild(h('span', null, `DSPX through ${fd(D.dspx_date)}`));
 
-// ---------- barometer ----------
-const BR = D.baro;
-const bn = document.getElementById('baro-n'), bb = document.getElementById('baro-band');
-const zone = v => v <= 2 ? 1 : v <= 4 ? 2 : v <= 6 ? 3 : v <= 8 ? 4 : 5;
-const scale = document.getElementById('baro-scale');
-for (let v = 1; v <= 10; v++) { const c = h('div', `cell z${zone(v)}${BR.reading === v ? ' cur' : ''}`, String(v)); scale.appendChild(c); }
-const odds = document.getElementById('baro-odds');
-if (BR.reading == null) {
-  bn.textContent = '–'; bb.textContent = 'Paused';
-  odds.textContent = `The barometer reads only while SPY is within 1.5% of its 52-week high (now ${sg(N.dd, 2)}%). Use the drawdown severity read.`;
+// ---------- call ----------
+const BR = D.baro, AC = D.action, L0 = D.ladder[0];
+const cw = document.getElementById('call-word');
+cw.textContent = AC.now || '–'; cw.className = 'call-word ' + (AC.now || '').toLowerCase();
+document.getElementById('call-since').textContent = AC.now ? `since ${fd(AC.since)}` : '';
+const nearHi = FL.gate, onDay = L0.today ? "today's" : `${fds(L0.date)}'s`;
+let why = '', flip = '';
+if (AC.now === 'SELL') {
+  why = `Sell print ${fd(AC.last_print)}. Stays SELL through ${fds(AC.sell_through)}; a new print extends it.`;
+} else if (nearHi) {
+  why = `${BR.reading >= AC.hold_min ? 'Drawdown odds high' : 'Drawdown odds low'}: barometer ${BR.reading == null ? '–' : BR.reading}/10. No sell print in ${AC.sell_hold} sessions.`;
+  const needCr = !(FL.credit || FL.d80);
+  flip = `SELL at ${onDay} close if VIX ≥ ${f(L0.vix_trig)} (now ${f(N.vix)}) or VXN ≥ ${f(L0.vxn_trig)} (now ${f(N.vxn)}), with VVIX ≤ ${f(L0.vvix_ceiling)} (now ${f(N.vvix)})` +
+    (needCr ? `, plus credit's next return below ${sg(L0.credit_cutoff, 2)}% or DSPX ≥ ${f(L0.dspx80)}` : '') + '.';
 } else {
-  bn.textContent = BR.reading; bb.textContent = BR.band.label;
-  bb.style.color = zone(BR.reading) >= 4 ? 'var(--orange)' : zone(BR.reading) <= 2 ? 'var(--blue)' : 'var(--fg)';
-  odds.replaceChildren(document.createTextNode(`Out of sample since ${fd(BR.oos_from)}, readings of ${BR.band.lo}–${BR.band.hi} were followed by a 5% SPY drop within 40 sessions `),
-    h('b', null, `${f(BR.band.p5, 1)}%`), document.createTextNode(' of the time and an 8% drop '), h('b', null, `${f(BR.band.p8, 1)}%`),
-    document.createTextNode(` (${BR.band.sessions} sessions). All near-high sessions: ${f(BR.base5, 1)}% / ${f(BR.base8, 1)}%.`));
+  why = `SPY ${sg(N.dd, 2)}% off its ${fd(N.hi_day)} high, ${N.dd > AC.buy_dip ? 'inside' : 'past'} the ${sg(AC.buy_dip, 0)}% line. No sell print in ${AC.sell_hold} sessions.`;
+  flip = N.dd > AC.buy_dip ? `HOLD on a close below ${f(N.hi52 * (1 + AC.buy_dip / 100))}.` : `BUY on a close above ${f(N.hi52 * (1 + AC.buy_dip / 100))}.`;
 }
+document.getElementById('call-why').textContent = why;
+document.getElementById('call-flip').textContent = flip;
+const CR = p => AC.record.filter(r => r.period === p);
+const cells = document.getElementById('call-cells');
+CR('post_covid').forEach(r => {
+  const c = h('div', `c ${r.action.toLowerCase()}${r.action === AC.now ? ' cur' : ''}`);
+  c.appendChild(h('span', 'w', r.action));
+  c.appendChild(h('span', null, `next 20d: ${sg(r.r20_med, 1)}% median, up ${f(r.r20_up, 0)}%`));
+  c.appendChild(h('span', null, `drop odds: 5% ${f(r.p5, 0)}%, 8% ${f(r.p8, 0)}%`));
+  cells.appendChild(c);
+});
+document.getElementById('call-note').textContent = `Since mid-2020, after each call: SPY's median return over the next 20 sessions and how often it was higher, and the odds of a 5% / 8% drop within 40 sessions.`;
 const drv = document.getElementById('baro-drivers');
+drv.appendChild(h('span', 'drv-k', BR.reading == null ? 'Barometer paused (SPY off its high)' : `Barometer ${BR.reading}/10`));
 BR.drivers.forEach(x => {
   const e = h('span', 'drv ' + (x.push > 2 ? 'up' : x.push < -2 ? 'dn' : ''));
   e.appendChild(document.createTextNode(`${x.name} `)); e.appendChild(h('b', null, x.pct == null ? '–' : ord(x.pct)));
@@ -342,6 +362,12 @@ const recRow = tier => {
 table('t-record', ['Tier', '2015→ per yr', '2015→ hit −5% / −8%', '2015→ caught 5%+ / 8%+', 'Post-COVID per yr', 'Post-COVID hit −5% / −8%', 'Post-COVID caught 5%+ / 8%+'],
   ['base', 'watch', 'working', 'high', 'working_size', 'working_nosize'].map(recRow), { hl: i => i === 2 || i === 3 });
 
+const c18 = CR('since_2018'), cpc = CR('post_covid');
+document.getElementById('call-sub').textContent = `Every session since ${fd(c18[0].from)} (out-of-sample barometer readings), by the call it carried.`;
+table('t-call', ['Call', `${c18[0].from.slice(0, 4)}→ sessions`, 'Next 20d median / up', '−5% / −8% within 40', 'Post-COVID sessions', 'Next 20d median / up', '−5% / −8% within 40'],
+  c18.map((r, i) => { const q = cpc[i]; return [r.action, r.sessions, `${sg(r.r20_med, 2)}% / ${f(r.r20_up, 0)}%`, `${f(r.p5, 1)}% / ${f(r.p8, 1)}%`,
+    q.sessions, `${sg(q.r20_med, 2)}% / ${f(q.r20_up, 0)}%`, `${f(q.p5, 1)}% / ${f(q.p8, 1)}%`]; }),
+  { hl: i => c18[i].action === AC.now });
 document.getElementById('cal-sub').textContent = `Each session since ${BR.oos_from ? fd(BR.oos_from) : '–'} is read against the near-high scores of earlier years only, so these are out-of-sample outcomes. The score is the average of the three input percentiles; the reading is its decile among past near-high sessions.`;
 table('t-cal', ['Reading', 'Band', 'Sessions', 'SPY −5% within 40', 'SPY −8% within 40', 'Median 40-session low'],
   BR.cal.map(c => [`${c.lo}–${c.hi}`, c.label, c.sessions, `${f(c.p5, 1)}%`, `${f(c.p8, 1)}%`, c.med40 == null ? '–' : `${sg(c.med40, 2)}%`]),
@@ -352,6 +378,7 @@ table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10
     `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.dxy_p1y == null ? '–' : ord(r.dxy_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
 
 table('t-rules', ['Tier', 'Rule'], [
+  ['Call', `SELL: a Working or High conviction print in the last ${AC.sell_hold} sessions. Otherwise, SPY within 1.5% of its high: HOLD at barometer ${AC.hold_min}+, BUY at ${AC.hold_min - 1} or lower. SPY more than 1.5% off its high: BUY down to ${sg(AC.buy_dip, 0)}%, HOLD below.`],
   ['Barometer', `Equal-weight average of ${BR.inputs.length} percentiles, each within its own trailing year: ${BR.inputs.join(', ')}. Inputs chosen ${BR.selected ? fd(BR.selected) : ''} by a walk-forward search over every 3–6 input combination of ten candidates, re-checked monthly. ${BR.evidence || ''} The 1–10 reading is the decile of today\'s score among past near-high sessions.`],
   ['Near-high gate', 'SPY closes within 1.5% of its 52-week closing high. All tiers below are evaluated only when this is armed.'],
   ['Watch', 'VIX up more than 10% over 10 sessions with VVIX up less than half as much, or the same test with VXN in place of VIX.'],
@@ -443,7 +470,7 @@ function setCursor(i) {
   });
   const tier = S.hi[cur] ? 'High conviction' : S.wk[cur] ? 'Working' : S.watch[cur] ? 'Watch' : S.gate[cur] ? 'Armed, no tier' : 'Gate paused';
   const items = [['', fd(S.dates[cur])], ['SPY', f(S.spy[cur])], ['off high', `${sg(S.dd[cur], 2)}%`], ['VIX 10d', `${sg(S.vix10[cur])}%`], ['VXN 10d', `${sg(S.vxn10[cur])}%`],
-    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['DXY pct', S.dxy_p1y[cur] == null ? '–' : f(S.dxy_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['barometer', S.baro[cur] == null ? '–' : f(S.baro[cur], 0)], ['tier', tier]];
+    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['DXY pct', S.dxy_p1y[cur] == null ? '–' : f(S.dxy_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['barometer', S.baro[cur] == null ? '–' : f(S.baro[cur], 0)], ['tier', tier], ['call', S.act[cur] || '–']];
   readout.replaceChildren(...items.map(([k, v]) => { const s = h('span', null, k ? k + ' ' : ''); s.appendChild(h('b', null, v)); return s; }));
 }
 function idxAt(cx) {

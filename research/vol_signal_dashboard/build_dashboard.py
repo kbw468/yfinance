@@ -309,6 +309,41 @@ def barometer(d, t, cfg, extras):
             "inputs": [CANDIDATES[k] for k in names], "selected": cfg.get("selected"), "evidence": cfg.get("evidence")}
 
 
+SELL_HOLD = 10       # a Working / High print keeps the call at SELL for 10 sessions
+HOLD_MIN = 7         # near the high: barometer 7+ is HOLD, 6 or lower is BUY
+BUY_DIP = -5.0       # off the high with no sell print: BUY down to -5%, HOLD below
+ACTIONS = ("BUY", "HOLD", "SELL")
+ACTION_STARTS = {"since_2018": None, "post_covid": "2020-07-01"}
+
+
+def actions(d, t, reading):
+    """BUY / HOLD / SELL for every session from the first out-of-sample barometer reading."""
+    sell = (t.working | t.high).astype(int).rolling(SELL_HOLD, min_periods=1).max().astype(bool)
+    a = pd.Series(None, index=d.index, dtype=object)
+    a[t.gate & (reading < HOLD_MIN)] = "BUY"
+    a[t.gate & (reading >= HOLD_MIN)] = "HOLD"
+    a[~t.gate & (d.dd > BUY_DIP)] = "BUY"
+    a[~t.gate & (d.dd <= BUY_DIP)] = "HOLD"
+    a[sell] = "SELL"
+    a[a.index < reading.first_valid_index()] = None
+    return a
+
+
+def action_record(d, a):
+    r20 = (d.spy.shift(-20) / d.spy - 1) * 100
+    out = []
+    for per, lo in ACTION_STARTS.items():
+        start = pd.Timestamp(lo) if lo else a.first_valid_index()
+        for k in ACTIONS:
+            m = (a == k) & d.f40.notna() & (d.index >= start)
+            x = r20[m]
+            out.append({"period": per, "from": start.strftime("%Y-%m-%d"), "action": k, "sessions": int(m.sum()),
+                        "r20_med": None if len(x) == 0 else round(float(x.median()), 2),
+                        "r20_up": None if len(x) == 0 else round(float((x > 0).mean() * 100), 0),
+                        "p5": rate(d.f40[m], -5), "p8": rate(d.f40[m], -8)})
+    return out
+
+
 def next_sessions(after, n):
     out, day = [], after
     while len(out) < n:
@@ -368,6 +403,23 @@ def build(out_path, start):
             item["dxy80"] = round(dspx_level_for_pct(d.dxy.iloc[b - 250:b + 1].dropna(), 80), 2)
         ladder.append(item)
 
+    # ---------- BUY / HOLD / SELL ----------
+    act = actions(d, t, baro["series"])
+    a_now = act.iloc[cur]
+    run_start = cur
+    while run_start > 0 and act.iloc[run_start - 1] == a_now:
+        run_start -= 1
+    prints = np.where((t.working | t.high).values[max(0, cur - SELL_HOLD + 1):cur + 1])[0]
+    last_print = idx[max(0, cur - SELL_HOLD + 1) + prints[-1]] if len(prints) else None
+    sell_through = None
+    if last_print is not None:
+        k = idx.get_loc(last_print) + SELL_HOLD - 1
+        sell_through = idx[k].date() if k < len(idx) else next_sessions(last_day, k - (len(idx) - 1))[-1]
+    action = {"now": a_now, "since": idx[run_start].strftime("%Y-%m-%d"),
+              "last_print": None if last_print is None else last_print.strftime("%Y-%m-%d"),
+              "sell_through": None if sell_through is None else sell_through.strftime("%Y-%m-%d"),
+              "record": action_record(d, act), "sell_hold": SELL_HOLD, "hold_min": HOLD_MIN, "buy_dip": BUY_DIP}
+
     # ---------- record + history ----------
     rec = record(d, t, eps)
     hist = []
@@ -396,6 +448,7 @@ def build(out_path, start):
         "spy": col(cs.spy), "dd": col(cs.dd), "vix10": col(cs.vix10, 1), "vxn10": col(cs.vxn10, 1), "vvix10": col(cs.vvix10, 1),
         "cred10": col(cs.cred10, 2), "dspx_p1y": col(cs.dspx_p1y, 0), "ratio": col(cs.ratio, 2),
         "dxy_p1y": col(cs.dxy_p1y, 0), "baro": col(baro["series"].loc[cs.index], 0),
+        "act": [None if v is None else v for v in act.loc[cs.index]],
         "watch": [int(x) for x in ct.watch.fillna(False)], "gate": [int(x) for x in ct.gate.fillna(False)],
         "wk": [int(x) for x in ct.working.fillna(False)], "hi": [int(x) for x in ct.high.fillna(False)],
         "mw": [int(x in marks_w) for x in (i.strftime("%Y-%m-%d") for i in cs.index)],
@@ -428,6 +481,7 @@ def build(out_path, start):
         "roc_short": {f"{w}d": {k: fnum((d[k].iloc[cur] / d[k].iloc[cur - w] - 1) * 100, 1) for k in ("spy", "vix", "vxn", "vvix", "nv")}
                       for w in (1, 2, 3)},
         "baro": {k: v for k, v in baro.items() if k != "series"},
+        "action": action,
         "ladder": ladder, "record": rec, "history": hist, "series": series, "dd_eps": dd_eps,
     }
     with open(os.path.join(HERE, "template.html.in"), encoding="utf-8") as fh:
@@ -450,7 +504,7 @@ def main():
         with open(args.json, "w", encoding="utf-8") as fh:
             json.dump(payload, fh, indent=1)
     f = payload["flags"]
-    print(f"wrote {args.out}  bar={payload['last_bar']} live={payload['live']}  "
+    print(f"wrote {args.out}  bar={payload['last_bar']} live={payload['live']}  call={payload['action']['now']}  "
           f"gate={f['gate']} watch={f['watch']} working={f['working']} high={f['high']} lowrisk={f['lowrisk']}")
 
 
