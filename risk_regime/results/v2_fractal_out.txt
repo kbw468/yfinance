@@ -1,0 +1,18 @@
+SPY  done    14s  last: h2 0.420 width 0.299 alpha_abs 0.774 vr5 0.90 vr21 0.86
+QQQ  done    24s  last: h2 0.454 width 0.284 alpha_abs 0.773 vr5 0.93 vr21 0.89
+IWM  done    34s  last: h2 0.467 width 0.179 alpha_abs 0.622 vr5 0.77 vr21 0.86
+HYG  done    42s  last: h2 0.389 width 0.363 alpha_abs 0.830 vr5 0.80 vr21 0.78
+TLT  done    51s  last: h2 0.438 width 0.175 alpha_abs 0.532 vr5 0.88 vr21 0.64
+GLD  done    59s  last: h2 0.484 width 0.244 alpha_abs 0.812 vr5 0.91 vr21 0.78
+XLE  done    70s  last: h2 0.451 width 0.237 alpha_abs 0.587 vr5 1.00 vr21 1.03
+VIX  done    83s  last: h2 0.328 width 0.230 alpha_abs 0.620 vr5 0.63 vr21 0.36
+MF (8480, 176) 83s
+       MF:SPY:h2  MF:SPY:width  MF:SPY:alpha_abs
+count   7977.000      7977.000          7977.000
+mean       0.448         0.208             0.764
+std        0.043         0.085             0.124
+min        0.293        -0.071             0.457
+25%        0.420         0.150             0.681
+50%        0.445         0.206             0.739
+75%        0.472         0.267             0.823
+max        0.630         0.492             1.184
