@@ -13,6 +13,10 @@ Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
   Low-risk         VXN/VIX 10-session change < -5%
   Size flag        DXY in the top 20% of its trailing-year range: when a tier fires with
                    this on, the odds of an 8%+ drop have run about 3x higher (not a tier)
+Barometer (1-10): ridge logistic on the same inputs (VIX/VXN move, VVIX lag, VXN/VIX,
+  hedged credit, DSPX and DXY percentiles), scored as a decile of its own fitted values.
+  History is walk-forward (each year scored by a model fit on earlier years); the odds
+  shown for each band are what happened out of sample.
 In a drawdown, the VVIX/VIX ratio's compression from its close on the SPY
 52-week-high day is the severity read (25% by the first -5% close, 40% = 10%+).
 
@@ -181,6 +185,94 @@ def record(d, t, eps):
     return rows
 
 
+# ---------- barometer ----------
+BARO_COLS = ["vol10", "lagx", "nv10", "cred10", "dspx_p1y", "dxy_p1y"]
+BARO_LABELS = {"vol10": "VIX/VXN 10-session move", "lagx": "VVIX lag vs that move", "nv10": "VXN/VIX 10-session",
+               "cred10": "Credit (hedged HYG) 10-session", "dspx_p1y": "DSPX percentile", "dxy_p1y": "DXY percentile"}
+BARO_START = "2015-06-01"      # DSPX history
+BARO_RIDGE = 20.0
+BARO_BANDS = [(1, 2, "Low"), (3, 4, "Below average"), (5, 6, "Average"), (7, 8, "Elevated"), (9, 10, "High")]
+
+
+def fit_logit(X, y, ridge=BARO_RIDGE, iters=100):
+    X = np.column_stack([np.ones(len(X)), X])
+    w = np.zeros(X.shape[1])
+    pen = np.full(len(w), ridge)
+    pen[0] = 0.0
+    for _ in range(iters):
+        p = 1 / (1 + np.exp(-X @ w))
+        H = X.T @ (X * (p * (1 - p))[:, None]) + np.diag(pen)
+        step = np.linalg.solve(H, X.T @ (y - p) - pen * w)
+        w += step
+        if np.abs(step).max() < 1e-9:
+            break
+    return w
+
+
+def logit_score(w, X):
+    return 1 / (1 + np.exp(-(np.column_stack([np.ones(len(X)), X]) @ w)))
+
+
+def baro_model(train):
+    """Fit on near-high sessions; returns a scorer plus the decile cut points of its own fitted scores."""
+    X = train[BARO_COLS]
+    mu, sd = X.mean(), X.std().replace(0, 1)
+    w = fit_logit(((X - mu) / sd).values, (train.f40 <= -5).astype(float).values)
+    cuts = np.quantile(logit_score(w, ((X - mu) / sd).values), np.linspace(0.1, 0.9, 9))
+    return {"w": w, "mu": mu, "sd": sd, "cuts": cuts}
+
+
+def baro_read(m, rows):
+    z = ((rows[BARO_COLS] - m["mu"]) / m["sd"]).values
+    s = logit_score(m["w"], z)
+    return s, 1 + np.searchsorted(m["cuts"], s, side="right")
+
+
+def barometer(d, t):
+    d = d.copy()
+    d["vol10"] = np.maximum(d.vix10, d.vxn10)
+    d["lagx"] = d.vol10 - d.vvix10
+    ok = t.gate & d[BARO_COLS].notna().all(axis=1)
+    near = d[ok].loc[BARO_START:]
+    hist = near[near.f40.notna()]
+    reading = pd.Series(np.nan, index=d.index)
+    # walk-forward: each calendar year is scored by a model fit only on earlier years
+    for yr in range(2018, d.index[-1].year + 1):
+        train = hist[hist.index < pd.Timestamp(f"{yr}-01-01")]
+        test = near[(near.index >= pd.Timestamp(f"{yr}-01-01")) & (near.index < pd.Timestamp(f"{yr + 1}-01-01"))]
+        if len(test) == 0 or len(train) < 250:
+            continue
+        _, r = baro_read(baro_model(train), test)
+        reading.loc[test.index] = r
+    # calibration: realized outcomes by out-of-sample reading
+    cal = []
+    oos = hist.index.intersection(reading.dropna().index)
+    base5 = rate(hist.loc[oos, "f40"], -5)
+    base8 = rate(hist.loc[oos, "f40"], -8)
+    for lo, hi, lab in BARO_BANDS:
+        idx = [i for i in oos if lo <= reading[i] <= hi]
+        f = hist.loc[idx, "f40"]
+        cal.append({"lo": lo, "hi": hi, "label": lab, "sessions": len(idx), "p5": rate(f, -5), "p8": rate(f, -8),
+                    "med40": None if len(f) == 0 else round(float(f.median()), 2)})
+    # live reading from a model fit on all completed history
+    final = baro_model(hist)
+    cur = d.iloc[[-1]]
+    live = None
+    if bool(ok.iloc[-1]):
+        _, r = baro_read(final, cur)
+        live = int(r[0])
+        reading.iloc[-1] = live
+        contrib = (final["w"][1:] * ((cur[BARO_COLS] - final["mu"]) / final["sd"]).values[0])
+        drivers = sorted(({"name": BARO_LABELS[c], "value": round(float(cur[c].iloc[0]), 2), "push": round(float(v), 2)}
+                          for c, v in zip(BARO_COLS, contrib)), key=lambda x: -abs(x["push"]))
+    else:
+        drivers = []
+    band = next((b for b in cal if live is not None and b["lo"] <= live <= b["hi"]), None)
+    return {"reading": live, "band": band, "cal": cal, "drivers": drivers, "base5": base5, "base8": base8,
+            "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None,
+            "series": reading}
+
+
 def next_sessions(after, n):
     out, day = [], after
     while len(out) < n:
@@ -206,6 +298,7 @@ def build(out_path, start):
     d = build_frame(raw, dspx)
     t = tiers(d)
     eps = episodes(d)
+    baro = barometer(d, t)
     idx = d.index
     last_day = idx[-1].date()
     live = last_day == now_et.date() and dt.time(9, 30) <= now_et.time() < dt.time(16, 15)
@@ -265,7 +358,7 @@ def build(out_path, start):
         "dates": [x.strftime("%Y-%m-%d") for x in cs.index],
         "spy": col(cs.spy), "dd": col(cs.dd), "vix10": col(cs.vix10, 1), "vxn10": col(cs.vxn10, 1), "vvix10": col(cs.vvix10, 1),
         "cred10": col(cs.cred10, 2), "dspx_p1y": col(cs.dspx_p1y, 0), "ratio": col(cs.ratio, 2),
-        "dxy_p1y": col(cs.dxy_p1y, 0),
+        "dxy_p1y": col(cs.dxy_p1y, 0), "baro": col(baro["series"].loc[cs.index], 0),
         "watch": [int(x) for x in ct.watch.fillna(False)], "gate": [int(x) for x in ct.gate.fillna(False)],
         "wk": [int(x) for x in ct.working.fillna(False)], "hi": [int(x) for x in ct.high.fillna(False)],
         "mw": [int(x in marks_w) for x in (i.strftime("%Y-%m-%d") for i in cs.index)],
@@ -295,6 +388,7 @@ def build(out_path, start):
             "comp": round(comp, 1), "ratio_25": round(ratio_hi * 0.75, 2), "ratio_40": round(ratio_hi * 0.60, 2),
         },
         "flags": {k: bool(tnow[k]) for k in t.columns},
+        "baro": {k: v for k, v in baro.items() if k != "series"},
         "ladder": ladder, "record": rec, "history": hist, "series": series, "dd_eps": dd_eps,
     }
     with open(os.path.join(HERE, "template.html.in"), encoding="utf-8") as fh:

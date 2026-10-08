@@ -16,6 +16,8 @@
   --blue-soft: rgba(42, 120, 214, 0.10);
   --orange: #eb6834;
   --orange-soft: rgba(235, 104, 52, 0.10);
+  --blue-mid: rgba(42, 120, 214, 0.45);
+  --orange-mid: rgba(235, 104, 52, 0.45);
   --band: rgba(14, 17, 22, 0.06);
   --ring: rgba(14, 17, 22, 0.10);
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -26,12 +28,14 @@
     --bg: #0f1115; --surface: #16191e; --fg: #f2f4f7; --fg2: #b9c0ca; --muted: #8a929d; --grid: #262a31; --axis: #3a3f47;
     --blue: #3987e5; --blue-soft: rgba(57, 135, 229, 0.16); --orange: #d95926; --orange-soft: rgba(217, 89, 38, 0.16);
     --band: rgba(242, 244, 247, 0.07); --ring: rgba(255, 255, 255, 0.10); color-scheme: dark;
+    --blue-mid: rgba(57, 135, 229, 0.50); --orange-mid: rgba(217, 89, 38, 0.50);
   }
 }
 :root[data-theme="dark"] {
   --bg: #0f1115; --surface: #16191e; --fg: #f2f4f7; --fg2: #b9c0ca; --muted: #8a929d; --grid: #262a31; --axis: #3a3f47;
   --blue: #3987e5; --blue-soft: rgba(57, 135, 229, 0.16); --orange: #d95926; --orange-soft: rgba(217, 89, 38, 0.16);
   --band: rgba(242, 244, 247, 0.07); --ring: rgba(255, 255, 255, 0.10); color-scheme: dark;
+  --blue-mid: rgba(57, 135, 229, 0.50); --orange-mid: rgba(217, 89, 38, 0.50);
 }
 * { box-sizing: border-box; }
 body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.5; }
@@ -45,6 +49,28 @@ section { display: grid; gap: 14px; min-width: 0; }
 .note { font-size: 13px; color: var(--muted); margin: 0; max-width: 84ch; }
 .live { font-family: var(--font-data); font-size: 11.5px; letter-spacing: 0.04em; border: 1px solid var(--orange); color: var(--orange); padding: 1px 7px; border-radius: 3px; }
 .closed { font-family: var(--font-data); font-size: 11.5px; letter-spacing: 0.04em; border: 1px solid var(--axis); color: var(--fg2); padding: 1px 7px; border-radius: 3px; }
+
+/* barometer */
+.baro { background: var(--surface); border: 1px solid var(--ring); border-radius: 8px; padding: 18px 20px; display: grid; grid-template-columns: minmax(150px, 210px) 1fr; gap: 18px 28px; align-items: center; }
+.baro .k { font-size: 12px; color: var(--muted); font-family: var(--font-data); letter-spacing: 0.04em; text-transform: uppercase; }
+.baro-num { font-size: 64px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+.baro-num .of { font-size: 22px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+.baro-band { font: 600 15px var(--font-body); margin-top: 6px; }
+.baro-right { display: grid; gap: 12px; min-width: 0; }
+.scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; }
+.scale .cell { height: 26px; border-radius: 3px; display: grid; place-items: center; font: 600 12px var(--font-data); color: var(--fg); position: relative; }
+.scale .cell.z1 { background: var(--blue); color: var(--surface); } .scale .cell.z2 { background: var(--blue-mid); }
+.scale .cell.z3 { background: var(--grid); } .scale .cell.z4 { background: var(--orange-mid); }
+.scale .cell.z5 { background: var(--orange); color: var(--surface); }
+.scale .cell.cur { outline: 3px solid var(--fg); outline-offset: 1px; z-index: 1; }
+.scale-labels { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; font: 11.5px var(--font-data); color: var(--muted); text-align: center; }
+.baro p { margin: 0; color: var(--fg2); max-width: 80ch; }
+.baro p b { color: var(--fg); }
+.drivers { display: flex; flex-wrap: wrap; gap: 6px 8px; }
+.drv { font: 12.5px var(--font-data); border: 1px solid var(--axis); border-radius: 4px; padding: 2px 8px; color: var(--fg2); }
+.drv.up { border-color: var(--orange); } .drv.dn { border-color: var(--blue); }
+.drv b { color: var(--fg); font-weight: 600; }
+@media (max-width: 640px) { .baro { grid-template-columns: 1fr; } .baro-num { font-size: 52px; } }
 
 /* status chips */
 .chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(138px, 1fr)); gap: 10px; }
@@ -64,7 +90,7 @@ section { display: grid; gap: 14px; min-width: 0; }
 /* tables */
 .tbl { overflow-x: auto; border: 1px solid var(--ring); border-radius: 6px; background: var(--surface); }
 table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
-th, td { padding: 7px 12px; text-align: right; white-space: nowrap; }
+th, td { padding: 7px 10px; text-align: right; white-space: nowrap; }
 th { font: 500 11.5px var(--font-data); color: var(--muted); letter-spacing: 0.03em; text-transform: uppercase; border-bottom: 1px solid var(--axis); }
 td { font-family: var(--font-data); border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
 tr:last-child td { border-bottom: 0; }
@@ -122,6 +148,20 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
   <p class="sub">SPY drawdown tiers built from VIX, VXN and VVIX rate of change, duration-hedged HYG, Cboe dispersion (DSPX), with the dollar (DXY) as a size flag. Tiers only arm while SPY closes within 1.5% of its 52-week high. In a drawdown, VVIX/VIX compression is the severity read.</p>
 </header>
 
+<section aria-label="Barometer" class="baro" id="baro">
+  <div>
+    <div class="k">Drawdown barometer</div>
+    <div class="baro-num"><span id="baro-n">–</span><span class="of">/ 10</span></div>
+    <div class="baro-band" id="baro-band"></div>
+  </div>
+  <div class="baro-right">
+    <div class="scale" id="baro-scale" role="img" aria-label="Barometer scale from 1 to 10"></div>
+    <div class="scale-labels"><span>Low</span><span>Below avg</span><span>Average</span><span>Elevated</span><span>High</span></div>
+    <p id="baro-odds"></p>
+    <div class="drivers" id="baro-drivers"></div>
+  </div>
+</section>
+
 <section aria-label="Status">
   <div class="chips" id="chips"></div>
 </section>
@@ -162,6 +202,12 @@ svg text { font-family: var(--font-data); font-size: 11px; fill: var(--muted); }
   <div class="tbl"><table id="t-record"></table></div>
 </section>
 
+<section aria-label="Barometer calibration">
+  <h2>Barometer calibration</h2>
+  <p class="sub" id="cal-sub"></p>
+  <div class="tbl"><table id="t-cal"></table></div>
+</section>
+
 <section aria-label="Signal history">
   <h2>Working and high-conviction prints since mid-2020</h2>
   <div class="tbl"><table id="t-hist"></table></div>
@@ -195,6 +241,31 @@ const asof = document.getElementById('asof');
 asof.appendChild(h('span', null, `Built ${D.built_et}`));
 asof.appendChild(h('span', D.live ? 'live' : 'closed', D.live ? 'LIVE SESSION · confirms on close' : `CLOSE ${fd(D.last_bar)}`));
 asof.appendChild(h('span', null, `DSPX through ${fd(D.dspx_date)}`));
+
+// ---------- barometer ----------
+const BR = D.baro;
+const bn = document.getElementById('baro-n'), bb = document.getElementById('baro-band');
+const zone = v => v <= 2 ? 1 : v <= 4 ? 2 : v <= 6 ? 3 : v <= 8 ? 4 : 5;
+const scale = document.getElementById('baro-scale');
+for (let v = 1; v <= 10; v++) { const c = h('div', `cell z${zone(v)}${BR.reading === v ? ' cur' : ''}`, String(v)); scale.appendChild(c); }
+const odds = document.getElementById('baro-odds');
+if (BR.reading == null) {
+  bn.textContent = '–'; bb.textContent = 'Paused';
+  odds.textContent = `The barometer reads only while SPY is within 1.5% of its 52-week high (now ${sg(N.dd, 2)}%). Use the drawdown severity read.`;
+} else {
+  bn.textContent = BR.reading; bb.textContent = BR.band.label;
+  bb.style.color = zone(BR.reading) >= 4 ? 'var(--orange)' : zone(BR.reading) <= 2 ? 'var(--blue)' : 'var(--fg)';
+  odds.replaceChildren(document.createTextNode(`Out of sample since ${fd(BR.oos_from)}, readings of ${BR.band.lo}–${BR.band.hi} were followed by a 5% SPY drop within 40 sessions `),
+    h('b', null, `${f(BR.band.p5, 1)}%`), document.createTextNode(' of the time and an 8% drop '), h('b', null, `${f(BR.band.p8, 1)}%`),
+    document.createTextNode(`. All near-high sessions: ${f(BR.base5, 1)}% / ${f(BR.base8, 1)}%.`));
+}
+const drv = document.getElementById('baro-drivers');
+BR.drivers.slice(0, 4).forEach(x => {
+  const e = h('span', 'drv ' + (x.push > 0.05 ? 'up' : x.push < -0.05 ? 'dn' : ''));
+  e.appendChild(document.createTextNode(`${x.name} `)); e.appendChild(h('b', null, f(x.value, Math.abs(x.value) >= 10 ? 0 : 2)));
+  e.appendChild(document.createTextNode(x.push > 0.05 ? ' · raises' : x.push < -0.05 ? ' · lowers' : ' · neutral'));
+  drv.appendChild(e);
+});
 
 // ---------- chips ----------
 const chips = document.getElementById('chips');
@@ -240,10 +311,10 @@ table('t-comp', ['Component', 'Now', '10 sessions back', 'Change', 'Rule', 'Stat
   ['SPY vs 52-week high', f(N.spy), `high ${f(N.hi52)} (${fd(N.hi_day)})`, `${sg(N.dd, 2)}%`, 'within 1.5% of the high', st(FL.gate, 'calm')],
   ['VIX', f(N.vix), `${f(N.vix_anchor)} (${an})`, `${sg(N.vix10)}%`, '> +10%', st(FL.v)],
   ['VXN', f(N.vxn), `${f(N.vxn_anchor)} (${an})`, `${sg(N.vxn10)}%`, '> +10%', st(FL.vn)],
-  ['VVIX', f(N.vvix), `${f(N.vvix_anchor)} (${an})`, `${sg(N.vvix10)}%`, 'below half of the VIX or VXN move', st(FL.v || FL.vn)],
+  ['VVIX', f(N.vvix), `${f(N.vvix_anchor)} (${an})`, `${sg(N.vvix10)}%`, '< half the VIX or VXN move', st(FL.v || FL.vn)],
   ['Credit: HYG − 0.45 × IEF', '–', '–', `${sg(N.cred10, 2)}%`, '< 0', st(FL.credit)],
   ['DSPX percentile, 1 year', f(N.dspx), `as of ${fd(D.dspx_date)}`, N.dspx_p1y == null ? '–' : ord(N.dspx_p1y), '≥ 60th (high), ≥ 80th (working)', st(FL.d60)],
-  ['DXY in 1-year range (size flag)', f(N.dxy), `range ${f(N.dxy_lo)}–${f(N.dxy_hi)}`, N.dxy_p1y == null ? '–' : ord(N.dxy_p1y), 'top 20%: a tier print carries ~3x the 8%+ odds', st(FL.size)],
+  ['DXY in 1-year range (size flag)', f(N.dxy), `range ${f(N.dxy_lo)}–${f(N.dxy_hi)}`, N.dxy_p1y == null ? '–' : ord(N.dxy_p1y), 'top 20% = size flag', st(FL.size)],
   ['VXN/VIX', f(N.nv, 3), '–', `${sg(N.nv10)}%`, '< −5% = low-risk reading', st(FL.lowrisk, 'calm')],
   ['VVIX/VIX vs high day', f(N.ratio, 3), `${f(N.ratio_hi, 3)} (${fd(N.hi_day)})`, `${sg(N.comp)}%`, `−25% = ${f(N.ratio_25)} · −40% = ${f(N.ratio_40)}`, st(inDD && N.comp <= -25)],
 ], { left: [0, 4] });
@@ -271,12 +342,17 @@ const recRow = tier => {
 table('t-record', ['Tier', '2015→ per yr', '2015→ hit −5% / −8%', '2015→ caught 5%+ / 8%+', 'Post-COVID per yr', 'Post-COVID hit −5% / −8%', 'Post-COVID caught 5%+ / 8%+'],
   ['base', 'watch', 'working', 'high', 'working_size', 'working_nosize'].map(recRow), { hl: i => i === 2 || i === 3 });
 
+document.getElementById('cal-sub').textContent = `Each year from 2018 is scored by a model fit only on earlier years, so these are out-of-sample outcomes for near-high sessions since ${BR.oos_from ? fd(BR.oos_from) : '–'}. Today's reading uses a model fit on all completed history. Readings are deciles of the model's own fitted scores.`;
+table('t-cal', ['Reading', 'Band', 'Sessions', 'SPY −5% within 40', 'SPY −8% within 40', 'Median 40-session low'],
+  BR.cal.map(c => [`${c.lo}–${c.hi}`, c.label, c.sessions, `${f(c.p5, 1)}%`, `${f(c.p8, 1)}%`, c.med40 == null ? '–' : `${sg(c.med40, 2)}%`]),
+  { left: [1], hl: i => BR.band && BR.cal[i].lo === BR.band.lo });
 const HI = D.history.slice().reverse();
 table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10d', 'Credit 10d', 'DSPX pct', 'DXY pct', 'SPY low next 40'],
   HI.map(r => [fd(r.date), { tag: r.tier, cls: r.tier.includes('High') ? 'hi' : 'on' }, `${sg(r.dd, 2)}%`, `${sg(r.vix10)}%`, `${sg(r.vxn10)}%`, `${sg(r.vvix10)}%`,
     `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.dxy_p1y == null ? '–' : ord(r.dxy_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
 
 table('t-rules', ['Tier', 'Rule'], [
+  ['Barometer', 'Ridge logistic on the VIX/VXN 10-session move, VVIX lag, VXN/VIX, hedged credit, DSPX percentile and DXY percentile, fit on near-high sessions since mid-2015 to the odds of a 5% SPY drop within 40 sessions. The 1–10 reading is the decile of today\'s score among the model\'s fitted scores; the calibration table gives what each band was followed by out of sample.'],
   ['Near-high gate', 'SPY closes within 1.5% of its 52-week closing high. All tiers below are evaluated only when this is armed.'],
   ['Watch', 'VIX up more than 10% over 10 sessions with VVIX up less than half as much, or the same test with VXN in place of VIX.'],
   ['Working', 'Watch + (duration-hedged HYG down over 10 sessions, or DSPX at or above the 80th percentile of its trailing year).'],
@@ -296,6 +372,7 @@ const PANELS = [
   { title: 'DSPX percentile, trailing year', h: 120, s: [{ k: 'dspx_p1y', c: 'blue', d: 0 }], refs: [60, 80], fixed: [0, 100] },
   { title: 'DXY percentile, trailing year (size flag at 80)', h: 120, s: [{ k: 'dxy_p1y', c: 'blue', d: 0 }], refs: [80], fixed: [0, 100] },
   { title: 'VVIX/VIX', h: 130, s: [{ k: 'ratio', c: 'blue', d: 2 }] },
+  { title: 'Barometer, 1–10 (near-high sessions only)', h: 120, s: [{ k: 'baro', c: 'orange', d: 0 }], refs: [4.5, 8.5], fixed: [1, 10] },
 ];
 const ML = 48, MR = 50, MT = 20, XB = 22;
 let i0 = 0, cur = LAST, built = [];
@@ -316,7 +393,7 @@ function draw() {
     if (P.fixed) { lo = P.fixed[0]; hi = P.fixed[1]; } else { const pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad; }
     const y = v => MT + (1 - (v - lo) / (hi - lo)) * (P.h - MT - 6);
     BANDS.forEach(([a, b]) => { if (b < t0) return; const xa = x(Math.max(a, t0)), xb = Math.max(x(b), xa + 2); el('rect', { class: 'bandr', x: xa, y: MT - 4, width: xb - xa, height: P.h - MT + 4 }, svg); });
-    (P.fixed ? [0, 20, 40, 60, 80, 100] : nice(lo, hi)).forEach(v => { el('line', { class: 'gl', x1: ML, x2: ML + pw, y1: y(v), y2: y(v) }, svg); const t = el('text', { x: ML - 6, y: y(v) + 4, 'text-anchor': 'end' }, svg); t.textContent = Math.abs(v) >= 100 ? v.toFixed(0) : (Number.isInteger(v) ? v : v.toFixed(1)); });
+    (P.fixed ? (P.fixed[1] === 10 ? [1, 3, 5, 7, 9, 10] : [0, 20, 40, 60, 80, 100]) : nice(lo, hi)).forEach(v => { el('line', { class: 'gl', x1: ML, x2: ML + pw, y1: y(v), y2: y(v) }, svg); const t = el('text', { x: ML - 6, y: y(v) + 4, 'text-anchor': 'end' }, svg); t.textContent = Math.abs(v) >= 100 ? v.toFixed(0) : (Number.isInteger(v) ? v : v.toFixed(1)); });
     (P.refs || []).forEach(r => el('line', { class: 'ref', x1: ML, x2: ML + pw, y1: y(r), y2: y(r) }, svg));
     const ends = [];
     P.s.forEach(s => {
@@ -366,7 +443,7 @@ function setCursor(i) {
   });
   const tier = S.hi[cur] ? 'High conviction' : S.wk[cur] ? 'Working' : S.watch[cur] ? 'Watch' : S.gate[cur] ? 'Armed, no tier' : 'Gate paused';
   const items = [['', fd(S.dates[cur])], ['SPY', f(S.spy[cur])], ['off high', `${sg(S.dd[cur], 2)}%`], ['VIX 10d', `${sg(S.vix10[cur])}%`], ['VXN 10d', `${sg(S.vxn10[cur])}%`],
-    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['DXY pct', S.dxy_p1y[cur] == null ? '–' : f(S.dxy_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['tier', tier]];
+    ['VVIX 10d', `${sg(S.vvix10[cur])}%`], ['credit', `${sg(S.cred10[cur], 2)}%`], ['DSPX pct', S.dspx_p1y[cur] == null ? '–' : f(S.dspx_p1y[cur], 0)], ['DXY pct', S.dxy_p1y[cur] == null ? '–' : f(S.dxy_p1y[cur], 0)], ['ratio', f(S.ratio[cur])], ['barometer', S.baro[cur] == null ? '–' : f(S.baro[cur], 0)], ['tier', tier]];
   readout.replaceChildren(...items.map(([k, v]) => { const s = h('span', null, k ? k + ' ' : ''); s.appendChild(h('b', null, v)); return s; }));
 }
 function idxAt(cx) {
