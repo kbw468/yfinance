@@ -8,7 +8,7 @@ asleep at the peak; only the vol-expansion probability moves, within 4 to 15 ses
 off the high. P_vol alone failed as a stay-in rule because it fires 40 to 116 times and its OUT state ends
 as soon as vol has expanded. This script tests the obvious repair: a vol-expansion alert that becomes OUT
 only when price confirms it (SPY a given percent below its 63-session closing high while the alert is
-live), with re-entry on calmed probabilities or on a new 42-session closing high. Pure price rules with no
+live), with re-entry on calmed probabilities or on a new 42-session closing high. OUT conditions use >= as in decision.py. Pure price rules with no
 vol filter are in the grid as controls: if the vol complex does not beat a plain drawdown trigger, it adds
 nothing. Scored on the 15% events exactly as in big.py. The whole grid is printed. Writes ONSET.pkl.
 """
@@ -52,7 +52,7 @@ def score(S, name):
     row['today'] = 'IN' if S.iloc[-1] == 1 else 'OUT'; return row
 PV, PF, P63 = PRED['P_vol'], PRED['P_off'], P15['dd15_63']
 hi63 = spy.rolling(63, min_periods=63).max(); dd63 = spy / hi63 - 1; newhigh42 = spy >= spy.rolling(42, min_periods=42).max()
-off95 = PF > tq(PF, 0.95); off15_95 = P63 > tq(P63, 0.95); calm = (PF < tq(PF, 0.8)) & (PV < tq(PV, 0.7))
+off95 = PF >= tq(PF, 0.95); off15_95 = P63 >= tq(P63, 0.95); calm = (PF < tq(PF, 0.8)) & (PV < tq(PV, 0.7))
 INS = {'IN calm (P_off<q.8 & P_vol<q.7)': calm, 'IN new 42d high': newhigh42, 'IN calm or new 42d high': calm | newhigh42}
 ST = {}
 for x in (0.03, 0.05, 0.07, 0.10):
@@ -62,7 +62,7 @@ for x in (0.03, 0.05, 0.07, 0.10):
         ST[f'control: SPY {int(x*100)}% below 63d high or P_off>q.95 | {iname}'] = states(D | off95, ic)
     for qa in (0.85, 0.90):
         for W in (21, 42):
-            alert = (PV > tq(PV, qa)).astype(float).rolling(W, min_periods=1).max() > 0
+            alert = (PV >= tq(PV, qa)).astype(float).rolling(W, min_periods=1).max() > 0
             for iname, ic in INS.items():
                 ST[f'vol alert q{qa}/{W}s & SPY {int(x*100)}% below 63d high | {iname}'] = states(alert & D, ic)
                 ST[f'vol alert q{qa}/{W}s & SPY {int(x*100)}% below 63d high, or P_off>q.95 | {iname}'] = states((alert & D) | off95, ic)

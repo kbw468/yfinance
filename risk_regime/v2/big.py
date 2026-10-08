@@ -122,6 +122,7 @@ for k in PCT: print(f'\n{k}:'); print(EVT[['peak', 'trough', 'depth%', 'sessions
 print('\n=== decision rules scored on what matters: share of each 15% decline taken (1.0 = took it all, 0 = sidestepped it), spells not followed by any 10% decline, return given up outside the 15% events; 2006-2026, Feb-Jul 2020 excluded ===')
 EXM = ((idx >= EX0) & (idx <= EX1)); m = ~EXM & (idx >= pd.Timestamp('2006-01-01'))
 def tq(s, q, w=756): return s.rolling(w, min_periods=252).quantile(q).shift(1)
+# OUT conditions use >= (at or above the threshold), as decision.py does: tree outputs are discrete and the probability ties its own trailing quantile often
 def states(out_cond, in_cond):
     o = out_cond.fillna(False).values; i = in_cond.fillna(False).values; st = np.ones(len(o), dtype=int); s = 1
     for k in range(len(o)):
@@ -132,12 +133,12 @@ def states(out_cond, in_cond):
 ST = dict(DEC['states'])
 P63, P126, PF, PF63 = PRED15['dd15_63'], PRED15['dd15_126'], PRED['P_off'], PRED['P_off63']
 for qo, qi in ((0.95, 0.8), (0.90, 0.8), (0.90, 0.7), (0.95, 0.6), (0.98, 0.8), (0.85, 0.7)):
-    ST[f'G: OUT P15/63>q{qo}, IN P15/63<q{qi}'] = states(P63 > tq(P63, qo), P63 < tq(P63, qi))
-    ST[f'H: OUT P15/126>q{qo}, IN P15/126<q{qi}'] = states(P126 > tq(P126, qo), P126 < tq(P126, qi))
+    ST[f'G: OUT P15/63>q{qo}, IN P15/63<q{qi}'] = states(P63 >= tq(P63, qo), P63 < tq(P63, qi))
+    ST[f'H: OUT P15/126>q{qo}, IN P15/126<q{qi}'] = states(P126 >= tq(P126, qo), P126 < tq(P126, qi))
 for qo, qi in ((0.95, 0.8), (0.90, 0.8)):
-    ST[f'I: OUT P_off>q{qo} or P15/63>q{qo}, IN both<q{qi}'] = states((PF > tq(PF, qo)) | (P63 > tq(P63, qo)), (PF < tq(PF, qi)) & (P63 < tq(P63, qi)))
-    ST[f'J: OUT P_off>q{qo} and P15/63>q0.8, IN P_off<q{qi}'] = states((PF > tq(PF, qo)) & (P63 > tq(P63, 0.8)), PF < tq(PF, qi))
-    ST[f'K: OUT P15/63>q{qo} and P15/126>q0.8, IN both<q{qi}'] = states((P63 > tq(P63, qo)) & (P126 > tq(P126, 0.8)), (P63 < tq(P63, qi)) & (P126 < tq(P126, qi)))
+    ST[f'I: OUT P_off>q{qo} or P15/63>q{qo}, IN both<q{qi}'] = states((PF >= tq(PF, qo)) | (P63 >= tq(P63, qo)), (PF < tq(PF, qi)) & (P63 < tq(P63, qi)))
+    ST[f'J: OUT P_off>q{qo} and P15/63>q0.8, IN P_off<q{qi}'] = states((PF >= tq(PF, qo)) & (P63 >= tq(P63, 0.8)), PF < tq(PF, qi))
+    ST[f'K: OUT P15/63>q{qo} and P15/126>q0.8, IN both<q{qi}'] = states((P63 >= tq(P63, qo)) & (P126 >= tq(P126, 0.8)), (P63 < tq(P63, qi)) & (P126 < tq(P126, qi)))
 EVS = EV15[(EV15.peak >= '2006-01-01') & ~EV15.covid]; EV10S = EV10[(EV10.peak >= '2005-06-01')]
 in15 = pd.Series(False, index=idx)
 for _, e in EVS.iterrows(): in15.loc[e.peak:e.trough] = True

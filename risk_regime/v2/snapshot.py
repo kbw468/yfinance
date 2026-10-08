@@ -131,6 +131,8 @@ if os.path.exists('BIG.pkl') and os.path.exists('PRED15.pkl') and os.path.exists
         FT['onset'] = pairs; FT['onset_best'] = jsafe(ON.sort_values('ann', ascending=False).head(6)[['rule', 'ann', 'sharpe', 'maxDD', 'exposure', 'spells', 'spells w/o any 10% decline', 'mean taken', 'worst taken']].to_dict(orient='records'))
     out['fifteen'] = FT
     print('P(15% decline / 63 sessions) today', FT['dd15_63']['today'], f"(pct {FT['dd15_63']['trailing_pct']}, decile {FT['dd15_63']['today_decile']})", '| /126', FT['dd15_126']['today'], f"(pct {FT['dd15_126']['trailing_pct']})", '| timing', summ.get('P15/63 (new)'))
+if os.path.exists('EARLY.pkl'):
+    EA = pd.read_pickle('EARLY.pkl'); out['early'] = {'yearly': EA['yearly'], 'ties': EA['ties'], 'auc_early': EA['auc_early'], 'tables': {k: jsafe(v.to_dict(orient='records')) for k, v in EA['tables'].items()}}
 json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))
