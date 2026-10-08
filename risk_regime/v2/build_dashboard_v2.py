@@ -69,6 +69,12 @@ svg{display:block;width:100%;height:auto;max-width:100%} .legend{display:flex;fl
 <p class="note" id="earlynote"></p>
 </section>
 
+<section class="pb"><h2>The instruction, rates of change only: lower highs and lower lows</h2>
+<div class="tiles" id="roctiles"></div>
+<div class="tablewrap" style="margin-top:10px"><table id="rocbooks"></table></div>
+<p class="note" id="rocnote"></p>
+</section>
+
 <section class="pb"><h2>VIX outrunning VVIX: the second REDUCE leg</h2>
 <div class="tiles" id="vvtiles"></div>
 <div class="grid2" style="margin-top:10px"><div class="tablewrap"><table id="vvsplit"></table></div><div class="tablewrap"><table id="vvbooks"></table></div></div>
@@ -157,6 +163,11 @@ const R=D.rules; document.getElementById('rules').innerHTML=`<tr><th>rule</th><t
 document.getElementById('rulesnote').innerHTML=`Blue row: the reference rule shown above. Orange row: the rule that was pre-registered before the grid was run (vol expansion likely with no rebound setup) and failed, because an expected vol expansion is a low-drawdown state out of sample. The reference rule was chosen from the pre-specified grid after the grid was run, and its re-entry threshold was moved from the 60th to the 80th percentile after the slow version sat out 2009 and 2016; both versions are in the table. Drawdowns are in log units (-80 log = -55% price).`;
 const Y=D.yearly&&D.yearly.C95; if(Y){document.getElementById('yearly').innerHTML=`<tr><th>year</th>${Y.map(r=>`<th>${String(r.year).slice(0,4)}</th>`).join('')}</tr><tr><td>book %</td>${Y.map(r=>`<td class="num">${r['book %']}</td>`).join('')}</tr><tr><td>SPY %</td>${Y.map(r=>`<td class="num">${r['SPY %']}</td>`).join('')}</tr><tr><td>diff</td>${Y.map(r=>`<td class="num"><span class="z ${r.diff>=5?'cold':(r.diff<=-5?'hot':'')}">${f1(r.diff)}</span></td>`).join('')}</tr>`;}
 const S=D.spells&&D.spells.C95; if(S){document.getElementById('spells').innerHTML=S.map(s=>`${s.from} to ${s.to} · ${s.sessions}d · <span style="color:${s.spy_while_out>0?'var(--orange)':'var(--blue)'}">${f1(s.spy_while_out)}%</span>`).join('<br>');}
+// ---- rate-of-change-only instruction
+const RC=D.roc; if(RC){const t=RC.today;const pc3=x=>x==null?'':Math.round(x*100);
+ document.getElementById('roctiles').innerHTML=[['instruction',D.instruction||'',`since ${t.state_since}`],['P(lower highs and lower lows, next month)',p3(t.P_lhll),`${pc3(t.P_lhll_pct)}th percentile of three years; REDUCE at the 95th (${p3(t.q95)}), HOLD again below the 80th (${p3(t.q80)})`],['P(5% rally, next month)',p3(t.P_on),`${pc3(t.P_on_pct)}th percentile`],['P(vol x1.5, next month)',p3(t.P_vol),`${pc3(t.P_vol_pct)}th percentile`]].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');
+ document.getElementById('rocbooks').innerHTML=`<tr><th>window</th><th>SPY book, 2020 included</th><th>ann %</th><th>worst DD %</th><th>exits / yr</th><th>exposure</th></tr>`+RC.books.map(r=>`<tr class="${r.book.startsWith('instruction')?'hl':''}"><td>${r.window}</td><td>${esc(r.book)}</td><td class="num">${r['ann %']}</td><td class="num">${r['worst DD %']}</td><td class="num">${r['exits/yr']}</td><td class="num">${r.exposure}</td></tr>`).join('');
+ document.getElementById('rocnote').textContent=`Every input is a rate of change of price (1 to 63 days, alone or against SPY), of volume, or of volatility (realized-vol rates of change, every implied-vol index and their ratios, the VIX premium's change); no levels. The target is what the user asked to detect: over the next 21 sessions SPY makes a lower high and a lower low than over the last 21. Out of sample it ranks that at about 0.79 (0.80 since 2023), partly because a month that has already turned down tends to keep the lower high; against a 5% drawdown it ranks only 0.57. Its last fit uses 5-, 10- and 21-day rates of change of SPY, QQQ, XLK, XLI, XLF and IWM. It replaces the levels-based drawdown leg, which protected 2008 and is kept in the record; the VIX-outrunning-VVIX leg starts in 2009, so a ROC-only system has no tested record in a 2008-type bear.`;}
 // ---- VIX outrunning VVIX
 const VS=D.vvsig; if(VS){const t=VS.today;const pc2=x=>x==null?'':Math.round(x*100);
  document.getElementById('vvtiles').innerHTML=[['signal',t.live?'LIVE':'quiet',t.live?`since ${t.since}`:`last live ${t.last_spell?t.last_spell.from+' to '+t.last_spell.to:''}`],['VIX 21-day rate of change',`${t.vix_roc21_pct>0?'+':''}${t.vix_roc21_pct}%`,`${pc2(t.vix_roc21_rank)}th percentile of two years; fires at the 90th`],['VIX/VVIX 21-day rate of change',`${t.ratio_roc21_pct>0?'+':''}${t.ratio_roc21_pct}%`,`${pc2(t.ratio_roc21_rank)}th percentile; fires at the 90th`],['instruction today',D.instruction||'',`${VS.n_spells} live spells since 2009`]].map(([k,v,d])=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d">${d}</div></div>`).join('');

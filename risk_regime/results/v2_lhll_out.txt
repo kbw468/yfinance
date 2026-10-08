@@ -1,0 +1,22 @@
+wf: X (8480, 4038), candidates exclude KRE, ranks ready in 11s
+   window                                                       book  ann %  worst DD %  exits/yr  exposure
+2010-2026                                           SPY buy and hold   13.4       -33.7       0.0      1.00
+2010-2026   previous instruction (levels leg OR VIX outrunning VVIX)   12.1       -16.8       2.3      0.79
+2010-2026                           lower-highs/lower-lows leg alone    9.8       -36.3       3.5      0.93
+2010-2026 instruction: lower-highs/lower-lows OR VIX outrunning VVIX   12.1       -15.8       3.5      0.83
+2016-2026                                           SPY buy and hold   14.1       -33.7       0.0      1.00
+2016-2026   previous instruction (levels leg OR VIX outrunning VVIX)   12.9       -16.8       2.5      0.77
+2016-2026                           lower-highs/lower-lows leg alone   11.1       -36.3       3.4      0.92
+2016-2026 instruction: lower-highs/lower-lows OR VIX outrunning VVIX   12.7       -15.8       3.6      0.82
+2023-2026                                           SPY buy and hold   20.2       -18.8       0.0      1.00
+2023-2026   previous instruction (levels leg OR VIX outrunning VVIX)   16.2       -12.5       2.4      0.86
+2023-2026                           lower-highs/lower-lows leg alone   18.9       -13.1       2.4      0.96
+2023-2026 instruction: lower-highs/lower-lows OR VIX outrunning VVIX   16.1       -13.2       2.7      0.88
+
+last-window features:
+  P_lhll: SPY:roc10 (-), SPY:roc10_rank (-), SPY:roc21 (-), SPY:roc21_rank (-), XLK:roc10 (-), XLI:roc10 (-), SPY:roc5 (-), IWM:roc10 (-), XLK:roc10_rank (-), QQQ:roc10 (-), XLK:roc21 (-), SPY:roc5_rank (-), XLI:roc10_rank (-), XLF:roc10 (-), QQQ:roc10_rank (-)
+  P_on: XLF:roc63 (-), SPY:roc63_rank (-), XLI:roc63 (-), IWM:roc63 (-), SPY:roc21_rank (-), IEF:relrv21 (-), XLV:roc63 (-), GLD:relrv21 (-), XLB:roc63 (-), VIX:roc63 (+), XLE:roc63 (-), XLF:roc63_rank (-), XLV:roc63_rank (-), IWM:relrv21 (-), XLI:roc63_rank (-)
+  P_vol: SPY:VIX_prem_chg21_rank (+), SPY:cc21_roc21 (-), SPY:cc21_roc21_rank (-), XLU:relrv21 (+), VIX:roc10_rank (+), SKEW/VIX:roc10_rank (-), VIX:roc10 (+), VXN:roc10 (+), OVX/VIX:roc10_rank (-), VIX3M/VIX6M:roc10 (+), SKEW/VIX:roc10 (-), KCE:relrv21 (+), VIX3M:roc10_rank (+), XLE:relrv21 (+), VIX3M:roc10 (+)
+
+today: {'P_lhll': 0.0907, 'P_lhll_pct': 0.358, 'q95': 0.6281, 'q80': 0.4153, 'leg_live': False, 'leg_since': None, 'instruction': 'HOLD', 'P_on': 0.0814, 'P_on_pct': 0.419, 'P_vol': 0.1123, 'P_vol_pct': 0.426, 'dec': {'P_lhll': 2, 'P_on': 3, 'P_vol': 5}, 'state_since': '2026-07-31'}
+last spells of the lower-highs/lower-lows leg: [{'from': '2025-03-03', 'to': '2025-03-14', 'spy_while_out': -3.7}, {'from': '2025-04-03', 'to': '2025-04-10', 'spy_while_out': -2.3}, {'from': '2025-04-16', 'to': '2025-04-16', 'spy_while_out': 0.0}, {'from': '2026-02-05', 'to': '2026-02-05', 'spy_while_out': 0.0}, {'from': '2026-03-26', 'to': '2026-03-31', 'spy_while_out': 0.8}, {'from': '2026-07-28', 'to': '2026-07-30', 'spy_while_out': 0.1}]

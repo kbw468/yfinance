@@ -10,7 +10,7 @@ python3 -c "import yfinance, sklearn, scipy, playwright" 2>/dev/null || pip inst
 for s in fetch fetch_ew; do echo "== $s"; python3 "$S/$s.py" > "$R/${s}_out.txt" 2>&1 || { echo "FAILED: $s"; tail -20 "$R/${s}_out.txt"; exit 1; }; done
 # the v1 build step is kept only for its universe guard and the audit pickles the dashboard shows
 python3 "$S/build.py" > "$R/build_out.txt" 2>&1 || { echo "FAILED: build"; tail -20 "$R/build_out.txt"; exit 1; }
-for s in features fractal labels model2 decision vvsig path2020 addbook tickers big onset snapshot; do echo "== $s"; a=""; [ "$s" = "big" ] && a="0"; python3 -u "$V/$s.py" $a > "$R/v2_${s}_out.txt" 2>&1 || { echo "FAILED: $s"; tail -20 "$R/v2_${s}_out.txt"; exit 1; }; done
+for s in features fractal labels model2 decision vvsig lhll path2020 addbook tickers big onset snapshot; do echo "== $s"; a=""; [ "$s" = "big" ] && a="0"; python3 -u "$V/$s.py" $a > "$R/v2_${s}_out.txt" 2>&1 || { echo "FAILED: $s"; tail -20 "$R/v2_${s}_out.txt"; exit 1; }; done
 cp v2_data.json manifest.json "$R/"
 python3 "$V/build_dashboard_v2.py" "$W/v2_data.json" "$ROOT/risk_regime/dashboard_v2.html"
 python3 "$V/build_action.py" "$W/v2_data.json" "$ROOT/risk_regime/action.html"

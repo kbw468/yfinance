@@ -68,5 +68,26 @@ vt = D['vvsig']['today']; vt.update(live=bool(vv_now == 0), vix_roc21_rank=round
 if vv_now == 0 and vv_prev == 1: vt['since'] = str(today.date())
 D['asof'] = str(today.date()); D['preclose'] = f"{now.strftime('%H:%M')} ET, prices delayed about 15 minutes" + (f'; {VVIX_NOTE}' if VVIX_NOTE else '')
 spy = O['T']['SPY']['Close'].reindex(idx); D['preclose_spy'] = {'last': round(float(spy.iloc[-1]), 2), 'chg_pct': round(float((spy.iloc[-1] / spy.iloc[-2] - 1) * 100), 2)}
+# ---- rate-of-change-only models (lhll.py), which drive the word
+import os
+if os.path.exists(f'{W}/LHLL.pkl') and 'roc' in D:
+    LH = pd.read_pickle(f'{W}/LHLL.pkl'); RT = D['roc']['today']
+    sp_ = O['T']['SPY']['Close'].reindex(idx)
+    ph = sp_.rolling(21).max(); pl_ = sp_.rolling(21).min(); fh = sp_[::-1].rolling(21, min_periods=21).max()[::-1].shift(-1); fl = sp_[::-1].rolling(21, min_periods=21).min()[::-1].shift(-1)
+    lab_lhll = ((fh < ph) & (fl < pl_)).astype(float).where(fh.notna() & ph.notna()).reindex(L.index)
+    RNOW = {}
+    for p, y in (('P_lhll', lab_lhll), ('P_on', L['riskon21']), ('P_vol', L['volexp21'])):
+        feats, signs = LH['last'][p]; ok = (L['ok21'] & ~EX & y.notna() & (L.index < cut) & (L.index.year >= 1993)); rows = L.index[ok]
+        clf = HistGradientBoostingClassifier(monotonic_cst=list(signs), **PAR).fit(F.loc[rows, feats].to_numpy(np.float32), y[ok].to_numpy())
+        RNOW[p] = float(clf.predict_proba(F.loc[[today], feats].to_numpy(np.float32))[:, 1][0])
+        RNOW[p + '_check'] = (round(float(clf.predict_proba(F.loc[[prev], feats].to_numpy(np.float32))[:, 1][0]), 4), round(float(LH['pred'][p].iloc[-1]), 4))
+    hp = LH['pred']['P_lhll'].dropna().iloc[-756:]; lq95 = float(hp.quantile(0.95)); lq80 = float(hp.quantile(0.8))
+    leg_prev = int(LH['leg'].iloc[-1]); x = RNOW['P_lhll']; leg_now = 0 if (leg_prev == 1 and x >= lq95) else (1 if (leg_prev == 0 and x < lq80) else leg_prev)
+    rp = lambda p: round(float((LH['pred'][p].dropna().iloc[-755:] <= RNOW[p]).mean()), 3)
+    rd = lambda p: int(min(9, np.searchsorted(LH['deciles'][p]['p_hi'].to_numpy(), RNOW[p])))
+    RT.update(P_lhll=round(x, 4), P_lhll_pct=rp('P_lhll'), P_on=round(RNOW['P_on'], 4), P_on_pct=rp('P_on'), P_vol=round(RNOW['P_vol'], 4), P_vol_pct=rp('P_vol'), dec={p: rd(p) for p in ('P_lhll', 'P_on', 'P_vol')}, leg_live=bool(leg_now == 0))
+    if leg_now == 0 and leg_prev == 1: RT['leg_since'] = str(today.date())
+    RT['instruction'] = 'REDUCE' if (leg_now == 0 or vv_now == 0) else 'HOLD'; D['instruction'] = RT['instruction']
+    print(f"rate-of-change leg: P_lhll {x:.3f} pct {RT['P_lhll_pct']:.2f} (q95 {lq95:.3f}, q80 {lq80:.3f}) leg {leg_prev}->{leg_now} | instruction {RT['instruction']} | check (refit, production) yesterday: {RNOW['P_lhll_check']} {RNOW['P_on_check']} {RNOW['P_vol_check']}")
 json.dump(D, open('preclose.json', 'w'))
 print(f"pre-close {now.strftime('%Y-%m-%d %H:%M')} ET | bar {today.date()} | SPY {D['preclose_spy']['last']} ({D['preclose_spy']['chg_pct']:+.2f}%) | P_off {pf:.3f} pct {tpct('P_off'):.2f} (q95 {q95:.3f}, q80 {q80:.3f}) ref {ref_prev}->{ref_now} | VIX {vt['vix']} VVIX {vt['vvix']} V21 {vr:.2f} R21 {rr:.2f} vv {vv_prev}->{vv_now} | check (refit, production) yesterday: {P_NOW['P_off_check']} {P_NOW['P_on_check']} {P_NOW['P_vol_check']}")

@@ -139,6 +139,10 @@ if os.path.exists('ADDBOOK.pkl'):
 if os.path.exists('VVSIG.pkl'):
     VS = pd.read_pickle('VVSIG.pkl'); out['vvsig'] = {'today': jsafe(VS['today']), 'split': jsafe(VS['split'].to_dict(orient='records')), 'books': jsafe(VS['books'].to_dict(orient='records')), 'spells': VS['spells'][-12:], 'n_spells': len(VS['spells'])}
     out['instruction'] = VS['today']['instruction']
+if os.path.exists('LHLL.pkl'):
+    LH = pd.read_pickle('LHLL.pkl')
+    out['roc'] = {'today': jsafe(LH['today']), 'deciles': {k: jsafe(v.reset_index(drop=True).to_dict(orient='records')) for k, v in LH['deciles'].items()}, 'books': jsafe(LH['books'].to_dict(orient='records')), 'spells': LH['spells'][-12:], 'n_spells': len(LH['spells']), 'last': {k: [list(v[0]), list(v[1])] for k, v in LH['last'].items()}}
+    out['instruction'] = LH['today']['instruction']
 json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))

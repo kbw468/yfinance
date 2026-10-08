@@ -180,6 +180,29 @@ The 12 drops among the 27 come from 2008, 2011, 2014, 2015 (two), 2016, 2018 (th
 
 On the user's decision this became the second REDUCE leg on the action page: REDUCE when the reference rule is OUT or VIX is outrunning VVIX. The reference leg stays because the signal does not exist before 2009 and the reference rule's value is the 2008 kind of tape. Limits: the signal was found in this project's research and adopted after its record was seen, one of many cuts tried, so the split and the books are in-sample for that choice; the 90th-percentile thresholds and the median re-entry were picked from four re-entry variants (all four are in the research log); August 2024 is a miss (VVIX kept pace and SPY still fell 6%); it has been live 42 times since 2009, about two and a half a year.
 
+## 14. The instruction on rates of change only (`v2/roconly.py`, `v2/lhll.py`, `results/v2_roconly_out.txt`, `results/v2_lhll_out.txt`)
+
+By the user's requirement, the signal is built only on rates of change of price, volume and volatility. Candidates: 1,845 of the 4,038 features (price ROC at 1 to 63 days alone or against SPY, volume ROC, realized-vol ROC, ROC of every implied-vol index and their ratios, the VIX premium's change); every level, level rank, correlation and multifractal feature is out. Same pipeline as production.
+
+| target, rates of change only | AUC 2005-12 | 2013-19 | 2020-26 | all | 2023-26 |
+|---|---|---|---|---|---|
+| lower highs and lower lows over the next 21 sessions | 0.81 | 0.74 | 0.81 | 0.79 | 0.80 |
+| 5% drawdown within 21 (levels version: 0.64 all, 0.66 since 2023) | 0.46 | 0.59 | 0.70 | 0.56 | 0.66 |
+| 5% rally within 21 (levels version: 0.79) | 0.71 | 0.75 | 0.68 | 0.70 | 0.67 |
+| realized vol x1.5 within 21 (levels version: 0.75) | 0.58 | 0.78 | 0.82 | 0.71 | 0.75 |
+
+The lower-highs/lower-lows score is partly mechanical: a month that has already turned down tends to keep its lower high, and the model's inputs are SPY's, QQQ's, XLK's and the cyclicals' 5- to 21-day rates of change. Against a 5% drawdown the same probability ranks 0.57.
+
+Instruction since 8 October 2026: REDUCE when the lower-highs/lower-lows probability reaches its trailing 95th percentile (until it falls below the 80th, the reference rule's thresholds, not tuned) or when VIX outruns VVIX; HOLD otherwise.
+
+| SPY, 2020 included | 2010-26 ann / worst DD / exits a year | 2016-26 | 2023-26 |
+|---|---|---|---|
+| buy and hold | 13.4% / -33.7% / 0 | 14.1% / -33.7% / 0 | 20.2% / -18.8% / 0 |
+| previous instruction (levels leg OR VIX outrunning VVIX) | 12.1% / -16.8% / 2.3 | 12.9% / -16.8% / 2.5 | 16.2% / -12.5% / 2.4 |
+| rates of change only (lower highs and lower lows OR VIX outrunning VVIX) | 12.1% / -15.8% / 3.5 | 12.7% / -15.8% / 3.6 | 16.1% / -13.2% / 2.7 |
+
+The two instructions are equivalent on these windows. What the change gives up: the levels leg is the one that protected 2008 (section 8), and the VIX-outrunning-VVIX leg starts in 2009, so the rate-of-change-only instruction has no tested record in a 2008-type slow bear; the lower-highs/lower-lows leg alone took a -54% worst drawdown over 2006-26. The levels leg is kept in the record and can be restored as a leg with one change in `v2/build_action.py`.
+
 ## 12. The 15% question (`v2/big.py`, `v2/onset.py`, `results/v2_big_out.txt`, `results/v2_big_null_out.txt`, `results/v2_onset_out.txt`)
 
 The loss that matters is 15%, not 5%. Stage 8 rebuilt the target around it and scored everything above on it.

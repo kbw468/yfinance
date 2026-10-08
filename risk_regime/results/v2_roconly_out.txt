@@ -1,0 +1,86 @@
+wf: X (8480, 4038), candidates exclude KRE, ranks ready in 12s
+rate-of-change candidates: 1845 of 4038
+sample: ['VIX:roc1', 'TNX:roc63_rank', 'VIX9D:roc42', 'IRX:roc21', 'VVIX/VIX3M:roc10_rank', 'QQQ:roc63', 'IEF:rel10_rank', 'IWM:rel5', 'SPY:roc5_rank', 'XLY:roc63_rank', 'XLE:roc21', 'XLV:rel5_rank', 'XLB:rel3', 'RWR:roc5', 'KBE:rel5', 'KCE:roc3_rank', 'XHS:rel3_rank', 'KIE:roc5_rank', 'XES:roc3', 'XOP:relrv21_roc5_rank', 'XRT:vroc21_rank', 'XSW:cc10_roc5_rank', 'XLK:roc3_rank', 'BNO:roc1', 'SHY:rel1']
+P_off ROC-only (5% drawdown / 21): {'2005-12': 0.458, '2013-19': 0.586, '2020-26': 0.698, 'all': 0.56} 2023-26 0.662  (23s)
+   last-window features: KCE:roc63 (-), IWM:roc63 (-), XSD:roc63_rank (-), XPH:relrv21 (-), KCE:roc63_rank (-), XLV:rel63_rank (+), XSD:roc63 (-), IWM:relrv21 (-), XRT:roc63_rank (-), XSD:rel63_rank (-), XME:roc63_rank (-), XLP:rel63 (+), XLI:roc63 (-), KBE:roc63_rank (-), XLB:roc63 (-)
+P_lhll ROC-only (lower highs and lower lows / 21): {'2005-12': 0.812, '2013-19': 0.741, '2020-26': 0.806, 'all': 0.794} 2023-26 0.802  (45s)
+   last-window features: SPY:roc10 (-), SPY:roc10_rank (-), SPY:roc21 (-), SPY:roc21_rank (-), XLK:roc10 (-), XLI:roc10 (-), SPY:roc5 (-), IWM:roc10 (-), XLK:roc10_rank (-), QQQ:roc10 (-), XLK:roc21 (-), SPY:roc5_rank (-), XLI:roc10_rank (-), XLF:roc10 (-), QQQ:roc10_rank (-)
+P_on ROC-only (5% rally / 21): {'2005-12': 0.711, '2013-19': 0.753, '2020-26': 0.683, 'all': 0.702} 2023-26 0.673  (69s)
+   last-window features: XLF:roc63 (-), SPY:roc63_rank (-), XLI:roc63 (-), IWM:roc63 (-), SPY:roc21_rank (-), IEF:relrv21 (-), XLV:roc63 (-), GLD:relrv21 (-), XLB:roc63 (-), VIX:roc63 (+), XLE:roc63 (-), XLF:roc63_rank (-), XLV:roc63_rank (-), IWM:relrv21 (-), XLI:roc63_rank (-)
+P_vol ROC-only (vol x1.5 / 21): {'2005-12': 0.583, '2013-19': 0.776, '2020-26': 0.821, 'all': 0.709} 2023-26 0.745  (92s)
+   last-window features: SPY:VIX_prem_chg21_rank (+), SPY:cc21_roc21 (-), SPY:cc21_roc21_rank (-), XLU:relrv21 (+), VIX:roc10_rank (+), SKEW/VIX:roc10_rank (-), VIX:roc10 (+), VXN:roc10 (+), OVX/VIX:roc10_rank (-), VIX3M/VIX6M:roc10 (+), SKEW/VIX:roc10 (-), KCE:relrv21 (+), VIX3M:roc10_rank (+), XLE:relrv21 (+), VIX3M:roc10 (+)
+
+production (levels allowed), for comparison: P_off AUC all 0.636, 2023-26 0.657
+P_lhll ROC-only (lower highs and lower lows / 21) scored against the 5% drawdown target: AUC 0.568
+                                           target  base rate  AUC 2005-12  AUC 2013-19  AUC 2020-26  AUC all  AUC 2023-26                  quintile hit rates
+                P_off ROC-only (5% drawdown / 21)      0.163        0.458        0.586        0.698    0.560        0.662 [0.144, 0.127, 0.145, 0.175, 0.222]
+P_lhll ROC-only (lower highs and lower lows / 21)      0.233        0.812        0.741        0.806    0.794        0.802 [0.049, 0.073, 0.164, 0.323, 0.556]
+                    P_on ROC-only (5% rally / 21)      0.168        0.711        0.753        0.683    0.702        0.673  [0.05, 0.111, 0.131, 0.221, 0.324]
+                   P_vol ROC-only (vol x1.5 / 21)      0.151        0.583        0.776        0.821    0.709        0.745 [0.056, 0.107, 0.091, 0.159, 0.342]
+
+=== SPY books 2010-2026 (2020 included) ===
+                                                            book  ann %  worst DD %  exits/yr  exposure
+                                                SPY buy and hold   13.4       -33.7       0.0      1.00
+         current instruction (levels leg OR VIX outrunning VVIX)   12.1       -16.8       2.3      0.79
+                                       VIX outrunning VVIX alone   13.8       -17.4       2.3      0.85
+                         P_off ROC-only: OUT >= q0.95, IN < q0.8   11.0       -32.3       0.8      0.88
+ P_off ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   11.5       -28.1       2.5      0.78
+                          P_off ROC-only: OUT >= q0.9, IN < q0.8   11.2       -29.6       1.9      0.85
+  P_off ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   11.2       -25.2       3.1      0.75
+                         P_off ROC-only: OUT >= q0.95, IN < q0.6   11.0       -28.4       0.7      0.85
+ P_off ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   11.7       -15.1       2.3      0.74
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.8    9.8       -36.3       3.5      0.93
+P_lhll ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   12.1       -15.8       3.5      0.83
+                         P_lhll ROC-only: OUT >= q0.9, IN < q0.8   10.7       -25.0       6.2      0.88
+ P_lhll ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   11.1       -14.5       5.3      0.80
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.6    9.8       -23.6       2.7      0.89
+P_lhll ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   11.0       -15.9       3.3      0.81
+
+=== SPY books 2016-2026 (2020 included) ===
+                                                            book  ann %  worst DD %  exits/yr  exposure
+                                                SPY buy and hold   14.1       -33.7       0.0      1.00
+         current instruction (levels leg OR VIX outrunning VVIX)   12.9       -16.8       2.5      0.77
+                                       VIX outrunning VVIX alone   14.9       -17.4       2.5      0.84
+                         P_off ROC-only: OUT >= q0.95, IN < q0.8   10.3       -32.3       0.7      0.89
+ P_off ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   11.8       -28.1       2.5      0.78
+                          P_off ROC-only: OUT >= q0.9, IN < q0.8   11.1       -29.6       1.5      0.85
+  P_off ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   11.7       -25.2       2.8      0.76
+                         P_off ROC-only: OUT >= q0.95, IN < q0.6   10.8       -28.4       0.7      0.86
+ P_off ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   12.3       -15.1       2.4      0.75
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.8   11.1       -36.3       3.4      0.92
+P_lhll ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   12.7       -15.8       3.6      0.82
+                         P_lhll ROC-only: OUT >= q0.9, IN < q0.8   12.7       -25.0       5.7      0.88
+ P_lhll ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   12.2       -14.5       5.0      0.80
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.6   11.4       -23.6       2.6      0.89
+P_lhll ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   11.8       -14.6       3.4      0.81
+
+=== SPY books 2023-2026 (2020 included) ===
+                                                            book  ann %  worst DD %  exits/yr  exposure
+                                                SPY buy and hold   20.2       -18.8       0.0      1.00
+         current instruction (levels leg OR VIX outrunning VVIX)   16.2       -12.5       2.4      0.86
+                                       VIX outrunning VVIX alone   16.8       -13.2       2.1      0.88
+                         P_off ROC-only: OUT >= q0.95, IN < q0.8   19.9       -10.0       0.3      0.95
+ P_off ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   18.6       -10.0       1.9      0.87
+                          P_off ROC-only: OUT >= q0.9, IN < q0.8   18.7       -10.0       1.6      0.92
+  P_off ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   17.3       -10.0       2.9      0.83
+                         P_off ROC-only: OUT >= q0.95, IN < q0.6   19.1       -10.0       0.3      0.94
+ P_off ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   17.7       -10.0       1.9      0.86
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.8   18.9       -13.1       2.4      0.96
+P_lhll ROC-only: OUT >= q0.95, IN < q0.8  OR VIX outrunning VVIX   16.1       -13.2       2.7      0.88
+                         P_lhll ROC-only: OUT >= q0.9, IN < q0.8   16.9       -13.9       5.1      0.92
+ P_lhll ROC-only: OUT >= q0.9, IN < q0.8  OR VIX outrunning VVIX   14.2       -13.4       4.8      0.85
+                        P_lhll ROC-only: OUT >= q0.95, IN < q0.6   18.1       -11.0       1.9      0.93
+P_lhll ROC-only: OUT >= q0.95, IN < q0.6  OR VIX outrunning VVIX   15.7       -13.2       2.7      0.87
+
+=== SPY books 2006-2026 (2020 included) ===
+                                    book  ann %  worst DD %  exits/yr  exposure
+                        SPY buy and hold   10.7       -55.2       0.0      1.00
+ P_off ROC-only: OUT >= q0.95, IN < q0.8    9.1       -50.8       1.0      0.89
+  P_off ROC-only: OUT >= q0.9, IN < q0.8    8.9       -53.9       2.3      0.85
+ P_off ROC-only: OUT >= q0.95, IN < q0.6    9.2       -42.1       0.9      0.85
+P_lhll ROC-only: OUT >= q0.95, IN < q0.8    7.3       -54.1       3.9      0.92
+ P_lhll ROC-only: OUT >= q0.9, IN < q0.8    8.1       -53.5       6.5      0.87
+P_lhll ROC-only: OUT >= q0.95, IN < q0.6    8.5       -39.6       3.0      0.88
+
+today: P(lower highs and lower lows, ROC-only) 0.091, trailing percentile 0.36; ROC-only P_off 0.177
+done 92s
