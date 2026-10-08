@@ -363,59 +363,56 @@ Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% 
 
 ---
 
-## 11. Environment dial: three states, backtested as states
+## 11. Environment: two states, tuned to stay in
 
-Objective restated by the user: drawdown preservation, but not through chronically low exposure, and **no softened or conditional versions of a state. GET OUT is GET OUT.** The earlier continuous dial earned its risk-adjusted numbers partly by averaging 44% exposure, and it carried a +5 "at the highs" context flag that made GET OUT harder to reach exactly where tops form. Both are gone. This version keeps the component score (drawdown-first weights: risk-off fires persist 1.5x longer, risk-on adds expire twice as fast; no cap, no slow re-entry, no at-the-highs softener) and maps it to **three states with hysteresis** so the edge is tested as timing with full exposure:
+Objective restated by the user: err on the side of being in; drawdowns are secondary. Tested in `scripts/stayin.py` (output in `results/stayin_out.txt`): event-driven OUT spells of 5 to 21 sessions after the high-conviction onset configurations (with and without price confirmation, with and without early re-entry), the previous drawdown-first state book, a price-only break rule, and the balanced dial with OUT at progressively deeper readings. The event-driven versions whipsaw (7 to 10 OUT spells a year, 7 to 9% annual return, max drawdown -29 to -37%) and the price-only rule is worthless (5% a year, -70% drawdown). The balanced dial with a deep OUT threshold dominates everything tested.
 
-- **GET OUT**: dial at 30 or below. Leave only when the dial is back above 45.
-- **RISK ON**: dial above 60. Leave only when it falls to 50 or below.
-- **REDUCE**: everything between.
+**The method.** The component score with balanced weights (risk-off and risk-on fires persist 10 to 42 sessions as in section 1; no at-the-highs softener). Two states:
 
-The hysteresis cuts state changes from 32 a year to 16. Definitions in `scripts/score.py`; the threshold and hysteresis sweep is in `scripts/env2.py` and `results/env2_out.txt`.
+- **OUT** when the dial reads 20 or below. Back **IN** only when it is above 35.
+- **IN** otherwise.
+
+No middle state. About 2.5 state changes a year, 23 OUT spells in 18 years. Definitions in `scripts/score.py`.
 
 What each state meant, 2008 to date (Feb-Jul 2020 excluded):
 
 | State | Time share | P(5% DD in 21d) | P(10% DD in 63d) | Mean fwd 21d | Mean fwd 63d | Mean 63d max DD | Worst 5% of 63d outcomes |
 |---|---|---|---|---|---|---|---|
-| RISK ON | 33% | 0.13 | 0.11 | +1.2% | +3.3% | -3.9% | -7.6% |
-| REDUCE | 33% | 0.11 | 0.10 | +1.2% | +3.3% | -3.9% | -8.2% |
-| GET OUT | 34% | **0.29** | **0.24** | +0.5% | +1.5% | **-7.4%** | **-18.9%** |
+| IN | 91% | 0.14 | 0.12 | +1.2% | +3.1% | -4.3% | -8.6% |
+| OUT | 9% | **0.50** | **0.46** | **-1.9%** | **-1.3%** | **-13.1%** | **-30.5%** |
 
-RISK ON and REDUCE are statistically the same environment; GET OUT is a different one. The dial is a two-state instrument with a buffer zone, and the buffer exists to stop whipsaw, not because the middle band carries its own information. GET OUT is reported as one state with one set of statistics. No sub-readings.
+Fully invested in SPY when IN, cash when OUT, lagged a day:
 
-**The test that answers the exposure question.** Fully invested in SPY whenever the state is RISK ON or REDUCE, in cash only in GET OUT, lagged a day:
-
-| | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer | Avg exposure |
+| | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer | Time invested |
 |---|---|---|---|---|---|---|
-| State book | **12.0%** | 11.5% | 1.05 | **-20.0%** | 4.01 | 66% |
+| Stay-in book | **14.8%** | 14.8% | 1.00 | -24.5% | 5.29 | 91% |
+| Drawdown-first book (section 11, prior) | 12.0% | 11.5% | 1.05 | -20.0% | 4.01 | 66% |
 | SPY buy and hold | 10.9% | 18.6% | 0.59 | -73.1% | 13.47 | 100% |
 
-The book out-earned buy-and-hold with 66% average exposure, so the return comes from the third of the time it was out, not from being small. Half exposure in REDUCE (100/50/0) gives 9.2% a year and the same max drawdown; it adds nothing and is not recommended. Removing the at-the-highs softener cost about 0.9% a year against the prior version and changed no drawdown figure; that cost is accepted.
+Yearly, book vs SPY: 2008 -4.3 vs -45.9; 2009 +40.7 vs +23.4; 2018 +3.2 vs -4.7; 2022 -11.4 vs -20.1; 2026 +19.0 vs +13.9; identical to SPY in 2012, 2016, 2017, 2019, 2021, 2023, 2024; within 2 points everywhere else. The 2009 figure is the book being back IN from mid-March 2009 at full size.
 
-Yearly, book vs SPY: 2008 -10.2 vs -45.9; 2009 +27.6 vs +23.4; 2011 +3.7 vs +1.9; 2012 +20.3 vs +14.8; 2014 +17.0 vs +12.6; 2018 +6.4 vs -4.7; **2022 +11.2 vs -20.1**; 2023 +22.0 vs +23.3; 2024 +6.4 vs +22.2; 2025 +5.7 vs +16.3; 2026 +14.7 vs +13.9. Gave back ground in 2013, 2019, 2021, 2024, 2025 (the melt-up years); beat or matched in every other year.
+The 23 OUT spells and what SPY did while the book was out: 2008 (six spells, SPY -7.0, -5.2, +2.6, -2.3, **-33.8**, -13.3); Apr 2010 -0.7; Jul 2010 +3.9; Aug 2011 +2.4; Feb 2013 +0.1; Sep 2013 +2.0; Sep 2014 -1.0; Sep 2015 +0.2; Jan-Mar 2018 -4.0; Oct 2018 -4.5; Sep 2020 -2.1; May 2022 +0.4; Jun 2022 -9.1; Sep 2022 -9.6; Oct-Nov 2022 **+9.6** (the one costly miss); Mar 2025 -2.6; Apr 2025 **+11.8** (out for the rebound); Mar 2026 -5.7. Fourteen of 23 spells avoided a loss; the two costly ones were both rebounds the dial was slow to release.
 
-Episodes (share of SPY's peak-to-trough loss the state book took; share of the 42-day rebound it caught; sessions from the peak until the state first read GET OUT):
+Episodes (share of SPY's peak-to-trough loss the book took; share of the 42-day rebound it caught):
 
-| Peak | SPY | Book | Loss captured | Rebound captured | Sessions to GET OUT | State at peak / trough |
-|---|---|---|---|---|---|---|
-| 2008-05 | -72.3% | -10.2% | 14% | 19% | 16 | RISK ON / GET OUT |
-| 2010-04 | -17.1% | -5.5% | 32% | 2% | 0 | GET OUT / GET OUT |
-| 2011-04 | -20.6% | -20.0% | **97%** | 103% | 70 | RISK ON / RISK ON |
-| 2015-07 | -12.7% | -6.5% | 51% | 58% | 9 | RISK ON / RISK ON |
-| 2015-11 | -13.7% | -13.7% | **100%** | 82% | never | REDUCE / RISK ON |
-| 2018-01 | -10.6% | 0.0% | 0% | -82% | 0 | GET OUT / GET OUT |
-| 2018-09 | -21.5% | -9.2% | 43% | 70% | 14 | RISK ON / RISK ON |
-| 2022-01 | -28.1% | **+12.4%** | -44% | 25% | 0 | GET OUT / GET OUT |
-| 2023-07 | -10.5% | -7.7% | 73% | 100% | 36 | REDUCE / RISK ON |
-| 2024-07 | -8.8% | -5.1% | 59% | 102% | 2 | REDUCE / RISK ON |
-| **2025-02** | **-20.8%** | **-8.9%** | **43%** | **0%** | 13 | RISK ON / GET OUT |
-| **2026-01** | **-9.3%** | **-0.5%** | **5%** | **63%** | 10 | REDUCE / GET OUT |
+| Peak | SPY | Book | Loss captured | Rebound captured | Sessions to OUT |
+|---|---|---|---|---|---|
+| 2008-05 | -72.3% | -11.3% | 16% | 64% | 24 |
+| 2010-04 | -17.1% | -14.3% | 84% | 13% | 0 |
+| 2011-04 | -20.6% | -24.5% | 119% | 100% | 82 |
+| 2015-07 | -12.7% | -12.7% | 100% | 109% | never |
+| 2015-11 | -13.7% | -13.7% | 100% | 100% | never |
+| 2018-01 | -10.6% | 0.0% | 0% | -100% | 0 |
+| 2018-09 | -21.5% | -17.6% | 82% | 100% | 17 |
+| 2022-01 | -28.1% | -12.2% | 44% | 36% | 87 |
+| 2023-07 | -10.5% | -10.5% | 100% | 100% | never |
+| 2024-07 | -8.8% | -8.8% | 100% | 100% | never |
+| 2025-02 | -20.8% | -20.9% | 100% | 91% | 13 |
+| 2026-01 | -9.3% | -4.1% | 44% | 100% | 26 |
 
-Median loss captured 43%, median rebound captured 61%. Where it works: the rate- and credit-driven breaks (2008, 2022, Jan 2018, Jan 2026) and the fast vol-driven ones (2018 Q4, 2025 Q1, July 2024 partially). Where it does not: 2011 and late 2015, where the top formed with the dial in RISK ON or REDUCE and the selling was a grind that never produced the configurations the rules key on. It also whipsawed in 2010 and February 2018 (out at the low, missed the rebound) and in 2025 Q1 it was out for the entire April rebound. That is the muted-upside cost you accepted.
+Median loss captured 92%, median rebound captured 100%. This is the trade: it rides every ordinary correction in full, including the 2025 Q1 one (it went OUT on day 13, SPY fell 2.6% during the spell, then it came back IN on April 9 and missed the first +11.8% of the rebound before re-entering). What it does is sidestep the bulk of 2008 and 2022 and the February 2018 event, and catch the rebounds in full everywhere else.
 
-Transitions: the 21 days after entering GET OUT averaged flat with a 30% chance of a 5% drop; the 21 days after entering RISK ON averaged +2.0% with a 10% chance.
-
-**2026-10-07: dial 20, state GET OUT.** Components: base 60, minus 8 rates setup (fired September 23, persists 15 sessions), minus 10 regional banks vs yields (September 23, 22 sessions), minus 8 equity implied cheap vs credit realized (live daily condition), minus 6 bond implied leading bond realized (September 14, 22 sessions), minus 5 rates pressure with VIX asleep (live), minus 3 VIX and VVIX at the floor (live). The dial dropped from 74 to 33 on September 23 (RISK ON to REDUCE), held in the 30s and low 40s for two weeks, and crossed into GET OUT on October 7 when the credit rule went live on top of the others. To leave GET OUT the dial has to clear 45. The rates setup and bond-vol rules expire October 14 (dial 34 if nothing else changes); the bank rule expires October 23 (dial 44, still GET OUT). On expiries alone the earliest exit is October 23 **only if** one of the three daily conditions has also lifted by then; with none lifted the dial sits at 44 and the state stays GET OUT. A full capitulation print (+25) clears it the same day.
+**2026-10-07: dial 44, state IN.** Components: base 60, plus 10 flip confirmation (late September), minus 10 regional banks vs yields, minus 8 equity implied cheap vs credit realized (live), minus 5 rates pressure with VIX asleep, minus 3 VIX and VVIX at the floor. OUT needs a reading of 20 or below: from here that is a VVIX-lagging VIX spike (-15) plus one more onset or the rally-failure tell, or the credit crack (-20) on its own with the flip confirmation expired.
 
 ## 12. Volume
 

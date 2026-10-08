@@ -327,12 +327,12 @@ if(TK){
   }
   heat('heat',TK.mat,1.0); heat('beta',TK.beta,12);
 }
-// ---- environment dial
+// ---- environment dial (two states: IN / OUT)
 const SC=D.score;
 if(SC){
-  const v=SC.score; const th=SC.thresholds; const col=SC.state_idx===0?'var(--orange)':SC.state_idx===2?'var(--blue)':'var(--ink2)';
+  const v=SC.score; const th=SC.thresholds; const NM=SC.state_names||['OUT','IN']; const isOut=SC.state_idx===0; const col=isOut?'var(--orange)':'var(--blue)';
   document.getElementById('envstate').innerHTML=`<span style="color:${col}">${SC.state}</span>`;
-  document.getElementById('envsub').textContent=`${SC.days_in_state} sessions in this state. Enter GET OUT at ${th.out_in} or below, leave it above ${th.out_exit}. Enter RISK ON above ${th.on_in}, leave it at ${th.on_exit} or below. Between: REDUCE.`;
+  document.getElementById('envsub').textContent=`${SC.days_in_state} sessions in this state. OUT when the dial reads ${th.out_in} or below; back IN only when it is above ${th.out_exit}. Otherwise IN.`;
   document.getElementById('scorebig').textContent=v;
   const st=SC.states[SC.state];
   document.getElementById('scorelabel').textContent=`Dial reading. In the ${SC.state} state since 2008: ${Math.round(st.P_off21*100)}% odds of a 5% drop within 21d, ${Math.round(st.P10_63*100)}% odds of a 10% drop within 63d, mean next 63d ${st.fwd63>0?'+':''}${st.fwd63.toFixed(1)}%, mean 63d max drawdown ${st.DD63.toFixed(1)}%.`;
@@ -341,15 +341,15 @@ if(SC){
   const svg=document.getElementById('scorechart'); const W=700,H=190,Lm=34,Rm=10,T=10,B=24; const h=SC.hist; const sh=SC.state_hist; const n=h.length;
   const x=i=>Lm+(W-Lm-Rm)*i/(n-1), y=q=>T+(H-T-B)*(1-q/100);
   let g='';
-  // state shading along the bottom strip and behind the line
-  for(let i=0;i<n;i++){const c=sh[i]===0?css('--orange'):sh[i]===2?css('--blue'):'transparent'; if(c!=='transparent') g+=`<rect x="${x(i)-((W-Lm-Rm)/(n-1))/2}" y="${y(100)}" width="${(W-Lm-Rm)/(n-1)+0.5}" height="${y(0)-y(100)}" fill="${c}" opacity=".08"/>`;}
-  [0,30,45,50,60,100].forEach(q=>{g+=`<line x1="${Lm}" x2="${W-Rm}" y1="${y(q)}" y2="${y(q)}" stroke="${q===30||q===60?css('--line'):css('--grid')}" stroke-dasharray="${q===45||q===50?'3 3':'none'}"/><text x="${Lm-5}" y="${y(q)+4}" text-anchor="end" font-size="10" fill="${css('--muted')}" font-family="${css('--mono')}">${q}</text>`;});
+  for(let i=0;i<n;i++){ if(sh[i]===0) g+=`<rect x="${x(i)-((W-Lm-Rm)/(n-1))/2}" y="${y(100)}" width="${(W-Lm-Rm)/(n-1)+0.5}" height="${y(0)-y(100)}" fill="${css('--orange')}" opacity=".10"/>`;}
+  [0,20,35,60,100].forEach(q=>{g+=`<line x1="${Lm}" x2="${W-Rm}" y1="${y(q)}" y2="${y(q)}" stroke="${q===20||q===35?css('--line'):css('--grid')}" stroke-dasharray="${q===35?'3 3':'none'}"/><text x="${Lm-5}" y="${y(q)+4}" text-anchor="end" font-size="10" fill="${css('--muted')}" font-family="${css('--mono')}">${q}</text>`;});
   for(let i=0;i<n;i+=63){g+=`<text x="${x(i)}" y="${H-6}" font-size="10" fill="${css('--muted')}" text-anchor="middle" font-family="${css('--mono')}">${D.dates[D.dates.length-n+i].slice(0,7)}</text>`;}
-  g+=`<path d="${h.map((q,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(q).toFixed(1)).join('')}" fill="none" stroke="${css('--ink2')}" stroke-width="1.5"/><circle cx="${x(n-1)}" cy="${y(h[n-1])}" r="4" fill="${SC.state_idx===0?css('--orange'):SC.state_idx===2?css('--blue'):css('--ink2')}" stroke="${css('--surface')}" stroke-width="2"/>`;
+  g+=`<path d="${h.map((q,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(q).toFixed(1)).join('')}" fill="none" stroke="${css('--ink2')}" stroke-width="1.5"/><circle cx="${x(n-1)}" cy="${y(h[n-1])}" r="4" fill="${isOut?css('--orange'):css('--blue')}" stroke="${css('--surface')}" stroke-width="2"/>`;
   svg.innerHTML=g;
-  svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((px-Lm)/(W-Lm-Rm)*(n-1))));showTip(e,`${D.dates[D.dates.length-n+i]}<br>dial ${h[i]} · ${['GET OUT','REDUCE','RISK ON'][sh[i]]}`);}; svg.onmouseleave=hideTip;
-  document.getElementById('scorebuckets').innerHTML=`Backtest 2008+, fully invested in SPY in RISK ON and REDUCE, out in GET OUT: ${SC.binary.ann}% a year at ${SC.binary.vol}% vol, max drawdown ${SC.binary.maxDD}%, average exposure ${Math.round(SC.avg_exposure*100)}%, vs buy-and-hold ${SC.buyhold.ann}% at ${SC.buyhold.vol}% vol, max drawdown ${SC.buyhold.maxDD}%. About ${SC.changes_per_year} state changes a year.`;
-  document.getElementById('envtable').innerHTML=`<tr><th>state</th><th>time share</th><th>P(5% DD/21d)</th><th>P(10% DD/63d)</th><th>mean fwd 21d</th><th>mean fwd 63d</th><th>mean 63d max DD</th><th>worst 5% of 63d</th></tr>`+['RISK ON','REDUCE','GET OUT'].map(nm=>{const s=SC.states[nm];return `<tr><td>${nm}</td><td class="num">${Math.round(s.share*100)}%</td><td class="num">${s.P_off21.toFixed(2)}</td><td class="num">${s.P10_63.toFixed(2)}</td><td class="num">${f2(s.fwd21)}%</td><td class="num">${f2(s.fwd63)}%</td><td class="num">${s.DD63.toFixed(1)}%</td><td class="num">${s.f63_p5.toFixed(1)}%</td></tr>`;}).join('');
+  svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((px-Lm)/(W-Lm-Rm)*(n-1))));showTip(e,`${D.dates[D.dates.length-n+i]}<br>dial ${h[i]} · ${NM[sh[i]]}`);}; svg.onmouseleave=hideTip;
+  document.getElementById('scorebuckets').innerHTML=`Stay-in tuning. Backtest 2008+, fully invested in SPY when IN, cash when OUT, lagged a day: ${SC.binary.ann}% a year at ${SC.binary.vol}% vol, max drawdown ${SC.binary.maxDD}%, invested ${Math.round(SC.avg_exposure*100)}% of the time, vs buy-and-hold ${SC.buyhold.ann}% at ${SC.buyhold.vol}% vol, max drawdown ${SC.buyhold.maxDD}%. About ${SC.changes_per_year} state changes a year.`;
+  document.getElementById('envtable').innerHTML=`<tr><th>state</th><th>time share</th><th>P(5% DD/21d)</th><th>P(10% DD/63d)</th><th>mean fwd 21d</th><th>mean fwd 63d</th><th>mean 63d max DD</th><th>worst 5% of 63d</th></tr>`+NM.slice().reverse().map(nm=>{const s=SC.states[nm];return `<tr><td>${nm}</td><td class="num">${Math.round(s.share*100)}%</td><td class="num">${s.P_off21.toFixed(2)}</td><td class="num">${s.P10_63.toFixed(2)}</td><td class="num">${f2(s.fwd21)}%</td><td class="num">${f2(s.fwd63)}%</td><td class="num">${s.DD63.toFixed(1)}%</td><td class="num">${s.f63_p5.toFixed(1)}%</td></tr>`;}).join('')
+    +(SC.spells?`<tr><td colspan="8" style="white-space:normal;font-family:var(--sans);color:var(--ink2)">OUT spells since 2008 (SPY move while out): `+SC.spells.map(s=>`${s.from.slice(0,7)} ${s.sessions}d ${s.spy_while_out>0?'+':''}${s.spy_while_out}%`).join(' · ')+`</td></tr>`:'');
 }
 // ---- realized vol layer
 const RVD=D.rv;

@@ -41,28 +41,20 @@ C1={'rates_pressure_vix_asleep':-5,'complacency_both_compressed':-5,'vol_collaps
 W2={k:(int(w*1.5) if p<0 else w, int(p*1.4) if p<0 else int(p*0.7)) for k,(w,p) in W1.items()}
 C2={'rates_pressure_vix_asleep':-8,'complacency_both_compressed':-8,'vol_collapsing_from_high':6,'at_highs':3,'vix_floor_vvix_floor':-5}
 
-# ===== ENVIRONMENT DIAL: drawdown-first weights, no cap / no slow re-entry, three states with hysteresis =====
-C1={k:v for k,v in C1.items() if k!='at_highs'}   # no softener for being at the highs: GET OUT is GET OUT
-W={k:(int(w*1.5),p) if p<0 else (max(10,w//2),p) for k,(w,p) in W1.items()}
-SCORE,PARTS=build(W,C1)
-OUT_IN,OUT_EXIT,ON_IN,ON_EXIT=30,45,60,50
-def states_h(S):
-    v=S.values; st=np.zeros(len(v),dtype=int); s=2
+# ===== STAY-IN ENVIRONMENT: balanced weights, no at-the-highs softener, two states, OUT only at a deep reading =====
+C1={k:v for k,v in C1.items() if k!='at_highs'}
+SCORE,PARTS=build(W1,C1)
+OUT_IN,OUT_EXIT=20,35
+def states2(S):
+    v=S.values; st=np.ones(len(v),dtype=int); s=1   # 1 = IN, 0 = OUT
     for i in range(len(v)):
         x=v[i]
         if np.isnan(x): st[i]=s; continue
-        if s==0:
-            if x>ON_IN: s=2
-            elif x>OUT_EXIT: s=1
-        elif s==1:
-            if x<=OUT_IN: s=0
-            elif x>ON_IN: s=2
-        else:
-            if x<=OUT_IN: s=0
-            elif x<=ON_EXIT: s=1
+        if s==1 and x<=OUT_IN: s=0
+        elif s==0 and x>OUT_EXIT: s=1
         st[i]=s
     return pd.Series(st,index=S.index)
-ST=states_h(SCORE); NAMES=['GET OUT','REDUCE','RISK ON']
+ST=states2(SCORE); NAMES=['OUT','IN']
 pd.to_pickle({'score':SCORE,'parts':PARTS,'state':ST},'SCORE.pkl')
 r=R['SPY']; m=~EX&(idx>=pd.Timestamp('2008-01-01')); bh=r[m]
 def stats(x):
@@ -71,28 +63,37 @@ today=PARTS.iloc[-1]; print('TODAY',idx[-1].date(),'score',int(SCORE.iloc[-1]),'
 ok=L['ok21']&m
 d=pd.DataFrame({'st':ST,'off':L['riskoff21'],'f21':L['fwd21']*100,'f63':L['fwd63']*100,'dd21':L['fwdDD21']*100,'dd63':L['fwdDD63']*100,'dd10':(L['fwdDD63']<=-0.10).astype(float),'dd5_63':(L['fwdDD63']<=-0.05).astype(float)})[ok]
 T=d.groupby('st').agg(share=('off','count'),P_off21=('off','mean'),fwd21=('f21','mean'),fwd63=('f63','mean'),DD21=('dd21','mean'),DD63=('dd63','mean'),P5_63=('dd5_63','mean'),P10_63=('dd10','mean'),f63_p5=('f63',lambda x: x.quantile(.05))); T['share']=T['share']/len(d); T.index=NAMES; print(T.round(3).to_string())
-stl=ST.shift(1)[m]; wb=stl.map({0:0,1:1,2:1}); w3=stl.map({0:0,1:0.5,2:1})
-SB=stats(wb*bh); S3=stats(w3*bh); BH=stats(bh); print('binary',SB,'exp',round(float(wb.mean()),2)); print('3state',S3); print('B&H',BH)
+stl=ST.shift(1)[m]; wb=stl.map({0:0,1:1})
+SB=stats(wb*bh); BH=stats(bh); print('book',SB,'exp',round(float(wb.mean()),2)); print('B&H',BH)
 ch=float((ST!=ST.shift(1))[m].sum()/(m.sum()/252)); print('changes/yr',round(ch,1))
 EP=[('2008-05-19','2009-03-09'),('2010-04-23','2010-07-02'),('2011-04-29','2011-10-03'),('2015-07-20','2015-08-25'),('2015-11-03','2016-02-11'),('2018-01-26','2018-02-08'),('2018-09-20','2018-12-24'),('2022-01-03','2022-10-12'),('2023-07-31','2023-10-27'),('2024-07-16','2024-08-05'),('2025-02-19','2025-04-08'),('2026-01-27','2026-03-30')]
-w=ST.shift(1).map({0:0,1:1,2:1}); eps=[]
+w=ST.shift(1).map({0:0,1:1}); eps=[]
 for a,b in EP:
     a=pd.Timestamp(a); b=pd.Timestamp(b); seg=r.loc[a:b].iloc[1:]; sp=seg.sum()*100; stt=(w.loc[seg.index]*seg).sum()*100
     q=idx.get_loc(b); rec=r.iloc[q+1:q+43]; sp2=rec.sum()*100; st2=(w.loc[rec.index]*rec).sum()*100
     seq=ST.iloc[idx.get_loc(a):q+1].values; k=np.where(seq==0)[0]
     eps.append({'peak':str(a.date()),'trough':str(b.date()),'spy':round(sp,1),'book':round(stt,1),'capt_loss':round(stt/sp,2),'reb_spy':round(sp2,1),'reb_book':round(st2,1),'capt_gain':round(st2/sp2,2),'days_to_out':int(k[0]) if len(k) else None,'state_pk':NAMES[ST.loc[a]],'state_tr':NAMES[ST.loc[b]]})
 E=pd.DataFrame(eps); print(E.to_string()); print('median capt_loss',E.capt_loss.median(),'capt_gain',E.capt_gain.median())
+# OUT spells list
+o=(ST==0)&m; spells=[]; 
+for dt in idx[o]:
+    if not spells or (dt-spells[-1][1]).days>1 and (idx.get_loc(dt)-idx.get_loc(spells[-1][1]))>1: spells.append([dt,dt])
+    else: spells[-1][1]=dt
+SP=[]
+for a,b in spells:
+    q0=idx.get_loc(a); q1=idx.get_loc(b); seg=r.iloc[q0:q1+2].sum()*100   # SPY move while out (incl next-day lag)
+    SP.append({'from':str(a.date()),'to':str(b.date()),'sessions':q1-q0+1,'spy_while_out':round(float(seg),1)})
+print(pd.DataFrame(SP).to_string())
 ent=(ST!=ST.shift(1))&m&L['ok21']; trans={}
 for s_,nm in enumerate(NAMES):
     e=ent&(ST==s_); trans[nm]={'n':int(e.sum()),'fwd21':round(float(L.loc[e,'fwd21'].mean()*100),2),'fwd63':round(float(L.loc[e,'fwd63'].mean()*100),2),'P_off21':round(float(L.loc[e,'riskoff21'].mean()),2)}
 print(trans)
-yr=pd.DataFrame({'SPY':bh,'book':wb*bh}); Y=(yr.groupby(yr.index.year).sum()*100).round(1); print(Y.to_string())
-# days in current state
+yr=pd.DataFrame({'SPY':bh,'book':wb*bh}); Y=(yr.groupby(yr.index.year).sum()*100).round(1); print(Y.T.to_string())
 cur=ST.iloc[-1]; k=0
 for v in ST.values[::-1]:
     if v==cur: k+=1
     else: break
-json.dump({'asof':str(idx[-1].date()),'score':int(SCORE.iloc[-1]),'state':NAMES[cur],'state_idx':int(cur),'days_in_state':k,'thresholds':{'out_in':OUT_IN,'out_exit':OUT_EXIT,'on_in':ON_IN,'on_exit':ON_EXIT},
+json.dump({'asof':str(idx[-1].date()),'score':int(SCORE.iloc[-1]),'state':NAMES[cur],'state_idx':int(cur),'state_names':NAMES,'days_in_state':k,'thresholds':{'out_in':OUT_IN,'out_exit':OUT_EXIT},
   'base':60,'components':{k_:float(v) for k_,v in today[today!=0].items()},'hist':[int(v) for v in SCORE.iloc[-504:]],'state_hist':[int(v) for v in ST.iloc[-504:]],
-  'states':{nm:{c:round(float(T.loc[nm,c]),3) for c in T.columns} for nm in NAMES},'binary':SB,'three':S3,'buyhold':BH,'avg_exposure':round(float(wb.mean()),2),'changes_per_year':round(ch,1),
-  'episodes':eps,'transitions':trans,'yearly':{str(k_):{'spy':float(v.SPY),'book':float(v.book)} for k_,v in Y.iterrows()}},open('score_data.json','w'))
+  'states':{nm:{c:round(float(T.loc[nm,c]),3) for c in T.columns} for nm in NAMES},'binary':SB,'buyhold':BH,'avg_exposure':round(float(wb.mean()),2),'changes_per_year':round(ch,1),
+  'episodes':eps,'spells':SP,'transitions':trans,'yearly':{str(k_):{'spy':float(v.SPY),'book':float(v.book)} for k_,v in Y.iterrows()}},open('score_data.json','w'))
