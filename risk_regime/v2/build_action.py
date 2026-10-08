@@ -13,15 +13,23 @@ Logic, fixed from the out-of-sample record and nothing else:
 import json, sys
 src, out = sys.argv[1], sys.argv[2]; D = json.load(open(src)); P = D['probs']
 state = D['state']; p_on = P['P_on']['trailing_pct']; p_off = P['P_off']['trailing_pct']; p_vol = P['P_vol']['trailing_pct']; dial = round(100 * (1 - p_off))
-if state == 'OUT': action, why = 'REDUCE', f'The drawdown probability hit its trailing 95th percentile and is still above the 80th (now the {round(p_off*100)}th). Stay reduced until it drops below the 80th.'
-elif p_on >= 0.8: action, why = 'ADD', f'Rule is IN and the rally probability is in the top fifth of its range ({round(p_on*100)}th percentile). Historically a 5% rally inside a month followed 41% of the time against a 17% base.'
-else: action, why = 'HOLD', f'Rule is IN, dial {dial}. Drawdown probability at the {round(p_off*100)}th percentile, rally probability at the {round(p_on*100)}th. Full size, nothing to do.'
-dec = lambda p: P[p]['deciles'][P[p]['today_decile']]
 pc = lambda x: round(x * 100)
+def ordn(x):
+    n = round(x * 100); return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+def bucket_note(p, key, hit_word):
+    d = P[p]['deciles']; i = P[p]['today_decile']; means = [x['fwd21'] for x in d]; worst = int(min(range(10), key=lambda k: means[k])); best = int(max(range(10), key=lambda k: means[k]))
+    txt = f"decile {i+1} of 10: {pc(d[i][key])}% {hit_word}, mean next month {d[i]['fwd21']:+.1f}%"
+    if i == worst: txt += f" (the weakest bucket in this table; the curve is not monotone, deciles {', '.join(str(k+1) for k in range(10) if means[k] > 0)} average positive)"
+    elif i == best: txt += " (the strongest bucket in this table)"
+    return txt
+if state == 'OUT': action, why = 'REDUCE', f'The drawdown probability hit its trailing 95th percentile and is still above the 80th (now the {ordn(p_off)}). Stay reduced until it drops below the 80th.'
+elif p_on >= 0.8: action, why = 'ADD', f'Rule is IN and the rally probability is in the top fifth of its range ({ordn(p_on)} percentile). Historically a 5% rally inside a month followed 41% of the time against a 17% base.'
+else: action, why = 'HOLD', f'Rule is IN, dial {dial}. Drawdown probability at the {ordn(p_off)} percentile, rally probability at the {ordn(p_on)}. Full size. REDUCE needs the 95th, ADD needs the rally probability at the 80th; neither is close.'
+dec = lambda p: P[p]['deciles'][P[p]['today_decile']]
 tiles = [
-    ('5% drawdown within a month', P['P_off']['today'], f"{pc(p_off)}th percentile · this decile: {pc(dec('P_off')['P_off'])}% drew down 5%, mean next month {dec('P_off')['fwd21']:+.1f}%"),
-    ('5% rally within a month', P['P_on']['today'], f"{pc(p_on)}th percentile · this decile: {pc(dec('P_on')['P_on'])}% rallied 5%, mean next month {dec('P_on')['fwd21']:+.1f}%"),
-    ('vol expands 1.5x within a month', P['P_vol']['today'], f"{pc(p_vol)}th percentile · this decile: {pc(dec('P_vol')['P_volexp'])}% expanded, mean next month {dec('P_vol')['fwd21']:+.1f}%"),
+    ('5% drawdown within a month', P['P_off']['today'], f"{ordn(p_off)} percentile of its trailing three years · {bucket_note('P_off', 'P_off', 'drew down 5%')}"),
+    ('5% rally within a month', P['P_on']['today'], f"{ordn(p_on)} percentile · {bucket_note('P_on', 'P_on', 'rallied 5%')}"),
+    ('vol expands 1.5x within a month', P['P_vol']['today'], f"{ordn(p_vol)} percentile · {bucket_note('P_vol', 'P_volexp', 'expanded')}"),
 ]
 col = {'REDUCE': 'var(--orange)', 'ADD': 'var(--blue)', 'HOLD': 'var(--ink)'}[action]
 html = f"""<title>Risk Action</title>
