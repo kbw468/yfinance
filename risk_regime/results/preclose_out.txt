@@ -1,3 +1,3 @@
-rate-of-change leg: P_lhll 0.122 pct 0.45 (q95 0.628, q80 0.415) leg 1->1 | instruction HOLD | check (refit, production) yesterday: (0.0907, 0.0907) (0.0813, 0.0814) (0.1111, 0.1123)
+rate-of-change leg: P_lhll 0.128 pct 0.47 (q95 0.628, q80 0.415) leg 1->1 | instruction HOLD | check (refit, production) yesterday: (0.0917, 0.0907) (0.082, 0.0814) (0.1112, 0.1123)
 fast leg: P 0.183 pct 0.49 (q95 0.370, q80 0.275) leg 1->1 | instruction HOLD | check (refit, production) yesterday: (0.1734, 0.1735)
-pre-close 2026-10-08 14:21 ET | bar 2026-10-08 | SPY 772.96 (-0.55%) | P_off 0.083 pct 0.10 (q95 0.333, q80 0.162) ref 1->1 | VIX 15.95 VVIX 90.75 V21 0.46 R21 0.56 vv 1->1 | check (refit, production) yesterday: (0.0827, 0.0827) (0.0237, 0.0243) (0.0409, 0.0411)
+pre-close 2026-10-08 14:45 ET | bar 2026-10-08 | SPY 772.76 (-0.57%) | P_off 0.083 pct 0.10 (q95 0.333, q80 0.162) ref 1->1 | VIX 15.58 VVIX 88.76 V21 0.39 R21 0.55 vv 1->1 | check (refit, production) yesterday: (0.0827, 0.0827) (0.0236, 0.0243) (0.0411, 0.0411)
