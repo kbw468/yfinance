@@ -48,4 +48,5 @@ ftq                  0           0           0           0           0
 oil                  0           0           0           0           0
 goldvol              0           0           0           0           0
 equityonly           0           0           0           1           1
+stale series: none
 json KB 111

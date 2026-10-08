@@ -23,3 +23,10 @@ for f in sorted(glob.glob(f'{D}/*.csv')):
     T[n]=load(n)['Close']
 P=pd.DataFrame(T); P.to_pickle('P.pkl')
 print(P.shape, P.columns.tolist())
+EXPECTED={'QQQ','TLT','IEF','HYG','IWM','GLD','SPY','XLC','XLY','XLP','XLE','XLF','XLV','XLI','XLB','XLRE','RWR','XAR','KBE','XBI','KCE','XHE','XHS','XHB','KIE','XME','XES','XOP','XPH','KRE','XRT','XSD','XSW','XTL','XTN','XLK','XLU','BNO','LQD','SHY'}
+got=set(P.columns)-{'VIX1Y'}
+if got!=EXPECTED:
+    import sys; print('BUILD FAILED: ticker universe mismatch. extra:',sorted(got-EXPECTED),'missing:',sorted(EXPECTED-got)); sys.exit(1)
+if S.shape[1]!=15:
+    import sys; print('BUILD FAILED: expected 15 index series, got',S.shape[1]); sys.exit(1)
+print('universe check ok: 40 tickers (38 + LQD, SHY), 15 index series')

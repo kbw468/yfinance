@@ -234,6 +234,7 @@ const D=JSON.parse(document.getElementById('data').textContent);
 const RM=D.rule_meta; const N=D.dates.length; const last=N-1;
 const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 document.getElementById('asof').textContent=D.asof;
+if(D.stale&&D.stale.length){document.getElementById('asof').insertAdjacentHTML('afterend',` · <span style="color:var(--orange);font-weight:600">stale: ${D.stale.map(s=>s.series+' ('+s.last+')').join(', ')}</span>`);}
 const f2=x=>x==null?'':(x>0?'+':'')+x.toFixed(2);
 // ---- tiles
 const live=Object.keys(D.rules).filter(k=>D.rules[k][last]);

@@ -35,6 +35,11 @@ out={'asof':str(last.date()),'dates':[d.strftime('%Y-%m-%d') for d in sub.index]
 # rule fire history (first-fire dates) for full sample, for the "history" strip
 first={k:[d.strftime('%Y-%m-%d') for d in RU.index[(RU[k]&~RU[k].shift(1,fill_value=False))]] for k in RU.columns}
 out['rule_history']=first
+# freshness: index series before the 3-day forward-fill, and tickers (never filled); anything ending before the as-of session is stale
+Sraw=pd.read_pickle('S_raw.pkl').drop(columns=['VIX1Y'],errors='ignore')
+stale=[{'series':c,'last':str(Sraw[c].dropna().index[-1].date())} for c in Sraw.columns if Sraw[c].dropna().index[-1]<last]
+stale+=[{'series':c,'last':str(P[c].dropna().index[-1].date())} for c in P.columns if P[c].dropna().index[-1]<last]
+out['stale']=stale; print('stale series:',stale if stale else 'none')
 # playbook tables
 PB=pd.read_pickle('PLAYBOOK.pkl')
 pb={}

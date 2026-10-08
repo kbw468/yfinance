@@ -17,3 +17,4 @@ IRX    n= 9228 first=1990-01-02 zeros=  0 min=   -0.10 p1=    0.00 med=    2.82 
 MOVE gaps>7d: [('2013-03-25', 10)]
 SKEW gaps>7d: [('2000-10-02', 13)]
 (8480, 41) ['BNO', 'GLD', 'HYG', 'IEF', 'IWM', 'KBE', 'KCE', 'KIE', 'KRE', 'LQD', 'QQQ', 'RWR', 'SHY', 'SPY', 'TLT', 'VIX1Y', 'XAR', 'XBI', 'XES', 'XHB', 'XHE', 'XHS', 'XLB', 'XLC', 'XLE', 'XLF', 'XLI', 'XLK', 'XLP', 'XLRE', 'XLU', 'XLV', 'XLY', 'XME', 'XOP', 'XPH', 'XRT', 'XSD', 'XSW', 'XTL', 'XTN']
+universe check ok: 40 tickers (38 + LQD, SHY), 15 index series
