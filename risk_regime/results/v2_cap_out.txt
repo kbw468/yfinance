@@ -1,0 +1,1 @@
+wf: X (8480, 4038), candidates exclude KRE, ranks ready in 12s

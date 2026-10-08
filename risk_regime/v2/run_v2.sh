@@ -13,5 +13,6 @@ python3 "$S/build.py" > "$R/build_out.txt" 2>&1 || { echo "FAILED: build"; tail 
 for s in features fractal labels model2 decision tickers big onset snapshot; do echo "== $s"; a=""; [ "$s" = "big" ] && a="0"; python3 -u "$V/$s.py" $a > "$R/v2_${s}_out.txt" 2>&1 || { echo "FAILED: $s"; tail -20 "$R/v2_${s}_out.txt"; exit 1; }; done
 cp v2_data.json manifest.json "$R/"
 python3 "$V/build_dashboard_v2.py" "$W/v2_data.json" "$ROOT/risk_regime/dashboard_v2.html"
+python3 "$V/build_action.py" "$W/v2_data.json" "$ROOT/risk_regime/action.html"
 python3 "$V/pdf_v2.py" "$ROOT/risk_regime/dashboard_v2.html" "$R/VOL_TAPE_READING_v2.pdf"
 echo "done: $(date -u +%F) $(python3 -c "import json;print(json.load(open('v2_data.json'))['asof'])")"

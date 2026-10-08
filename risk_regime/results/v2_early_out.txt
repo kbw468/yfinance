@@ -1,0 +1,2 @@
+wf: X (8480, 4038), candidates exclude KRE, ranks ready in 11s
+P_off: AUC 1998-2004 0.497; by era {'2005-12': 0.624, '2013-19': 0.586, '2020-26': 0.716, 'all': 0.636}

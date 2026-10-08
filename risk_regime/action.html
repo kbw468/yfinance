@@ -1,0 +1,25 @@
+<title>Risk Action</title>
+<meta name="description" content="One instruction from the vol tape regime system: add, hold or reduce">
+<style>
+:root{--bg:#f7f7f4;--surface:#fff;--ink:#1b1f26;--ink2:#4b5563;--muted:#8a919c;--line:#e3e5e8;--blue:#1d4ed8;--orange:#ea580c;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;--sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141517;--surface:#1c1e22;--ink:#ebedf0;--ink2:#b3b8c2;--muted:#7c838e;--line:#2c3037;--blue:#3b82f6;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141517;--surface:#1c1e22;--ink:#ebedf0;--ink2:#b3b8c2;--muted:#7c838e;--line:#2c3037;--blue:#3b82f6;color-scheme:dark}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.45}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px;display:grid;gap:18px}
+.sub{color:var(--muted);font-family:var(--mono);font-size:12px}
+.action{font-family:var(--mono);font-weight:700;font-size:clamp(64px,18vw,120px);line-height:1;letter-spacing:.02em;color:var(--ink)}
+.why{font-size:17px;color:var(--ink2);max-width:60ch}
+.dial{font-family:var(--mono);font-size:14px;color:var(--ink2)} .dial b{font-size:28px;color:var(--ink)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px} .tile .k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-family:var(--mono)} .tile .v{font-family:var(--mono);font-size:24px;font-weight:600;margin-top:2px} .tile .d{font-size:12.5px;color:var(--ink2);margin-top:4px}
+.rules{font-size:13px;color:var(--ink2);border-top:1px solid var(--line);padding-top:12px} .rules b{font-family:var(--mono)}
+a{color:var(--blue)}
+</style>
+<div class="wrap">
+<div class="sub">Vol tape regime · as of 2026-10-07 close · rule IN since 2026-07-14</div>
+<div class="action">HOLD</div>
+<div class="why">Rule is IN, dial 90. Drawdown probability at the 10th percentile, rally probability at the 14th. Full size, nothing to do.</div>
+<div class="dial">stay-in dial <b>90</b> · OUT at 5 or below, back IN above 20 · no vol episode in progress</div>
+<div class="tiles"><div class="tile"><div class="k">5% drawdown within a month</div><div class="v">0.083</div><div class="d">10th percentile · this decile: 26% drew down 5%, mean next month -0.6%</div></div><div class="tile"><div class="k">5% rally within a month</div><div class="v">0.024</div><div class="d">14th percentile · this decile: 2% rallied 5%, mean next month +0.8%</div></div><div class="tile"><div class="k">vol expands 1.5x within a month</div><div class="v">0.041</div><div class="d">42th percentile · this decile: 9% expanded, mean next month +0.6%</div></div></div>
+<div class="rules"><b>REDUCE</b> when the drawdown probability reaches its trailing 95th percentile, until it falls below the 80th. <b>ADD</b> when the rule is IN and the rally probability is in the top fifth of its range. <b>HOLD</b> otherwise; dips are not sold. Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
+</div>
