@@ -42,6 +42,7 @@ W2={k:(int(w*1.5) if p<0 else w, int(p*1.4) if p<0 else int(p*0.7)) for k,(w,p) 
 C2={'rates_pressure_vix_asleep':-8,'complacency_both_compressed':-8,'vol_collapsing_from_high':6,'at_highs':3,'vix_floor_vvix_floor':-5}
 
 # ===== ENVIRONMENT DIAL: drawdown-first weights, no cap / no slow re-entry, three states with hysteresis =====
+C1={k:v for k,v in C1.items() if k!='at_highs'}   # no softener for being at the highs: GET OUT is GET OUT
 W={k:(int(w*1.5),p) if p<0 else (max(10,w//2),p) for k,(w,p) in W1.items()}
 SCORE,PARTS=build(W,C1)
 OUT_IN,OUT_EXIT,ON_IN,ON_EXIT=30,45,60,50

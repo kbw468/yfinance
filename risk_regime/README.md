@@ -365,7 +365,7 @@ Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% 
 
 ## 11. Environment dial: three states, backtested as states
 
-Objective restated by the user: drawdown preservation, but not through chronically low exposure. The earlier continuous dial earned its risk-adjusted numbers partly by averaging 44% exposure. This version keeps the same component score (drawdown-first weights: risk-off fires persist 1.5x longer, risk-on adds expire twice as fast; no cap, no slow re-entry) and maps it to **three states with hysteresis** so the edge can be tested as timing with full exposure:
+Objective restated by the user: drawdown preservation, but not through chronically low exposure, and **no softened or conditional versions of a state. GET OUT is GET OUT.** The earlier continuous dial earned its risk-adjusted numbers partly by averaging 44% exposure, and it carried a +5 "at the highs" context flag that made GET OUT harder to reach exactly where tops form. Both are gone. This version keeps the component score (drawdown-first weights: risk-off fires persist 1.5x longer, risk-on adds expire twice as fast; no cap, no slow re-entry, no at-the-highs softener) and maps it to **three states with hysteresis** so the edge is tested as timing with full exposure:
 
 - **GET OUT**: dial at 30 or below. Leave only when the dial is back above 45.
 - **RISK ON**: dial above 60. Leave only when it falls to 50 or below.
@@ -377,22 +377,22 @@ What each state meant, 2008 to date (Feb-Jul 2020 excluded):
 
 | State | Time share | P(5% DD in 21d) | P(10% DD in 63d) | Mean fwd 21d | Mean fwd 63d | Mean 63d max DD | Worst 5% of 63d outcomes |
 |---|---|---|---|---|---|---|---|
-| RISK ON | 40% | 0.11 | 0.11 | +1.2% | +3.1% | -3.8% | -8.1% |
-| REDUCE | 30% | 0.12 | 0.11 | +1.1% | +3.1% | -4.3% | -8.6% |
-| GET OUT | 30% | **0.32** | **0.25** | +0.4% | +1.8% | **-7.6%** | **-17.4%** |
+| RISK ON | 33% | 0.13 | 0.11 | +1.2% | +3.3% | -3.9% | -7.6% |
+| REDUCE | 33% | 0.11 | 0.10 | +1.2% | +3.3% | -3.9% | -8.2% |
+| GET OUT | 34% | **0.29** | **0.24** | +0.5% | +1.5% | **-7.4%** | **-18.9%** |
 
-RISK ON and REDUCE are statistically the same environment; GET OUT is a different one. The dial is a two-state instrument with a buffer zone, and the buffer exists to stop whipsaw, not because the middle band carries its own information.
+RISK ON and REDUCE are statistically the same environment; GET OUT is a different one. The dial is a two-state instrument with a buffer zone, and the buffer exists to stop whipsaw, not because the middle band carries its own information. GET OUT is reported as one state with one set of statistics. No sub-readings.
 
 **The test that answers the exposure question.** Fully invested in SPY whenever the state is RISK ON or REDUCE, in cash only in GET OUT, lagged a day:
 
 | | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer | Avg exposure |
 |---|---|---|---|---|---|---|
-| State book | **12.9%** | 11.6% | 1.11 | **-20.0%** | 4.06 | 70% |
+| State book | **12.0%** | 11.5% | 1.05 | **-20.0%** | 4.01 | 66% |
 | SPY buy and hold | 10.9% | 18.6% | 0.59 | -73.1% | 13.47 | 100% |
 
-The book out-earned buy-and-hold with 70% average exposure, so the return comes from the 30% of the time it was out, not from being small. Half exposure in REDUCE (100/50/0) gives 9.9% a year and the same max drawdown; it adds nothing and is not recommended.
+The book out-earned buy-and-hold with 66% average exposure, so the return comes from the third of the time it was out, not from being small. Half exposure in REDUCE (100/50/0) gives 9.2% a year and the same max drawdown; it adds nothing and is not recommended. Removing the at-the-highs softener cost about 0.9% a year against the prior version and changed no drawdown figure; that cost is accepted.
 
-Yearly, book vs SPY: 2008 -8.7 vs -45.9; 2009 +27.7 vs +23.4; 2011 +3.7 vs +1.9; 2012 +18.3 vs +14.8; 2014 +17.1 vs +12.6; 2018 +5.9 vs -4.7; **2022 +8.4 vs -20.1**; 2023 +22.0 vs +23.3; 2024 +15.8 vs +22.2; 2025 +7.6 vs +16.3; 2026 +13.1 vs +13.9. Gave back ground in 2013, 2019, 2021, 2024, 2025 (the melt-up years); beat or matched in every other year.
+Yearly, book vs SPY: 2008 -10.2 vs -45.9; 2009 +27.6 vs +23.4; 2011 +3.7 vs +1.9; 2012 +20.3 vs +14.8; 2014 +17.0 vs +12.6; 2018 +6.4 vs -4.7; **2022 +11.2 vs -20.1**; 2023 +22.0 vs +23.3; 2024 +6.4 vs +22.2; 2025 +5.7 vs +16.3; 2026 +14.7 vs +13.9. Gave back ground in 2013, 2019, 2021, 2024, 2025 (the melt-up years); beat or matched in every other year.
 
 Episodes (share of SPY's peak-to-trough loss the state book took; share of the 42-day rebound it caught; sessions from the peak until the state first read GET OUT):
 
@@ -401,21 +401,21 @@ Episodes (share of SPY's peak-to-trough loss the state book took; share of the 4
 | 2008-05 | -72.3% | -10.2% | 14% | 19% | 16 | RISK ON / GET OUT |
 | 2010-04 | -17.1% | -5.5% | 32% | 2% | 0 | GET OUT / GET OUT |
 | 2011-04 | -20.6% | -20.0% | **97%** | 103% | 70 | RISK ON / RISK ON |
-| 2015-07 | -12.7% | -6.8% | 54% | 58% | 10 | RISK ON / RISK ON |
-| 2015-11 | -13.7% | -13.7% | **100%** | 82% | never | RISK ON / RISK ON |
+| 2015-07 | -12.7% | -6.5% | 51% | 58% | 9 | RISK ON / RISK ON |
+| 2015-11 | -13.7% | -13.7% | **100%** | 82% | never | REDUCE / RISK ON |
 | 2018-01 | -10.6% | 0.0% | 0% | -82% | 0 | GET OUT / GET OUT |
 | 2018-09 | -21.5% | -9.2% | 43% | 70% | 14 | RISK ON / RISK ON |
-| 2022-01 | -28.1% | **+12.4%** | -44% | 0% | 0 | GET OUT / GET OUT |
+| 2022-01 | -28.1% | **+12.4%** | -44% | 25% | 0 | GET OUT / GET OUT |
 | 2023-07 | -10.5% | -7.7% | 73% | 100% | 36 | REDUCE / RISK ON |
-| 2024-07 | -8.8% | -5.1% | 59% | 100% | 2 | REDUCE / RISK ON |
+| 2024-07 | -8.8% | -5.1% | 59% | 102% | 2 | REDUCE / RISK ON |
 | **2025-02** | **-20.8%** | **-8.9%** | **43%** | **0%** | 13 | RISK ON / GET OUT |
 | **2026-01** | **-9.3%** | **-0.5%** | **5%** | **63%** | 10 | REDUCE / GET OUT |
 
-Median loss captured 43%, median rebound captured 61%. Where it works: the rate- and credit-driven breaks (2008, 2022, Jan 2018, Jan 2026) and the fast vol-driven ones (2018 Q4, 2025 Q1, July 2024 partially). Where it does not: 2011 and late 2015, where the top formed with the dial in RISK ON and the selling was a grind that never produced the configurations the rules key on. It also whipsawed in 2010 and February 2018 (out at the low, missed the rebound) and in 2025 Q1 it was out for the entire April rebound. That is the muted-upside cost you accepted.
+Median loss captured 43%, median rebound captured 61%. Where it works: the rate- and credit-driven breaks (2008, 2022, Jan 2018, Jan 2026) and the fast vol-driven ones (2018 Q4, 2025 Q1, July 2024 partially). Where it does not: 2011 and late 2015, where the top formed with the dial in RISK ON or REDUCE and the selling was a grind that never produced the configurations the rules key on. It also whipsawed in 2010 and February 2018 (out at the low, missed the rebound) and in 2025 Q1 it was out for the entire April rebound. That is the muted-upside cost you accepted.
 
-Transitions: the 21 days after entering GET OUT averaged flat with a 33% chance of a 5% drop; the 21 days after entering RISK ON averaged +2.1% with an 8% chance.
+Transitions: the 21 days after entering GET OUT averaged flat with a 30% chance of a 5% drop; the 21 days after entering RISK ON averaged +2.0% with a 10% chance.
 
-**2026-10-07: dial 25, state GET OUT.** The dial dropped from 74 to 38 on September 23 when the rates setup, the regional-bank break and the bond-vol-off-compressed-realized rules fired in the same week (state RISK ON to REDUCE), held 35 to 46 in REDUCE for two weeks, and crossed into GET OUT on October 7 when the credit implied/realized rule went live on top of the others. Components: base 60, minus 8 rates setup, minus 10 regional banks vs yields, minus 8 equity implied cheap vs credit realized (live), minus 6 bond implied leading bond realized, minus 5 rates pressure with VIX asleep, minus 3 VIX and VVIX at the floor, plus 5 at the highs. To leave GET OUT the dial has to clear 45; the September fires roll off between October 14 and 23, which on a clean tape puts the dial at 49 and the state at REDUCE around the third week of October. RISK ON needs a reading above 60, which on the current components needs the credit implied/realized ratio to normalize or a risk-on print.
+**2026-10-07: dial 20, state GET OUT.** Components: base 60, minus 8 rates setup (fired September 23, persists 15 sessions), minus 10 regional banks vs yields (September 23, 22 sessions), minus 8 equity implied cheap vs credit realized (live daily condition), minus 6 bond implied leading bond realized (September 14, 22 sessions), minus 5 rates pressure with VIX asleep (live), minus 3 VIX and VVIX at the floor (live). The dial dropped from 74 to 33 on September 23 (RISK ON to REDUCE), held in the 30s and low 40s for two weeks, and crossed into GET OUT on October 7 when the credit rule went live on top of the others. To leave GET OUT the dial has to clear 45. The rates setup and bond-vol rules expire October 14 (dial 34 if nothing else changes); the bank rule expires October 23 (dial 44, still GET OUT). On expiries alone the earliest exit is October 23 **only if** one of the three daily conditions has also lifted by then; with none lifted the dial sits at 44 and the state stays GET OUT. A full capitulation print (+25) clears it the same day.
 
 ## 12. Volume
 
