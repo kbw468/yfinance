@@ -128,6 +128,8 @@ Rule D never triggers: there is no session where the drawdown probability is ext
 
 **The dial.** 100 minus the trailing percentile of P_off. OUT at 5 or below, IN again above 20. It is the same object as the reference rule, on the 0-100 scale the user asked for.
 
+**The 2020 path (`v2/path2020.py`, `results/v2_path2020_out.txt`).** Every statistic above excludes Feb to Jul 2020 by design. Scoring the frozen rules, fits and thresholds unchanged, with the window included: the reference rule went OUT on 2020-03-02 with SPY 8.6% off its high, took 0.22 of the Feb 19 to Mar 23 decline, came back IN on 2020-06-02, and finished 2020 at +16.6% against SPY +16.8%. Its maximum drawdown is -25.0 log (-22.2% in price) on both paths; the annualized return including the window is 11.04% against 10.66% for buy and hold. The C(0.90, 0.8) variant: same exit, +10.1% in 2020. F(0.95): same exit, back IN only on 2020-08-14, +7.2% in 2020. Buy and hold: -55.2% price maximum drawdown on both paths.
+
 ## 9. Today, 2026-10-07 close
 
 State **IN** since 2026-07-14, dial **90**. Not inside a vol episode (the last realized episode ended July 16; implied and realized episodes in 2026 ran Feb 5 to Apr 30 and Mar 31 to Apr 30).
@@ -149,7 +151,7 @@ The tape in ranks: VIX level 0.14, VIX 5-day ROC 0.28, VVIX/VIX 5-day ROC 0.53, 
 
 ## 11. What is not claimed
 
-The 15% declines are the loss that matters, and section 12 shows that the ones starting from a quiet tape are not caught before they are 5 to 10% in; the dedicated 15% model does not clear its permutation null. The drawdown probability is weak: a pooled AUC of 0.64 with a year-bootstrap interval that reaches 0.54, no better than the raw VIX level rank, and its calibration in the middle deciles is not monotone. The stay-in rule's advantage over buy-and-hold is 2008; everywhere else it costs return. The equal-weight breadth, volume, volatility-of-volume, range-compression and multifractal features were all built and screened, and none of them earns a place in the drawdown model; they are on the page as tape. The rally and vol-expansion probabilities are the robust outputs of this work. The research scripts in `v2/` reproduce every number here from the raw downloads, and `results/v2_*_out.txt` hold the full tables. Nothing in v1 (`README_v1.md`) should be relied on.
+The 15% declines are the loss that matters, and section 12 shows that the ones starting from a quiet tape are not caught before they are 5 to 10% in; the dedicated 15% model does not clear its permutation null. The drawdown probability is weak: a pooled AUC of 0.64 with a year-bootstrap interval that reaches 0.54, no better than the raw VIX level rank, and its calibration in the middle deciles is not monotone. The stay-in rule's advantage over buy-and-hold is 2008 and, on the included path, March 2020; everywhere else it costs return. The equal-weight breadth, volume, volatility-of-volume, range-compression and multifractal features were all built and screened, and none of them earns a place in the drawdown model; they are on the page as tape. The rally and vol-expansion probabilities are the robust outputs of this work. The research scripts in `v2/` reproduce every number here from the raw downloads, and `results/v2_*_out.txt` hold the full tables. Nothing in v1 (`README_v1.md`) should be relied on.
 
 ## 12. The 15% question (`v2/big.py`, `v2/onset.py`, `results/v2_big_out.txt`, `results/v2_big_null_out.txt`, `results/v2_onset_out.txt`)
 

@@ -133,6 +133,7 @@ if os.path.exists('BIG.pkl') and os.path.exists('PRED15.pkl') and os.path.exists
     print('P(15% decline / 63 sessions) today', FT['dd15_63']['today'], f"(pct {FT['dd15_63']['trailing_pct']}, decile {FT['dd15_63']['today_decile']})", '| /126', FT['dd15_126']['today'], f"(pct {FT['dd15_126']['trailing_pct']})", '| timing', summ.get('P15/63 (new)'))
 if os.path.exists('EARLY.pkl'):
     EA = pd.read_pickle('EARLY.pkl'); out['early'] = {'yearly': EA['yearly'], 'ties': EA['ties'], 'auc_early': EA['auc_early'], 'tables': {k: jsafe(v.to_dict(orient='records')) for k, v in EA['tables'].items()}}
+if os.path.exists('PATH2020.pkl'): out['path2020'] = jsafe(pd.read_pickle('PATH2020.pkl')['table'].to_dict(orient='records'))
 json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))
