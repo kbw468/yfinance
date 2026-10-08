@@ -13,9 +13,9 @@ Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
   Low-risk         VXN/VIX 10-session change < -5%
   Size flag        DXY in the top 20% of its trailing-year range: when a tier fires with
                    this on, the odds of an 8%+ drop have run about 3x higher (not a tier)
-Barometer (1-10): ridge logistic on DSPX percentile and the VVIX lag behind the VIX/VXN
-  move (the inputs that held up out of sample), scored as a decile of its own fitted values.
-  Its odds are shown split by the DXY size flag.
+Barometer (1-10): equal-weight average of DSPX, DXY and VVIX-lag percentiles (the trio a
+  walk-forward search over 792 input combinations picked every year from 2020 on), read as a
+  decile of past near-high scores.
   History is walk-forward (each year scored by a model fit on earlier years); the odds
   shown for each band are what happened out of sample.
 In a drawdown, the VVIX/VIX ratio's compression from its close on the SPY
@@ -187,98 +187,54 @@ def record(d, t, eps):
 
 
 # ---------- barometer ----------
-# Direction inputs only. VIX/VXN move, VXN/VIX and hedged credit were tested and added nothing out of sample;
-# DXY improved the 8% odds but not the 5% odds, so it sizes the reading through the size flag instead.
-BARO_COLS = ["dspx_p1y", "lagx"]
-BARO_LABELS = {"dspx_p1y": "DSPX percentile", "lagx": "VVIX lag behind the VIX/VXN move"}
+# Equal-weight average of three inputs, each as its percentile within its own trailing year, signed so
+# that higher = more drawdown risk. Chosen by a walk-forward search over every 3-6 input combination
+# of ten candidates (DSPX, DXY, VVIX lag, hedged credit, VXN/VIX, VIX/VXN move, XLU/SPY, COR1M,
+# VIX vs realized vol, MOVE): from 2020 on, each year's search picked this same trio.
+BARO_INPUTS = {"dspx": "DSPX percentile", "dxy": "DXY percentile", "lag": "VVIX lag behind the VIX/VXN move"}
 BARO_START = "2015-06-01"      # DSPX history
-BARO_RIDGE = 20.0
 BARO_BANDS = [(1, 2, "Low"), (3, 4, "Below average"), (5, 6, "Average"), (7, 8, "Elevated"), (9, 10, "High")]
 
 
-def fit_logit(X, y, ridge=BARO_RIDGE, iters=100):
-    X = np.column_stack([np.ones(len(X)), X])
-    w = np.zeros(X.shape[1])
-    pen = np.full(len(w), ridge)
-    pen[0] = 0.0
-    for _ in range(iters):
-        p = 1 / (1 + np.exp(-X @ w))
-        H = X.T @ (X * (p * (1 - p))[:, None]) + np.diag(pen)
-        step = np.linalg.solve(H, X.T @ (y - p) - pen * w)
-        w += step
-        if np.abs(step).max() < 1e-9:
-            break
-    return w
-
-
-def logit_score(w, X):
-    return 1 / (1 + np.exp(-(np.column_stack([np.ones(len(X)), X]) @ w)))
-
-
-def baro_model(train):
-    """Fit on near-high sessions; returns a scorer plus the decile cut points of its own fitted scores."""
-    X = train[BARO_COLS]
-    mu, sd = X.mean(), X.std().replace(0, 1)
-    w = fit_logit(((X - mu) / sd).values, (train.f40 <= -5).astype(float).values)
-    cuts = np.quantile(logit_score(w, ((X - mu) / sd).values), np.linspace(0.1, 0.9, 9))
-    return {"w": w, "mu": mu, "sd": sd, "cuts": cuts}
-
-
-def baro_read(m, rows):
-    z = ((rows[BARO_COLS] - m["mu"]) / m["sd"]).values
-    s = logit_score(m["w"], z)
-    return s, 1 + np.searchsorted(m["cuts"], s, side="right")
+def baro_inputs(d):
+    lagx = np.maximum(d.vix10, d.vxn10) - d.vvix10
+    return pd.DataFrame({"dspx": d.dspx_p1y, "dxy": d.dxy_p1y, "lag": pct_rank_1y(lagx)}, index=d.index)
 
 
 def barometer(d, t):
-    d = d.copy()
-    d["vol10"] = np.maximum(d.vix10, d.vxn10)
-    d["lagx"] = d.vol10 - d.vvix10
-    ok = t.gate & d[BARO_COLS].notna().all(axis=1)
-    near = d[ok].loc[BARO_START:]
-    hist = near[near.f40.notna()]
+    P = baro_inputs(d)
+    score = P.mean(axis=1)
+    ok = t.gate & P.notna().all(axis=1)
+    near = score[ok].loc[BARO_START:]
     reading = pd.Series(np.nan, index=d.index)
-    # walk-forward: each calendar year is scored by a model fit only on earlier years
+    # walk-forward deciles: each year is read against the near-high scores of earlier years only
     for yr in range(2018, d.index[-1].year + 1):
-        train = hist[hist.index < pd.Timestamp(f"{yr}-01-01")]
-        test = near[(near.index >= pd.Timestamp(f"{yr}-01-01")) & (near.index < pd.Timestamp(f"{yr + 1}-01-01"))]
-        if len(test) == 0 or len(train) < 250:
+        past = near[near.index < pd.Timestamp(f"{yr}-01-01")]
+        cur_yr = near[(near.index >= pd.Timestamp(f"{yr}-01-01")) & (near.index < pd.Timestamp(f"{yr + 1}-01-01"))]
+        if len(cur_yr) == 0 or len(past) < 250:
             continue
-        _, r = baro_read(baro_model(train), test)
-        reading.loc[test.index] = r
-    # calibration: realized outcomes by out-of-sample reading, split by the DXY size flag
-    cal = []
-    oos = hist.index.intersection(reading.dropna().index)
-    base5 = rate(hist.loc[oos, "f40"], -5)
-    base8 = rate(hist.loc[oos, "f40"], -8)
-    size = t["size"].reindex(oos).fillna(False)
-    r_oos = reading.loc[oos]
-    for lo, hi, lab in BARO_BANDS:
-        inb = (r_oos >= lo) & (r_oos <= hi)
-        row = {"lo": lo, "hi": hi, "label": lab}
-        for key, m in (("all", inb), ("on", inb & size), ("off", inb & ~size)):
-            f = hist.loc[m[m].index, "f40"]
-            row[key] = {"sessions": int(m.sum()), "p5": rate(f, -5), "p8": rate(f, -8),
-                        "med40": None if len(f) == 0 else round(float(f.median()), 2)}
-        cal.append(row)
-    # live reading from a model fit on all completed history
-    final = baro_model(hist)
-    cur = d.iloc[[-1]]
+        cuts = np.quantile(past.values, np.linspace(0.1, 0.9, 9))
+        reading.loc[cur_yr.index] = 1 + np.searchsorted(cuts, cur_yr.values, side="right")
     live = None
     if bool(ok.iloc[-1]):
-        _, r = baro_read(final, cur)
-        live = int(r[0])
+        cuts = np.quantile(near.iloc[:-1].values, np.linspace(0.1, 0.9, 9))
+        live = int(1 + np.searchsorted(cuts, score.iloc[-1], side="right"))
         reading.iloc[-1] = live
-        contrib = (final["w"][1:] * ((cur[BARO_COLS] - final["mu"]) / final["sd"]).values[0])
-        drivers = sorted(({"name": BARO_LABELS[c], "value": round(float(cur[c].iloc[0]), 2), "push": round(float(v), 2)}
-                          for c, v in zip(BARO_COLS, contrib)), key=lambda x: -abs(x["push"]))
-    else:
-        drivers = []
-    band = next((b for b in cal if live is not None and b["lo"] <= live <= b["hi"]), None)
-    size_now = bool(t["size"].iloc[-1])
-    return {"reading": live, "band": band, "cal": cal, "drivers": drivers, "base5": base5, "base8": base8, "size_now": size_now,
-            "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None,
-            "series": reading}
+    f40 = d.f40
+    oos = reading.dropna().index.intersection(f40.dropna().index)
+    cal = []
+    for lo, hi, lab in BARO_BANDS:
+        idx = reading.loc[oos][(reading.loc[oos] >= lo) & (reading.loc[oos] <= hi)].index
+        f = f40.loc[idx]
+        cal.append({"lo": lo, "hi": hi, "label": lab, "sessions": len(idx), "p5": rate(f, -5), "p8": rate(f, -8),
+                    "med40": None if len(f) == 0 else round(float(f.median()), 2)})
+    cur = P.iloc[-1]
+    drivers = [{"name": BARO_INPUTS[k], "pct": None if np.isnan(cur[k]) else round(float(cur[k]), 0),
+                "push": None if np.isnan(cur[k]) else round(float((cur[k] - 50) / len(BARO_INPUTS)), 1)} for k in BARO_INPUTS]
+    band = next((x for x in cal if live is not None and x["lo"] <= live <= x["hi"]), None)
+    return {"reading": live, "score": None if np.isnan(score.iloc[-1]) else round(float(score.iloc[-1]), 1), "band": band,
+            "cal": cal, "drivers": drivers, "base5": rate(f40.loc[oos], -5), "base8": rate(f40.loc[oos], -8),
+            "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None, "series": reading}
 
 
 def next_sessions(after, n):
