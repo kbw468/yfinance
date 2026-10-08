@@ -47,6 +47,7 @@ a{{color:var(--blue)}}
 <div class="why">{why}</div>
 <div class="dial">stay-in dial <b>{dial}</b> · OUT at 5 or below, back IN above 20 · {'inside a vol episode' if D.get('inside_episode') else 'no vol episode in progress'}</div>
 <div class="tiles">{''.join(f'<div class="tile"><div class="k">{k}</div><div class="v">{v:.3f}</div><div class="d">{d}</div></div>' for k, v, d in tiles)}</div>
+<div class="sub">The decile lines are history for the bucket each probability sits in today. The instruction does not act on them: REDUCE waits for the drawdown probability to reach its trailing 95th percentile, ADD for the rally probability to reach its 80th. A below-average bucket with HOLD printed is a normal reading.</div>
 <div class="rules"><b>REDUCE</b> when the drawdown probability reaches its trailing 95th percentile, until it falls below the 80th. <b>ADD</b> when the rule is IN and the rally probability is in the top fifth of its range. <b>HOLD</b> otherwise; dips are not sold. Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
 </div>
 """
