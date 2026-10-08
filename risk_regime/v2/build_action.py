@@ -47,8 +47,10 @@ if RC:
     legs = []
     if t['leg_live']: legs.append(f"SPY's rates of change point to lower highs and lower lows since {t['leg_since']}: the probability is at the {ordn(pl)} percentile of its trailing three years; that leg clears when it falls below the 80th.")
     if vv_live: legs.append(f"VIX is outrunning VVIX since {VV.get('since')}: VIX's 21-day rate of change is at the {ordn(vr)} percentile and the VIX/VVIX ratio's at the {ordn(rr)}; that leg clears when VIX's 21-day rate of change falls below its median.")
+    FT = D.get('fast', {}).get('today', {}); ft_live = bool(FT.get('live')); fp = FT.get('P_fast_pct')
+    if ft_live: legs.append(f"The fast leg is live since {FT.get('since')}: 1- to 5-day rates of change put a 3% SPY drop within 10 sessions at the {ordn(fp)} percentile of three years; that leg clears when it falls below the 80th.")
     if legs: action, why = 'REDUCE', ' '.join(legs)
-    else: action, why = 'HOLD', f"Dial {dial}. Lower-highs/lower-lows probability at the {ordn(pl)} percentile; VIX 21-day rate of change at the {ordn(vr)}, VIX/VVIX at the {ordn(rr)}. Full size. REDUCE needs the first at its 95th, or both rates of change at their 90th."
+    else: action, why = 'HOLD', f"Dial {dial}. Fast leg at the {ordn(fp) if fp is not None else '-'} percentile. Lower-highs/lower-lows probability at the {ordn(pl)} percentile; VIX 21-day rate of change at the {ordn(vr)}, VIX/VVIX at the {ordn(rr)}. Full size. REDUCE needs the lower-highs/lower-lows or fast reading at its 95th, or both VIX rates of change at their 90th."
     state = 'IN' if action == 'HOLD' else 'OUT'; D['state_since'] = t.get('state_since') or D.get('state_since')
     tiles = [('lower highs and lower lows within a month', t['P_lhll'], f"{ordn(pl)} percentile of its trailing three years · {note('P_lhll', 'hit', 'made lower highs and lower lows')}, {pc(DC['P_lhll'][t['dec']['P_lhll']]['dd5'])}% saw a 5% drop"),
              ('5% rally within a month', t['P_on'], f"{ordn(t['P_on_pct'])} percentile · {note('P_on', 'hit', 'rallied 5%')}"),
@@ -59,6 +61,9 @@ if not RC: tiles = [
     ('vol expands 1.5x within a month', P['P_vol']['today'], f"{ordn(p_vol)} percentile · {bucket_note('P_vol', 'P_volexp', 'expanded')}"),
 ]
 col = {'REDUCE': 'var(--orange)', 'HOLD': 'var(--ink)'}[action]
+_ft = D.get('fast', {}).get('today', {})
+FT_LINE = (f'<div class="dial">fast leg <b style="font-size:20px;color:{"var(--orange)" if _ft.get("live") else "var(--ink)"}">{"LIVE since " + str(_ft.get("since")) if _ft.get("live") else "quiet"}</b> · 1- to 5-day rates of change of every series, 3% drop within 10 sessions at the {ordn(_ft["P_fast_pct"])} percentile · REDUCE at the 95th</div>') if _ft else ''
+
 html = f"""<title>Risk Action</title>
 <meta name="description" content="One instruction from the vol tape regime system: hold or reduce">
 <style>
@@ -82,10 +87,11 @@ a{{color:var(--blue)}}
 <div class="action">{action}</div>
 <div class="why">{why}</div>
 <div class="dial">stay-in dial <b>{dial}</b> · REDUCE at 5 or below, HOLD again above 20{' (lower-highs/lower-lows probability)' if RC else ''} · {'inside a vol episode' if D.get('inside_episode') else 'no vol episode in progress'}</div>
+{FT_LINE}
 <div class="dial">VIX outrunning VVIX <b style="font-size:20px;color:{'var(--orange)' if vv_live else 'var(--ink)'}">{'LIVE since ' + str(VV.get('since')) if vv_live else 'quiet'}</b> · VIX {VV.get('vix')} ({VV.get('vix_roc21_pct'):+.1f}% in 21 sessions, {ordn(vr) if vr is not None else '-'} percentile) · VIX/VVIX {VV.get('ratio_roc21_pct'):+.1f}% ({ordn(rr) if rr is not None else '-'}) · fires at the 90th on both</div>
 <div class="tiles">{''.join(f'<div class="tile"><div class="k">{k}</div><div class="v">{v:.3f}</div><div class="d">{d}</div></div>' for k, v, d in tiles)}</div>
 <div class="sub">The decile lines are history for the bucket each probability sits in today. The instruction does not act on them: REDUCE waits for {'the lower-highs/lower-lows probability' if RC else 'the drawdown probability'} to reach its trailing 95th percentile, or for VIX to outrun VVIX. A below-average bucket with HOLD printed is a normal reading.</div>
-<div class="rules"><b>REDUCE</b> when {'the probability of lower highs and lower lows over the next month, from rates of change of price, volume and volatility only,' if RC else 'the drawdown probability'} reaches its trailing 95th percentile, until it falls below the 80th; or when VIX's 21-day rate of change and the VIX/VVIX ratio's are both in their top 10%, until VIX's falls back below its median. <b>HOLD</b> otherwise; dips are not sold. {'Inputs are rates of change only. ' if RC else ''}Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
+<div class="rules"><b>REDUCE</b> when {'the probability of lower highs and lower lows over the next month, from rates of change of price, volume and volatility only,' if RC else 'the drawdown probability'} reaches its trailing 95th percentile, until it falls below the 80th; or when VIX's 21-day rate of change and the VIX/VVIX ratio's are both in their top 10%, until VIX's falls back below its median; or when the fast leg (1- to 5-day rates of change of every series, a 3% drop within 10 sessions) reaches its 95th percentile, until it falls below the 80th. <b>HOLD</b> otherwise; dips are not sold. {'Inputs are rates of change only. ' if RC else ''}Everything is out of sample, 2005 to date, refit yearly. Evidence: <a href="https://claude.ai/artifact/KuXFhbnKXaRjJ7dYXW2ci4">full dashboard</a>.</div>
 </div>
 """
 open(out, 'w').write(html); print('wrote', out, '|', action, '|', why)

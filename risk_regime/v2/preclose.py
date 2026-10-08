@@ -89,5 +89,22 @@ if os.path.exists(f'{W}/LHLL.pkl') and 'roc' in D:
     if leg_now == 0 and leg_prev == 1: RT['leg_since'] = str(today.date())
     RT['instruction'] = 'REDUCE' if (leg_now == 0 or vv_now == 0) else 'HOLD'; D['instruction'] = RT['instruction']
     print(f"rate-of-change leg: P_lhll {x:.3f} pct {RT['P_lhll_pct']:.2f} (q95 {lq95:.3f}, q80 {lq80:.3f}) leg {leg_prev}->{leg_now} | instruction {RT['instruction']} | check (refit, production) yesterday: {RNOW['P_lhll_check']} {RNOW['P_on_check']} {RNOW['P_vol_check']}")
+# ---- fast leg (fastleg.py): 1- to 5-day rates of change, 3% drop within 10 sessions
+if os.path.exists(f'{W}/FASTLEG.pkl') and 'fast' in D:
+    FLg = pd.read_pickle(f'{W}/FASTLEG.pkl'); FTd = D['fast']['today']
+    sp2 = O['T']['SPY']['Close'].reindex(idx); fl2 = sp2[::-1].rolling(10, min_periods=10).min()[::-1].shift(-1)
+    yf_ = (fl2 / sp2 - 1 <= -0.03).astype(float).where(fl2.notna()).reindex(L.index)
+    cut2 = pd.Timestamp(f'{now.year}-01-01') - pd.Timedelta(days=30); ok2 = (L['ok21'] & ~EX & yf_.notna() & (L.index < cut2) & (L.index.year >= 1993)); rows2 = L.index[ok2]
+    feats2, signs2 = FLg['last']
+    clf2 = HistGradientBoostingClassifier(monotonic_cst=list(signs2), **PAR).fit(F.loc[rows2, feats2].to_numpy(np.float32), yf_[ok2].to_numpy())
+    xf = float(clf2.predict_proba(F.loc[[today], feats2].to_numpy(np.float32))[:, 1][0]); chkf = (round(float(clf2.predict_proba(F.loc[[prev], feats2].to_numpy(np.float32))[:, 1][0]), 4), round(float(FLg['pred'].iloc[-1]), 4))
+    hf = FLg['pred'].dropna().iloc[-756:]; fq95 = float(hf.quantile(0.95)); fq80 = float(hf.quantile(0.8))
+    f_prev = int(FLg['leg'].iloc[-1]); f_now = 0 if (f_prev == 1 and xf >= fq95) else (1 if (f_prev == 0 and xf < fq80) else f_prev)
+    FTd.update(P_fast=round(xf, 4), P_fast_pct=round(float((FLg['pred'].dropna().iloc[-755:] <= xf).mean()), 3), live=bool(f_now == 0))
+    if f_now == 0 and f_prev == 1: FTd['since'] = str(today.date())
+    word = 'REDUCE' if (f_now == 0 or (D.get('roc', {}).get('today', {}).get('leg_live')) or vv_now == 0) else 'HOLD'
+    FTd['instruction'] = word; D['instruction'] = word
+    if 'roc' in D: D['roc']['today']['instruction'] = word
+    print(f"fast leg: P {xf:.3f} pct {FTd['P_fast_pct']:.2f} (q95 {fq95:.3f}, q80 {fq80:.3f}) leg {f_prev}->{f_now} | instruction {word} | check (refit, production) yesterday: {chkf}")
 json.dump(D, open('preclose.json', 'w'))
 print(f"pre-close {now.strftime('%Y-%m-%d %H:%M')} ET | bar {today.date()} | SPY {D['preclose_spy']['last']} ({D['preclose_spy']['chg_pct']:+.2f}%) | P_off {pf:.3f} pct {tpct('P_off'):.2f} (q95 {q95:.3f}, q80 {q80:.3f}) ref {ref_prev}->{ref_now} | VIX {vt['vix']} VVIX {vt['vvix']} V21 {vr:.2f} R21 {rr:.2f} vv {vv_prev}->{vv_now} | check (refit, production) yesterday: {P_NOW['P_off_check']} {P_NOW['P_on_check']} {P_NOW['P_vol_check']}")

@@ -203,6 +203,19 @@ Instruction since 8 October 2026: REDUCE when the lower-highs/lower-lows probabi
 
 The two instructions are equivalent on these windows. What the change gives up: the levels leg is the one that protected 2008 (section 8), and the VIX-outrunning-VVIX leg starts in 2009, so the rate-of-change-only instruction has no tested record in a 2008-type slow bear; the lower-highs/lower-lows leg alone took a -54% worst drawdown over 2006-26. The levels leg is kept in the record and can be restored as a leg with one change in `v2/build_action.py`.
 
+## 15. The fast leg (`v2/fast.py`, `v2/fastleg.py`, `results/v2_fastleg_out.txt`)
+
+Inputs: 903 rates of change over 1 to 5 sessions (every ETF alone and against SPY, volume, every vol index and ratio, short realized-vol changes). Target: SPY falls 3% from the close within 10 sessions. Out of sample it ranks that at 0.55 overall and 0.61 since 2023, but its top tail is useful: as an exit at its trailing 95th percentile (HOLD again below the 80th) it beat buy and hold on return in every window. Its last fit reads rotation: semis lagging, utilities and gold leading over 3 to 5 days, short realized vol rising in materials and SPY.
+
+| SPY, 2020 included | 2010-26 ann / worst DD / exits a year | 2016-26 | 2023-26 |
+|---|---|---|---|
+| buy and hold | 13.4% / -33.7% / 0 | 14.1% / -33.7% / 0 | 20.2% / -18.8% / 0 |
+| two legs (lower highs/lows OR VIX outrunning VVIX) | 12.1% / -15.8% / 3.5 | 12.7% / -15.8% / 3.6 | 16.1% / -13.2% / 2.7 |
+| fast leg alone | 14.6% / -25.0% / 5.1 | 16.9% / -25.0% / 5.9 | 22.0% / -10.0% / 4.8 |
+| instruction since 8 Oct 2026: three legs | 11.7% / -16.1% / 6.2 | 13.3% / -15.5% / 6.7 | 17.9% / -9.4% / 5.6 |
+
+Replay test: every real SPY day of -1.7% to -2.6% (74) and of -3% to -5% (15) since 2010 that came while the word was HOLD, with every series moved as on that day and applied to the 7 October 2026 close: the fast leg lands at a median 85th percentile on the -2% replays (3 fire) and 90th on the -3% to -5% replays (3 fire, including 3 April 2025). From a calm tape at highs one close of -2% does not flip the word on its own; a -4% close does about one time in five. Added after its record was seen, one of several variants tried in `v2/fast.py`.
+
 ## 12. The 15% question (`v2/big.py`, `v2/onset.py`, `results/v2_big_out.txt`, `results/v2_big_null_out.txt`, `results/v2_onset_out.txt`)
 
 The loss that matters is 15%, not 5%. Stage 8 rebuilt the target around it and scored everything above on it.
