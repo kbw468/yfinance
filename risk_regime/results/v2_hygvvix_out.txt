@@ -1,0 +1,59 @@
+=== (1) standalone AUC, the feature itself as the score (sign chosen so above 0.5 means high value = more risk) ===
+                        feature  5%/21 2006-12  5%/21 2013-19  5%/21 2020-26  5%/21 2023-26  5%/21 all 2006-26  10%/63 2023-26  10%/63 all 2006-26
+          HYG Parkinson vol 21d           0.69           0.60           0.65           0.47               0.65            0.46                0.66
+           HYG Parkinson vol 5d           0.66           0.63           0.67           0.55               0.65            0.46                0.68
+           HYG realized vol 21d           0.67           0.61           0.65           0.45               0.65            0.53                0.68
+HYG signed volume 21d, inverted           0.59           0.66           0.65           0.65               0.62            0.55                0.63
+          HYG 21d ROC, inverted           0.52           0.70           0.60           0.62               0.59            0.62                0.65
+        HYG 63d relative to SPY           0.64           0.43           0.65           0.69               0.58            0.85                0.67
+     HYG drawdown 63d, inverted           0.65           0.67           0.64           0.53               0.67            0.46                0.73
+   HYG persistence h2, inverted           0.60           0.65           0.57           0.40               0.62            0.28                0.69
+VIX over HYG realized, inverted           0.65           0.53           0.61           0.34               0.61            0.37                0.64
+                     VVIX level           0.65           0.64           0.46           0.59               0.59            0.78                0.58
+                    VVIX 5d ROC           0.54           0.54           0.52           0.55               0.54            0.52                0.51
+                   VVIX 21d ROC           0.59           0.50           0.53           0.56               0.54            0.50                0.53
+       VVIX/VIX level, inverted           0.65           0.62           0.65           0.60               0.64            0.64                0.65
+           reference: VIX level           0.65           0.67           0.60           0.62               0.65            0.80                0.68
+   reference: SPY Parkinson 21d           0.66           0.62           0.67           0.66               0.66            0.85                0.72
+
+=== (2) what followed each configuration (5%/21 = SPY fell 5% within 21 sessions; 10%/63; rally = rose 5% within 21; vol x1.5 = realized vol expanded 1.5x within 21) ===
+                                                         configuration      window  sessions  episodes  5%/21  base 5%/21  10%/63  base 10%/63  rally 5%/21  vol x1.5  mean next month %  base next month %
+                                                 HYG range vol >= 80th all 2006-26       708        19   0.34        0.17    0.25         0.14         0.40      0.06               0.57               0.88
+                                                 HYG range vol >= 80th     2006-15       328         9   0.42        0.20    0.32         0.18         0.35      0.10              -0.88               0.51
+                                                 HYG range vol >= 80th     2016-26       380        11   0.27        0.14    0.18         0.10         0.44      0.02               1.83               1.25
+                                                 HYG range vol >= 80th     2023-26        49         3   0.02        0.11    0.00         0.07         0.94      0.00               7.84               1.61
+                       HYG range vol >= 80th and HYG signed volume < 0 all 2006-26       442        24   0.35        0.17    0.23         0.14         0.45      0.09               0.61               0.88
+                       HYG range vol >= 80th and HYG signed volume < 0     2006-15       211        14   0.34        0.20    0.27         0.18         0.38      0.15              -0.52               0.51
+                       HYG range vol >= 80th and HYG signed volume < 0     2016-26       231        11   0.36        0.14    0.19         0.10         0.51      0.03               1.63               1.25
+                       HYG range vol >= 80th and HYG signed volume < 0     2023-26        31         3   0.03        0.11    0.00         0.07         0.94      0.00               8.60               1.61
+credit/equity divergence: HYG range vol >= 80th, SPY range vol <= 30th all 2006-26         9         1   0.00        0.17    0.00         0.14         0.00      1.00               0.81               0.88
+credit/equity divergence: HYG range vol >= 80th, SPY range vol <= 30th     2006-15         9         1   0.00        0.20    0.00         0.18         0.00      1.00               0.81               0.51
+credit/equity divergence: HYG range vol >= 80th, SPY range vol <= 30th     2016-26         0         0    NaN        0.14     NaN         0.10          NaN       NaN                NaN               1.25
+credit/equity divergence: HYG range vol >= 80th, SPY range vol <= 30th     2023-26         0         0    NaN        0.11     NaN         0.07          NaN       NaN                NaN               1.61
+                                  divergence and HYG signed volume < 0 all 2006-26         9         1   0.00        0.17    0.00         0.14         0.00      1.00               0.81               0.88
+                                  divergence and HYG signed volume < 0     2006-15         9         1   0.00        0.20    0.00         0.18         0.00      1.00               0.81               0.51
+                                  divergence and HYG signed volume < 0     2016-26         0         0    NaN        0.14     NaN         0.10          NaN       NaN                NaN               1.25
+                                  divergence and HYG signed volume < 0     2023-26         0         0    NaN        0.11     NaN         0.07          NaN       NaN                NaN               1.61
+                                                    VVIX level <= 10th all 2006-26       543        42   0.14        0.17    0.11         0.14         0.15      0.08               0.84               0.88
+                                                    VVIX level <= 10th     2006-15       241        18   0.07        0.20    0.08         0.18         0.05      0.12               1.30               0.51
+                                                    VVIX level <= 10th     2016-26       302        24   0.20        0.14    0.14         0.10         0.22      0.05               0.47               1.25
+                                                    VVIX level <= 10th     2023-26       112        11   0.05        0.11    0.00         0.07         0.13      0.06               1.59               1.61
+                            VVIX <= 10th and VIX <= 20th (both floors) all 2006-26       256        28   0.07        0.17    0.00         0.14         0.02      0.11               1.10               0.88
+                            VVIX <= 10th and VIX <= 20th (both floors)     2006-15       154        12   0.08        0.20    0.00         0.18         0.00      0.15               1.03               0.51
+                            VVIX <= 10th and VIX <= 20th (both floors)     2016-26       102        16   0.06        0.14    0.00         0.10         0.06      0.04               1.21               1.25
+                            VVIX <= 10th and VIX <= 20th (both floors)     2023-26        69        10   0.09        0.11    0.00         0.07         0.09      0.06               1.39               1.61
+                 divergence and VVIX <= 10th (the 7 Oct configuration) all 2006-26         0         0    NaN        0.17     NaN         0.14          NaN       NaN                NaN               0.88
+                 divergence and VVIX <= 10th (the 7 Oct configuration)     2006-15         0         0    NaN        0.20     NaN         0.18          NaN       NaN                NaN               0.51
+                 divergence and VVIX <= 10th (the 7 Oct configuration)     2016-26         0         0    NaN        0.14     NaN         0.10          NaN       NaN                NaN               1.25
+                 divergence and VVIX <= 10th (the 7 Oct configuration)     2023-26         0         0    NaN        0.11     NaN         0.07          NaN       NaN                NaN               1.61
+                                            HYG persistence h2 <= 10th all 2006-26       616        37   0.20        0.17    0.18         0.14         0.17      0.18               0.44               0.88
+                                            HYG persistence h2 <= 10th     2006-15       268        19   0.13        0.20    0.20         0.18         0.09      0.18               0.21               0.51
+                                            HYG persistence h2 <= 10th     2016-26       348        18   0.25        0.14    0.16         0.10         0.22      0.19               0.61               1.25
+                                            HYG persistence h2 <= 10th     2023-26       130         8   0.05        0.11    0.00         0.07         0.21      0.13               2.51               1.61
+                                 VVIX 5d ROC >= 90th while VIX <= 30th all 2006-26        62        32   0.13        0.17    0.03         0.14         0.05      0.23               0.97               0.88
+                                 VVIX 5d ROC >= 90th while VIX <= 30th     2006-15        39        17   0.21        0.20    0.05         0.18         0.05      0.23               0.73               0.51
+                                 VVIX 5d ROC >= 90th while VIX <= 30th     2016-26        23        15   0.00        0.14    0.00         0.10         0.04      0.22               1.39               1.25
+                                 VVIX 5d ROC >= 90th while VIX <= 30th     2023-26        14         9   0.00        0.11    0.00         0.07         0.07      0.21               1.21               1.61
+
+7 Oct 2026 close: {'HYG range vol 21d': 0.84, 'HYG range vol 5d': 0.89, 'HYG signed volume 21d': -0.35, 'HYG persistence h2': 0.06, 'SPY range vol 21d': 0.15, 'VIX level': 0.14, 'VVIX level': 0.01, 'VVIX 5d ROC': 0.21}
+configurations true today: ['HYG range vol >= 80th', 'HYG range vol >= 80th and HYG signed volume < 0', 'credit/equity divergence: HYG range vol >= 80th, SPY range vol <= 30th', 'divergence and HYG signed volume < 0', 'VVIX level <= 10th', 'VVIX <= 10th and VIX <= 20th (both floors)', 'divergence and VVIX <= 10th (the 7 Oct configuration)', 'HYG persistence h2 <= 10th']
