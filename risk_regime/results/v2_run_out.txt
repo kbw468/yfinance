@@ -6,7 +6,9 @@
 == model2
 == decision
 == tickers
+== big
+== onset
 == snapshot
-wrote /home/user/yfinance/risk_regime/dashboard_v2.html 200 KB
-wrote /home/user/yfinance/risk_regime/results/VOL_TAPE_READING_v2.pdf 265 KB
+wrote /home/user/yfinance/risk_regime/dashboard_v2.html 251 KB
+wrote /home/user/yfinance/risk_regime/results/VOL_TAPE_READING_v2.pdf 301 KB
 done: 2026-10-08 2026-10-07

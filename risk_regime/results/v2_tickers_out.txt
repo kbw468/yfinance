@@ -25,14 +25,14 @@ XHE        3                        3       cc21_63_rank -0.067          rel21_r
 XHS        2                        6    volofvol21_rank -0.065               dd252    0.077     volofvol21_rank  -0.071
 XHB        3                        3        vol_rank252 -0.058                 nr5    0.053     volofvol21_rank   0.043
 KIE        3                        0        vol_rank252 -0.039     volofvol21_rank    0.038               dd252  -0.060
-XME        3                        3          cc21_rank -0.065          rel63_rank    0.052          rel63_rank   0.092
+XME        3                        3          cc21_rank -0.065     volofvol21_rank    0.052          rel63_rank   0.092
 XES        3                        0     cc21_roc5_rank -0.022          roc21_rank    0.049       amihud21_rank   0.053
 XOP        3                        1        cc5_21_rank  0.000       volvol21_rank    0.094  volvol21_roc5_rank   0.022
 XPH        3                        1    cc21_roc21_rank -0.052          roc21_rank    0.016         pk5_21_rank   0.062
 KRE        3                        1     pk21_cc21_rank -0.067   relrv21_roc5_rank    0.034         signedvol21  -0.074
 XRT        3                        1         range_rank -0.002               dd252    0.063       amihud21_rank   0.063
 XSD        3                        0  compress5_63_rank -0.048                 nr5    0.038         vroc21_rank   0.055
-XSW        2                        4          pk21_rank -0.150          rel63_rank    0.067        gap5abs_rank   0.075
+XSW        2                        4          pk21_rank -0.150          rel63_rank    0.066        gap5abs_rank   0.075
 XTL        3                        0                nr5 -0.047          rel63_rank    0.029           pk21_rank   0.112
 XTN        3                        3  relrv21_roc5_rank -0.059          roc63_rank    0.055        gap5abs_rank   0.116
 XLK        3                        4         range_rank -0.108                 nr5    0.072          vol_rank63   0.022
@@ -294,7 +294,7 @@ BNO                     -0.27 -0.08 -0.29
 XHB                     -0.36 -0.20 -0.25
 GLD                     -0.17 -0.45 -0.23
 XHE                      0.47 -0.11 -0.19
-XLV                      0.03 -0.06 -0.15
+XLV                      0.03 -0.05 -0.15
 XLF                     -0.22 -0.03 -0.13
 KRE                     -0.61 -0.24 -0.13
 KIE                     -0.03 -0.08 -0.10

@@ -1,0 +1,325 @@
+133 rules; 15% events scored: ['2007-10-09->2008-03-10 -17.8%', '2008-05-19->2008-10-10 -37.5%', '2008-10-13->2008-10-27 -17.2%', '2008-11-04->2008-11-20 -24.9%', '2009-01-06->2009-03-09 -27.1%', '2010-04-23->2010-07-02 -15.7%', '2011-04-29->2011-10-03 -18.6%', '2018-09-20->2018-12-24 -19.3%', '2022-01-03->2022-06-16 -23.0%', '2022-08-16->2022-10-12 -16.7%', '2025-02-19->2025-04-08 -18.8%']
+
+=== whole grid, sorted by annualized return (2006-2026, Feb-Jul 2020 excluded; log returns; "taken" = share of each 15% peak-to-trough decline the book took) ===
+                                                                                                       rule   ann  sharpe  maxDD  exposure  spells  spells w/o any 10% decline  mean taken  worst taken  return avoided inside 15% events, total %  return given up outside 15% events, total %  net total % today
+                                                                reference C: OUT P_off>q0.95, IN P_off<q0.8 11.21    0.82  -25.0      0.87      14                           5        0.50         1.00                                      142.3                                        134.1          8.2    IN
+                                             vol alert q0.85/42s & SPY 10% below 63d high | IN new 42d high 11.13    0.81  -35.6      0.91       8                           1        0.54         1.29                                      121.3                                        114.6          6.7    IN
+                                             vol alert q0.85/21s & SPY 10% below 63d high | IN new 42d high 10.99    0.80  -35.6      0.91       8                           1        0.55         1.29                                      118.3                                        114.6          3.7    IN
+                                                                                           SPY buy and hold 10.80    0.60  -80.3      1.00       0                           0        1.00         1.00                                        0.0                                          0.0          0.0    IN
+                                            control: SPY 10% below 63d high or P_off>q.95 | IN new 42d high 10.68    0.87  -33.4      0.82      20                           6        0.36         0.84                                      162.3                                        164.8         -2.5    IN
+                                              vol alert q0.9/21s & SPY 10% below 63d high | IN new 42d high 10.68    0.77  -35.6      0.91       7                           0        0.58         1.29                                      111.4                                        113.8         -2.4    IN
+                                              vol alert q0.9/42s & SPY 10% below 63d high | IN new 42d high 10.68    0.77  -35.6      0.91       7                           0        0.58         1.29                                      111.4                                        113.8         -2.4    IN
+                                     vol alert q0.85/42s & SPY 10% below 63d high | IN calm or new 42d high 10.65    0.76  -35.6      0.92      27                           5        0.62         1.29                                      103.8                                        106.8         -3.0    IN
+                              vol alert q0.85/42s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high 10.64    0.84  -41.4      0.83      19                           7        0.42         1.02                                      149.9                                        153.1         -3.2    IN
+                              vol alert q0.85/21s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high 10.50    0.83  -41.4      0.83      19                           7        0.43         1.02                                      147.0                                        153.1         -6.1    IN
+                               vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high 10.49    0.83  -41.4      0.84      18                           6        0.43         1.02                                      146.1                                        152.4         -6.3    IN
+                               vol alert q0.9/21s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high 10.49    0.83  -41.4      0.84      18                           6        0.43         1.02                                      146.1                                        152.4         -6.3    IN
+                             vol alert q0.85/42s & SPY 10% below 63d high | IN calm (P_off<q.8 & P_vol<q.7) 10.43    0.77  -33.3      0.89      25                           4        0.59         1.20                                      116.8                                        124.3         -7.5    IN
+                                      vol alert q0.9/21s & SPY 10% below 63d high | IN calm or new 42d high 10.31    0.71  -35.6      0.93      22                           5        0.71         1.29                                       82.6                                         92.6        -10.0    IN
+                                     vol alert q0.85/21s & SPY 10% below 63d high | IN calm or new 42d high 10.28    0.73  -35.6      0.92      25                           6        0.65         1.29                                       95.6                                        106.1        -10.5    IN
+vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm (P_off<q.8 & P_vol<q.7) 10.25    0.82  -30.8      0.82      44                          14        0.43         1.04                                      155.4                                        166.6        -11.2    IN
+                                      vol alert q0.9/42s & SPY 10% below 63d high | IN calm or new 42d high 10.20    0.72  -35.6      0.92      26                           4        0.66         1.29                                       93.9                                        106.0        -12.1    IN
+                             vol alert q0.85/21s & SPY 10% below 63d high | IN calm (P_off<q.8 & P_vol<q.7) 10.20    0.75  -33.3      0.89      23                           5        0.62         1.20                                      111.6                                        123.7        -12.1    IN
+                              vol alert q0.9/21s & SPY 10% below 63d high | IN calm (P_off<q.8 & P_vol<q.7) 10.18    0.73  -33.3      0.90      21                           5        0.67         1.20                                       99.4                                        112.1        -12.7    IN
+        vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm or new 42d high 10.12    0.79  -31.1      0.85      60                          24        0.47         1.04                                      138.5                                        152.4        -13.9    IN
+                              vol alert q0.9/42s & SPY 10% below 63d high | IN calm (P_off<q.8 & P_vol<q.7) 10.07    0.74  -33.3      0.89      25                           4        0.62         1.20                                      110.8                                        125.5        -14.7    IN
+                                                          control: SPY 10% below 63d high | IN new 42d high 10.05    0.79  -33.4      0.86      13                           1        0.42         0.84                                      150.5                                        165.7        -15.2    IN
+                      vol alert q0.85/42s & SPY 10% below 63d high, or P_off>q.95 | IN calm or new 42d high 10.02    0.75  -35.9      0.87      42                          13        0.52         1.04                                      127.1                                        142.8        -15.7    IN
+              vol alert q0.85/42s & SPY 10% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  9.96    0.77  -33.6      0.85      34                           9        0.50         1.04                                      140.1                                        157.1        -17.0    IN
+                vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high  9.89    0.81  -36.6      0.81      32                          18        0.37         1.00                                      160.0                                        178.4        -18.4    IN
+              vol alert q0.85/21s & SPY 10% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  9.81    0.76  -33.6      0.85      32                          10        0.52         1.16                                      136.4                                        156.4        -20.0    IN
+                                                  control: SPY 10% below 63d high | IN calm or new 42d high  9.81    0.74  -31.5      0.89      45                          10        0.51         1.03                                      131.2                                        151.3        -20.1    IN
+                      vol alert q0.85/21s & SPY 10% below 63d high, or P_off>q.95 | IN calm or new 42d high  9.73    0.73  -35.9      0.88      40                          14        0.55         1.16                                      120.4                                        142.1        -21.7    IN
+                                    control: SPY 10% below 63d high or P_off>q.95 | IN calm or new 42d high  9.62    0.74  -31.5      0.86      56                          16        0.48         1.03                                      137.6                                        161.5        -23.9    IN
+               vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  9.60    0.74  -33.6      0.85      34                           9        0.52         1.04                                      134.0                                        158.3        -24.3    IN
+                       vol alert q0.9/42s & SPY 10% below 63d high, or P_off>q.95 | IN calm or new 42d high  9.57    0.71  -35.9      0.88      41                          12        0.56         1.04                                      117.1                                        142.0        -24.9    IN
+                                       vol alert q0.9/21s & SPY 7% below 63d high | IN calm or new 42d high  9.56    0.69  -33.2      0.89      47                          18        0.62         1.20                                      103.9                                        129.0        -25.1    IN
+                            control: SPY 10% below 63d high or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  9.45    0.75  -30.7      0.83      48                          12        0.45         1.03                                      150.6                                        177.9        -27.3    IN
+                                      vol alert q0.85/42s & SPY 7% below 63d high | IN calm or new 42d high  9.38    0.70  -33.7      0.88      63                          26        0.53         1.21                                      125.6                                        154.4        -28.8    IN
+                                          control: SPY 10% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  9.36    0.73  -30.7      0.85      43                           9        0.48         1.03                                      144.2                                        173.4        -29.2    IN
+                               vol alert q0.9/21s & SPY 7% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  9.28    0.69  -30.9      0.86      46                          18        0.58         1.11                                      120.8                                        151.4        -30.6    IN
+               vol alert q0.9/21s & SPY 10% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  9.15    0.70  -33.6      0.85      31                          10        0.57         1.16                                      124.3                                        157.6        -33.3    IN
+                       vol alert q0.9/21s & SPY 10% below 63d high, or P_off>q.95 | IN calm or new 42d high  9.12    0.68  -35.9      0.88      38                          13        0.61         1.16                                      107.4                                        141.4        -34.0    IN
+                                      vol alert q0.85/21s & SPY 7% below 63d high | IN calm or new 42d high  9.04    0.67  -33.2      0.88      54                          23        0.57         1.20                                      115.9                                        151.6        -35.7    IN
+                                       vol alert q0.9/42s & SPY 7% below 63d high | IN calm or new 42d high  9.01    0.67  -33.7      0.89      58                          21        0.58         1.21                                      112.5                                        148.8        -36.3    IN
+                              vol alert q0.85/42s & SPY 7% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  8.97    0.69  -31.3      0.85      60                          24        0.51         1.12                                      135.5                                        172.5        -37.0    IN
+                                               vol alert q0.9/21s & SPY 7% below 63d high | IN new 42d high  8.95    0.70  -33.2      0.85      15                           7        0.44         1.20                                      142.0                                        179.5        -37.5    IN
+                              vol alert q0.85/21s & SPY 7% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  8.93    0.69  -30.9      0.85      51                          21        0.53         1.11                                      131.9                                        169.8        -37.9    IN
+                                                   control: SPY 7% below 63d high | IN calm or new 42d high  8.82    0.71  -28.0      0.84      99                          40        0.44         0.87                                      148.9                                        188.9        -40.0    IN
+         vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm or new 42d high  8.80    0.70  -29.2      0.83      90                          41        0.45         1.04                                      142.9                                        183.4        -40.5    IN
+ vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.78    0.73  -30.8      0.80      74                          31        0.42         1.04                                      159.8                                        200.6        -40.8    IN
+                               vol alert q0.9/42s & SPY 7% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  8.73    0.67  -31.3      0.85      57                          21        0.54         1.12                                      129.4                                        171.2        -41.8    IN
+                                       vol alert q0.9/21s & SPY 5% below 63d high | IN calm or new 42d high  8.70    0.64  -33.2      0.88      96                          51        0.60         1.20                                      107.3                                        149.9        -42.6    IN
+                       vol alert q0.85/42s & SPY 7% below 63d high, or P_off>q.95 | IN calm or new 42d high  8.62    0.67  -34.0      0.85      76                          34        0.50         1.04                                      134.6                                        178.7        -44.1    IN
+                                     control: SPY 7% below 63d high or P_off>q.95 | IN calm or new 42d high  8.47    0.68  -28.0      0.83     108                          45        0.43         0.87                                      151.0                                        198.1        -47.1    IN
+                                              vol alert q0.85/21s & SPY 7% below 63d high | IN new 42d high  8.46    0.66  -33.2      0.84      18                          10        0.44         1.20                                      142.9                                        190.4        -47.5    IN
+                                vol alert q0.9/21s & SPY 7% below 63d high, or P_off>q.95 | IN new 42d high  8.45    0.70  -39.0      0.79      24                          12        0.39         1.00                                      155.0                                        202.7        -47.7    IN
+               vol alert q0.85/21s & SPY 7% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.41    0.67  -31.2      0.82      58                          26        0.49         1.06                                      142.5                                        190.8        -48.3    IN
+               vol alert q0.85/42s & SPY 7% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.37    0.67  -31.7      0.82      67                          29        0.48         1.04                                      144.4                                        193.6        -49.2    IN
+                               vol alert q0.9/21s & SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  8.37    0.64  -33.5      0.85      95                          51        0.57         1.11                                      124.1                                        173.4        -49.3    IN
+                       vol alert q0.85/21s & SPY 7% below 63d high, or P_off>q.95 | IN calm or new 42d high  8.36    0.64  -33.5      0.85      67                          31        0.52         1.06                                      126.5                                        175.9        -49.4    IN
+                                           control: SPY 7% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  8.30    0.69  -25.5      0.81      95                          37        0.42         0.87                                      158.8                                        209.4        -50.6    IN
+                        vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 | IN calm or new 42d high  8.25    0.63  -34.0      0.85      71                          29        0.54         1.04                                      121.5                                        173.1        -51.6    IN
+                        vol alert q0.9/21s & SPY 7% below 63d high, or P_off>q.95 | IN calm or new 42d high  8.25    0.63  -33.5      0.86      61                          26        0.58         1.06                                      114.5                                        166.1        -51.6    IN
+                             control: SPY 7% below 63d high or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.23    0.69  -25.5      0.80      98                          39        0.41         0.87                                      160.9                                        212.9        -52.0    IN
+                vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.14    0.65  -31.7      0.82      64                          26        0.51         1.04                                      138.4                                        192.3        -53.9    IN
+                vol alert q0.9/21s & SPY 7% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  8.13    0.64  -31.2      0.83      54                          23        0.54         1.06                                      131.3                                        185.3        -54.0    IN
+                                               vol alert q0.9/42s & SPY 7% below 63d high | IN new 42d high  8.13    0.64  -33.7      0.84      17                           8        0.44         1.21                                      141.6                                        195.5        -53.9    IN
+                                              vol alert q0.85/42s & SPY 7% below 63d high | IN new 42d high  7.97    0.63  -33.7      0.82      20                          11        0.43         1.21                                      148.6                                        205.9        -57.3    IN
+                               vol alert q0.85/21s & SPY 7% below 63d high, or P_off>q.95 | IN new 42d high  7.95    0.66  -39.0      0.78      27                          15        0.38         1.00                                      155.9                                        213.5        -57.6    IN
+                                      vol alert q0.85/42s & SPY 5% below 63d high | IN calm or new 42d high  7.85    0.61  -41.9      0.85     140                          82        0.51         1.17                                      132.2                                        191.9        -59.7    IN
+                                       vol alert q0.9/42s & SPY 5% below 63d high | IN calm or new 42d high  7.81    0.59  -32.5      0.86     125                          67        0.55         1.17                                      117.9                                        178.3        -60.4    IN
+                              vol alert q0.85/42s & SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  7.78    0.62  -32.8      0.82     135                          78        0.49         1.10                                      140.9                                        202.0        -61.1    IN
+                              vol alert q0.85/21s & SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  7.68    0.61  -34.6      0.83     107                          61        0.52         1.11                                      135.3                                        198.4        -63.1    IN
+         vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm or new 42d high  7.66    0.63  -29.2      0.81     152                          85        0.43         1.10                                      148.2                                        211.7        -63.5    IN
+                                vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 | IN new 42d high  7.63    0.64  -39.5      0.78      26                          13        0.39         1.00                                      154.6                                        218.7        -64.1    IN
+                                      vol alert q0.85/21s & SPY 5% below 63d high | IN calm or new 42d high  7.62    0.58  -39.0      0.86     111                          64        0.55         1.20                                      119.3                                        183.6        -64.3    IN
+ vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  7.60    0.64  -33.5      0.78     136                          75        0.39         1.10                                      165.1                                        229.9        -64.8    IN
+                                                   control: SPY 5% below 63d high | IN calm or new 42d high  7.55    0.64  -37.7      0.80     204                         116        0.40         0.92                                      160.2                                        225.9        -65.7    IN
+                               vol alert q0.9/42s & SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  7.49    0.59  -33.5      0.83     124                          67        0.52         1.10                                      134.8                                        201.8        -67.0    IN
+                               vol alert q0.85/42s & SPY 7% below 63d high, or P_off>q.95 | IN new 42d high  7.47    0.63  -39.5      0.77      29                          16        0.37         1.00                                      161.5                                        229.0        -67.5    IN
+                        vol alert q0.9/21s & SPY 5% below 63d high, or P_off>q.95 | IN calm or new 42d high  7.38    0.57  -33.5      0.84     110                          59        0.56         1.10                                      117.8                                        187.0        -69.2    IN
+                                           control: SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  7.35    0.64  -28.5      0.77     197                         111        0.38         0.92                                      168.7                                        238.4        -69.7    IN
+                             control: SPY 5% below 63d high or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  7.29    0.64  -28.5      0.76     200                         113        0.37         0.92                                      170.8                                        241.8        -71.0    IN
+                vol alert q0.9/21s & SPY 5% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  7.22    0.58  -33.5      0.81     103                          56        0.53         1.10                                      134.7                                        207.2        -72.5    IN
+                                     control: SPY 5% below 63d high or P_off>q.95 | IN calm or new 42d high  7.20    0.61  -37.7      0.79     213                         121        0.39         0.92                                      162.3                                        235.1        -72.8    IN
+               vol alert q0.85/42s & SPY 5% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  7.18    0.59  -32.8      0.79     142                          83        0.45         1.10                                      149.8                                        223.1        -73.3    IN
+               vol alert q0.85/21s & SPY 5% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  7.16    0.59  -34.6      0.80     114                          66        0.47         1.10                                      145.8                                        219.5        -73.7    IN
+                       vol alert q0.85/42s & SPY 5% below 63d high, or P_off>q.95 | IN calm or new 42d high  7.09    0.57  -41.9      0.81     153                          90        0.48         1.10                                      141.2                                        216.2        -75.0    IN
+                        vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 | IN calm or new 42d high  7.06    0.56  -32.8      0.83     138                          75        0.52         1.10                                      126.9                                        202.6        -75.7    IN
+                 vol alert q0.9/42s & SPY 7% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high  7.03    0.61  -34.7      0.76      40                          25        0.33         1.00                                      168.5                                        244.8        -76.3    IN
+                                             control: SPY 7% below 63d high or P_off>q.95 | IN new 42d high  7.03    0.64  -33.5      0.74      34                          18        0.27         0.64                                      184.7                                        261.1        -76.4    IN
+                       vol alert q0.85/21s & SPY 5% below 63d high, or P_off>q.95 | IN calm or new 42d high  6.94    0.55  -39.0      0.83     124                          72        0.51         1.10                                      129.9                                        207.9        -78.0    IN
+                vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  6.89    0.56  -33.5      0.80     131                          72        0.48         1.10                                      143.8                                        222.9        -79.1    IN
+                                                           control: SPY 7% below 63d high | IN new 42d high  6.84    0.61  -33.5      0.76      28                          14        0.30         0.64                                      178.6                                        258.8        -80.2    IN
+                                       vol alert q0.9/21s & SPY 3% below 63d high | IN calm or new 42d high  6.79    0.51  -37.2      0.84     181                         122        0.55         1.20                                      119.9                                        201.0        -81.1    IN
+                                      vol alert q0.85/21s & SPY 3% below 63d high | IN calm or new 42d high  6.41    0.51  -37.8      0.81     214                         151        0.48         1.20                                      142.0                                        230.7        -88.7    IN
+                                               vol alert q0.9/21s & SPY 5% below 63d high | IN new 42d high  6.26    0.51  -33.2      0.79      27                          15        0.43         1.20                                      144.1                                        235.9        -91.8    IN
+                               vol alert q0.9/21s & SPY 3% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  6.10    0.48  -36.4      0.80     179                         121        0.51         1.11                                      136.7                                        231.9        -95.2    IN
+                             control: SPY 3% below 63d high or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  5.88    0.57  -27.2      0.69     391                         266        0.30         0.95                                      186.9                                        286.4        -99.5    IN
+                                     control: SPY 3% below 63d high or P_off>q.95 | IN calm or new 42d high  5.79    0.54  -34.4      0.71     408                         278        0.31         0.95                                      182.7                                        284.1       -101.4    IN
+                       vol alert q0.85/21s & SPY 3% below 63d high, or P_off>q.95 | IN calm or new 42d high  5.78    0.48  -37.8      0.78     226                         159        0.43         1.00                                      153.5                                        255.0       -101.5    IN
+                                               vol alert q0.9/42s & SPY 5% below 63d high | IN new 42d high  5.77    0.47  -30.6      0.78      30                          18        0.42         1.09                                      146.7                                        248.4       -101.7    IN
+                                           control: SPY 3% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  5.73    0.56  -27.2      0.69     391                         266        0.31         0.95                                      183.9                                        286.4       -102.5    IN
+                              vol alert q0.85/21s & SPY 3% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  5.71    0.47  -36.4      0.78     208                         146        0.46         1.11                                      147.9                                        250.8       -102.9    IN
+                                                   control: SPY 3% below 63d high | IN calm or new 42d high  5.67    0.53  -35.9      0.71     406                         277        0.32         0.95                                      179.7                                        283.4       -103.7    IN
+                                vol alert q0.9/21s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high  5.66    0.49  -39.0      0.74      36                          20        0.38         1.00                                      155.1                                        259.0       -103.9    IN
+                        vol alert q0.9/21s & SPY 3% below 63d high, or P_off>q.95 | IN calm or new 42d high  5.52    0.44  -37.5      0.81     194                         130        0.50         1.00                                      131.4                                        238.1       -106.7    IN
+         vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm or new 42d high  5.35    0.46  -30.1      0.76     286                         198        0.43         1.19                                      149.0                                        259.3       -110.3    IN
+                                       vol alert q0.9/42s & SPY 3% below 63d high | IN calm or new 42d high  5.35    0.42  -37.8      0.81     267                         185        0.53         1.19                                      124.1                                        234.5       -110.4    IN
+                                                           control: SPY 5% below 63d high | IN new 42d high  5.33    0.53  -26.7      0.68      43                          27        0.25         0.64                                      192.6                                        303.3       -110.7    IN
+                                             control: SPY 5% below 63d high or P_off>q.95 | IN new 42d high  5.30    0.54  -26.7      0.66      49                          31        0.23         0.64                                      196.8                                        308.1       -111.3    IN
+                                      vol alert q0.85/42s & SPY 3% below 63d high | IN calm or new 42d high  5.30    0.44  -39.2      0.78     301                         217        0.48         1.19                                      141.2                                        252.5       -111.3    IN
+                                              vol alert q0.85/21s & SPY 5% below 63d high | IN new 42d high  5.27    0.44  -35.9      0.77      33                          21        0.43         1.20                                      145.0                                        256.9       -111.9    IN
+ vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 or P15/63>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  5.26    0.47  -33.9      0.73     269                         187        0.39         1.19                                      165.9                                        277.9       -112.0    IN
+               vol alert q0.85/21s & SPY 3% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  5.24    0.45  -36.7      0.75     214                         151        0.41         1.00                                      159.3                                        271.8       -112.5    IN
+                                              vol alert q0.85/42s & SPY 5% below 63d high | IN new 42d high  5.20    0.44  -31.1      0.75      36                          24        0.40         1.09                                      155.0                                        268.3       -113.3    IN
+                                vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high  5.18    0.45  -36.4      0.73      39                          23        0.38         1.00                                      157.8                                        271.5       -113.7    IN
+                              vol alert q0.85/42s & SPY 3% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  5.07    0.43  -34.3      0.75     291                         209        0.46         1.19                                      147.1                                        262.9       -115.8    IN
+                vol alert q0.9/21s & SPY 3% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  4.99    0.42  -36.7      0.77     186                         126        0.46         1.00                                      148.2                                        265.7       -117.5    IN
+                 vol alert q0.9/42s & SPY 5% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high  4.91    0.45  -31.6      0.71      51                          33        0.33         1.00                                      169.2                                        288.2       -119.0    IN
+                               vol alert q0.9/42s & SPY 3% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  4.87    0.40  -38.0      0.77     262                         182        0.49         1.19                                      141.0                                        260.9       -119.9    IN
+                        vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 | IN calm or new 42d high  4.72    0.39  -34.9      0.78     276                         191        0.49         1.19                                      134.0                                        257.1       -123.1    IN
+                                               vol alert q0.9/42s & SPY 3% below 63d high | IN new 42d high  4.68    0.42  -34.4      0.69      57                          40        0.32         1.05                                      169.5                                        293.3       -123.8    IN
+                       vol alert q0.85/42s & SPY 3% below 63d high, or P_off>q.95 | IN calm or new 42d high  4.67    0.40  -39.2      0.76     310                         223        0.44         1.19                                      151.1                                        275.1       -124.0    IN
+                               vol alert q0.85/21s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high  4.67    0.42  -39.0      0.72      42                          26        0.38         1.00                                      156.0                                        280.0       -124.0    IN
+                                               vol alert q0.9/21s & SPY 3% below 63d high | IN new 42d high  4.66    0.40  -38.1      0.73      46                          31        0.37         1.20                                      156.7                                        280.9       -124.2    IN
+                               vol alert q0.85/42s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high  4.60    0.42  -36.4      0.70      45                          29        0.36         1.00                                      166.1                                        291.4       -125.3    IN
+               vol alert q0.85/42s & SPY 3% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  4.59    0.41  -34.1      0.73     296                         213        0.43         1.19                                      157.0                                        282.6       -125.6    IN
+                vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 | IN calm (P_off<q.8 & P_vol<q.7)  4.39    0.38  -35.0      0.74     267                         186        0.45         1.19                                      150.9                                        280.6       -129.7    IN
+                                vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high  4.29    0.41  -40.2      0.65      63                          43        0.28         1.00                                      179.3                                        311.0       -131.7    IN
+                 vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high  4.26    0.43  -35.4      0.63      73                          51        0.24         1.00                                      188.5                                        320.9       -132.4    IN
+                                vol alert q0.9/21s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high  4.20    0.39  -43.9      0.68      54                          35        0.33         1.00                                      166.6                                        300.2       -133.6    IN
+                                              vol alert q0.85/42s & SPY 3% below 63d high | IN new 42d high  4.02    0.38  -34.9      0.65      68                          50        0.30         1.05                                      180.4                                        317.5       -137.1    IN
+                                              vol alert q0.85/21s & SPY 3% below 63d high | IN new 42d high  4.00    0.36  -38.1      0.68      56                          40        0.35         1.20                                      167.7                                        305.3       -137.6    IN
+                                             control: SPY 3% below 63d high or P_off>q.95 | IN new 42d high  3.97    0.49  -19.8      0.55      83                          60        0.13         0.30                                      220.2                                        358.3       -138.1    IN
+                                                           control: SPY 3% below 63d high | IN new 42d high  3.86    0.47  -19.3      0.55      81                          59        0.15         0.30                                      217.2                                        357.6       -140.4    IN
+                               vol alert q0.85/42s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high  3.64    0.38  -40.2      0.60      74                          53        0.26         1.00                                      190.3                                        335.2       -144.9    IN
+                               vol alert q0.85/21s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high  3.53    0.34  -43.9      0.63      64                          44        0.31         1.00                                      177.6                                        324.6       -147.0    IN
+
+=== controls vs vol-filtered, same price trigger and re-entry: does the vol complex add anything to a plain drawdown trigger? ===
+  3% trigger, IN calm (P_off<q.8 & P_vol<q.7)   control: ann  5.73 sharpe 0.56 maxDD  -27.2 spells 391 false 266 taken 0.31   |   vol alert q.9/42: ann  4.87 sharpe 0.40 maxDD  -38.0 spells 262 false 182 taken 0.49
+  3% trigger, IN new 42d high                   control: ann  3.86 sharpe 0.47 maxDD  -19.3 spells  81 false  59 taken 0.15   |   vol alert q.9/42: ann  4.68 sharpe 0.42 maxDD  -34.4 spells  57 false  40 taken 0.32
+  3% trigger, IN calm or new 42d high           control: ann  5.67 sharpe 0.53 maxDD  -35.9 spells 406 false 277 taken 0.32   |   vol alert q.9/42: ann  5.35 sharpe 0.42 maxDD  -37.8 spells 267 false 185 taken 0.53
+  5% trigger, IN calm (P_off<q.8 & P_vol<q.7)   control: ann  7.35 sharpe 0.64 maxDD  -28.5 spells 197 false 111 taken 0.38   |   vol alert q.9/42: ann  7.49 sharpe 0.59 maxDD  -33.5 spells 124 false  67 taken 0.52
+  5% trigger, IN new 42d high                   control: ann  5.33 sharpe 0.53 maxDD  -26.7 spells  43 false  27 taken 0.25   |   vol alert q.9/42: ann  5.77 sharpe 0.47 maxDD  -30.6 spells  30 false  18 taken 0.42
+  5% trigger, IN calm or new 42d high           control: ann  7.55 sharpe 0.64 maxDD  -37.7 spells 204 false 116 taken 0.40   |   vol alert q.9/42: ann  7.81 sharpe 0.59 maxDD  -32.5 spells 125 false  67 taken 0.55
+  7% trigger, IN calm (P_off<q.8 & P_vol<q.7)   control: ann  8.30 sharpe 0.69 maxDD  -25.5 spells  95 false  37 taken 0.42   |   vol alert q.9/42: ann  8.73 sharpe 0.67 maxDD  -31.3 spells  57 false  21 taken 0.54
+  7% trigger, IN new 42d high                   control: ann  6.84 sharpe 0.61 maxDD  -33.5 spells  28 false  14 taken 0.30   |   vol alert q.9/42: ann  8.13 sharpe 0.64 maxDD  -33.7 spells  17 false   8 taken 0.44
+  7% trigger, IN calm or new 42d high           control: ann  8.82 sharpe 0.71 maxDD  -28.0 spells  99 false  40 taken 0.44   |   vol alert q.9/42: ann  9.01 sharpe 0.67 maxDD  -33.7 spells  58 false  21 taken 0.58
+  10% trigger, IN calm (P_off<q.8 & P_vol<q.7)   control: ann  9.36 sharpe 0.73 maxDD  -30.7 spells  43 false   9 taken 0.48   |   vol alert q.9/42: ann 10.07 sharpe 0.74 maxDD  -33.3 spells  25 false   4 taken 0.62
+  10% trigger, IN new 42d high                   control: ann 10.05 sharpe 0.79 maxDD  -33.4 spells  13 false   1 taken 0.42   |   vol alert q.9/42: ann 10.68 sharpe 0.77 maxDD  -35.6 spells   7 false   0 taken 0.58
+  10% trigger, IN calm or new 42d high           control: ann  9.81 sharpe 0.74 maxDD  -31.5 spells  45 false  10 taken 0.51   |   vol alert q.9/42: ann 10.20 sharpe 0.72 maxDD  -35.6 spells  26 false   4 taken 0.66
+
+=== first OUT session inside each 15% event (sessions after the peak, SPY already down), for the ten best rules by annualized return, the controls at 5%, and the reference ===
+
+reference C: OUT P_off>q0.95, IN P_off<q0.8  (ann 11.21, maxDD -25.0, spells 14, false 5)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-10-17 (6s, -1.4%)             taken 0.47
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-05-19 (0s, 0.0%)              taken -0.0
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT never                              taken 1.0
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT never                              taken 1.0
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-24 (24s, -9.2%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-24 (36s, -10.3%)           taken 0.61
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-04-07 (33s, -17.5%)           taken 0.92
+
+vol alert q0.85/42s & SPY 10% below 63d high | IN new 42d high  (ann 11.13, maxDD -35.6, spells 8, false 1)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2008-01-08 (62s, -10.8%)           taken 0.58
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-27 (28s, -10.4%)           taken 0.23
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.29
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+vol alert q0.85/21s & SPY 10% below 63d high | IN new 42d high  (ann 10.99, maxDD -35.6, spells 8, false 1)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2008-01-08 (62s, -10.8%)           taken 0.58
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-07-11 (37s, -13.0%)           taken 0.3
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.29
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+SPY buy and hold  (ann 10.8, maxDD -80.3, spells 0, false 0)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT never                              taken 1.0
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT never                              taken 1.0
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT never                              taken 1.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT never                              taken 1.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT never                              taken 1.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT never                              taken 1.0
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT never                              taken 1.0
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT never                              taken 1.0
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT never                              taken 1.0
+
+control: SPY 10% below 63d high or P_off>q.95 | IN new 42d high  (ann 10.68, maxDD -33.4, spells 20, false 6)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-10-17 (6s, -1.4%)             taken 0.07
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-27 (28s, -10.4%)           taken 0.23
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-04 (67s, -11.4%)           taken 0.59
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-24 (24s, -9.2%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 0.84
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT 2022-09-20 (24s, -10.2%)           taken 0.59
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+vol alert q0.9/21s & SPY 10% below 63d high | IN new 42d high  (ann 10.68, maxDD -35.6, spells 7, false 0)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2008-01-22 (71s, -16.0%)           taken 0.89
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-07-14 (38s, -13.8%)           taken 0.32
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.29
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+vol alert q0.9/42s & SPY 10% below 63d high | IN new 42d high  (ann 10.68, maxDD -35.6, spells 7, false 0)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2008-01-22 (71s, -16.0%)           taken 0.89
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-07-14 (38s, -13.8%)           taken 0.32
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.29
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+vol alert q0.85/42s & SPY 10% below 63d high | IN calm or new 42d high  (ann 10.65, maxDD -35.6, spells 27, false 5)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2008-01-08 (62s, -10.8%)           taken 0.58
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-27 (28s, -10.4%)           taken 0.23
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.95
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 1.04
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT never                              taken 1.0
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.29
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.73
+
+vol alert q0.85/42s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high  (ann 10.64, maxDD -41.4, spells 19, false 7)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-10-17 (6s, -1.4%)             taken 0.07
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-27 (28s, -10.4%)           taken 0.23
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-24 (24s, -9.2%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.02
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+vol alert q0.85/21s & SPY 10% below 63d high, or P_off>q.95 | IN new 42d high  (ann 10.5, maxDD -41.4, spells 19, false 7)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-10-17 (6s, -1.4%)             taken 0.07
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-07-11 (37s, -13.0%)           taken 0.3
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-20 (19s, -11.7%)           taken 0.73
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-08-05 (68s, -11.5%)           taken 0.6
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-24 (24s, -9.2%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-02-22 (34s, -10.1%)           taken 1.02
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT never                              taken 1.0
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-13 (16s, -10.0%)           taken 0.51
+
+control: SPY 5% below 63d high | IN calm (P_off<q.8 & P_vol<q.7)  (ann 7.35, maxDD -28.5, spells 197, false 111)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-11-07 (21s, -5.5%)            taken 0.26
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-05-19 (0s, 0.0%)              taken -0.0
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-06 (9s, -7.3%)             taken 0.85
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-06-06 (25s, -5.4%)            taken 0.89
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-11 (15s, -6.9%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-01-19 (11s, -5.4%)            taken 0.39
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT 2022-08-26 (8s, -5.7%)             taken 0.92
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-04 (9s, -5.9%)             taken 0.43
+
+control: SPY 5% below 63d high | IN new 42d high  (ann 5.33, maxDD -26.7, spells 43, false 27)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-11-07 (21s, -5.5%)            taken 0.29
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-11 (16s, -6.4%)            taken 0.14
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-06 (9s, -7.3%)             taken 0.44
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-06-06 (25s, -5.4%)            taken 0.64
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-11 (15s, -6.9%)            taken 0.33
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-01-19 (11s, -5.4%)            taken 0.3
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT 2022-08-26 (8s, -5.7%)             taken 0.32
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-04 (9s, -5.9%)             taken 0.29
+
+control: SPY 5% below 63d high | IN calm or new 42d high  (ann 7.55, maxDD -37.7, spells 204, false 116)
+   2007-10-09 -> 2008-03-10  -17.8%   first OUT 2007-11-07 (21s, -5.5%)            taken 0.26
+   2008-05-19 -> 2008-10-10  -37.5%   first OUT 2008-06-11 (16s, -6.4%)            taken 0.14
+   2008-10-13 -> 2008-10-27  -17.2%   first OUT 2008-10-13 (0s, 0.0%)              taken -0.0
+   2008-11-04 -> 2008-11-20  -24.9%   first OUT 2008-11-04 (0s, 0.0%)              taken -0.0
+   2009-01-06 -> 2009-03-09  -27.1%   first OUT 2009-01-06 (0s, 0.0%)              taken -0.0
+   2010-04-23 -> 2010-07-02  -15.7%   first OUT 2010-05-06 (9s, -7.3%)             taken 0.85
+   2011-04-29 -> 2011-10-03  -18.6%   first OUT 2011-06-06 (25s, -5.4%)            taken 0.89
+   2018-09-20 -> 2018-12-24  -19.3%   first OUT 2018-10-11 (15s, -6.9%)            taken 0.45
+   2022-01-03 -> 2022-06-16  -23.0%   first OUT 2022-01-19 (11s, -5.4%)            taken 0.47
+   2022-08-16 -> 2022-10-12  -16.7%   first OUT 2022-08-26 (8s, -5.7%)             taken 0.92
+   2025-02-19 -> 2025-04-08  -18.8%   first OUT 2025-03-04 (9s, -5.9%)             taken 0.43
+
+done 16s
