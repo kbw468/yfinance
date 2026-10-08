@@ -1,3 +1,4 @@
+Crumb fetch rate-limited (HTTP 429), continuing without crumb
 ^VIX       9261 1990-01-02 -> 2026-10-07  nonNaN close 9261
 ^MOVE      5911 2002-11-12 -> 2026-10-07  nonNaN close 5911
 ^VXN       6465 2001-01-23 -> 2026-10-07  nonNaN close 6465
@@ -14,11 +15,15 @@
 ^SKEW      9185 1990-01-02 -> 2026-10-07  nonNaN close 9185
 ^FVX       9228 1990-01-02 -> 2026-10-07  nonNaN close 9228
 ^IRX       9228 1990-01-02 -> 2026-10-07  nonNaN close 9228
+HTTP Error 401: Unauthorized{"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+HTTP Error 401: Unauthorized{"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
 $^RVX: possibly delisted; no timezone found
 
 1 Failed download:
 ['^RVX']: possibly delisted; no timezone found
 ^RVX retry 0 empty
+HTTP Error 401: Unauthorized{"finance":{"result":null,"error":{"code":"Unauthorized","description":"Invalid Crumb"}}}
+HTTP Error 401: Unauthorized{"finance":{"result":null,"error":{"code":"Unauthorized","description":"User is unable to access this feature - https://bit.ly/yahoo-finance-api-feedback"}}}
 $^RVX: possibly delisted; no timezone found
 
 1 Failed download:

@@ -1,3 +1,4 @@
+Crumb fetch rate-limited (HTTP 429), continuing without crumb
 RSP     5897 2003-05-01 -> 2026-10-07
 QQQE    3658 2012-03-21 -> 2026-10-07
 RSPT    5009 2006-11-07 -> 2026-10-07
