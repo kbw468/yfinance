@@ -57,7 +57,8 @@ html = f"""<title>Risk Action</title>
 a{{color:var(--blue)}}
 </style>
 <div class="wrap">
-<div class="sub">Vol tape regime · as of {D['asof']} close · rule {('IN since ' + D['state_since']) if state == 'IN' else ('OUT since ' + D['state_since'])}</div>
+{f'<div class="sub" style="color:var(--orange);font-weight:600">PRE-CLOSE ESTIMATE at {D["preclose"]} · SPY {D["preclose_spy"]["last"]} ({D["preclose_spy"]["chg_pct"]:+.2f}% on the day) · the official reading follows the close</div>' if D.get('preclose') else ''}
+<div class="sub">Vol tape regime · as of {D['asof']} {'(live prices)' if D.get('preclose') else 'close'} · rule {('IN since ' + D['state_since']) if state == 'IN' else ('OUT since ' + D['state_since'])}</div>
 <div class="action">{action}</div>
 <div class="why">{why}</div>
 <div class="dial">stay-in dial <b>{dial}</b> · OUT at 5 or below, back IN above 20 · {'inside a vol episode' if D.get('inside_episode') else 'no vol episode in progress'}</div>

@@ -1,0 +1,73 @@
+Crumb fetch rate-limited (HTTP 429), continuing without crumb
+^VIX       9262 1990-01-02 -> 2026-10-08  nonNaN close 9262
+^MOVE      5911 2002-11-12 -> 2026-10-07  nonNaN close 5911
+^VXN       6465 2001-01-23 -> 2026-10-07  nonNaN close 6465
+^VVIX      4963 2007-01-03 -> 2026-10-07  nonNaN close 4963
+^TNX       9229 1990-01-02 -> 2026-10-08  nonNaN close 9229
+^TYX       9229 1990-01-02 -> 2026-10-08  nonNaN close 9229
+^GVZ       4616 2008-06-03 -> 2026-10-07  nonNaN close 4616
+^OVX       4884 2007-05-10 -> 2026-10-07  nonNaN close 4884
+^VIX1D      868 2023-04-24 -> 2026-10-07  nonNaN close 868
+^VIX9D     3963 2011-01-04 -> 2026-10-07  nonNaN close 3963
+^VIX3M     5089 2006-07-17 -> 2026-10-07  nonNaN close 5089
+^VIX6M     4721 2008-01-02 -> 2026-10-07  nonNaN close 4721
+^VIX1Y        1 2026-10-07 -> 2026-10-07  nonNaN close 1
+^SKEW      9185 1990-01-02 -> 2026-10-07  nonNaN close 9185
+^FVX       9229 1990-01-02 -> 2026-10-08  nonNaN close 9229
+^IRX       9229 1990-01-02 -> 2026-10-08  nonNaN close 9229
+$^RVX: possibly delisted; no timezone found
+
+1 Failed download:
+['^RVX']: possibly delisted; no timezone found
+^RVX retry 0 empty
+$^RVX: possibly delisted; no timezone found
+
+1 Failed download:
+['^RVX']: possibly delisted; no timezone found
+^RVX retry 1 empty
+$^RVX: possibly delisted; no timezone found
+
+1 Failed download:
+['^RVX']: possibly delisted; no timezone found
+^RVX retry 2 empty
+QQQ        6938 1999-03-10 -> 2026-10-07  nonNaN close 6938
+TLT        6087 2002-07-30 -> 2026-10-07  nonNaN close 6087
+IEF        6087 2002-07-30 -> 2026-10-07  nonNaN close 6087
+HYG        4905 2007-04-11 -> 2026-10-07  nonNaN close 4905
+IWM        6630 2000-05-26 -> 2026-10-07  nonNaN close 6630
+GLD        5505 2004-11-18 -> 2026-10-07  nonNaN close 5505
+SPY        8480 1993-01-29 -> 2026-10-07  nonNaN close 8480
+XLC        2087 2018-06-19 -> 2026-10-07  nonNaN close 2087
+XLY        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLP        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLE        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLF        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLV        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLI        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLB        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLRE       2765 2015-10-08 -> 2026-10-07  nonNaN close 2765
+RWR        6315 2001-08-27 -> 2026-10-07  nonNaN close 6315
+XAR        3777 2011-09-29 -> 2026-10-07  nonNaN close 3777
+KBE        5255 2005-11-15 -> 2026-10-07  nonNaN close 5255
+XBI        5200 2006-02-06 -> 2026-10-07  nonNaN close 5200
+KCE        5255 2005-11-15 -> 2026-10-07  nonNaN close 5255
+XHE        3947 2011-01-27 -> 2026-10-07  nonNaN close 3947
+XHS        3777 2011-09-29 -> 2026-10-07  nonNaN close 3777
+XHB        5200 2006-02-06 -> 2026-10-07  nonNaN close 5200
+KIE        5255 2005-11-15 -> 2026-10-07  nonNaN close 5255
+XME        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+XES        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+XOP        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+XPH        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+KRE        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+XRT        5105 2006-06-22 -> 2026-10-07  nonNaN close 5105
+XSD        5200 2006-02-06 -> 2026-10-07  nonNaN close 5200
+XSW        3777 2011-09-29 -> 2026-10-07  nonNaN close 3777
+XTL        3947 2011-01-27 -> 2026-10-07  nonNaN close 3947
+XTN        3947 2011-01-27 -> 2026-10-07  nonNaN close 3947
+XLK        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+XLU        6990 1998-12-22 -> 2026-10-07  nonNaN close 6990
+BNO        4113 2010-06-02 -> 2026-10-07  nonNaN close 4113
+LQD        6087 2002-07-30 -> 2026-10-07  nonNaN close 6087
+SHY        6087 2002-07-30 -> 2026-10-07  nonNaN close 6087
+latest session 2026-10-08; 56 series fetched; lagging: {'^MOVE': '2026-10-07', '^VXN': '2026-10-07', '^VVIX': '2026-10-07', '^GVZ': '2026-10-07', '^OVX': '2026-10-07', '^VIX1D': '2026-10-07', '^VIX9D': '2026-10-07', '^VIX3M': '2026-10-07', '^VIX6M': '2026-10-07', '^SKEW': '2026-10-07', 'QQQ': '2026-10-07', 'TLT': '2026-10-07', 'IEF': '2026-10-07', 'HYG': '2026-10-07', 'IWM': '2026-10-07', 'GLD': '2026-10-07', 'SPY': '2026-10-07', 'XLC': '2026-10-07', 'XLY': '2026-10-07', 'XLP': '2026-10-07', 'XLE': '2026-10-07', 'XLF': '2026-10-07', 'XLV': '2026-10-07', 'XLI': '2026-10-07', 'XLB': '2026-10-07', 'XLRE': '2026-10-07', 'RWR': '2026-10-07', 'XAR': '2026-10-07', 'KBE': '2026-10-07', 'XBI': '2026-10-07', 'KCE': '2026-10-07', 'XHE': '2026-10-07', 'XHS': '2026-10-07', 'XHB': '2026-10-07', 'KIE': '2026-10-07', 'XME': '2026-10-07', 'XES': '2026-10-07', 'XOP': '2026-10-07', 'XPH': '2026-10-07', 'KRE': '2026-10-07', 'XRT': '2026-10-07', 'XSD': '2026-10-07', 'XSW': '2026-10-07', 'XTL': '2026-10-07', 'XTN': '2026-10-07', 'XLK': '2026-10-07', 'XLU': '2026-10-07', 'BNO': '2026-10-07', 'LQD': '2026-10-07', 'SHY': '2026-10-07'}
