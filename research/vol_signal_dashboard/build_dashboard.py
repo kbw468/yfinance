@@ -13,9 +13,9 @@ Tiers (evaluated only while SPY closes within 1.5% of its 52-week closing high):
   Low-risk         VXN/VIX 10-session change < -5%
   Size flag        DXY in the top 20% of its trailing-year range: when a tier fires with
                    this on, the odds of an 8%+ drop have run about 3x higher (not a tier)
-Barometer (1-10): equal-weight average of DSPX, DXY and VVIX-lag percentiles (the trio a
-  walk-forward search over 792 input combinations picked every year from 2020 on), read as a
-  decile of past near-high scores.
+Barometer (1-10): equal-weight average of the input percentiles listed in barometer.json,
+  read as a decile of past near-high scores. select_barometer.py picks the inputs (walk-forward
+  search over every 3-6 input combination of ten candidates) and is re-run monthly.
   History is walk-forward (each year scored by a model fit on earlier years); the odds
   shown for each band are what happened out of sample.
 In a drawdown, the VVIX/VIX ratio's compression from its close on the SPY
@@ -187,34 +187,105 @@ def record(d, t, eps):
 
 
 # ---------- barometer ----------
-# Equal-weight average of three inputs, each as its percentile within its own trailing year, signed so
-# that higher = more drawdown risk. Chosen by a walk-forward search over every 3-6 input combination
-# of ten candidates (DSPX, DXY, VVIX lag, hedged credit, VXN/VIX, VIX/VXN move, XLU/SPY, COR1M,
-# VIX vs realized vol, MOVE): from 2020 on, each year's search picked this same trio.
-BARO_INPUTS = {"dspx": "DSPX percentile", "dxy": "DXY percentile", "lag": "VVIX lag behind the VIX/VXN move"}
+# Equal-weight average of the inputs listed in barometer.json, each as its percentile within its own
+# trailing year, signed so that higher = more drawdown risk. The inputs are chosen by
+# select_barometer.py: a walk-forward search over every 3-6 input combination of the candidates below,
+# re-run monthly. It only switches when a different multifactor set beats the live one out of sample.
 BARO_START = "2015-06-01"      # DSPX history
 BARO_BANDS = [(1, 2, "Low"), (3, 4, "Below average"), (5, 6, "Average"), (7, 8, "Elevated"), (9, 10, "High")]
+BARO_CONFIG = os.path.join(HERE, "barometer.json")
+COR1M_URL = "https://cdn.cboe.com/api/global/us_indices/daily_prices/COR1M_History.csv"
+CANDIDATES = {
+    "dspx": "DSPX percentile",
+    "dxy": "DXY percentile",
+    "lag": "VVIX lag behind the VIX/VXN move",
+    "credit": "Credit weakness (hedged HYG)",
+    "vxnvix": "VXN/VIX 10-session",
+    "volmove": "VIX/VXN 10-session move",
+    "xlu": "XLU vs SPY 10-session",
+    "cor1m": "Low implied correlation (COR1M)",
+    "vrp": "VIX cheap vs SPY realized vol",
+    "move": "MOVE 10-session",
+}
+EXTRA_NEEDS = {"xlu": "XLU", "move": "^MOVE", "cor1m": "COR1M"}
 
 
-def baro_inputs(d):
-    lagx = np.maximum(d.vix10, d.vxn10) - d.vvix10
-    return pd.DataFrame({"dspx": d.dspx_p1y, "dxy": d.dxy_p1y, "lag": pct_rank_1y(lagx)}, index=d.index)
+def load_baro_config():
+    with open(BARO_CONFIG, encoding="utf-8") as fh:
+        cfg = json.load(fh)
+    bad = [k for k in cfg["inputs"] if k not in CANDIDATES]
+    if bad or len(cfg["inputs"]) < 3:
+        raise ValueError(f"barometer.json needs 3+ known inputs, got {cfg['inputs']}")
+    return cfg
 
 
-def barometer(d, t):
-    P = baro_inputs(d)
-    score = P.mean(axis=1)
-    ok = t.gate & P.notna().all(axis=1)
+def fetch_extras(names, start="2007-01-01"):
+    out = {}
+    tick = [EXTRA_NEEDS[n] for n in names if n in EXTRA_NEEDS and EXTRA_NEEDS[n] != "COR1M"]
+    if tick:
+        px = yf.download(tick, start=start, auto_adjust=True, progress=False)["Close"]
+        if isinstance(px, pd.Series):
+            px = px.to_frame(tick[0])
+        for tk in tick:
+            out[tk] = px[tk]
+    if "cor1m" in names:
+        resp = requests.get(COR1M_URL, timeout=30)
+        resp.raise_for_status()
+        x = pd.read_csv(io.StringIO(resp.text))
+        x["DATE"] = pd.to_datetime(x["DATE"], format="%m/%d/%Y")
+        out["COR1M"] = pd.to_numeric(x.set_index("DATE")["CLOSE"], errors="coerce").dropna()
+    return out
+
+
+def candidate_inputs(d, names, extras):
+    """Percentile (trailing year) of each named candidate, signed so higher = more drawdown risk."""
+    cols = {}
+    vol10 = np.maximum(d.vix10, d.vxn10)
+    for n in names:
+        if n == "dspx":
+            cols[n] = d.dspx_p1y
+        elif n == "dxy":
+            cols[n] = d.dxy_p1y
+        elif n == "lag":
+            cols[n] = pct_rank_1y(vol10 - d.vvix10)
+        elif n == "credit":
+            cols[n] = 100 - pct_rank_1y(d.cred10)
+        elif n == "vxnvix":
+            cols[n] = pct_rank_1y(d.nv10)
+        elif n == "volmove":
+            cols[n] = pct_rank_1y(vol10)
+        elif n == "xlu":
+            cols[n] = pct_rank_1y((extras["XLU"].reindex(d.index).ffill(limit=3) / d.spy).pct_change(ROC_WIN) * 100)
+        elif n == "cor1m":
+            cols[n] = 100 - pct_rank_1y(extras["COR1M"].reindex(d.index).ffill(limit=3))
+        elif n == "vrp":
+            rv10 = np.log(d.spy).diff().rolling(10).std() * np.sqrt(252) * 100
+            cols[n] = 100 - pct_rank_1y(d.vix / rv10)
+        elif n == "move":
+            cols[n] = pct_rank_1y(extras["^MOVE"].reindex(d.index).ffill(limit=3).pct_change(ROC_WIN) * 100)
+    return pd.DataFrame(cols, index=d.index)
+
+
+def baro_readings(score, ok):
+    """Walk-forward deciles: each year is read against the near-high scores of earlier years only."""
     near = score[ok].loc[BARO_START:]
-    reading = pd.Series(np.nan, index=d.index)
-    # walk-forward deciles: each year is read against the near-high scores of earlier years only
-    for yr in range(2018, d.index[-1].year + 1):
+    reading = pd.Series(np.nan, index=score.index)
+    for yr in range(2018, score.index[-1].year + 1):
         past = near[near.index < pd.Timestamp(f"{yr}-01-01")]
         cur_yr = near[(near.index >= pd.Timestamp(f"{yr}-01-01")) & (near.index < pd.Timestamp(f"{yr + 1}-01-01"))]
         if len(cur_yr) == 0 or len(past) < 250:
             continue
         cuts = np.quantile(past.values, np.linspace(0.1, 0.9, 9))
         reading.loc[cur_yr.index] = 1 + np.searchsorted(cuts, cur_yr.values, side="right")
+    return reading, near
+
+
+def barometer(d, t, cfg, extras):
+    names = cfg["inputs"]
+    P = candidate_inputs(d, names, extras)
+    score = P.mean(axis=1)
+    ok = t.gate & P.notna().all(axis=1)
+    reading, near = baro_readings(score, ok)
     live = None
     if bool(ok.iloc[-1]):
         cuts = np.quantile(near.iloc[:-1].values, np.linspace(0.1, 0.9, 9))
@@ -229,12 +300,13 @@ def barometer(d, t):
         cal.append({"lo": lo, "hi": hi, "label": lab, "sessions": len(idx), "p5": rate(f, -5), "p8": rate(f, -8),
                     "med40": None if len(f) == 0 else round(float(f.median()), 2)})
     cur = P.iloc[-1]
-    drivers = [{"name": BARO_INPUTS[k], "pct": None if np.isnan(cur[k]) else round(float(cur[k]), 0),
-                "push": None if np.isnan(cur[k]) else round(float((cur[k] - 50) / len(BARO_INPUTS)), 1)} for k in BARO_INPUTS]
+    drivers = [{"name": CANDIDATES[k], "pct": None if np.isnan(cur[k]) else round(float(cur[k]), 0),
+                "push": None if np.isnan(cur[k]) else round(float((cur[k] - 50) / len(names)), 1)} for k in names]
     band = next((x for x in cal if live is not None and x["lo"] <= live <= x["hi"]), None)
     return {"reading": live, "score": None if np.isnan(score.iloc[-1]) else round(float(score.iloc[-1]), 1), "band": band,
             "cal": cal, "drivers": drivers, "base5": rate(f40.loc[oos], -5), "base8": rate(f40.loc[oos], -8),
-            "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None, "series": reading}
+            "oos_from": str(reading.dropna().index[0].date()) if reading.notna().any() else None, "series": reading,
+            "inputs": [CANDIDATES[k] for k in names], "selected": cfg.get("selected"), "evidence": cfg.get("evidence")}
 
 
 def next_sessions(after, n):
@@ -262,7 +334,8 @@ def build(out_path, start):
     d = build_frame(raw, dspx)
     t = tiers(d)
     eps = episodes(d)
-    baro = barometer(d, t)
+    cfg = load_baro_config()
+    baro = barometer(d, t, cfg, fetch_extras(cfg["inputs"]))
     idx = d.index
     last_day = idx[-1].date()
     live = last_day == now_et.date() and dt.time(9, 30) <= now_et.time() < dt.time(16, 15)

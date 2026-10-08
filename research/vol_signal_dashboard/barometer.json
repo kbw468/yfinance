@@ -1,0 +1,5 @@
+{
+  "inputs": ["dspx", "dxy", "lag"],
+  "selected": "2026-10-08",
+  "evidence": "Walk-forward search over 792 combinations of 3-6 of ten candidates picked this set in every year from 2020 on. Post-COVID out-of-sample AUC 0.774 (5% drop) / 0.768 (8% drop)."
+}

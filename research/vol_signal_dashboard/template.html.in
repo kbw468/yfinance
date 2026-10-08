@@ -352,7 +352,7 @@ table('t-hist', ['Print', 'Tier', 'SPY off high', 'VIX 10d', 'VXN 10d', 'VVIX 10
     `${sg(r.cred10, 2)}%`, r.dspx_p1y == null ? '–' : ord(r.dspx_p1y), r.dxy_p1y == null ? '–' : ord(r.dxy_p1y), r.f40 == null ? 'open' : `${sg(r.f40, 2)}%`]), { left: [1] });
 
 table('t-rules', ['Tier', 'Rule'], [
-  ['Barometer', 'Equal-weight average of three percentiles, each within its own trailing year: DSPX, DXY, and the VVIX lag behind the VIX/VXN move. A walk-forward search over all 792 combinations of 3–6 inputs from ten candidates (adding hedged credit, VXN/VIX, the VIX/VXN move, XLU/SPY, COR1M, VIX vs realized vol and MOVE) picked this trio in every year from 2020 on. The 1–10 reading is the decile of today\'s score among past near-high sessions.'],
+  ['Barometer', `Equal-weight average of ${BR.inputs.length} percentiles, each within its own trailing year: ${BR.inputs.join(', ')}. Inputs chosen ${BR.selected ? fd(BR.selected) : ''} by a walk-forward search over every 3–6 input combination of ten candidates, re-checked monthly. ${BR.evidence || ''} The 1–10 reading is the decile of today\'s score among past near-high sessions.`],
   ['Near-high gate', 'SPY closes within 1.5% of its 52-week closing high. All tiers below are evaluated only when this is armed.'],
   ['Watch', 'VIX up more than 10% over 10 sessions with VVIX up less than half as much, or the same test with VXN in place of VIX.'],
   ['Working', 'Watch + (duration-hedged HYG down over 10 sessions, or DSPX at or above the 80th percentile of its trailing year).'],
