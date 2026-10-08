@@ -47,7 +47,7 @@ section { display: grid; gap: 14px; min-width: 0; }
 .closed { font-family: var(--font-data); font-size: 11.5px; letter-spacing: 0.04em; border: 1px solid var(--axis); color: var(--fg2); padding: 1px 7px; border-radius: 3px; }
 
 /* status chips */
-.chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.chips { display: grid; grid-template-columns: repeat(auto-fit, minmax(138px, 1fr)); gap: 10px; }
 .chip { background: var(--surface); border: 1px solid var(--ring); border-radius: 6px; padding: 12px 14px; display: grid; gap: 4px; align-content: start; min-width: 0; }
 .chip .k { font-size: 12px; color: var(--muted); font-family: var(--font-data); letter-spacing: 0.03em; text-transform: uppercase; }
 .chip .state { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; }
@@ -70,7 +70,8 @@ td { font-family: var(--font-data); border-bottom: 1px solid var(--grid); font-v
 tr:last-child td { border-bottom: 0; }
 th:first-child, td:first-child { text-align: left; }
 td.l, th.l { text-align: left; }
-td.wrap { white-space: normal; min-width: 220px; font-family: var(--font-body); color: var(--fg2); }
+td.wrap { white-space: normal; text-align: left; font-family: var(--font-body); color: var(--fg2); }
+.wrapbox { min-width: 280px; max-width: 760px; }
 tr.hl td { background: var(--band); font-weight: 600; }
 .tag { font: 600 11px var(--font-data); padding: 0 6px; border-radius: 3px; border: 1px solid var(--axis); color: var(--fg2); letter-spacing: 0.03em; }
 .tag.on { border-color: var(--orange); color: var(--orange); }
@@ -225,6 +226,7 @@ function table(id, head, rows, opts = {}) {
     r.forEach((c, j) => {
       const td = h('td', (opts.wrap || []).includes(j) ? 'wrap' : ((opts.left || []).includes(j) ? 'l' : null));
       if (c && typeof c === 'object' && c.tag) { td.appendChild(h('span', 'tag ' + (c.cls || ''), c.tag)); if (c.text) td.appendChild(document.createTextNode(' ' + c.text)); }
+      else if ((opts.wrap || []).includes(j)) td.appendChild(h('div', 'wrapbox', c));
       else td.textContent = c;
       row.appendChild(td);
     });
@@ -244,7 +246,7 @@ table('t-comp', ['Component', 'Now', '10 sessions back', 'Change', 'Rule', 'Stat
   ['DXY in 1-year range (size flag)', f(N.dxy), `range ${f(N.dxy_lo)}–${f(N.dxy_hi)}`, N.dxy_p1y == null ? '–' : ord(N.dxy_p1y), 'top 20%: a tier print carries ~3x the 8%+ odds', st(FL.size)],
   ['VXN/VIX', f(N.nv, 3), '–', `${sg(N.nv10)}%`, '< −5% = low-risk reading', st(FL.lowrisk, 'calm')],
   ['VVIX/VIX vs high day', f(N.ratio, 3), `${f(N.ratio_hi, 3)} (${fd(N.hi_day)})`, `${sg(N.comp)}%`, `−25% = ${f(N.ratio_25)} · −40% = ${f(N.ratio_40)}`, st(inDD && N.comp <= -25)],
-], { left: [0, 4], wrap: [4] });
+], { left: [0, 4] });
 
 const L = D.ladder;
 table('t-ladder', ['Close on', '10 sessions back', 'VIX ≥', 'VXN ≥', 'VVIX ≤ (at min trigger)', 'Credit: next return below', 'DSPX ≥ 60th / 80th', 'DXY ≥ for size flag'],
