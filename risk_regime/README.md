@@ -363,41 +363,64 @@ Coarse match (TNX pct >= 90, TNX 21d chg z >= 1.5, VIX pct <= 30, SPY within 3% 
 
 ---
 
-## 11. Exposure dial (0 = no beta, 100 = max long high beta), tuned for drawdown first
+## 11. Environment dial: three states, backtested as states
 
-Objective set by the user: minimize drawdown, accept muted upside in V-shaped recoveries. The dial is built from every rule in sections 1, 8 and 9 plus slow context flags. Base 60. Risk-off rules subtract for a fixed number of sessions after they fire; risk-on rules add. Weights: rally-failure tell and credit crack -20, VVIX-lagging onset and second-leg continuation -15, impulse-after-compression, bank/yield break, realized-outruns-implied -10, rates setup -8, full capitulation print +25, gold-vol/VVIX-outrunning capitulation +12, flip confirmation +10, VVIX-confirming spike +8. Context: rates pressure with VIX asleep -5, complacency -5, in a 7%+ drawdown with no capitulation print -10, vol collapsing from a high +10, at the highs +5, VIX and VVIX both at the floor -3.
+Objective restated by the user: drawdown preservation, but not through chronically low exposure. The earlier continuous dial earned its risk-adjusted numbers partly by averaging 44% exposure. This version keeps the same component score (drawdown-first weights: risk-off fires persist 1.5x longer, risk-on adds expire twice as fast; no cap, no slow re-entry) and maps it to **three states with hysteresis** so the edge can be tested as timing with full exposure:
 
-Drawdown-first asymmetry (the difference from a balanced dial): risk-off fires persist 1.5x longer (15 to 32 sessions), risk-on adds persist half as long (10 to 21 sessions), the dial is capped at 30 whenever SPY is 5%+ off its 63-day high without a flip confirmation or capitulation print in the last 10 sessions, and after any reading at or below 35 the dial may rise by at most 4 points per session until it is back above 60. Clamped to 0-100. Definitions in `scripts/score.py`; the variants tested and rejected are in `scripts/score2.py`, `score3.py`, `score4.py`.
+- **GET OUT**: dial at 30 or below. Leave only when the dial is back above 45.
+- **RISK ON**: dial above 60. Leave only when it falls to 50 or below.
+- **REDUCE**: everything between.
 
-Backtest 2008 to date, Feb-Jul 2020 excluded, holding SPY at dial/100 lagged a day with the rest in cash:
+The hysteresis cuts state changes from 32 a year to 16. Definitions in `scripts/score.py`; the threshold and hysteresis sweep is in `scripts/env2.py` and `results/env2_out.txt`.
 
-| | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer |
-|---|---|---|---|---|---|
-| Drawdown-first dial | 7.2% | 6.7% | 1.07 | **-15.3%** | 2.54 |
-| Balanced dial (rejected) | 9.5% | 9.6% | 0.98 | -21.5% | 4.25 |
-| SPY buy and hold | 10.9% | 18.6% | 0.59 | -73.1% | 13.47 |
+What each state meant, 2008 to date (Feb-Jul 2020 excluded):
 
-Average exposure 44%; the dial sits at 30 or below 28% of the time, which is the price of the slow re-entry. By band, 21-day forward: 0-30 has 33% odds of a 5% drop and a mean +0.5% (the band now includes the slow climb out of every low, which dilutes it versus the balanced dial's 50%); 31-45 is 13% odds and +1.2%; 46-55 is 10% and +1.2%; every band above 55 is 10-13% with positive forward returns. Separation is in the bottom band; above 45 the dial tells you to be in, not how much more.
+| State | Time share | P(5% DD in 21d) | P(10% DD in 63d) | Mean fwd 21d | Mean fwd 63d | Mean 63d max DD | Worst 5% of 63d outcomes |
+|---|---|---|---|---|---|---|---|
+| RISK ON | 40% | 0.11 | 0.11 | +1.2% | +3.1% | -3.8% | -8.1% |
+| REDUCE | 30% | 0.12 | 0.11 | +1.1% | +3.1% | -4.3% | -8.6% |
+| GET OUT | 30% | **0.32** | **0.25** | +0.4% | +1.8% | **-7.6%** | **-17.4%** |
 
-Episode table, share of SPY's peak-to-trough loss the dial-weighted book took, and share of SPY's 42-day rebound it captured:
+RISK ON and REDUCE are statistically the same environment; GET OUT is a different one. The dial is a two-state instrument with a buffer zone, and the buffer exists to stop whipsaw, not because the middle band carries its own information.
 
-| Peak | Trough | SPY | Dial book | Loss captured | Rebound captured | Dial at peak / trough / +21d |
+**The test that answers the exposure question.** Fully invested in SPY whenever the state is RISK ON or REDUCE, in cash only in GET OUT, lagged a day:
+
+| | Ann. return | Vol | Sharpe | Max drawdown (log) | Ulcer | Avg exposure |
 |---|---|---|---|---|---|---|
-| 2008-05 | 2009-03 | -72.3% | -3.0% | 4% | 15% | 47 / 0 / 21 |
-| 2010-04 | 2010-07 | -17.1% | -4.4% | 26% | -6% | 17 / 0 / 0 |
-| 2011-04 | 2011-10 | -20.6% | -14.8% | **72%** | 49% | 67 / 39 / 15 |
-| 2015-07 | 2015-08 | -12.7% | -5.2% | 41% | 29% | 89 / 47 / 0 |
-| 2015-11 | 2016-02 | -13.7% | -7.1% | 52% | 57% | 21 / 80 / 11 |
-| 2018-01 | 2018-02 | -10.6% | -0.3% | 3% | -8% | 10 / 0 / 0 |
-| 2018-09 | 2018-12 | -21.5% | -4.7% | 22% | 31% | 67 / 18 / 0 |
-| 2022-01 | 2022-10 | -28.1% | +0.2% | 0% | 13% | 20 / 18 / 0 |
-| 2023-07 | 2023-10 | -10.5% | -4.9% | 46% | 55% | 42 / 51 / 67 |
-| 2024-07 | 2024-08 | -8.8% | -3.4% | 39% | 49% | 57 / 43 / 79 |
-| **2025-02** | **2025-04** | **-20.8%** | **-4.2%** | **20%** | **9%** | 61 / 13 / 0 |
-| **2026-01** | **2026-03** | **-9.3%** | **-2.5%** | **27%** | **28%** | 48 / 7 / 50 |
+| State book | **12.9%** | 11.6% | 1.11 | **-20.0%** | 4.06 | 70% |
+| SPY buy and hold | 10.9% | 18.6% | 0.59 | -73.1% | 13.47 | 100% |
 
-Median loss captured 27%, median rebound captured 29%. The two V-shaped episodes the user named: Q1 2025 took 4.2% of SPY's 20.8% and caught 9% of the 18.9% rebound; Q1 2026 took 2.5% of 9.3% and caught 28% of the 18% rebound. The known weak spot is 2011: the April top came with the dial at 67 after the spring capitulation prints and the August crash was a continuation the rules only caught in part.
+The book out-earned buy-and-hold with 70% average exposure, so the return comes from the 30% of the time it was out, not from being small. Half exposure in REDUCE (100/50/0) gives 9.9% a year and the same max drawdown; it adds nothing and is not recommended.
 
-Yearly, dial book vs SPY: 2008 -2.5 vs -45.9; 2011 -2.2 vs +1.9; 2018 +5.6 vs -4.7; 2022 -0.1 vs -20.1; 2013 +13.3 vs +28.0; 2019 +14.1 vs +27.2; 2021 +10.0 vs +25.3; 2023 +15.6 vs +23.3; 2024 +8.0 vs +22.2; 2025 +5.5 vs +16.3. Every down year for SPY was flat to positive for the dial book; every up year gave back roughly half.
+Yearly, book vs SPY: 2008 -8.7 vs -45.9; 2009 +27.7 vs +23.4; 2011 +3.7 vs +1.9; 2012 +18.3 vs +14.8; 2014 +17.1 vs +12.6; 2018 +5.9 vs -4.7; **2022 +8.4 vs -20.1**; 2023 +22.0 vs +23.3; 2024 +15.8 vs +22.2; 2025 +7.6 vs +16.3; 2026 +13.1 vs +13.9. Gave back ground in 2013, 2019, 2021, 2024, 2025 (the melt-up years); beat or matched in every other year.
 
-**2026-10-07: 25.** Base 60, minus 8 for the rates setup (yields ripped while VIX slept on September 23; with the longer window it persists 15 sessions), minus 10 for regional banks breaking relative while yields ripped (same week, persists 22 sessions), minus 8 for equity implied vol cheap against credit realized vol (live), minus 6 for bond implied vol spiking off compressed bond realized (fired within the last three weeks), minus 5 for rates pressure with the VIX asleep, minus 3 for VIX and VVIX both at the floor, plus 5 for being at the highs. The late-September flip confirmation no longer counts because risk-on adds now expire after 10 sessions. Bottom band. The dial fell from the 60s to the 20s on September 23 and the slow re-entry rule means it can climb at most 4 points a session once the September fires roll off in mid-October, so a clean tape takes it back to the 50s by late October, not before.
+Episodes (share of SPY's peak-to-trough loss the state book took; share of the 42-day rebound it caught; sessions from the peak until the state first read GET OUT):
+
+| Peak | SPY | Book | Loss captured | Rebound captured | Sessions to GET OUT | State at peak / trough |
+|---|---|---|---|---|---|---|
+| 2008-05 | -72.3% | -10.2% | 14% | 19% | 16 | RISK ON / GET OUT |
+| 2010-04 | -17.1% | -5.5% | 32% | 2% | 0 | GET OUT / GET OUT |
+| 2011-04 | -20.6% | -20.0% | **97%** | 103% | 70 | RISK ON / RISK ON |
+| 2015-07 | -12.7% | -6.8% | 54% | 58% | 10 | RISK ON / RISK ON |
+| 2015-11 | -13.7% | -13.7% | **100%** | 82% | never | RISK ON / RISK ON |
+| 2018-01 | -10.6% | 0.0% | 0% | -82% | 0 | GET OUT / GET OUT |
+| 2018-09 | -21.5% | -9.2% | 43% | 70% | 14 | RISK ON / RISK ON |
+| 2022-01 | -28.1% | **+12.4%** | -44% | 0% | 0 | GET OUT / GET OUT |
+| 2023-07 | -10.5% | -7.7% | 73% | 100% | 36 | REDUCE / RISK ON |
+| 2024-07 | -8.8% | -5.1% | 59% | 100% | 2 | REDUCE / RISK ON |
+| **2025-02** | **-20.8%** | **-8.9%** | **43%** | **0%** | 13 | RISK ON / GET OUT |
+| **2026-01** | **-9.3%** | **-0.5%** | **5%** | **63%** | 10 | REDUCE / GET OUT |
+
+Median loss captured 43%, median rebound captured 61%. Where it works: the rate- and credit-driven breaks (2008, 2022, Jan 2018, Jan 2026) and the fast vol-driven ones (2018 Q4, 2025 Q1, July 2024 partially). Where it does not: 2011 and late 2015, where the top formed with the dial in RISK ON and the selling was a grind that never produced the configurations the rules key on. It also whipsawed in 2010 and February 2018 (out at the low, missed the rebound) and in 2025 Q1 it was out for the entire April rebound. That is the muted-upside cost you accepted.
+
+Transitions: the 21 days after entering GET OUT averaged flat with a 33% chance of a 5% drop; the 21 days after entering RISK ON averaged +2.1% with an 8% chance.
+
+**2026-10-07: dial 25, state GET OUT**, entered September 23 when the rates setup, the regional-bank break and the bond-vol-off-compressed-realized rules fired in the same week. Components: base 60, minus 8 rates setup, minus 10 regional banks vs yields, minus 8 equity implied cheap vs credit realized (live), minus 6 bond implied leading bond realized, minus 5 rates pressure with VIX asleep, minus 3 VIX and VVIX at the floor, plus 5 at the highs. To leave GET OUT the dial has to clear 45; the September fires roll off between October 14 and 23, which on a clean tape puts the dial at 49 and the state at REDUCE around the third week of October. RISK ON needs a reading above 60, which on the current components needs the credit implied/realized ratio to normalize or a risk-on print.
+
+## 12. Volume
+
+Volume rate of change was tested as a dimension (SPY, QQQ, IWM, HYG, TLT, GLD, XLE, KRE: today's volume vs trailing month, 5d and 21d average-volume ROC, all z-scored, and a signed version by the direction of the 5-day price move). Output in `results/volume_out.txt`.
+
+Signatures are clear: into the 36 tops, 21-day volume ROC is negative throughout (-0.4 to -0.5 z for SPY, -0.8 for IWM at day -3): volume dries up into highs. At the 40 lows, day-of volume vs the trailing month is +0.9 z on the trough day and the day before, 21-day volume ROC is +0.9 to +1.0, and signed volume is -0.8 (volume expanding on down moves). Volume then collapses to -1.2 z within six sessions of the low.
+
+As a predictor, volume adds nothing on its own: every quintile of every volume feature sits within two points of the 17.4% base rate. Two interaction cells carried information: HYG 5d volume ROC z below -1 while VIX 5d ROC z is above 1 (credit volume drying up during a vol spike) had P 0.34 and fwd21 -0.16%; SPY 5d volume ROC z above 1 with SPY 5d return z above 1 (buying climax) had fwd21 +0.26% against +0.86% base. Adding the credit-volume rule and a volume-climax capitulation qualifier to the dial did not improve the state backtest (the climax add fired early in 2025 Q1 and raised the loss captured from 43% to 92%), so volume is reported here as context and is not in the dial. Price, volatility and the rates complex carry the timing; volume confirms the climax after the fact.

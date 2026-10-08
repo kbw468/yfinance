@@ -106,6 +106,9 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
 .heat th{padding:4px 6px;text-align:center;font-size:10px}
 .heat td:first-child{text-align:left}
 .hc{display:inline-block;width:100%;border-radius:3px;padding:2px 0}
+.envgrid{display:grid;grid-template-columns:minmax(240px,1fr) 2fr;gap:16px;align-items:start}
+.envgrid>div{min-width:0}
+@media (max-width:720px){.envgrid{grid-template-columns:1fr}}
 .lead{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
 .lead .col{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 12px;min-width:0}
 .lead h3{font-family:var(--mono);font-size:12px;font-weight:600;margin:0 0 6px;color:var(--ink2)}
@@ -122,10 +125,10 @@ button.on{border-color:var(--blue);color:var(--blue);background:var(--blue-soft)
 </header>
 
 <section id="scoresec">
-  <h2>Exposure dial, 0 to 100 (drawdown-first)</h2>
-  <div class="chartcard" style="display:grid;grid-template-columns:minmax(220px,1fr) 2fr;gap:16px;align-items:center">
-    <div><div class="k sub" style="letter-spacing:.06em;text-transform:uppercase">today</div><div id="scorebig" class="num" style="font-size:56px;font-weight:600;line-height:1"></div><div id="scorelabel" class="sub" style="margin-top:4px"></div><div id="scoreparts" style="margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);display:grid;gap:2px"></div></div>
-    <div><svg id="scorechart" viewBox="0 0 700 170" role="img" aria-label="Exposure dial, last two years"></svg><div class="sub" id="scorebuckets" style="margin-top:6px"></div></div>
+  <h2>Environment</h2>
+  <div class="chartcard envgrid">
+    <div><div id="envstate" style="font-family:var(--mono);font-size:30px;font-weight:600;line-height:1.1"></div><div id="envsub" class="sub" style="margin-top:4px"></div><div id="scorebig" class="num" style="font-size:44px;font-weight:600;line-height:1;margin-top:10px"></div><div id="scorelabel" class="sub" style="margin-top:4px;max-width:36ch"></div><div id="scoreparts" style="margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink2);display:grid;gap:2px"></div></div>
+    <div><svg id="scorechart" viewBox="0 0 700 190" role="img" aria-label="Environment dial, last two years"></svg><div class="sub" id="scorebuckets" style="margin-top:6px"></div><div class="tablewrap" style="margin-top:8px"><table id="envtable"></table></div></div>
   </div>
 </section>
 
@@ -324,26 +327,29 @@ if(TK){
   }
   heat('heat',TK.mat,1.0); heat('beta',TK.beta,12);
 }
-// ---- exposure dial
+// ---- environment dial
 const SC=D.score;
 if(SC){
-  const v=SC.score; document.getElementById('scorebig').textContent=v;
-  const bk=SC.buckets.find(b=>{const [lo,hi]=b.b.split('-').map(Number);return v>=lo&&v<=hi;});
-  const names={'0-30':'drawdown regime','31-45':'reduced','46-55':'neutral','56-65':'constructive','66-75':'long','76-100':'max long'};
-  const lab=bk?`${bk.b}: ${names[bk.b]}. Since 2008 this band had ${Math.round(bk.P_off*100)}% odds of a 5% drop within 21d, mean next 21d ${bk.fwd21>0?'+':''}${bk.fwd21.toFixed(1)}%, mean 63d max drawdown ${bk.DD63.toFixed(1)}%.`+(SC.cap_active?' Drawdown cap active (SPY 5%+ off its high, no confirmation yet).':'') : '';
-  document.getElementById('scorelabel').textContent=lab;
+  const v=SC.score; const th=SC.thresholds; const col=SC.state_idx===0?'var(--orange)':SC.state_idx===2?'var(--blue)':'var(--ink2)';
+  document.getElementById('envstate').innerHTML=`<span style="color:${col}">${SC.state}</span>`;
+  document.getElementById('envsub').textContent=`${SC.days_in_state} sessions in this state. Enter GET OUT at ${th.out_in} or below, leave it above ${th.out_exit}. Enter RISK ON above ${th.on_in}, leave it at ${th.on_exit} or below. Between: REDUCE.`;
+  document.getElementById('scorebig').textContent=v;
+  const st=SC.states[SC.state];
+  document.getElementById('scorelabel').textContent=`Dial reading. In the ${SC.state} state since 2008: ${Math.round(st.P_off21*100)}% odds of a 5% drop within 21d, ${Math.round(st.P10_63*100)}% odds of a 10% drop within 63d, mean next 63d ${st.fwd63>0?'+':''}${st.fwd63.toFixed(1)}%, mean 63d max drawdown ${st.DD63.toFixed(1)}%.`;
   const parts=Object.entries(SC.components).sort((a,b)=>a[1]-b[1]);
   document.getElementById('scoreparts').innerHTML=`<div>base ${SC.base}</div>`+parts.map(([k,p])=>`<div><span style="color:${p<0?'var(--orange)':'var(--blue)'};font-weight:600">${p>0?'+':''}${p}</span> ${k.replace(/_/g,' ')}</div>`).join('');
-  const svg=document.getElementById('scorechart'); const W=700,H=170,Lm=34,Rm=10,T=10,B=24; const h=SC.hist; const n=h.length;
+  const svg=document.getElementById('scorechart'); const W=700,H=190,Lm=34,Rm=10,T=10,B=24; const h=SC.hist; const sh=SC.state_hist; const n=h.length;
   const x=i=>Lm+(W-Lm-Rm)*i/(n-1), y=q=>T+(H-T-B)*(1-q/100);
   let g='';
-  [0,30,45,55,65,75,100].forEach(q=>{g+=`<line x1="${Lm}" x2="${W-Rm}" y1="${y(q)}" y2="${y(q)}" stroke="${css('--grid')}"/><text x="${Lm-5}" y="${y(q)+4}" text-anchor="end" font-size="10" fill="${css('--muted')}" font-family="${css('--mono')}">${q}</text>`;});
-  g+=`<rect x="${Lm}" y="${y(100)}" width="${W-Lm-Rm}" height="${y(65)-y(100)}" fill="${css('--blue')}" opacity=".06"/><rect x="${Lm}" y="${y(45)}" width="${W-Lm-Rm}" height="${y(0)-y(45)}" fill="${css('--orange')}" opacity=".06"/>`;
+  // state shading along the bottom strip and behind the line
+  for(let i=0;i<n;i++){const c=sh[i]===0?css('--orange'):sh[i]===2?css('--blue'):'transparent'; if(c!=='transparent') g+=`<rect x="${x(i)-((W-Lm-Rm)/(n-1))/2}" y="${y(100)}" width="${(W-Lm-Rm)/(n-1)+0.5}" height="${y(0)-y(100)}" fill="${c}" opacity=".08"/>`;}
+  [0,30,45,50,60,100].forEach(q=>{g+=`<line x1="${Lm}" x2="${W-Rm}" y1="${y(q)}" y2="${y(q)}" stroke="${q===30||q===60?css('--line'):css('--grid')}" stroke-dasharray="${q===45||q===50?'3 3':'none'}"/><text x="${Lm-5}" y="${y(q)+4}" text-anchor="end" font-size="10" fill="${css('--muted')}" font-family="${css('--mono')}">${q}</text>`;});
   for(let i=0;i<n;i+=63){g+=`<text x="${x(i)}" y="${H-6}" font-size="10" fill="${css('--muted')}" text-anchor="middle" font-family="${css('--mono')}">${D.dates[D.dates.length-n+i].slice(0,7)}</text>`;}
-  g+=`<path d="${h.map((q,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(q).toFixed(1)).join('')}" fill="none" stroke="${css('--ink2')}" stroke-width="1.5"/><circle cx="${x(n-1)}" cy="${y(h[n-1])}" r="4" fill="${v<=45?css('--orange'):css('--blue')}" stroke="${css('--surface')}" stroke-width="2"/>`;
+  g+=`<path d="${h.map((q,i)=>(i?'L':'M')+x(i).toFixed(1)+' '+y(q).toFixed(1)).join('')}" fill="none" stroke="${css('--ink2')}" stroke-width="1.5"/><circle cx="${x(n-1)}" cy="${y(h[n-1])}" r="4" fill="${SC.state_idx===0?css('--orange'):SC.state_idx===2?css('--blue'):css('--ink2')}" stroke="${css('--surface')}" stroke-width="2"/>`;
   svg.innerHTML=g;
-  svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((px-Lm)/(W-Lm-Rm)*(n-1))));showTip(e,`${D.dates[D.dates.length-n+i]}<br>dial ${h[i]}`);}; svg.onmouseleave=hideTip;
-  document.getElementById('scorebuckets').innerHTML=`Drawdown-first tuning. Holding SPY at dial/100 since 2008: ${SC.strategy.ann}% a year, max drawdown ${SC.strategy.maxDD}%, vs buy-and-hold ${SC.buyhold.ann}% and ${SC.buyhold.maxDD}%. By band, P(5% DD in 21d) / mean fwd 21d: `+SC.buckets.map(b=>`${b.b}: ${b.P_off.toFixed(2)} / ${b.fwd21>0?'+':''}${b.fwd21.toFixed(1)}%`).join(' · ');
+  svg.onmousemove=e=>{const r=svg.getBoundingClientRect();const px=(e.clientX-r.left)/r.width*W;const i=Math.max(0,Math.min(n-1,Math.round((px-Lm)/(W-Lm-Rm)*(n-1))));showTip(e,`${D.dates[D.dates.length-n+i]}<br>dial ${h[i]} · ${['GET OUT','REDUCE','RISK ON'][sh[i]]}`);}; svg.onmouseleave=hideTip;
+  document.getElementById('scorebuckets').innerHTML=`Backtest 2008+, fully invested in SPY in RISK ON and REDUCE, out in GET OUT: ${SC.binary.ann}% a year at ${SC.binary.vol}% vol, max drawdown ${SC.binary.maxDD}%, average exposure ${Math.round(SC.avg_exposure*100)}%, vs buy-and-hold ${SC.buyhold.ann}% at ${SC.buyhold.vol}% vol, max drawdown ${SC.buyhold.maxDD}%. About ${SC.changes_per_year} state changes a year.`;
+  document.getElementById('envtable').innerHTML=`<tr><th>state</th><th>time share</th><th>P(5% DD/21d)</th><th>P(10% DD/63d)</th><th>mean fwd 21d</th><th>mean fwd 63d</th><th>mean 63d max DD</th><th>worst 5% of 63d</th></tr>`+['RISK ON','REDUCE','GET OUT'].map(nm=>{const s=SC.states[nm];return `<tr><td>${nm}</td><td class="num">${Math.round(s.share*100)}%</td><td class="num">${s.P_off21.toFixed(2)}</td><td class="num">${s.P10_63.toFixed(2)}</td><td class="num">${f2(s.fwd21)}%</td><td class="num">${f2(s.fwd63)}%</td><td class="num">${s.DD63.toFixed(1)}%</td><td class="num">${s.f63_p5.toFixed(1)}%</td></tr>`;}).join('');
 }
 // ---- realized vol layer
 const RVD=D.rv;

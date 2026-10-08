@@ -1,0 +1,109 @@
+B&H {'ann': np.float64(10.9), 'vol': np.float64(18.58), 'sharpe': np.float64(0.59), 'maxDD': np.float64(-73.1), 'ulcer': np.float64(13.47)}
+
+==== dd-first weights (V10b) | no hysteresis 30/55 ====  changes/yr 32.0
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.22     0.36   0.03   0.94 -8.81    0.30
+REDUCE   0.35     0.13   1.25   3.33 -4.34    0.11
+ON       0.42     0.12   1.14   3.15 -3.77    0.10
+binary 100/100/0 : {'ann': np.float64(13.4), 'vol': np.float64(12.57), 'sharpe': np.float64(1.07), 'maxDD': np.float64(-21.4), 'ulcer': np.float64(4.91)} exp 0.78
+3-state 100/50/0 : {'ann': np.float64(10.17), 'vol': np.float64(9.87), 'sharpe': np.float64(1.03), 'maxDD': np.float64(-20.1), 'ulcer': np.float64(3.7)} exp 0.6
+episodes capt: 2008-05:0.14 2010-04:0.19 2011-04:0.97 2015-07:0.98 2015-11:1.0 2018-01:-0.0 2018-09:0.35 2022-01:-0.14 2023-07:1.01 2024-07:1.04 2025-02:0.63 2026-01:0.08 | median 0.49  rebound capt median 0.6699999999999999
+
+==== dd-first weights (V10b) | hysteresis OUT in<=30 exit>40, ON in>55 exit<=45 ====  changes/yr 17.9
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.28     0.33   0.37   1.65 -7.86    0.27
+REDUCE   0.23     0.13   1.15   2.88 -4.66    0.12
+ON       0.50     0.12   1.13   3.23 -3.78    0.10
+binary 100/100/0 : {'ann': np.float64(12.5), 'vol': np.float64(11.97), 'sharpe': np.float64(1.04), 'maxDD': np.float64(-21.2), 'ulcer': np.float64(4.71)} exp 0.73
+3-state 100/50/0 : {'ann': np.float64(10.48), 'vol': np.float64(10.26), 'sharpe': np.float64(1.02), 'maxDD': np.float64(-19.5), 'ulcer': np.float64(3.72)} exp 0.61
+episodes capt: 2008-05:0.14 2010-04:0.19 2011-04:0.92 2015-07:1.03 2015-11:1.0 2018-01:-0.0 2018-09:0.43 2022-01:-0.4 2023-07:0.84 2024-07:0.59 2025-02:0.43 2026-01:0.05 | median 0.43  rebound capt median 0.6
+
+==== dd-first weights (V10b) | hysteresis OUT in<=30 exit>45, ON in>60 exit<=50 ====  changes/yr 16.0
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT       0.3     0.32   0.40   1.79 -7.63    0.25
+REDUCE    0.3     0.12   1.13   3.08 -4.29    0.11
+ON        0.4     0.11   1.18   3.14 -3.81    0.11
+binary 100/100/0 : {'ann': np.float64(12.9), 'vol': np.float64(11.61), 'sharpe': np.float64(1.11), 'maxDD': np.float64(-20.0), 'ulcer': np.float64(4.06)} exp 0.7
+3-state 100/50/0 : {'ann': np.float64(9.85), 'vol': np.float64(9.48), 'sharpe': np.float64(1.04), 'maxDD': np.float64(-20.3), 'ulcer': np.float64(3.35)} exp 0.55
+episodes capt: 2008-05:0.14 2010-04:0.32 2011-04:0.97 2015-07:0.54 2015-11:1.0 2018-01:-0.0 2018-09:0.43 2022-01:-0.44 2023-07:0.73 2024-07:0.59 2025-02:0.43 2026-01:0.05 | median 0.43  rebound capt median 0.605
+
+==== dd-first weights (V10b) | hysteresis OUT in<=35 exit>45, ON in>55 exit<=45 ====  changes/yr 17.7
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.34     0.29   0.50   1.56 -7.56    0.25
+REDUCE   0.17     0.12   1.18   3.54 -4.07    0.10
+ON       0.50     0.12   1.13   3.23 -3.78    0.10
+binary 100/100/0 : {'ann': np.float64(12.54), 'vol': np.float64(11.27), 'sharpe': np.float64(1.11), 'maxDD': np.float64(-20.0), 'ulcer': np.float64(3.61)} exp 0.66
+3-state 100/50/0 : {'ann': np.float64(10.5), 'vol': np.float64(10.06), 'sharpe': np.float64(1.04), 'maxDD': np.float64(-20.0), 'ulcer': np.float64(3.36)} exp 0.58
+episodes capt: 2008-05:0.07 2010-04:0.41 2011-04:0.97 2015-07:0.51 2015-11:1.0 2018-01:-0.0 2018-09:0.39 2022-01:-0.44 2023-07:0.66 2024-07:0.59 2025-02:0.3 2026-01:0.28 | median 0.4  rebound capt median 0.5449999999999999
+
+==== V10b + volume qualifiers | no hysteresis 30/55 ====  changes/yr 34.0
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.23     0.35   0.04   0.87 -8.65    0.29
+REDUCE   0.34     0.15   1.12   3.26 -4.50    0.12
+ON       0.42     0.11   1.25   3.28 -3.68    0.10
+binary 100/100/0 : {'ann': np.float64(13.45), 'vol': np.float64(12.72), 'sharpe': np.float64(1.06), 'maxDD': np.float64(-21.8), 'ulcer': np.float64(5.28)} exp 0.77
+3-state 100/50/0 : {'ann': np.float64(10.58), 'vol': np.float64(9.91), 'sharpe': np.float64(1.07), 'maxDD': np.float64(-22.9), 'ulcer': np.float64(3.84)} exp 0.6
+episodes capt: 2008-05:0.14 2010-04:0.2 2011-04:0.97 2015-07:0.98 2015-11:1.0 2018-01:-0.0 2018-09:0.45 2022-01:-0.18 2023-07:0.84 2024-07:1.04 2025-02:0.92 2026-01:0.08 | median 0.645  rebound capt median 0.6699999999999999
+
+==== V10b + volume qualifiers | hysteresis OUT in<=30 exit>40, ON in>55 exit<=45 ====  changes/yr 18.2
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.28     0.32   0.36   1.44 -7.77    0.26
+REDUCE   0.22     0.14   1.17   3.07 -4.75    0.13
+ON       0.50     0.11   1.14   3.26 -3.80    0.10
+binary 100/100/0 : {'ann': np.float64(12.18), 'vol': np.float64(12.19), 'sharpe': np.float64(1.0), 'maxDD': np.float64(-21.8), 'ulcer': np.float64(5.55)} exp 0.72
+3-state 100/50/0 : {'ann': np.float64(10.82), 'vol': np.float64(10.32), 'sharpe': np.float64(1.05), 'maxDD': np.float64(-19.5), 'ulcer': np.float64(3.96)} exp 0.61
+episodes capt: 2008-05:0.14 2010-04:0.32 2011-04:0.92 2015-07:1.03 2015-11:1.0 2018-01:-0.0 2018-09:0.37 2022-01:-0.4 2023-07:0.84 2024-07:0.76 2025-02:0.92 2026-01:0.05 | median 0.565  rebound capt median 0.6
+
+==== V10b + volume qualifiers | hysteresis OUT in<=30 exit>45, ON in>60 exit<=50 ====  changes/yr 16.7
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.31     0.31   0.34   1.60 -7.57    0.25
+REDUCE   0.28     0.14   1.08   3.19 -4.44    0.11
+ON       0.41     0.10   1.27   3.23 -3.70    0.11
+binary 100/100/0 : {'ann': np.float64(12.9), 'vol': np.float64(11.75), 'sharpe': np.float64(1.1), 'maxDD': np.float64(-20.5), 'ulcer': np.float64(3.96)} exp 0.69
+3-state 100/50/0 : {'ann': np.float64(10.32), 'vol': np.float64(9.66), 'sharpe': np.float64(1.07), 'maxDD': np.float64(-18.9), 'ulcer': np.float64(3.21)} exp 0.55
+episodes capt: 2008-05:0.14 2010-04:0.26 2011-04:0.92 2015-07:0.54 2015-11:1.0 2018-01:-0.0 2018-09:0.53 2022-01:-0.4 2023-07:0.61 2024-07:0.59 2025-02:0.43 2026-01:0.05 | median 0.48  rebound capt median 0.6
+
+==== V10b + volume qualifiers | hysteresis OUT in<=35 exit>45, ON in>55 exit<=45 ====  changes/yr 18.7
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.34     0.29   0.52   1.49 -7.52    0.24
+REDUCE   0.15     0.13   1.15   3.64 -4.02    0.11
+ON       0.50     0.11   1.14   3.26 -3.80    0.10
+binary 100/100/0 : {'ann': np.float64(12.25), 'vol': np.float64(11.39), 'sharpe': np.float64(1.07), 'maxDD': np.float64(-23.7), 'ulcer': np.float64(3.99)} exp 0.66
+3-state 100/50/0 : {'ann': np.float64(10.85), 'vol': np.float64(10.09), 'sharpe': np.float64(1.08), 'maxDD': np.float64(-21.8), 'ulcer': np.float64(3.4)} exp 0.58
+episodes capt: 2008-05:0.08 2010-04:0.34 2011-04:1.15 2015-07:0.51 2015-11:1.0 2018-01:-0.0 2018-09:0.29 2022-01:-0.4 2023-07:0.54 2024-07:0.59 2025-02:0.43 2026-01:0.28 | median 0.385  rebound capt median 0.54
+
+==== balanced V1 | no hysteresis 30/55 ====  changes/yr 22.4
+        share  P_off21  fwd21  fwd63   DD63  P10_63
+OUT      0.10     0.50  -1.55  -1.10 -12.67    0.45
+REDUCE   0.23     0.19   1.45   3.03  -5.15    0.16
+ON       0.67     0.13   1.13   3.18  -3.95    0.11
+binary 100/100/0 : {'ann': np.float64(14.76), 'vol': np.float64(14.7), 'sharpe': np.float64(1.0), 'maxDD': np.float64(-25.0), 'ulcer': np.float64(5.16)} exp 0.9
+3-state 100/50/0 : {'ann': np.float64(12.94), 'vol': np.float64(12.39), 'sharpe': np.float64(1.04), 'maxDD': np.float64(-25.3), 'ulcer': np.float64(4.56)} exp 0.79
+episodes capt: 2008-05:0.18 2010-04:0.84 2011-04:1.22 2015-07:1.0 2015-11:1.0 2018-01:-0.0 2018-09:0.82 2022-01:0.38 2023-07:1.0 2024-07:1.0 2025-02:1.0 2026-01:0.7 | median 0.9199999999999999  rebound capt median 0.965
+
+==== balanced V1 | hysteresis OUT in<=30 exit>40, ON in>55 exit<=45 ====  changes/yr 11.8
+        share  P_off21  fwd21  fwd63   DD63  P10_63
+OUT      0.12     0.44  -0.94  -0.14 -11.13    0.39
+REDUCE   0.14     0.20   1.53   2.73  -5.41    0.19
+ON       0.74     0.13   1.12   3.19  -4.05    0.11
+binary 100/100/0 : {'ann': np.float64(14.14), 'vol': np.float64(14.35), 'sharpe': np.float64(0.99), 'maxDD': np.float64(-22.7), 'ulcer': np.float64(5.18)} exp 0.88
+3-state 100/50/0 : {'ann': np.float64(12.74), 'vol': np.float64(12.79), 'sharpe': np.float64(1.0), 'maxDD': np.float64(-23.1), 'ulcer': np.float64(4.6)} exp 0.81
+episodes capt: 2008-05:0.16 2010-04:0.84 2011-04:0.91 2015-07:1.0 2015-11:1.0 2018-01:-0.0 2018-09:0.89 2022-01:0.4 2023-07:1.0 2024-07:1.0 2025-02:1.0 2026-01:0.27 | median 0.9  rebound capt median 0.92
+
+==== balanced V1 | hysteresis OUT in<=30 exit>45, ON in>60 exit<=50 ====  changes/yr 11.4
+        share  P_off21  fwd21  fwd63   DD63  P10_63
+OUT      0.13     0.42  -0.74  -0.07 -10.81    0.38
+REDUCE   0.19     0.20   1.18   2.27  -5.85    0.18
+ON       0.67     0.12   1.18   3.40  -3.76    0.10
+binary 100/100/0 : {'ann': np.float64(13.51), 'vol': np.float64(14.1), 'sharpe': np.float64(0.96), 'maxDD': np.float64(-22.7), 'ulcer': np.float64(5.02)} exp 0.87
+3-state 100/50/0 : {'ann': np.float64(12.42), 'vol': np.float64(12.15), 'sharpe': np.float64(1.02), 'maxDD': np.float64(-22.2), 'ulcer': np.float64(4.3)} exp 0.77
+episodes capt: 2008-05:0.13 2010-04:0.84 2011-04:0.94 2015-07:1.0 2015-11:1.0 2018-01:-0.0 2018-09:0.98 2022-01:0.38 2023-07:1.0 2024-07:1.0 2025-02:1.0 2026-01:0.27 | median 0.96  rebound capt median 0.92
+
+==== balanced V1 | hysteresis OUT in<=35 exit>45, ON in>55 exit<=45 ====  changes/yr 12.2
+        share  P_off21  fwd21  fwd63  DD63  P10_63
+OUT      0.16     0.38  -0.41   0.45 -9.86    0.34
+REDUCE   0.10     0.21   1.59   2.82 -5.37    0.20
+ON       0.74     0.13   1.12   3.19 -4.05    0.11
+binary 100/100/0 : {'ann': np.float64(12.45), 'vol': np.float64(13.74), 'sharpe': np.float64(0.91), 'maxDD': np.float64(-21.2), 'ulcer': np.float64(5.73)} exp 0.84
+3-state 100/50/0 : {'ann': np.float64(11.89), 'vol': np.float64(12.63), 'sharpe': np.float64(0.94), 'maxDD': np.float64(-23.4), 'ulcer': np.float64(4.76)} exp 0.79
+episodes capt: 2008-05:0.16 2010-04:0.76 2011-04:0.94 2015-07:1.0 2015-11:1.0 2018-01:-0.0 2018-09:0.98 2022-01:0.52 2023-07:0.93 2024-07:0.59 2025-02:0.92 2026-01:0.27 | median 0.8400000000000001  rebound capt median 0.785
