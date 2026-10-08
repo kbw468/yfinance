@@ -1,0 +1,67 @@
+as of 2026-10-07 | state IN since 2026-07-14 | P_vol 0.041 (pct 0.421, decile 3) | P_on 0.024 (pct 0.135) | P_off 0.083 (pct 0.098)
+states today by rule: {'A: OUT P_vol>q0.85, IN P_vol<q0.5': 'IN', 'B: OUT P_vol>q0.85 & P_on<q.5, IN P_vol<q0.5 or P_on>q.8': 'IN', 'A: OUT P_vol>q0.85, IN P_vol<q0.7': 'IN', 'B: OUT P_vol>q0.85 & P_on<q.5, IN P_vol<q0.7 or P_on>q.8': 'IN', 'A: OUT P_vol>q0.90, IN P_vol<q0.5': 'IN', 'B: OUT P_vol>q0.90 & P_on<q.5, IN P_vol<q0.5 or P_on>q.8': 'IN', 'A: OUT P_vol>q0.90, IN P_vol<q0.7': 'IN', 'B: OUT P_vol>q0.90 & P_on<q.5, IN P_vol<q0.7 or P_on>q.8': 'IN', 'A: OUT P_vol>q0.95, IN P_vol<q0.5': 'IN', 'B: OUT P_vol>q0.95 & P_on<q.5, IN P_vol<q0.5 or P_on>q.8': 'IN', 'A: OUT P_vol>q0.95, IN P_vol<q0.7': 'IN', 'B: OUT P_vol>q0.95 & P_on<q.5, IN P_vol<q0.7 or P_on>q.8': 'IN', 'C: OUT P_off>q0.90, IN P_off<q0.6': 'IN', 'C: OUT P_off>q0.90, IN P_off<q0.8': 'IN', 'D: OUT P_off>q0.90 & P_on<q.5, IN P_off<q.6 or P_on>q.8': 'IN', 'E: OUT P_off63>q0.90, IN P_off63<q.6': 'IN', 'F: OUT P_off>q0.90 & P_off63>q.8, IN both below q.6': 'IN', 'C: OUT P_off>q0.95, IN P_off<q0.6': 'IN', 'C: OUT P_off>q0.95, IN P_off<q0.8': 'IN', 'D: OUT P_off>q0.95 & P_on<q.5, IN P_off<q.6 or P_on>q.8': 'IN', 'E: OUT P_off63>q0.95, IN P_off63<q.6': 'IN', 'F: OUT P_off>q0.95 & P_off63>q.8, IN both below q.6': 'IN', 'C: OUT P_off>q0.98, IN P_off<q0.6': 'IN', 'C: OUT P_off>q0.98, IN P_off<q0.8': 'IN', 'D: OUT P_off>q0.98 & P_on<q.5, IN P_off<q.6 or P_on>q.8': 'IN', 'E: OUT P_off63>q0.98, IN P_off63<q.6': 'IN', 'F: OUT P_off>q0.98 & P_off63>q.8, IN both below q.6': 'IN'}
+v2_data.json 173 KB
+
+P_off drivers today (push > 0 raises the probability):
+ feature  value  rank  sign  push
+ XLK:pk5  9.720  0.05     1 -0.90
+XLY:pk10  9.987  0.08     1 -0.84
+XLK:pk10 10.963  0.08     1 -0.84
+XLY:cc10 11.917  0.09     1 -0.83
+QQQ:pk10  9.041  0.09     1 -0.82
+ QQQ:pk5  8.784  0.11     1 -0.78
+QQQ:pk21 10.235  0.11     1 -0.78
+QQQ:gk10  9.578  0.12     1 -0.76
+ QQQ:gk5  9.176  0.13     1 -0.73
+ XLY:pk5 10.240  0.16     1 -0.69
+P_off decile table (OOS):
+    p_lo   p_hi  fwd21  fwdDD21  P_off   P_on  P_volexp
+0  0.000  0.022  0.486   -1.910  0.098  0.017     0.290
+1  0.022  0.038  0.771   -1.929  0.098  0.081     0.158
+2  0.038  0.059  0.887   -1.738  0.060  0.055     0.162
+3  0.059  0.084 -0.651   -3.530  0.254  0.083     0.281
+4  0.084  0.102  1.404   -1.613  0.092  0.102     0.186
+5  0.102  0.128  1.307   -2.223  0.104  0.185     0.153
+6  0.128  0.156  1.025   -2.269  0.090  0.147     0.119
+7  0.156  0.241  0.980   -2.719  0.217  0.208     0.068
+8  0.241  0.347  0.819   -3.625  0.267  0.279     0.090
+9  0.347  0.568  1.755   -4.517  0.347  0.520     0.004
+
+P_on drivers today (push > 0 raises the probability):
+         feature  value  rank  sign  push
+        SPY:pk21  7.346  0.11     1 -0.78
+ VIX:lvl_rank504  0.139  0.14     1 -0.72
+        XLV:gk21 13.821  0.86     1  0.72
+        SPY:cc10  7.797  0.15     1 -0.70
+         SPY:cc5  6.480  0.17     1 -0.67
+        SPY:gk21  7.695  0.18     1 -0.64
+        SPY:pk10  7.292  0.19     1 -0.62
+        SPY:cc63 10.942  0.20     1 -0.60
+VIX:lvl_rank1260  0.228  0.23     1 -0.54
+         SPY:pk5  7.205  0.25     1 -0.50
+P_on decile table (OOS):
+    p_lo   p_hi  fwd21  fwdDD21  P_off   P_on  P_volexp
+0  0.000  0.009  0.848   -1.405  0.058  0.036     0.232
+1  0.009  0.025  0.797   -1.910  0.104  0.019     0.260
+2  0.025  0.041  0.711   -1.762  0.070  0.038     0.208
+3  0.041  0.065  0.769   -1.914  0.077  0.041     0.168
+4  0.066  0.100  0.841   -2.311  0.143  0.100     0.166
+5  0.100  0.132  1.238   -2.172  0.115  0.187     0.119
+6  0.132  0.164  1.059   -2.435  0.147  0.171     0.079
+7  0.164  0.241  1.125   -3.017  0.257  0.262     0.123
+8  0.241  0.425  0.601   -3.711  0.307  0.309     0.077
+9  0.426  0.765  0.794   -5.436  0.350  0.512     0.081
+
+P_vol drivers today (push > 0 raises the probability):
+                feature  value  rank  sign  push
+           IWM:VIX/cc21  0.233  0.91     1  0.81
+      IWM:VIX/cc21_rank  0.865  0.87     1  0.73
+           SPY:VIX/pk21  0.719  0.80     1  0.59
+          SPY:pk21_cc21  0.720  0.24     1 -0.53
+     SPY:pk21_cc21_rank  0.238  0.24     1 -0.52
+         SPY:cc21_roc21  0.230  0.72    -1 -0.44
+      SPY:VIX/pk21_rank  0.700  0.70     1  0.40
+    SPY:cc21_roc21_rank  0.698  0.70    -1 -0.40
+SPY:VIX_prem_chg21_rank  0.308  0.31     1 -0.38
+           QQQ:VXN/cc21  0.331  0.68     1  0.35
+P_vol decile table (OOS):

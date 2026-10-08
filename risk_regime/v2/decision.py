@@ -61,12 +61,31 @@ for qout in (0.85, 0.90, 0.95):
     for qin in (0.5, 0.7):
         ST = states(PV >= tq(PV, qout), PV < tq(PV, qin)); name = f'A: OUT P_vol>q{qout:.2f}, IN P_vol<q{qin:.1f}'; rows.append(book(ST, name)); STATES[name] = ST
         ST = states((PV >= tq(PV, qout)) & (PO < tq(PO, 0.5)), (PV < tq(PV, qin)) | (PO >= tq(PO, 0.8))); name = f'B: OUT P_vol>q{qout:.2f} & P_on<q.5, IN P_vol<q{qin:.1f} or P_on>q.8'; rows.append(book(ST, name)); STATES[name] = ST
-for qout in (0.90, 0.95):
-    ST = states(PF >= tq(PF, qout), PF < tq(PF, 0.6)); name = f'C: OUT P_off>q{qout:.2f}, IN P_off<q.6'; rows.append(book(ST, name)); STATES[name] = ST
+P63 = PRED['P_off63'] if 'P_off63' in PRED else None
+for qout in (0.90, 0.95, 0.98):
+    for qin in (0.6, 0.8):
+        ST = states(PF >= tq(PF, qout), PF < tq(PF, qin)); name = f'C: OUT P_off>q{qout:.2f}, IN P_off<q{qin:.1f}'; rows.append(book(ST, name)); STATES[name] = ST
     ST = states((PF >= tq(PF, qout)) & (PO < tq(PO, 0.5)), (PF < tq(PF, 0.6)) | (PO >= tq(PO, 0.8))); name = f'D: OUT P_off>q{qout:.2f} & P_on<q.5, IN P_off<q.6 or P_on>q.8'; rows.append(book(ST, name)); STATES[name] = ST
+    if P63 is not None:
+        ST = states(P63 >= tq(P63, qout), P63 < tq(P63, 0.6)); name = f'E: OUT P_off63>q{qout:.2f}, IN P_off63<q.6'; rows.append(book(ST, name)); STATES[name] = ST
+        ST = states((PF >= tq(PF, qout)) & (P63 >= tq(P63, 0.8)), (PF < tq(PF, 0.6)) & (P63 < tq(P63, 0.6))); name = f'F: OUT P_off>q{qout:.2f} & P_off63>q.8, IN both below q.6'; rows.append(book(ST, name)); STATES[name] = ST
 TAB = pd.DataFrame(rows); pd.to_pickle({'table': TAB, 'states': pd.DataFrame(STATES), 'deciles': DEC, 'joint': JOINT}, 'DECISION.pkl')
 print('\n=== two-state stay-in rules on trailing-quantile thresholds, fully out of sample, 2006 to date, Feb-Jul 2020 excluded ===')
 print(TAB.drop(columns=['loss captured (12 episodes)']).to_string(index=False))
 print('\nloss captured per episode (share of SPY peak-to-trough loss the book took; 2008-05, 2010-04, 2011-04, 2015-07, 2015-11, 2018-01, 2018-09, 2022-01, 2023-07, 2024-07, 2025-02, 2026-01):')
 for _, rw in TAB.iterrows(): print(f"  {rw['rule'][:62]:62s} {rw['loss captured (12 episodes)']}")
+# ---- the C family in detail: yearly returns vs SPY and the OUT spells
+for name in [n for n in STATES if n in ('C: OUT P_off>q0.95, IN P_off<q0.8', 'C: OUT P_off>q0.90, IN P_off<q0.8', 'F: OUT P_off>q0.95 & P_off63>q.8, IN both below q.6')]:
+    ST = STATES[name]; w = ST.shift(1); x = (w * r)[m]
+    yr = pd.DataFrame({'book %': (x.groupby(x.index.year).sum() * 100).round(1), 'SPY %': (r[m].groupby(r[m].index.year).sum() * 100).round(1)}); yr['diff'] = (yr['book %'] - yr['SPY %']).round(1)
+    print(f'\n=== {name}: yearly ==='); print(yr.T.to_string())
+    o = (ST == 0) & m; sp = []; start = None; prev = None
+    for d in idx[o]:
+        if start is None or (idx.get_loc(d) - idx.get_loc(prev)) > 1:
+            if start is not None: sp.append((start, prev))
+            start = d
+        prev = d
+    if start is not None: sp.append((start, prev))
+    print('OUT spells (start, end, sessions, SPY % while out):'); print('  ' + '; '.join(f"{a.date()} to {b.date()} ({idx.get_loc(b)-idx.get_loc(a)+1}d, {r.loc[a:b].sum()*100:+.1f}%)" for a, b in sp))
+    pd.to_pickle({'yearly': yr, 'spells': sp}, 'DECISION_' + ('F95' if name.startswith('F') else ('C95' if '0.95' in name else 'C90')) + '.pkl')
 print(f'\n{time.time()-t0:.0f}s')

@@ -10,17 +10,19 @@ import pandas as pd, numpy as np, json, os, warnings; warnings.filterwarnings('i
 F = pd.read_pickle('F.pkl'); MF = pd.read_pickle('MF.pkl'); L = pd.read_pickle('LAB.pkl'); O = pd.read_pickle('OHLCV.pkl'); idx = F.index
 X = pd.concat([F, MF], axis=1); PRED = pd.read_pickle('PRED2.pkl'); LAST = pd.read_pickle('LASTFIT2.pkl'); DEC = pd.read_pickle('DECISION.pkl'); EP = pd.read_pickle('EPISODES.pkl')
 spy = O['T']['SPY']['Close']; last = idx[-1]; N = 504
-HEAD = 'B: OUT P_vol>q0.90 & P_on<q.5, IN P_vol<q0.7 or P_on>q.8'
+HEAD = 'C: OUT P_off>q0.95, IN P_off<q0.8'   # reference rule, chosen from the pre-specified grid AFTER the grid was run (see README); the pre-registered rule B failed
+PREREG = 'B: OUT P_vol>q0.90 & P_on<q.5, IN P_vol<q0.7 or P_on>q.8'
 EX = (idx >= pd.Timestamp('2020-02-01')) & (idx <= pd.Timestamp('2020-07-31')); ok = L['ok21'] & ~EX
 rnd = lambda v: None if v is None or (isinstance(v, float) and np.isnan(v)) else round(float(v), 3)
 def tq(s, q, w=756): return s.rolling(w, min_periods=252).quantile(q).shift(1)
-out = {'asof': str(last.date()), 'dates': [d.strftime('%Y-%m-%d') for d in idx[-N:]], 'spy': [rnd(v) for v in spy.iloc[-N:]], 'headline_rule': HEAD}
+out = {'asof': str(last.date()), 'dates': [d.strftime('%Y-%m-%d') for d in idx[-N:]], 'spy': [rnd(v) for v in spy.iloc[-N:]], 'headline_rule': HEAD, 'preregistered_rule': PREREG}
 # probabilities: today, trailing percentile, history, threshold lines
 PR = {}
-for p in ('P_vol', 'P_on', 'P_off'):
+for p in ('P_off', 'P_on', 'P_vol', 'P_off63'):
+    if p not in PRED: continue
     s = PRED[p]; hist = s.iloc[-N:]
     pct = float((s.iloc[-756:-1] <= s.iloc[-1]).mean())
-    PR[p] = {'today': rnd(s.iloc[-1]), 'trailing_pct': round(pct, 3), 'hist': [rnd(v) for v in hist], 'q90': [rnd(v) for v in tq(s, 0.9).iloc[-N:]], 'q70': [rnd(v) for v in tq(s, 0.7).iloc[-N:]], 'q50': [rnd(v) for v in tq(s, 0.5).iloc[-N:]], 'q80': [rnd(v) for v in tq(s, 0.8).iloc[-N:]]}
+    PR[p] = {'today': rnd(s.iloc[-1]), 'trailing_pct': round(pct, 3), 'hist': [rnd(v) for v in hist], 'q95': [rnd(v) for v in tq(s, 0.95).iloc[-N:]], 'q90': [rnd(v) for v in tq(s, 0.9).iloc[-N:]], 'q80': [rnd(v) for v in tq(s, 0.8).iloc[-N:]], 'q70': [rnd(v) for v in tq(s, 0.7).iloc[-N:]], 'q60': [rnd(v) for v in tq(s, 0.6).iloc[-N:]], 'q50': [rnd(v) for v in tq(s, 0.5).iloc[-N:]]}
     # decile outcome table from the whole OOS history
     m = ok & s.notna(); dec = pd.qcut(s[m].rank(method='first'), 10, labels=False)
     g = pd.DataFrame({'p_lo': s[m].groupby(dec).min(), 'p_hi': s[m].groupby(dec).max(), 'fwd21': L.loc[m, 'fwd21'].groupby(dec).mean() * 100, 'fwdDD21': L.loc[m, 'fwdDD21'].groupby(dec).mean() * 100, 'P_off': L.loc[m, 'riskoff21'].groupby(dec).mean(), 'P_on': L.loc[m, 'riskon21'].groupby(dec).mean(), 'P_volexp': L.loc[m, 'volexp21'].groupby(dec).mean()})
@@ -29,6 +31,7 @@ for p in ('P_vol', 'P_on', 'P_off'):
     PR[p]['today_decile'] = today_dec
     # drivers: the last-fit features, today's trailing rank and sign
     feats, signs = LAST[p]; drv = []
+    yr_tab = None
     for f, sg in zip(feats, signs):
         v = X[f].iloc[-1]
         rk = float(X[f].iloc[-1]) if f.endswith('_rank') or f.endswith('rank63') or f.endswith('rank252') or f.endswith('rank504') or f.endswith('rank1260') else float(X[f].iloc[-756:].rank(pct=True).iloc[-1])
@@ -66,9 +69,15 @@ out['screen'] = {'risky': [{'feature': f, 'cons': rnd(v)} for f, v in c['ic_dd']
 AU = pd.read_pickle('AUDIT_V1.pkl'); out['audit_v1'] = AU[['group', 'rule', 'kind', 'n_all', 'P_all', '2008-17 P', '2018-26 P', '2018-26 fwd21', 'halves']].fillna('').to_dict(orient='records')
 # model variants (OOS)
 MV = pd.read_pickle('MODEL_OFF_VARIANTS.pkl') if os.path.exists('MODEL_OFF_VARIANTS.pkl') else pd.DataFrame(); out['variants'] = MV.fillna('').to_dict(orient='records')
-json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 print('as of', out['asof'], '| state', out['state'], 'since', out['state_since'], '| P_vol', PR['P_vol']['today'], f"(pct {PR['P_vol']['trailing_pct']}, decile {PR['P_vol']['today_decile']})", '| P_on', PR['P_on']['today'], f"(pct {PR['P_on']['trailing_pct']})", '| P_off', PR['P_off']['today'], f"(pct {PR['P_off']['trailing_pct']})")
 print('states today by rule:', out['states_today'])
-for p in ('P_vol', 'P_on', 'P_off'):
+out['yearly'] = {k: pd.read_pickle(f'DECISION_{k}.pkl')['yearly'].reset_index().rename(columns={'index': 'year', 'Date': 'year'}).to_dict(orient='records') for k in ('C95', 'C90', 'F95') if os.path.exists(f'DECISION_{k}.pkl')}
+out['spells'] = {k: [{'from': str(a.date()), 'to': str(b.date()), 'sessions': int(idx.get_loc(b) - idx.get_loc(a) + 1), 'spy_while_out': round(float(np.log(spy.loc[b] / spy.loc[a]) * 100), 1)} for a, b in pd.read_pickle(f'DECISION_{k}.pkl')['spells']] for k in ('C95', 'C90', 'F95') if os.path.exists(f'DECISION_{k}.pkl')}
+out['null'] = pd.read_pickle('NULLTEST2.pkl') if os.path.exists('NULLTEST2.pkl') else None
+if out['null']:
+    for k, v in out['null'].items(): v.pop('nulls', None)
+MV2 = pd.read_pickle('VARIANTS2.pkl') if os.path.exists('VARIANTS2.pkl') else pd.DataFrame(); out['variants2'] = MV2.fillna('').to_dict(orient='records')
+json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
+for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))
     print(f'{p} decile table (OOS):'); print(pd.DataFrame(PR[p]['deciles']).round(3).to_string())
