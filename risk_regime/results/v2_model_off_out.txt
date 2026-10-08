@@ -1,0 +1,87 @@
+=== riskoff21: 5% SPY drawdown within 21 sessions ===
+                 model     era    n  base   auc    q1    q5  lift_q5
+gbm K150 d3 (model.py) 2005-12 2013 0.215 0.499 0.213 0.203     0.95
+gbm K150 d3 (model.py) 2013-19 1762 0.102 0.446 0.167 0.099     0.97
+gbm K150 d3 (model.py) 2020-26 1532 0.164 0.565 0.107 0.160     0.97
+gbm K150 d3 (model.py)     all 5307 0.163 0.507 0.175 0.165     1.01
+   114s
+          model     era    n  base   auc    q1    q5  lift_q5
+gbm K30 d2 mono 2005-12 2013 0.215 0.660 0.082 0.352     1.64
+gbm K30 d2 mono 2013-19 1762 0.102 0.471 0.187 0.133     1.30
+gbm K30 d2 mono 2020-26 1532 0.164 0.621 0.085 0.205     1.25
+gbm K30 d2 mono     all 5307 0.163 0.631 0.105 0.270     1.66
+   118s
+          model     era    n  base   auc    q1    q5  lift_q5
+gbm K15 d2 mono 2005-12 2013 0.215 0.635 0.092 0.352     1.64
+gbm K15 d2 mono 2013-19 1762 0.102 0.614 0.051 0.144     1.41
+gbm K15 d2 mono 2020-26 1532 0.164 0.654 0.049 0.221     1.35
+gbm K15 d2 mono     all 5307 0.163 0.649 0.067 0.262     1.61
+   122s
+                    model     era    n  base   auc    q1    q5  lift_q5
+gbm K8 d1 mono (additive) 2005-12 2013 0.215 0.565 0.107 0.315     1.47
+gbm K8 d1 mono (additive) 2013-19 1762 0.102 0.614 0.054 0.130     1.28
+gbm K8 d1 mono (additive) 2020-26 1532 0.164 0.687 0.055 0.208     1.27
+gbm K8 d1 mono (additive)     all 5307 0.163 0.603 0.097 0.249     1.53
+   125s
+          model     era    n  base   auc    q1    q5  lift_q5
+logit K20 ranks 2005-12 2013 0.215 0.635 0.114 0.395     1.83
+logit K20 ranks 2013-19 1762 0.102 0.575 0.068 0.164     1.61
+logit K20 ranks 2020-26 1532 0.164 0.654 0.055 0.248     1.51
+logit K20 ranks     all 5307 0.163 0.643 0.095 0.281     1.72
+   126s
+         model     era    n  base   auc    q1    q5  lift_q5
+logit K8 ranks 2005-12 2013 0.215 0.626 0.107 0.350     1.63
+logit K8 ranks 2013-19 1762 0.102 0.593 0.054 0.150     1.47
+logit K8 ranks 2020-26 1532 0.164 0.693 0.049 0.283     1.73
+logit K8 ranks     all 5307 0.163 0.648 0.080 0.291     1.79
+   128s
+              model     era    n  base   auc    q1    q5  lift_q5
+raw VIX:lvl_rank504 2005-12 2013 0.215 0.678 0.146 0.427     1.98
+raw VIX:lvl_rank504 2013-19 1762 0.102 0.668 0.017 0.207     2.02
+raw VIX:lvl_rank504 2020-26 1532 0.164 0.602 0.098 0.251     1.53
+raw VIX:lvl_rank504     all 5307 0.163 0.660 0.089 0.325     2.00
+   129s
+                model     era    n  base   auc    q1    q5  lift_q5
+raw VIX3M:lvl_rank252 2005-12 1478 0.281 0.640 0.203 0.392     1.40
+raw VIX3M:lvl_rank252 2013-19 1762 0.102 0.650 0.034 0.204     2.00
+raw VIX3M:lvl_rank252 2020-26 1532 0.164 0.662 0.094 0.257     1.57
+raw VIX3M:lvl_rank252     all 4772 0.177 0.656 0.105 0.298     1.68
+   130s
+            model     era    n  base   auc    q1    q5  lift_q5
+raw HYG:pk21_rank 2005-12 1122 0.273 0.686 0.169 0.596     2.18
+raw HYG:pk21_rank 2013-19 1762 0.102 0.598 0.074 0.164     1.61
+raw HYG:pk21_rank 2020-26 1532 0.164 0.653 0.137 0.313     1.91
+raw HYG:pk21_rank     all 4416 0.167 0.647 0.113 0.328     1.97
+   131s
+            model     era    n  base   auc    q1    q5  lift_q5
+raw SPY:cc21_rank 2005-12 2013 0.215 0.684 0.084 0.333     1.55
+raw SPY:cc21_rank 2013-19 1762 0.102 0.589 0.057 0.198     1.94
+raw SPY:cc21_rank 2020-26 1532 0.164 0.667 0.065 0.251     1.53
+raw SPY:cc21_rank     all 5307 0.163 0.660 0.073 0.295     1.81
+   131s
+                model     era    n  base   auc    q1    q5  lift_q5
+raw XS:avgcorr21_rank 2005-12 2013 0.215 0.549 0.159 0.218     1.02
+raw XS:avgcorr21_rank 2013-19 1762 0.102 0.572 0.079 0.201     1.97
+raw XS:avgcorr21_rank 2020-26 1532 0.164 0.603 0.114 0.277     1.69
+raw XS:avgcorr21_rank     all 5307 0.163 0.580 0.116 0.231     1.42
+   132s
+               model     era    n  base   auc    q1    q5  lift_q5
+raw -HYG:signedvol21 2005-12 1422 0.288 0.594 0.161 0.351     1.22
+raw -HYG:signedvol21 2013-19 1762 0.102 0.656 0.045 0.204     2.00
+raw -HYG:signedvol21 2020-26 1532 0.164 0.655 0.052 0.261     1.59
+raw -HYG:signedvol21     all 4716 0.178 0.617 0.094 0.271     1.52
+   133s
+        model     era    n  base   auc    q1    q5  lift_q5
+raw XLV:rel63 2005-12 2013 0.215 0.592 0.236 0.375     1.74
+raw XLV:rel63 2013-19 1762 0.102 0.651 0.065 0.224     2.19
+raw XLV:rel63 2020-26 1532 0.164 0.662 0.042 0.264     1.61
+raw XLV:rel63     all 5307 0.163 0.616 0.121 0.291     1.79
+   134s
+             model     era    n  base   auc    q1    q5  lift_q5
+raw VIX:roc21_rank 2005-12 2013 0.215 0.513 0.236 0.256     1.19
+raw VIX:roc21_rank 2013-19 1762 0.102 0.562 0.110 0.133     1.30
+raw VIX:roc21_rank 2020-26 1532 0.164 0.550 0.163 0.238     1.45
+raw VIX:roc21_rank     all 5307 0.163 0.536 0.172 0.214     1.31
+   135s
+
+=== riskoff63: 10% SPY drawdown within 63 sessions ===
