@@ -18,7 +18,7 @@ The loss that matters is a 15% decline, not 5%. This script
  (7) a 20-draw permutation test of the dedicated 15%/63 pipeline (same construction as nulltest.py).
 Writes PRED15.pkl, LASTFIT15.pkl, BIG.pkl.
 """
-import sys, time, numpy as np, pandas as pd, warnings; warnings.filterwarnings('ignore'); sys.path.insert(0, '../v2'); import wf
+import sys, os, time, numpy as np, pandas as pd, warnings; warnings.filterwarnings('ignore'); sys.path.insert(0, '../v2'); import wf
 from sklearn.metrics import roc_auc_score
 pd.set_option('display.width', 340); pd.set_option('display.max_rows', 500); pd.set_option('display.max_columns', 60)
 t0 = time.time(); idx = wf.idx; YEARS = wf.YEARS; O = wf.O
@@ -172,6 +172,8 @@ cols = ['rule', 'ann', 'sharpe', 'maxDD', 'exposure', 'spells', 'spells w/o any 
 print(TAB.sort_values('mean taken')[cols].to_string(index=False))
 print('\nshare taken per event, by rule (same event order as above):')
 for _, rw in TAB.sort_values('mean taken').iterrows(): print(f"  {rw['rule'][:60]:60s} {rw['taken per 15% event']}")
+prev = pd.read_pickle('BIG.pkl') if os.path.exists('BIG.pkl') else {}
+if R_NULL == 0 and 'null15' in prev: OUT['null15'] = prev['null15']; print('stored permutation result (not rerun daily):', {k: (round(v, 3) if isinstance(v, float) else v) for k, v in prev['null15'].items() if k != 'nulls'})
 pd.to_pickle({k: v for k, v in OUT.items() if k != 'pct'}, 'BIG.pkl'); pd.to_pickle({k: v for k, v in ST.items() if k[0] in 'GHIJK'}, 'STATES15.pkl')
 print(f'\nsections 1-6 done {time.time()-t0:.0f}s', flush=True)
 # ---------- 7. permutation null for the dedicated 15%/63 pipeline

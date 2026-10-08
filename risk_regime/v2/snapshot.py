@@ -77,6 +77,60 @@ out['null'] = pd.read_pickle('NULLTEST2.pkl') if os.path.exists('NULLTEST2.pkl')
 if out['null']:
     for k, v in out['null'].items(): v.pop('nulls', None)
 MV2 = pd.read_pickle('VARIANTS2.pkl') if os.path.exists('VARIANTS2.pkl') else pd.DataFrame(); out['variants2'] = MV2.fillna('').to_dict(orient='records')
+# ---------- 15% layer (Stage 8): the loss that matters
+import re as _re, datetime as _dt
+def jsafe(v):
+    if isinstance(v, dict): return {str(k): jsafe(x) for k, x in v.items()}
+    if isinstance(v, (list, tuple, np.ndarray)): return [jsafe(x) for x in v]
+    if isinstance(v, (bool, np.bool_)): return bool(v)
+    if isinstance(v, (np.integer,)): return int(v)
+    if isinstance(v, (float, np.floating)): return rnd(v)
+    if isinstance(v, (pd.Timestamp, _dt.date)): return str(v)[:10]
+    return v
+if os.path.exists('BIG.pkl') and os.path.exists('PRED15.pkl') and os.path.exists('LASTFIT15.pkl'):
+    BIG = pd.read_pickle('BIG.pkl'); P15 = pd.read_pickle('PRED15.pkl'); L15 = pd.read_pickle('LASTFIT15.pkl'); FT = {}
+    EX0, EX1 = pd.Timestamp('2020-02-01'), pd.Timestamp('2020-07-31')
+    def fwd15(N):
+        fmin = spy[::-1].rolling(N, min_periods=N).min()[::-1].shift(-1); y = (fmin / spy - 1 <= -0.15).astype(float)
+        touches = pd.Series(False, index=idx); pos0 = idx.get_loc(idx[idx >= EX0][0]); touches.iloc[max(0, pos0 - N):] = idx[max(0, pos0 - N):] <= EX1
+        return y, fmin.notna() & spy.notna() & ~touches, (fmin / spy - 1) * 100, np.log(spy.shift(-N) / spy) * 100
+    isrank = lambda f: f.endswith('_rank') or f.endswith(('rank63', 'rank252', 'rank504', 'rank1260'))
+    for key, N in (('dd15_63', 63), ('dd15_126', 126)):
+        s_ = P15[key]; y15, ok15, worst, fwd = fwd15(N); pct = float((s_.iloc[-756:-1] <= s_.iloc[-1]).mean())
+        mm = ok15 & s_.notna() & (idx.year >= 2005); dec = pd.qcut(s_[mm].rank(method='first'), 10, labels=False)
+        g = pd.DataFrame({'p_lo': s_[mm].groupby(dec).min(), 'p_hi': s_[mm].groupby(dec).max(), 'hit': y15[mm].groupby(dec).mean(), 'worst': worst[mm].groupby(dec).mean(), 'fwd': fwd[mm].groupby(dec).mean()})
+        td = int(min(9, np.searchsorted(g['p_hi'].to_numpy(), s_.iloc[-1])))
+        feats, signs = L15[key]; drv = []
+        for f, sg in zip(feats, signs):
+            if f not in X.columns: continue
+            rk = float(X[f].iloc[-1]) if isrank(f) else float(X[f].iloc[-756:].rank(pct=True).iloc[-1])
+            drv.append({'feature': f, 'value': rnd(X[f].iloc[-1]), 'rank': round(rk, 2), 'sign': int(sg), 'push': round((rk - 0.5) * sg * 2, 2)})
+        drv.sort(key=lambda d: -abs(d['push']))
+        FT[key] = {'today': rnd(s_.iloc[-1]), 'trailing_pct': round(pct, 3), 'today_decile': td, 'deciles': [{k: rnd(v) for k, v in row.items()} for _, row in g.iterrows()], 'drivers': drv, 'base': rnd(y15[mm].mean())}
+    ET = BIG['event_table']; FT['events'] = jsafe(ET.to_dict(orient='records'))
+    summ = {}
+    for k in [c[:-len(' first>95th')] for c in ET.columns if c.endswith(' first>95th')]:
+        at_peak = before5 = after5 = never = 0
+        for v in ET[f'{k} first>95th']:
+            if v == 'never': never += 1; continue
+            mt = _re.search(r'SPY (-?[0-9.]+)%', str(v)); d = float(mt.group(1)) if mt else 0.0; sess = int(_re.search(r'\+(\d+)s', str(v)).group(1))
+            if sess == 0: at_peak += 1
+            elif d > -5: before5 += 1
+            else: after5 += 1
+        summ[k] = {'at_peak_already_extreme': at_peak, 'crossed_before_5pct': before5, 'crossed_after_5pct': after5, 'never': never, 'events': int(len(ET))}
+    FT['timing'] = summ
+    FT['rules'] = jsafe(BIG['rules15'].to_dict(orient='records')); FT['events_scored'] = [f"{a.date()} to {b.date()} {d}%" for a, b, d in zip(BIG['events_scored'].peak, BIG['events_scored'].trough, BIG['events_scored']['depth%'])]
+    FT['models'] = jsafe(BIG['models15'].fillna('').to_dict(orient='records')); FT['existing'] = jsafe(BIG['existing_vs_labels'].to_dict(orient='records'))
+    FT['null'] = jsafe({k: v for k, v in BIG['null15'].items() if k != 'nulls'}) if 'null15' in BIG else None
+    if os.path.exists('ONSET.pkl'):
+        ON = pd.read_pickle('ONSET.pkl')['table']; pairs = []; rowd = lambda rw: {'ann': rnd(rw.ann), 'sharpe': rnd(rw.sharpe), 'maxDD': rnd(rw.maxDD), 'spells': int(rw.spells), 'false': int(rw['spells w/o any 10% decline']), 'taken': rnd(rw['mean taken'])}
+        for x_ in (3, 5, 7, 10):
+            for iname in ('IN calm (P_off<q.8 & P_vol<q.7)', 'IN new 42d high', 'IN calm or new 42d high'):
+                c_ = ON[ON.rule == f'control: SPY {x_}% below 63d high | {iname}']; v_ = ON[ON.rule == f'vol alert q0.9/42s & SPY {x_}% below 63d high | {iname}']
+                if len(c_) and len(v_): pairs.append({'trigger': f'{x_}% below 63d high', 'reentry': iname, 'control': rowd(c_.iloc[0]), 'vol': rowd(v_.iloc[0])})
+        FT['onset'] = pairs; FT['onset_best'] = jsafe(ON.sort_values('ann', ascending=False).head(6)[['rule', 'ann', 'sharpe', 'maxDD', 'exposure', 'spells', 'spells w/o any 10% decline', 'mean taken', 'worst taken']].to_dict(orient='records'))
+    out['fifteen'] = FT
+    print('P(15% decline / 63 sessions) today', FT['dd15_63']['today'], f"(pct {FT['dd15_63']['trailing_pct']}, decile {FT['dd15_63']['today_decile']})", '| /126', FT['dd15_126']['today'], f"(pct {FT['dd15_126']['trailing_pct']})", '| timing', summ.get('P15/63 (new)'))
 json.dump(out, open('v2_data.json', 'w')); print('v2_data.json', os.path.getsize('v2_data.json') // 1024, 'KB')
 for p in ('P_off', 'P_on', 'P_vol'):
     print(f'\n{p} drivers today (push > 0 raises the probability):'); print(pd.DataFrame(PR[p]['drivers']).head(10).to_string(index=False))

@@ -137,6 +137,7 @@ State **IN** since 2026-07-14, dial **90**. Not inside a vol episode (the last r
 | P(5% drawdown in 21 sessions) | 0.083 | 10th | the bottom half of the distribution ran 6 to 25 percent, about 12 pooled, mean next month +0.5 to +1.4% |
 | P(5% rally in 21 sessions) | 0.024 | 14th | 2 percent rallied 5%, 10 percent drew down 5%, mean next month +0.8% |
 | P(realized vol 1.5x in 21 sessions) | 0.041 | 42nd | 10 percent expanded, mean next month +0.6% |
+| P(15% decline in 63 sessions), reading only | 0.009 | 67th | 3 percent saw one (base 5), mean worst close within 63 sessions -4.3% |
 
 Why the drawdown probability is low: the Parkinson and Garman-Klass vol of XLK, XLY and QQQ sit between the 5th and 16th percentiles of their two-year ranges, and those are the model's features. Why the rally probability is low: SPY realized vol under every estimator is at the 11th to 25th percentile and the VIX level rank at the 14th, with only healthcare's realized vol (86th) pushing the other way. Why the vol-expansion probability is middling: implied is rich against realized for IWM (91st percentile) and against SPY's Parkinson vol (80th), which pushes it up, while the Parkinson-over-close-to-close ratio (24th) and the 21-day realized ROC (72nd, counted negatively) push it down.
 
@@ -144,8 +145,79 @@ The tape in ranks: VIX level 0.14, VIX 5-day ROC 0.28, VVIX/VIX 5-day ROC 0.53, 
 
 ## 10. Operations
 
-`v2/run_v2.sh` runs fetch, the equal-weight fetch, the v1 build step (kept for its universe guard), then features, fractal, labels, model2, decision, tickers, snapshot, the dashboard and the PDF; about seven minutes when nothing else is running (428 seconds on the final verification rerun), so the routine runs it in the background with a thirty-minute cap. That verification rerun refetched every series and rebuilt everything from scratch: the out-of-sample AUCs reproduced to three decimals (P_on 0.789 became 0.788), today's reading reproduced exactly, and the reference rule's row of the grid did not move. Yahoo's adjusted closes shift at the sixth decimal between fetches, and that is enough to move the P_vol rules, which trade 40 to 116 times, by up to 0.3 points of annualized return; those rows are not stable to the data and nothing is built on them. The daily routine fires into the build session at 5:41pm New York on weekdays, runs that chain, commits `results/` and `dashboard_v2.html`, republishes the dashboard to the same artifact link, posts the spoken summary in the session and sends a one-line phone notification. The audit, the screen and the permutation test are research steps and are not rerun daily. The data guards from v1 (empty-fetch failure, universe check, stale-series report) remain.
+`v2/run_v2.sh` runs fetch, the equal-weight fetch, the v1 build step (kept for its universe guard), then features, fractal, labels, model2, decision, tickers, big (the 15% layer, with its permutation test not rerun daily), onset, snapshot, the dashboard and the PDF; about seven minutes when nothing else is running (428 seconds on the final verification rerun), so the routine runs it in the background with a thirty-minute cap. That verification rerun refetched every series and rebuilt everything from scratch: the out-of-sample AUCs reproduced to three decimals (P_on 0.789 became 0.788), today's reading reproduced exactly, and the reference rule's row of the grid did not move. Yahoo's adjusted closes shift at the sixth decimal between fetches, and that is enough to move the P_vol rules, which trade 40 to 116 times, by up to 0.3 points of annualized return; those rows are not stable to the data and nothing is built on them. The daily routine fires into the build session at 5:41pm New York on weekdays, runs that chain, commits `results/` and `dashboard_v2.html`, republishes the dashboard to the same artifact link, posts the spoken summary in the session and sends a one-line phone notification. The audit, the screen and the permutation test are research steps and are not rerun daily. The data guards from v1 (empty-fetch failure, universe check, stale-series report) remain.
 
 ## 11. What is not claimed
 
-The drawdown probability is weak: a pooled AUC of 0.64 with a year-bootstrap interval that reaches 0.54, no better than the raw VIX level rank, and its calibration in the middle deciles is not monotone. The stay-in rule's advantage over buy-and-hold is 2008; everywhere else it costs return. The equal-weight breadth, volume, volatility-of-volume, range-compression and multifractal features were all built and screened, and none of them earns a place in the drawdown model; they are on the page as tape. The rally and vol-expansion probabilities are the robust outputs of this work. The research scripts in `v2/` reproduce every number here from the raw downloads, and `results/v2_*_out.txt` hold the full tables. Nothing in v1 (`README_v1.md`) should be relied on.
+The 15% declines are the loss that matters, and section 12 shows that the ones starting from a quiet tape are not caught before they are 5 to 10% in; the dedicated 15% model does not clear its permutation null. The drawdown probability is weak: a pooled AUC of 0.64 with a year-bootstrap interval that reaches 0.54, no better than the raw VIX level rank, and its calibration in the middle deciles is not monotone. The stay-in rule's advantage over buy-and-hold is 2008; everywhere else it costs return. The equal-weight breadth, volume, volatility-of-volume, range-compression and multifractal features were all built and screened, and none of them earns a place in the drawdown model; they are on the page as tape. The rally and vol-expansion probabilities are the robust outputs of this work. The research scripts in `v2/` reproduce every number here from the raw downloads, and `results/v2_*_out.txt` hold the full tables. Nothing in v1 (`README_v1.md`) should be relied on.
+
+## 12. The 15% question (`v2/big.py`, `v2/onset.py`, `results/v2_big_out.txt`, `results/v2_big_null_out.txt`, `results/v2_onset_out.txt`)
+
+The loss that matters is 15%, not 5%. Stage 8 rebuilt the target around it and scored everything above on it.
+
+**Events.** Zigzag on SPY closes: a 15% fall from the running high opens an event, a 10% rebound off the low or a new high closes it. Seventeen since 1993; eleven since 2005 excluding 2020, of which five are legs of 2007-09 (Oct 2007 -17.8, May 2008 -37.5, Oct 2008 -17.2, Nov 2008 -24.9, Jan 2009 -27.1) and six stand alone (Apr 2010 -15.7, Apr 2011 -18.6, Sep 2018 -19.3, Jan 2022 -23.0, Aug 2022 -16.7, Feb 2025 -18.8). Peak-to-trough took 10 to 114 sessions.
+
+**Labels.** A 15% decline from today's close within 63 sessions (base rate 5.1% since 2005, 267 positive sessions spread over eight calendar years) and within 126 sessions (11.2%); sessions whose window touches Feb to Jul 2020 are masked. The existing probabilities against the 63-session label, out of sample: P_off 0.675 (0.68 / 0.71 / 0.67 by era), P_off63 0.689 but 0.51 in 2020-26, P_on 0.762 (a high rally probability is a high-vol state, which is also where 15% declines live; 0.81 in 2005-12, 0.55 to 0.58 after), P_vol inverted 0.635.
+
+**Dedicated models**, same protocol, purge longer than the label window:
+
+| model | AUC 05-12 | 13-19 | 20-26 | all | year-bootstrap CI |
+|---|---|---|---|---|---|
+| 15%/63, K15 depth-2 monotone | 0.75 | 0.82 | 0.55 | 0.724 | 0.587-0.830 |
+| 15%/63, K30 depth-2 monotone | 0.82 | 0.71 | 0.56 | 0.774 | 0.594-0.887 |
+| 15%/63, K8 depth-1 monotone | 0.77 | 0.77 | 0.50 | 0.742 | 0.606-0.854 |
+| 15%/63, K150 depth-3 free | 0.72 | 0.22 | 0.23 | 0.610 | 0.310-0.779 |
+| 15%/126, K15 depth-2 monotone | 0.57 | 0.40 | 0.45 | 0.563 | 0.358-0.734 |
+| raw XLV relative strength, 63d | 0.92 | 0.93 | 0.54 | 0.818 | |
+| raw SPY 63d ROC rank, inverted | 0.83 | 0.44 | 0.74 | 0.771 | |
+| raw SPY realized 21d rank | 0.76 | 0.44 | 0.71 | 0.719 | |
+| raw VIX level rank | 0.73 | 0.71 | 0.53 | 0.689 | |
+
+The features the 63-session model selects (healthcare relative strength, XLK realized vol, XLK 63-day momentum and drawdown, sector drawdowns) describe a decline already underway with defensives leading. Its permutation test: null mean 0.530, standard deviation 0.115, maximum 0.780; the real 0.724 is 1.7 standard deviations above the null mean and inside the null's range. With eight calendar years of positives the walk-forward cannot establish the 15% model, and the 126-session one is at chance. The 15%/63 probability is on the page as a reading, not as a decision input.
+
+**When each probability crossed its trailing 95th percentile**, by event (sessions after the peak, SPY decline already in place):
+
+| peak | depth | P_off (5%/21) | 15%/63 model | P_vol |
+|---|---|---|---|---|
+| 2007-10-09 | -17.8 | +6s, -1.4% | +58s, -6.9% | +6s, -1.4% |
+| 2008-05-19 | -37.5 | +85s, -15.6% | +79s, -13.1% | never |
+| 2008-10-13, 11-04, 2009-01-06 | -17 to -27 | at the peak, already extreme | at the peak | never |
+| 2010-04-23 | -15.7 | never | never | +9s, -7.3% |
+| 2011-04-29 | -18.6 | never | +78s, -17.0% | +4s, -2.1% |
+| 2018-09-20 | -19.3 | +24s, -9.2% | +5s, -0.5% | never |
+| 2022-01-03 | -23.0 | +36s, -10.3% | +43s, -12.2% | +15s, -9.1% |
+| 2022-08-16 | -16.7 | never | never | never |
+| 2025-02-19 | -18.8 | +33s, -17.5% | never | +5s, -3.0% |
+
+Two onset types. From a stressed tape (the 2008-09 legs, 2018 Q4, Aug 2022) the drawdown probabilities are already at or near their ceiling at the peak; from a quiet tape (2007, 2010, 2011, Jan 2022, 2025) they sleep at the peak (P_off at the 5th percentile of its trailing three years at the Feb 2025 peak, the dedicated model at the 26th) and only the vol-expansion probability moves early, in five of those eight cases, three of them before SPY was 5% down. P_vol alone failed as a stay-in rule (section 8) because it fires 40 to 116 times and its OUT state ends as soon as vol has expanded.
+
+**The decision grid re-scored on the 15% events** ("taken" = share of each peak-to-trough decline the book took, 1.0 = all of it; "false" = OUT spells not followed by any 10% decline; totals are log-return points, 2006 to date):
+
+| rule | ann % | Sharpe | max DD | spells | false | mean taken | avoided inside | given up outside |
+|---|---|---|---|---|---|---|---|---|
+| SPY buy and hold | 10.8 | 0.60 | -80.3 | 0 | 0 | 1.00 | 0 | 0 |
+| **C: OUT P_off > 95th, IN < 80th (reference)** | 11.2 | 0.82 | -25.0 | 14 | 5 | 0.50 | 142 | 134 |
+| C: OUT > 90th, IN < 80th | 11.5 | 0.87 | -23.8 | 18 | 8 | 0.43 | 157 | 144 |
+| J: OUT P_off > 90th and 15%/63 > 80th, IN P_off < 80th | 11.7 | 0.88 | -23.8 | 13 | 4 | 0.44 | 155 | 136 |
+| F: OUT P_off > 95th and P_off63 > 80th, IN both < 60th | 10.4 | 0.85 | -21.8 | 8 | 3 | 0.36 | 171 | 181 |
+| F: OUT > 90th and P_off63 > 80th | 9.5 | 0.80 | -21.8 | 11 | 6 | 0.35 | 174 | 200 |
+| E: OUT P_off63 > 90th, IN < 60th | 9.4 | 0.77 | -20.6 | 21 | 14 | 0.35 | 171 | 199 |
+| G: OUT 15%/63 > 95th, IN < 80th | 11.2 | 0.80 | -35.5 | 14 | 5 | 0.53 | 127 | 118 |
+| H: OUT 15%/126 > 95th, IN < 80th | 10.8 | 0.73 | -30.7 | 14 | 8 | 0.66 | 107 | 108 |
+
+The reference rule took none of the four 2008-09 legs after the first, 0.47 of Oct 2007, 0.45 of 2018, 0.61 of Jan 2022, 0.92 of 2025, and all of 2010, 2011 and Aug 2022. Every rule that takes less of the declines gives up more outside them. The best row by return and Sharpe is J, which differs from the reference in three events (0.18 vs 0.47 of Oct 2007, 0.28 vs 0.45 of 2018, 0.49 vs 0.61 of Jan 2022) and has four fewer false spells; on eleven events that is not separable from noise, and the reference rule stays.
+
+**Onset rules.** A vol-expansion alert (P_vol above its trailing 90th percentile within the last 42 sessions) that becomes OUT only once SPY is a given percent below its 63-session closing high, against the same price trigger with no vol filter, 133 rules in all (`results/v2_onset_out.txt`):
+
+| price trigger, re-entry | control: ann / spells / false / taken | with vol alert: ann / spells / false / taken |
+|---|---|---|
+| 5%, calmed probabilities | 7.35 / 197 / 111 / 0.38 | 7.49 / 124 / 67 / 0.52 |
+| 5%, new 42d high | 5.33 / 43 / 27 / 0.25 | 5.77 / 30 / 18 / 0.42 |
+| 7%, calmed probabilities | 8.30 / 95 / 37 / 0.42 | 8.73 / 57 / 21 / 0.54 |
+| 7%, new 42d high | 6.84 / 28 / 14 / 0.30 | 8.13 / 17 / 8 / 0.44 |
+| 10%, calmed probabilities | 9.36 / 43 / 9 / 0.48 | 10.07 / 25 / 4 / 0.62 |
+| 10%, new 42d high | 10.05 / 13 / 1 / 0.42 | 10.68 / 7 / 0 / 0.58 |
+
+At a 5% trigger every rule, filtered or not, loses 3 to 5.5 points a year to buy-and-hold with 30 to 200 spells. The vol filter cuts the spell count by a third to a half and adds 0.1 to 1.3 points a year at every trigger depth, which is the one place the vol complex adds information beyond price: it separates, modestly, the dips that become 15% declines from the ones that do not. Nothing in the grid beats the reference rule, and the only rules that match buy-and-hold are the 10% triggers, which by construction are out after the first 10%.
+
+**What this means.** In this data a 15% decline that starts from a quiet tape is not distinguishable at its peak, or at 5% down, from the five-to-seven percent dips since 2006 that recovered. The vol complex confirms at 1 to 9% down in five of eight such cases, and it also confirms most dips that end there. The reference rule's record on 15% declines is all of 2008-09 after the first leg, about half of Oct 2007, 2018 Q4 and Jan 2022, and none of 2010, 2011, Aug 2022 or 2025. No construct tested here improves on that without paying more outside the events than it saves inside.
