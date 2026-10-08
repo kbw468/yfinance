@@ -54,6 +54,8 @@ if VVIX_NOTE: print('NOTE:', VVIX_NOTE)
 rk = lambda s: s.rolling(504, min_periods=252).rank(pct=True)
 V21 = rk(np.log(vix / vix.shift(21))); R21 = rk(ratio - ratio.shift(21)); vr, rr = float(V21.iloc[-1]), float(R21.iloc[-1])
 vv_prev = int(VS['state'].iloc[-1]); vv_now = 0 if (vv_prev == 1 and vr >= 0.9 and rr >= 0.9) else (1 if (vv_prev == 0 and vr < 0.5) else vv_prev)
+if 'VVIX' in _stale and vv_now != vv_prev:   # a frozen VVIX against a live VIX distorts the ratio; hold the leg at last night's state
+    print(f'NOTE: VIX/VVIX leg would have flipped {vv_prev}->{vv_now} on a stale VVIX; held at last night\'s state'); VVIX_NOTE += '; VIX/VVIX leg held at last night\'s state'; vv_now = vv_prev
 def tpct(p): s = PRED[p].dropna().iloc[-755:]; return float((s <= P_NOW[p]).mean())
 def dec_of(p, v):
     d = D['probs'][p]['deciles']; his = [x['p_hi'] for x in d]; return int(min(9, np.searchsorted(his, v)))
