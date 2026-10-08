@@ -1,0 +1,108 @@
+base P 0.178 fwd21 0.93 DD21 -2.72
+
+=== ROC x ROC DANGER cells (n>=40, P>=0.30) ===
+                     realized ROC            index ROC   n  P5_21  fwd10  fwd21  DD10  DD21
+  VRP chg5z (VIX-RV21 change) <-1        VIX roc21z >1 128   0.41  -1.06  -1.31 -4.16 -6.07
+                   21/63 roc5z >1        TNX chg21z >1 112   0.40  -0.78  -0.60 -2.50 -4.34
+  VRP chg5z (VIX-RV21 change) <-1         OVX roc5z >1  50   0.36  -0.60  -0.30 -3.15 -5.09
+   VRP chg5z (VIX-RV21 change) >1       MOVE roc5z <-1  40   0.35  -0.53   0.71 -4.09 -4.32
+                21/63 roc5z -1..0   MOVE/VIX roc5z <-1 147   0.34   0.32   0.53 -2.66 -4.17
+ RV accel (roc5 - roc5 lag5) z >1        TNX chg21z >1 118   0.34  -0.15   0.18 -2.37 -3.60
+ RV accel (roc5 - roc5 lag5) z >1       MOVE roc5z <-1  46   0.33   0.11   0.38 -2.94 -3.52
+                   RV21 roc21z >1       SKEW roc10z >1  91   0.32   0.35  -0.60 -2.82 -5.29
+                    RV21 roc5z >1        TNX chg21z >1  99   0.32   0.19   1.49 -2.46 -3.16
+                 RV21 roc5z -1..0   MOVE/VIX roc5z <-1 128   0.31   0.21   1.25 -2.44 -3.53
+                    RV10 roc5z >1        VIX roc21z >1 192   0.31  -0.04   0.15 -2.75 -4.35
+  VRP chg5z (VIX-RV21 change) <-1 VVIX/VIX roc5z -1..0  98   0.31  -0.19  -0.58 -2.96 -4.66
+                    RV21 roc5z >1        VIX roc21z >1 256   0.30  -0.13   0.61 -3.01 -4.41
+                   RV21 roc21z >1        VVIX roc5z >1 126   0.30  -0.08   0.24 -3.27 -4.97
+VRP chg5z (VIX-RV21 change) -1..0         VIX roc5z >1  66   0.30  -0.42   0.11 -2.74 -4.31
+
+=== ROC x ROC SAFE cells (n>=40, P<=0.07) ===
+                     realized ROC             index ROC   n  P5_21  fwd10  fwd21  DD10  DD21
+                  RV10 roc5z 0..1   VIX9D/VIX roc5z <-1 176   0.07   0.68   1.47 -0.88 -1.55
+                  RV21 roc5z 0..1   VIX9D/VIX roc5z <-1 200   0.07   0.68   1.30 -0.86 -1.62
+RV accel (roc5 - roc5 lag5) z <-1  VIX9D/VIX roc5z 0..1 130   0.07   1.00   1.76 -1.09 -1.62
+                  RV21 roc21z <-1    VIX/VIX3M roc3z >1  87   0.07   1.46   2.12 -0.85 -1.54
+                  RV21 roc21z <-1 VIX9D/VIX roc5z -1..0 222   0.07   0.68   1.10 -0.90 -1.68
+                  RV21 roc10z <-1   VIX9D/VIX roc5z <-1  59   0.07   0.30   1.58 -0.89 -1.71
+                   RV21 roc5z <-1         MOVE roc5z >1  58   0.07   1.37   1.60 -0.83 -1.64
+                   RV21 roc5z <-1     VIX1D roc3z -1..0  44   0.07   0.51   0.85 -1.25 -2.07
+                  RV21 roc21z <-1      MOVE roc21z 0..1 187   0.07   1.21   2.13 -1.03 -1.50
+                   RV21 roc5z <-1       TNX chg21z 0..1 216   0.07   0.82   1.49 -1.04 -1.68
+                  RV21 roc10z <-1 VIX9D/VIX roc5z -1..0 197   0.06   0.53   1.26 -1.00 -1.68
+                   10/21 roc5z >1     MOVE/VIX roc5z >1  67   0.06   1.04   2.30 -1.17 -1.52
+                  10/21 roc5z <-1        GVZ roc5z 0..1 189   0.06   0.57   1.72 -1.09 -1.63
+                  10/21 roc5z <-1       SKEW roc10z <-1  65   0.06   0.88   1.72 -1.32 -1.66
+                  RV21 roc21z <-1    VIX9D/VIX roc5z >1  86   0.06   0.84   1.80 -1.30 -1.83
+                  RV21 roc21z <-1       TNX chg21z 0..1 268   0.06   0.96   1.66 -0.84 -1.35
+                  21/63 roc5z <-1    VIX9D/VIX roc5z >1  64   0.06   0.79   1.30 -1.25 -2.30
+                    RV5 roc5z <-1   VIX9D/VIX roc5z <-1 101   0.06   0.66   1.47 -0.89 -1.52
+                     RV5 roc5z >1        VVIX roc5z <-1  54   0.06   1.39   2.40 -0.96 -1.47
+                   RV21 roc10z >1      VIX roc21z -1..0  89   0.06   1.23   2.02 -0.46 -1.01
+                  RV21 roc10z <-1        OVX roc5z 0..1 210   0.06   0.83   1.58 -0.98 -1.64
+                   RV21 roc5z <-1        GVZ roc5z 0..1 182   0.05   0.97   1.75 -0.71 -1.46
+                  21/63 roc5z <-1        GVZ roc5z 0..1 188   0.05   1.00   1.89 -0.73 -1.48
+                  21/63 roc5z <-1     VIX1D roc3z -1..0  40   0.05   1.14   1.69 -0.96 -1.58
+                  RV21 roc10z <-1     VIX1D roc3z -1..0  42   0.05   0.67   1.32 -1.13 -1.80
+                  RV21 roc10z <-1          OVX roc5z >1  63   0.05   0.32   1.08 -1.14 -1.90
+                  RV21 roc21z <-1        GVZ roc5z 0..1 237   0.05   0.92   1.56 -0.80 -1.46
+                  10/21 roc5z <-1     VIX1D roc3z -1..0  44   0.05   0.71   1.85 -1.42 -1.92
+                  10/21 roc5z <-1   VIX9D/VIX roc5z <-1  64   0.05   0.65   2.12 -0.74 -1.11
+                    RV10 roc5z >1   VIX9D/VIX roc5z <-1  62   0.05   0.79   1.60 -1.24 -1.92
+                   RV10 roc5z <-1          OVX roc5z >1  59   0.05   1.83   2.73 -0.61 -1.17
+                  RV21 roc10z <-1       TNX chg21z 0..1 239   0.04   0.79   1.62 -0.92 -1.41
+                    RV10 roc5z >1      VIX roc21z -1..0 161   0.04   0.81   1.63 -1.13 -1.60
+                   RV10 roc5z <-1   VIX9D/VIX roc5z <-1  45   0.04   0.51   1.67 -0.84 -1.12
+                  RV21 roc10z <-1        GVZ roc5z 0..1 217   0.04   0.82   1.67 -0.85 -1.46
+RV accel (roc5 - roc5 lag5) z <-1   VIX9D/VIX roc5z <-1  98   0.04   0.84   1.59 -0.90 -1.36
+                     RV5 roc5z >1   VIX9D/VIX roc5z <-1  55   0.04   0.91   1.81 -0.90 -1.41
+                   RV21 roc5z <-1    VIX9D/VIX roc5z >1  60   0.03   0.85   1.57 -0.97 -1.75
+                   RV21 roc5z <-1          OVX roc5z >1  60   0.03   0.89   1.39 -0.87 -1.59
+                   RV21 roc10z >1   VIX9D/VIX roc5z <-1  98   0.03   1.25   2.52 -0.97 -1.29
+                   10/21 roc5z >1   VIX9D/VIX roc5z <-1  62   0.03   0.93   1.86 -0.71 -1.39
+                    RV5 roc5z <-1     VIX1D roc3z -1..0  41   0.02   0.55   1.42 -1.37 -1.74
+                    RV5 roc5z <-1    VIX9D/VIX roc5z >1  50   0.00   0.18   1.38 -1.32 -1.84
+
+=== THREE-WAY: RV21 roc5z >1 (realized expanding) split by VIX roc5z and VVIX/VIX roc5z ===
+          P                   fwd21                   DD21                      n                  
+B       <-1 -1..0  0..1    >1   <-1 -1..0  0..1    >1  <-1 -1..0 0..1   >1    <-1 -1..0  0..1    >1
+A                                                                                                  
+<-1    0.00  0.25  0.15  0.16  0.24  0.11  1.86  1.62 -1.8  -3.1 -2.4 -2.6    2.0   8.0  20.0  38.0
+-1..0  0.17  0.17  0.15  0.08  2.83  2.63  1.40  2.00 -2.7  -1.9 -1.9 -1.8    6.0  35.0  41.0  12.0
+0..1   0.33  0.16  0.26  0.43  0.38  1.44 -0.43  0.95 -3.4  -2.6 -4.5 -3.1   24.0  85.0  39.0   7.0
+>1     0.24  0.26  0.29   NaN  1.29  0.73 -0.18   NaN -3.6  -3.9 -3.3  NaN  139.0  70.0   7.0   NaN
+
+=== THREE-WAY: RV21 roc5z <-1 (realized compressing) split by VIX roc5z and VVIX/VIX roc5z ===
+          P                   fwd21                   DD21                     n                    
+B       <-1 -1..0  0..1    >1   <-1 -1..0  0..1    >1  <-1 -1..0 0..1   >1   <-1  -1..0   0..1    >1
+A                                                                                                   
+<-1     NaN  0.00  0.36  0.21   NaN  0.95 -0.24  0.15  NaN  -0.5 -3.2 -2.8   NaN    3.0   11.0  28.0
+-1..0  0.20  0.19  0.07  0.25  0.12  0.58  1.48  0.38 -2.5  -2.6 -1.6 -3.0   5.0   58.0  148.0  55.0
+0..1   0.04  0.09  0.07  0.12  2.52  0.88  1.45  0.15 -1.7  -1.9 -1.6 -3.5  27.0  113.0   71.0   8.0
+>1     0.26  0.09   NaN   NaN  2.16  1.26   NaN   NaN -3.8  -1.6  NaN  NaN  23.0   11.0    NaN   NaN
+
+=== RV21 roc21z (rows, month trend) x RV21 roc5z (cols, week impulse) ===
+          P                   fwd21                   DD21                      n                     
+B       <-1 -1..0  0..1    >1   <-1 -1..0  0..1    >1  <-1 -1..0 0..1   >1    <-1  -1..0   0..1     >1
+A                                                                                                     
+<-1    0.12  0.11  0.13  0.11  0.68  1.31  0.95  1.44 -2.1  -2.0 -2.1 -2.3  281.0  294.0  127.0   18.0
+-1..0  0.13  0.23  0.18  0.15  1.50  0.60  0.70  1.44 -2.2  -3.2 -2.9 -2.2  233.0  839.0  489.0   95.0
+0..1   0.15  0.15  0.19  0.22  1.40  1.10  0.77  1.41 -2.0  -2.4 -2.8 -2.6   48.0  535.0  645.0  217.0
+>1      NaN  0.20  0.16  0.25   NaN  1.22  0.97  0.86  NaN  -2.6 -2.8 -4.2    NaN  119.0  410.0  203.0
+
+=== ROC-only conjunction rules, first-fires ===
+RV21 roc5z>1 & VIX roc5z>1 & VVIX/VIX roc5z<-1 (all three, VVIX lagging) n=  67 P5/21 0.27 fwd10 -0.09 fwd21  0.73 DD10 -2.83 DD21 -4.11
+RV21 roc5z>1 & VIX roc5z>1 & VVIX/VIX roc5z>0 (VVIX keeping up)          n=   6 P5/21 0.33 fwd10  1.12 fwd21 -0.42 DD10 -1.82 DD21 -3.64
+RV21 roc5z>1 & TNX chg5z>1 & MOVE roc5z>1 (realized + rates + bond vol)  n=  19 P5/21 0.32 fwd10 -0.68 fwd21  0.32 DD10 -2.96 DD21 -3.98
+RV21 roc21z>1 & RV21 roc5z>1 (month and week both expanding)             n=  59 P5/21 0.17 fwd10  0.06 fwd21  1.35 DD10 -2.50 DD21 -3.47
+RV21 roc21z>1 & VIX roc21z<0 (month of realized up, implied not)         n=  62 P5/21 0.18 fwd10  0.55 fwd21  1.27 DD10 -1.22 DD21 -2.19
+RV21 roc21z<-1 & VIX roc21z<-1 & VVIX roc21z<-1 (everything compressing) n=  24 P5/21 0.12 fwd10  0.35 fwd21  0.97 DD10 -1.47 DD21 -2.41
+RV accel z>1 & VIX roc5z>1                                               n=  99 P5/21 0.24 fwd10  0.59 fwd21  0.77 DD10 -2.00 DD21 -3.47
+VRP chg5z<-1 & RV21 roc5z>1 (realized rising faster than VIX)            n=  82 P5/21 0.22 fwd10  0.19 fwd21  0.98 DD10 -2.32 DD21 -3.41
+VRP chg5z>1 & RV21 roc5z>1 (VIX rising faster than realized)             n=  22 P5/21 0.27 fwd10  0.29 fwd21  1.15 DD10 -3.19 DD21 -3.81
+10/21 roc5z>1 & VIX9D/VIX roc5z>1 (short realized + front-end implied)   n=  59 P5/21 0.12 fwd10  1.12 fwd21  1.46 DD10 -1.05 DD21 -1.78
+RV21 roc5z<-1 & TNX chg5z>1 (realized compressing into a yield rip)      n=  47 P5/21 0.17 fwd10  0.08 fwd21  0.46 DD10 -1.73 DD21 -2.61
+RV21 roc5z<-1 & MOVE roc5z>1                                             n=  37 P5/21 0.05 fwd10  1.62 fwd21  2.24 DD10 -0.78 DD21 -1.42
+
+today: {'RV21 roc5z': -0.36, 'RV21 roc10z': -0.21, 'RV21 roc21z': 0.56, 'RV10 roc5z': -1.23, 'RV5 roc5z': -0.21, 'RV accel (roc5 - roc5 lag5) z': -0.3, '21/63 roc5z': -0.33, '10/21 roc5z': -1.26, 'VRP chg5z (VIX-RV21 change)': -0.18}
