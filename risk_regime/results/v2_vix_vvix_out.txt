@@ -1,0 +1,42 @@
+base rates, any day: 5% drop within 21 sessions 17% since 2006, 11% since 2023; 5% rally 17% / 19%; 10% drop within 63 14%; next month +0.9%
+               reading       tail  today  fires 06+ -5% 06+ +5% 06+ -10%/63 06+ next month 06+  fires 23+ -5% 23+ +5% 23+       2024       2025       2026
+        VIX/VVIX level    top 10%   0.59         24     42%     33%         38%          -0.3%          5     20%     40%      never  +9s -5.9%  +8s -0.7%
+        VIX/VVIX level bottom 10%   0.59         46      7%      2%         11%          +1.1%         12      8%      0%   -2s 0.0%      never   -6s 0.0%
+       VIX/VVIX 1d ROC    top 10%   0.49        149     18%     17%         16%          +1.0%         34     12%     18%  +5s -2.0%  +2s -2.1%   -5s 0.0%
+       VIX/VVIX 1d ROC bottom 10%   0.49        163     16%     17%         14%          +1.3%         38     16%     21%  +4s -1.8%   -9s 0.0%   -4s 0.0%
+       VIX/VVIX 3d ROC    top 10%   0.71        138     15%     16%         15%          +1.0%         30     10%     17%  +1s -1.4%  +1s -0.4%  +6s -1.3%
+       VIX/VVIX 3d ROC bottom 10%   0.71        144     13%     21%         15%          +1.4%         31      6%     26%      never +24s -5.8%   -9s 0.0%
+       VIX/VVIX 5d ROC    top 10%   0.47        123     20%     20%         20%          +0.6%         29     14%     17%  +2s -2.2%  +3s -2.6%  +7s -2.6%
+       VIX/VVIX 5d ROC bottom 10%   0.47        124     16%     15%         18%          +1.0%         24      8%     17%      never +24s -5.8%   -7s 0.0%
+      VIX/VVIX 10d ROC    top 10%   0.74         93     24%     24%         16%          +0.9%         14     21%     14%  +7s -4.7%  +4s -3.0%  +7s -2.6%
+      VIX/VVIX 10d ROC bottom 10%   0.74        101     13%     16%         15%          +1.4%         21     10%     19%      never +30s -7.6%      never
+      VIX/VVIX 21d ROC    top 10%   0.59         53     26%     19%         28%          -0.1%         10     10%     20%  +7s -4.7%  +2s -2.1%  +8s -0.7%
+      VIX/VVIX 21d ROC bottom 10%   0.59         58     16%     16%         12%          +0.7%         13      0%     15%      never      never      never
+      VIX/VVIX 63d ROC    top 10%   0.59         25     24%     24%         24%          +0.6%          6     17%     33% +14s -8.4%  +8s -4.8% +32s -4.8%
+      VIX/VVIX 63d ROC bottom 10%   0.59         35     11%      9%         12%          +1.2%         11      0%     18%      never      never   -6s 0.0%
+reference: VIX 21d ROC    top 10%   0.42         73     25%     22%         18%          +1.0%         12     25%     17%  +2s -2.2%  +3s -2.6%  +7s -2.6%
+reference: VIX 21d ROC bottom 10%   0.42         79     23%     15%         15%          +0.7%         12      0%     25%      never      never      never
+ reference: VIX 5d ROC    top 10%   0.28        131     21%     20%         15%          +1.0%         25     16%     20%  +2s -2.2%  +2s -2.1%   -5s 0.0%
+ reference: VIX 5d ROC bottom 10%   0.28        156     15%     19%         17%          +1.1%         25      8%     32%      never   -6s 0.0%   +0s 0.0%
+  reference: VIX level    top 10%   0.14         36     31%     28%         17%          +1.4%          8     25%     25% +14s -8.4%  +6s -4.5% +24s -2.2%
+  reference: VIX level bottom 10%   0.14         36      3%     11%          9%          +1.1%          8      0%     25%  -10s 0.0%      never      never
+
+out-of-sample AUC of the rank itself against a 5% drop within 21 sessions (above 0.5 = high rank, more risk):
+  VIX/VVIX level             {'06-15': 0.63, '16-26': 0.67, '23-26': 0.6}
+  VIX/VVIX 1d ROC            {'06-15': 0.5, '16-26': 0.52, '23-26': 0.53}
+  VIX/VVIX 3d ROC            {'06-15': 0.5, '16-26': 0.52, '23-26': 0.53}
+  VIX/VVIX 5d ROC            {'06-15': 0.5, '16-26': 0.54, '23-26': 0.56}
+  VIX/VVIX 10d ROC           {'06-15': 0.52, '16-26': 0.57, '23-26': 0.61}
+  VIX/VVIX 21d ROC           {'06-15': 0.52, '16-26': 0.59, '23-26': 0.69}
+  VIX/VVIX 63d ROC           {'06-15': 0.54, '16-26': 0.65, '23-26': 0.65}
+  reference: VIX 21d ROC     {'06-15': 0.53, '16-26': 0.55, '23-26': 0.65}
+  reference: VIX 5d ROC      {'06-15': 0.52, '16-26': 0.53, '23-26': 0.56}
+  reference: VIX level       {'06-15': 0.65, '16-26': 0.64, '23-26': 0.62}
+
+does the ratio add to VIX 21d ROC? VIX 21d ROC in its top 10% (fires), split by VIX/VVIX 21d ROC at the same session:
+  from 2006, ratio 21d ROC also top 10% (VIX outrunning VVIX): 27 fires | 5% drop 44% | 5% rally 22%
+  from 2006, ratio 21d ROC below top 10% (VVIX keeping up): 39 fires | 5% drop 13% | 5% rally 23%
+  from 2023, ratio 21d ROC also top 10% (VIX outrunning VVIX): 4 fires | 5% drop 50% | 5% rally 25%
+  from 2023, ratio 21d ROC below top 10% (VVIX keeping up): 8 fires | 5% drop 12% | 5% rally 12%
+
+today: VIX 15.08 VVIX 83.18 VIX/VVIX 0.181 | two-year range of VIX/VVIX 0.138 to 0.308
