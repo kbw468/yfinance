@@ -1,0 +1,30 @@
+178 rules in the pool
+
+=== the 8 rules with the smallest 2024-26 drawdown (ties broken by return) ===
+                                                                                      rule  24-26 ann %  24-26 worst DD %  24-26 times OUT  06-23 ann %  06-23 worst DD %  06-23 times OUT
+                                                                          SPY buy and hold         19.0             -18.8                0          9.4             -55.2                0
+               vol alert q0.9/21s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high         11.0              -6.1                7          3.5             -29.6               55
+                              vol alert q0.9/21s & SPY 3% below 63d high | IN new 42d high         10.7              -6.1                7          3.7             -33.7               39
+               vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high          9.8              -6.1                8          3.6             -26.9               63
+vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high          9.8              -6.1                8          3.1             -29.8               73
+                              vol alert q0.9/42s & SPY 3% below 63d high | IN new 42d high          9.5              -6.1                8          3.8             -34.7               49
+                              vol alert q0.9/21s & SPY 5% below 63d high | IN new 42d high         12.1              -6.5                4          5.3             -33.7               23
+               vol alert q0.9/21s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high         11.0              -6.5                5          5.1             -26.1               39
+              vol alert q0.85/42s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high          9.9              -6.8               10          3.1             -26.9               71
+                                                         C: OUT P_off>q0.95, IN P_off<q0.8         14.2             -17.5                2         10.6             -22.2               13
+
+=== the 8 rules with the best 2024-26 return per unit of drawdown ===
+                                                                                      rule  24-26 ann %  24-26 worst DD %  24-26 times OUT  06-23 ann %  06-23 worst DD %  06-23 times OUT
+                                                                          SPY buy and hold         19.0             -18.8                0          9.4             -55.2                0
+                              vol alert q0.9/21s & SPY 5% below 63d high | IN new 42d high         12.1              -6.5                4          5.3             -33.7               23
+               vol alert q0.9/21s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high         11.0              -6.1                7          3.5             -29.6               55
+                              vol alert q0.9/21s & SPY 3% below 63d high | IN new 42d high         10.7              -6.1                7          3.7             -33.7               39
+               vol alert q0.9/21s & SPY 5% below 63d high, or P_off>q.95 | IN new 42d high         11.0              -6.5                5          5.1             -26.1               39
+vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 or P15/63>q.95 | IN new 42d high          9.8              -6.1                8          3.1             -29.8               73
+               vol alert q0.9/42s & SPY 3% below 63d high, or P_off>q.95 | IN new 42d high          9.8              -6.1                8          3.6             -26.9               63
+                                                      E: OUT P_off63>q0.90, IN P_off63<q.6         15.1              -9.4                6          8.2             -18.6               14
+                            vol alert q0.85/42s & SPY 10% below 63d high | IN new 42d high         16.9             -10.6                1         10.1             -33.7                7
+                                                         C: OUT P_off>q0.95, IN P_off<q0.8         14.2             -17.5                2         10.6             -22.2               13
+
+rank correlation between 2024-26 return-per-drawdown and 2006-23 annual return across all 178 rules: -0.10
+top 20 by 2024-26: mean 2006-23 ann 7.5%, mean worst DD -29.6% | all rules: 7.3%, -30.8%
