@@ -1,0 +1,55 @@
+XLK base rates, any day: 5% decline within 21 sessions 24% since 2006, 26% since 2023; 10% within 63 19% since 2006
+XLK: 172.83 on 19 May, 186.41 on 28 May, top 197.74 on 2 Jun (+14.4% in 10 sessions); 179.88 on 5 Jun (-6.7% day, 2x volume); 176.21 on 10 Jun (-10.9%); lower highs 191.34 / 191.93 / 190.30 (15 / 22 / 30 Jun); 166.38 on 29 Jul (-15.9%)
+                                                         signal  at the 2 Jun top             first fire 1 May to trough  sessions on, 1 May to trough  fires 06+ XLK -5%/21 06+  fires 23+ XLK -5%/21 23+ XLK -10%/63 06+
+                                     XLK 5d ROC, top (blow-off)              0.96   2026-05-05 (-19s, XLK 0.0% off high)                            14        132            23%         22            27%             20%
+                                    XLK 10d ROC, top (blow-off)              0.99   2026-05-05 (-19s, XLK 0.0% off high)                            14        118            24%         18            22%             17%
+                                               XLK 21d ROC, top              0.99   2026-05-01 (-21s, XLK 0.0% off high)                            24         65            18%         11             9%             15%
+                                            XLK vs SPY 10d, top              1.00   2026-05-01 (-21s, XLK 0.0% off high)                            21        110            25%         22            36%             23%
+                                            XLK vs SPY 21d, top              1.00   2026-05-01 (-21s, XLK 0.0% off high)                            30         64            19%         13             0%             20%
+                             XLK 1d ROC, bottom (breakdown day)              0.78   2026-06-05 (+3s, XLK -9.0% off high)                            10        135            27%         28            21%             21%
+                                             XLK 5d ROC, bottom              0.96   2026-06-05 (+3s, XLK -9.0% off high)                            11        105            36%         17            24%             26%
+                                            XLK 21d ROC, bottom              0.99  2026-07-02 (+21s, XLK -8.8% off high)                             5         53            30%          9            44%             26%
+                                          XLK vs SPY 5d, bottom              0.99   2026-06-05 (+3s, XLK -9.0% off high)                            14        133            25%         22            27%             22%
+                                   XLK realized vol 5d/21d, top              0.32   2026-06-05 (+3s, XLK -9.0% off high)                             3        122            23%         22            27%             22%
+                                  XLK realized vol 21d ROC, top              0.45   2026-06-05 (+3s, XLK -9.0% off high)                             5        103            23%         18            17%             22%
+                                          XLK range vol 5d, top              0.70   2026-06-05 (+3s, XLK -9.0% off high)                            13         48            38%         12            33%             33%
+                                         XLK range vol 21d, top              0.69   2026-06-09 (+5s, XLK -8.8% off high)                            21         25            44%          3            67%             32%
+                                              XLK gap size, top              0.49   2026-06-08 (+4s, XLK -7.1% off high)                            21         64            30%         11            45%             20%
+                                         XLK volume 5d ROC, top              0.63  2026-06-10 (+6s, XLK -10.9% off high)                             2        135            25%         22            14%             24%
+                                        XLK volume 21d ROC, top              0.75  2026-06-10 (+6s, XLK -10.9% off high)                             4         42            24%          7            29%             24%
+                                         XLK vol-of-volume, top              0.14                                  never                             0         38            29%          8            50%             18%
+                                           XLK illiquidity, top              0.43                                  never                             0         11            64%          1           100%             27%
+                                     XLK range compression, top              0.60  2026-06-10 (+6s, XLK -10.9% off high)                             4         79            30%         17            18%             27%
+                                                VXN 5d ROC, top              0.39   2026-06-05 (+3s, XLK -9.0% off high)                             7        140            29%         28            32%             19%
+                                               VXN 21d ROC, top              0.59  2026-06-10 (+6s, XLK -10.9% off high)                             3         77            23%         13            15%             22%
+                                            VXN/VIX 5d ROC, top              0.82   2026-05-06 (-18s, XLK 0.0% off high)                             6        167            21%         30            20%             20%
+                                             VXN/VIX level, top              1.00   2026-05-06 (-18s, XLK 0.0% off high)                            58         52            27%          8            38%             19%
+spot up, vol up: XLK 5d ROC top 10% and VXN 5d ROC above median              0.00  2026-05-07 (-17s, XLK -0.2% off high)                             7         30            33%          9            33%             30%
+                                             dispersion 5d, top              0.84   2026-05-04 (-20s, XLK 0.0% off high)                            28         92            26%         20            30%             22%
+                                 avg correlation 5d change, top              0.19                                  never                             0        116            28%         21            33%             22%
+                       system: drawdown probability at its 95th              0.67   2026-06-11 (+7s, XLK -7.6% off high)                             9         15            33%          2             0%             40%
+                  system: vol-expansion probability at its 90th              0.67 2026-07-29 (+39s, XLK -15.9% off high)                             1         70            20%         13            31%             16%
+                                     system: reference rule OUT              0.00   2026-06-11 (+7s, XLK -7.6% off high)                            21         13            31%          2             0%             38%
+                               system: VIX outrunning VVIX live              0.00                                  never                             0         36            44%          6            50%             33%
+
+readings around the top (rank of each in its trailing two years):
+            XLK 10d ROC  XLK vs SPY 10d  XLK vol 5d/21d  XLK range vol 5d  XLK volume 5d ROC  VXN 5d ROC  VXN/VIX 5d ROC  dispersion 5d  P_off pct  P_vol pct     XLK
+Date                                                                                                                                                                 
+2026-05-19         0.80            0.88            0.44              0.84               0.73        0.48            0.44           0.88       0.65       0.74  172.83
+2026-05-20         0.77            0.88            0.68              0.84               0.79        0.37            0.38           0.73       0.81       0.71  176.72
+2026-05-21         0.84            0.92            0.62              0.83               0.77        0.30            0.26           0.25       0.81       0.69  178.18
+2026-05-22         0.65            0.72            0.44              0.79               0.66        0.18            0.44           0.56       0.81       0.69  179.97
+2026-05-26         0.76            0.83            0.41              0.67               0.31        0.43            0.76           0.97       0.81       0.69  184.70
+2026-05-27         0.85            0.91            0.35              0.60               0.25        0.38            0.92           1.00       0.81       0.59  184.00
+2026-05-28         0.86            0.92            0.32              0.62               0.18        0.38            0.89           0.97       0.81       0.55  186.41
+2026-05-29         0.88            0.97            0.37              0.57               0.26        0.46            0.93           0.95       0.67       0.51  190.57
+2026-06-01         0.96            1.00            0.39              0.72               0.51        0.53            0.85           0.94       0.67       0.67  195.30
+2026-06-02         0.99            1.00            0.32              0.70               0.63        0.39            0.82           0.84       0.67       0.67  197.74
+2026-06-03         0.99            1.00            0.45              0.71               0.68        0.55            0.74           0.80       0.67       0.58  195.77
+2026-06-04         0.93            0.99            0.75              0.74               0.75        0.53            0.75           0.29       0.67       0.54  192.72
+2026-06-05         0.47            0.72            0.95              0.94               0.81        0.98            0.19           0.80       0.82       0.48  179.88
+2026-06-08         0.59            0.86            0.93              0.92               0.64        0.91            0.41           0.82       0.82       0.35  183.75
+2026-06-09         0.19            0.34            0.89              0.99               0.89        0.97            0.59           0.99       0.87       0.71  180.34
+2026-06-10         0.11            0.28            0.88              0.99               0.93        0.98            0.40           0.99       0.88       0.75  176.21
+2026-06-11         0.22            0.47            0.98              0.99               0.93        0.97            0.77           0.91       0.95       0.43  182.78
+2026-06-12         0.15            0.22            0.68              0.98               0.75        0.16            0.94           0.61       0.95       0.28  184.36
