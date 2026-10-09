@@ -236,7 +236,8 @@ LABELS = {
     "kt_min": "Kendall trend, worst of 3 scales", "hexp126": "Scaling exponent 126d", "hexp252": "Scaling exponent 252d",
     "tmpl_min": "Match to your chart (best of 3 scales)", "mem_y63_long": "Staircase memory (5y)",
     "bo_hold63": "Holding above prior base", "hl_steps63": "Higher-low steps 63d", "co126": "Co-movement with SPY",
-    "rel_dn126": "Excess return on SPY down days", "stair_b63": "Already in a 63d staircase", "dn63": "Drift-to-noise 63d",
+    "rel_dn126": "Excess return on SPY down days", "stair_b63": "Already in a 63d staircase (no / yes)",
+    "stair_b21": "Already in a 21d staircase (no / yes)", "stair_scales": "Staircasing at 21/63/126 bars (0 → all 3)", "dn63": "Drift-to-noise 63d",
     "pv_spread63": "Price ROC minus vol ROC 63d", "vv_spread21": "Volume ROC minus vol ROC 21d",
 }
 
@@ -300,7 +301,7 @@ def main():
       {pct(qb_full['p_up63'], 0)} up after 63 sessions, median forward max drawdown {pct(qb_full['med_fdd63'])} vs {pct(base['med_fdd63'])}. Tight version: lift <b>{num(strict['lift'])}</b>, hit {pct(strict['hit'])}, {pct(strict['p_up63'], 0)} up, {num(strict['per_week'], 1)} names a week.</li>
     <li><b>The rule search found the same coil on its own:</b> the tightest 63-day range (bottom 10%), a bottom-quintile 6-month return, few new higher highs, and a fading trend. Out of sample (2017–2026): lift {num(ok_rules['test_lift'].iloc[:12].min())}–{num(ok_rules['test_lift'].iloc[:12].max())} for the top 12 rules, hit {pct(ok_rules['test_hit'].iloc[:12].min())}–{pct(ok_rules['test_hit'].iloc[:12].max())}.</li>
     <li><b>Volatility level is the one strong input, and it predicts drawdown, not gain.</b> Weekly rank correlation of volatility with the forward 63-session max drawdown: {num(-icx.loc['q_mar63', 'ic_neg_fdd63'])}; with the forward 63-session gain: {num(icx.loc['q_mar63', 'ic_fr63'], 3)}.
-      No rate-of-change feature in price, volume or volatility gets past |{num(roc_ic_max, 3)}| against the staircase hit.</li>
+      No rate-of-change feature in price, volume or volatility reaches a rank correlation above {num(roc_ic_max, 3)} (absolute) with the staircase hit.</li>
     {f'<li><b>Walk-forward model:</b> the top 10 names a week hit {pct(m_top10["p_y63"])} vs {pct(m_all["p_y63"])} for the universe, out of sample 2010–2025; its lift comes mostly from drawdown control (P(max DD &lt; 5%) {pct(m_top10["p_dd63_lt5"])} vs {pct(m_all["p_dd63_lt5"])}).</li>' if m_top10 is not None else ''}
     <li><b>Calendar:</b> quiet-base signals from December to April run above lift 1.4 in every era. September–November signals were weak in the 2020s (October 0.30, November 0.32), though October was 1.27 in 2006–12. The 21-session version of the search finds the same coil at about half the edge (best out-of-sample lift ≈1.2).</li>
     <li><b>Today ({scan_date}):</b> {n_qb_now} names pass the full quiet base, {n_rule_now} pass at least one top out-of-sample rule. The quiet base ran at lift {num(y25.iloc[0]) if len(y25) else 'n/a'} in 2025 and {num(y26.iloc[0]) if len(y26) else 'n/a'} for 2026 starts through July.</li>
@@ -312,7 +313,8 @@ def main():
     if scan is not None:
         sc = scan.copy()
         sc["mcap_b"] = sc["mcap"].map(lambda m: f"${m / 1000:.1f}B" if m >= 1000 else f"${m:.0f}M")
-        main_list = sc[(sc["qb_rungs"] == 4) | (sc["rules_hit"] > 0) | (sc["model_pct"] >= 0.99)].copy()
+        main_list = sc[(sc["qb_rungs"] == 4) | (sc["rules_hit"] > 0)].copy()
+        model_list = sc[(sc["model_pct"] >= 0.99) & ~((sc["qb_rungs"] == 4) | (sc["rules_hit"] > 0))].sort_values("model_pct", ascending=False).copy()
         indt = rd("quietbase_industry.csv")
         ind_map = {} if indt is None else {r["industry"]: (r["lift_1st"], r["lift_2nd"]) for _, r in indt.iterrows()}
         main_list["ind_hist"] = main_list["industry"].map(lambda i: f"{chip(ind_map[i][0])} {chip(ind_map[i][1])}" if i in ind_map else '<span class="muted">n/a</span>')
@@ -324,6 +326,15 @@ def main():
             '<span class="tag n">&lt;$2B: setup fails here</span>' if r["mcap"] < 2000 else "",
         ])), axis=1)
         main_list = main_list.sort_values(["signal_count", "rules_hit", "qb_rungs", "model_pct"], ascending=False)
+        cal_top = rd(f"model_calibration_{_tag}.csv") if _tag else None
+        cal_note = ""
+        if cal_top is not None:
+            ct = cal_top.set_index(cal_top.columns[0])
+            top_rows = ct.iloc[-2:]
+            hit_top = (top_rows["p_y63"] * top_rows["n"]).sum() / top_rows["n"].sum()
+            cal_note = f"Historical hit for the model's top 1% each week: {pct(hit_top)} vs {pct(ct['p_y63'].mul(ct['n']).sum() / ct['n'].sum())} for all names."
+        mcols = ["ticker", "sector", "industry", "mcap_b", "roc126", "roc63", "roc21", "ddh252", "mar63", "mdd126", "model_pct", "top_drivers"]
+        mheads = ["Ticker", "Sector", "Industry", "Mkt cap", "ROC 126d", "ROC 63d", "ROC 21d", "From 52w high", "Median daily move", "6m max DD", "Model pct", "Largest drivers"]
         cols = ["ticker", "sector", "industry", "mcap_b", "price", "why", "ind_hist", "roc126", "roc63", "roc21", "ddh252", "mar63", "rng63", "mdd126", "vroc21", "rv10_126", "model_pct"]
         heads = ["Ticker", "Sector", "Industry", "Mkt cap", "Price", "Signals", "Industry quiet-base lift 06–16 / 16–26", "ROC 126d", "ROC 63d", "ROC 21d", "From 52w high", "Median daily move", "63d range", "6m max DD", "Vol ROC 21d", "Rel vol 10/126", "Model pct"]
         f = {"price": lambda v: f"{v:.2f}", "why": lambda v: v, "ind_hist": lambda v: v, "roc126": pct, "roc63": pct, "roc21": pct, "ddh252": pct,
@@ -342,11 +353,15 @@ def main():
         S.append(f"""
 <section id="now">
   <h2>Setups on the tape, {scan_date}</h2>
-  <p class="lede">Every name below meets a condition that beat its own week's universe in the backtest. Signals: <span class="tag o">quiet base</span> = all four rungs;
-  <span class="tag o">rules</span> = matches top out-of-sample rules (listed under the table); <span class="tag b">model</span> = top 1% of the walk-forward model today.
+  <p class="lede">Every name below meets a condition that beat its own week's universe out of sample. Signals: <span class="tag o">quiet base</span> = all four rungs;
+  <span class="tag o">rules</span> = matches top out-of-sample rules (listed under the table); <span class="tag b">model</span> = also in the walk-forward model's top 1% today.
+  Industry column: that industry's quiet-base lift in 2006–16 and 2016–26 (n/a = fewer than 400 observations).
   Historical odds for the quiet base: hit {pct(qb_full['hit_y63'])}, {pct(qb_full['p_up63'], 0)} up at 63 sessions, median forward max drawdown {pct(qb_full['med_fdd63'])}.</p>
   {table(main_list, cols, heads, f, cls="scan", wide=("why",))}
   <details><summary>The rules referenced above ({len(used_rules) if used_rules is not None else 0})</summary>{rules_tbl}</details>
+  <details><summary>Walk-forward model, top 1% today that are not in the list above ({len(model_list)})</summary>
+    <p class="note">{cal_note} The model's out-of-sample edge (top-10 lift ≈1.28) is smaller than the quiet base's and the rules'. Its current top names lean on size (dollar volume) and market-state inputs.</p>
+    {table(model_list, mcols, mheads, f | {"top_drivers": lambda v: f"<code>{esc(v)}</code>"}, cls="compact", wide=("top_drivers",))}</details>
   <details><summary>Names matching your full thesis today ({len(thesis_now)}): backtested lift {num(th['lift_y63'].iloc[-1])}</summary>
     {table(thesis_now.sort_values('model_pct', ascending=False), th_cols, th_heads, f, cls="compact")}</details>
   <details><summary>Names already staircasing with vol compressing and rel volume rising ({len(aug_now)}): backtested lift {num(aug['lift_y63'].iloc[2])}</summary>
@@ -440,7 +455,7 @@ def main():
 </section>""")
 
     # fractal section
-    fr_feats = ["er63", "er_min3", "kt63", "kt_min", "hexp126", "hexp252", "tmpl_min", "hl_steps63", "bo_hold63", "mem_y63_long", "stair_b63"]
+    fr_feats = ["er63", "er_min3", "kt63", "kt_min", "hexp126", "hexp252", "tmpl_min", "hl_steps63", "bo_hold63", "mem_y63_long", "stair_b21", "stair_b63", "stair_scales"]
     frows = []
     for fe in fr_feats:
         if fe in u.index:
@@ -462,7 +477,7 @@ def main():
   <h2>Fractal and geometry tests</h2>
   <p class="lede">Multi-scale path efficiency (net move ÷ distance travelled), Kendall trend at 21/63/126 bars and their worst-of-three agreement, a median-based scaling exponent (how |k-day moves| grow with k),
   shape match to your chart at 40/80/160 bars, higher-low steps, holding above the prior base, staircase memory, and the already-in-a-staircase state.</p>
-  {table(frt, ["feature", "rho", "low", "high", "best", "era"], ["Feature", "Monotonic (rank ρ)", "Lift, lowest decile", "Lift, highest decile", "Best decile", "Best decile, worst era"],
+  {table(frt, ["feature", "rho", "low", "high", "best", "era"], ["Feature", "Monotonic (rank ρ)", "Lift, lowest bucket", "Lift, highest bucket", "Best bucket", "Best bucket, worst era"],
          {"rho": lambda v: num(v), "low": chip, "high": chip, "best": chip, "era": chip}, cls="compact")}
   <h3>Shape alphabet: 30 prototype 126-bar paths (k-medians on min-max scaled paths, learned on 2006–2016)</h3>
   <p class="lede">Best four by out-of-sample lift (2017–2026) and the worst two. Shapes that held up: rally then a long plateau (11, 16) and a plateau or rally that ends in a pullback (19, 26). Shapes that failed: decline then flatline (5, 22). Lift = raw hit rate vs the era's base.</p>
@@ -510,6 +525,11 @@ def main():
         cal = rd(f"model_calibration_{tag}.csv")
         imp = rd(f"model_importance_{tag}.csv")
         cal = cal.rename(columns={cal.columns[0]: "bucket"})
+
+        def nice_bucket(sv):
+            lo_, hi_ = [float(x) for x in str(sv).strip("([]").split(",")]
+            return f"{max(lo_, 0) * 100:g}–{hi_ * 100:g}"
+        cal["bucket"] = cal["bucket"].map(nice_bucket)
         im = imp.rename(columns={imp.columns[0]: "feature", imp.columns[1]: "gain"})
         im["family"] = im["feature"].map(family)
         fam = im.groupby("family")["gain"].sum().sort_values(ascending=False).reset_index()

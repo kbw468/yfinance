@@ -89,7 +89,7 @@ def main():
         last["top_drivers"] = ""
     last["price"] = np.exp(last["logp"])
     last["signal_count"] = (last["qb_rungs"] == 4).astype(int) + last["qb_strict"].astype(int) + \
-        (last["rules_hit"] > 0).astype(int) + (last["model_pct"] >= 0.9).astype(int)
+        (last["rules_hit"] > 0).astype(int) + (last["model_pct"] >= 0.99).astype(int)
     last = last.sort_values(["signal_count", "rules_hit", "qb_rungs", "model_pct"], ascending=False)
     out_cols = ["ticker", "sector", "industry", "mcap", "price", "signal_count", "qb_rungs", "qb_strict", "rules_hit",
                 "rules_list", "model_pct", "thesis", "chart_aug", "roc21", "roc63", "roc126", "ddh252", "mar63", "rng63",
