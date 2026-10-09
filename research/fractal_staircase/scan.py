@@ -74,6 +74,18 @@ def main():
             which[j].append(f"R{i + 1}")
     last["rules_hit"] = hits
     last["rules_list"] = [",".join(w) for w in which]
+    # prototype watch (MSI-grade 126-session runs): any of three quiet profiles
+    last["p_quiet_base"] = last["qb_rungs"] == 4
+    last["p_jnj_msi_base"] = ((last["q_rng63"] <= 0.10) & (last["q_mar63"] <= 0.10) & (last["q_mdd126"] <= 0.15)
+                              & (last["ddh252"] > -0.10) & (last["q_roc126"] >= 0.5))
+    last["p_td_rebase"] = ((last["q_rng63"] <= 0.10) & (last["q_roc126"] >= 0.8) & (last["ddh252"] > -0.10) & (last["q_mar63"] <= 0.2))
+    # validated filters for this target: the edge fails below $2B and in regional banks (both halves)
+    # pinned: volatility and 63-day range both in the bottom 1% (typical of a pending cash deal); lift 1.41 vs 2.85
+    last["pinned"] = (last["q_mar63"] <= 0.01) & (last["q_rng63"] <= 0.01)
+    last["proto_watch"] = ((last["p_quiet_base"] | last["p_jnj_msi_base"] | last["p_td_rebase"])
+                           & (last["mcap"] >= 2000) & (last["industry"] != "Banks - Regional") & ~last["pinned"])
+    last["proto_profile"] = last.apply(lambda r: ", ".join(n for n, f in (("quiet base", r["p_quiet_base"]), ("JNJ/MSI base", r["p_jnj_msi_base"]),
+                                                                       ("TD re-base", r["p_td_rebase"])) if f), axis=1)
     last["thesis"] = ((last["roc63"] > 0) & (last["vroc21"] < 0) & (last["rv10_126"] > 0) & (last["q_mdd63"] < 0.5)
                       & (last["acc21"] > 0) & (last["vacc21"] < 0) & (last["vlroc21"] > 0))
     last["chart_aug"] = (last["stair_b63"] == 1) & (last["vroc21"] < 0) & (last["rv10_126"] > 0)
@@ -92,7 +104,7 @@ def main():
         (last["rules_hit"] > 0).astype(int) + (last["model_pct"] >= 0.99).astype(int)
     last = last.sort_values(["signal_count", "rules_hit", "qb_rungs", "model_pct"], ascending=False)
     out_cols = ["ticker", "sector", "industry", "mcap", "price", "signal_count", "qb_rungs", "qb_strict", "rules_hit",
-                "rules_list", "model_pct", "thesis", "chart_aug", "roc21", "roc63", "roc126", "ddh252", "mar63", "rng63",
+                "rules_list", "model_pct", "proto_watch", "proto_profile", "pinned", "q_mar63", "q_rng63", "q_mdd126", "q_roc126", "thesis", "chart_aug", "roc21", "roc63", "roc126", "ddh252", "mar63", "rng63",
                 "mdd126", "vroc21", "rv10_126", "vlroc21", "top_drivers"]
     last[out_cols].to_csv(f"{RES_DIR}/scan_{last_date:%Y-%m-%d}.csv", index=False)
     top_rules.to_csv(f"{RES_DIR}/scan_rules_used.csv", index=False)
@@ -101,7 +113,7 @@ def main():
     print("scan date", last_date.date(), "names", len(last))
     print("quiet base full:", int((last["qb_rungs"] == 4).sum()), " strict:", int(last["qb_strict"].sum()),
           " any top rule:", int((last["rules_hit"] > 0).sum()), " thesis:", int(last["thesis"].sum()),
-          " chart_aug:", int(last["chart_aug"].sum()))
+          " chart_aug:", int(last["chart_aug"].sum()), " prototype watch:", int(last["proto_watch"].sum()))
     print(top_rules[["rule", "test_n", "test_hit", "test_lift", "test_weeks"]].round(3).to_string())
     print(last[last["signal_count"] >= 1][out_cols[:16]].head(60).round(3).to_string(index=False))
 

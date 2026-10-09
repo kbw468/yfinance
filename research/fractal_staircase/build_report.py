@@ -131,7 +131,9 @@ def year_bars(df, w=1000, h=200):
     y = lambda v: pt + (hi - v) / hi * ph
     bw = pw / len(df)
     s = [f'<svg viewBox="0 0 {w} {h}" class="chart" role="img" aria-label="Quiet-base lift by year">']
-    for t in (0.5, 1.0, 1.5, 2.0, 2.5):
+    step = 0.5 if hi <= 3 else 1.0 if hi <= 6 else 2.0
+    ticks = sorted(set([1.0] + [round(t, 2) for t in np.arange(step, hi + 1e-9, step)]))
+    for t in ticks:
         if t <= hi:
             s.append(f'<line x1="{pl}" x2="{w - pr}" y1="{y(t):.1f}" y2="{y(t):.1f}" class="{"refline" if t == 1.0 else "grid"}"/>')
             s.append(f'<text x="{pl - 4}" y="{y(t) + 3:.1f}" class="tick" text-anchor="end">{t:.1f}</text>')
@@ -289,6 +291,19 @@ def main():
     m_all = prof.set_index(prof.columns[0]).loc["all"] if prof is not None else None
     n_qb_now = int((scan["qb_rungs"] == 4).sum()) if scan is not None else 0
     n_rule_now = int((scan["rules_hit"] > 0).sum()) if scan is not None else 0
+    pw = rd("prototype_watch.csv")
+    proto_bullet, proto_section = "", ""
+    if pw is not None and scan is not None:
+        w = pw.set_index("segment").loc["Prototype watch (filters applied)"]
+        pp = rd("prototype_profiles.csv")
+        ppa = pp[(pp["target"] == "proto") & (pp["cohort"] == "all")].set_index("profile")
+        n_watch = int(scan["proto_watch"].sum()) if "proto_watch" in scan.columns else 0
+        proto_bullet = (f"<li><b>MSI 2024 is the prototype, and quiet profiles precede runs of that grade.</b> MSI-grade runs "
+                        f"(+25% or more over 126 sessions, no pullback deeper than 6%) start in 0.72% of stock-weeks; MSI's Apr–Oct 2024 stretch ranks in the top 0.1%. "
+                        f"For this target the quiet base lifts the odds {num(ppa.loc['quiet base (scan)', 'lift'])}×, the JNJ/MSI base {num(ppa.loc['JNJ/MSI base', 'lift'])}×, "
+                        f"TD's re-base {num(ppa.loc['TD re-base', 'lift'])}×. Prototype watch (any of the three, $2B+, no regional banks, no pinned names): "
+                        f"<b>{num(w['lift_all'])}×</b> ({num(w['lift_2006_16'])} in 2006–16, {num(w['lift_2017_26'])} in 2017–26), {pct(w['hit_all'])} hit vs 0.72%. {n_watch} names today.</li>")
+        proto_section = prototype_section(scan, pw, pp, scan_date)
     read = f"""
 <section id="read" class="read">
   <h2>The read</h2>
@@ -299,6 +314,7 @@ def main():
     <li><b>What precedes the staircase is a quiet base</b>, your chart's April–June stretch: bottom-20% volatility, shallow 6-month drawdown, flat or lagging 6-month return, within ~10% of the 52-week high.
       Lift <b>{num(qb_full['lift_y63'])}</b> (eras {num(qb_full['lift_2006'])} / {num(qb_full['lift_2013'])} / {num(qb_full['lift_2020'])}), hit rate {pct(qb_full['hit_y63'])} vs {pct(base['hit_y63'])},
       {pct(qb_full['p_up63'], 0)} up after 63 sessions, median forward max drawdown {pct(qb_full['med_fdd63'])} vs {pct(base['med_fdd63'])}. Tight version: lift <b>{num(strict['lift'])}</b>, hit {pct(strict['hit'])}, {pct(strict['p_up63'], 0)} up, {num(strict['per_week'], 1)} names a week.</li>
+    {proto_bullet}
     <li><b>The rule search found the same coil on its own:</b> the tightest 63-day range (bottom 10%), a bottom-quintile 6-month return, few new higher highs, and a fading trend. Out of sample (2017–2026): lift {num(ok_rules['test_lift'].iloc[:12].min())}–{num(ok_rules['test_lift'].iloc[:12].max())} for the top 12 rules, hit {pct(ok_rules['test_hit'].iloc[:12].min())}–{pct(ok_rules['test_hit'].iloc[:12].max())}.</li>
     <li><b>Volatility level is the one strong input, and it predicts drawdown, not gain.</b> Weekly rank correlation of volatility with the forward 63-session max drawdown: {num(-icx.loc['q_mar63', 'ic_neg_fdd63'])}; with the forward 63-session gain: {num(icx.loc['q_mar63', 'ic_fr63'], 3)}.
       No rate-of-change feature in price, volume or volatility reaches a rank correlation above {num(roc_ic_max, 3)} (absolute) with the staircase hit.</li>
@@ -367,6 +383,9 @@ def main():
   <details><summary>Names already staircasing with vol compressing and rel volume rising ({len(aug_now)}): backtested lift {num(aug['lift_y63'].iloc[2])}</summary>
     {table(aug_now.sort_values('model_pct', ascending=False), th_cols, th_heads, f, cls="compact")}</details>
 </section>""")
+
+    if proto_section:
+        S.append(proto_section)
 
     # thesis vs quiet base
     def rows_of(df):
@@ -582,13 +601,65 @@ def main():
   </ul>
 </section>""")
 
-    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("now", "Setups now"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
+    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("now", "Setups now"), ("proto", "Prototype watch"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
                                                           ("grids", "Interactions"), ("confirm", "Confirmers"), ("robust", "Robustness"), ("fractal", "Fractal"),
                                                           ("rules", "Rules"), ("model", "Model"), ("regime", "Regime"), ("method", "Method")])
     page = TEMPLATE.replace("{{TOC}}", toc).replace("{{BODY}}", "\n".join(S)).replace("{{DATE}}", scan_date)
     with open(OUT, "w") as fh:
         fh.write(page)
     print("wrote", OUT, f"{len(page) / 1024:.0f} KB")
+
+
+def prototype_section(scan, pw, pp, scan_date):
+    yrs = rd("prototype_watch_years.csv")
+    sf = rd("prototype_single_features.csv")
+    ppa = pp[pp["target"] == "proto"].copy()
+    keep = ["quiet base (scan)", "JNJ/MSI base", "TD re-base", "quiet base, any 6m return", "already staircasing 63d"]
+    ppa = ppa[ppa["profile"].isin(keep)]
+    w = scan[scan["proto_watch"] == True].copy()
+    w["mcap_b"] = w["mcap"].map(lambda m: f"${m / 1000:.1f}B")
+    w = w.sort_values("mcap", ascending=False)
+    pinned = ", ".join(scan.loc[scan["pinned"] == True, "ticker"].tolist()) if "pinned" in scan.columns else ""
+    yr_html = ""
+    if yrs is not None:
+        y = yrs.rename(columns={"year": "value"})
+        y["hit"] = y["hits"] / y["n"]
+        yr_html = f'<figure><figcaption>Prototype watch lift by year (faded = fewer than 300 observations)</figcaption>{year_bars(y, h=200)}</figure>'
+    vol = ""
+    if sf is not None:
+        v = sf.set_index("feature")
+        vol = (f"Volatility is the gate: the quietest decile carries {num(v.loc['q_mar63', 'best_lift'])}× the odds and the loudest decile "
+               f"{num(v.loc['q_mar63', 'lift_d10'], 2)}×. Tight 63-day range (decile 1): {num(v.loc['q_rng63', 'best_lift'])}×. "
+               f"Shallow 6-month drawdown (decile 1): {num(v.loc['q_mdd126', 'best_lift'])}×.")
+    prof_tbl = table(ppa, ["profile", "cohort", "per_week", "hit", "lift", "lift_2006_16", "lift_2017_26", "cohort_lift", "up126", "med_dd126"],
+                     ["Profile", "Cohort", "Names/wk", "Hit", "Lift", "2006–16", "2017–26", "Cohort lift", "Up at 126", "Med worst DD 126"],
+                     {"per_week": lambda v: f"{v:.1f}", "hit": pct, "lift": chip, "lift_2006_16": chip, "lift_2017_26": chip,
+                      "cohort_lift": chip, "up126": lambda v: pct(v, 0), "med_dd126": pct}, cls="compact", wide=("profile",))
+    seg_tbl = table(pw, ["segment", "per_week", "lift_all", "lift_2006_16", "lift_2017_26", "hit_all", "up126", "med_fr126", "med_dd126"],
+                    ["Segment", "Names/wk", "Lift", "2006–16", "2017–26", "Hit", "Up at 126", "Med 126-session return", "Med worst DD 126"],
+                    {"per_week": lambda v: f"{v:.1f}", "lift_all": chip, "lift_2006_16": chip, "lift_2017_26": chip, "hit_all": pct,
+                     "up126": lambda v: pct(v, 0), "med_fr126": pct, "med_dd126": pct}, cls="compact", wide=("segment",))
+    names_tbl = table(w, ["ticker", "sector", "industry", "mcap_b", "proto_profile", "q_mar63", "q_rng63", "q_mdd126", "q_roc126", "ddh252", "model_pct"],
+                      ["Ticker", "Sector", "Industry", "Mkt cap", "Profile", "Volatility pct", "63d range pct", "6m DD pct", "6m return pct", "From 52w high", "Model pct"],
+                      {"ticker": lambda v: f"<b>{esc(v)}</b>", "q_mar63": lambda v: f"{v * 100:.1f}", "q_rng63": lambda v: f"{v * 100:.1f}",
+                       "q_mdd126": lambda v: f"{v * 100:.1f}", "q_roc126": lambda v: f"{v * 100:.0f}", "ddh252": pct,
+                       "model_pct": lambda v: "" if v != v else f"{v * 100:.1f}"}, cls="compact")
+    return f"""
+<section id="proto">
+  <h2>Prototype watch: MSI-grade staircases</h2>
+  <p class="lede">MSI from Oct 27 2023 to the Nov 8 2024 peak: +87% in 260 sessions, worst pullback 5.9%. Best 126-session stretch, Apr 18 → Oct 16 2024: +41% with a 3.8% worst pullback,
+  no close more than 5% below its running high, new highs on 44% of days. That stretch ranks in the top 0.1% of all 1.37M stock-weeks since 2006 by gain over worst pullback.
+  The target here: +25% or more over 126 sessions with no pullback deeper than 6% (0.72% of stock-weeks; 1.46% at $50B+).</p>
+  <p class="lede">{vol} Every quiet profile from your case studies works for this target, including the ones that didn't work for the 63-session hit.</p>
+  {prof_tbl}
+  <h3>Filters that held in both halves</h3>
+  {seg_tbl}
+  <p class="note">Pinned = volatility and 63-day range both in the bottom 1% of the universe, the signature of a stock held near a pending deal price. Pinned today: {esc(pinned)}.</p>
+  {yr_html}
+  <h3>On the watch, {scan_date} ({len(w)} names)</h3>
+  {names_tbl}
+  <p class="note">Percentile columns are ranks in the universe that week (0 = quietest / tightest / shallowest / weakest). Hits on this target cluster in years (2010–12, 2016, 2019, 2021, 2023–24).</p>
+</section>"""
 
 
 def industry_block():
