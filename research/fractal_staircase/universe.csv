@@ -1,0 +1,2368 @@
+"No.","Ticker","Company","Sector","Industry","Market Cap"
+1,"A","Agilent Technologies Inc","Healthcare","Diagnostics & Research",47411.98
+2,"AA","Alcoa Corp","Basic Materials","Aluminum",11303.24
+3,"AAL","American Airlines Group Inc","Industrials","Airlines",8473.21
+4,"AAMI","Acadian Asset Management Inc","Financial","Asset Management",3311.23
+5,"AAOI","Applied Optoelectronics Inc","Technology","Communication Equipment",8991.58
+6,"AAON","AAON Inc","Industrials","Building Products & Equipment",7086.89
+7,"AAP","Advance Auto Parts Inc","Consumer Cyclical","Auto Parts",2560.96
+8,"AAPL","Apple Inc","Technology","Consumer Electronics",4968150.84
+9,"AAT","American Assets Trust Inc","Real Estate","REIT - Diversified",1326.94
+10,"ABAT","American Battery Technology Company","Industrials","Waste Management",292.29
+11,"ABBV","Abbvie Inc","Healthcare","Drug Manufacturers - General",481398.12
+12,"ABCB","Ameris Bancorp","Financial","Banks - Regional",5345.76
+13,"ABG","Asbury Automotive Group Inc","Consumer Cyclical","Auto & Truck Dealerships",3033.15
+14,"ABM","ABM Industries Inc","Industrials","Specialty Business Services",2924.28
+15,"ABNB","Airbnb Inc","Consumer Cyclical","Travel Services",97739.79
+16,"ABR","Arbor Realty Trust Inc","Real Estate","REIT - Mortgage",576.46
+17,"ABT","Abbott Laboratories","Healthcare","Medical Devices",170425.45
+18,"ACA","Arcosa Inc","Industrials","Engineering & Construction",7194.15
+19,"ACCO","Acco Brands Corp","Industrials","Business Equipment & Supplies",411.69
+20,"ACDC","ProFrac Holding Corp","Energy","Oil & Gas Equipment & Services",855.98
+21,"ACEL","Accel Entertainment Inc","Consumer Cyclical","Gambling",901.25
+22,"ACGL","Arch Capital Group Ltd","Financial","Insurance - Diversified",32785.29
+23,"ACH","Accendra Health Inc","Healthcare","Medical Distribution",34.09
+24,"ACHC","Acadia Healthcare Company Inc","Healthcare","Medical Care Facilities",2651.49
+25,"ACHR","Archer Aviation Inc","Industrials","Aerospace & Defense",3634.51
+26,"ACI","Albertsons Companies Inc","Consumer Defensive","Grocery Stores",5988.92
+27,"ACIC","American Coastal Insurance Corp","Financial","Insurance - Property & Casualty",476.40
+28,"ACIW","ACI Worldwide Inc","Technology","Software - Infrastructure",5155.78
+29,"ACLS","Axcelis Technologies Inc","Technology","Semiconductor Equipment & Materials",4122.06
+30,"ACM","AECOM","Industrials","Engineering & Construction",7652.29
+31,"ACMR","ACM Research Inc","Technology","Semiconductor Equipment & Materials",4931.16
+32,"ACN","Accenture plc","Technology","Information Technology Services",127504.26
+33,"ACNB","ACNB Corp","Financial","Banks - Regional",642.64
+34,"ACRE","Ares Commercial Real Estate Corp","Real Estate","REIT - Mortgage",203.06
+35,"ACT","Enact Holdings Inc","Financial","Insurance - Specialty",6412.24
+36,"ACTG","Acacia Research Corp","Industrials","Business Equipment & Supplies",428.41
+37,"ACVA","ACV Auctions Inc","Consumer Cyclical","Auto & Truck Dealerships",1772.80
+38,"ADAM","Adamas Trust Inc","Real Estate","REIT - Mortgage",687.58
+39,"ADBE","Adobe Inc","Technology","Software - Application",93816.67
+40,"ADC","Agree Realty Corp","Real Estate","REIT - Retail",8186.65
+41,"ADCT","Adc Therapeutics SA","Healthcare","Drug Manufacturers - Specialty & Generic",202.99
+42,"ADEA","Adeia Inc","Technology","Software - Application",2659.41
+43,"ADI","Analog Devices Inc","Technology","Semiconductors",196699.66
+44,"ADIG","ADI Global Distribution Inc","Technology","Computer Hardware",1305.88
+45,"ADM","Archer Daniels Midland Co","Consumer Defensive","Farm Products",39737.57
+46,"ADNT","Adient plc","Consumer Cyclical","Auto Parts",1358.45
+47,"ADP","Automatic Data Processing Inc","Technology","Software - Application",107277.19
+48,"ADPT","Adaptive Biotechnologies Corp","Healthcare","Diagnostics & Research",4163.86
+49,"ADSK","Autodesk Inc","Technology","Software - Application",48822.40
+50,"ADT","ADT Inc","Industrials","Security & Protection Services",4748.63
+51,"ADTN","ADTRAN Holdings Inc","Technology","Communication Equipment",610.30
+52,"ADUS","Addus HomeCare Corp","Healthcare","Medical Care Facilities",2133.73
+53,"ADV","Advantage Solutions Inc","Communication Services","Advertising Agencies",392.11
+54,"AEBI","Aebi Schmidt Holding AG","Industrials","Farm & Heavy Construction Machinery",855.97
+55,"AEE","Ameren Corp","Utilities","Utilities - Regulated Electric",28193.72
+56,"AEHR","Aehr Test Systems","Technology","Semiconductor Equipment & Materials",2848.24
+57,"AEIS","Advanced Energy Industries Inc","Industrials","Electrical Equipment & Parts",11383.94
+58,"AEO","American Eagle Outfitters Inc","Consumer Cyclical","Apparel Retail",3011.30
+59,"AEP","American Electric Power Company Inc","Utilities","Utilities - Regulated Electric",66590.69
+60,"AES","AES Corp","Utilities","Utilities - Diversified",10651.64
+61,"AESI","Atlas Energy Solutions Inc","Energy","Oil & Gas Equipment & Services",1520.04
+62,"AEVA","Aeva Technologies Inc","Technology","Software - Infrastructure",954.27
+63,"AFG","American Financial Group Inc","Financial","Insurance - Property & Casualty",11773.19
+64,"AFL","Aflac Inc","Financial","Insurance - Life",57624.41
+65,"AFRI","Forafric Global PLC","Consumer Defensive","Farm Products",337.05
+66,"AFRM","Affirm Holdings Inc","Financial","Credit Services",26032.05
+67,"AGCO","AGCO Corp","Industrials","Farm & Heavy Construction Machinery",7572.53
+68,"AGL","Agilon Health Inc","Healthcare","Medical Care Facilities",1422.55
+69,"AGM","Federal Agricultural Mortgage Corp","Financial","Credit Services",2185.92
+70,"AGNC","AGNC Investment Corp","Real Estate","REIT - Mortgage",10289.98
+71,"AGNT","AGNT Inc","Real Estate","Real Estate Services",670.14
+72,"AGO","Assured Guaranty Ltd","Financial","Insurance - Specialty",3110.21
+73,"AGX","Argan Inc","Industrials","Engineering & Construction",5593.14
+74,"AGYS","Agilysys Inc","Technology","Software - Application",2893.63
+75,"AHCO","AdaptHealth Corp","Healthcare","Medical Devices",826.92
+76,"AHR","American Healthcare REIT Inc","Real Estate","REIT - Healthcare Facilities",11073.69
+77,"AHRT","AH Realty Trust Inc","Real Estate","REIT - Diversified",580.25
+78,"AI","C3.ai Inc","Technology","Software - Infrastructure",1823.25
+79,"AIG","American International Group Inc","Financial","Insurance - Diversified",40288.92
+80,"AIN","Albany International Corp","Consumer Cyclical","Textile Manufacturing",1687.81
+81,"AIOT","PowerFleet Inc","Technology","Software - Application",354.35
+82,"AIP","Arteris Inc","Technology","Semiconductors",1122.63
+83,"AIR","AAR Corp","Industrials","Aerospace & Defense",4082.93
+84,"AIT","Applied Industrial Technologies Inc","Industrials","Industrial Distribution",12200.06
+85,"AIZ","Assurant Inc","Financial","Insurance - Property & Casualty",13458.48
+86,"AJG","Arthur J. Gallagher & Co","Financial","Insurance Brokers",59987.01
+87,"AKAM","Akamai Technologies Inc","Technology","Software - Infrastructure",14501.01
+88,"AKBA","Akebia Therapeutics Inc","Healthcare","Drug Manufacturers - Specialty & Generic",225.78
+89,"AKR","Acadia Realty Trust","Real Estate","REIT - Retail",2538.25
+90,"ALAB","Astera Labs Inc","Technology","Semiconductors",60208.00
+91,"ALB","Albemarle Corp","Basic Materials","Specialty Chemicals",12048.32
+92,"ALG","Alamo Group Inc","Industrials","Farm & Heavy Construction Machinery",1891.25
+93,"ALGM","Allegro Microsystems Inc","Technology","Semiconductors",6760.80
+94,"ALGN","Align Technology Inc","Healthcare","Medical Instruments & Supplies",10018.75
+95,"ALGT","Allegiant Travel","Industrials","Airlines",2089.01
+96,"ALH","Alliance Laundry Holdings Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",4222.28
+97,"ALHC","Alignment Healthcare Inc","Healthcare","Healthcare Plans",1806.76
+98,"ALK","Alaska Air Group Inc","Industrials","Airlines",4410.56
+99,"ALKS","Alkermes plc","Healthcare","Drug Manufacturers - Specialty & Generic",6728.99
+100,"ALKT","Alkami Technology Inc","Technology","Software - Application",1532.48
+101,"ALL","Allstate Corp","Financial","Insurance - Property & Casualty",58316.63
+102,"ALLE","Allegion plc","Industrials","Security & Protection Services",12754.67
+103,"ALLY","Ally Financial Inc","Financial","Credit Services",11507.87
+104,"ALM","Almonty Industries Inc","Basic Materials","Other Industrial Metals & Mining",3337.72
+105,"ALNT","Allient Inc","Technology","Electronic Components",1846.98
+106,"ALOY","REalloys Inc","Basic Materials","Other Industrial Metals & Mining",526.19
+107,"ALRM","Alarm.com Holdings Inc","Technology","Software - Application",2712.72
+108,"ALRS","Alerus Financial Corp","Financial","Banks - Regional",789.21
+109,"ALSN","Allison Transmission Holdings Inc","Consumer Cyclical","Auto Parts",9010.09
+110,"ALTG","Alta Equipment Group Inc","Industrials","Industrial Distribution",206.45
+111,"ALX","Alexander's Inc","Real Estate","REIT - Retail",1233.31
+112,"AM","Antero Midstream Corp","Energy","Oil & Gas Midstream",10058.34
+113,"AMAL","Amalgamated Financial Corp","Financial","Banks - Regional",1410.69
+114,"AMAT","Applied Materials Inc","Technology","Semiconductor Equipment & Materials",404393.44
+115,"AMBA","Ambarella Inc","Technology","Semiconductor Equipment & Materials",2776.03
+116,"AMBP","Ardagh Metal Packaging SA","Consumer Cyclical","Packaging & Containers",2665.77
+117,"AMBQ","Ambiq Micro Inc","Technology","Semiconductors",1424.47
+118,"AMC","AMC Entertainment Holdings Inc","Communication Services","Entertainment",2570.70
+119,"AMCR","Amcor Plc","Consumer Cyclical","Packaging & Containers",19363.04
+120,"AMCX","AMC Global Media Inc","Communication Services","Entertainment",451.27
+121,"AMD","Advanced Micro Devices Inc","Technology","Semiconductors",1013244.55
+122,"AME","Ametek Inc","Industrials","Specialty Industrial Machinery",56746.74
+123,"AMG","Affiliated Managers Group Inc","Financial","Asset Management",10007.53
+124,"AMGN","AMGEN Inc","Healthcare","Drug Manufacturers - General",220275.11
+125,"AMH","American Homes 4 Rent","Real Estate","REIT - Residential",10970.76
+126,"AMKR","AMKOR Technology Inc","Technology","Semiconductor Equipment & Materials",12671.08
+127,"AMLX","Amylyx Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",3413.95
+128,"AMN","AMN Healthcare Services Inc","Healthcare","Medical Care Facilities",1372.59
+129,"AMP","Ameriprise Financial Inc","Financial","Asset Management",44085.34
+130,"AMPH","Amphastar Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1097.91
+131,"AMPL","Amplitude Inc","Technology","Software - Application",1909.96
+132,"AMPX","Amprius Technologies Inc","Industrials","Electrical Equipment & Parts",1371.69
+133,"AMR","Alpha Metallurgical Resources Inc","Basic Materials","Coking Coal",2209.70
+134,"AMRC","Ameresco Inc","Industrials","Engineering & Construction",1114.92
+135,"AMRX","Amneal Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",6275.30
+136,"AMSC","American Superconductor Corp","Industrials","Specialty Industrial Machinery",1499.28
+137,"AMSF","Amerisafe Inc","Financial","Insurance - Specialty",458.58
+138,"AMT","American Tower Corp","Real Estate","REIT - Specialty",77689.52
+139,"AMTB","Amerant Bancorp Inc","Financial","Banks - Regional",1137.68
+140,"AMTM","Amentum Holdings Inc","Industrials","Specialty Business Services",4638.28
+141,"AMZN","Amazon.com Inc","Consumer Cyclical","Internet Retail",2740371.03
+142,"AN","Autonation Inc","Consumer Cyclical","Auto & Truck Dealerships",5192.86
+143,"ANDE","Andersons Inc","Consumer Defensive","Food Distribution",2260.40
+144,"ANET","Arista Networks Inc","Technology","Computer Hardware",266080.56
+145,"ANF","Abercrombie & Fitch Co","Consumer Cyclical","Apparel Retail",6000.65
+146,"ANGI","Angi Inc","Communication Services","Internet Content & Information",254.69
+147,"ANGO","Angiodynamic Inc","Healthcare","Medical Instruments & Supplies",472.27
+148,"ANIK","Anika Therapeutics Inc","Healthcare","Drug Manufacturers - Specialty & Generic",257.36
+149,"ANIP","ANI Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1653.41
+150,"AON","Aon Plc","Financial","Insurance Brokers",58784.20
+151,"AORT","Artivion Inc","Healthcare","Medical Devices",1034.12
+152,"AOS","A.O. Smith Corp","Industrials","Specialty Industrial Machinery",7686.99
+153,"AOSL","Alpha & Omega Semiconductor Ltd","Technology","Semiconductors",860.97
+154,"APA","APA Corp","Energy","Oil & Gas E&P",15930.48
+155,"APAM","Artisan Partners Asset Management Inc","Financial","Asset Management",2728.09
+156,"APD","Air Products & Chemicals Inc","Basic Materials","Specialty Chemicals",61991.20
+157,"APEI","American Public Education Inc","Consumer Defensive","Education & Training Services",874.27
+158,"APG","APi Group Corp","Industrials","Engineering & Construction",17437.69
+159,"APH","Amphenol Corp","Technology","Electronic Components",210396.31
+160,"APLD","Applied Digital Corp","Technology","Information Technology Services",7133.40
+161,"APLE","Apple Hospitality REIT Inc","Real Estate","REIT - Hotel & Motel",3829.26
+162,"APO","Apollo Global Management Inc","Financial","Asset Management",68089.63
+163,"APOG","Apogee Enterprises Inc","Industrials","Building Products & Equipment",851.92
+164,"APP","Applovin Corp","Communication Services","Advertising Agencies",93742.43
+165,"APPF","Appfolio Inc","Technology","Software - Application",6993.16
+166,"APPN","Appian Corp","Technology","Software - Infrastructure",2769.15
+167,"APPS","Digital Turbine Inc","Technology","Software - Application",1312.16
+168,"APTV","Aptiv Plc","Consumer Cyclical","Auto Parts",9179.47
+169,"AQST","Aquestive Therapeutics Inc","Healthcare","Drug Manufacturers - Specialty & Generic",597.43
+170,"AR","Antero Resources Corp","Energy","Oil & Gas E&P",11086.25
+171,"ARCB","ArcBest Corp","Industrials","Trucking",2904.79
+172,"ARE","Alexandria Real Estate Equities Inc","Real Estate","REIT - Office",7945.69
+173,"ARES","Ares Management Corp","Financial","Asset Management",38398.03
+174,"ARHS","Arhaus Inc","Consumer Cyclical","Specialty Retail",1382.08
+175,"ARKO","ARKO Corp","Consumer Cyclical","Specialty Retail",462.21
+176,"ARLO","Arlo Technologies Inc","Industrials","Building Products & Equipment",1307.50
+177,"ARMK","Aramark","Industrials","Specialty Business Services",14641.74
+178,"AROC","Archrock Inc","Energy","Oil & Gas Equipment & Services",5319.76
+179,"AROW","Arrow Financial Corp","Financial","Banks - Regional",685.94
+180,"ARR","ARMOUR Residential REIT Inc","Real Estate","REIT - Mortgage",1906.72
+181,"ARRY","Array Technologies Inc","Technology","Solar",577.53
+182,"ARW","Arrow Electronics Inc","Technology","Electronics & Computer Distribution",11542.81
+183,"ARX","Accelerant Holdings","Financial","Insurance Brokers",4289.47
+184,"AS","Amer Sports Inc","Consumer Cyclical","Leisure",15971.01
+185,"ASAN","Asana Inc","Technology","Software - Application",2259.93
+186,"ASB","Associated Banc-Corp","Financial","Banks - Regional",5431.32
+187,"ASC","Ardmore Shipping Corp","Industrials","Marine Shipping",795.38
+188,"ASH","Ashland Inc","Basic Materials","Specialty Chemicals",3237.14
+189,"ASIX","AdvanSix Inc","Basic Materials","Chemicals",450.92
+190,"ASLE","AerSale Corp","Industrials","Airports & Air Services",234.82
+191,"ASO","Academy Sports and Outdoors Inc","Consumer Cyclical","Specialty Retail",3248.90
+192,"ASPI","ASP Isotopes Inc","Basic Materials","Specialty Chemicals",433.86
+193,"ASPN","Aspen Aerogels Inc","Basic Materials","Specialty Chemicals",467.23
+194,"ASST","Strive Inc","Financial","Asset Management",2865.39
+195,"ASTE","Astec Industries Inc","Industrials","Farm & Heavy Construction Machinery",892.92
+196,"ASTH","Astrana Health Inc","Healthcare","Medical Care Facilities",1779.31
+197,"ASTS","AST SpaceMobile Inc","Technology","Communication Equipment",22155.31
+198,"ASUR","Asure Software Inc","Technology","Software - Application",212.26
+199,"ATEC","Alphatec Holdings Inc","Healthcare","Medical Devices",1598.57
+200,"ATEN","A10 Networks Inc","Technology","Software - Infrastructure",2030.15
+201,"ATEX","Anterix Inc","Communication Services","Telecom Services",1498.97
+202,"ATI","ATI Inc","Industrials","Metal Fabrication",25617.74
+203,"ATKR","Atkore Inc","Industrials","Electrical Equipment & Parts",3203.04
+204,"ATMU","Atmus Filtration Technologies Inc","Consumer Cyclical","Auto Parts",3477.60
+205,"ATNI","ATN International Inc","Communication Services","Telecom Services",437.61
+206,"ATO","Atmos Energy Corp","Utilities","Utilities - Regulated Gas",27149.70
+207,"ATR","Aptargroup Inc","Healthcare","Medical Instruments & Supplies",7744.82
+208,"ATRC","Atricure Inc","Healthcare","Medical Instruments & Supplies",2687.77
+209,"ATRO","Astronics Corp","Industrials","Aerospace & Defense",2769.32
+210,"AU","AngloGold Ashanti Plc","Basic Materials","Gold",45844.57
+211,"AUB","Atlantic Union Bankshares Corp","Financial","Banks - Regional",5415.54
+212,"AUGO","Aura Minerals Inc","Basic Materials","Gold",6911.77
+213,"AUR","Aurora Innovation Inc","Consumer Cyclical","Auto Parts",11483.76
+214,"AVA","Avista Corp","Utilities","Utilities - Diversified",2971.55
+215,"AVAH","Aveanna Healthcare Holdings Inc","Healthcare","Medical Care Facilities",2671.88
+216,"AVAV","AeroVironment Inc","Industrials","Aerospace & Defense",6992.93
+217,"AVGO","Broadcom Inc","Technology","Semiconductors",1719175.13
+218,"AVNT","Avient Corp","Basic Materials","Specialty Chemicals",3758.67
+219,"AVNW","Aviat Networks Inc","Technology","Communication Equipment",262.57
+220,"AVO","Mission Produce Inc","Consumer Defensive","Food Distribution",1033.73
+221,"AVPT","AvePoint Inc","Technology","Software - Infrastructure",3048.65
+222,"AVR","Anteris Technologies Global Corp","Healthcare","Medical Devices",646.15
+223,"AVT","Avnet Inc","Technology","Electronics & Computer Distribution",8187.10
+224,"AVTR","Avantor Inc","Healthcare","Medical Instruments & Supplies",10409.16
+225,"AVY","Avery Dennison Corp","Consumer Cyclical","Packaging & Containers",12703.61
+226,"AWI","Armstrong World Industries Inc","Industrials","Building Products & Equipment",6893.06
+227,"AWK","American Water Works Co Inc","Utilities","Utilities - Regulated Water",25473.08
+228,"AWR","American States Water Co","Utilities","Utilities - Regulated Water",3243.39
+229,"AX","Axos Financial Inc","Financial","Banks - Regional",5029.66
+230,"AXGN","Axogen Inc","Healthcare","Medical Devices",2122.73
+231,"AXON","Axon Enterprise Inc","Industrials","Aerospace & Defense",33901.18
+232,"AXP","American Express Co","Financial","Credit Services",208062.96
+233,"AXS","Axis Capital Holdings Ltd","Financial","Insurance - Specialty",7114.22
+234,"AXTA","Axalta Coating Systems Ltd","Basic Materials","Specialty Chemicals",7022.00
+235,"AXTI","AXT Inc","Technology","Semiconductor Equipment & Materials",4698.98
+236,"AYI","Acuity Inc","Industrials","Electrical Equipment & Parts",8993.54
+237,"AZO","Autozone Inc","Consumer Cyclical","Auto Parts",47515.60
+238,"AZTA","Azenta Inc","Healthcare","Medical Instruments & Supplies",1577.10
+239,"AZZ","AZZ Inc","Industrials","Specialty Business Services",4098.42
+240,"BA","Boeing Co","Industrials","Aerospace & Defense",148391.96
+241,"BAC","Bank Of America Corp","Financial","Banks - Diversified",374881.25
+242,"BAH","Booz Allen Hamilton Holding Corp","Industrials","Consulting Services",8765.17
+243,"BALL","Ball Corp","Consumer Cyclical","Packaging & Containers",15450.74
+244,"BALY","Ballys Corp","Consumer Cyclical","Resorts & Casinos",705.06
+245,"BAM","Brookfield Asset Management Ltd","Financial","Asset Management",73998.85
+246,"BANC","Banc of California Inc","Financial","Banks - Regional",2748.73
+247,"BAND","Bandwidth Inc","Technology","Software - Infrastructure",1671.79
+248,"BANF","Bancfirst Corp","Financial","Banks - Regional",3591.70
+249,"BANR","Banner Corp","Financial","Banks - Regional",2450.08
+250,"BATRA","Atlanta Braves Holdings Inc","Communication Services","Entertainment",3352.75
+251,"BATRK","Atlanta Braves Holdings Inc","Communication Services","Entertainment",3372.65
+252,"BAX","Baxter International Inc","Healthcare","Medical Instruments & Supplies",12356.20
+253,"BBAI","BigBear.ai Holdings Inc","Technology","Information Technology Services",1160.38
+254,"BBNX","Beta Bionics Inc","Healthcare","Medical Devices",940.28
+255,"BBSI","Barrett Business Services Inc","Industrials","Staffing & Employment Services",779.89
+256,"BBT","Beacon Financial Corp","Financial","Banks - Regional",2303.27
+257,"BBUC","Brookfield Business Corp","Industrials","Conglomerates",5390.79
+258,"BBW","Build A Bear Workshop Inc","Consumer Cyclical","Specialty Retail",319.08
+259,"BBWI","Bath & Body Works Inc","Consumer Cyclical","Specialty Retail",3571.14
+260,"BBY","Best Buy Co Inc","Consumer Cyclical","Specialty Retail",18539.93
+261,"BC","Brunswick Corp","Consumer Cyclical","Recreational Vehicles",4040.12
+262,"BCAL","California Bancorp","Financial","Banks - Regional",693.49
+263,"BCBP","BCB Bancorp Inc (NJ)","Financial","Banks - Regional",241.84
+264,"BCC","Boise Cascade Co","Basic Materials","Lumber & Wood Production",2589.64
+265,"BCML","BayCom Corp","Financial","Banks - Regional",336.78
+266,"BCO","Brink's Co","Industrials","Security & Protection Services",4216.18
+267,"BCPC","Balchem Corp","Basic Materials","Specialty Chemicals",5375.59
+268,"BCRX","Biocryst Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",2118.38
+269,"BDC","Belden Inc","Technology","Communication Equipment",4218.10
+270,"BDN","Brandywine Realty Trust","Real Estate","REIT - Office",479.76
+271,"BDX","Becton Dickinson & Co","Healthcare","Medical Instruments & Supplies",49778.69
+272,"BE","Bloom Energy Corp","Industrials","Electrical Equipment & Parts",80352.95
+273,"BELFB","Bel Fuse Inc","Technology","Electronic Components",3400.86
+274,"BEN","Franklin Templeton Inc","Financial","Asset Management",16461.69
+275,"BEPC","Brookfield Renewable Corp","Utilities","Utilities - Renewable",5454.19
+276,"BETA","BETA Technologies Inc","Industrials","Aerospace & Defense",4795.80
+277,"BETR","Better Home & Finance Holding Co","Financial","Mortgage Finance",192.96
+278,"BF-A","Brown-Forman Corp","Consumer Defensive","Beverages - Wineries & Distilleries",12266.98
+279,"BF-B","Brown-Forman Corp","Consumer Defensive","Beverages - Wineries & Distilleries",12267.90
+280,"BFAM","Bright Horizons Family Solutions Inc","Consumer Cyclical","Personal Services",3350.48
+281,"BFC","Bank First Corp","Financial","Banks - Regional",1640.45
+282,"BFH","Bread Financial Holdings Inc","Financial","Credit Services",3869.98
+283,"BFLY","Butterfly Network Inc","Healthcare","Medical Devices",2178.42
+284,"BFS","Saul Centers Inc","Real Estate","REIT - Retail",734.59
+285,"BFST","Business First Bancshares Inc","Financial","Banks - Regional",999.61
+286,"BG","Bunge Global SA","Consumer Defensive","Farm Products",20714.28
+287,"BGC","BGC Group Inc","Financial","Capital Markets",5339.49
+288,"BGS","B&G Foods Inc","Consumer Defensive","Packaged Foods",212.94
+289,"BHB","Bar Harbor Bankshares Inc","Financial","Banks - Regional",645.16
+290,"BHE","Benchmark Electronics Inc","Technology","Electronic Components",2915.27
+291,"BHF","Brighthouse Financial Inc","Financial","Insurance - Life",2817.49
+292,"BHR","Braemar Hotels & Resorts Inc","Real Estate","REIT - Hotel & Motel",102.33
+293,"BHRB","Burke & Herbert Financial Services Corp","Financial","Banks - Regional",1391.89
+294,"BIIB","Biogen Inc","Healthcare","Drug Manufacturers - General",32273.90
+295,"BILL","BILL Holdings Inc","Technology","Software - Application",3835.75
+296,"BIO","Bio-Rad Laboratories Inc","Healthcare","Medical Devices",9678.16
+297,"BIOA","BioAge Labs Inc","Healthcare","Drug Manufacturers - Specialty & Generic",285.02
+298,"BIPC","Brookfield Infrastructure Corp","Utilities","Utilities - Regulated Gas",5050.99
+299,"BIRK","Birkenstock Holding Plc","Consumer Cyclical","Footwear & Accessories",5891.65
+300,"BJ","BJ's Wholesale Club Holdings Inc","Consumer Defensive","Discount Stores",12510.21
+301,"BJRI","BJ's Restaurant Inc","Consumer Cyclical","Restaurants",1266.64
+302,"BKD","Brookdale Senior Living Inc","Healthcare","Medical Care Facilities",2600.72
+303,"BKE","Buckle Inc","Consumer Cyclical","Apparel Retail",2231.01
+304,"BKH","Black Hills Corp","Utilities","Utilities - Regulated Gas",5834.89
+305,"BKNG","Booking Holdings Inc","Consumer Cyclical","Travel Services",120198.33
+306,"BKR","Baker Hughes Co","Energy","Oil & Gas Equipment & Services",55887.55
+307,"BKSY","BlackSky Technology Inc","Industrials","Specialty Business Services",865.97
+308,"BKU","BankUnited Inc","Financial","Banks - Regional",3035.20
+309,"BKV","BKV Corp","Energy","Oil & Gas E&P",2619.94
+310,"BL","BlackLine Inc","Technology","Software - Application",1700.17
+311,"BLBD","Blue Bird Corp","Industrials","Farm & Heavy Construction Machinery",1761.39
+312,"BLDR","Builders Firstsource Inc","Industrials","Building Products & Equipment",5789.77
+313,"BLK","Blackrock Inc","Financial","Asset Management",173094.01
+314,"BLKB","Blackbaud Inc","Technology","Software - Application",2035.29
+315,"BLMN","Bloomin Brands Inc","Consumer Cyclical","Restaurants",726.06
+316,"BLND","Blend Labs Inc","Technology","Software - Application",248.34
+317,"BLSH","Bullish","Technology","Software - Infrastructure",4721.00
+318,"BLX","Bladex Inc","Financial","Banks - Regional",1921.61
+319,"BLZE","Backblaze Inc","Technology","Software - Infrastructure",804.08
+320,"BMBL","Bumble Inc","Communication Services","Internet Content & Information",338.50
+321,"BMI","Badger Meter Inc","Technology","Scientific & Technical Instruments",3700.46
+322,"BMNR","BitMine Immersion Technologies Inc","Financial","Capital Markets",14501.56
+323,"BMRC","Bank of Marin Bancorp","Financial","Banks - Regional",439.51
+324,"BMY","Bristol-Myers Squibb Co","Healthcare","Drug Manufacturers - General",121704.94
+325,"BNL","Broadstone Net Lease Inc","Real Estate","REIT - Diversified",3500.12
+326,"BNY","Bank Of New York Mellon Corp","Financial","Banks - Diversified",97439.98
+327,"BOC","Boston Omaha Corp","Industrials","Conglomerates",391.04
+328,"BOH","Bank of Hawaii Corp","Financial","Banks - Regional",2671.19
+329,"BOKF","BOK Financial Corp","Financial","Banks - Regional",7682.15
+330,"BOOT","Boot Barn Holdings Inc","Consumer Cyclical","Apparel Retail",3682.64
+331,"BORR","Borr Drilling Ltd","Energy","Oil & Gas Drilling",1422.24
+332,"BOW","Bowhead Specialty Holdings Inc","Financial","Insurance - Property & Casualty",1123.36
+333,"BOX","Box Inc","Technology","Software - Infrastructure",4981.76
+334,"BPOP","Popular Inc","Financial","Banks - Regional",9936.05
+335,"BR","Broadridge Financial Solutions Inc","Technology","Information Technology Services",18652.21
+336,"BRBR","Bellring Brands Inc","Consumer Defensive","Packaged Foods",929.06
+337,"BRCC","BRC Inc","Consumer Defensive","Packaged Foods",239.27
+338,"BRK-B","Berkshire Hathaway Inc","Financial","Insurance - Diversified",984019.61
+339,"BRKR","Bruker Corp","Healthcare","Medical Devices",8824.65
+340,"BRO","Brown & Brown Inc","Financial","Insurance Brokers",21331.41
+341,"BROS","Dutch Bros Inc","Consumer Cyclical","Restaurants",6949.80
+342,"BRSL","Brightstar Lottery PLC","Consumer Cyclical","Gambling",1838.16
+343,"BRSP","BrightSpire Capital Inc","Real Estate","REIT - Mortgage",493.44
+344,"BRX","Brixmor Property Group Inc","Real Estate","REIT - Retail",8310.10
+345,"BRZE","Braze Inc","Technology","Software - Application",3232.61
+346,"BSRR","Sierra Bancorp","Financial","Banks - Regional",514.91
+347,"BSX","Boston Scientific Corp","Healthcare","Medical Devices",60925.60
+348,"BSY","Bentley Systems Inc","Technology","Software - Application",10518.88
+349,"BTBT","Bit Digital Inc","Financial","Capital Markets",490.46
+350,"BTDR","Bitdeer Technologies Group","Technology","Software - Application",2641.73
+351,"BTSG","BrightSpring Health Services Inc","Healthcare","Health Information Services",12596.04
+352,"BTU","Peabody Energy Corp","Energy","Thermal Coal",3047.50
+353,"BULL","Webull Corp","Technology","Software - Application",3216.30
+354,"BUR","Burford Capital Limited","Financial","Asset Management",755.37
+355,"BURL","Burlington Stores Inc","Consumer Cyclical","Apparel Retail",17389.76
+356,"BUSE","First Busey Corp","Financial","Banks - Regional",2412.89
+357,"BV","BrightView Holdings Inc","Industrials","Specialty Business Services",968.60
+358,"BVS","Bioventus Inc","Healthcare","Medical Devices",1067.12
+359,"BW","Babcock & Wilcox Enterprises Inc","Industrials","Specialty Industrial Machinery",819.30
+360,"BWA","BorgWarner Inc","Consumer Cyclical","Auto Parts",12570.28
+361,"BWB","Bridgewater Bancshares Inc","Financial","Banks - Regional",568.27
+362,"BWIN","Baldwin Insurance Group Inc","Financial","Insurance Brokers",4467.83
+363,"BWMN","Bowman Consulting Group Ltd","Industrials","Engineering & Construction",741.54
+364,"BWXT","BWX Technologies Inc","Industrials","Aerospace & Defense",13030.47
+365,"BX","Blackstone Inc","Financial","Asset Management",139930.18
+366,"BXC","Bluelinx Hldgs Inc","Industrials","Industrial Distribution",560.35
+367,"BXDC","Blackstone Digital Infrastructure Trust Inc","Real Estate","REIT - Specialty",1696.96
+368,"BXMT","Blackstone Mortgage Trust Inc","Real Estate","REIT - Mortgage",1889.38
+369,"BXP","BXP Inc","Real Estate","REIT - Office",10353.09
+370,"BY","Byline Bancorp Inc","Financial","Banks - Regional",1666.48
+371,"BYD","Boyd Gaming Corp","Consumer Cyclical","Resorts & Casinos",5085.88
+372,"BZH","Beazer Homes USA Inc","Consumer Cyclical","Residential Construction",891.36
+373,"C","Citigroup Inc","Financial","Banks - Diversified",214846.11
+374,"CABO","Cable One Inc","Communication Services","Telecom Services",87.26
+375,"CAC","Camden National Corp","Financial","Banks - Regional",952.66
+376,"CACC","Credit Acceptance Corp","Financial","Credit Services",5634.79
+377,"CACI","Caci International Inc","Technology","Information Technology Services",13246.50
+378,"CAG","Conagra Brands Inc","Consumer Defensive","Packaged Foods",6478.47
+379,"CAH","Cardinal Health Inc","Healthcare","Medical Distribution",55333.42
+380,"CAKE","Cheesecake Factory Inc","Consumer Cyclical","Restaurants",5319.91
+381,"CAL","Caleres Inc","Consumer Cyclical","Apparel Retail",428.90
+382,"CALM","Cal-Maine Foods Inc","Consumer Defensive","Farm Products",3028.25
+383,"CALX","Calix Inc","Technology","Software - Infrastructure",2271.74
+384,"CALY","Callaway Golf Co","Consumer Cyclical","Leisure",2475.94
+385,"CAR","Avis Budget Group Inc","Industrials","Rental & Leasing Services",3885.83
+386,"CARE","Carter Bankshares Inc","Financial","Banks - Regional",675.34
+387,"CARG","CarGurus Inc","Communication Services","Internet Content & Information",2604.50
+388,"CARR","Carrier Global Corp","Industrials","Building Products & Equipment",46022.07
+389,"CARS","Cars.com","Communication Services","Internet Content & Information",521.41
+390,"CART","Maplebear Inc","Consumer Cyclical","Internet Retail",10718.46
+391,"CASH","Pathward Financial Inc","Financial","Banks - Regional",1497.55
+392,"CASS","Cass Information Systems Inc","Industrials","Specialty Business Services",690.89
+393,"CASY","Casey's General Stores Inc","Consumer Cyclical","Specialty Retail",23738.78
+394,"CAT","Caterpillar Inc","Industrials","Farm & Heavy Construction Machinery",365983.93
+395,"CATX","Perspective Therapeutics Inc","Healthcare","Medical Devices",309.35
+396,"CATY","Cathay General Bancorp","Financial","Banks - Regional",3976.14
+397,"CAVA","Cava Group Inc","Consumer Cyclical","Restaurants",6343.75
+398,"CB","Chubb Limited","Financial","Insurance - Property & Casualty",132630.27
+399,"CBAN","Colony Bankcorp Inc","Financial","Banks - Regional",431.00
+400,"CBC","Central Bancompany Inc","Financial","Banks - Regional",7752.78
+401,"CBL","CBL& Associates Properties Inc","Real Estate","REIT - Retail",1523.62
+402,"CBLL","Ceribell Inc","Healthcare","Medical Devices",888.46
+403,"CBOE","Cboe Global Markets Inc","Financial","Financial Data & Stock Exchanges",30711.07
+404,"CBRE","CBRE Group Inc","Real Estate","Real Estate Services",37957.54
+405,"CBRL","Cracker Barrel Old Country Store Inc","Consumer Cyclical","Restaurants",1236.99
+406,"CBSH","Commerce Bancshares Inc","Financial","Banks - Regional",7832.83
+407,"CBT","Cabot Corp","Basic Materials","Specialty Chemicals",3903.82
+408,"CBU","Community Financial System Inc","Financial","Banks - Regional",3109.60
+409,"CBZ","Cbiz Inc","Industrials","Specialty Business Services",3010.74
+410,"CC","Chemours Company","Basic Materials","Specialty Chemicals",2081.41
+411,"CCB","Coastal Financial Corp","Financial","Banks - Regional",652.73
+412,"CCBG","Capital City Bank Group Inc","Financial","Banks - Regional",831.88
+413,"CCC","CCC Intelligent Solutions Holdings Inc","Technology","Software - Application",3869.70
+414,"CCI","Crown Castle Inc","Real Estate","REIT - Specialty",29309.62
+415,"CCK","Crown Holdings Inc","Consumer Cyclical","Packaging & Containers",11841.84
+416,"CCL","Carnival Corp Ltd","Consumer Cyclical","Travel Services",35134.66
+417,"CCNE","CNB Financial Corp (PA)","Financial","Banks - Regional",996.45
+418,"CCO","Clear Channel Outdoor Holdings Inc","Communication Services","Advertising Agencies",1237.10
+419,"CCOI","Cogent Communications Holdings Inc","Communication Services","Telecom Services",489.62
+420,"CCS","Century Communities Inc","Real Estate","Real Estate - Development",1613.85
+421,"CCSI","Consensus Cloud Solutions Inc","Technology","Software - Infrastructure",671.05
+422,"CDE","Coeur Mining Inc","Basic Materials","Gold",17341.27
+423,"CDNA","Caredx Inc","Healthcare","Diagnostics & Research",3218.13
+424,"CDNL","Cardinal Infrastructure Group Inc","Industrials","Engineering & Construction",1189.67
+425,"CDNS","Cadence Design Systems Inc","Technology","Software - Application",96068.10
+426,"CDRE","Cadre Holdings Inc","Industrials","Aerospace & Defense",1063.24
+427,"CDW","CDW Corp","Technology","Information Technology Services",17487.44
+428,"CE","Celanese Corp","Basic Materials","Chemicals",4917.85
+429,"CECO","Ceco Environmental Corp","Industrials","Pollution & Treatment Controls",3839.25
+430,"CEG","Constellation Energy Corp","Utilities","Utilities - Independent Power Producers",101002.40
+431,"CELH","Celsius Holdings Inc","Consumer Defensive","Beverages - Non-Alcoholic",6933.16
+432,"CENT","Central Garden & Pet Co","Consumer Defensive","Packaged Foods",2257.61
+433,"CENTA","Central Garden & Pet Co","Consumer Defensive","Packaged Foods",2253.36
+434,"CENX","Century Aluminum Co","Basic Materials","Aluminum",3601.38
+435,"CERS","Cerus Corp","Healthcare","Medical Devices",459.47
+436,"CERT","Certara Inc","Healthcare","Health Information Services",1317.94
+437,"CEVA","Ceva Inc","Technology","Semiconductors",947.67
+438,"CF","CF Industries Holdings Inc","Basic Materials","Agricultural Inputs",17188.98
+439,"CFFN","Capitol Federal Financial","Financial","Banks - Regional",1064.66
+440,"CFG","Citizens Financial Group Inc","Financial","Banks - Regional",26993.22
+441,"CFR","Cullen Frost Bankers Inc","Financial","Banks - Regional",9468.99
+442,"CG","Carlyle Group Inc","Financial","Asset Management",13679.62
+443,"CGNX","Cognex Corp","Technology","Scientific & Technical Instruments",10246.51
+444,"CHCO","City Holding Co","Financial","Banks - Regional",1974.89
+445,"CHCT","Community Healthcare Trust Inc","Real Estate","REIT - Healthcare Facilities",391.99
+446,"CHD","Church & Dwight Co Inc","Consumer Defensive","Household & Personal Products",23181.94
+447,"CHDN","Churchill Downs Inc","Consumer Cyclical","Gambling",5308.37
+448,"CHE","Chemed Corp","Healthcare","Medical Care Facilities",6512.11
+449,"CHEF","Chefs' Warehouse Inc","Consumer Defensive","Food Distribution",4544.68
+450,"CHH","Choice Hotels International Inc","Consumer Cyclical","Lodging",4717.80
+451,"CHRD","Chord Energy Corp","Energy","Oil & Gas E&P",7785.70
+452,"CHRW","C.H. Robinson Worldwide Inc","Industrials","Integrated Freight & Logistics",25262.32
+453,"CHTR","Charter Communications Inc","Communication Services","Telecom Services",19315.38
+454,"CHWY","Chewy Inc","Consumer Cyclical","Internet Retail",7600.44
+455,"CHYM","Chime Financial Inc","Technology","Software - Application",10963.82
+456,"CI","Cigna Group","Healthcare","Healthcare Plans",74259.51
+457,"CIEN","CIENA Corp","Technology","Communication Equipment",60400.51
+458,"CIFR","Cipher Digital Inc","Technology","Information Technology Services",5602.92
+459,"CIM","Chimera Investment Corp","Real Estate","REIT - Mortgage",754.25
+460,"CINF","Cincinnati Financial Corp","Financial","Insurance - Property & Casualty",25362.25
+461,"CIVB","Civista Bancshares Inc","Financial","Banks - Regional",559.91
+462,"CL","Colgate-Palmolive Co","Consumer Defensive","Household & Personal Products",70230.92
+463,"CLB","Core Laboratories Inc","Energy","Oil & Gas Equipment & Services",466.18
+464,"CLBK","Columbia Financial Inc","Financial","Banks - Regional",2967.69
+465,"CLDT","Chatham Lodging Trust","Real Estate","REIT - Hotel & Motel",635.62
+466,"CLF","Cleveland-Cliffs Inc","Basic Materials","Steel",6954.88
+467,"CLFD","Clearfield Inc","Technology","Communication Equipment",450.17
+468,"CLH","Clean Harbors Inc","Industrials","Waste Management",16751.51
+469,"CLMB","Climb Global Solutions Inc","Technology","Electronics & Computer Distribution",608.33
+470,"CLMT","Calumet Inc","Basic Materials","Specialty Chemicals",5076.12
+471,"CLNE","Clean Energy Fuels Corp","Energy","Oil & Gas Refining & Marketing",335.08
+472,"CLOV","Clover Health Investments Corp","Healthcare","Healthcare Plans",2432.70
+473,"CLPT","ClearPoint Neuro Inc","Healthcare","Medical Devices",319.99
+474,"CLSK","Cleanspark Inc","Financial","Capital Markets",2729.96
+475,"CLVT","Clarivate Plc","Technology","Information Technology Services",1042.66
+476,"CLW","Clearwater Paper Corp","Basic Materials","Paper & Paper Products",314.65
+477,"CLX","Clorox Co","Consumer Defensive","Household & Personal Products",10090.49
+478,"CMC","Commercial Metals Co","Industrials","Metal Fabrication",6980.40
+479,"CMCL","Caledonia Mining Corp Plc","Basic Materials","Gold",471.97
+480,"CMCO","Columbus Mckinnon Corp","Industrials","Farm & Heavy Construction Machinery",461.25
+481,"CMCSA","Comcast Corp","Communication Services","Telecom Services",75266.58
+482,"CMDB","Costamare Bulkers Holdings Ltd","Industrials","Marine Shipping",518.11
+483,"CME","CME Group Inc","Financial","Financial Data & Stock Exchanges",99402.09
+484,"CMG","Chipotle Mexican Grill","Consumer Cyclical","Restaurants",41353.86
+485,"CMI","Cummins Inc","Industrials","Specialty Industrial Machinery",71640.60
+486,"CMP","Compass Minerals International Inc","Basic Materials","Other Industrial Metals & Mining",968.92
+487,"CMPR","Cimpress plc","Industrials","Specialty Business Services",1808.68
+488,"CMRC","Commerce.com Inc","Technology","Software - Application",266.80
+489,"CMS","CMS Energy Corp","Utilities","Utilities - Regulated Electric",20489.12
+490,"CMT","Core Molding Technologies","Basic Materials","Specialty Chemicals",203.62
+491,"CMTG","Claros Mortgage Trust Inc","Real Estate","REIT - Mortgage",174.94
+492,"CNA","CNA Financial Corp","Financial","Insurance - Property & Casualty",12634.36
+493,"CNC","Centene Corp","Healthcare","Healthcare Plans",31882.43
+494,"CNDT","Conduent Inc","Technology","Information Technology Services",244.16
+495,"CNH","CNH Industrial NV","Industrials","Farm & Heavy Construction Machinery",15013.62
+496,"CNK","Cinemark Holdings Inc","Communication Services","Entertainment",4262.08
+497,"CNM","Core & Main Inc","Industrials","Industrial Distribution",7690.25
+498,"CNMD","Conmed Corp","Healthcare","Medical Devices",1351.10
+499,"CNNE","Cannae Holdings Inc","Consumer Cyclical","Restaurants",689.65
+500,"CNO","CNO Financial Group Inc","Financial","Insurance - Life",4954.52
+501,"CNOB","ConnectOne Bancorp Inc","Financial","Banks - Regional",1520.66
+502,"CNP","Centerpoint Energy Inc","Utilities","Utilities - Regulated Electric",25308.03
+503,"CNR","Core Natural Resources Inc","Energy","Thermal Coal",4395.29
+504,"CNS","Cohen & Steers Inc","Financial","Asset Management",3636.02
+505,"CNX","CNX Resources Corp","Energy","Oil & Gas E&P",5004.93
+506,"CNXC","Concentrix Corp","Technology","Information Technology Services",1649.86
+507,"CNXN","PC Connection Inc","Technology","Electronics & Computer Distribution",2293.89
+508,"COCO","Vita Coco Company Inc","Consumer Defensive","Beverages - Non-Alcoholic",3213.09
+509,"CODI","Compass Diversified Holdings","Industrials","Conglomerates",821.58
+510,"COF","Capital One Financial Corp","Financial","Credit Services",122328.87
+511,"COFS","Choiceone Financial Services Inc","Financial","Banks - Regional",493.83
+512,"COHR","Coherent Corp","Technology","Scientific & Technical Instruments",59209.88
+513,"COHU","Cohu Inc","Technology","Semiconductor Equipment & Materials",3236.52
+514,"COIN","Coinbase Global Inc","Financial","Financial Data & Stock Exchanges",45379.95
+515,"COKE","Coca-Cola Consolidated Inc","Consumer Defensive","Beverages - Non-Alcoholic",12771.03
+516,"COLB","Columbia Banking System Inc","Financial","Banks - Regional",8071.20
+517,"COLD","Americold Realty Trust Inc","Real Estate","REIT - Industrial",3942.49
+518,"COLL","Collegium Pharmaceutical Inc","Healthcare","Drug Manufacturers - Specialty & Generic",719.80
+519,"COLM","Columbia Sportswear Co","Consumer Cyclical","Apparel Manufacturing",2905.72
+520,"COMP","Compass Inc","Real Estate","Real Estate Services",7307.97
+521,"CON","Concentra Group Holdings Parent Inc","Healthcare","Medical Care Facilities",4668.43
+522,"COO","Cooper Companies Inc","Healthcare","Medical Instruments & Supplies",10325.43
+523,"COP","Conoco Phillips","Energy","Oil & Gas E&P",161207.49
+524,"COR","Cencora Inc","Healthcare","Medical Distribution",61322.31
+525,"CORZ","Core Scientific Inc","Technology","Software - Infrastructure",4935.79
+526,"COST","Costco Wholesale Corp","Consumer Defensive","Discount Stores",420180.69
+527,"COTY","Coty Inc","Consumer Defensive","Household & Personal Products",2457.11
+528,"COUR","Coursera Inc","Consumer Defensive","Education & Training Services",1393.38
+529,"CPAY","Corpay Inc","Technology","Software - Infrastructure",26400.41
+530,"CPB","Campbells Co","Consumer Defensive","Packaged Foods",5776.81
+531,"CPF","Central Pacific Financial Corp","Financial","Banks - Regional",933.09
+532,"CPK","Chesapeake Utilities Corp","Utilities","Utilities - Regulated Gas",3089.49
+533,"CPNG","Coupang Inc","Consumer Cyclical","Internet Retail",27699.66
+534,"CPRI","Capri Holdings Ltd","Consumer Cyclical","Luxury Goods",1668.41
+535,"CPRT","Copart Inc","Industrials","Specialty Business Services",25455.56
+536,"CPS","Cooper-Standard Holdings Inc","Consumer Cyclical","Auto Parts",385.05
+537,"CPT","Camden Property Trust","Real Estate","REIT - Residential",13085.76
+538,"CR","Crane Co","Industrials","Specialty Industrial Machinery",11682.61
+539,"CRAI","CRA International Inc","Industrials","Consulting Services",1114.52
+540,"CRBG","Corebridge Financial Inc","Financial","Asset Management",15356.87
+541,"CRC","California Resources Corp","Energy","Oil & Gas E&P",4711.89
+542,"CRCL","Circle Internet Group Inc","Financial","Capital Markets",20623.33
+543,"CRCT","Cricut Inc","Technology","Computer Hardware",1340.45
+544,"CRDO","Credo Technology Group Holding Ltd","Technology","Semiconductors",39819.49
+545,"CRGY","Crescent Energy Co","Energy","Oil & Gas E&P",4298.55
+546,"CRH","CRH Plc","Basic Materials","Building Materials",54473.49
+547,"CRI","Carters Inc","Consumer Cyclical","Apparel Retail",1193.85
+548,"CRK","Comstock Resources Inc","Energy","Oil & Gas E&P",4025.54
+549,"CRL","Charles River Laboratories International Inc","Healthcare","Diagnostics & Research",14226.18
+550,"CRM","Salesforce Inc","Technology","Software - Application",187479.40
+551,"CRML","Critical Metals Corp","Basic Materials","Other Industrial Metals & Mining",1003.97
+552,"CRNC","Cerence Inc","Technology","Software - Application",377.22
+553,"CROX","Crocs Inc","Consumer Cyclical","Footwear & Accessories",5601.90
+554,"CRS","Carpenter Technology Corp","Industrials","Metal Fabrication",19184.13
+555,"CRSR","Corsair Gaming Inc","Technology","Computer Hardware",1416.03
+556,"CRUS","Cirrus Logic Inc","Technology","Semiconductors",5673.31
+557,"CRVL","Corvel Corp","Financial","Insurance Brokers",3856.94
+558,"CRWD","Crowdstrike Holdings Inc","Technology","Software - Infrastructure",269305.11
+559,"CRWV","CoreWeave Inc","Technology","Software - Infrastructure",44994.36
+560,"CSCO","Cisco Systems Inc","Technology","Communication Equipment",452963.78
+561,"CSGP","Costar Group Inc","Real Estate","Real Estate Services",12078.94
+562,"CSIQ","Canadian Solar Inc","Technology","Solar",747.88
+563,"CSL","Carlisle Companies Inc","Industrials","Building Products & Equipment",12758.16
+564,"CSQR","Csquare Inc","Technology","Information Technology Services",2896.10
+565,"CSR","Centerspace","Real Estate","REIT - Residential",970.78
+566,"CSTL","Castle Biosciences Inc","Healthcare","Diagnostics & Research",1029.82
+567,"CSTM","Constellium SE","Basic Materials","Aluminum",3469.52
+568,"CSV","Carriage Services Inc","Consumer Cyclical","Personal Services",535.71
+569,"CSW","CSW Industrials Inc","Industrials","Specialty Industrial Machinery",4670.04
+570,"CSX","CSX Corp","Industrials","Railroads",87696.16
+571,"CTAS","Cintas Corp","Industrials","Specialty Business Services",80589.00
+572,"CTBI","Community Trust Bancorp Inc","Financial","Banks - Regional",1369.68
+573,"CTKB","Cytek BioSciences Inc","Healthcare","Medical Devices",696.71
+574,"CTO","CTO Realty Growth Inc","Real Estate","REIT - Diversified",770.70
+575,"CTOS","Custom Truck One Source Inc","Industrials","Rental & Leasing Services",2131.72
+576,"CTRE","CareTrust REIT Inc","Real Estate","REIT - Healthcare Facilities",8456.93
+577,"CTRI","Centuri Holdings Inc","Utilities","Utilities - Regulated Gas",2101.04
+578,"CTS","CTS Corp","Technology","Electronic Components",1636.55
+579,"CTSH","Cognizant Technology Solutions Corp","Technology","Information Technology Services",27031.16
+580,"CTVA","Corteva Inc","Basic Materials","Agricultural Inputs",9175.37
+581,"CUBE","CubeSmart","Real Estate","REIT - Industrial",8482.75
+582,"CUBI","Customers Bancorp Inc","Financial","Banks - Regional",2520.27
+583,"CURB","Curbline Properties Corp","Real Estate","REIT - Retail",3131.34
+584,"CUZ","Cousins Properties Inc","Real Estate","REIT - Office",4562.76
+585,"CVBF","CVB Financial Corp","Financial","Banks - Regional",3827.94
+586,"CVCO","Cavco Industries Inc","Consumer Cyclical","Residential Construction",4219.33
+587,"CVI","CVR Energy Inc","Energy","Oil & Gas Refining & Marketing",5985.60
+588,"CVLG","Covenant Logistics Group Inc","Industrials","Trucking",830.11
+589,"CVLT","Commvault Systems Inc","Technology","Software - Application",6258.13
+590,"CVNA","Carvana Co","Consumer Cyclical","Auto & Truck Dealerships",69549.32
+591,"CVRX","CVRx Inc","Healthcare","Medical Devices",44.76
+592,"CVS","CVS Health Corp","Healthcare","Healthcare Plans",112293.60
+593,"CVSA","Covista Inc","Consumer Defensive","Education & Training Services",4411.64
+594,"CVX","Chevron Corp","Energy","Oil & Gas Integrated",417974.41
+595,"CW","Curtiss-Wright Corp","Industrials","Aerospace & Defense",18736.48
+596,"CWBC","Community West Bancshares","Financial","Banks - Regional",707.31
+597,"CWCO","Consolidated Water Co Ltd","Utilities","Utilities - Regulated Water",485.59
+598,"CWEN","Clearway Energy Inc","Utilities","Utilities - Renewable",6147.99
+599,"CWH","Camping World Holdings Inc","Consumer Cyclical","Auto & Truck Dealerships",462.76
+600,"CWK","Cushman & Wakefield Ltd","Real Estate","Real Estate Services",2776.66
+601,"CWST","Casella Waste Systems Inc","Industrials","Waste Management",5348.93
+602,"CWT","California Water Service Group","Utilities","Utilities - Regulated Water",2819.87
+603,"CXM","Sprinklr Inc","Technology","Software - Application",1258.37
+604,"CXT","Crane NXT Co","Industrials","Business Equipment & Supplies",2773.30
+605,"CXW","CoreCivic Inc","Industrials","Security & Protection Services",3234.81
+606,"CYH","Community Health Systems Inc","Healthcare","Medical Care Facilities",384.96
+607,"CYRX","CryoPort Inc","Industrials","Integrated Freight & Logistics",855.97
+608,"CZFS","Citizens Financial Services Inc","Financial","Banks - Regional",382.19
+609,"CZNC","Citizens & Northern Corp","Financial","Banks - Regional",453.22
+610,"CZR","Caesars Entertainment Inc","Consumer Cyclical","Resorts & Casinos",6015.59
+611,"D","Dominion Energy Inc","Utilities","Utilities - Regulated Electric",54310.73
+612,"DAKT","Daktronics Inc","Technology","Electronic Components",860.38
+613,"DAL","Delta Air Lines Inc","Industrials","Airlines",54017.15
+614,"DAN","Dana Inc","Consumer Cyclical","Auto Parts",3121.88
+615,"DAR","Darling Ingredients Inc","Consumer Defensive","Packaged Foods",9823.23
+616,"DASH","DoorDash Inc","Consumer Cyclical","Internet Retail",83072.53
+617,"DAVE","Dave Inc","Technology","Software - Application",4507.79
+618,"DBD","Diebold Nixdorf Inc","Technology","Software - Application",2139.32
+619,"DBI","Designer Brands Inc","Consumer Cyclical","Footwear & Accessories",296.01
+620,"DBX","Dropbox Inc","Technology","Software - Infrastructure",7423.49
+621,"DC","Dakota Gold Corp","Basic Materials","Gold",792.96
+622,"DCH","Dauch Corp","Consumer Cyclical","Auto Parts",1351.97
+623,"DCI","Donaldson Co Inc","Industrials","Specialty Industrial Machinery",10094.92
+624,"DCO","Ducommun Inc","Industrials","Aerospace & Defense",2541.29
+625,"DCOM","Dime Commercial Bancshares Inc","Financial","Banks - Regional",1702.24
+626,"DD","DuPont de Nemours Inc","Basic Materials","Specialty Chemicals",17890.49
+627,"DDD","3D Systems Corp","Technology","Computer Hardware",556.59
+628,"DDOG","Datadog Inc","Technology","Software - Application",98314.74
+629,"DE","Deere & Co","Industrials","Farm & Heavy Construction Machinery",175952.14
+630,"DEA","Easterly Government Properties Inc","Real Estate","REIT - Office",1098.80
+631,"DEC","Diversified Energy Co","Energy","Oil & Gas Integrated",997.85
+632,"DECK","Deckers Outdoor Corp","Consumer Cyclical","Footwear & Accessories",11243.18
+633,"DEI","Douglas Emmett Inc","Real Estate","REIT - Office",1658.10
+634,"DELL","Dell Technologies Inc","Technology","Computer Hardware",365306.21
+635,"DFH","Dream Finders Homes Inc","Consumer Cyclical","Residential Construction",869.13
+636,"DFIN","Donnelley Financial Solutions Inc","Technology","Software - Application",1234.18
+637,"DG","Dollar General Corp","Consumer Defensive","Discount Stores",27416.04
+638,"DGICA","Donegal Group Inc","Financial","Insurance - Property & Casualty",684.68
+639,"DGII","Digi International Inc","Technology","Communication Equipment",2843.45
+640,"DGX","Quest Diagnostics Inc","Healthcare","Diagnostics & Research",25475.27
+641,"DHC","Diversified Healthcare Trust","Real Estate","REIT - Healthcare Facilities",1828.07
+642,"DHI","D.R. Horton Inc","Consumer Cyclical","Residential Construction",37989.03
+643,"DHR","Danaher Corp","Healthcare","Diagnostics & Research",152871.36
+644,"DHT","DHT Holdings Inc","Energy","Oil & Gas Midstream",4019.61
+645,"DIN","Dine Brands Global Inc","Consumer Cyclical","Restaurants",373.07
+646,"DINO","HF Sinclair Corp","Energy","Oil & Gas Refining & Marketing",21462.07
+647,"DIOD","Diodes Inc","Technology","Semiconductors",4432.01
+648,"DIS","Walt Disney Co","Communication Services","Entertainment",184790.02
+649,"DJCO","Daily Journal Corp","Technology","Software - Application",883.96
+650,"DJT","Trump Media & Technology Group Corp","Communication Services","Internet Content & Information",2279.12
+651,"DK","Delek US Holdings Inc","Energy","Oil & Gas Refining & Marketing",4690.38
+652,"DKNG","DraftKings Inc","Consumer Cyclical","Gambling",17673.73
+653,"DKS","Dicks Sporting Goods Inc","Consumer Cyclical","Specialty Retail",11972.23
+654,"DLB","Dolby Laboratories Inc","Industrials","Specialty Business Services",5474.94
+655,"DLO","DLocal Limited","Technology","Software - Infrastructure",4231.67
+656,"DLR","Digital Realty Trust Inc","Real Estate","REIT - Specialty",65321.75
+657,"DLTR","Dollar Tree Inc","Consumer Defensive","Discount Stores",22256.70
+658,"DLX","Deluxe Corp","Industrials","Conglomerates",1056.99
+659,"DMC","Del Monte Corp","Consumer Defensive","Farm Products",1395.53
+660,"DMRC","Digimarc Corp","Technology","Software - Application",169.05
+661,"DNOW","Dnow Inc","Industrials","Industrial Distribution",2829.30
+662,"DNUT","Krispy Kreme Inc","Consumer Defensive","Grocery Stores",522.23
+663,"DOC","Healthpeak Properties Inc","Real Estate","REIT - Healthcare Facilities",13084.89
+664,"DOCN","DigitalOcean Holdings Inc","Technology","Software - Infrastructure",14568.10
+665,"DOCS","Doximity Inc","Healthcare","Health Information Services",5236.87
+666,"DOCU","DocuSign Inc","Technology","Software - Application",13350.44
+667,"DOLE","Dole plc","Consumer Defensive","Farm Products",1229.85
+668,"DORM","Dorman Products Inc","Consumer Cyclical","Auto Parts",3610.63
+669,"DOV","Dover Corp","Industrials","Specialty Industrial Machinery",25449.18
+670,"DOW","Dow Inc","Basic Materials","Chemicals",20651.72
+671,"DOX","Amdocs Ltd","Technology","Software - Infrastructure",6480.61
+672,"DPC","DPC Holdings PLC","Industrials","Aerospace & Defense",5802.43
+673,"DPZ","Dominos Pizza Inc","Consumer Cyclical","Restaurants",10211.66
+674,"DRH","Diamondrock Hospitality Co","Real Estate","REIT - Hotel & Motel",2585.96
+675,"DRI","Darden Restaurants Inc","Consumer Cyclical","Restaurants",22687.48
+676,"DRS","Leonardo DRS Inc","Industrials","Aerospace & Defense",9573.40
+677,"DRVN","Driven Brands Holdings Inc","Consumer Cyclical","Auto & Truck Dealerships",1941.81
+678,"DSGR","Distribution Solutions Group Inc","Industrials","Industrial Distribution",1622.18
+679,"DSP","Viant Technology Inc","Technology","Software - Application",875.12
+680,"DT","Dynatrace Inc","Technology","Software - Application",17663.81
+681,"DTE","DTE Energy Co","Utilities","Utilities - Regulated Electric",26447.99
+682,"DTM","DT Midstream Inc","Energy","Oil & Gas Midstream",12625.42
+683,"DUK","Duke Energy Corp","Utilities","Utilities - Regulated Electric",91100.41
+684,"DUOL","Duolingo Inc","Technology","Software - Application",7074.98
+685,"DV","DoubleVerify Holdings Inc","Communication Services","Advertising Agencies",2108.46
+686,"DVA","DaVita Inc","Healthcare","Medical Care Facilities",11293.87
+687,"DVN","Devon Energy Corp","Energy","Oil & Gas E&P",53812.00
+688,"DX","Dynex Capital Inc","Real Estate","REIT - Mortgage",2655.38
+689,"DXC","DXC Technology Co","Technology","Information Technology Services",1976.46
+690,"DXCM","Dexcom Inc","Healthcare","Medical Devices",31853.02
+691,"DXPE","DXP Enterprises Inc","Industrials","Industrial Distribution",2771.05
+692,"DY","Dycom Industries Inc","Industrials","Engineering & Construction",8360.92
+693,"EAT","Brinker International Inc","Consumer Cyclical","Restaurants",7965.82
+694,"EBAY","EBay Inc","Consumer Cyclical","Internet Retail",49831.10
+695,"EBC","Eastern Bankshares Inc","Financial","Banks - Regional",4817.02
+696,"EBF","Ennis Inc","Industrials","Specialty Business Services",575.98
+697,"EBS","Emergent Biosolutions Inc","Healthcare","Drug Manufacturers - Specialty & Generic",349.17
+698,"ECG","Everus Construction Group","Industrials","Engineering & Construction",6238.47
+699,"ECHO","EchoStar Corp","Communication Services","Telecom Services",27150.57
+700,"ECL","Ecolab Inc","Basic Materials","Specialty Chemicals",78965.76
+701,"ECPG","Encore Capital Group Inc","Financial","Credit Services",2122.21
+702,"ECVT","Ecovyst Inc","Basic Materials","Specialty Chemicals",1117.67
+703,"ED","Consolidated Edison Inc","Utilities","Utilities - Regulated Electric",39060.46
+704,"EE","Excelerate Energy Inc","Energy","Oil & Gas Midstream",3931.65
+705,"EEFT","Euronet Worldwide Inc","Technology","Software - Infrastructure",2381.11
+706,"EFC","Ellington Financial Inc","Real Estate","REIT - Mortgage",1500.24
+707,"EFOR","Everforth Inc","Technology","Information Technology Services",1473.13
+708,"EFSC","Enterprise Financial Services Corp","Financial","Banks - Regional",2147.30
+709,"EFX","Equifax Inc","Industrials","Consulting Services",17098.75
+710,"EG","Everest Group Ltd","Financial","Insurance - Reinsurance",14305.67
+711,"EGBN","Eagle Bancorp Inc (MD)","Financial","Banks - Regional",862.70
+712,"EGHT","8X8 Inc","Technology","Software - Application",311.98
+713,"EGP","Eastgroup Properties Inc","Real Estate","REIT - Industrial",10492.25
+714,"EGY","VAALCO Energy Inc","Energy","Oil & Gas E&P",631.15
+715,"EHC","Encompass Health Corp","Healthcare","Medical Care Facilities",12088.99
+716,"EIG","Employers Holdings Inc","Financial","Insurance - Specialty",899.28
+717,"EIX","Edison International","Utilities","Utilities - Regulated Electric",20895.40
+718,"EL","Estee Lauder Cos. Inc","Consumer Defensive","Household & Personal Products",34174.29
+719,"ELAN","Elanco Animal Health Inc","Healthcare","Drug Manufacturers - Specialty & Generic",11261.48
+720,"ELE","Elemental Royalty Corp","Basic Materials","Gold",1265.79
+721,"ELF","e.l.f. Beauty Inc","Consumer Defensive","Household & Personal Products",6252.49
+722,"ELS","Equity Lifestyle Properties Inc","Real Estate","REIT - Residential",11730.03
+723,"ELV","Elevance Health Inc","Healthcare","Healthcare Plans",86951.57
+724,"EMBC","Embecta Corp","Healthcare","Medical Instruments & Supplies",325.79
+725,"EME","Emcor Group Inc","Industrials","Engineering & Construction",34328.09
+726,"EMN","Eastman Chemical Co","Basic Materials","Specialty Chemicals",7292.70
+727,"EMR","Emerson Electric Co","Industrials","Specialty Industrial Machinery",88723.66
+728,"ENOV","Enovis Corp","Healthcare","Medical Devices",1005.18
+729,"ENPH","Enphase Energy Inc","Technology","Solar",4348.88
+730,"ENR","Energizer Holdings Inc","Industrials","Electrical Equipment & Parts",1468.29
+731,"ENS","Enersys","Industrials","Electrical Equipment & Parts",6466.85
+732,"ENSG","Ensign Group Inc","Healthcare","Medical Care Facilities",9994.85
+733,"ENTG","Entegris Inc","Technology","Semiconductor Equipment & Materials",24782.64
+734,"ENVA","Enova International Inc","Financial","Credit Services",4546.20
+735,"ENVX","Enovix Corp","Industrials","Electrical Equipment & Parts",548.62
+736,"EOG","EOG Resources Inc","Energy","Oil & Gas E&P",77897.83
+737,"EOLS","Evolus Inc","Healthcare","Drug Manufacturers - Specialty & Generic",515.19
+738,"EOSE","Eos Energy Enterprises Inc","Industrials","Electrical Equipment & Parts",1006.92
+739,"EPAC","Enerpac Tool Group Corp","Industrials","Specialty Industrial Machinery",1785.22
+740,"EPAM","EPAM Systems Inc","Technology","Information Technology Services",5873.69
+741,"EPC","Edgewell Personal Care Co","Consumer Defensive","Household & Personal Products",1278.04
+742,"EPM","Evolution Petroleum Corp","Energy","Oil & Gas E&P",146.23
+743,"EPR","EPR Properties","Real Estate","REIT - Specialty",4168.29
+744,"EPRT","Essential Properties Realty Trust Inc","Real Estate","REIT - Retail",5462.13
+745,"EQBK","Equity Bancshares Inc","Financial","Banks - Regional",977.94
+746,"EQH","Equitable Holdings Inc","Financial","Asset Management",14601.92
+747,"EQIX","Equinix Inc","Real Estate","REIT - Specialty",99772.86
+748,"EQT","EQT Corp","Energy","Oil & Gas E&P",33114.81
+749,"ERII","Energy Recovery Inc","Industrials","Pollution & Treatment Controls",349.14
+750,"ES","Eversource Energy","Utilities","Utilities - Regulated Electric",24743.77
+751,"ESAB","ESAB Corp","Industrials","Metal Fabrication",4033.44
+752,"ESE","Esco Technologies Inc","Technology","Scientific & Technical Instruments",7877.78
+753,"ESI","Element Solutions Inc","Basic Materials","Specialty Chemicals",8945.89
+754,"ESNT","Essent Group Ltd","Financial","Insurance - Specialty",5715.25
+755,"ESQ","Esquire Financial Holdings Inc","Financial","Banks - Regional",1429.07
+756,"ESRT","Empire State Realty Trust Inc","Real Estate","REIT - Diversified",792.94
+757,"ESS","Essex Property Trust Inc","Real Estate","REIT - Residential",17847.80
+758,"ESTA","Establishment Labs Holdings Inc","Healthcare","Medical Devices",1806.29
+759,"ESTC","Elastic N.V","Technology","Software - Application",10001.47
+760,"ETD","Ethan Allen Interiors Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",525.76
+761,"ETN","Eaton Corp Plc","Industrials","Specialty Industrial Machinery",164879.68
+762,"ETON","Eton Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1564.92
+763,"ETR","Entergy Corp","Utilities","Utilities - Regulated Electric",48967.41
+764,"ETSY","Etsy Inc","Consumer Cyclical","Internet Retail",6896.48
+765,"EU","enCore Energy Corp","Energy","Uranium",196.22
+766,"EVC","Entravision Communications Corp","Communication Services","Advertising Agencies",625.71
+767,"EVCM","EverCommerce Inc","Technology","Software - Application",1600.59
+768,"EVER","EverQuote Inc","Communication Services","Internet Content & Information",730.87
+769,"EVGO","EVgo Inc","Consumer Cyclical","Specialty Retail",399.44
+770,"EVH","Evolent Health Inc","Healthcare","Health Information Services",447.72
+771,"EVLV","Evolv Technologies Holdings Inc","Industrials","Security & Protection Services",829.56
+772,"EVR","Evercore Inc","Financial","Capital Markets",10258.63
+773,"EVRG","Evergy Inc","Utilities","Utilities - Regulated Electric",18560.91
+774,"EVTC","Evertec Inc","Technology","Software - Infrastructure",1753.14
+775,"EW","Edwards Lifesciences Corp","Healthcare","Medical Devices",48555.93
+776,"EWBC","East West Bancorp Inc","Financial","Banks - Regional",17297.74
+777,"EXC","Exelon Corp","Utilities","Utilities - Regulated Electric",43075.96
+778,"EXE","Expand Energy Corp","Energy","Oil & Gas E&P",20571.42
+779,"EXLS","ExlService Holdings Inc","Technology","Information Technology Services",5589.95
+780,"EXP","Eagle Materials Inc","Basic Materials","Building Materials",5131.99
+781,"EXPD","Expeditors International Of Washington Inc","Industrials","Integrated Freight & Logistics",25180.48
+782,"EXPE","Expedia Group Inc","Consumer Cyclical","Travel Services",32420.71
+783,"EXPO","Exponent Inc","Industrials","Engineering & Construction",3317.76
+784,"EXR","Extra Space Storage Inc","Real Estate","REIT - Industrial",29372.74
+785,"EXTR","Extreme Networks Inc","Technology","Communication Equipment",3195.89
+786,"EYE","National Vision Holdings Inc","Consumer Cyclical","Specialty Retail",1323.62
+787,"F","Ford Motor Co","Consumer Cyclical","Auto Manufacturers",48848.05
+788,"FA","First Advantage Corp","Industrials","Specialty Business Services",3216.95
+789,"FAF","First American Financial Corp","Financial","Insurance - Specialty",6412.90
+790,"FANG","Diamondback Energy Inc","Energy","Oil & Gas E&P",53675.06
+791,"FAST","Fastenal Co","Industrials","Industrial Distribution",57937.16
+792,"FBIN","Fortune Brands Innovations Inc","Industrials","Building Products & Equipment",4692.49
+793,"FBIZ","First Business Financial Services Inc","Financial","Banks - Regional",590.89
+794,"FBK","FB Financial Corp","Financial","Banks - Regional",2644.35
+795,"FBNC","First Bancorp","Financial","Banks - Regional",2471.28
+796,"FBP","First Bancorp PR","Financial","Banks - Regional",4071.67
+797,"FBRT","Franklin BSP Realty Trust Inc","Real Estate","REIT - Mortgage",519.87
+798,"FC","Franklin Covey Co","Consumer Defensive","Education & Training Services",206.11
+799,"FCBC","First Community Bankshares Inc","Financial","Banks - Regional",900.32
+800,"FCEL","Fuelcell Energy Inc","Industrials","Electrical Equipment & Parts",1378.81
+801,"FCF","First Commonwealth Financial Corp","Financial","Banks - Regional",2027.18
+802,"FCFS","FirstCash Holdings Inc","Financial","Credit Services",9172.70
+803,"FCN","FTI Consulting Inc","Industrials","Consulting Services",3879.42
+804,"FCNCA","First Citizens Bancshares Inc (NC)","Financial","Banks - Regional",22888.71
+805,"FCPT","Four Corners Property Trust Inc","Real Estate","REIT - Retail",2332.33
+806,"FCX","Freeport-McMoRan Inc","Basic Materials","Copper",102158.29
+807,"FDBC","Fidelity D&D Bancorp Inc","Financial","Banks - Regional",328.99
+808,"FDS","Factset Research Systems Inc","Financial","Financial Data & Stock Exchanges",10190.24
+809,"FDX","Fedex Corp","Industrials","Integrated Freight & Logistics",69043.87
+810,"FDXF","FedEx Freight Holding Company Inc","Industrials","Integrated Freight & Logistics",17291.77
+811,"FE","Firstenergy Corp","Utilities","Utilities - Regulated Electric",25952.00
+812,"FEIM","Frequency Electronics Inc","Technology","Communication Equipment",842.34
+813,"FELE","Franklin Electric Co Inc","Industrials","Specialty Industrial Machinery",4282.77
+814,"FERG","Ferguson Enterprises Inc","Industrials","Industrial Distribution",41927.01
+815,"FET","Forum Energy Technologies Inc","Energy","Oil & Gas Equipment & Services",967.95
+816,"FFBC","First Financial Bancorp","Financial","Banks - Regional",3275.03
+817,"FFIN","First Financial Bankshares Inc","Financial","Banks - Regional",4504.78
+818,"FFIV","F5 Inc","Technology","Software - Infrastructure",26142.50
+819,"FG","F&G Annuities & Life Inc","Financial","Insurance - Life",2557.16
+820,"FHB","First Hawaiian INC","Financial","Banks - Regional",3037.17
+821,"FHN","First Horizon Corp","Financial","Banks - Regional",11043.75
+822,"FIBK","First Interstate BancSystem Inc","Financial","Banks - Regional",3329.94
+823,"FICO","Fair Isaac Corp","Technology","Software - Application",15278.81
+824,"FIG","Figma Inc","Technology","Software - Application",12062.01
+825,"FIGR","Figure Technology Solutions Inc","Financial","Capital Markets",6192.83
+826,"FIGS","Figs Inc","Consumer Cyclical","Apparel Manufacturing",2488.78
+827,"FIP","FTAI Infrastructure Inc","Industrials","Conglomerates",314.37
+828,"FIS","Fidelity National Information Services Inc","Technology","Information Technology Services",17709.34
+829,"FISI","Financial Institutions Inc","Financial","Banks - Regional",769.53
+830,"FISV","Fiserv Inc","Technology","Information Technology Services",24429.36
+831,"FITB","Fifth Third Bancorp","Financial","Banks - Regional",45979.46
+832,"FIVE","Five Below Inc","Consumer Cyclical","Specialty Retail",11546.48
+833,"FIVN","Five9 Inc","Technology","Software - Infrastructure",2626.53
+834,"FIX","Comfort Systems USA Inc","Industrials","Engineering & Construction",60055.26
+835,"FIZZ","National Beverage Corp","Consumer Defensive","Beverages - Non-Alcoholic",2887.09
+836,"FLEX","Flex Ltd","Technology","Electronic Components",42391.89
+837,"FLG","Flagstar Bank NA","Financial","Banks - Regional",4711.30
+838,"FLGT","Fulgent Genetics Inc","Healthcare","Diagnostics & Research",572.87
+839,"FLNC","Fluence Energy Inc","Utilities","Utilities - Renewable",1375.24
+840,"FLNG","Flex Lng Ltd","Energy","Oil & Gas Midstream",1675.69
+841,"FLO","Flowers Foods Inc","Consumer Defensive","Packaged Foods",1259.63
+842,"FLOC","Flowco Holdings Inc","Energy","Oil & Gas Equipment & Services",1730.26
+843,"FLR","Fluor Corp","Industrials","Engineering & Construction",6822.13
+844,"FLS","Flowserve Corp","Industrials","Specialty Industrial Machinery",8853.40
+845,"FLUT","Flutter Entertainment Plc","Consumer Cyclical","Gambling",14157.32
+846,"FLWS","1-800 Flowers.com Inc","Consumer Cyclical","Specialty Retail",175.23
+847,"FLY","Firefly Aerospace Inc","Industrials","Aerospace & Defense",3460.25
+848,"FLYW","Flywire Corp","Technology","Software - Infrastructure",2242.34
+849,"FMAO","Farmers & Merchants Bancorp Inc","Financial","Banks - Regional",486.33
+850,"FMBH","First Mid Bancshares Inc","Financial","Banks - Regional",1309.88
+851,"FMC","FMC Corp","Basic Materials","Agricultural Inputs",1387.47
+852,"FMNB","Farmers National Banc Corp","Financial","Banks - Regional",900.56
+853,"FN","Fabrinet","Technology","Electronic Components",17463.40
+854,"FNB","F.N.B. Corp","Financial","Banks - Regional",6099.86
+855,"FND","Floor & Decor Holdings Inc","Consumer Cyclical","Home Improvement Retail",4951.78
+856,"FNF","Fidelity National Financial Inc","Financial","Insurance - Specialty",10666.02
+857,"FNKO","Funko Inc","Consumer Cyclical","Leisure",364.57
+858,"FNLC","First Bancorp Inc (ME)","Financial","Banks - Regional",377.28
+859,"FOR","Forestar Group Inc","Real Estate","Real Estate - Development",1321.86
+860,"FORM","FormFactor Inc","Technology","Semiconductor Equipment & Materials",10712.70
+861,"FOUR","Shift4 Payments Inc","Technology","Software - Infrastructure",3120.50
+862,"FOX","Fox Corp","Communication Services","Entertainment",25400.26
+863,"FOXA","Fox Corp","Communication Services","Entertainment",25305.18
+864,"FOXF","Fox Factory Holding Corp","Consumer Cyclical","Auto Parts",777.58
+865,"FPI","Farmland Partners Inc","Real Estate","REIT - Specialty",457.68
+866,"FPS","Forgent Power Solutions Inc","Industrials","Electrical Equipment & Parts",12116.27
+867,"FR","First Industrial Realty Trust Inc","Real Estate","REIT - Industrial",8125.93
+868,"FRBA","First Bank (NJ)","Financial","Banks - Regional",438.14
+869,"FRHC","Freedom Holding Corp","Financial","Financial Conglomerates",10633.40
+870,"FRME","First Merchants Corp","Financial","Banks - Regional",2486.31
+871,"FRMI","Fermi Inc","Real Estate","REIT - Specialty",2347.01
+872,"FROG","JFrog Ltd","Technology","Software - Application",11991.05
+873,"FRPH","FRP Holdings Inc","Real Estate","Real Estate Services",380.71
+874,"FRPT","Freshpet Inc","Consumer Defensive","Packaged Foods",3132.42
+875,"FRSH","Freshworks Inc","Technology","Software - Application",3558.96
+876,"FRST","Primis Financial Corp","Financial","Banks - Regional",380.17
+877,"FRT","Federal Realty Investment Trust","Real Estate","REIT - Retail",9218.85
+878,"FRVO","Fervo Energy Co","Utilities","Utilities - Renewable",4067.73
+879,"FSBC","Five Star Bancorp","Financial","Banks - Regional",1047.96
+880,"FSBW","FS Bancorp Inc","Financial","Banks - Regional",348.45
+881,"FSLR","First Solar Inc","Technology","Solar",19220.97
+882,"FSLY","Fastly Inc","Technology","Software - Application",4028.69
+883,"FSS","Federal Signal Corp","Industrials","Farm & Heavy Construction Machinery",6873.89
+884,"FSUN","Firstsun Capital Bancorp","Financial","Banks - Regional",1709.67
+885,"FTAI","FTAI Aviation Ltd","Industrials","Aerospace & Defense",17569.07
+886,"FTDR","Frontdoor Inc","Consumer Cyclical","Personal Services",5483.22
+887,"FTI","TechnipFMC plc","Energy","Oil & Gas Equipment & Services",27306.40
+888,"FTNT","Fortinet Inc","Technology","Software - Infrastructure",138745.25
+889,"FTV","Fortive Corp","Technology","Scientific & Technical Instruments",17039.80
+890,"FUBO","fuboTV Inc","Communication Services","Broadcasting",1020.99
+891,"FUL","H.B. Fuller Company","Basic Materials","Specialty Chemicals",2715.14
+892,"FULT","Fulton Financial Corp","Financial","Banks - Regional",4251.67
+893,"FUN","Six Flags Entertainment Corp","Consumer Cyclical","Leisure",1167.43
+894,"FWONA","Liberty Media Corp","Communication Services","Entertainment",23584.21
+895,"FWONK","Liberty Media Corp","Communication Services","Entertainment",23647.34
+896,"FWRD","Forward Air Corp","Industrials","Integrated Freight & Logistics",551.30
+897,"FWRG","First Watch Restaurant Group Inc","Consumer Cyclical","Restaurants",676.37
+898,"G","Genpact Ltd","Technology","Information Technology Services",5825.75
+899,"GABC","German American Bancorp Inc","Financial","Banks - Regional",1834.60
+900,"GAP","Gap Inc","Consumer Cyclical","Apparel Retail",8205.67
+901,"GATX","GATX Corp","Industrials","Rental & Leasing Services",5746.13
+902,"GBCI","Glacier Bancorp Inc","Financial","Banks - Regional",5596.51
+903,"GBX","Greenbrier Cos. Inc","Industrials","Railroads",1195.20
+904,"GCMG","GCM Grosvenor Inc","Financial","Asset Management",2630.21
+905,"GCO","Genesco Inc","Consumer Cyclical","Apparel Retail",398.94
+906,"GCT","GigaCloud Technology Inc","Technology","Software - Infrastructure",2014.77
+907,"GD","General Dynamics Corp","Industrials","Aerospace & Defense",89256.82
+908,"GDDY","Godaddy Inc","Technology","Software - Infrastructure",13068.77
+909,"GDOT","Green Dot Corp","Financial","Credit Services",722.58
+910,"GDYN","Grid Dynamics Holdings Inc","Technology","Information Technology Services",649.82
+911,"GE","GE Aerospace","Industrials","Aerospace & Defense",317099.84
+912,"GEF","Greif Inc","Consumer Cyclical","Packaging & Containers",4349.83
+913,"GEHC","GE HealthCare Technologies Inc","Healthcare","Medical Devices",29007.29
+914,"GEN","Gen Digital Inc","Technology","Software - Infrastructure",13617.85
+915,"GENI","Genius Sports Limited","Communication Services","Internet Content & Information",1840.67
+916,"GEO","Geo Group Inc","Industrials","Security & Protection Services",4074.94
+917,"GEV","GE Vernova Inc","Industrials","Specialty Industrial Machinery",266160.46
+918,"GEVO","Gevo Inc","Basic Materials","Specialty Chemicals",333.77
+919,"GFF","Griffon Corp","Industrials","Building Products & Equipment",4173.90
+920,"GFL","GFL Environmental Inc","Industrials","Waste Management",18456.73
+921,"GFS","GlobalFoundries Inc","Technology","Semiconductors",27086.35
+922,"GGG","Graco Inc","Industrials","Specialty Industrial Machinery",12692.32
+923,"GH","Guardant Health Inc","Healthcare","Diagnostics & Research",22217.52
+924,"GHC","Graham Holdings Co","Industrials","Conglomerates",5016.78
+925,"GHM","Graham Corp","Industrials","Specialty Industrial Machinery",957.15
+926,"GIC","Global Industrial Co","Industrials","Industrial Distribution",1621.89
+927,"GIII","G-III Apparel Group Ltd","Consumer Cyclical","Apparel Manufacturing",1147.80
+928,"GILD","Gilead Sciences Inc","Healthcare","Drug Manufacturers - General",182397.40
+929,"GIS","General Mills Inc","Consumer Defensive","Packaged Foods",17425.45
+930,"GKOS","Glaukos Corp","Healthcare","Medical Devices",9513.52
+931,"GL","Globe Life Inc","Financial","Insurance - Life",12763.16
+932,"GLIBA","Liberty Capital Corp","Communication Services","Telecom Services",946.28
+933,"GLIBK","Liberty Capital Corp","Communication Services","Telecom Services",940.68
+934,"GLNG","Golar Lng","Energy","Oil & Gas Midstream",4943.68
+935,"GLOB","Globant SA","Technology","Information Technology Services",1599.80
+936,"GLPI","Gaming and Leisure Properties Inc","Real Estate","REIT - Specialty",11130.60
+937,"GLRE","Greenlight Capital Re Ltd","Financial","Insurance - Reinsurance",488.64
+938,"GLW","Corning Inc","Technology","Electronic Components",131645.98
+939,"GLXY","Galaxy Digital Inc","Financial","Capital Markets",7851.01
+940,"GM","General Motors Company","Consumer Cyclical","Auto Manufacturers",72170.39
+941,"GME","Gamestop Corp","Consumer Cyclical","Specialty Retail",12753.78
+942,"GMED","Globus Medical Inc","Healthcare","Medical Devices",9845.43
+943,"GNE","Genie Energy Ltd","Utilities","Utilities - Regulated Electric",441.64
+944,"GNK","Genco Shipping & Trading Limited","Industrials","Marine Shipping",1212.15
+945,"GNL","Global Net Lease Inc","Real Estate","REIT - Diversified",1841.29
+946,"GNRC","Generac Holdings Inc","Industrials","Specialty Industrial Machinery",13253.95
+947,"GNTX","Gentex Corp","Consumer Cyclical","Auto Parts",4455.95
+948,"GNW","Genworth Financial Inc","Financial","Insurance - Life",3680.27
+949,"GO","Grocery Outlet Holding Corp","Consumer Defensive","Grocery Stores",1182.08
+950,"GOGO","Gogo Inc","Communication Services","Telecom Services",306.25
+951,"GOLD","Gold.com Inc","Financial","Capital Markets",1212.15
+952,"GOLF","Acushnet Holdings Corp","Consumer Cyclical","Leisure",4622.17
+953,"GOOD","Gladstone Commercial Corp","Real Estate","REIT - Diversified",619.97
+954,"GOOG","Alphabet Inc","Communication Services","Internet Content & Information",4238466.44
+955,"GOOGL","Alphabet Inc","Communication Services","Internet Content & Information",4242396.34
+956,"GPC","Genuine Parts Co","Consumer Cyclical","Auto Parts",17669.48
+957,"GPGI","GPGI Inc","Industrials","Metal Fabrication",3594.63
+958,"GPI","Group 1 Automotive Inc","Consumer Cyclical","Auto & Truck Dealerships",2820.92
+959,"GPK","Graphic Packaging Holding Co","Consumer Cyclical","Packaging & Containers",2540.29
+960,"GPN","Global Payments Inc","Technology","Software - Infrastructure",21902.46
+961,"GPOR","Gulfport Energy Corp","Energy","Oil & Gas E&P",2911.47
+962,"GPRE","Green Plains Inc","Basic Materials","Chemicals",1055.63
+963,"GRAL","GRAIL Inc","Healthcare","Diagnostics & Research",5923.19
+964,"GRBK","Green Brick Partners Inc","Consumer Cyclical","Residential Construction",2737.20
+965,"GRC","Gorman-Rupp Co","Industrials","Specialty Industrial Machinery",1929.00
+966,"GRDN","Guardian Pharmacy Services Inc","Healthcare","Medical Care Facilities",2634.87
+967,"GRMN","Garmin Ltd","Technology","Scientific & Technical Instruments",51769.33
+968,"GRND","Grindr Inc","Technology","Software - Application",2596.88
+969,"GRNT","Granite Ridge Resources Inc","Energy","Oil & Gas E&P",633.12
+970,"GRPN","Groupon Inc","Communication Services","Internet Content & Information",777.52
+971,"GS","Goldman Sachs Group Inc","Financial","Capital Markets",256984.99
+972,"GSAT","Globalstar Inc","Communication Services","Telecom Services",10782.27
+973,"GSBC","Great Southern Bancorp Inc","Financial","Banks - Regional",853.93
+974,"GSHD","Goosehead Insurance Inc","Financial","Insurance Brokers",1611.88
+975,"GT","Goodyear Tire & Rubber Co","Consumer Cyclical","Auto Parts",1367.52
+976,"GTES","Gates Industrial Corp Ltd","Industrials","Specialty Industrial Machinery",6769.26
+977,"GTLB","Gitlab Inc","Technology","Software - Infrastructure",8923.90
+978,"GTM","ZoomInfo Technologies Inc","Technology","Software - Application",1114.95
+979,"GTN","Gray Media Inc","Communication Services","Broadcasting",501.91
+980,"GTX","Garrett Motion Inc","Consumer Cyclical","Auto Parts",4802.20
+981,"GTY","Getty Realty Corp","Real Estate","REIT - Retail",1727.93
+982,"GVA","Granite Construction Inc","Industrials","Engineering & Construction",4981.72
+983,"GWRE","Guidewire Software Inc","Technology","Software - Application",13510.75
+984,"GWW","W.W. Grainger Inc","Industrials","Industrial Distribution",59755.55
+985,"GXO","GXO Logistics Inc","Industrials","Integrated Freight & Logistics",5316.77
+986,"H","Hyatt Hotels Corp","Consumer Cyclical","Lodging",15043.30
+987,"HAE","Haemonetics Corp","Healthcare","Medical Devices",5435.54
+988,"HAFC","Hanmi Financial Corp","Financial","Banks - Regional",927.28
+989,"HAL","Halliburton Co","Energy","Oil & Gas Equipment & Services",27135.06
+990,"HAPN","Happen Inc","Financial","Banks - Regional",1769.20
+991,"HAS","Hasbro Inc","Consumer Cyclical","Leisure",13046.62
+992,"HASI","HA Sustainable Infrastructure Capital Inc","Financial","Asset Management",4670.82
+993,"HAYW","Hayward Holdings Inc","Industrials","Electrical Equipment & Parts",2426.65
+994,"HBAN","Huntington Bancshares Inc","Financial","Banks - Regional",31053.77
+995,"HBCP","Home Bancorp Inc","Financial","Banks - Regional",524.98
+996,"HBNC","Horizon Bancorp Inc (IN)","Financial","Banks - Regional",1001.22
+997,"HBT","HBT Financial Inc","Financial","Banks - Regional",1292.07
+998,"HCA","HCA Healthcare Inc","Healthcare","Medical Care Facilities",96345.33
+999,"HCC","Warrior Met Coal Inc","Basic Materials","Coking Coal",4741.62
+1000,"HCI","HCI Group Inc","Financial","Insurance - Property & Casualty",2392.62
+1001,"HCKT","Hackett Group Inc","Technology","Information Technology Services",273.16
+1002,"HCSG","Healthcare Services Group Inc","Healthcare","Medical Care Facilities",1417.94
+1003,"HD","Home Depot Inc","Consumer Cyclical","Home Improvement Retail",294787.36
+1004,"HDSN","Hudson Technologies Inc","Basic Materials","Specialty Chemicals",217.60
+1005,"HE","Hawaiian Electric Industries Inc","Utilities","Utilities - Regulated Electric",1523.46
+1006,"HEI","Heico Corp","Industrials","Aerospace & Defense",35057.27
+1007,"HEI-A","Heico Corp","Industrials","Aerospace & Defense",35007.03
+1008,"HELE","Helen of Troy Ltd","Consumer Defensive","Household & Personal Products",618.40
+1009,"HFWA","Heritage Financial Corp","Financial","Banks - Regional",1128.04
+1010,"HG","Hamilton Insurance Group Ltd","Financial","Insurance - Reinsurance",3461.37
+1011,"HGV","Hilton Grand Vacations Inc","Consumer Cyclical","Resorts & Casinos",2686.15
+1012,"HHH","Howard Hughes Holdings Inc","Real Estate","Real Estate - Diversified",4295.62
+1013,"HIFS","Hingham Institution For Savings","Financial","Banks - Regional",633.60
+1014,"HIG","Hartford Insurance Group Inc","Financial","Insurance - Diversified",35072.50
+1015,"HII","Huntington Ingalls Industries Inc","Industrials","Aerospace & Defense",10443.01
+1016,"HIMS","Hims & Hers Health Inc","Healthcare","Drug Manufacturers - Specialty & Generic",6546.78
+1017,"HIPO","Hippo Holdings Inc","Financial","Insurance - Property & Casualty",902.78
+1018,"HIW","Highwoods Properties Inc","Real Estate","REIT - Office",3218.74
+1019,"HL","Hecla Mining Co","Basic Materials","Other Precious Metals & Mining",11238.68
+1020,"HLF","Herbalife Ltd","Consumer Defensive","Packaged Foods",1343.58
+1021,"HLI","Houlihan Lokey Inc","Financial","Capital Markets",8774.24
+1022,"HLIO","Helios Technologies Inc","Industrials","Specialty Industrial Machinery",2238.99
+1023,"HLIT","Harmonic Inc","Technology","Communication Equipment",1207.37
+1024,"HLMN","Hillman Solutions Corp","Industrials","Tools & Accessories",1363.76
+1025,"HLNE","Hamilton Lane Inc","Financial","Asset Management",4727.20
+1026,"HLT","Hilton Worldwide Holdings Inc","Consumer Cyclical","Lodging",72761.24
+1027,"HMN","Horace Mann Educators Corp","Financial","Insurance - Property & Casualty",1859.00
+1028,"HNGE","Hinge Health Inc","Healthcare","Health Information Services",7908.06
+1029,"HNI","HNI Corp","Consumer Cyclical","Furnishings, Fixtures & Appliances",3386.05
+1030,"HNRG","Hallador Energy Co","Utilities","Utilities - Independent Power Producers",683.58
+1031,"HNST","Honest Company Inc","Consumer Defensive","Household & Personal Products",533.20
+1032,"HOG","Harley-Davidson Inc","Consumer Cyclical","Recreational Vehicles",2783.94
+1033,"HOMB","Home Bancshares Inc","Financial","Banks - Regional",5697.41
+1034,"HON","Honeywell International Inc","Industrials","Conglomerates",65479.80
+1035,"HONA","Honeywell Aerospace Inc","Industrials","Aerospace & Defense",48813.89
+1036,"HOOD","Robinhood Markets Inc","Financial","Capital Markets",96210.79
+1037,"HOPE","Hope Bancorp Inc","Financial","Banks - Regional",1718.77
+1038,"HOS","Hornbeck Offshore Services Inc","Industrials","Marine Shipping",1695.16
+1039,"HOV","Hovnanian Enterprises Inc","Consumer Cyclical","Residential Construction",643.78
+1040,"HP","Helmerich & Payne Inc","Energy","Oil & Gas Drilling",4016.55
+1041,"HPE","Hewlett Packard Enterprise Co","Technology","Communication Equipment",94250.00
+1042,"HPP","Hudson Pacific Properties Inc","Real Estate","REIT - Office",659.08
+1043,"HPQ","HP Inc","Technology","Computer Hardware",29254.10
+1044,"HQY","Healthequity Inc","Healthcare","Health Information Services",7696.66
+1045,"HR","Healthcare Realty Trust Inc","Real Estate","REIT - Healthcare Facilities",5891.35
+1046,"HRB","H&R Block Inc","Consumer Cyclical","Personal Services",5461.97
+1047,"HRI","Herc Holdings Inc","Industrials","Rental & Leasing Services",4140.82
+1048,"HRL","Hormel Foods Corp","Consumer Defensive","Packaged Foods",10687.81
+1049,"HROW","Harrow Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1144.13
+1050,"HRTG","Heritage Insurance Holdings Inc","Financial","Insurance - Property & Casualty",1047.48
+1051,"HSHP","Himalaya Shipping Ltd","Industrials","Marine Shipping",879.73
+1052,"HSIC","Henry Schein Inc","Healthcare","Medical Distribution",9431.72
+1053,"HST","Host Hotels & Resorts Inc","Real Estate","REIT - Hotel & Motel",15442.71
+1054,"HSTM","Healthstream Inc","Healthcare","Health Information Services",993.45
+1055,"HSY","Hershey Company","Consumer Defensive","Confectioners",32658.50
+1056,"HTB","HomeTrust Bancshares Inc","Financial","Banks - Regional",775.07
+1057,"HTFL","Heartflow Inc","Healthcare","Health Information Services",4141.60
+1058,"HTH","Hilltop Holdings Inc","Financial","Financial Conglomerates",2101.26
+1059,"HTLD","Heartland Express Inc","Industrials","Trucking",877.72
+1060,"HTO","H2O America","Utilities","Utilities - Regulated Water",2430.63
+1061,"HTZ","Hertz Global Holdings Inc","Industrials","Rental & Leasing Services",698.64
+1062,"HUBB","Hubbell Inc","Industrials","Electrical Equipment & Parts",25116.60
+1063,"HUBG","Hub Group Inc","Industrials","Integrated Freight & Logistics",1616.29
+1064,"HUBS","HubSpot Inc","Technology","Software - Application",11560.98
+1065,"HUCK","Huckleberry.ai Inc","Technology","Software - Application",145.34
+1066,"HUM","Humana Inc","Healthcare","Healthcare Plans",46485.48
+1067,"HUN","Huntsman Corp","Basic Materials","Chemicals",1490.72
+1068,"HURN","Huron Consulting Group Inc","Industrials","Consulting Services",2630.10
+1069,"HUT","Hut 8 Corp","Financial","Capital Markets",9810.22
+1070,"HVT","Haverty Furniture Cos. Inc","Consumer Cyclical","Home Improvement Retail",430.09
+1071,"HWC","Hancock Whitney Corp","Financial","Banks - Regional",5833.02
+1072,"HWKN","Hawkins Inc","Basic Materials","Specialty Chemicals",2667.63
+1073,"HWM","Howmet Aerospace Inc","Industrials","Aerospace & Defense",88757.24
+1074,"HXL","Hexcel Corp","Industrials","Aerospace & Defense",6437.83
+1075,"HY","Hyster Yale Inc","Industrials","Farm & Heavy Construction Machinery",582.56
+1076,"HYLN","Hyliion Holdings Corp","Industrials","Electrical Equipment & Parts",673.31
+1077,"HYMC","Hycroft Mining Holding Corp","Basic Materials","Gold",1696.84
+1078,"HZO","Marinemax Inc","Consumer Cyclical","Specialty Retail",1158.01
+1079,"IART","Integra Lifesciences Holdings Corp","Healthcare","Medical Devices",1042.93
+1080,"IBCP","Independent Bank Corp (Ionia, MI)","Financial","Banks - Regional",793.84
+1081,"IBKR","Interactive Brokers Group Inc","Financial","Capital Markets",39177.67
+1082,"IBM","International Business Machines Corp","Technology","Information Technology Services",213497.08
+1083,"IBOC","International Bancshares Corp","Financial","Banks - Regional",4253.90
+1084,"IBP","Installed Building Products Inc","Consumer Cyclical","Residential Construction",4992.37
+1085,"IBTA","Ibotta Inc","Technology","Software - Application",1003.06
+1086,"ICE","Intercontinental Exchange Inc","Financial","Financial Data & Stock Exchanges",87212.63
+1087,"ICFI","ICF International Inc","Industrials","Consulting Services",1557.02
+1088,"ICHR","Ichor Holdings Ltd","Technology","Semiconductor Equipment & Materials",2203.43
+1089,"ICUI","ICU Medical Inc","Healthcare","Medical Instruments & Supplies",3930.61
+1090,"IDA","Idacorp Inc","Utilities","Utilities - Regulated Electric",7755.46
+1091,"IDCC","Interdigital Inc","Technology","Software - Application",8472.11
+1092,"IDR","Idaho Strategic Resources Inc","Basic Materials","Gold",416.39
+1093,"IDT","IDT Corp","Communication Services","Telecom Services",2140.16
+1094,"IDXX","Idexx Laboratories Inc","Healthcare","Diagnostics & Research",40425.74
+1095,"IE","Ivanhoe Electric Inc","Basic Materials","Copper",1541.64
+1096,"IESC","IES Holdings Inc","Industrials","Engineering & Construction",11971.75
+1097,"IEX","Idex Corp","Industrials","Specialty Industrial Machinery",17084.58
+1098,"IFF","International Flavors & Fragrances Inc","Basic Materials","Specialty Chemicals",21598.44
+1099,"IHRT","iHeartMedia Inc","Communication Services","Broadcasting",345.66
+1100,"IIIN","Insteel Industries Inc","Industrials","Metal Fabrication",571.07
+1101,"IIIV","i3 Verticals Inc","Technology","Software - Infrastructure",406.94
+1102,"IIPR","Innovative Industrial Properties Inc","Real Estate","REIT - Industrial",1431.50
+1103,"ILMN","Illumina Inc","Healthcare","Diagnostics & Research",39950.07
+1104,"ILPT","Industrial Logistics Properties Trust","Real Estate","REIT - Industrial",479.90
+1105,"IMAX","Imax Corp","Communication Services","Entertainment",2813.95
+1106,"IMKTA","Ingles Markets Inc","Consumer Defensive","Grocery Stores",1590.83
+1107,"IMMR","Immersion Corp","Technology","Software - Application",237.10
+1108,"IMXI","International Money Express Inc","Technology","Software - Infrastructure",375.53
+1109,"INBK","First Internet Bancorp","Financial","Banks - Regional",231.09
+1110,"INDB","Independent Bank Corp","Financial","Banks - Regional",3647.45
+1111,"INDI","Indie Semiconductor Inc","Technology","Semiconductors",603.87
+1112,"INDV","Indivior Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",4184.23
+1113,"INFQ","Infleqtion Inc","Technology","Software - Infrastructure",2514.99
+1114,"INGM","Ingram Micro Holding Corp","Technology","Information Technology Services",6349.02
+1115,"INGN","Inogen Inc","Healthcare","Medical Devices",157.63
+1116,"INGR","Ingredion Inc","Consumer Defensive","Packaged Foods",5998.02
+1117,"INIO","Innio NV","Industrials","Specialty Industrial Machinery",14400.00
+1118,"INN","Summit Hotel Properties Inc","Real Estate","REIT - Hotel & Motel",729.35
+1119,"INOD","Innodata Inc","Technology","Information Technology Services",2104.22
+1120,"INR","Infinity Natural Resources Inc","Energy","Oil & Gas E&P",846.69
+1121,"INSE","Inspired Entertainment Inc","Consumer Cyclical","Gambling",92.78
+1122,"INSP","Inspire Medical Systems Inc","Healthcare","Medical Devices",1928.03
+1123,"INSW","International Seaways Inc","Energy","Oil & Gas Midstream",6033.90
+1124,"INTA","Intapp Inc","Technology","Software - Application",2957.16
+1125,"INTC","Intel Corp","Technology","Semiconductors",566036.19
+1126,"INTU","Intuit Inc","Technology","Software - Application",81207.67
+1127,"INVH","Invitation Homes Inc","Real Estate","REIT - Residential",15639.71
+1128,"INVX","Innovex International Inc","Energy","Oil & Gas Equipment & Services",1928.83
+1129,"IONQ","IonQ Inc","Technology","Computer Hardware",15982.70
+1130,"IOSP","Innospec Inc","Basic Materials","Specialty Chemicals",2406.21
+1131,"IOT","Samsara Inc","Technology","Software - Infrastructure",24138.65
+1132,"IP","International Paper Co","Consumer Cyclical","Packaging & Containers",16882.68
+1133,"IPAR","Interparfums Inc","Consumer Defensive","Household & Personal Products",3574.08
+1134,"IPGP","IPG Photonics Corp","Technology","Semiconductor Equipment & Materials",3306.64
+1135,"IPI","Intrepid Potash Inc","Basic Materials","Agricultural Inputs",444.74
+1136,"IQV","IQVIA Holdings Inc","Healthcare","Diagnostics & Research",42611.66
+1137,"IR","Ingersoll Rand Inc","Industrials","Specialty Industrial Machinery",30263.96
+1138,"IRDM","Iridium Communications Inc","Communication Services","Telecom Services",5040.48
+1139,"IREN","IREN Ltd","Financial","Capital Markets",14053.22
+1140,"IRM","Iron Mountain Inc","Real Estate","REIT - Specialty",33631.49
+1141,"IRMD","Iradimed Corp","Healthcare","Medical Devices",1098.14
+1142,"IRT","Independence Realty Trust Inc","Real Estate","REIT - Residential",3538.29
+1143,"IRTC","iRhythm Holdings Inc","Healthcare","Medical Devices",3382.01
+1144,"IRWD","Ironwood Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",639.48
+1145,"ISRG","Intuitive Surgical Inc","Healthcare","Medical Instruments & Supplies",146755.23
+1146,"IT","Gartner Inc","Technology","Information Technology Services",12339.95
+1147,"ITGR","Integer Holdings Corp","Healthcare","Medical Devices",4305.73
+1148,"ITIC","Investors Title Co","Financial","Insurance - Specialty",563.81
+1149,"ITRI","Itron Inc","Technology","Scientific & Technical Instruments",3688.16
+1150,"ITT","ITT Inc","Industrials","Specialty Industrial Machinery",17763.78
+1151,"ITW","Illinois Tool Works Inc","Industrials","Specialty Industrial Machinery",75389.41
+1152,"IVR","Invesco Mortgage Capital Inc","Real Estate","REIT - Mortgage",611.40
+1153,"IVT","InvenTrust Properties Corp","Real Estate","REIT - Retail",2307.38
+1154,"IVZ","Invesco Ltd","Financial","Asset Management",13284.73
+1155,"J","Jacobs Solutions Inc","Industrials","Engineering & Construction",16220.39
+1156,"JACK","Jack In The Box Inc","Consumer Cyclical","Restaurants",238.78
+1157,"JAKK","Jakks Pacific Inc","Consumer Cyclical","Leisure",320.00
+1158,"JAN","Janus Living Inc","Real Estate","REIT - Residential",8651.73
+1159,"JBGS","JBG SMITH Properties","Real Estate","REIT - Diversified",822.30
+1160,"JBHT","J.B. Hunt Transport Services Inc","Industrials","Integrated Freight & Logistics",21452.05
+1161,"JBI","Janus International Group Inc","Industrials","Building Products & Equipment",578.48
+1162,"JBL","Jabil Inc","Technology","Electronic Components",31348.11
+1163,"JBLU","Jetblue Airways Corp","Industrials","Airlines",1479.06
+1164,"JBS","JBS NV","Consumer Defensive","Packaged Foods",13654.36
+1165,"JBSS","Sanfilippo (John B.) & Son Inc","Consumer Defensive","Packaged Foods",799.72
+1166,"JBTM","JBT Marel Corp","Industrials","Specialty Industrial Machinery",5465.74
+1167,"JCI","Johnson Controls International plc","Industrials","Building Products & Equipment",93284.19
+1168,"JEF","Jefferies Financial Group Inc","Financial","Capital Markets",10236.52
+1169,"JHX","James Hardie Industries plc","Basic Materials","Building Materials",14600.14
+1170,"JJSF","J&J Snack Foods Corp","Consumer Defensive","Packaged Foods",1526.10
+1171,"JKHY","Jack Henry & Associates Inc","Technology","Information Technology Services",10450.20
+1172,"JLL","Jones Lang Lasalle Inc","Real Estate","Real Estate Services",13946.78
+1173,"JMKE","Jersey Mike's Subs Inc","Consumer Cyclical","Restaurants",5495.15
+1174,"JMSB","John Marshall Bancorp Inc","Financial","Banks - Regional",323.88
+1175,"JNJ","Johnson & Johnson","Healthcare","Drug Manufacturers - General",618090.78
+1176,"JOBY","Joby Aviation Inc","Industrials","Airports & Air Services",5714.78
+1177,"JOE","St. Joe Co","Real Estate","Real Estate - Diversified",3714.72
+1178,"JOUT","Johnson Outdoors Inc","Consumer Cyclical","Leisure",460.43
+1179,"JPM","JPMorgan Chase & Co","Financial","Banks - Diversified",880976.13
+1180,"JRVR","James River Group Holdings Inc","Financial","Insurance - Specialty",167.42
+1181,"JXN","Jackson Financial Inc","Financial","Insurance - Life",9011.99
+1182,"KAI","Kadant Inc","Industrials","Specialty Industrial Machinery",3076.87
+1183,"KALU","Kaiser Aluminum Corp","Basic Materials","Aluminum",2448.12
+1184,"KBH","KB Home","Consumer Cyclical","Residential Construction",2697.69
+1185,"KBR","KBR Inc","Industrials","Engineering & Construction",4435.07
+1186,"KD","Kyndryl Holdings Inc","Technology","Information Technology Services",2587.68
+1187,"KDP","Keurig Dr Pepper Inc","Consumer Defensive","Beverages - Non-Alcoholic",42539.42
+1188,"KE","Kimball Electronics Inc","Industrials","Electrical Equipment & Parts",690.73
+1189,"KEEL","Keel Infrastructure Corp","Technology","Information Technology Services",1945.36
+1190,"KELYA","Kelly Services Inc","Industrials","Staffing & Employment Services",582.70
+1191,"KEX","Kirby Corp","Industrials","Marine Shipping",7292.21
+1192,"KEY","Keycorp","Financial","Banks - Regional",21449.29
+1193,"KEYS","Keysight Technologies Inc","Technology","Scientific & Technical Instruments",63785.61
+1194,"KFRC","Kforce Inc","Industrials","Staffing & Employment Services",937.53
+1195,"KFY","Korn Ferry","Industrials","Staffing & Employment Services",3978.98
+1196,"KGS","Kodiak Gas Services Inc","Energy","Oil & Gas Equipment & Services",5416.14
+1197,"KHC","Kraft Heinz Co","Consumer Defensive","Packaged Foods",26657.32
+1198,"KIDS","OrthoPediatrics corp","Healthcare","Medical Devices",568.15
+1199,"KIM","Kimco Realty Corp","Real Estate","REIT - Retail",14817.74
+1200,"KKR","KKR & Co Inc","Financial","Asset Management",80392.24
+1201,"KLAC","KLA Corp","Technology","Semiconductor Equipment & Materials",256720.88
+1202,"KLC","KinderCare Learning Companies Inc","Consumer Defensive","Education & Training Services",233.48
+1203,"KLIC","Kulicke & Soffa Industries Inc","Technology","Semiconductor Equipment & Materials",4757.76
+1204,"KMB","Kimberly-Clark Corp","Consumer Defensive","Household & Personal Products",32506.28
+1205,"KMI","Kinder Morgan Inc","Energy","Oil & Gas Midstream",71814.37
+1206,"KMPR","Kemper Corp","Financial","Insurance - Property & Casualty",1618.62
+1207,"KMT","Kennametal Inc","Industrials","Tools & Accessories",2422.33
+1208,"KMTS","Kestra Medical Technologies Ltd","Healthcare","Medical Instruments & Supplies",1534.91
+1209,"KMX","Carmax Inc","Consumer Cyclical","Auto & Truck Dealerships",7635.10
+1210,"KN","Knowles Corp","Technology","Electronic Components",3172.14
+1211,"KNF","Knife River Corp","Basic Materials","Building Materials",2967.02
+1212,"KNSA","Kiniksa Pharmaceuticals International Plc","Healthcare","Drug Manufacturers - Specialty & Generic",6144.39
+1213,"KNSL","Kinsale Capital Group Inc","Financial","Insurance - Property & Casualty",7736.70
+1214,"KNTK","Kinetik Holdings Inc","Energy","Oil & Gas Midstream",8835.05
+1215,"KNX","Knight-Swift Transportation Holdings Inc","Industrials","Trucking",10587.28
+1216,"KO","Coca-Cola Co","Consumer Defensive","Beverages - Non-Alcoholic",377634.70
+1217,"KODK","Eastman Kodak Co","Industrials","Specialty Business Services",938.86
+1218,"KOP","Koppers Holdings Inc","Basic Materials","Specialty Chemicals",836.65
+1219,"KOPN","Kopin Corp","Technology","Electronic Components",780.67
+1220,"KOS","Kosmos Energy Ltd","Energy","Oil & Gas E&P",1601.86
+1221,"KR","Kroger Co","Consumer Defensive","Grocery Stores",36268.05
+1222,"KRC","Kilroy Realty Corp","Real Estate","REIT - Office",4015.36
+1223,"KREF","KKR Real Estate Finance Trust Inc","Real Estate","REIT - Mortgage",375.90
+1224,"KRG","Kite Realty Group Trust","Real Estate","REIT - Retail",4824.35
+1225,"KRMN","Karman Holdings Inc","Industrials","Aerospace & Defense",4199.99
+1226,"KRNY","Kearny Financial Corp","Financial","Banks - Regional",597.35
+1227,"KRUS","Kura Sushi USA Inc","Consumer Cyclical","Restaurants",485.14
+1228,"KSS","Kohl's Corp","Consumer Cyclical","Department Stores",2280.00
+1229,"KTB","Kontoor Brands Inc","Consumer Cyclical","Apparel Manufacturing",3625.73
+1230,"KTOS","Kratos Defense & Security Solutions Inc","Industrials","Aerospace & Defense",7871.15
+1231,"KVUE","Kenvue Inc","Consumer Defensive","Household & Personal Products",34055.31
+1232,"KVYO","Klaviyo Inc","Technology","Software - Application",5002.66
+1233,"KWR","Quaker Houghton","Basic Materials","Specialty Chemicals",2720.71
+1234,"L","Loews Corp","Financial","Insurance - Property & Casualty",21996.43
+1235,"LAD","Lithia Motors Inc","Consumer Cyclical","Auto & Truck Dealerships",6350.26
+1236,"LADR","Ladder Capital Corp","Real Estate","REIT - Mortgage",1122.76
+1237,"LAMR","Lamar Advertising Co","Real Estate","REIT - Specialty",14795.79
+1238,"LAND","Gladstone Land Corp","Real Estate","REIT - Specialty",411.09
+1239,"LASR","nLIGHT Inc","Technology","Semiconductors",2210.12
+1240,"LAUR","Laureate Education Inc","Consumer Defensive","Education & Training Services",5399.78
+1241,"LAW","CS Disco Inc","Technology","Software - Application",283.06
+1242,"LAZ","Lazard Inc","Financial","Capital Markets",3490.68
+1243,"LBRT","Liberty Energy Inc","Energy","Oil & Gas Equipment & Services",3076.16
+1244,"LBTYA","Liberty Global Ltd","Communication Services","Telecom Services",3063.59
+1245,"LBTYK","Liberty Global Ltd","Communication Services","Telecom Services",3062.41
+1246,"LCID","Lucid Group Inc","Consumer Cyclical","Auto Manufacturers",1505.35
+1247,"LCII","LCI Industries","Consumer Cyclical","Recreational Vehicles",1949.54
+1248,"LCLN","Lincoln International Inc","Financial","Capital Markets",2488.37
+1249,"LDOS","Leidos Holdings Inc","Technology","Information Technology Services",14961.18
+1250,"LEA","Lear Corp","Consumer Cyclical","Auto Parts",5846.46
+1251,"LECO","Lincoln Electric Holdings Inc","Industrials","Tools & Accessories",14105.00
+1252,"LEN","Lennar Corp","Consumer Cyclical","Residential Construction",18449.43
+1253,"LEU","Centrus Energy Corp","Energy","Uranium",2906.18
+1254,"LFST","LifeStance Health Group Inc","Healthcare","Medical Care Facilities",4608.78
+1255,"LFUS","Littelfuse Inc","Technology","Electronic Components",10802.09
+1256,"LGIH","LGI Homes Inc","Consumer Cyclical","Residential Construction",1045.71
+1257,"LGN","Legence Corp","Industrials","Engineering & Construction",5571.29
+1258,"LH","Labcorp Holdings Inc","Healthcare","Diagnostics & Research",25481.62
+1259,"LHX","L3Harris Technologies Inc","Industrials","Aerospace & Defense",44117.96
+1260,"LIF","Life360 Inc","Technology","Software - Application",3412.40
+1261,"LII","Lennox International Inc","Industrials","Building Products & Equipment",12495.06
+1262,"LILA","Liberty Latin America Ltd","Communication Services","Telecom Services",1705.21
+1263,"LILAK","Liberty Latin America Ltd","Communication Services","Telecom Services",1706.98
+1264,"LIN","Linde Plc","Basic Materials","Specialty Chemicals",222054.15
+1265,"LINC","Lincoln Educational Services Corp","Consumer Defensive","Education & Training Services",737.21
+1266,"LIND","Lindblad Expeditions Holdings Inc","Consumer Cyclical","Travel Services",2332.13
+1267,"LINE","Lineage Inc","Real Estate","REIT - Industrial",7842.33
+1268,"LION","Lionsgate Studios Corp","Communication Services","Entertainment",3356.47
+1269,"LITE","Lumentum Holdings Inc","Technology","Communication Equipment",94985.19
+1270,"LIVN","LivaNova PLC","Healthcare","Medical Devices",4182.15
+1271,"LKFN","Lakeland Financial Corp","Financial","Banks - Regional",1428.08
+1272,"LKQ","LKQ Corp","Consumer Cyclical","Auto Parts",5568.58
+1273,"LLY","Lilly(Eli) & Co","Healthcare","Drug Manufacturers - General",1101011.19
+1274,"LLYVA","Liberty Live Holdings Inc","Communication Services","Entertainment",9048.07
+1275,"LLYVK","Liberty Live Holdings Inc","Communication Services","Entertainment",8986.48
+1276,"LMAT","Lemaitre Vascular Inc","Healthcare","Medical Instruments & Supplies",1821.31
+1277,"LMB","Limbach Holdings Inc","Industrials","Building Products & Equipment",607.58
+1278,"LMND","Lemonade Inc","Financial","Insurance - Property & Casualty",3630.67
+1279,"LMNR","Limoneira Co","Consumer Defensive","Farm Products",218.49
+1280,"LMT","Lockheed Martin Corp","Industrials","Aerospace & Defense",117216.32
+1281,"LNC","Lincoln National Corp","Financial","Insurance - Life",7847.43
+1282,"LNG","Cheniere Energy Inc","Energy","Oil & Gas Midstream",57391.71
+1283,"LNN","Lindsay Corp","Industrials","Farm & Heavy Construction Machinery",1165.35
+1284,"LNT","Alliant Energy Corp","Utilities","Utilities - Regulated Electric",16983.14
+1285,"LNTH","Lantheus Holdings Inc","Healthcare","Drug Manufacturers - Specialty & Generic",6537.82
+1286,"LOAR","Loar Holdings Inc","Industrials","Aerospace & Defense",5773.09
+1287,"LOB","Live Oak Bancshares Inc","Financial","Banks - Regional",1600.03
+1288,"LOCO","El Pollo Loco Holdings Inc","Consumer Cyclical","Restaurants",454.66
+1289,"LOPE","Grand Canyon Education Inc","Consumer Defensive","Education & Training Services",4178.22
+1290,"LOVE","Lovesac Company","Consumer Cyclical","Furnishings, Fixtures & Appliances",210.43
+1291,"LOW","Lowe's Cos. Inc","Consumer Cyclical","Home Improvement Retail",105955.05
+1292,"LPG","Dorian LPG Ltd","Energy","Oil & Gas Midstream",2491.23
+1293,"LPLA","LPL Financial Holdings Inc","Financial","Capital Markets",25827.47
+1294,"LPTH","Lightpath Technologies Inc","Technology","Electronic Components",682.16
+1295,"LPX","Louisiana-Pacific Corp","Industrials","Building Products & Equipment",4549.22
+1296,"LQDA","Liquidia Corp","Healthcare","Drug Manufacturers - Specialty & Generic",2508.04
+1297,"LQDT","Liquidity Services Inc","Consumer Cyclical","Internet Retail",1320.01
+1298,"LRCX","Lam Research Corp","Technology","Semiconductor Equipment & Materials",401194.12
+1299,"LRN","Stride Inc","Consumer Defensive","Education & Training Services",3381.30
+1300,"LSCC","Lattice Semiconductor Corp","Technology","Semiconductors",17750.94
+1301,"LSTR","Landstar System Inc","Industrials","Integrated Freight & Logistics",5751.29
+1302,"LTC","LTC Properties Inc","Real Estate","REIT - Healthcare Facilities",2266.73
+1303,"LTH","Life Time Group Holdings Inc","Consumer Cyclical","Leisure",9001.05
+1304,"LULU","Lululemon Athletica Inc","Consumer Cyclical","Apparel Retail",10734.76
+1305,"LUMN","Lumen Technologies Inc","Communication Services","Telecom Services",5734.83
+1306,"LUNR","Intuitive Machines Inc","Industrials","Aerospace & Defense",3136.26
+1307,"LUV","Southwest Airlines Co","Industrials","Airlines",20233.65
+1308,"LVS","Las Vegas Sands Corp","Consumer Cyclical","Resorts & Casinos",23382.01
+1309,"LW","Lamb Weston Holdings Inc","Consumer Defensive","Packaged Foods",6814.62
+1310,"LWLG","Lightwave Logic Inc","Basic Materials","Specialty Chemicals",787.80
+1311,"LXFR","Luxfer Holdings PLC","Industrials","Specialty Industrial Machinery",465.04
+1312,"LXP","LXP Industrial Trust","Real Estate","REIT - Industrial",3596.98
+1313,"LXU","LSB Industries Inc","Basic Materials","Chemicals",729.33
+1314,"LYB","LyondellBasell Industries NV","Basic Materials","Specialty Chemicals",19492.11
+1315,"LYFT","Lyft Inc","Technology","Software - Application",6105.86
+1316,"LYTS","LSI Industries Inc","Technology","Electronic Components",761.62
+1317,"LYV","Live Nation Entertainment Inc","Communication Services","Entertainment",40373.51
+1318,"LZ","LegalZoom.com Inc","Industrials","Specialty Business Services",1014.75
+1319,"LZB","La-Z-Boy Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",1183.56
+1320,"LZM","Lifezone Metals Ltd","Basic Materials","Other Industrial Metals & Mining",299.42
+1321,"M","Macy's Inc","Consumer Cyclical","Department Stores",5952.22
+1322,"MA","Mastercard Incorporated","Financial","Credit Services",503495.48
+1323,"MAA","Mid-America Apartment Communities Inc","Real Estate","REIT - Residential",13820.96
+1324,"MAC","Macerich Co","Real Estate","REIT - Retail",6545.94
+1325,"MAMA","Mama's Creations Inc","Consumer Defensive","Packaged Foods",631.78
+1326,"MAN","ManpowerGroup","Industrials","Staffing & Employment Services",2528.04
+1327,"MANH","Manhattan Associates Inc","Technology","Software - Application",12056.30
+1328,"MAR","Marriott International Inc","Consumer Cyclical","Lodging",94157.49
+1329,"MARA","MARA Holdings Inc","Financial","Capital Markets",3828.23
+1330,"MAS","Masco Corp","Industrials","Building Products & Equipment",13704.53
+1331,"MASS","908 Devices Inc","Healthcare","Medical Devices",477.40
+1332,"MAT","Mattel Inc","Consumer Cyclical","Leisure",4736.91
+1333,"MATV","Mativ Holdings Inc","Basic Materials","Specialty Chemicals",654.56
+1334,"MATW","Matthews International Corp","Industrials","Conglomerates",602.72
+1335,"MATX","Matson Inc","Industrials","Marine Shipping",6811.71
+1336,"MAX","MediaAlpha Inc","Communication Services","Internet Content & Information",654.30
+1337,"MBC","MasterBrand Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",1410.19
+1338,"MBGL","Mobility Global Inc","Technology","Software - Infrastructure",5330.37
+1339,"MBI","MBIA Inc","Financial","Insurance - Specialty",233.65
+1340,"MBIN","Merchants Bancorp","Financial","Banks - Regional",2287.72
+1341,"MBUU","Malibu Boats Inc","Consumer Cyclical","Recreational Vehicles",433.30
+1342,"MBWM","Mercantile Bank Corp","Financial","Banks - Regional",1006.04
+1343,"MC","Moelis & Co","Financial","Capital Markets",4564.83
+1344,"MCB","Metropolitan Bank Holding Corp","Financial","Banks - Regional",1084.68
+1345,"MCBS","MetroCity Bankshares Inc","Financial","Banks - Regional",998.13
+1346,"MCD","McDonald's Corp","Consumer Cyclical","Restaurants",167640.26
+1347,"MCFT","MasterCraft Boat Holdings Inc","Consumer Cyclical","Recreational Vehicles",474.62
+1348,"MCHB","Mechanics Bancorp","Financial","Banks - Regional",3358.43
+1349,"MCHP","Microchip Technology Inc","Technology","Semiconductors",41008.01
+1350,"MCK","Mckesson Corp","Healthcare","Medical Distribution",108458.19
+1351,"MCO","Moody's Corp","Financial","Financial Data & Stock Exchanges",79445.11
+1352,"MCRI","Monarch Casino & Resort Inc","Consumer Cyclical","Resorts & Casinos",2067.72
+1353,"MCS","Marcus Corp","Communication Services","Entertainment",818.44
+1354,"MCY","Mercury General Corp","Financial","Insurance - Property & Casualty",5665.70
+1355,"MD","Pediatrix Medical Group Inc","Healthcare","Medical Care Facilities",2132.08
+1356,"MDB","MongoDB Inc","Technology","Software - Infrastructure",29914.60
+1357,"MDLN","Medline Inc","Healthcare","Medical Instruments & Supplies",46987.65
+1358,"MDLZ","Mondelez International Inc","Consumer Defensive","Confectioners",77433.60
+1359,"MDT","Medtronic Plc","Healthcare","Medical Devices",112247.16
+1360,"MDU","MDU Resources Group Inc","Utilities","Utilities - Regulated Gas",3956.67
+1361,"MEDP","Medpace Holdings Inc","Healthcare","Diagnostics & Research",16822.36
+1362,"MEI","Methode Electronics Inc","Technology","Electronic Components",543.59
+1363,"MET","Metlife Inc","Financial","Insurance - Life",62575.41
+1364,"META","Meta Platforms Inc","Communication Services","Internet Content & Information",1836471.73
+1365,"METC","Ramaco Resources Inc","Basic Materials","Coking Coal",494.99
+1366,"MFA","MFA Financial Inc","Real Estate","REIT - Mortgage",725.81
+1367,"MFP","Midera Food Processing Inc","Industrials","Specialty Industrial Machinery",1826.40
+1368,"MGEE","MGE Energy Inc","Utilities","Utilities - Regulated Electric",2672.47
+1369,"MGM","MGM Resorts International","Consumer Cyclical","Resorts & Casinos",7550.30
+1370,"MGNI","Magnite Inc","Communication Services","Advertising Agencies",3650.15
+1371,"MGPI","MGP Ingredients Inc","Consumer Defensive","Beverages - Wineries & Distilleries",294.87
+1372,"MGRC","McGrath Rentcorp","Industrials","Rental & Leasing Services",2753.51
+1373,"MGY","Magnolia Oil & Gas Corp","Energy","Oil & Gas E&P",5801.00
+1374,"MHK","Mohawk Industries Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",7218.73
+1375,"MHO","MI Homes Inc","Consumer Cyclical","Residential Construction",3291.09
+1376,"MIAX","Miami International Holdings Inc","Financial","Capital Markets",3046.39
+1377,"MIDD","Middleby Corp","Industrials","Specialty Industrial Machinery",4766.44
+1378,"MIR","Mirion Technologies Inc","Industrials","Specialty Industrial Machinery",4039.39
+1379,"MITK","Mitek Systems Inc","Technology","Software - Application",770.24
+1380,"MKC","McCormick & Co Inc","Consumer Defensive","Packaged Foods",12382.50
+1381,"MKL","Markel Group Inc","Financial","Insurance - Property & Casualty",21903.22
+1382,"MKSI","MKS Inc","Technology","Scientific & Technical Instruments",17606.25
+1383,"MKTX","MarketAxess Holdings Inc","Financial","Capital Markets",5783.25
+1384,"MLAB","Mesa Laboratories Inc","Technology","Scientific & Technical Instruments",705.42
+1385,"MLI","Mueller Industries Inc","Industrials","Metal Fabrication",13379.26
+1386,"MLKN","MillerKnoll Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",1428.98
+1387,"MLM","Martin Marietta Materials Inc","Basic Materials","Building Materials",34201.26
+1388,"MLR","Miller Industries Inc","Consumer Cyclical","Auto Parts",599.39
+1389,"MMED","MiniMed Group Inc","Healthcare","Medical Instruments & Supplies",5570.73
+1390,"MMI","Marcus & Millichap Inc","Real Estate","Real Estate Services",1089.17
+1391,"MMM","3M Co","Industrials","Conglomerates",84361.87
+1392,"MMS","Maximus Inc","Industrials","Specialty Business Services",3077.07
+1393,"MMSI","Merit Medical Systems Inc","Healthcare","Medical Instruments & Supplies",5090.31
+1394,"MNRO","Monro Inc","Consumer Cyclical","Auto Parts",429.57
+1395,"MNST","Monster Beverage Corp","Consumer Defensive","Beverages - Non-Alcoholic",85512.61
+1396,"MNTK","Montauk Renewables Inc","Basic Materials","Specialty Chemicals",390.02
+1397,"MO","Altria Group Inc","Consumer Defensive","Tobacco",119253.11
+1398,"MOD","Modine Manufacturing Co","Consumer Cyclical","Auto Parts",9660.67
+1399,"MOG-A","Moog Inc","Industrials","Aerospace & Defense",11499.01
+1400,"MOH","Molina Healthcare Inc","Healthcare","Healthcare Plans",10218.67
+1401,"MORN","Morningstar Inc","Financial","Financial Data & Stock Exchanges",7605.50
+1402,"MOS","Mosaic Company","Basic Materials","Agricultural Inputs",6272.09
+1403,"MOV","Movado Group Inc","Consumer Cyclical","Luxury Goods",510.45
+1404,"MP","MP Materials Corp","Basic Materials","Other Industrial Metals & Mining",8217.61
+1405,"MPB","Mid Penn Bancorp Inc","Financial","Banks - Regional",916.38
+1406,"MPC","Marathon Petroleum Corp","Energy","Oil & Gas Refining & Marketing",130117.33
+1407,"MPT","Medical Properties Trust Inc","Real Estate","REIT - Healthcare Facilities",1905.07
+1408,"MPWR","Monolithic Power System Inc","Technology","Semiconductors",67316.09
+1409,"MQ","Marqeta Inc","Technology","Software - Infrastructure",1815.49
+1410,"MRCY","Mercury Systems Inc","Industrials","Aerospace & Defense",4779.01
+1411,"MRK","Merck & Co Inc","Healthcare","Drug Manufacturers - General",351275.91
+1412,"MRP","Millrose Properties Inc","Real Estate","REIT - Residential",3490.18
+1413,"MRSH","Marsh","Financial","Insurance Brokers",84308.91
+1414,"MRTN","Marten Transport Ltd","Industrials","Trucking",1044.45
+1415,"MRVL","Marvell Technology Inc","Technology","Semiconductors",240849.36
+1416,"MRX","Marex Group Ltd","Financial","Capital Markets",5119.32
+1417,"MS","Morgan Stanley","Financial","Capital Markets",294386.95
+1418,"MSA","MSA Safety Inc","Industrials","Security & Protection Services",6870.80
+1419,"MSBI","Midland States Bancorp Inc","Financial","Banks - Regional",675.69
+1420,"MSCI","MSCI Inc","Financial","Financial Data & Stock Exchanges",40833.40
+1421,"MSEX","Middlesex Water Co","Utilities","Utilities - Regulated Water",1000.24
+1422,"MSFT","Microsoft Corp","Technology","Software - Infrastructure",3880664.18
+1423,"MSGE","Madison Square Garden Entertainment Corp","Communication Services","Entertainment",3862.97
+1424,"MSGS","Madison Square Garden Sports Corp","Communication Services","Entertainment",9804.83
+1425,"MSI","Motorola Solutions Inc","Technology","Communication Equipment",73995.57
+1426,"MSM","MSC Industrial Direct Co Inc","Industrials","Industrial Distribution",7199.70
+1427,"MSTR","Strategy Inc","Technology","Software - Application",63931.03
+1428,"MTB","M & T Bank Corp","Financial","Banks - Regional",31419.21
+1429,"MTCH","Match Group Inc","Communication Services","Internet Content & Information",9526.36
+1430,"MTD","Mettler-Toledo International Inc","Healthcare","Diagnostics & Research",30645.11
+1431,"MTDR","Matador Resources Co","Energy","Oil & Gas E&P",6742.13
+1432,"MTG","MGIC Investment Corp","Financial","Insurance - Specialty",5716.83
+1433,"MTH","Meritage Homes Corp","Consumer Cyclical","Residential Construction",3951.51
+1434,"MTN","Vail Resorts Inc","Consumer Cyclical","Resorts & Casinos",5205.96
+1435,"MTRN","Materion Corp","Basic Materials","Other Industrial Metals & Mining",5773.23
+1436,"MTSI","MACOM Technology Solutions Holdings Inc","Technology","Semiconductors",24607.48
+1437,"MTUS","Metallus Inc","Basic Materials","Steel",814.06
+1438,"MTW","Manitowoc Co Inc","Industrials","Farm & Heavy Construction Machinery",783.27
+1439,"MTX","Minerals Technologies Inc","Basic Materials","Specialty Chemicals",2014.03
+1440,"MTZ","Mastec Inc","Industrials","Engineering & Construction",17398.87
+1441,"MU","Micron Technology Inc","Technology","Semiconductors",1169870.48
+1442,"MUR","Murphy Oil Corp","Energy","Oil & Gas E&P",5534.51
+1443,"MUSA","Murphy USA Inc","Consumer Cyclical","Specialty Retail",9525.07
+1444,"MUX","McEwen Inc","Basic Materials","Other Precious Metals & Mining",1062.73
+1445,"MVBF","MVB Financial Corp","Financial","Banks - Regional",382.54
+1446,"MVST","Microvast Holdings Inc","Consumer Cyclical","Auto Parts",224.53
+1447,"MWA","Mueller Water Products Inc","Industrials","Specialty Industrial Machinery",3366.07
+1448,"MWH","SOLV Energy Inc","Utilities","Utilities - Renewable",5199.44
+1449,"MXL","MaxLinear Inc","Technology","Semiconductors",8497.95
+1450,"MYE","Myers Industries Inc","Consumer Cyclical","Packaging & Containers",1154.12
+1451,"MYGN","Myriad Genetics Inc","Healthcare","Diagnostics & Research",401.73
+1452,"MYRG","MYR Group Inc","Industrials","Engineering & Construction",4839.08
+1453,"MZTI","Marzetti Co","Consumer Defensive","Packaged Foods",2788.87
+1454,"NABL","N-able Inc","Technology","Information Technology Services",850.08
+1455,"NAGE","Niagen Bioscience Inc","Consumer Defensive","Packaged Foods",210.47
+1456,"NAT","Nordic American Tankers Ltd","Energy","Oil & Gas Midstream",1816.82
+1457,"NATL","NCR Atleos Corp","Technology","Software - Application",3371.17
+1458,"NAVI","Navient Corp","Financial","Credit Services",869.38
+1459,"NAVN","Navan Inc","Technology","Software - Application",6015.47
+1460,"NB","NioCorp Developments Ltd","Basic Materials","Other Industrial Metals & Mining",497.35
+1461,"NBBK","NB Bancorp Inc","Financial","Banks - Regional",920.68
+1462,"NBHC","National Bank Holdings Corp","Financial","Banks - Regional",1690.83
+1463,"NBIX","Neurocrine Biosciences Inc","Healthcare","Drug Manufacturers - Specialty & Generic",14357.95
+1464,"NBN","Northeast Bank","Financial","Banks - Regional",1083.37
+1465,"NBR","Nabors Industries Ltd","Energy","Oil & Gas Drilling",1238.99
+1466,"NBTB","NBT Bancorp Inc","Financial","Banks - Regional",2625.55
+1467,"NCLH","Norwegian Cruise Line Holdings Ltd","Consumer Cyclical","Travel Services",7112.82
+1468,"NCMI","National Cinemedia Inc","Communication Services","Advertising Agencies",207.89
+1469,"NCNO","Ncino Inc","Technology","Software - Application",2080.88
+1470,"NDAQ","Nasdaq Inc","Financial","Financial Data & Stock Exchanges",51632.74
+1471,"NDSN","Nordson Corp","Industrials","Specialty Industrial Machinery",18206.46
+1472,"NE","Noble Corp Plc","Energy","Oil & Gas Drilling",6728.92
+1473,"NECB","NorthEast Community Bancorp Inc","Financial","Banks - Regional",377.33
+1474,"NEE","NextEra Energy Inc","Utilities","Utilities - Regulated Electric",161392.14
+1475,"NEM","Newmont Corp","Basic Materials","Gold",121754.14
+1476,"NEO","Neogenomics Inc","Healthcare","Diagnostics & Research",2058.17
+1477,"NEOG","Neogen Corp","Healthcare","Medical Devices",2554.02
+1478,"NESR","National Energy Services Reunited Corp","Energy","Oil & Gas Equipment & Services",2343.80
+1479,"NET","Cloudflare Inc","Technology","Software - Infrastructure",121740.10
+1480,"NEU","NewMarket Corp","Basic Materials","Specialty Chemicals",8310.15
+1481,"NEWT","NewtekOne Inc","Financial","Banks - Regional",319.18
+1482,"NEXN","Nexxen International Ltd","Communication Services","Advertising Agencies",515.97
+1483,"NEXT","NextDecade Corp","Energy","Oil & Gas Equipment & Services",1796.75
+1484,"NFG","National Fuel Gas Co","Energy","Oil & Gas Integrated",7433.47
+1485,"NFLX","Netflix Inc","Communication Services","Entertainment",298013.18
+1486,"NG","Novagold Resources Inc","Basic Materials","Gold",2755.76
+1487,"NGVC","Natural Grocers by Vitamin Cottage Inc","Consumer Defensive","Grocery Stores",693.22
+1488,"NGVT","Ingevity Corp","Basic Materials","Specialty Chemicals",2454.93
+1489,"NHC","National Healthcare Corp","Healthcare","Medical Care Facilities",3526.47
+1490,"NHI","National Health Investors Inc","Real Estate","REIT - Healthcare Facilities",3171.55
+1491,"NHP","National Healthcare Properties Inc","Real Estate","REIT - Healthcare Facilities",368.76
+1492,"NI","NiSource Inc","Utilities","Utilities - Regulated Gas",19436.57
+1493,"NIC","Nicolet Bankshares Inc","Financial","Banks - Regional",3437.66
+1494,"NIQ","NIQ Global Intelligence plc","Technology","Software - Application",5282.66
+1495,"NJR","New Jersey Resources Corp","Utilities","Utilities - Regulated Gas",5175.88
+1496,"NKE","Nike Inc","Consumer Cyclical","Footwear & Accessories",51599.63
+1497,"NLOP","Net Lease Office Properties","Real Estate","REIT - Office",143.55
+1498,"NLY","Annaly Capital Management Inc","Real Estate","REIT - Mortgage",13770.36
+1499,"NMIH","NMI Holdings Inc","Financial","Insurance - Specialty",3054.59
+1500,"NMRK","Newmark Group Inc","Real Estate","Real Estate Services",2268.98
+1501,"NN","NextNav Inc","Technology","Software - Infrastructure",1958.19
+1502,"NNE","Nano Nuclear Energy Inc","Industrials","Specialty Industrial Machinery",819.44
+1503,"NNI","Nelnet Inc","Financial","Credit Services",4506.78
+1504,"NNN","NNN REIT Inc","Real Estate","REIT - Retail",7729.08
+1505,"NOC","Northrop Grumman Corp","Industrials","Aerospace & Defense",68826.70
+1506,"NOG","Northern Oil and Gas Inc","Energy","Oil & Gas E&P",2678.65
+1507,"NOV","NOV Inc","Energy","Oil & Gas Equipment & Services",6769.52
+1508,"NOVT","Novanta Inc","Technology","Scientific & Technical Instruments",5155.69
+1509,"NOW","ServiceNow Inc","Technology","Software - Application",144501.49
+1510,"NP","Neptune Insurance Holdings Inc","Financial","Insurance Brokers",3902.91
+1511,"NPCE","NeuroPace Inc","Healthcare","Medical Devices",425.28
+1512,"NPK","National Presto Industries Inc","Industrials","Aerospace & Defense",1084.75
+1513,"NPKI","NPK International Inc","Industrials","Building Products & Equipment",974.76
+1514,"NPO","Enpro Inc","Industrials","Specialty Industrial Machinery",6512.87
+1515,"NRC","NRC Health","Healthcare","Health Information Services",451.68
+1516,"NRDS","Nerdwallet Inc","Communication Services","Internet Content & Information",625.81
+1517,"NRG","NRG Energy Inc","Utilities","Utilities - Independent Power Producers",22349.58
+1518,"NRGV","Energy Vault Holdings Inc","Utilities","Utilities - Renewable",601.89
+1519,"NRIM","Northrim Bancorp Inc","Financial","Banks - Regional",548.34
+1520,"NSC","Norfolk Southern Corp","Industrials","Railroads",71198.60
+1521,"NSIT","Insight Enterprises Inc","Technology","Electronics & Computer Distribution",4736.02
+1522,"NSP","Insperity Inc","Industrials","Staffing & Employment Services",1899.84
+1523,"NSSC","NAPCO Security Technologies Inc","Industrials","Security & Protection Services",1257.62
+1524,"NTAP","Netapp Inc","Technology","Software - Infrastructure",45382.61
+1525,"NTB","Bank of N T Butterfield & Son Ltd","Financial","Banks - Diversified",2275.05
+1526,"NTCT","Netscout Systems Inc","Technology","Software - Infrastructure",2857.40
+1527,"NTGR","Netgear Inc","Technology","Communication Equipment",630.56
+1528,"NTNX","Nutanix Inc","Technology","Software - Infrastructure",19781.38
+1529,"NTRA","Natera Inc","Healthcare","Diagnostics & Research",56330.10
+1530,"NTRS","Northern Trust Corp","Financial","Asset Management",30828.03
+1531,"NTST","Netstreit Corp","Real Estate","REIT - Retail",1777.39
+1532,"NU","Nu Holdings Ltd","Financial","Banks - Regional",74292.85
+1533,"NUE","Nucor Corp","Basic Materials","Steel",55843.18
+1534,"NUS","Nu Skin Enterprises Inc","Consumer Defensive","Household & Personal Products",232.19
+1535,"NUTX","Nutex Health Inc","Healthcare","Medical Care Facilities",1403.91
+1536,"NVCR","NovoCure Ltd","Healthcare","Medical Devices",1655.86
+1537,"NVDA","NVIDIA Corp","Technology","Semiconductors",5554567.90
+1538,"NVEC","NVE Corp","Technology","Semiconductors",539.11
+1539,"NVGS","Navigator Holdings Ltd","Energy","Oil & Gas Midstream",1505.97
+1540,"NVR","NVR Inc","Consumer Cyclical","Residential Construction",15995.96
+1541,"NVRI","Enviri Corp","Industrials","Waste Management",557.88
+1542,"NVST","Envista Holdings Corp","Healthcare","Medical Instruments & Supplies",3649.23
+1543,"NVT","nVent Electric plc","Industrials","Electrical Equipment & Parts",26577.07
+1544,"NVTS","Navitas Semiconductor Corp","Technology","Semiconductors",2853.76
+1545,"NWBI","Northwest Bancshares Inc","Financial","Banks - Regional",2174.92
+1546,"NWE","NorthWestern Energy Group Inc","Utilities","Utilities - Regulated Electric",4591.08
+1547,"NWL","Newell Brands Inc","Consumer Defensive","Household & Personal Products",2440.41
+1548,"NWN","Northwest Natural Holding Co","Utilities","Utilities - Regulated Gas",2012.07
+1549,"NWPX","NWPX Infrastructure Inc","Basic Materials","Steel",970.76
+1550,"NWS","News Corp","Communication Services","Entertainment",16188.57
+1551,"NWSA","News Corp","Communication Services","Entertainment",16186.86
+1552,"NX","Quanex Building Products Corp","Industrials","Building Products & Equipment",849.61
+1553,"NXDR","Nextdoor Holdings Inc","Communication Services","Internet Content & Information",970.99
+1554,"NXDT","NexPoint Diversified Real Estate Trust","Real Estate","REIT - Diversified",272.97
+1555,"NXH","Neighborhood Intelligence Inc","Consumer Cyclical","Internet Retail",163.78
+1556,"NXRT","NexPoint Residential Trust Inc","Real Estate","REIT - Residential",504.33
+1557,"NXST","Nexstar Media Group Inc","Communication Services","Broadcasting",4994.33
+1558,"NXT","Nextpower Inc","Technology","Solar",12936.46
+1559,"NYT","New York Times Co","Communication Services","Publishing",10741.48
+1560,"O","Realty Income Corp","Real Estate","REIT - Retail",51256.74
+1561,"OBK","Origin Bancorp Inc","Financial","Banks - Regional",1618.69
+1562,"OBT","Orange County Bancorp Inc","Financial","Banks - Regional",499.45
+1563,"OC","Owens Corning","Industrials","Building Products & Equipment",9264.50
+1564,"OCFC","OceanFirst Financial Corp","Financial","Banks - Regional",1616.67
+1565,"ODC","Oil-Dri Corp Of America","Basic Materials","Specialty Chemicals",1133.08
+1566,"ODFL","Old Dominion Freight Line Inc","Industrials","Trucking",37666.33
+1567,"OEC","Orion S.A","Basic Materials","Specialty Chemicals",328.96
+1568,"OFG","OFG Bancorp","Financial","Banks - Regional",2152.16
+1569,"OFIX","Orthofix Medical Inc","Healthcare","Medical Devices",366.59
+1570,"OFLX","Omega Flex Inc","Industrials","Specialty Industrial Machinery",264.97
+1571,"OGE","Oge Energy Corp","Utilities","Utilities - Regulated Electric",9525.46
+1572,"OGN","Organon & Co","Healthcare","Drug Manufacturers - General",3610.88
+1573,"OGS","ONE Gas Inc","Utilities","Utilities - Regulated Gas",4548.28
+1574,"OHI","Omega Healthcare Investors Inc","Real Estate","REIT - Healthcare Facilities",13374.99
+1575,"OI","O-I Glass Inc","Consumer Cyclical","Packaging & Containers",948.08
+1576,"OII","Oceaneering International Inc","Energy","Oil & Gas Equipment & Services",4437.04
+1577,"OIS","Oil States International Inc","Energy","Oil & Gas Equipment & Services",494.65
+1578,"OKE","Oneok Inc","Energy","Oil & Gas Midstream",56919.72
+1579,"OKLO","Oklo Inc","Utilities","Utilities - Independent Power Producers",6430.63
+1580,"OKTA","Okta Inc","Technology","Software - Infrastructure",38497.27
+1581,"OLED","Universal Display Corp","Technology","Electronic Components",3350.98
+1582,"OLLI","Ollies Bargain Outlet Holdings Inc","Consumer Defensive","Discount Stores",5150.78
+1583,"OLN","Olin Corp","Basic Materials","Chemicals",1779.27
+1584,"OLP","One Liberty Properties Inc","Real Estate","REIT - Diversified",480.37
+1585,"OMC","Omnicom Group Inc","Communication Services","Advertising Agencies",20973.74
+1586,"OMCL","Omnicell Inc","Healthcare","Health Information Services",1588.77
+1587,"OMDA","Omada Health Inc","Healthcare","Health Information Services",1274.53
+1588,"OMF","OneMain Holdings Inc","Financial","Credit Services",6490.63
+1589,"ON","ON Semiconductor Corp","Technology","Semiconductors",30915.24
+1590,"ONB","Old National Bancorp","Financial","Banks - Regional",9460.96
+1591,"ONDS","Ondas Inc","Technology","Communication Equipment",3988.78
+1592,"ONEW","Onewater Marine Inc","Consumer Cyclical","Specialty Retail",160.32
+1593,"ONIT","Onity Group Inc","Financial","Mortgage Finance",229.25
+1594,"ONON","On Holding AG","Consumer Cyclical","Footwear & Accessories",11211.85
+1595,"ONT","Onterris Inc","Industrials","Waste Management",481.46
+1596,"ONTO","Onto Innovation Inc","Technology","Semiconductor Equipment & Materials",14362.56
+1597,"OOMA","Ooma Inc","Technology","Software - Application",554.76
+1598,"OPCH","Option Care Health Inc","Healthcare","Medical Care Facilities",4650.83
+1599,"OPEN","Opendoor Technologies Inc","Real Estate","Real Estate Services",2223.80
+1600,"OPK","Opko Health Inc","Healthcare","Diagnostics & Research",1022.47
+1601,"OPLN","Openlane Inc","Consumer Cyclical","Auto & Truck Dealerships",4381.41
+1602,"OPTU","Optimum Communications Inc","Communication Services","Telecom Services",376.40
+1603,"ORA","Ormat Technologies Inc","Utilities","Utilities - Renewable",5451.09
+1604,"ORC","Orchid Island Capital Inc","Real Estate","REIT - Mortgage",990.99
+1605,"ORCL","Oracle Corp","Technology","Software - Infrastructure",410290.75
+1606,"ORGO","Organogenesis Holdings Inc","Healthcare","Drug Manufacturers - Specialty & Generic",164.70
+1607,"ORI","Old Republic International Corp","Financial","Insurance - Property & Casualty",9307.24
+1608,"ORLY","O'Reilly Automotive Inc","Consumer Cyclical","Auto Parts",69578.73
+1609,"ORRF","Orrstown Financial Services Inc","Financial","Banks - Regional",813.92
+1610,"OSBC","Old Second Bancorporation Inc","Financial","Banks - Regional",1264.78
+1611,"OSCR","Oscar Health Inc","Healthcare","Healthcare Plans",10217.74
+1612,"OSG","Octave Specialty Group Inc","Financial","Insurance - Specialty",214.90
+1613,"OSIS","OSI Systems Inc","Technology","Electronic Components",3082.54
+1614,"OSK","Oshkosh Corp","Industrials","Farm & Heavy Construction Machinery",7862.56
+1615,"OSPN","OneSpan Inc","Technology","Software - Infrastructure",663.70
+1616,"OSUR","Orasure Technologies Inc","Healthcare","Medical Instruments & Supplies",261.73
+1617,"OSW","OneSpaWorld Holdings Limited","Consumer Cyclical","Leisure",2385.22
+1618,"OTIS","Otis Worldwide Corp","Industrials","Specialty Industrial Machinery",25166.05
+1619,"OTTR","Otter Tail Corp","Industrials","Conglomerates",3708.59
+1620,"OUST","Ouster Inc","Technology","Electronic Components",2850.60
+1621,"OUT","Outfront Media Inc","Real Estate","REIT - Specialty",5210.08
+1622,"OVV","Ovintiv Inc","Energy","Oil & Gas E&P",17458.66
+1623,"OWL","Blue Owl Capital Inc","Financial","Asset Management",14452.79
+1624,"OXM","Oxford Industries Inc","Consumer Cyclical","Apparel Manufacturing",381.64
+1625,"OXY","Occidental Petroleum Corp","Energy","Oil & Gas E&P",60258.14
+1626,"OZK","Bank OZK","Financial","Banks - Regional",4897.19
+1627,"P","Everpure Inc","Technology","Computer Hardware",50174.04
+1628,"PACB","Pacific Biosciences of California Inc","Healthcare","Medical Devices",714.91
+1629,"PACK","Ranpak Holdings Corp","Consumer Cyclical","Packaging & Containers",334.45
+1630,"PACS","PACS Group Inc","Healthcare","Medical Care Facilities",6924.01
+1631,"PAG","Penske Automotive Group Inc","Consumer Cyclical","Auto & Truck Dealerships",13004.53
+1632,"PAGS","PagSeguro Digital Ltd","Technology","Software - Infrastructure",2963.88
+1633,"PAHC","Phibro Animal Health Corp","Healthcare","Drug Manufacturers - Specialty & Generic",1518.50
+1634,"PANL","Pangaea Logistics Solutions Ltd","Industrials","Marine Shipping",563.08
+1635,"PANW","Palo Alto Networks Inc","Technology","Software - Infrastructure",325973.00
+1636,"PAR","Par Technology Corp","Technology","Software - Application",638.23
+1637,"PARR","Par Pacific Holdings Inc","Energy","Oil & Gas Refining & Marketing",4391.23
+1638,"PATH","UiPath Inc","Technology","Software - Infrastructure",6905.31
+1639,"PATK","Patrick Industries Inc","Consumer Cyclical","Recreational Vehicles",2089.94
+1640,"PAX","Patria Investments Ltd","Financial","Asset Management",1846.08
+1641,"PAY","Paymentus Holdings Inc","Technology","Software - Infrastructure",4019.99
+1642,"PAYC","Paycom Software Inc","Technology","Software - Application",10181.18
+1643,"PAYO","Payoneer Global Inc","Technology","Software - Infrastructure",2426.17
+1644,"PAYS","PaySign Inc","Technology","Software - Infrastructure",844.67
+1645,"PAYX","Paychex Inc","Technology","Software - Application",37185.72
+1646,"PB","Prosperity Bancshares Inc","Financial","Banks - Regional",8014.59
+1647,"PBF","PBF Energy Inc","Energy","Oil & Gas Refining & Marketing",10590.08
+1648,"PBH","Prestige Consumer Healthcare Inc","Healthcare","Drug Manufacturers - Specialty & Generic",2267.82
+1649,"PBI","Pitney Bowes Inc","Industrials","Integrated Freight & Logistics",2327.80
+1650,"PCAR","Paccar Inc","Industrials","Farm & Heavy Construction Machinery",57721.18
+1651,"PCG","PG&E Corp","Utilities","Utilities - Regulated Electric",27904.03
+1652,"PCOR","Procore Technologies Inc","Technology","Software - Application",8324.11
+1653,"PCRX","Pacira BioSciences Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1450.57
+1654,"PCT","PureCycle Technologies Inc","Industrials","Pollution & Treatment Controls",789.56
+1655,"PCTY","Paylocity Holding Corp","Technology","Software - Application",8118.77
+1656,"PD","Pagerduty Inc","Technology","Software - Application",1242.67
+1657,"PDFS","PDF Solutions Inc","Technology","Software - Application",2203.42
+1658,"PDLB","Ponce Financial Group Inc","Financial","Banks - Regional",488.35
+1659,"PDM","Piedmont Realty Trust Inc","Real Estate","REIT - Office",1136.21
+1660,"PEB","Pebblebrook Hotel Trust","Real Estate","REIT - Hotel & Motel",2141.76
+1661,"PEBO","Peoples Bancorp Inc (Marietta, OH)","Financial","Banks - Regional",1305.07
+1662,"PECO","Phillips Edison & Company Inc","Real Estate","REIT - Retail",5275.72
+1663,"PEG","Public Service Enterprise Group Inc","Utilities","Utilities - Regulated Electric",35806.49
+1664,"PEGA","Pegasystems Inc","Technology","Software - Application",5834.73
+1665,"PEN","Penumbra Inc","Healthcare","Medical Devices",12506.92
+1666,"PENG","Penguin Solutions Inc","Technology","Information Technology Services",3667.44
+1667,"PENN","PENN Entertainment Inc","Consumer Cyclical","Resorts & Casinos",2112.89
+1668,"PEP","PepsiCo Inc","Consumer Defensive","Beverages - Non-Alcoholic",175170.17
+1669,"PFBC","Preferred Bank (Los Angeles, CA)","Financial","Banks - Regional",1216.49
+1670,"PFE","Pfizer Inc","Healthcare","Drug Manufacturers - General",158564.91
+1671,"PFG","Principal Financial Group Inc","Financial","Asset Management",23502.27
+1672,"PFGC","Performance Food Group Company","Consumer Defensive","Food Distribution",14921.53
+1673,"PFIS","Peoples Financial Services Corp","Financial","Banks - Regional",691.37
+1674,"PFS","Provident Financial Services Inc","Financial","Banks - Regional",2897.99
+1675,"PFSI","PennyMac Financial Services Inc","Financial","Mortgage Finance",3186.71
+1676,"PG","Procter & Gamble Co","Consumer Defensive","Household & Personal Products",349771.23
+1677,"PGC","Peapack-Gladstone Financial Corp","Financial","Banks - Regional",774.00
+1678,"PGNY","Progyny Inc","Healthcare","Healthcare Plans",2135.30
+1679,"PGR","Progressive Corp","Financial","Insurance - Property & Casualty",127103.99
+1680,"PH","Parker-Hannifin Corp","Industrials","Specialty Industrial Machinery",119423.41
+1681,"PHIN","PHINIA Inc","Consumer Cyclical","Auto Parts",2141.86
+1682,"PHM","PulteGroup Inc","Consumer Cyclical","Residential Construction",21281.48
+1683,"PHR","Phreesia Inc","Healthcare","Health Information Services",661.67
+1684,"PI","Impinj Inc","Technology","Semiconductors",5605.20
+1685,"PII","Polaris Inc","Consumer Cyclical","Recreational Vehicles",3005.08
+1686,"PINS","Pinterest Inc","Communication Services","Internet Content & Information",11626.41
+1687,"PIPR","Piper Sandler Co's","Financial","Capital Markets",4549.76
+1688,"PJT","PJT Partners Inc","Financial","Capital Markets",3471.72
+1689,"PK","Park Hotels & Resorts Inc","Real Estate","REIT - Hotel & Motel",3062.35
+1690,"PKE","Park Aerospace Corp","Industrials","Aerospace & Defense",645.14
+1691,"PKG","Packaging Corp Of America","Consumer Cyclical","Packaging & Containers",20487.26
+1692,"PL","Planet Labs PBC","Industrials","Aerospace & Defense",6254.55
+1693,"PLAB","Photronics Inc","Technology","Semiconductor Equipment & Materials",1752.80
+1694,"PLAY","Dave & Buster's Entertainment Inc","Communication Services","Entertainment",242.77
+1695,"PLD","Prologis Inc","Real Estate","REIT - Industrial",125317.58
+1696,"PLGO","Pelagos Insurance Capital Ltd","Financial","Insurance - Diversified",2022.71
+1697,"PLMR","Palomar Holdings Inc","Financial","Insurance - Property & Casualty",3459.20
+1698,"PLNT","Planet Fitness Inc","Consumer Cyclical","Leisure",3325.72
+1699,"PLOW","Douglas Dynamics Inc","Consumer Cyclical","Auto Parts",909.00
+1700,"PLPC","Preformed Line Products Co","Industrials","Electrical Equipment & Parts",1942.13
+1701,"PLSE","Pulse Biosciences Inc","Healthcare","Medical Instruments & Supplies",3633.68
+1702,"PLTK","Playtika Holding Corp","Communication Services","Electronic Gaming & Multimedia",877.26
+1703,"PLTR","Palantir Technologies Inc","Technology","Software - Infrastructure",477679.92
+1704,"PLUG","Plug Power Inc","Industrials","Electrical Equipment & Parts",2417.15
+1705,"PLUS","ePlus Inc","Technology","Software - Application",2389.88
+1706,"PLXS","Plexus Corp","Technology","Electronic Components",6966.33
+1707,"PM","Philip Morris International Inc","Consumer Defensive","Tobacco",312502.01
+1708,"PMT","Pennymac Mortgage Investment Trust","Real Estate","REIT - Mortgage",653.15
+1709,"PNC","PNC Financial Services Group Inc","Financial","Banks - Regional",87639.95
+1710,"PNFP","Pinnacle Financial Partners Inc","Financial","Banks - Regional",14305.84
+1711,"PNR","Pentair plc","Industrials","Specialty Industrial Machinery",8349.06
+1712,"PNTG","Pennant Group Inc","Healthcare","Medical Care Facilities",1410.09
+1713,"PNW","Pinnacle West Capital Corp","Utilities","Utilities - Regulated Electric",11874.91
+1714,"PODD","Insulet Corp","Healthcare","Medical Devices",9326.06
+1715,"POOL","Pool Corp","Industrials","Industrial Distribution",5746.92
+1716,"POR","Portland General Electric Co","Utilities","Utilities - Regulated Electric",5333.52
+1717,"POST","Post Holdings Inc","Consumer Defensive","Packaged Foods",3262.92
+1718,"POWI","Power Integrations Inc","Technology","Semiconductors",2787.52
+1719,"POWL","Powell Industries Inc","Industrials","Electrical Equipment & Parts",6895.60
+1720,"POWW","Outdoor Holding Co","Industrials","Aerospace & Defense",261.14
+1721,"PPC","Pilgrim's Pride Corp","Consumer Defensive","Packaged Foods",6786.09
+1722,"PPG","PPG Industries Inc","Basic Materials","Specialty Chemicals",23443.75
+1723,"PPL","PPL Corp","Utilities","Utilities - Regulated Electric",25661.78
+1724,"PPLI","People Inc","Communication Services","Internet Content & Information",3047.79
+1725,"PPTA","Perpetua Resources Corp","Basic Materials","Other Precious Metals & Mining",2515.68
+1726,"PR","Permian Resources Holdings Inc","Energy","Oil & Gas E&P",19129.80
+1727,"PRAA","PRA Group Inc","Financial","Credit Services",765.01
+1728,"PRCH","Porch Group Inc","Financial","Insurance - Property & Casualty",1990.00
+1729,"PRCT","Procept BioRobotics Corp","Healthcare","Medical Devices",1025.20
+1730,"PRDO","Perdoceo Education Corp","Consumer Defensive","Education & Training Services",2091.96
+1731,"PRG","PROG Holdings Inc","Industrials","Rental & Leasing Services",1230.80
+1732,"PRGO","Perrigo Company plc","Healthcare","Drug Manufacturers - Specialty & Generic",2012.15
+1733,"PRGS","Progress Software Corp","Technology","Software - Infrastructure",1564.67
+1734,"PRI","Primerica Inc","Financial","Insurance - Life",8475.78
+1735,"PRIM","Primoris Services Corp","Industrials","Engineering & Construction",4449.78
+1736,"PRK","Park National Corp","Financial","Banks - Regional",3223.73
+1737,"PRKS","United Parks & Resorts Inc","Consumer Cyclical","Leisure",1455.00
+1738,"PRLB","Proto Labs Inc","Industrials","Metal Fabrication",2205.84
+1739,"PRM","Perimeter Solutions Inc","Basic Materials","Specialty Chemicals",4534.13
+1740,"PRMB","Primo Brands Corp","Consumer Defensive","Beverages - Non-Alcoholic",6999.99
+1741,"PRSU","Pursuit Attractions and Hospitality Inc","Consumer Cyclical","Travel Services",1420.46
+1742,"PRTH","Priority Technology Holdings Inc","Technology","Software - Infrastructure",643.28
+1743,"PRU","Prudential Wealth Advisors","Financial","Insurance - Life",39167.85
+1744,"PRVA","Privia Health Group Inc","Healthcare","Health Information Services",2578.95
+1745,"PSA","Public Storage","Real Estate","REIT - Industrial",53350.07
+1746,"PSFE","Paysafe Limited","Technology","Software - Infrastructure",299.72
+1747,"PSIX","Power Solutions International Inc","Industrials","Specialty Industrial Machinery",1118.68
+1748,"PSMT","Pricesmart Inc","Consumer Defensive","Discount Stores",5160.50
+1749,"PSN","Parsons Corp","Technology","Information Technology Services",4594.77
+1750,"PSNL","Personalis Inc","Healthcare","Diagnostics & Research",1715.21
+1751,"PSTL","Postal Realty Trust Inc","Real Estate","REIT - Office",800.05
+1752,"PSX","Phillips 66","Energy","Oil & Gas Refining & Marketing",112364.29
+1753,"PTC","PTC Inc","Technology","Software - Application",21045.32
+1754,"PTEN","Patterson-UTI Energy Inc","Energy","Oil & Gas Drilling",4378.30
+1755,"PTLO","Portillos Inc","Consumer Cyclical","Restaurants",296.17
+1756,"PTON","Peloton Interactive Inc","Consumer Cyclical","Leisure",2159.25
+1757,"PTRN","Pattern Group Inc","Consumer Cyclical","Internet Retail",3255.28
+1758,"PUBM","PubMatic Inc","Technology","Software - Application",850.87
+1759,"PUMP","ProPetro Holding Corp","Energy","Oil & Gas Equipment & Services",1110.33
+1760,"PURR","Hyperliquid Strategies Inc","Financial","Capital Markets",3144.46
+1761,"PVH","PVH Corp","Consumer Cyclical","Apparel Manufacturing",3743.63
+1762,"PWP","Perella Weinberg Partners","Financial","Capital Markets",1448.78
+1763,"PWR","Quanta Services Inc","Industrials","Engineering & Construction",103034.84
+1764,"PYPL","PayPal Holdings Inc","Financial","Credit Services",47067.46
+1765,"PZZA","Papa John's International Inc","Consumer Cyclical","Restaurants",640.65
+1766,"Q","Qnity Electronics Inc","Technology","Semiconductor Equipment & Materials",26502.54
+1767,"QBTS","D-Wave Quantum Inc","Technology","Computer Hardware",5542.55
+1768,"QCOM","Qualcomm Inc","Technology","Semiconductors",187950.42
+1769,"QCRH","QCR Holding Inc","Financial","Banks - Regional",1613.65
+1770,"QDEL","QuidelOrtho Corp","Healthcare","Medical Devices",851.02
+1771,"QGEN","Qiagen NV","Healthcare","Diagnostics & Research",9176.51
+1772,"QLYS","Qualys Inc","Technology","Software - Infrastructure",6706.59
+1773,"QNST","QuinStreet Inc","Communication Services","Advertising Agencies",915.00
+1774,"QNT","Quantinuum Inc","Technology","Software - Application",10932.56
+1775,"QS","QuantumScape Corp","Consumer Cyclical","Auto Parts",2835.54
+1776,"QSR","Restaurant Brands International Inc","Consumer Cyclical","Restaurants",32115.78
+1777,"QTRX","Quanterix Corp","Healthcare","Medical Devices",151.81
+1778,"QTWO","Q2 Holdings Inc","Technology","Software - Application",3659.60
+1779,"QUBT","Quantum Computing Inc","Technology","Computer Hardware",1686.28
+1780,"QXO","QXO Inc","Industrials","Industrial Distribution",11536.90
+1781,"R","Ryder System Inc","Industrials","Rental & Leasing Services",9018.41
+1782,"RAL","Ralliant Corp","Technology","Electronic Components",7950.59
+1783,"RAMP","LiveRamp Holdings Inc","Technology","Software - Infrastructure",2284.07
+1784,"RBA","RB Global Inc","Industrials","Specialty Business Services",15557.31
+1785,"RBB","RBB Bancorp","Financial","Banks - Regional",437.79
+1786,"RBBN","Ribbon Communications Inc","Technology","Software - Application",307.57
+1787,"RBC","RBC Bearings Inc","Industrials","Tools & Accessories",15544.37
+1788,"RBCAA","Republic Bancorp Inc (KY)","Financial","Banks - Regional",1615.89
+1789,"RBLX","Roblox Corp","Communication Services","Electronic Gaming & Multimedia",32518.40
+1790,"RBRK","Rubrik Inc","Technology","Software - Infrastructure",25061.03
+1791,"RC","Ready Capital Corp","Real Estate","REIT - Mortgage",218.05
+1792,"RCAT","Red Cat Holdings Inc","Industrials","Aerospace & Defense",902.54
+1793,"RCL","Royal Caribbean Group","Consumer Cyclical","Travel Services",75263.70
+1794,"RDDT","Reddit Inc","Communication Services","Internet Content & Information",30104.28
+1795,"RDN","Radian Group Inc","Financial","Insurance - Specialty",4520.73
+1796,"RDNT","Radnet Inc","Healthcare","Diagnostics & Research",5367.97
+1797,"RDVT","Red Violet Inc","Technology","Software - Application",1281.51
+1798,"RDW","Redwire Corp","Industrials","Aerospace & Defense",2439.92
+1799,"REAL","Therealreal Inc","Consumer Cyclical","Luxury Goods",1170.48
+1800,"REAX","Real REMAX Group Inc","Real Estate","Real Estate Services",624.51
+1801,"REFI","Chicago Atlantic Real Estate Finance Inc","Real Estate","REIT - Mortgage",246.99
+1802,"REG","Regency Centers Corp","Real Estate","REIT - Retail",13089.46
+1803,"RELY","Remitly Global Inc","Technology","Software - Infrastructure",4978.81
+1804,"REPX","Riley Exploration Permian Inc","Energy","Oil & Gas E&P",988.95
+1805,"RES","RPC Inc","Energy","Oil & Gas Equipment & Services",1329.94
+1806,"REX","REX American Resources Corp","Basic Materials","Chemicals",1487.59
+1807,"REXR","Rexford Industrial Realty Inc","Real Estate","REIT - Industrial",8301.85
+1808,"REYN","Reynolds Consumer Products Inc","Consumer Cyclical","Packaging & Containers",4633.19
+1809,"REZI","Resideo Technologies Inc","Industrials","Industrial Distribution",2611.78
+1810,"RF","Regions Financial Corp","Financial","Banks - Regional",23061.73
+1811,"RGA","Reinsurance Group Of America Inc","Financial","Insurance - Reinsurance",16712.66
+1812,"RGEN","Repligen Corp","Healthcare","Medical Instruments & Supplies",10402.26
+1813,"RGLD","Royal Gold Inc","Basic Materials","Gold",19587.38
+1814,"RGR","Sturm, Ruger & Co Inc","Industrials","Aerospace & Defense",696.81
+1815,"RGTI","Rigetti Computing Inc","Technology","Computer Hardware",4719.49
+1816,"RH","RH","Consumer Cyclical","Specialty Retail",2152.13
+1817,"RHI","Robert Half Inc","Industrials","Staffing & Employment Services",3490.53
+1818,"RHLD","Resolute Holdings Management Inc","Industrials","Specialty Business Services",908.56
+1819,"RHP","Ryman Hospitality Properties Inc","Real Estate","REIT - Hotel & Motel",8182.90
+1820,"RICK","RCI Hospitality Holdings Inc","Consumer Cyclical","Restaurants",203.96
+1821,"RIG","Transocean Ltd","Energy","Oil & Gas Drilling",6187.51
+1822,"RIOT","Riot Platforms Inc","Financial","Capital Markets",6319.36
+1823,"RITM","Rithm Capital Corp","Real Estate","REIT - Mortgage",4813.47
+1824,"RIVN","Rivian Automotive Inc","Consumer Cyclical","Auto Manufacturers",20747.84
+1825,"RJF","Raymond James Financial Inc","Financial","Asset Management",30508.57
+1826,"RKLB","Rocket Lab Corp","Industrials","Aerospace & Defense",40934.65
+1827,"RKT","Rocket Companies Inc","Financial","Mortgage Finance",33300.12
+1828,"RL","Ralph Lauren Corp","Consumer Cyclical","Apparel Manufacturing",21872.59
+1829,"RLI","RLI Corp","Financial","Insurance - Property & Casualty",5166.82
+1830,"RLJ","RLJ Lodging Trust","Real Estate","REIT - Hotel & Motel",1715.24
+1831,"RM","Regional Management Corp","Financial","Credit Services",312.94
+1832,"RMBS","Rambus Inc","Technology","Semiconductors",11764.83
+1833,"RMD","Resmed Inc","Healthcare","Medical Instruments & Supplies",31887.14
+1834,"RMNI","Rimini Street Inc","Technology","Software - Application",382.30
+1835,"RMR","RMR Group Inc","Real Estate","Real Estate Services",568.14
+1836,"RNG","RingCentral Inc","Technology","Software - Application",6542.71
+1837,"RNR","RenaissanceRe Holdings Ltd","Financial","Insurance - Reinsurance",13767.81
+1838,"RNST","Renasant Corp","Financial","Banks - Regional",3591.29
+1839,"ROAD","Construction Partners Inc","Industrials","Engineering & Construction",5013.22
+1840,"ROCK","Gibraltar Industries Inc","Industrials","Building Products & Equipment",1112.55
+1841,"ROG","Rogers Corp","Technology","Electronic Components",2646.66
+1842,"ROK","Rockwell Automation Inc","Industrials","Specialty Industrial Machinery",48210.67
+1843,"ROKU","Roku Inc","Communication Services","Entertainment",22842.11
+1844,"ROL","Rollins Inc","Consumer Cyclical","Personal Services",15521.75
+1845,"ROOT","Root Inc","Financial","Insurance - Property & Casualty",752.05
+1846,"ROST","Ross Stores Inc","Consumer Cyclical","Apparel Retail",71940.84
+1847,"RPAY","Repay Holdings Corp","Technology","Software - Infrastructure",341.27
+1848,"RPC","Ridgepost Capital Inc","Financial","Asset Management",879.72
+1849,"RPD","Rapid7 Inc","Technology","Software - Infrastructure",873.51
+1850,"RPM","RPM International Inc","Basic Materials","Specialty Chemicals",12680.68
+1851,"RRBI","Red River Bancshares Inc","Financial","Banks - Regional",670.59
+1852,"RRC","Range Resources Corp","Energy","Oil & Gas E&P",9527.12
+1853,"RRR","Red Rock Resorts Inc","Consumer Cyclical","Resorts & Casinos",5289.66
+1854,"RRX","Regal Rexnord Corp","Industrials","Specialty Industrial Machinery",10655.37
+1855,"RS","Reliance Inc","Basic Materials","Steel",20264.07
+1856,"RSG","Republic Services Inc","Industrials","Waste Management",66399.22
+1857,"RSI","Rush Street Interactive Inc","Consumer Cyclical","Gambling",4709.63
+1858,"RTX","RTX Corp","Industrials","Aerospace & Defense",248418.80
+1859,"RUM","RUM Group Inc","Communication Services","Internet Content & Information",3470.67
+1860,"RUN","Sunrun Inc","Technology","Solar",1828.03
+1861,"RUSHA","Rush Enterprises Inc","Consumer Cyclical","Auto & Truck Dealerships",5525.38
+1862,"RVLV","Revolve Group Inc","Consumer Cyclical","Internet Retail",1537.58
+1863,"RVTY","Revvity Inc","Healthcare","Diagnostics & Research",16978.99
+1864,"RWT","Redwood Trust Inc","Real Estate","REIT - Mortgage",418.29
+1865,"RXO","RXO Inc","Industrials","Trucking",4772.33
+1866,"RXST","RxSight Inc","Healthcare","Medical Devices",201.73
+1867,"RYAM","Rayonier Advanced Materials Inc","Basic Materials","Chemicals",468.77
+1868,"RYAN","Ryan Specialty Holdings Inc","Financial","Insurance Brokers",9667.25
+1869,"RYN","Rayonier Inc","Real Estate","REIT - Specialty",5564.71
+1870,"RYZ","Ryerson Holding Corp","Industrials","Metal Fabrication",1346.25
+1871,"S","SentinelOne Inc","Technology","Software - Infrastructure",8840.44
+1872,"SABR","Sabre Corp","Technology","Software - Infrastructure",778.91
+1873,"SAFE","Safehold Inc","Real Estate","REIT - Diversified",856.88
+1874,"SAFT","Safety Insurance Group Inc","Financial","Insurance - Property & Casualty",1525.89
+1875,"SAH","Sonic Automotive Inc","Consumer Cyclical","Auto & Truck Dealerships",1944.63
+1876,"SAIA","Saia Inc","Industrials","Trucking",9102.99
+1877,"SAIC","Science Applications International Corp","Technology","Information Technology Services",5434.54
+1878,"SAIL","Sailpoint Inc","Technology","Software - Infrastructure",11429.65
+1879,"SAM","Boston Beer Co Inc","Consumer Defensive","Beverages - Brewers",1761.63
+1880,"SANM","Sanmina Corp","Technology","Electronic Components",11281.18
+1881,"SARO","StandardAero Inc","Industrials","Aerospace & Defense",6727.59
+1882,"SATL","Satellogic Inc","Industrials","Aerospace & Defense",781.00
+1883,"SB","Safe Bulkers Inc","Industrials","Marine Shipping",1004.01
+1884,"SBAC","SBA Communications Corp","Real Estate","REIT - Specialty",18036.04
+1885,"SBCF","Seacoast Banking Corp Of Florida","Financial","Banks - Regional",3085.74
+1886,"SBET","Sharplink Inc","Financial","Capital Markets",1913.74
+1887,"SBGI","Sinclair Inc","Communication Services","Broadcasting",950.26
+1888,"SBH","Sally Beauty Holdings Inc","Consumer Cyclical","Specialty Retail",1500.77
+1889,"SBRA","Sabra Healthcare REIT Inc","Real Estate","REIT - Healthcare Facilities",4812.92
+1890,"SBSI","Southside Bancshares Inc","Financial","Banks - Regional",908.25
+1891,"SBUX","Starbucks Corp","Consumer Cyclical","Restaurants",106259.40
+1892,"SCCO","Southern Copper Corp","Basic Materials","Copper",167737.32
+1893,"SCHL","Scholastic Corp","Communication Services","Publishing",706.55
+1894,"SCI","Service Corp International","Consumer Cyclical","Personal Services",10463.10
+1895,"SCL","Stepan Co","Basic Materials","Specialty Chemicals",1387.59
+1896,"SCSC","Scansource Inc","Technology","Electronics & Computer Distribution",1191.65
+1897,"SD","Sandridge Energy Inc","Energy","Oil & Gas E&P",521.65
+1898,"SDGR","Schrodinger Inc","Healthcare","Health Information Services",1974.12
+1899,"SDRL","Seadrill Ltd","Energy","Oil & Gas Drilling",2842.27
+1900,"SEB","Seaboard Corp","Industrials","Conglomerates",3892.08
+1901,"SEG","Seaport Entertainment Group Inc","Real Estate","Real Estate Services",286.42
+1902,"SEI","Solaris Energy Infrastructure Inc","Energy","Oil & Gas Equipment & Services",5858.51
+1903,"SEIC","SEI Investments Co","Financial","Asset Management",12391.98
+1904,"SENEA","Seneca Foods Corp","Consumer Defensive","Packaged Foods",1204.83
+1905,"SERV","Serve Robotics Inc","Industrials","Integrated Freight & Logistics",385.85
+1906,"SEZL","Sezzle Inc","Financial","Credit Services",3947.38
+1907,"SF","Stifel Financial Corp","Financial","Capital Markets",10586.73
+1908,"SFBS","ServisFirst Bancshares Inc","Financial","Banks - Regional",4218.98
+1909,"SFD","Smithfield Foods Inc","Consumer Defensive","Packaged Foods",7434.33
+1910,"SFIX","Stitch Fix Inc","Consumer Cyclical","Apparel Retail",364.74
+1911,"SFL","SFL Corp Ltd","Industrials","Marine Shipping",2039.90
+1912,"SFM","Sprouts Farmers Market Inc","Consumer Defensive","Grocery Stores",6155.28
+1913,"SFNC","Simmons First National Corp","Financial","Banks - Regional",3234.22
+1914,"SFST","Southern First Bancshares Inc","Financial","Banks - Regional",572.09
+1915,"SG","Sweetgreen Inc","Consumer Cyclical","Restaurants",1139.23
+1916,"SGHC","Super Group (SGHC) Limited","Consumer Cyclical","Gambling",5863.44
+1917,"SGI","Somnigroup International Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",14353.11
+1918,"SGRY","Surgery Partners Inc","Healthcare","Medical Care Facilities",1785.73
+1919,"SHAK","Shake Shack Inc","Consumer Cyclical","Restaurants",2880.80
+1920,"SHBI","Shore Bancshares Inc","Financial","Banks - Regional",753.54
+1921,"SHC","Sotera Health Co","Healthcare","Diagnostics & Research",5088.23
+1922,"SHEN","Shenandoah Telecommunications Co","Communication Services","Telecom Services",637.80
+1923,"SHLS","Shoals Technologies Group Inc","Technology","Solar",1417.09
+1924,"SHO","Sunstone Hotel Investors Inc","Real Estate","REIT - Hotel & Motel",2110.46
+1925,"SHOE","Shoe Station Group Inc","Consumer Cyclical","Apparel Retail",355.03
+1926,"SHOO","Steven Madden Ltd","Consumer Cyclical","Footwear & Accessories",3234.43
+1927,"SHW","Sherwin-Williams Co","Basic Materials","Specialty Chemicals",77932.65
+1928,"SIBN","SI-BONE Inc","Healthcare","Medical Devices",845.27
+1929,"SIG","Signet Jewelers Ltd","Consumer Cyclical","Luxury Goods",3949.09
+1930,"SIGA","SIGA Technologies Inc","Healthcare","Drug Manufacturers - Specialty & Generic",235.67
+1931,"SIGI","Selective Insurance Group Inc","Financial","Insurance - Property & Casualty",5071.12
+1932,"SIRI","Sirius XM Holdings Inc","Communication Services","Entertainment",8874.98
+1933,"SITC","SITE Centers Corp","Real Estate","REIT - Retail",166.34
+1934,"SITE","SiteOne Landscape Supply Inc","Industrials","Industrial Distribution",3830.32
+1935,"SITM","SiTime Corp","Technology","Semiconductors",19397.62
+1936,"SJM","J.M. Smucker Co","Consumer Defensive","Packaged Foods",12755.75
+1937,"SKT","Tanger Inc","Real Estate","REIT - Retail",3975.96
+1938,"SKWD","Skyward Specialty Insurance Group Inc","Financial","Insurance - Property & Casualty",2633.16
+1939,"SKY","Champion Homes Inc","Consumer Cyclical","Residential Construction",4422.20
+1940,"SKYW","Skywest Inc","Industrials","Airlines",3755.86
+1941,"SLAB","Silicon Laboratories Inc","Technology","Semiconductors",7399.08
+1942,"SLB","SLB Ltd","Energy","Oil & Gas Equipment & Services",72693.34
+1943,"SLDE","Slide Insurance Holdings Inc","Financial","Insurance - Property & Casualty",2955.33
+1944,"SLDP","Solid Power Inc","Consumer Cyclical","Auto Parts",552.19
+1945,"SLG","SL Green Realty Corp","Real Estate","REIT - Office",3738.86
+1946,"SLGN","Silgan Holdings Inc","Consumer Cyclical","Packaging & Containers",3783.41
+1947,"SLM","SLM Corp","Financial","Credit Services",4260.76
+1948,"SLVM","Sylvamo Corp","Basic Materials","Paper & Paper Products",1298.17
+1949,"SM","SM Energy Co","Energy","Oil & Gas E&P",8819.63
+1950,"SMA","Smartstop Self Storage REIT Inc","Real Estate","REIT - Industrial",1941.09
+1951,"SMBC","Southern Missouri Bancorp Inc","Financial","Banks - Regional",787.12
+1952,"SMBK","SmartFinancial Inc","Financial","Banks - Regional",855.95
+1953,"SMCI","Super Micro Computer Inc","Technology","Computer Hardware",28098.41
+1954,"SMG","Scotts Miracle-Gro Company","Basic Materials","Agricultural Inputs",2936.05
+1955,"SMP","Standard Motor Products Inc","Consumer Cyclical","Auto Parts",828.60
+1956,"SMPL","Simply Good Foods Co","Consumer Defensive","Packaged Foods",894.33
+1957,"SMR","NuScale Power Corp","Industrials","Specialty Industrial Machinery",3145.58
+1958,"SMTC","Semtech Corp","Technology","Semiconductors",17497.62
+1959,"SN","SharkNinja Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",26042.92
+1960,"SNA","Snap-on Inc","Industrials","Tools & Accessories",18563.84
+1961,"SNDA","Sonida Senior Living Inc","Healthcare","Medical Care Facilities",1727.81
+1962,"SNDK","Sandisk Corp","Technology","Computer Hardware",235655.53
+1963,"SNDR","Schneider National Inc","Industrials","Trucking",5562.30
+1964,"SNEX","StoneX Group Inc","Financial","Capital Markets",7249.06
+1965,"SNOW","Snowflake Inc","Technology","Software - Application",121151.52
+1966,"SNPS","Synopsys Inc","Technology","Software - Infrastructure",95387.14
+1967,"SNX","TD Synnex Corp","Technology","Electronics & Computer Distribution",21337.29
+1968,"SO","Southern Company","Utilities","Utilities - Regulated Electric",99103.78
+1969,"SOC","Sable Offshore Corp","Energy","Oil & Gas Drilling",740.62
+1970,"SOFI","SoFi Technologies Inc","Financial","Credit Services",20161.41
+1971,"SOLS","Solstice Advanced Materials Inc","Basic Materials","Specialty Chemicals",9569.91
+1972,"SOLV","Solventum Corp","Healthcare","Medical Instruments & Supplies",14709.03
+1973,"SON","Sonoco Products Co","Consumer Cyclical","Packaging & Containers",4785.55
+1974,"SONO","Sonos Inc","Technology","Consumer Electronics",2005.08
+1975,"SOUN","SoundHound AI Inc","Technology","Software - Application",2483.32
+1976,"SPB","Spectrum Brands Holdings Inc","Consumer Defensive","Household & Personal Products",1784.00
+1977,"SPCX","Space Exploration Technologies Corp","Industrials","Aerospace & Defense",2179106.69
+1978,"SPFI","South Plains Financial Inc","Financial","Banks - Regional",806.31
+1979,"SPG","Simon Property Group Inc","Real Estate","REIT - Retail",64585.71
+1980,"SPGI","S&P Global Inc","Financial","Financial Data & Stock Exchanges",118724.81
+1981,"SPHR","Sphere Entertainment Co","Communication Services","Entertainment",3923.56
+1982,"SPNT","SiriusPoint Ltd","Financial","Insurance - Reinsurance",2907.61
+1983,"SPOK","Spok Holdings Inc","Healthcare","Health Information Services",231.36
+1984,"SPOT","Spotify Technology SA","Communication Services","Internet Content & Information",108380.58
+1985,"SPSC","SPS Commerce Inc","Technology","Software - Application",2999.53
+1986,"SPT","Sprout Social Inc","Technology","Software - Application",671.81
+1987,"SPXC","SPX Technologies Inc","Industrials","Building Products & Equipment",8443.48
+1988,"SR","Spire Inc","Utilities","Utilities - Regulated Gas",4610.52
+1989,"SRCE","1st Source Corp","Financial","Banks - Regional",2047.20
+1990,"SRE","Sempra","Utilities","Utilities - Diversified",52364.34
+1991,"SRTA","Strata Critical Medical Inc","Healthcare","Medical Care Facilities",395.44
+1992,"SSB","SouthState Bank Corp","Financial","Banks - Regional",9752.73
+1993,"SSD","Simpson Manufacturing Co Inc","Basic Materials","Lumber & Wood Production",7047.32
+1994,"SSNC","SS&C Technologies Holdings Inc","Technology","Software - Application",18924.93
+1995,"SSP","E.W. Scripps Co","Communication Services","Broadcasting",267.81
+1996,"SSRM","SSR Mining Inc","Basic Materials","Gold",6855.43
+1997,"SSTK","Shutterstock Inc","Communication Services","Internet Content & Information",163.68
+1998,"ST","Sensata Technologies Holding Plc","Technology","Scientific & Technical Instruments",6145.98
+1999,"STAA","Staar Surgical Co","Healthcare","Medical Instruments & Supplies",1122.22
+2000,"STAG","STAG Industrial Inc","Real Estate","REIT - Industrial",6917.97
+2001,"STBA","S & T Bancorp Inc","Financial","Banks - Regional",1718.84
+2002,"STC","Stewart Information Services Corp","Financial","Insurance - Property & Casualty",1583.49
+2003,"STE","Steris Plc","Healthcare","Medical Devices",20549.12
+2004,"STEP","StepStone Group Inc","Financial","Asset Management",5298.92
+2005,"STGW","Stagwell Inc","Communication Services","Advertising Agencies",2141.60
+2006,"STLD","Steel Dynamics Inc","Basic Materials","Steel",33563.14
+2007,"STLN","Starling Oncology Inc","Healthcare","Medical Care Facilities",617.89
+2008,"STNE","StoneCo Ltd","Technology","Software - Infrastructure",2821.45
+2009,"STNG","Scorpio Tankers Inc","Energy","Oil & Gas Midstream",4414.68
+2010,"STRA","Strategic Education Inc","Consumer Defensive","Education & Training Services",1829.68
+2011,"STRL","Sterling Infrastructure Inc","Industrials","Engineering & Construction",15857.40
+2012,"STRZ","Starz Entertainment Corp","Communication Services","Entertainment",404.64
+2013,"STT","State Street Corp","Financial","Asset Management",48097.53
+2014,"STUB","Stubhub Holdings Inc","Communication Services","Internet Content & Information",2346.03
+2015,"STWD","Starwood Property Trust Inc","Real Estate","REIT - Mortgage",4719.66
+2016,"STZ","Constellation Brands Inc","Consumer Defensive","Beverages - Brewers",21112.99
+2017,"SUI","Sun Communities Inc","Real Estate","REIT - Residential",13617.35
+2018,"SUNB","Sunbelt Rentals Holdings Inc","Industrials","Rental & Leasing Services",30670.90
+2019,"SUPN","Supernus Pharmaceuticals Inc","Healthcare","Drug Manufacturers - Specialty & Generic",2453.57
+2020,"SVC","Service Properties Trust","Real Estate","REIT - Hotel & Motel",805.55
+2021,"SVV","Savers Value Village Inc","Consumer Cyclical","Specialty Retail",1431.50
+2022,"SW","Smurfit WestRock plc","Consumer Cyclical","Packaging & Containers",21673.75
+2023,"SWBI","Smith & Wesson Brands Inc","Industrials","Aerospace & Defense",641.65
+2024,"SWK","Stanley Black & Decker Inc","Industrials","Tools & Accessories",13466.15
+2025,"SWKS","Skyworks Solutions Inc","Technology","Semiconductors",18989.62
+2026,"SWX","Southwest Gas Holdings Inc","Utilities","Utilities - Regulated Gas",6049.95
+2027,"SXC","SunCoke Energy Inc","Basic Materials","Coking Coal",827.53
+2028,"SXI","Standex International Corp","Industrials","Specialty Industrial Machinery",3451.83
+2029,"SXT","Sensient Technologies Corp","Basic Materials","Specialty Chemicals",5619.57
+2030,"SYBT","Stock Yards Bancorp Inc","Financial","Banks - Regional",2357.65
+2031,"SYF","Synchrony Financial","Financial","Credit Services",23986.34
+2032,"SYK","Stryker Corp","Healthcare","Medical Devices",106238.22
+2033,"SYNA","Synaptics Inc","Technology","Semiconductors",4727.64
+2034,"SYY","Sysco Corp","Consumer Defensive","Food Distribution",38467.67
+2035,"T","AT&T Inc","Communication Services","Telecom Services",170418.83
+2036,"TALO","Talos Energy Inc","Energy","Oil & Gas E&P",2830.06
+2037,"TAP","Molson Coors Beverage Company","Consumer Defensive","Beverages - Brewers",7123.34
+2038,"TATT","TAT Technologies Ltd","Industrials","Aerospace & Defense",428.55
+2039,"TBBK","Bancorp Inc","Financial","Banks - Regional",2012.01
+2040,"TBCH","Turtle Beach Corp","Technology","Consumer Electronics",227.99
+2041,"TBI","TrueBlue Inc","Industrials","Staffing & Employment Services",278.87
+2042,"TCBK","Trico Bancshares","Financial","Banks - Regional",1659.39
+2043,"TCBX","Third Coast Bancshares Inc","Financial","Banks - Regional",695.68
+2044,"TCMD","Tactile Systems Technology Inc","Healthcare","Medical Devices",501.07
+2045,"TDAY","USA TODAY Co Inc","Communication Services","Publishing",1026.25
+2046,"TDC","Teradata Corp","Technology","Software - Infrastructure",2816.97
+2047,"TDG","Transdigm Group Incorporated","Industrials","Aerospace & Defense",60212.72
+2048,"TDOC","Teladoc Health Inc","Healthcare","Health Information Services",1006.53
+2049,"TDS","Telephone And Data Systems Inc","Communication Services","Telecom Services",3672.39
+2050,"TDUP","ThredUp Inc","Consumer Cyclical","Internet Retail",308.63
+2051,"TDW","Tidewater Inc","Energy","Oil & Gas Equipment & Services",4214.35
+2052,"TDY","Teledyne Technologies Inc","Technology","Scientific & Technical Instruments",28036.84
+2053,"TE","T1 Energy Inc","Industrials","Electrical Equipment & Parts",1013.00
+2054,"TEAM","Atlassian Corp","Technology","Software - Application",51531.47
+2055,"TEM","Tempus AI Inc","Healthcare","Health Information Services",12500.52
+2056,"TENB","Tenable Holdings Inc","Technology","Software - Infrastructure",4296.56
+2057,"TER","Teradyne Inc","Technology","Semiconductor Equipment & Materials",62336.18
+2058,"TEX","Terex Corp","Industrials","Farm & Heavy Construction Machinery",5983.61
+2059,"TFC","Truist Financial Corp","Financial","Banks - Regional",56414.87
+2060,"TFIN","Triumph Financial Inc","Financial","Banks - Regional",1500.10
+2061,"TFSL","TFS Financial Corp","Financial","Banks - Regional",4540.37
+2062,"TFX","Teleflex Incorporated","Healthcare","Medical Instruments & Supplies",5262.23
+2063,"TG","Tredegar Corp","Industrials","Metal Fabrication",249.15
+2064,"TGLS","Tecnoglass Holdings Inc","Basic Materials","Building Materials",1678.76
+2065,"TGT","Target Corp","Consumer Defensive","Discount Stores",70306.97
+2066,"TH","Target Hospitality Corp","Industrials","Specialty Business Services",1826.09
+2067,"THC","Tenet Healthcare Corp","Healthcare","Medical Care Facilities",20980.84
+2068,"THFF","First Financial Corp","Financial","Banks - Regional",878.93
+2069,"THG","Hanover Insurance Group Inc","Financial","Insurance - Property & Casualty",7727.65
+2070,"THO","Thor Industries Inc","Consumer Cyclical","Recreational Vehicles",3412.23
+2071,"THRM","Gentherm Inc","Consumer Cyclical","Auto Parts",1630.44
+2072,"THRY","Thryv Holdings Inc","Technology","Software - Application",64.88
+2073,"TIC","TIC Solutions Inc","Industrials","Specialty Business Services",1924.70
+2074,"TIGO","Millicom International Cellular SA","Communication Services","Telecom Services",14735.14
+2075,"TILE","Interface Inc","Consumer Cyclical","Furnishings, Fixtures & Appliances",2013.19
+2076,"TIPT","Tiptree Inc","Financial","Asset Management",646.11
+2077,"TITN","Titan Machinery Inc","Industrials","Industrial Distribution",556.79
+2078,"TJX","TJX Companies Inc","Consumer Cyclical","Apparel Retail",152621.39
+2079,"TK","Teekay Corp Ltd","Energy","Oil & Gas Midstream",1347.81
+2080,"TKO","TKO Group Holdings Inc","Communication Services","Entertainment",34377.06
+2081,"TKR","Timken Co","Industrials","Tools & Accessories",7923.40
+2082,"TLN","Talen Energy Corp","Utilities","Utilities - Independent Power Producers",16991.11
+2083,"TMDX","Transmedics Group Inc","Healthcare","Medical Devices",2739.33
+2084,"TMO","Thermo Fisher Scientific Inc","Healthcare","Diagnostics & Research",241067.83
+2085,"TMP","Tompkins Financial Corp","Financial","Banks - Regional",1388.67
+2086,"TMUS","T-Mobile US Inc","Communication Services","Telecom Services",183759.37
+2087,"TNC","Tennant Co","Industrials","Specialty Industrial Machinery",1124.23
+2088,"TNDM","Tandem Diabetes Care Inc","Healthcare","Medical Devices",1090.65
+2089,"TNET","TriNet Group Inc","Industrials","Staffing & Employment Services",3052.21
+2090,"TNK","Teekay Tankers Ltd","Energy","Oil & Gas Midstream",3697.59
+2091,"TNL","Travel+Leisure Co","Consumer Cyclical","Travel Services",3832.00
+2092,"TOL","Toll Brothers Inc","Consumer Cyclical","Residential Construction",12424.18
+2093,"TOST","Toast Inc","Technology","Software - Infrastructure",17737.93
+2094,"TOWN","Townebank Portsmouth VA","Financial","Banks - Regional",3260.27
+2095,"TPB","Turning Point Brands Inc","Consumer Defensive","Tobacco",1143.59
+2096,"TPC","Tutor Perini Corp","Industrials","Engineering & Construction",4428.42
+2097,"TPG","TPG Inc","Financial","Asset Management",17395.90
+2098,"TPL","Texas Pacific Land Corp","Energy","Oil & Gas E&P",24677.76
+2099,"TPR","Tapestry Inc","Consumer Cyclical","Luxury Goods",23135.09
+2100,"TRC","Tejon Ranch Co","Industrials","Conglomerates",443.16
+2101,"TREE","LendingTree Inc","Financial","Insurance Brokers",355.90
+2102,"TREX","TREX Co Inc","Industrials","Building Products & Equipment",4526.89
+2103,"TRGP","Targa Resources Corp","Energy","Oil & Gas Midstream",61861.20
+2104,"TRIP","TripAdvisor Inc","Consumer Cyclical","Travel Services",1050.11
+2105,"TRMB","Trimble Inc","Technology","Scientific & Technical Instruments",13955.81
+2106,"TRMK","Trustmark Corp","Financial","Banks - Regional",2587.04
+2107,"TRN","Trinity Industries Inc","Industrials","Railroads",2023.60
+2108,"TRNO","Terreno Realty Corp","Real Estate","REIT - Industrial",7026.41
+2109,"TRNS","Transcat Inc","Industrials","Specialty Business Services",808.69
+2110,"TROW","T. Rowe Price Group Inc","Financial","Asset Management",22233.91
+2111,"TROX","Tronox Holdings plc","Basic Materials","Chemicals",603.67
+2112,"TRS","Trimas Corp","Consumer Cyclical","Packaging & Containers",1379.00
+2113,"TRST","Trustco Bank Corp","Financial","Banks - Regional",932.44
+2114,"TRTX","TPG RE Finance Trust Inc","Real Estate","REIT - Mortgage",458.31
+2115,"TRU","TransUnion","Financial","Financial Data & Stock Exchanges",12375.44
+2116,"TRUP","Trupanion Inc","Financial","Insurance - Property & Casualty",1132.79
+2117,"TRV","Travelers Companies Inc","Financial","Insurance - Property & Casualty",77229.07
+2118,"TSBK","Timberland Bancorp Inc","Financial","Banks - Regional",352.86
+2119,"TSCO","Tractor Supply Co","Consumer Cyclical","Specialty Retail",17444.42
+2120,"TSLA","Tesla Inc","Consumer Cyclical","Auto Manufacturers",1481080.35
+2121,"TSN","Tyson Foods Inc","Consumer Defensive","Farm Products",18046.86
+2122,"TT","Trane Technologies plc","Industrials","Building Products & Equipment",103397.69
+2123,"TTAM","Titan America SA","Basic Materials","Building Materials",2416.99
+2124,"TTAN","ServiceTitan Inc","Technology","Software - Application",7035.41
+2125,"TTC","Toro Co","Industrials","Tools & Accessories",9164.36
+2126,"TTD","Trade Desk Inc","Communication Services","Advertising Agencies",5834.30
+2127,"TTEK","Tetra Tech Inc","Industrials","Engineering & Construction",8554.44
+2128,"TTGT","Techtarget Inc","Technology","Information Technology Services",296.57
+2129,"TTI","Tetra Technologies Inc","Energy","Oil & Gas Equipment & Services",906.21
+2130,"TTMI","TTM Technologies Inc","Technology","Electronic Components",12378.49
+2131,"TTWO","Take-Two Interactive Software Inc","Communication Services","Electronic Gaming & Multimedia",39148.10
+2132,"TW","Tradeweb Markets Inc","Financial","Capital Markets",25668.22
+2133,"TWI","Titan International Inc","Industrials","Farm & Heavy Construction Machinery",440.18
+2134,"TWLO","Twilio Inc","Technology","Software - Infrastructure",42351.44
+2135,"TXG","10x Genomics Inc","Healthcare","Medical Devices",10068.90
+2136,"TXN","Texas Instruments Inc","Technology","Semiconductors",263197.99
+2137,"TXNM","TXNM Energy Inc","Utilities","Utilities - Regulated Electric",6451.17
+2138,"TXRH","Texas Roadhouse Inc","Consumer Cyclical","Restaurants",10683.72
+2139,"TXT","Textron Inc","Industrials","Aerospace & Defense",12592.88
+2140,"TYL","Tyler Technologies Inc","Technology","Software - Application",13561.35
+2141,"U","Unity Software Inc","Technology","Software - Application",20195.68
+2142,"UA","Under Armour Inc","Consumer Cyclical","Apparel Manufacturing",2063.07
+2143,"UAA","Under Armour Inc","Consumer Cyclical","Apparel Manufacturing",2071.12
+2144,"UAL","United Airlines Holdings Inc","Industrials","Airlines",34873.28
+2145,"UAMY","United States Antimony Corp","Basic Materials","Other Industrial Metals & Mining",556.77
+2146,"UBER","Uber Technologies Inc","Technology","Software - Application",143469.42
+2147,"UBSI","United Bankshares Inc","Financial","Banks - Regional",6224.92
+2148,"UCB","United Community Banks Inc","Financial","Banks - Regional",4048.92
+2149,"UCTT","Ultra Clean Hldgs Inc","Technology","Semiconductor Equipment & Materials",3059.83
+2150,"UDR","UDR Inc","Real Estate","REIT - Residential",17529.05
+2151,"UE","Urban Edge Properties","Real Estate","REIT - Retail",2571.21
+2152,"UEC","Uranium Energy Corp","Energy","Uranium",4529.65
+2153,"UFCS","United Fire Group Inc","Financial","Insurance - Property & Casualty",1449.78
+2154,"UFPI","UFP Industries Inc","Basic Materials","Lumber & Wood Production",4217.09
+2155,"UFPT","UFP Technologies Inc","Healthcare","Medical Devices",2219.63
+2156,"UGI","UGI Corp","Utilities","Utilities - Regulated Gas",7923.44
+2157,"UHAL","U-Haul Holding Company","Industrials","Rental & Leasing Services",10024.26
+2158,"UHAL-B","U-Haul Holding Company","Industrials","Rental & Leasing Services",10017.80
+2159,"UHS","Universal Health Services Inc","Healthcare","Medical Care Facilities",10354.14
+2160,"UHT","Universal Health Realty Income Trust","Real Estate","REIT - Healthcare Facilities",521.75
+2161,"UI","Ubiquiti Inc","Technology","Communication Equipment",38847.11
+2162,"UIS","Unisys Corp","Technology","Information Technology Services",168.44
+2163,"ULCC","Frontier Group Holdings Inc","Industrials","Airlines",1365.18
+2164,"ULH","Universal Logistics Holdings Inc","Industrials","Trucking",457.75
+2165,"ULS","UL Solutions Inc","Industrials","Specialty Business Services",14264.10
+2166,"ULTA","Ulta Beauty Inc","Consumer Cyclical","Specialty Retail",24124.20
+2167,"UMAC","Unusual Machines Inc","Technology","Computer Hardware",1068.57
+2168,"UMBF","UMB Financial Corp","Financial","Banks - Regional",9903.12
+2169,"UMH","UMH Properties Inc","Real Estate","REIT - Residential",1289.33
+2170,"UNF","Unifirst Corp","Industrials","Specialty Business Services",4510.27
+2171,"UNFI","United Natural Foods Inc","Consumer Defensive","Food Distribution",2658.17
+2172,"UNH","Unitedhealth Group Inc","Healthcare","Healthcare Plans",332962.82
+2173,"UNIT","Uniti Group Inc","Real Estate","REIT - Specialty",1796.17
+2174,"UNM","Unum Group","Financial","Insurance - Life",14665.54
+2175,"UNP","Union Pacific Corp","Industrials","Railroads",165271.81
+2176,"UNTY","Unity Bancorp Inc","Financial","Banks - Regional",554.86
+2177,"UPBD","Upbound Group Inc","Technology","Software - Application",914.72
+2178,"UPS","United Parcel Service Inc","Industrials","Integrated Freight & Logistics",80084.06
+2179,"UPST","Upstart Holdings Inc","Financial","Credit Services",2354.00
+2180,"UPWK","Upwork Inc","Communication Services","Internet Content & Information",1070.42
+2181,"URBN","Urban Outfitters Inc","Consumer Cyclical","Apparel Retail",6935.05
+2182,"URI","United Rentals Inc","Industrials","Rental & Leasing Services",65363.95
+2183,"USAR","USA Rare Earth Inc","Basic Materials","Other Industrial Metals & Mining",4737.21
+2184,"USB","U.S. Bancorp","Financial","Banks - Regional",88855.68
+2185,"USFD","US Foods Holding Corp","Consumer Defensive","Food Distribution",21010.04
+2186,"USGO","U.S. GoldMining Inc","Basic Materials","Other Industrial Metals & Mining",84.63
+2187,"USLM","United States Lime & Minerals Inc","Basic Materials","Building Materials",3128.47
+2188,"USNA","Usana Health Sciences Inc","Consumer Defensive","Packaged Foods",270.87
+2189,"USPH","U.S. Physical Therapy Inc","Healthcare","Medical Care Facilities",1246.35
+2190,"UTHR","United Therapeutics Corp","Healthcare","Drug Manufacturers - Specialty & Generic",22851.31
+2191,"UTI","Universal Technical Institute Inc","Consumer Defensive","Education & Training Services",1118.98
+2192,"UTL","Unitil Corp","Utilities","Utilities - Diversified",955.23
+2193,"UTMD","Utah Medical Products Inc","Healthcare","Medical Instruments & Supplies",234.47
+2194,"UTZ","Utz Brands Inc","Consumer Defensive","Packaged Foods",2061.54
+2195,"UUUU","Energy Fuels Inc","Energy","Uranium",2631.40
+2196,"UVE","Universal Insurance Holdings Inc","Financial","Insurance - Property & Casualty",1307.19
+2197,"UVSP","Univest Financial Corp","Financial","Banks - Regional",1137.98
+2198,"UVV","Universal Corp","Consumer Defensive","Tobacco",1075.15
+2199,"UWMC","UWM Holdings Corp","Financial","Mortgage Finance",1751.59
+2200,"V","Visa Inc","Financial","Credit Services",700329.47
+2201,"VAC","Marriott Vacations Worldwide Corp","Consumer Cyclical","Resorts & Casinos",3584.34
+2202,"VAL","Valaris Ltd","Energy","Oil & Gas Drilling",5829.83
+2203,"VC","Visteon Corp","Consumer Cyclical","Auto Parts",2299.81
+2204,"VCTR","Victory Capital Holdings Inc","Financial","Asset Management",6871.85
+2205,"VCYT","Veracyte Inc","Healthcare","Diagnostics & Research",3505.03
+2206,"VECO","Veeco Instruments Inc","Technology","Semiconductor Equipment & Materials",3145.12
+2207,"VEEV","Veeva Systems Inc","Healthcare","Health Information Services",46118.12
+2208,"VEL","Velocity Financial Inc","Financial","Mortgage Finance",588.67
+2209,"VERX","Vertex Inc","Technology","Software - Application",2071.53
+2210,"VFC","VF Corp","Consumer Cyclical","Apparel Manufacturing",5712.24
+2211,"VGNT","Versigent Plc","Consumer Cyclical","Auto Parts",3128.09
+2212,"VIA","Via Transportation Inc","Technology","Software - Application",2520.97
+2213,"VIAV","Viavi Solutions Inc","Technology","Communication Equipment",10842.71
+2214,"VICI","VICI Properties Inc","Real Estate","REIT - Diversified",25093.55
+2215,"VICR","Vicor Corp","Technology","Electronic Components",12094.72
+2216,"VIK","Viking Holdings Ltd","Consumer Cyclical","Travel Services",36424.27
+2217,"VIRT","Virtu Financial Inc","Financial","Capital Markets",8972.13
+2218,"VISN","Vistance Networks Inc","Technology","Communication Equipment",1388.37
+2219,"VITL","Vital Farms Inc","Consumer Defensive","Farm Products",405.06
+2220,"VLO","Valero Energy Corp","Energy","Oil & Gas Refining & Marketing",127782.21
+2221,"VLTO","Veralto Corp","Industrials","Pollution & Treatment Controls",23521.19
+2222,"VLY","Valley National Bancorp","Financial","Banks - Regional",7045.71
+2223,"VMC","Vulcan Materials Co","Basic Materials","Building Materials",31910.06
+2224,"VMD","Viemed Healthcare Inc","Healthcare","Medical Devices",358.41
+2225,"VMI","Valmont Industries Inc","Industrials","Conglomerates",9048.18
+2226,"VMRK","Vivmark Residential","Real Estate","REIT - Residential",46411.27
+2227,"VNO","Vornado Realty Trust","Real Estate","REIT - Office",6876.08
+2228,"VNOM","Viper Energy Inc","Energy","Oil & Gas Midstream",15312.47
+2229,"VNT","Vontier Corp","Technology","Scientific & Technical Instruments",4353.44
+2230,"VOYA","Voya Financial Inc","Financial","Financial Conglomerates",8755.23
+2231,"VOYG","Voyager Technologies Inc","Industrials","Aerospace & Defense",1719.80
+2232,"VPG","Vishay Precision Group Inc","Technology","Scientific & Technical Instruments",962.40
+2233,"VREX","Varex Imaging Corp","Healthcare","Medical Devices",784.30
+2234,"VRNS","Varonis Systems Inc","Technology","Software - Infrastructure",5614.38
+2235,"VRRM","Verra Mobility Corp","Technology","Information Technology Services",443.79
+2236,"VRSK","Verisk Analytics Inc","Industrials","Consulting Services",22841.08
+2237,"VRSN","Verisign Inc","Technology","Software - Infrastructure",26890.44
+2238,"VRT","Vertiv Holdings Co","Industrials","Electrical Equipment & Parts",93833.17
+2239,"VRTS","Virtus Investment Partners Inc","Financial","Asset Management",871.48
+2240,"VSAT","Viasat Inc","Technology","Communication Equipment",9286.12
+2241,"VSEC","VSE Corp","Industrials","Aerospace & Defense",4770.20
+2242,"VSH","Vishay Intertechnology Inc","Technology","Semiconductors",5300.79
+2243,"VSNT","Versant Media Group Inc","Communication Services","Entertainment",4409.43
+2244,"VST","Vistra Corp","Utilities","Utilities - Independent Power Producers",52406.08
+2245,"VSTS","Vestis Corp","Industrials","Rental & Leasing Services",1850.24
+2246,"VSXY","Victoria's Secret & Co","Consumer Cyclical","Apparel Retail",6908.37
+2247,"VTOL","Bristow Group Inc","Energy","Oil & Gas Equipment & Services",1204.65
+2248,"VTR","Ventas Inc","Real Estate","REIT - Healthcare Facilities",42870.56
+2249,"VTRS","Viatris Inc","Healthcare","Drug Manufacturers - Specialty & Generic",20031.42
+2250,"VTS","Vitesse Energy Inc","Energy","Oil & Gas E&P",722.93
+2251,"VVV","Valvoline Inc","Consumer Cyclical","Auto & Truck Dealerships",3934.76
+2252,"VVX","V2X Inc","Industrials","Aerospace & Defense",2224.58
+2253,"VYLR","Vylor Inc","Basic Materials","Agricultural Inputs",48565.20
+2254,"VYX","NCR Voyix Corp","Technology","Information Technology Services",952.68
+2255,"VZ","Verizon Communications Inc","Communication Services","Telecom Services",192573.83
+2256,"W","Wayfair Inc","Consumer Cyclical","Internet Retail",14399.46
+2257,"WAB","Westinghouse Air Brake Technologies Corp","Industrials","Railroads",47430.16
+2258,"WABC","Westamerica Bancorporation","Financial","Banks - Regional",1377.19
+2259,"WAFD","WaFd Inc","Financial","Banks - Regional",2201.10
+2260,"WAL","Western Alliance Bancorp","Financial","Banks - Regional",8237.12
+2261,"WASH","Washington Trust Bancorp Inc","Financial","Banks - Regional",712.42
+2262,"WAT","Waters Corp","Healthcare","Diagnostics & Research",42161.21
+2263,"WAY","Waystar Holding Corp","Healthcare","Health Information Services",5077.50
+2264,"WCC","Wesco International Inc","Industrials","Industrial Distribution",17345.48
+2265,"WD","Walker & Dunlop Inc","Financial","Mortgage Finance",1180.46
+2266,"WDAY","Workday Inc","Technology","Software - Application",45262.21
+2267,"WDC","Western Digital Corp","Technology","Computer Hardware",141804.35
+2268,"WDFC","WD-40 Co","Basic Materials","Specialty Chemicals",2736.56
+2269,"WEAV","Weave Communications Inc","Healthcare","Health Information Services",594.53
+2270,"WEC","WEC Energy Group Inc","Utilities","Utilities - Regulated Electric",33761.26
+2271,"WELL","Welltower Inc","Real Estate","REIT - Healthcare Facilities",160754.95
+2272,"WEN","Wendy's Co","Consumer Cyclical","Restaurants",1185.96
+2273,"WERN","Werner Enterprises Inc","Industrials","Trucking",1979.24
+2274,"WEST","Westrock Coffee Company","Consumer Defensive","Packaged Foods",799.57
+2275,"WEX","WEX Inc","Technology","Software - Infrastructure",5944.17
+2276,"WFC","Wells Fargo & Co","Financial","Banks - Diversified",248058.72
+2277,"WFRD","Weatherford International plc","Energy","Oil & Gas Equipment & Services",5589.74
+2278,"WGO","Winnebago Industries Inc","Consumer Cyclical","Recreational Vehicles",696.82
+2279,"WGS","GeneDx Holdings Corp","Healthcare","Diagnostics & Research",2019.88
+2280,"WH","Wyndham Hotels & Resorts Inc","Consumer Cyclical","Lodging",5444.13
+2281,"WHD","Cactus Inc","Energy","Oil & Gas Equipment & Services",5068.94
+2282,"WHR","Whirlpool Corp","Consumer Cyclical","Furnishings, Fixtures & Appliances",1901.21
+2283,"WINA","Winmark Corp","Consumer Cyclical","Specialty Retail",1060.19
+2284,"WING","Wingstop Inc","Consumer Cyclical","Restaurants",3228.24
+2285,"WK","Workiva Inc","Technology","Software - Application",4009.95
+2286,"WKC","World Kinect Corp","Energy","Oil & Gas Refining & Marketing",1904.88
+2287,"WLDN","Willdan Group Inc","Industrials","Engineering & Construction",1137.99
+2288,"WLFC","Willis Lease Finance Corp","Industrials","Rental & Leasing Services",845.98
+2289,"WLK","Westlake Corp","Basic Materials","Specialty Chemicals",7963.00
+2290,"WLTH","Wealthfront Corp","Technology","Software - Application",1700.76
+2291,"WLY","John Wiley & Sons Inc","Communication Services","Publishing",2495.80
+2292,"WM","Waste Management Inc","Industrials","Waste Management",83980.16
+2293,"WMB","Williams Cos Inc","Energy","Oil & Gas Midstream",88483.93
+2294,"WMK","Weis Markets Inc","Consumer Defensive","Grocery Stores",1794.73
+2295,"WMS","Advanced Drainage Systems Inc","Industrials","Building Products & Equipment",9516.91
+2296,"WMT","Walmart Inc","Consumer Defensive","Discount Stores",877154.95
+2297,"WNC","Wabash National Corp","Industrials","Farm & Heavy Construction Machinery",546.29
+2298,"WOLF","Wolfspeed Inc","Technology","Semiconductors",1641.90
+2299,"WOOF","Petco Health and Wellness Co Inc","Consumer Cyclical","Specialty Retail",641.58
+2300,"WOR","Worthington Enterprises Inc","Industrials","Metal Fabrication",2995.29
+2301,"WPC","W. P. Carey Inc","Real Estate","REIT - Diversified",14382.08
+2302,"WRB","W.R. Berkley Corp","Financial","Insurance - Property & Casualty",26746.95
+2303,"WRBY","Warby Parker Inc","Healthcare","Medical Instruments & Supplies",3084.02
+2304,"WRLD","World Acceptance Corp","Financial","Credit Services",840.30
+2305,"WS","Worthington Steel Inc","Basic Materials","Steel",1763.77
+2306,"WSBC","Wesbanco Inc","Financial","Banks - Regional",3544.68
+2307,"WSBF","Waterstone Financial Inc","Financial","Banks - Regional",351.99
+2308,"WSC","WillScot Holdings Corp","Industrials","Rental & Leasing Services",3053.06
+2309,"WSFS","WSFS Financial Corp","Financial","Banks - Regional",3852.74
+2310,"WSHP","WeShop Holdings Ltd","Communication Services","Internet Content & Information",55.89
+2311,"WSM","Williams-Sonoma Inc","Consumer Cyclical","Specialty Retail",28149.22
+2312,"WSO","Watsco Inc","Industrials","Industrial Distribution",11643.28
+2313,"WST","West Pharmaceutical Services Inc","Healthcare","Medical Instruments & Supplies",25565.40
+2314,"WT","WisdomTree Inc","Financial","Asset Management",3436.30
+2315,"WTBA","West Bancorporation","Financial","Banks - Regional",490.51
+2316,"WTFC","Wintrust Financial Corp","Financial","Banks - Regional",9728.60
+2317,"WTI","W & T Offshore Inc","Energy","Oil & Gas E&P",558.49
+2318,"WTM","White Mountains Insurance Group Ltd","Financial","Insurance - Property & Casualty",4916.09
+2319,"WTRG","Essential Utilities Inc","Utilities","Utilities - Regulated Water",10987.91
+2320,"WTS","Watts Water Technologies Inc","Industrials","Specialty Industrial Machinery",11588.59
+2321,"WTTR","Select Water Solutions Inc","Energy","Oil & Gas Equipment & Services",2527.28
+2322,"WTW","Willis Towers Watson Public Limited Co","Financial","Insurance Brokers",27662.84
+2323,"WU","Western Union Company","Financial","Credit Services",1974.19
+2324,"WULF","TeraWulf Inc","Financial","Capital Markets",6810.92
+2325,"WWD","Woodward Inc","Industrials","Aerospace & Defense",19098.37
+2326,"WWW","Wolverine World Wide Inc","Consumer Cyclical","Footwear & Accessories",1559.26
+2327,"WY","Weyerhaeuser Co","Real Estate","REIT - Specialty",13816.51
+2328,"WYFI","Whitefiber Inc","Technology","Information Technology Services",611.85
+2329,"WYNN","Wynn Resorts Ltd","Consumer Cyclical","Resorts & Casinos",7752.90
+2330,"XE","X-Energy Inc","Industrials","Specialty Industrial Machinery",5595.66
+2331,"XEL","Xcel Energy Inc","Utilities","Utilities - Regulated Electric",45823.18
+2332,"XERS","Xeris Biopharma Holdings Inc","Healthcare","Drug Manufacturers - Specialty & Generic",1857.85
+2333,"XHR","Xenia Hotels & Resorts Inc","Real Estate","REIT - Hotel & Motel",1664.11
+2334,"XMTR","Xometry Inc","Industrials","Industrial Distribution",6103.81
+2335,"XOM","ExxonMobil Holdings Corp","Energy","Oil & Gas Integrated",692857.19
+2336,"XP","XP Inc","Financial","Capital Markets",15619.04
+2337,"XPEL","XPEL Inc","Consumer Cyclical","Auto Parts",1238.48
+2338,"XPER","Xperi Inc","Technology","Software - Application",256.05
+2339,"XPO","XPO Inc","Industrials","Trucking",21303.89
+2340,"XPOF","Xponential Fitness Inc","Consumer Cyclical","Leisure",244.28
+2341,"XPRO","Expro Ltd","Energy","Oil & Gas Equipment & Services",1821.18
+2342,"XRAY","DENTSPLY Sirona Inc","Healthcare","Medical Instruments & Supplies",1732.38
+2343,"XRN","Chiron Real Estate Inc","Real Estate","REIT - Healthcare Facilities",494.27
+2344,"XRX","Xerox Holdings Corp","Industrials","Business Equipment & Supplies",383.44
+2345,"XYL","Xylem Inc","Industrials","Specialty Industrial Machinery",23813.32
+2346,"XYZ","Block Inc","Technology","Software - Infrastructure",45197.96
+2347,"YELP","Yelp Inc","Communication Services","Internet Content & Information",1051.09
+2348,"YETI","YETI Holdings Inc","Consumer Cyclical","Leisure",2890.36
+2349,"YEXT","Yext Inc","Technology","Software - Infrastructure",675.04
+2350,"YORW","York Water Co","Utilities","Utilities - Regulated Water",502.60
+2351,"YOU","Clear Secure Inc","Technology","Software - Application",5828.21
+2352,"YSS","York Space Systems Inc","Industrials","Aerospace & Defense",993.10
+2353,"YUM","Yum Brands Inc","Consumer Cyclical","Restaurants",39024.86
+2354,"Z","Zillow Group Inc","Communication Services","Internet Content & Information",6590.15
+2355,"ZBH","Zimmer Biomet Holdings Inc","Healthcare","Medical Devices",16952.77
+2356,"ZBRA","Zebra Technologies Corp","Technology","Communication Equipment",18079.30
+2357,"ZD","Ziff Davis Inc","Communication Services","Advertising Agencies",1917.00
+2358,"ZETA","Zeta Global Holdings Corp","Technology","Software - Infrastructure",8290.98
+2359,"ZG","Zillow Group Inc","Communication Services","Internet Content & Information",6588.43
+2360,"ZGN","Ermenegildo Zegna NV","Consumer Cyclical","Apparel Manufacturing",5306.86
+2361,"ZION","Zions Bancorporation N.A","Financial","Banks - Regional",9155.65
+2362,"ZIP","ZipRecruiter Inc","Communication Services","Internet Content & Information",327.26
+2363,"ZM","Zoom Communications Inc","Technology","Software - Application",27623.16
+2364,"ZS","Zscaler Inc","Technology","Software - Infrastructure",35351.89
+2365,"ZTS","Zoetis Inc","Healthcare","Drug Manufacturers - Specialty & Generic",30198.38
+2366,"ZUMZ","Zumiez Inc","Consumer Cyclical","Apparel Retail",217.85
+2367,"ZWS","Zurn Elkay Water Solutions Corp","Industrials","Pollution & Treatment Controls",7669.55
