@@ -1,49 +1,49 @@
-wf: X (8481, 4038), candidates exclude KRE, ranks ready in 11s
-P_vol: {'target': 'P_vol', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.651, 'auc 2013-19': 0.795, 'auc 2020-26': 0.819, 'auc all': 0.748, 'auc CI95 (year bootstrap)': '0.685-0.803', 'quintile hit rates 2005-26': [0.04, 0.074, 0.107, 0.186, 0.349], 'base': 0.151}  20s
+wf: X (8482, 4038), candidates exclude KRE, ranks ready in 12s
+P_vol: {'target': 'P_vol', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.65, 'auc 2013-19': 0.795, 'auc 2020-26': 0.818, 'auc all': 0.748, 'auc CI95 (year bootstrap)': '0.685-0.803', 'quintile hit rates 2005-26': [0.04, 0.073, 0.107, 0.185, 0.35], 'base': 0.151}  21s
   most selected: SPY:VIX/cc21 (22), SPY:VIX/cc21_rank (22), SPY:pk21_cc21 (22), SPY:pk21_cc21_rank (22), SPY:VIX_prem_chg21_rank (21), SPY:cc21_63 (18), SPY:cc21_63_rank (17), SPY:VIX/pk21_rank (16), SPY:cc21_roc21 (16), IWM:VIX/cc21 (16), SPY:VIX/pk21 (15), SPY:cc21_roc21_rank (14)
   last-window features: SPY:VIX/cc21 (+), SPY:VIX/cc21_rank (+), SPY:pk21_cc21 (+), SPY:VIX_prem_chg21_rank (+), SPY:pk21_cc21_rank (+), SPY:VIX/pk21_rank (+), IWM:VIX/cc21_rank (+), QQQ:VXN/cc21 (+), SPY:cc21_63 (-), IWM:VIX/cc21 (+), SPY:cc21_roc21 (-), SPY:cc21_126 (-), SPY:cc21_roc21_rank (-), SPY:VIX/pk21 (+), QQQ:VXN/cc21_rank (+)
-P_on: {'target': 'P_on', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.798, 'auc 2013-19': 0.786, 'auc 2020-26': 0.751, 'auc all': 0.789, 'auc CI95 (year bootstrap)': '0.744-0.831', 'quintile hit rates 2005-26': [0.027, 0.035, 0.149, 0.223, 0.403], 'base': 0.167}  38s
-  most selected: VIX:lvl_rank1260 (22), VIX:lvl_rank504 (22), SKEW/VIX:lvl_rank (22), SPY:cc10 (22), SPY:pk5 (22), SPY:gk21 (22), SPY:pk10 (22), SPY:cc21 (22), SPY:gk5 (22), SPY:pk21 (22), SPY:gk10 (22), SPY:cc5 (22)
+P_on: {'target': 'P_on', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.798, 'auc 2013-19': 0.787, 'auc 2020-26': 0.751, 'auc all': 0.788, 'auc CI95 (year bootstrap)': '0.744-0.831', 'quintile hit rates 2005-26': [0.027, 0.04, 0.141, 0.218, 0.411], 'base': 0.167}  46s
+  most selected: VIX:lvl_rank1260 (22), VIX:lvl_rank504 (22), SKEW/VIX:lvl_rank (22), SPY:cc10 (22), SPY:pk5 (22), SPY:gk21 (22), SPY:pk10 (22), SPY:cc21 (22), SPY:pk21 (22), SPY:gk5 (22), SPY:gk10 (22), SPY:cc5 (22)
   last-window features: SPY:pk10 (+), SPY:pk21 (+), SPY:gk21 (+), SPY:gk10 (+), SPY:pk5 (+), SPY:gk5 (+), SPY:cc10 (+), SPY:cc21 (+), VIX:lvl_rank1260 (+), SPY:cc63 (+), SPY:cc5 (+), SKEW/VIX:lvl_rank (-), VIX:lvl_rank504 (+), SPY:cc126 (+), XLV:gk21 (+)
-P_off: {'target': 'P_off', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.624, 'auc 2013-19': 0.586, 'auc 2020-26': 0.714, 'auc all': 0.636, 'auc CI95 (year bootstrap)': '0.535-0.723', 'quintile hit rates 2005-26': [0.098, 0.157, 0.098, 0.154, 0.307], 'base': 0.163}  57s
-  most selected: QQQ:pk21 (16), QQQ:cc21 (14), QQQ:pk10 (14), XLK:gk10 (14), XLK:pk10 (14), XLK:pk21 (14), XLK:gk21 (13), XLK:gk5 (12), XLK:pk5 (12), XLK:cc21 (11), QQQ:gk10 (11), QQQ:gk21 (10)
+P_off: {'target': 'P_off', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.624, 'auc 2013-19': 0.589, 'auc 2020-26': 0.715, 'auc all': 0.636, 'auc CI95 (year bootstrap)': '0.535-0.722', 'quintile hit rates 2005-26': [0.098, 0.159, 0.095, 0.156, 0.306], 'base': 0.163}  70s
+  most selected: QQQ:pk21 (16), XLK:pk10 (15), QQQ:cc21 (14), XLK:gk10 (14), QQQ:pk10 (14), XLK:gk21 (14), XLK:pk21 (14), XLK:gk5 (12), QQQ:gk10 (12), XLK:pk5 (12), XLK:cc21 (11), QQQ:gk21 (10)
   last-window features: QQQ:pk10 (+), QQQ:pk5 (+), XLY:pk5 (+), XLY:pk10 (+), QQQ:pk21 (+), QQQ:gk10 (+), QQQ:gk5 (+), XLY:cc10 (+), XLY:gk5 (+), XLK:pk10 (+), XLK:cc21 (+), XLY:pk21 (+), XLK:pk5 (+), XLK:pk21 (+), QQQ:cc21 (+)
-P_off63: {'target': 'P_off63', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.597, 'auc 2013-19': 0.589, 'auc 2020-26': 0.693, 'auc all': 0.606, 'auc CI95 (year bootstrap)': '0.454-0.758', 'quintile hit rates 2005-26': [0.081, 0.129, 0.079, 0.14, 0.223], 'base': 0.13}  74s
+P_off63: {'target': 'P_off63', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.598, 'auc 2013-19': 0.591, 'auc 2020-26': 0.694, 'auc all': 0.607, 'auc CI95 (year bootstrap)': '0.455-0.759', 'quintile hit rates 2005-26': [0.082, 0.128, 0.079, 0.14, 0.222], 'base': 0.13}  94s
   most selected: XLK:pk5 (14), XLK:pk10 (14), XLK:gk5 (12), XLY:cc126 (11), XLK:gk10 (11), XLK:cc63 (10), XLK:cc10 (10), QQQ:cc63 (9), XLY:pk21 (9), XLY:pk10 (8), QQQ:cc10 (8), QQQ:gk10 (7)
   last-window features: KCE:roc63 (-), OVX:lvl_rank252 (+), KCE:roc63_rank (-), XLK:cc21_rank (+), SPY:roc63_rank (-), XLK:cc10_rank (+), QQQ:cc21_rank (+), QQQ:cc10_rank (+), HYG:roc63_rank (-), XSD:cc21_rank (+), XLK:roc63 (-), XLV:rel63_rank (+), XLK:pk10_rank (+), XLY:cc10_rank (+), XLY:pk10_rank (+)
-  P_off K150 d3 free (the overfit reference): {'target': 'P_off', 'model': 'K150 d3 free (the overfit reference)', 'auc 2005-12': 0.488, 'auc 2013-19': 0.487, 'auc 2020-26': 0.63, 'auc all': 0.532, 'quintiles': [0.142, 0.14, 0.168, 0.189, 0.174]}  104s
-  P_off K30 d2 mono: {'target': 'P_off', 'model': 'K30 d2 mono', 'auc 2005-12': 0.65, 'auc 2013-19': 0.524, 'auc 2020-26': 0.671, 'auc all': 0.631, 'quintiles': [0.091, 0.155, 0.135, 0.131, 0.302]}  121s
-  P_off K15 d2 mono (production): {'target': 'P_off', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.624, 'auc 2013-19': 0.586, 'auc 2020-26': 0.714, 'auc all': 0.636, 'quintiles': [0.098, 0.157, 0.098, 0.154, 0.307]}  121s
-  P_off K8 d1 mono (additive): {'target': 'P_off', 'model': 'K8 d1 mono (additive)', 'auc 2005-12': 0.608, 'auc 2013-19': 0.556, 'auc 2020-26': 0.696, 'auc all': 0.625, 'quintiles': [0.102, 0.155, 0.085, 0.181, 0.292]}  140s
-  P_off K5 d1 mono: {'target': 'P_off', 'model': 'K5 d1 mono', 'auc 2005-12': 0.575, 'auc 2013-19': 0.548, 'auc 2020-26': 0.688, 'auc all': 0.61, 'quintiles': [0.121, 0.146, 0.082, 0.16, 0.304]}  154s
-  P_vol K30 d2 mono: {'target': 'P_vol', 'model': 'K30 d2 mono', 'auc 2005-12': 0.626, 'auc 2013-19': 0.826, 'auc 2020-26': 0.838, 'auc all': 0.751, 'quintiles': [0.041, 0.073, 0.104, 0.166, 0.372]}  173s
-  P_vol K15 d2 mono (production): {'target': 'P_vol', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.651, 'auc 2013-19': 0.795, 'auc 2020-26': 0.819, 'auc all': 0.748, 'quintiles': [0.04, 0.074, 0.107, 0.186, 0.349]}  173s
-  P_vol K8 d1 mono: {'target': 'P_vol', 'model': 'K8 d1 mono', 'auc 2005-12': 0.659, 'auc 2013-19': 0.817, 'auc 2020-26': 0.828, 'auc all': 0.761, 'quintiles': [0.035, 0.069, 0.101, 0.183, 0.368]}  188s
-  P_on K30 d2 mono: {'target': 'P_on', 'model': 'K30 d2 mono', 'auc 2005-12': 0.811, 'auc 2013-19': 0.798, 'auc 2020-26': 0.767, 'auc all': 0.797, 'quintiles': [0.028, 0.036, 0.124, 0.223, 0.426]}  206s
-  P_on K15 d2 mono (production): {'target': 'P_on', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.798, 'auc 2013-19': 0.786, 'auc 2020-26': 0.751, 'auc all': 0.789, 'quintiles': [0.027, 0.035, 0.149, 0.223, 0.403]}  206s
-  P_on K8 d1 mono: {'target': 'P_on', 'model': 'K8 d1 mono', 'auc 2005-12': 0.798, 'auc 2013-19': 0.783, 'auc 2020-26': 0.739, 'auc all': 0.784, 'quintiles': [0.023, 0.045, 0.137, 0.221, 0.411]}  221s
+  P_off K150 d3 free (the overfit reference): {'target': 'P_off', 'model': 'K150 d3 free (the overfit reference)', 'auc 2005-12': 0.504, 'auc 2013-19': 0.472, 'auc 2020-26': 0.624, 'auc all': 0.538, 'quintiles': [0.14, 0.136, 0.185, 0.177, 0.177]}  131s
+  P_off K30 d2 mono: {'target': 'P_off', 'model': 'K30 d2 mono', 'auc 2005-12': 0.652, 'auc 2013-19': 0.528, 'auc 2020-26': 0.671, 'auc all': 0.632, 'quintiles': [0.09, 0.153, 0.133, 0.137, 0.302]}  153s
+  P_off K15 d2 mono (production): {'target': 'P_off', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.624, 'auc 2013-19': 0.589, 'auc 2020-26': 0.715, 'auc all': 0.636, 'quintiles': [0.098, 0.159, 0.095, 0.156, 0.306]}  153s
+  P_off K8 d1 mono (additive): {'target': 'P_off', 'model': 'K8 d1 mono (additive)', 'auc 2005-12': 0.608, 'auc 2013-19': 0.556, 'auc 2020-26': 0.691, 'auc all': 0.625, 'quintiles': [0.1, 0.163, 0.081, 0.189, 0.282]}  173s
+  P_off K5 d1 mono: {'target': 'P_off', 'model': 'K5 d1 mono', 'auc 2005-12': 0.575, 'auc 2013-19': 0.55, 'auc 2020-26': 0.668, 'auc all': 0.605, 'quintiles': [0.121, 0.138, 0.101, 0.155, 0.298]}  192s
+  P_vol K30 d2 mono: {'target': 'P_vol', 'model': 'K30 d2 mono', 'auc 2005-12': 0.623, 'auc 2013-19': 0.825, 'auc 2020-26': 0.839, 'auc all': 0.75, 'quintiles': [0.041, 0.073, 0.099, 0.171, 0.37]}  214s
+  P_vol K15 d2 mono (production): {'target': 'P_vol', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.65, 'auc 2013-19': 0.795, 'auc 2020-26': 0.818, 'auc all': 0.748, 'quintiles': [0.04, 0.073, 0.107, 0.185, 0.35]}  214s
+  P_vol K8 d1 mono: {'target': 'P_vol', 'model': 'K8 d1 mono', 'auc 2005-12': 0.66, 'auc 2013-19': 0.818, 'auc 2020-26': 0.828, 'auc all': 0.761, 'quintiles': [0.035, 0.068, 0.101, 0.185, 0.367]}  232s
+  P_on K30 d2 mono: {'target': 'P_on', 'model': 'K30 d2 mono', 'auc 2005-12': 0.809, 'auc 2013-19': 0.798, 'auc 2020-26': 0.766, 'auc all': 0.796, 'quintiles': [0.028, 0.037, 0.124, 0.227, 0.421]}  254s
+  P_on K15 d2 mono (production): {'target': 'P_on', 'model': 'K15 d2 mono (production)', 'auc 2005-12': 0.798, 'auc 2013-19': 0.787, 'auc 2020-26': 0.751, 'auc all': 0.788, 'quintiles': [0.027, 0.04, 0.141, 0.218, 0.411]}  254s
+  P_on K8 d1 mono: {'target': 'P_on', 'model': 'K8 d1 mono', 'auc 2005-12': 0.799, 'auc 2013-19': 0.783, 'auc 2020-26': 0.74, 'auc all': 0.784, 'quintiles': [0.023, 0.044, 0.139, 0.218, 0.413]}  275s
 
 === variants, all walk-forward out of sample ===
 target                                model  auc 2005-12  auc 2013-19  auc 2020-26  auc all                           quintiles
- P_off K150 d3 free (the overfit reference)        0.488        0.487        0.630    0.532  [0.142, 0.14, 0.168, 0.189, 0.174]
- P_off                          K30 d2 mono        0.650        0.524        0.671    0.631 [0.091, 0.155, 0.135, 0.131, 0.302]
- P_off             K15 d2 mono (production)        0.624        0.586        0.714    0.636 [0.098, 0.157, 0.098, 0.154, 0.307]
- P_off                K8 d1 mono (additive)        0.608        0.556        0.696    0.625 [0.102, 0.155, 0.085, 0.181, 0.292]
- P_off                           K5 d1 mono        0.575        0.548        0.688    0.610  [0.121, 0.146, 0.082, 0.16, 0.304]
- P_vol                          K30 d2 mono        0.626        0.826        0.838    0.751 [0.041, 0.073, 0.104, 0.166, 0.372]
- P_vol             K15 d2 mono (production)        0.651        0.795        0.819    0.748  [0.04, 0.074, 0.107, 0.186, 0.349]
- P_vol                           K8 d1 mono        0.659        0.817        0.828    0.761 [0.035, 0.069, 0.101, 0.183, 0.368]
-  P_on                          K30 d2 mono        0.811        0.798        0.767    0.797 [0.028, 0.036, 0.124, 0.223, 0.426]
-  P_on             K15 d2 mono (production)        0.798        0.786        0.751    0.789 [0.027, 0.035, 0.149, 0.223, 0.403]
-  P_on                           K8 d1 mono        0.798        0.783        0.739    0.784 [0.023, 0.045, 0.137, 0.221, 0.411]
- P_off                  raw VIX:lvl_rank504        0.678        0.668        0.602    0.660  [0.089, 0.091, 0.148, 0.16, 0.325]
- P_off                raw VIX3M:lvl_rank252        0.653        0.650        0.662    0.658   [0.105, 0.1, 0.089, 0.208, 0.312]
- P_off                    raw SPY:cc21_rank        0.684        0.589        0.667    0.660  [0.073, 0.105, 0.14, 0.201, 0.295]
- P_off                    raw HYG:pk21_rank        0.632        0.598        0.653    0.634 [0.105, 0.113, 0.137, 0.151, 0.308]
- P_off                        raw XLV:rel63        0.592        0.651        0.661    0.616 [0.121, 0.119, 0.146, 0.138, 0.291]
- P_off                raw XS:avgcorr21_rank        0.549        0.572        0.603    0.580  [0.116, 0.15, 0.139, 0.178, 0.231]
- P_off                 raw -HYG:signedvol21        0.584        0.656        0.655    0.616  [0.092, 0.157, 0.117, 0.188, 0.26]
- P_off                   raw VIX:roc21_rank        0.513        0.562        0.550    0.536  [0.172, 0.13, 0.131, 0.167, 0.214]
- P_off                    raw VIX:roc5_rank        0.505        0.551        0.522    0.521  [0.163, 0.166, 0.13, 0.151, 0.204]
- P_off               raw -SPY:VIX/cc21_rank        0.596        0.537        0.629    0.594 [0.102, 0.121, 0.185, 0.171, 0.236]
-221s
+ P_off K150 d3 free (the overfit reference)        0.504        0.472        0.624    0.538  [0.14, 0.136, 0.185, 0.177, 0.177]
+ P_off                          K30 d2 mono        0.652        0.528        0.671    0.632  [0.09, 0.153, 0.133, 0.137, 0.302]
+ P_off             K15 d2 mono (production)        0.624        0.589        0.715    0.636 [0.098, 0.159, 0.095, 0.156, 0.306]
+ P_off                K8 d1 mono (additive)        0.608        0.556        0.691    0.625   [0.1, 0.163, 0.081, 0.189, 0.282]
+ P_off                           K5 d1 mono        0.575        0.550        0.668    0.605 [0.121, 0.138, 0.101, 0.155, 0.298]
+ P_vol                          K30 d2 mono        0.623        0.825        0.839    0.750  [0.041, 0.073, 0.099, 0.171, 0.37]
+ P_vol             K15 d2 mono (production)        0.650        0.795        0.818    0.748   [0.04, 0.073, 0.107, 0.185, 0.35]
+ P_vol                           K8 d1 mono        0.660        0.818        0.828    0.761 [0.035, 0.068, 0.101, 0.185, 0.367]
+  P_on                          K30 d2 mono        0.809        0.798        0.766    0.796 [0.028, 0.037, 0.124, 0.227, 0.421]
+  P_on             K15 d2 mono (production)        0.798        0.787        0.751    0.788  [0.027, 0.04, 0.141, 0.218, 0.411]
+  P_on                           K8 d1 mono        0.799        0.783        0.740    0.784 [0.023, 0.044, 0.139, 0.218, 0.413]
+ P_off                  raw VIX:lvl_rank504        0.678        0.668        0.602    0.660 [0.089, 0.091, 0.148, 0.161, 0.325]
+ P_off                raw VIX3M:lvl_rank252        0.652        0.650        0.662    0.658    [0.105, 0.1, 0.09, 0.208, 0.312]
+ P_off                    raw SPY:cc21_rank        0.685        0.589        0.668    0.660  [0.073, 0.105, 0.14, 0.201, 0.296]
+ P_off                    raw HYG:pk21_rank        0.631        0.598        0.653    0.634 [0.105, 0.113, 0.138, 0.151, 0.308]
+ P_off                        raw XLV:rel63        0.591        0.651        0.661    0.616 [0.121, 0.119, 0.146, 0.137, 0.291]
+ P_off                raw XS:avgcorr21_rank        0.550        0.572        0.604    0.581 [0.115, 0.151, 0.139, 0.178, 0.232]
+ P_off                 raw -HYG:signedvol21        0.584        0.656        0.654    0.616  [0.092, 0.157, 0.118, 0.187, 0.26]
+ P_off                   raw VIX:roc21_rank        0.514        0.562        0.550    0.536  [0.172, 0.13, 0.131, 0.167, 0.215]
+ P_off                    raw VIX:roc5_rank        0.505        0.551        0.522    0.520  [0.164, 0.166, 0.13, 0.151, 0.204]
+ P_off               raw -SPY:VIX/cc21_rank        0.597        0.537        0.630    0.595  [0.102, 0.121, 0.185, 0.17, 0.237]
+275s

@@ -9,23 +9,23 @@ from                                   case    n  5% drop within 21  5% rally wi
 
 === books, 2020 included ===
    window                                          book  ann %  worst DD %  times OUT  exposure
-2010-2026                              SPY buy and hold   13.3       -33.7          0      1.00
-2010-2026                          reference rule alone   11.4       -24.9         10      0.91
+2010-2026                              SPY buy and hold   13.4       -33.7          0      1.00
+2010-2026                          reference rule alone   11.6       -22.2         10      0.91
 2010-2026                     VIX outrunning VVIX alone   13.8       -17.4         39      0.85
-2010-2026 instruction: reference OR VIX outrunning VVIX   12.0       -16.8         39      0.79
+2010-2026 instruction: reference OR VIX outrunning VVIX   12.1       -16.8         39      0.79
 2010-2017                              SPY buy and hold   13.0       -18.6          0      1.00
 2010-2017                          reference rule alone   11.4       -20.1          2      0.96
 2010-2017                     VIX outrunning VVIX alone   12.7       -15.2         16      0.88
 2010-2017 instruction: reference OR VIX outrunning VVIX   11.2       -15.2         17      0.85
-2018-2026                              SPY buy and hold   13.7       -33.7          0      1.00
-2018-2026                          reference rule alone   11.3       -24.9          8      0.87
-2018-2026                     VIX outrunning VVIX alone   14.7       -17.4         23      0.82
-2018-2026 instruction: reference OR VIX outrunning VVIX   12.7       -16.8         22      0.74
-2023-2026                              SPY buy and hold   20.1       -18.8          0      1.00
-2023-2026                          reference rule alone   16.5       -17.5          2      0.95
-2023-2026                     VIX outrunning VVIX alone   16.7       -13.2          8      0.88
-2023-2026 instruction: reference OR VIX outrunning VVIX   16.1       -12.5          9      0.86
+2018-2026                              SPY buy and hold   13.8       -33.7          0      1.00
+2018-2026                          reference rule alone   11.8       -22.2          8      0.87
+2018-2026                     VIX outrunning VVIX alone   14.8       -17.4         23      0.82
+2018-2026 instruction: reference OR VIX outrunning VVIX   12.8       -16.8         22      0.74
+2023-2026                              SPY buy and hold   20.2       -18.8          0      1.00
+2023-2026                          reference rule alone   16.6       -17.5          2      0.95
+2023-2026                     VIX outrunning VVIX alone   16.8       -13.2          8      0.88
+2023-2026 instruction: reference OR VIX outrunning VVIX   16.2       -12.5          9      0.86
 
 42 live spells since 2009; last five: [{'from': '2025-01-08', 'to': '2025-01-17', 'sessions': 7, 'spy_while_live': 1.4}, {'from': '2025-02-24', 'to': '2025-03-21', 'sessions': 20, 'spy_while_live': -5.4}, {'from': '2025-04-03', 'to': '2025-05-02', 'sessions': 21, 'spy_while_live': 5.4}, {'from': '2025-10-10', 'to': '2025-10-23', 'sessions': 10, 'spy_while_live': 2.8}, {'from': '2026-03-06', 'to': '2026-04-02', 'sessions': 20, 'spy_while_live': -2.2}]
 
-today: {'live': False, 'since': None, 'vix_roc21_rank': 0.369, 'ratio_roc21_rank': 0.56, 'vix': 15.41, 'vvix': 87.66, 'vix_roc21_pct': -6.6, 'ratio_roc21_pct': 0.9, 'last_spell': {'from': '2026-03-06', 'to': '2026-04-02', 'sessions': 20, 'spy_while_live': -2.2}, 'reference_out': False, 'instruction': 'HOLD'}
+today: {'live': False, 'since': None, 'vix_roc21_rank': 0.194, 'ratio_roc21_rank': 0.552, 'vix': 14.84, 'vvix': 84.88, 'vix_roc21_pct': -18.4, 'ratio_roc21_pct': 0.6, 'last_spell': {'from': '2026-03-06', 'to': '2026-04-02', 'sessions': 20, 'spy_while_live': -2.2}, 'reference_out': False, 'instruction': 'HOLD'}

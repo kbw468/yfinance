@@ -1,46 +1,46 @@
 === the ADD condition as a sleeve: long SPY only on ADD sessions (rule IN), flat otherwise; against the same sleeve on all IN sessions ===
                                        book      path   ann  sharpe  maxDD  sessions long  share of IN sessions  mean daily bp while long  spells
-                   sleeve ADD: P_on >= q.80   ex-2020  2.68    0.37  -15.7            617                  0.14                       8.8      91
-                   sleeve ADD: P_on >= q.80 incl-2020  2.87    0.38  -15.7            658                  0.15                       9.0      94
-                   sleeve ADD: P_on >= q.90   ex-2020  1.48    0.26  -12.9            342                  0.08                       8.8      53
-                   sleeve ADD: P_on >= q.90 incl-2020  1.75    0.30  -12.9            357                  0.08                      10.1      56
-sleeve ADD: P_on >= q.80, held until < q.60   ex-2020  3.43    0.39  -19.4            975                  0.22                       7.1      54
-sleeve ADD: P_on >= q.80, held until < q.60 incl-2020  3.59    0.39  -19.4           1021                  0.23                       7.3      55
-sleeve ADD: P_on >= q.90, held until < q.60   ex-2020  2.49    0.31  -18.2            692                  0.16                       7.3      31
+                   sleeve ADD: P_on >= q.80   ex-2020  3.00    0.42  -15.7            610                  0.14                       9.9      90
+                   sleeve ADD: P_on >= q.80 incl-2020  3.18    0.43  -15.7            651                  0.15                      10.1      93
+                   sleeve ADD: P_on >= q.90   ex-2020  1.64    0.29  -12.9            341                  0.08                       9.7      52
+                   sleeve ADD: P_on >= q.90 incl-2020  1.90    0.33  -12.9            356                  0.08                      11.1      55
+sleeve ADD: P_on >= q.80, held until < q.60   ex-2020  3.95    0.45  -19.4            969                  0.22                       8.2      54
+sleeve ADD: P_on >= q.80, held until < q.60 incl-2020  4.10    0.45  -19.4           1015                  0.23                       8.4      55
+sleeve ADD: P_on >= q.90, held until < q.60   ex-2020  2.48    0.31  -18.2            692                  0.16                       7.3      31
 sleeve ADD: P_on >= q.90, held until < q.60 incl-2020  2.91    0.36  -18.2            736                  0.16                       8.2      32
-    sleeve: all IN sessions (unconditional)   ex-2020 11.00    0.81  -28.7           4413                  1.00                       5.0      16
-    sleeve: all IN sessions (unconditional) incl-2020 10.85    0.79  -28.7           4475                  1.00                       5.0      16
+    sleeve: all IN sessions (unconditional)   ex-2020 11.21    0.82  -25.0           4413                  1.00                       5.1      16
+    sleeve: all IN sessions (unconditional) incl-2020 11.05    0.80  -25.0           4475                  1.00                       5.1      16
 
 === the ADD condition as a no-leverage book: a base weight when IN, 100% when ADD fires, 0 when OUT ===
                                                      book      path   ann  sharpe  maxDD  mean weight
-                      reference: 100% when IN, 0 when OUT   ex-2020 11.00    0.81  -28.7         0.87
-                                         SPY buy and hold   ex-2020 10.78    0.59  -80.3         1.00
-         75% when IN, no ADD (the reserve never deployed)   ex-2020  8.25    0.81  -21.5         0.65
-                   75% when IN, 100% on ADD: P_on >= q.80   ex-2020  8.92    0.79  -22.7         0.68
-                   75% when IN, 100% on ADD: P_on >= q.90   ex-2020  8.62    0.79  -22.1         0.67
-75% when IN, 100% on ADD: P_on >= q.80, held until < q.60   ex-2020  9.11    0.77  -24.5         0.70
-75% when IN, 100% on ADD: P_on >= q.90, held until < q.60   ex-2020  8.87    0.77  -23.8         0.68
-         50% when IN, no ADD (the reserve never deployed)   ex-2020  5.50    0.81  -14.3         0.43
-                   50% when IN, 100% on ADD: P_on >= q.80   ex-2020  6.84    0.74  -19.1         0.49
-                   50% when IN, 100% on ADD: P_on >= q.90   ex-2020  6.24    0.74  -17.5         0.47
-50% when IN, 100% on ADD: P_on >= q.80, held until < q.60   ex-2020  7.21    0.70  -21.0         0.53
-50% when IN, 100% on ADD: P_on >= q.90, held until < q.60   ex-2020  6.74    0.70  -19.9         0.50
-                      reference: 100% when IN, 0 when OUT incl-2020 10.85    0.79  -28.7         0.86
-                                         SPY buy and hold incl-2020 10.64    0.55  -80.3         1.00
-         75% when IN, no ADD (the reserve never deployed) incl-2020  8.13    0.79  -21.5         0.64
-                   75% when IN, 100% on ADD: P_on >= q.80 incl-2020  8.85    0.77  -22.7         0.67
-                   75% when IN, 100% on ADD: P_on >= q.90 incl-2020  8.57    0.78  -22.1         0.66
-75% when IN, 100% on ADD: P_on >= q.80, held until < q.60 incl-2020  9.03    0.76  -24.5         0.69
-75% when IN, 100% on ADD: P_on >= q.90, held until < q.60 incl-2020  8.86    0.76  -23.8         0.68
-         50% when IN, no ADD (the reserve never deployed) incl-2020  5.42    0.79  -14.3         0.43
-                   50% when IN, 100% on ADD: P_on >= q.80 incl-2020  6.86    0.72  -19.1         0.49
-                   50% when IN, 100% on ADD: P_on >= q.90 incl-2020  6.30    0.74  -17.5         0.46
-50% when IN, 100% on ADD: P_on >= q.80, held until < q.60 incl-2020  7.22    0.69  -21.0         0.53
-50% when IN, 100% on ADD: P_on >= q.90, held until < q.60 incl-2020  6.88    0.70  -19.9         0.50
+                      reference: 100% when IN, 0 when OUT   ex-2020 11.21    0.82  -25.0         0.87
+                                         SPY buy and hold   ex-2020 10.81    0.60  -80.3         1.00
+         75% when IN, no ADD (the reserve never deployed)   ex-2020  8.41    0.82  -18.8         0.65
+                   75% when IN, 100% on ADD: P_on >= q.80   ex-2020  9.16    0.81  -20.8         0.68
+                   75% when IN, 100% on ADD: P_on >= q.90   ex-2020  8.82    0.81  -20.1         0.67
+75% when IN, 100% on ADD: P_on >= q.80, held until < q.60   ex-2020  9.39    0.80  -21.7         0.70
+75% when IN, 100% on ADD: P_on >= q.90, held until < q.60   ex-2020  9.03    0.79  -21.2         0.68
+         50% when IN, no ADD (the reserve never deployed)   ex-2020  5.60    0.82  -12.5         0.43
+                   50% when IN, 100% on ADD: P_on >= q.80   ex-2020  7.10    0.77  -19.1         0.49
+                   50% when IN, 100% on ADD: P_on >= q.90   ex-2020  6.43    0.76  -17.7         0.47
+50% when IN, 100% on ADD: P_on >= q.80, held until < q.60   ex-2020  7.58    0.74  -21.0         0.53
+50% when IN, 100% on ADD: P_on >= q.90, held until < q.60   ex-2020  6.85    0.71  -19.9         0.50
+                      reference: 100% when IN, 0 when OUT incl-2020 11.05    0.80  -25.0         0.86
+                                         SPY buy and hold incl-2020 10.67    0.56  -80.3         1.00
+         75% when IN, no ADD (the reserve never deployed) incl-2020  8.29    0.80  -18.8         0.64
+                   75% when IN, 100% on ADD: P_on >= q.80 incl-2020  9.08    0.80  -20.8         0.67
+                   75% when IN, 100% on ADD: P_on >= q.90 incl-2020  8.76    0.80  -20.1         0.66
+75% when IN, 100% on ADD: P_on >= q.80, held until < q.60 incl-2020  9.31    0.78  -21.7         0.69
+75% when IN, 100% on ADD: P_on >= q.90, held until < q.60 incl-2020  9.01    0.78  -21.2         0.68
+         50% when IN, no ADD (the reserve never deployed) incl-2020  5.52    0.80  -12.5         0.43
+                   50% when IN, 100% on ADD: P_on >= q.80 incl-2020  7.11    0.75  -19.1         0.49
+                   50% when IN, 100% on ADD: P_on >= q.90 incl-2020  6.48    0.76  -17.7         0.46
+50% when IN, 100% on ADD: P_on >= q.80, held until < q.60 incl-2020  7.57    0.73  -21.0         0.53
+50% when IN, 100% on ADD: P_on >= q.90, held until < q.60 incl-2020  6.98    0.71  -19.9         0.50
 
 yearly, 2020 included (log %):
 Date           2006  2007  2008  2009  2010  2011  2012  2013  2014  2015  2016  2017  2018  2019  2020  2021  2022  2023  2024  2025  2026
-ADD q.80 held  12.0   9.8  -8.8  14.2  10.5   4.6  11.1  21.0  11.8  -5.3   8.5  14.7  -6.7  21.1  15.6  18.9 -15.5  17.4  18.4   3.8   9.7
-75% when IN    10.0   8.2  -6.6  14.2  10.5   1.4  11.1  21.0   9.5  -5.5   5.7  14.7  -4.4  16.4  12.4  18.9 -15.5  17.4  16.7   3.8   8.5
-100% when IN   13.4  11.0  -8.8  19.0  14.0   1.9  14.8  28.0  12.6  -7.3   7.6  19.6  -5.9  21.9  16.6  25.3 -20.6  23.3  22.2   5.1  11.3
-SPY            14.7   5.0 -45.9  23.4  14.0   1.9  14.8  28.0  12.6   1.2  11.3  19.6  -4.7  27.2  16.8  25.3 -20.1  23.3  22.2  16.3  13.4
+ADD q.80 held  11.9  10.1  -8.8  14.2  10.5   4.6  11.1  21.0  12.1  -5.3   8.5  14.7  -6.7  21.1  15.6  18.9 -11.8  17.4  18.4   3.8  11.6
+75% when IN    10.0   8.2  -6.6  14.2  10.5   1.4  11.1  21.0   9.5  -5.5   5.7  14.7  -4.4  16.4  12.4  18.9 -12.8  17.4  16.7   3.8   8.9
+100% when IN   13.4  11.0  -8.8  19.0  14.0   1.9  14.8  28.0  12.6  -7.3   7.6  19.6  -5.9  21.9  16.6  25.3 -17.0  23.3  22.2   5.1  11.9
+SPY            14.7   5.0 -45.9  23.4  14.0   1.9  14.8  28.0  12.6   1.2  11.3  19.6  -4.7  27.2  16.8  25.3 -20.1  23.3  22.2  16.3  14.0
