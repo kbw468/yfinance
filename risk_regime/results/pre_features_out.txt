@@ -1,3 +1,3 @@
-F (8481, 3950) float32 134 MB, 13s
+F (8482, 3950) float32 134 MB, 15s
 {'idx_level': 44, 'idx_roc': 120, 'idx_roc_rank': 105, 'idx_range': 18, 'ratio_level': 12, 'ratio_roc': 60, 'ratio_roc_rank': 60, 'curve': 9, 'etf_roc': 240, 'etf_roc_rank': 240, 'etf_rel': 234, 'etf_rel_rank': 234, 'etf_dd': 80, 'etf_rv': 440, 'etf_rv_rank': 320, 'etf_rv_ratio': 280, 'etf_rv_ratio_rank': 280, 'etf_rv_roc': 80, 'etf_rv_roc_rank': 120, 'etf_vov': 80, 'etf_volume': 248, 'etf_volvol': 124, 'etf_liquidity': 62, 'etf_range': 240, 'etf_relrv': 78, 'vrp': 106, 'xs': 19, 'xs_breadth': 11, 'breadth_ew': 6}
 NaN on last row: 6 e.g. ['RSP/SPY:roc5_rank', 'RSP/SPY:roc21_rank', 'RSP/SPY:roc63_rank', 'QQQE/QQQ:roc5_rank', 'QQQE/QQQ:roc21_rank', 'QQQE/QQQ:roc63_rank']
