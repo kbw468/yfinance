@@ -261,6 +261,8 @@ def main():
     scan_files = sorted(f for f in os.listdir(RES) if f.startswith("scan_20"))
     scan = rd(scan_files[-1]) if scan_files else None
     scan_date = scan_files[-1][5:15] if scan_files else ""
+    if os.environ.get("FS_SCAN_NOTE"):
+        scan_date = f"{scan_date} ({os.environ['FS_SCAN_NOTE']})"
     used_rules = rd("scan_rules_used.csv")
     from common import best_model_tag as _bmt
     _tag = _bmt()
@@ -386,6 +388,9 @@ def main():
 
     if proto_section:
         S.append(proto_section)
+    msi_section = msi_like_section(scan_date)
+    if msi_section:
+        S.append(msi_section)
 
     # thesis vs quiet base
     def rows_of(df):
@@ -601,7 +606,7 @@ def main():
   </ul>
 </section>""")
 
-    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("now", "Setups now"), ("proto", "Prototype watch"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
+    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("now", "Setups now"), ("proto", "Prototype watch"), ("msi", "MSI look-alikes"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
                                                           ("grids", "Interactions"), ("confirm", "Confirmers"), ("robust", "Robustness"), ("fractal", "Fractal"),
                                                           ("rules", "Rules"), ("model", "Model"), ("regime", "Regime"), ("method", "Method")])
     page = TEMPLATE.replace("{{TOC}}", toc).replace("{{BODY}}", "\n".join(S)).replace("{{DATE}}", scan_date)
@@ -659,6 +664,41 @@ def prototype_section(scan, pw, pp, scan_date):
   <h3>On the watch, {scan_date} ({len(w)} names)</h3>
   {names_tbl}
   <p class="note">Percentile columns are ranks in the universe that week (0 = quietest / tightest / shallowest / weakest). Hits on this target cluster in years (2010–12, 2016, 2019, 2021, 2023–24).</p>
+</section>"""
+
+
+def msi_like_section(scan_date):
+    files = sorted(f for f in os.listdir(RES) if f.startswith("msi_like_20"))
+    od = rd("msi_like_odds.csv")
+    if not files or od is None:
+        return ""
+    m = rd(files[-1])
+    m["mcap_b"] = m["mcap"].map(lambda v: f"${v / 1000:.1f}B")
+    run = m[m["in_run"] == True].sort_values("gap126")
+    close = m[(m["worst_pullback126"] <= 0.08) & (m["mcap"] >= 2000) & (m["pinned"] != True)].sort_values("gap126").head(10)
+    cols = ["ticker", "sector", "industry", "mcap_b", "gain126", "worst_pullback126", "gap126", "gap260", "q_mar63", "q_mdd126", "ddh252", "pinned"]
+    heads = ["Ticker", "Sector", "Industry", "Mkt cap", "Last 126 sessions", "Worst pullback", "Shape gap vs MSI Apr–Oct 2024",
+             "Shape gap vs MSI Oct 2023–Nov 2024", "Volatility pct", "6m DD pct", "From 52w high", "Pinned"]
+    f = {"ticker": lambda v: f"<b>{esc(v)}</b>", "gain126": pct, "worst_pullback126": pct, "gap126": lambda v: num(v, 3),
+         "gap260": lambda v: num(v, 3), "q_mar63": lambda v: f"{v * 100:.1f}", "q_mdd126": lambda v: f"{v * 100:.1f}", "ddh252": pct,
+         "pinned": lambda v: "yes" if v else ""}
+    odt = table(od.iloc[:3], ["outcome", "weeks", "hit", "base", "lift", "lift_2006_16", "lift_2017_26"],
+                ["After a stock looks like MSI mid-run", "Stock-weeks", "Hit", "Base", "Lift", "2006–16", "2017–26"],
+                {"weeks": lambda v: f"{int(v):,}", "hit": pct, "base": pct, "lift": chip, "lift_2006_16": chip, "lift_2017_26": chip}, cls="compact", wide=("outcome",))
+    last = od.iloc[3]
+    return f"""
+<section id="msi">
+  <h2>MSI 2024 look-alikes, {scan_date}</h2>
+  <p class="lede">Two forms. Before the run: MSI's base (the JNJ/MSI base inside the prototype watch above). During the run: last 126 sessions up 20%+ with a worst
+  pullback of 6% or less, volatility in the bottom 20%, within 5% of the 52-week high. Shape gap = mean distance between scaled price paths and MSI's own (0 = identical;
+  the universe median is about {num(m['gap126'].median(), 2)}).</p>
+  <h3>Running like MSI now</h3>
+  {table(run, cols, heads, f, cls="compact")}
+  <h3>Closest 126-session shapes to MSI's Apr–Oct 2024 run ($2B+, worst pullback 8% or less, not pinned)</h3>
+  {table(close, cols, heads, f, cls="compact")}
+  {odt}
+  <p class="note">Next 63 sessions after the mid-run state: {pct(last['hit'], 0)} up, median return {pct(last['lift'])}, median worst pullback {pct(last['lift_2006_16'])}.
+  The base before the run carries better odds (prototype watch 2.85×) than the run itself (about 1.9×).</p>
 </section>"""
 
 
