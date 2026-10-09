@@ -326,6 +326,9 @@ def main():
   </ol>
 </section>"""
     S.append(read)
+    rank_html = rank_section(scan_date)
+    if rank_html:
+        S.append(rank_html)
 
     # current scan
     if scan is not None:
@@ -606,7 +609,7 @@ def main():
   </ul>
 </section>""")
 
-    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("now", "Setups now"), ("proto", "Prototype watch"), ("msi", "MSI look-alikes"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
+    toc = "".join(f'<a href="#{i}">{t}</a>' for i, t in [("read", "Read"), ("rank", "Ranked"), ("now", "Setups now"), ("proto", "Prototype watch"), ("msi", "MSI look-alikes"), ("thesis", "Thesis vs base"), ("roc", "Rates of change"),
                                                           ("grids", "Interactions"), ("confirm", "Confirmers"), ("robust", "Robustness"), ("fractal", "Fractal"),
                                                           ("rules", "Rules"), ("model", "Model"), ("regime", "Regime"), ("method", "Method")])
     page = TEMPLATE.replace("{{TOC}}", toc).replace("{{BODY}}", "\n".join(S)).replace("{{DATE}}", scan_date)
@@ -664,6 +667,73 @@ def prototype_section(scan, pw, pp, scan_date):
   <h3>On the watch, {scan_date} ({len(w)} names)</h3>
   {names_tbl}
   <p class="note">Percentile columns are ranks in the universe that week (0 = quietest / tightest / shallowest / weakest). Hits on this target cluster in years (2010–12, 2016, 2019, 2021, 2023–24).</p>
+</section>"""
+
+
+def rank_section(scan_date):
+    files = sorted(f for f in os.listdir(RES) if f.startswith("rank_20"))
+    tw, ta = rd("rank_tests.csv"), rd("rank_tests_all.csv")
+    if not files or tw is None or ta is None:
+        return ""
+    r = rd(files[-1])
+    r["mcap_b"] = r["mcap"].map(lambda v: f"${v / 1000:.1f}B")
+    pinned = r[(r["deal_pinned"] == True) & ((r["watch"] == True) | (r["analog"] >= 3.0))]["ticker"].tolist()
+    bt = rd("rank_band_test.csv")
+    band_note = ""
+    if bt is not None:
+        bw = bt[bt["group"] == "watch"].set_index("band")
+        lo, hi = bw.loc["under 3%"], bw.loc["3% or wider"]
+        band_note = (f"20-session high–low band under 3% = held at a deal price or stalled: inside the watch those weeks ran at {num(lo['lift'])}× "
+                     f"({num(lo['lift_2006_16'])} / {num(lo['lift_2017_26'])}, {int(lo['weeks']):,} stock-weeks) vs {num(hi['lift'])}× for 3% or wider, so they are dropped.")
+    r = r[r["tier"].notna()].sort_values("order")
+    r["order"] = r["order"].astype(int)
+    r["look"] = r.apply(lambda x: " ".join(filter(None, [
+        '<span class="tag o">MSI 2023 base</span>' if x["msi_dist"] <= 0.05 else "",
+        '<span class="tag b">MSI 2024 run</span>' if x["gap126"] <= 0.13 else ""])), axis=1)
+    r["runs"] = r.apply(lambda x: f"{int(x['box_hits'])} / {int(x['box_hit_names'])}", axis=1)
+    r["profile"] = r["proto_profile"].fillna("")
+    t = tw.set_index(["key", "third"])["lift"]
+    tl = ta[ta["analog"] == "tier"].set_index("group")
+    tier_note = lambda k: next((f"{num(v['lift'])}× ({num(v['lift_2017_21'])} / {num(v['lift_2022_26'])})" for g, v in tl.iterrows() if g.startswith(f"{k}:")), "")
+    cols = ["order", "ticker", "industry", "mcap_b", "profile", "analog", "analog_2006_16", "analog_2017_26", "runs", "look",
+            "msi_dist", "gap126", "gain126", "worst_pullback126", "ddh252", "model_pct"]
+    heads = ["#", "Ticker", "Industry", "Mkt cap", "Profile", "Analog odds", "2006–16", "2017–26", "Past runs / names", "MSI look",
+             "Gap to MSI 2023 base (pct pts)", "Shape gap to MSI 2024 run", "Last 126 sessions", "Worst pullback", "From 52w high", "Model pct"]
+    f = {"ticker": lambda v: f"<b>{esc(v)}</b>", "analog": lambda v: chip(v), "analog_2006_16": lambda v: chip(v), "analog_2017_26": lambda v: chip(v),
+         "look": lambda v: v, "msi_dist": lambda v: f"{v * 100:.1f}", "gap126": lambda v: num(v, 3), "gain126": pct, "worst_pullback126": pct,
+         "ddh252": pct, "model_pct": lambda v: "" if v != v else f"{v * 100:.0f}"}
+    blocks = []
+    for k, title in ((1, "Tier 1: on the watch, analog odds 2.5 or more"), (2, "Tier 2: on the watch, analog odds under 2.5"),
+                     (3, "Tier 3: off the watch, analog odds 3 or more")):
+        s = r[r["tier"] == k]
+        if len(s):
+            blocks.append(f"<h3>{title} ({len(s)}): backtest {tier_note(k)}</h3>" + table(s, cols, heads, f, cls="compact"))
+    tw_tbl = table(tw.assign(key=tw["key"].map({"analog": "Analog odds (built 2006–16)", "msi_dist": "Closeness to MSI 2023 base",
+                                                "gap126": "Closeness to MSI 2024 run shape (126)", "gap260": "Closeness to MSI Oct 2023–Nov 2024 shape (260)",
+                                                "score": "Walk-forward model score"}),
+                             third=tw["third"].map({1: "worst third", 2: "middle", 3: "best third"})),
+                   ["key", "third", "weeks", "hit", "lift", "lift_2017_21", "lift_2022_26"],
+                   ["Key, ranked inside each week's watch", "Third", "Stock-weeks", "Hit", "Lift", "2017–21", "2022–26"],
+                   {"weeks": lambda v: f"{int(v):,}", "hit": pct, "lift": chip, "lift_2017_21": chip, "lift_2022_26": chip}, cls="compact", wide=("key",))
+    ta_tbl = table(ta, ["analog", "group", "weeks", "hit", "lift", "lift_2017_21", "lift_2022_26"],
+                   ["Analog odds (built 2006–16)", "Names", "Stock-weeks", "Hit", "Lift", "2017–21", "2022–26"],
+                   {"weeks": lambda v: f"{int(v):,}", "hit": pct, "lift": chip, "lift_2017_21": chip, "lift_2022_26": chip}, cls="compact")
+    return f"""
+<section id="rank">
+  <h2>Ranked: signal strength, then MSI likeness, {scan_date}</h2>
+  <p class="lede">Signal strength = analog odds: every past stock-week since 2006 in the same state (volatility, 63-day range, 6-month drawdown and 6-month return percentiles,
+  distance from the 52-week high; $2B+, no regional banks, no pinned names), MSI-grade hits ÷ what the same weeks' universe would have scored, shrunk toward 1.
+  Tested before use: built from 2006–16 only, then applied to 2017-07 → 2026-04. Across all eligible names the odds rise bin by bin (under 0.5: {num(ta.loc[(ta['analog'] == '[0.0, 0.5)') & (ta['group'] == 'all'), 'lift'].iloc[0])}×;
+  3–3.5: {num(ta.loc[(ta['analog'] == '[3.0, 3.5)') & (ta['group'] == 'all'), 'lift'].iloc[0])}×); inside each week's watch, best third {num(t[('analog', 3)])}× vs worst {num(t[('analog', 1)])}×.
+  Tiers use the steps in those test bins: inside the watch the odds jump at 2.5, outside it they reach the watch's range at 3.</p>
+  <p class="lede">MSI likeness, tested the same way: closeness to MSI's Jun–Oct 2023 base (the setup before its 2024 run) leaves the odds flat ({num(t[('msi_dist', 3)])} / {num(t[('msi_dist', 2)])} / {num(t[('msi_dist', 1)])}),
+  so it orders names inside each tier at no cost. Closeness to MSI's 2024 run shape lowers them (closest third {num(t[('gap126', 3)])}× vs furthest {num(t[('gap126', 1)])}×): a name that already
+  looks like MSI mid-run has spent part of the move, so that look is tagged, not ranked. <span class="tag o">MSI 2023 base</span> = within 5 percentile points of MSI's base state on average;
+  <span class="tag b">MSI 2024 run</span> = 126-session shape gap 0.13 or less (universe median ≈0.27).</p>
+  {"".join(blocks)}
+  <p class="note">Past runs / names = MSI-grade runs inside the analog box and the distinct tickers behind them. {band_note} Left out today: {esc(', '.join(pinned)) or 'none'}.</p>
+  <details><summary>How each ranking key did inside the watch, out of sample</summary>{tw_tbl}</details>
+  <details><summary>Analog odds as a stand-alone screen, all eligible names, every 4th week 2017-07 → 2026-04</summary>{ta_tbl}</details>
 </section>"""
 
 

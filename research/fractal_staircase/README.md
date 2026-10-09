@@ -31,6 +31,10 @@ Set `FS_DATA` to a scratch directory (defaults to `./data`, which is git-ignored
 | 10 | `model.py` | walk-forward gradient-boosted trees (`binary`, `binary_xs`, `rank`) |
 | 11 | `regime.py`, `segments.py` | when staircases cluster; per-sector leaders |
 | 12 | `scan.py` | latest-session scan → `results/scan_<date>.csv` |
-| 13 | `build_report.py` | `report.html` |
+| 13 | `prototype.py`, `prototype_watch.py`, `msi_like.py` | MSI-grade target (+25% over 126 sessions, worst pullback <= 6%), prototype watch, MSI look-alikes |
+| 14 | `rank.py` | analog odds per name, ranking keys tested out of sample, tiers → `results/rank_<date>.csv` |
+| 15 | `build_report.py` | `report.html` |
+
+Intraday refresh: `refresh.py` → `features.py` → `xsec.py` → `rescore.py` → `scan.py` → `msi_like.py` → `rank.py` → `build_report.py`.
 
 `results/` holds every table the report is built from.

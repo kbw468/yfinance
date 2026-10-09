@@ -33,3 +33,17 @@ Notes for recognising these later
   126-session target they hold up (2.5–3.1), which is why they are in the prototype watch.
 - VLO-type is the profile the study scores lowest: strong momentum with ordinary volatility.
 - TGT-type recoveries trend hard but rarely hold drawdowns under a third of the gain.
+
+Ranking the watch (`rank.py`, added Oct 9 2026)
+- Analog odds = MSI-grade hits among past stock-weeks in the same state box (volatility, 63-day range,
+  6-month drawdown and 6-month return percentiles; distance from the 52-week high), over what the same
+  weeks' universe would have scored. Built from 2006–16, tested 2017-07 → 2026-04 on all eligible names:
+  under 0.5 → 0.11×, 1–1.5 → 1.48×, 2–2.5 → 3.02×, 3–3.5 → 4.06×. Tiers: on the watch with analog ≥ 2.5
+  → 5.97× (2017–21: 5.28, 2022–26: 7.27); rest of the watch 3.99×; off the watch with analog ≥ 3 → 3.66×
+  (3.81 / 3.51).
+- MSI look, tested inside the watch: closeness to MSI's Jun–Oct 2023 base is neutral (closest third 4.52,
+  middle 4.67, furthest 4.34); closeness to its 2024 run shape lowers the odds (closest third 3.89× vs
+  furthest 5.62×, same order in both halves). Hunt the base, not the run.
+- 20-session high–low band under 3%: 0.40× inside the watch (525 stock-weeks; 2006–16 0.64, 2017–26 0.00)
+  vs 2.91× at 3% or wider. Catches deal-pinned names the 63-day pinned rule misses (LXP, GSAT, LNTH, PEN
+  on Oct 9 2026).
