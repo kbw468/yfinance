@@ -20,7 +20,7 @@ Otherwise the newest sessions would hold only the trades already stopped out.
 Universe: S&P 500 + 400. Eligible names only: price at least $5, $10M median dollar volume, 252 sessions of history.
 Sample: 2015 to date, 2.28M name-days, with the COVID window (Feb–Jun 2020) removed.
 
-## Characteristics searched (169)
+## Characteristics searched (174: 164 per name, 10 market state)
 
 | Family | Features | Source |
 |---|---|---|
