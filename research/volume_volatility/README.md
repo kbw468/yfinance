@@ -37,3 +37,9 @@ python summarize.py results/dlogv
 - `per_ticker.csv`: per-ticker Q5 vs Q1 RAX and IC for each factor x day x horizon.
 - `combo_vv_x_roc.csv`: VV tercile x VV_ROC tercile grid, by day type.
 - `yearly_q5_minus_q1.csv`: Q5-Q1 spread by calendar year.
+
+## Lookback sweep
+
+`python sweep.py data/bars.parquet results/sweep` tests VV windows 5/10/20/40/60 and ROC lags 3/5/10/20 for each window.
+`python roc_vs_level.py data/bars.parquet` checks whether ROC adds anything once VV level is held fixed.
+Outputs are in `results/sweep/`.
