@@ -87,7 +87,12 @@ screen_latest.csv, screen_record.csv, today.csv.
    * The setup book holds a median of 2 names when it fires. It has a name on 59–69% of rebalance days.
    * The model book reaches its MAR through low beta, with a median L1 beta of 0.49 from 2024. That is the low-beta
      answer, not alpha.
-7. **Model ranking.** Tonight's model probabilities span 16–24% (today.csv). That is too narrow to rank on.
+7. **Other learning objectives change nothing** (model_variants.txt, stock features, 2017+ walk-forward). Each objective's
+   mean per-date AUC: median regression on the trade's MAR percentile 0.497; LambdaRank inside each date 0.507;
+   trained on the 42-session label 0.510. The top decile is 20.6–21.5% superior.
+8. **Gradient** (V-recovered ex commodity/utility, all three legs at the same cut): 39% superior at a 10% cut, 36% at 15%,
+   32% at 20%, 27% at 25%, 25% at 30%.
+9. **Model ranking.** Tonight's model probabilities span 16–24% (today.csv). That is too narrow to rank on.
 
 ## Commands
 ```

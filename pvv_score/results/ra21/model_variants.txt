@@ -1,0 +1,25 @@
+Within-date AUC for sup_21 by test year, by learning objective:
+      l1_marpct  rank_grade  binary_sup42
+2015        NaN         NaN           NaN
+2016        NaN         NaN           NaN
+2017      0.507       0.505         0.517
+2018      0.513       0.526         0.505
+2019      0.501       0.496         0.512
+2020      0.461       0.471         0.492
+2021      0.538       0.542         0.527
+2022      0.510       0.535         0.528
+2023      0.473       0.499         0.486
+2024      0.496       0.507         0.521
+2025      0.493       0.499         0.517
+2026      0.480       0.490         0.490
+mean:
+l1_marpct       0.497
+rank_grade      0.507
+binary_sup42    0.510
+
+                         l1_marpct  rank_grade  binary_sup42
+top decile superior_21       0.206       0.211         0.215
+2024+                        0.204       0.209         0.212
+top decile superior_42       0.213       0.215         0.219
+top decile median xs_21     -0.004      -0.006        -0.006
+top decile stopped_21        0.194       0.209         0.206
