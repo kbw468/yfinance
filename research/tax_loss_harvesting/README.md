@@ -19,7 +19,8 @@ python trade_window.py DATA OUT
 python robustness.py DATA OUT
 python export_dashboard.py OUT universe_finviz.csv DASH
 python study_since.py DATA OUT 2018                # 2018+ tables for the report
-python make_pdf.py OUT/since_2018.json DASH Q4_Tax_Loss_Seasonality_2018-2025.pdf
+python megacap.py DATA universe_finviz.csv OUT 2018 # top-100/top-50 point-in-time cut + per-name history
+python make_pdf.py OUT/since_2018.json OUT/megacap_2018.json DASH Q4_Tax_Loss_Seasonality_2018-2025.pdf
 ```
 
 Method: formation at the last September close; 1Y = trailing 12-month total return, 1M = September
