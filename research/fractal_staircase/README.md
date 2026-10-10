@@ -35,6 +35,6 @@ Set `FS_DATA` to a scratch directory (defaults to `./data`, which is git-ignored
 | 14 | `rank.py` | analog odds per name, ranking keys tested out of sample, tiers → `results/rank_<date>.csv` |
 | 15 | `build_report.py` | `report.html` |
 
-Intraday refresh: `refresh.py` → `features.py` → `xsec.py` → `rescore.py` → `scan.py` → `msi_like.py` → `rank.py` → `build_report.py`.
+Intraday refresh: `refresh.py` → `features.py` → `xsec.py` → `analog.py` → `rescore.py` → `scan.py` → `msi_like.py` → `rank.py` → `build_report.py`.
 
 `results/` holds every table the report is built from.
