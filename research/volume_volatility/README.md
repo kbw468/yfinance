@@ -1,6 +1,6 @@
 # Volume volatility factor backtest
 
-Universe: 2,367 tickers from the finviz export. Daily adjusted bars via yfinance, 2016-10-10 to 2026-10-09.
+Universe: 2,367 tickers from the finviz export. Daily adjusted bars via yfinance, 2005-01 to 2026-10 (first rounds used 2016-10 to 2026-10).
 Observation filter: price >= $1, 20d median dollar volume >= $500k.
 
 ## Factors (known at close t)
@@ -21,43 +21,35 @@ Observation filter: price >= $1, 20d median dollar volume >= $500k.
 - h = 7, 14, 21 and 42 sessions.
 - Each bucket is averaged across names per date. t-stats are Newey-West with lag h.
 
+## Report
+
+`Volume_Volatility_Backtest.pdf` holds the findings for 2009-2026. Rebuild it with:
+```
+python report.py <sweep_dir> <sweep_rawvolume_dir> <runs_dir> Volume_Volatility_Backtest.pdf
+```
+
 ## Run
 
 ```
-python download.py finviz.csv data 10y
-python backtest.py data/bars.parquet results/dlogv                       # VV window 20, ROC lag 10
-python backtest.py data/bars.parquet results/dlogv_w60 --vv-win 60       # other window
-python backtest.py data/bars.parquet results/cv --def cv                 # CV definition
-python summarize.py results/dlogv
-python sweep.py data/bars.parquet results/sweep                          # window x lag sweep, IS/OOS
-python compare.py out.md VV20=results/dlogv VV60=results/dlogv_w60       # side by side
+python download.py finviz.csv data20 2005-01-01                          # history back to 2005
+python sweep.py data20/bars.parquet results/sweep_2009_2026              # VV windows 5-252 x ROC lags 3-252
+python sweep.py data20/bars.parquet results/sweep_rawvol --raw-volume    # cleaning check
+python backtest.py data20/bars.parquet runs/w20 --vv-win 20 --eval-start 2009-01-01 --min-history 756
+python compare.py out.md VV20=runs/w20 VV60=runs/w60                     # side by side
 ```
-Other flags on `backtest.py`: `--roc-lag`, `--rank-win`, and `--eval-start` (scores every setting on the same dates).
+Other `backtest.py` flags: `--def cv`, `--roc-lag`, `--rank-win`, `--raw-volume`, `--min-history`.
+Volume cleaning is on by default: prints below 2% of the trailing 20d median are dropped, and daily log-volume changes are capped at 50x.
 
-## Outputs (`results/<variant>/`)
+## Results layout
 
-- `RESULTS.md`: all summary tables.
-- `buckets_time_series.csv` / `buckets_cross_section.csv`: every factor x day x horizon x quintile, with RA, RAX and raw return, t-stat and hit rate.
-- `per_ticker.csv`: per-ticker Q5 vs Q1 RAX and IC for each factor x day x horizon.
-- `combo_vv_x_roc.csv`: VV tercile x VV_ROC tercile grid, by day type.
-- `yearly_q5_minus_q1.csv`: Q5-Q1 spread by calendar year.
+- `results/2009_2026/<run>/`: full backtest outputs behind the PDF. Runs: w20, w50, w60, w120, w252, w20_cv, w60_cv, w20_rank126, w20_rank504, w20_raw, w20_alluniverse. Per-ticker results are in w20 only.
+- `results/sweep_2009_2026/`, `results/sweep_2009_2026_rawvolume/`: window x lag sweep with three periods: 2009-01..2016-09, 2016-10..2022-06 and 2022-07..2026-10.
+- Earlier rounds on 2016-2026 data: `results/dlogv`, `results/cv`, `results/dlogv_w40`, `results/dlogv_w60`, `results/sweep_2018_2026`, `results/compare`.
 
-## Lookback sweep and validation
+## Findings (2009-2026)
 
-`sweep.py` tests VV windows 5-120 and ROC lags 3-60. Every setting is scored on the same dates from 2018-07-01.
-The sample is split in-sample (2018-07 to 2022-06) and out-of-sample (2022-07 onward).
-ROC is also scored with VV level held fixed: its Q5-Q1 inside each VV tercile, averaged.
-`compare.py` puts runs side by side: other VV definitions, rank lookbacks, cross-sectional rank, per-ticker breadth, yearly spreads and quintile grids.
-
-- `results/sweep/`: `SWEEP.md` and `sweep.csv`.
-- `results/compare/COMPARE_common_sample.md`: VV 20/40/60, CV 20/40/60 and rank 126/504, all from 2018-07.
-- `results/compare/COMPARE_full_sample.md`: VV 20/40/60 over the full sample, by year.
-- `results/dlogv_w40/`, `results/dlogv_w60/`: full outputs at those windows.
-
-## Findings
-
-- High VV (own-history Q5) underperforms on both UP and DOWN days. The sign holds for every window from 5 to 60 in both halves.
-- Windows of 5-15 are weak. Windows of 40-60 are the strongest and most stable.
-- In-sample window ranking does not predict out-of-sample ranking (rank corr -0.15). Treat 40-60 as a range, not a tuned point.
-- VV60 Q5-Q1 is negative on DOWN days in 9 of 10 years. 2021-2022 is flat for every window.
-- VV_ROC with VV level held fixed is negative in-sample and roughly zero out-of-sample at almost every setting. It has no edge beyond the VV level.
+- High VV (own-history Q5) underperforms on both UP and DOWN days. The 20-session window is strongest: DOWN Q5-Q1 t -3.7 to -4.7, negative in all 17 full years from 2009 to 2025.
+- Windows of 10-50 work. 60-252 only worked in 2022-2026. 252 is the weakest. Window rankings do not carry across periods.
+- Slow VV_ROC (window 50-120, lag 10-20, VV level held fixed) worked 2009-2022 and has been flat since. No setting holds in all three periods.
+- Fast VV_ROC (window 5-15, lag 3-5, VV level held fixed) is positive in all three periods: a short-term jump in VV outperforms. Full-sample t +2.1 to +2.6.
+- Volume cleaning, CV definition, rank lookback 126/504 and the no-history-minimum universe all keep the 20-session result's sign.

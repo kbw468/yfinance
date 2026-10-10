@@ -160,7 +160,7 @@ def heat(ax, data, row_labels, col_labels, vmax=4.0, fmt=ft):
 
 def chart_window_heat(sweep, path):
     vv = sweep[sweep.factor == "VV"].groupby(["window", "period"]).t.mean().unstack("period")[PERIODS]
-    fig, ax = plt.subplots(figsize=(6.6, 4.6), dpi=220)
+    fig, ax = plt.subplots(figsize=(6.6, 3.9), dpi=220)
     norm = heat(ax, vv.values, [str(w) for w in vv.index], [PLABEL[p] for p in PERIODS])
     ax.set_ylabel("Volume-volatility window (sessions)")
     ax.set_title("Q5−Q1 by window and period — average t across 8 cells", loc="left")
@@ -168,23 +168,23 @@ def chart_window_heat(sweep, path):
     cb.set_label("avg t  (orange = high volume volatility underperforms)", color=INK2)
     cb.outline.set_visible(False)
     fig.tight_layout()
-    fig.savefig(path)
+    fig.savefig(path, facecolor="white")
     plt.close(fig)
 
 
 def chart_roc_heat(sweep, path):
     roc = sweep[(sweep.factor == "VV_ROC") & (sweep.period == "FULL")]
     g = roc.groupby(["window", "lag"]).ctrl_t.mean().unstack("lag")
-    fig, ax = plt.subplots(figsize=(7.2, 4.8), dpi=220)
+    fig, ax = plt.subplots(figsize=(7.2, 4.15), dpi=220)
     norm = heat(ax, g.values, [str(w) for w in g.index], [str(c) for c in g.columns], vmax=3.5)
     ax.set_xlabel("ROC lag (sessions)")
     ax.set_ylabel("Volume-volatility window (sessions)")
     ax.set_title("ROC with volume-volatility level held fixed — 2009–26 average t", loc="left")
     cb = fig.colorbar(plt.cm.ScalarMappable(norm=norm, cmap=DIV), ax=ax, fraction=0.035, pad=0.02)
-    cb.set_label("avg t  (orange = rising volume volatility underperforms)", color=INK2)
+    cb.set_label("avg t  (orange = rising underperforms · blue = rising outperforms)", color=INK2)
     cb.outline.set_visible(False)
     fig.tight_layout()
-    fig.savefig(path)
+    fig.savefig(path, facecolor="white")
     plt.close(fig)
 
 
@@ -192,8 +192,7 @@ def chart_quintiles(ts, path, h=21):
     fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.6), dpi=220, sharey=True)
     for ax, day, title in zip(axes, ("DOWN", "UP"), ("Down days", "Up days")):
         vals = [pick(ts, day=day, h=h, bucket=f"Q{q}")[0] for q in range(1, 6)]
-        cols = [BLUE if v >= 0 else ORANGE for v in vals]
-        ax.bar(range(1, 6), vals, color=cols, width=0.62, edgecolor="white", linewidth=1)
+        ax.bar(range(1, 6), vals, color=BLUE, width=0.62, edgecolor="white", linewidth=1)
         ax.axhline(0, color=INK2, linewidth=0.8)
         for q, v in zip(range(1, 6), vals):
             ax.text(q, v + (0.0012 if v >= 0 else -0.0012), f3(v), ha="center",
@@ -210,7 +209,7 @@ def chart_quintiles(ts, path, h=21):
     fig.text(0.01, 0.005, "Q1 = calmest volume vs the ticker's own past year · Q5 = most erratic", fontsize=7.5,
              color=MUTED)
     fig.tight_layout(rect=(0, 0.04, 1, 1))
-    fig.savefig(path)
+    fig.savefig(path, facecolor="white")
     plt.close(fig)
 
 
@@ -218,20 +217,18 @@ def chart_yearly(yr, path):
     y = yr[yr.factor == "VV"].groupby(["year", "day"]).q5_minus_q1_rax.mean().unstack("day").dropna(how="all")
     y = y[y.index >= 2009]
     x = np.arange(len(y))
-    fig, ax = plt.subplots(figsize=(7.0, 2.7), dpi=220)
-    ax.bar(x - 0.2, y["DOWN"], width=0.38, color=ORANGE, label="Down days", edgecolor="white", linewidth=0.8)
-    ax.bar(x + 0.2, y["UP"], width=0.38, color=BLUE, label="Up days", edgecolor="white", linewidth=0.8)
-    ax.axhline(0, color=INK2, linewidth=0.8)
-    ax.set_xticks(x, [str(v) if v < 2026 else "2026\nYTD" for v in y.index], fontsize=8)
-    ax.set_ylabel("Q5−Q1, mean of 4 horizons")
-    ax.set_title("20-session window — Q5−Q1 by calendar year", loc="left")
-    ax.grid(axis="y", color=RULE, linewidth=0.5)
-    ax.set_axisbelow(True)
-    for s in ("top", "right"):
-        ax.spines[s].set_visible(False)
-    ax.legend(frameon=False, loc="lower left", ncol=2, fontsize=8)
+    fig, axes = plt.subplots(2, 1, figsize=(7.0, 3.9), dpi=220, sharex=True, sharey=True)
+    for ax, day, name in zip(axes, ("DOWN", "UP"), ("Down days", "Up days")):
+        ax.bar(x, y[day], width=0.66, color=BLUE, edgecolor="white", linewidth=0.8)
+        ax.axhline(0, color=INK2, linewidth=0.8)
+        ax.set_title(f"{name} — 20-session window, Q5−Q1 by year (mean of 4 horizons)", loc="left")
+        ax.grid(axis="y", color=RULE, linewidth=0.5)
+        ax.set_axisbelow(True)
+        for s in ("top", "right"):
+            ax.spines[s].set_visible(False)
+    axes[1].set_xticks(x, [str(v) if v < 2026 else "2026\nYTD" for v in y.index], fontsize=8)
     fig.tight_layout()
-    fig.savefig(path)
+    fig.savefig(path, facecolor="white")
     plt.close(fig)
     return y
 
@@ -264,6 +261,11 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
     roc = sweep[sweep.factor == "VV_ROC"].groupby(["window", "lag", "period"]).ctrl_t.mean().unstack("period")
     roc_consistent = int((roc[PERIODS[:3]] <= -1.0).all(axis=1).sum())
     roc_top = roc.sort_values("FULL").head(6)
+    roc_sp = sweep[sweep.factor == "VV_ROC"].groupby(["window", "lag", "period"]).ctrl_spread.mean().unstack("period")
+    short = roc_sp.loc[(roc_sp.index.get_level_values(0) <= 15) & (roc_sp.index.get_level_values(1) <= 15)]
+    short_pos = int((short[PERIODS[:3]] > 0).all(axis=1).sum())
+    short_keys = [(5, 5), (10, 5), (15, 3), (15, 5)]
+    short_t = [roc.loc[k, "FULL"] for k in short_keys]
     clean_vs_raw = (sweep[sweep.factor == "VV"].groupby(["window", "period"]).t.mean()
                     - sweep_raw[sweep_raw.factor == "VV"].groupby(["window", "period"]).t.mean()).abs().max()
     rng = lambda xs: f"{f3(min(x[0] for x in xs))} to {f3(max(x[0] for x in xs))}"
@@ -287,9 +289,12 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         f"<b>Window: 20 sessions is the best setting over 2009–26</b> (avg t {ft(vv_sc.loc[20, 'FULL'])}; strongest of "
         f"the 15 tested, 5 to 252). Windows from 10 to 50 all work. The 60–252 windows only worked in 2022–26. 252 is "
         f"the weakest (avg t {ft(vv_sc.loc[252, 'FULL'])}).",
-        f"<b>Rate of change adds nothing durable.</b> With the volume-volatility level held fixed, "
-        f"{roc_consistent} of 180 window × lag settings hold up in all three periods. The best ones worked in "
-        f"2009–2022 and went flat in 2022–26.",
+        f"<b>Rate of change, slow version: nothing durable.</b> With the volume-volatility level held fixed, "
+        f"{roc_consistent} of 180 window × lag settings stay negative (t ≤ −1) in all three periods. The best ones "
+        f"worked in 2009–2022 and went flat in 2022–26.",
+        f"<b>Rate of change, fast version: a jump predicts outperformance.</b> At a 5–15 session window and "
+        f"3–5 session lag, a short-term rise in volume volatility at a given level is positive in all three "
+        f"periods. Full-sample t {ft(min(short_t))} to {ft(max(short_t))}. That runs opposite to the level effect.",
     ])
     story += [Spacer(1, 6), P("How to read the numbers", "h2"),
               P("Each figure is the forward return divided by the stock's trailing 20-day volatility scaled to the "
@@ -320,13 +325,13 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
     story += [P("1. Window length: 5 to 252 sessions", "h1"),
               P(f"Fifteen windows, each scored over three periods on the same dates and names. The rate of change in "
                 f"Section 3 uses the same grid."),
-              Spacer(1, 4), Image(str(tmp / "heat.png"), width=6.6 * inch, height=4.6 * inch)]
+              Spacer(1, 4), Image(str(tmp / "heat.png"), width=6.6 * inch, height=3.9 * inch)]
     story += bullets([
         f"2009–16, never examined before this round: 10–20 sessions work (20: avg t "
         f"{ft(vv_sc.loc[20, PERIODS[0]])}). 40 sessions and longer show nothing.",
         f"2016–22: 10–50 work. 2022–26: 50–180 work best, short windows fade.",
-        f"The ranking of windows flips between periods: rank correlation 2009–16 vs 2022–26 = "
-        f"{ft(corr(PERIODS[0], PERIODS[2]))}, 2016–22 vs 2022–26 = {ft(corr(PERIODS[1], PERIODS[2]))}. "
+        f"The ranking of windows flips between periods: rank correlation of window avg t, 2009–16 vs 2022–26 = "
+        f"{corr(PERIODS[0], PERIODS[2]):+.2f}, 2016–22 vs 2022–26 = {corr(PERIODS[1], PERIODS[2]):+.2f}. "
         f"The 40–60 call from the 2018–26 round was a 2022–26 effect.",
         f"Over the full 2009–26 sample the strongest window is {best_full} (avg t {ft(vv_sc.loc[best_full, 'FULL'])}).",
     ])
@@ -337,7 +342,7 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         g = full[full.window == w]
         return lambda d, h: tuple(g[(g.day == d) & (g.h == h)][["spread", "t"]].iloc[0])
 
-    story += day_tables([(f"{w} sessions", sweep_fn(w)) for w in [5, 10, 20, 30, 40, 60, 120, 180, 252]], "Window")
+    story += day_tables([(f"{w} sessions", sweep_fn(w)) for w in [5, 10, 20, 40, 60, 120, 252]], "Window")
     story += [PageBreak()]
 
     # ----- detail at 20 -----
@@ -349,14 +354,28 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
             lab = {"BASE": "All", "Q5-Q1": "Q5−Q1"}.get(b, b)
             rows.append([lab] + [cell(*pick(ts20, day=day, h=h, bucket=b)) for h in H])
         story += [KeepTogether([table(rows, [0.8 * inch] + [1.1 * inch] * 4)]), Spacer(1, 6)]
-    story += [Image(str(tmp / "yearly.png"), width=7.0 * inch, height=2.7 * inch)]
     story += bullets([
         f"Down days: Q1 through Q5 step down in order at every horizon. The calmest-volume Q1 bucket is positive "
         f"with t {trng(q1d)}.",
         f"Up days: the spread builds with horizon and is strongest at 42d.",
-        f"By year: down-day spread negative in {neg_down}/{n_yrs} full years, up-day {neg_up}/{n_yrs}. "
-        f"2026 YTD is positive.",
     ])
+    story += [PageBreak(), P("2b. Year by year", "h1"),
+              Image(str(tmp / "yearly.png"), width=7.0 * inch, height=3.9 * inch), Spacer(1, 4)]
+    story += bullets([f"20-session window: down-day spread negative in {neg_down}/{n_yrs} full years (2009–2025), "
+                      f"up-day {neg_up}/{n_yrs}. 2026 YTD is positive."])
+    yt = {}
+    for n in ("w20", "w60", "w252"):
+        yy = R[n]["yr"]
+        yt[n] = yy[yy.factor == "VV"].groupby(["year", "day"]).q5_minus_q1_rax.mean().unstack("day")
+    rows = [["Year", "20 · Down", "20 · Up", "60 · Down", "60 · Up", "252 · Down", "252 · Up"]]
+    for yr in [v for v in yt["w20"].index if v >= 2009]:
+        rows.append([str(yr) if yr < 2026 else "2026 YTD"] +
+                    [f3(yt[n].loc[yr, d]) for n in ("w20", "w60", "w252") for d in ("DOWN", "UP")])
+    cnt = ["Negative (of 17)"] + [f"{int((yt[n].loc[2009:2025, d] < 0).sum())}" for n in ("w20", "w60", "w252")
+                                  for d in ("DOWN", "UP")]
+    rows.append(cnt)
+    story += [Spacer(1, 4), P("Q5−Q1 by year and window (mean of 4 horizons)", "h2"),
+              table(rows, [1.15 * inch] + [0.95 * inch] * 6)]
     story += [PageBreak()]
 
     # ----- ROC -----
@@ -364,17 +383,28 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
               P("Without holding the level fixed, ROC mostly re-measures the level: when volume volatility is rising, "
                 "it is usually already high. The test that matters is ROC's Q5−Q1 inside each third of "
                 "volume-volatility level, averaged. That is ROC's independent signal."),
-              Spacer(1, 4), Image(str(tmp / "roc.png"), width=7.0 * inch, height=4.67 * inch)]
+              Spacer(1, 4), Image(str(tmp / "roc.png"), width=7.0 * inch, height=4.03 * inch)]
     rows = [["Window / lag"] + [PLABEL[p] for p in PERIODS]]
     for (w, l), r in roc_top.iterrows():
         rows.append([f"{w} / {l}"] + [ft(r[p]) for p in PERIODS])
     story += [Spacer(1, 4), P("Strongest settings, level held fixed (avg t by period)", "h2"),
               table(rows, [1.1 * inch] + [1.0 * inch] * 4)]
     story += bullets([
-        f"Settings with avg t ≤ −1 in all three periods: {roc_consistent} of 180.",
-        "The best settings (window 50–120, lag 10–20) worked in 2009–16 and 2016–22 at t ≈ −2, then went flat or "
-        "positive in 2022–26. The setting from the last round, 60/10, follows that same pattern.",
-        "Not a stable addition to the volume-volatility level.",
+        f"Slow ROC (orange block, window 50–120, lag 10–20): worked in 2009–16 and 2016–22 at t ≈ −2, then went "
+        f"flat or positive in 2022–26. Settings with t ≤ −1 in all three periods: {roc_consistent} of 180. "
+        f"The 60/10 setting from the last round follows that pattern.",
+    ])
+    rows = [["Window / lag"] + [PLABEL[p] for p in PERIODS]]
+    for k in short_keys:
+        rows.append([f"{k[0]} / {k[1]}"] + [ft(roc.loc[k, p]) for p in PERIODS])
+    story += [Spacer(1, 4), P("Fast ROC, level held fixed (avg t by period)", "h2"),
+              table(rows, [1.1 * inch] + [1.0 * inch] * 4)]
+    story += bullets([
+        f"Fast ROC (blue block, window 5–15, lag 3–15): positive spread in all three periods for {short_pos} of "
+        f"{len(short)} settings. Positive Q5−Q1 means a recent jump in volume volatility outperforms a recent drop "
+        f"at the same level.",
+        "Weaker than the level effect: per-period t mostly +0.6 to +2.3, full-sample +2.1 to +2.6 on the best "
+        "settings. It points the other way from the level, so the two are separate signals.",
     ])
     story += [PageBreak()]
 
@@ -406,13 +436,14 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         "It shows up across the list as a group, not as a timing signal for one name.",
     ])
 
-    story += [P("5. What changed from earlier rounds", "h1")]
+    story += [PageBreak(), P("5. What changed from earlier rounds", "h1")]
     story += bullets([
         "Round 1 (2016–26, 20/10): volume volatility negative, ROC weak. Holds.",
         "Round 2 (2016–26 sweep to 60): recommended 40–60. Reversed. That result came from 2022–26. Over "
         "2009–26, 20 is the strongest and long windows fail in 2009–16.",
-        "Round 3 (2018–26, out-of-sample split): dropped ROC. Refined. ROC with the level held fixed did work for "
-        "2009–2022 and has been flat since mid-2022.",
+        "Round 3 (2018–26, out-of-sample split): dropped ROC. Refined. Slow ROC with the level held fixed worked "
+        "for 2009–2022 and has been flat since mid-2022. Fast ROC (5–15 / 3–5) is a separate, positive signal "
+        "that holds in all three periods.",
         "Fixed along the way: the risk-adjustment volatility was tied to the volume-volatility window (now fixed "
         "at 20), and bad volume prints are now cleaned. Neither changed the 20-session results.",
     ])
