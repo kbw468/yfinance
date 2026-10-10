@@ -14,7 +14,8 @@ import lightgbm as lgb
 from sklearn.isotonic import IsotonicRegression
 from sklearn.metrics import roc_auc_score
 from ..config import CACHE_DIR
-from .outcomes import HORIZONS
+from .outcomes import HORIZONS, alpha_target
+TARGET = "ah"
 warnings.filterwarnings("ignore")
 D = CACHE_DIR / "steady"
 PARAMS = dict(objective="binary", learning_rate=0.03, num_leaves=31, min_child_samples=1000, subsample=0.7, subsample_freq=1,
@@ -43,7 +44,8 @@ def feature_list() -> list:
 
 def load(cols=None) -> pd.DataFrame:
     T = pd.read_parquet(D / "table.parquet", columns=cols)
-    return T[~((T.date >= COVID[0]) & (T.date <= COVID[1]))].reset_index(drop=True)
+    T = T[~((T.date >= COVID[0]) & (T.date <= COVID[1]))].reset_index(drop=True)
+    return alpha_target(T) if cols is None else T
 
 
 def main():
@@ -53,10 +55,10 @@ def main():
     T["baseline"] = T[BASE_UP].sum(axis=1) - T[BASE_DOWN].sum(axis=1)
     thin = set(np.sort(T.date.unique())[::3]); T["thin"] = T.date.isin(thin)
     print(f"rows {len(T):,} features {len(feats)} load {time.time()-t0:.0f}s", flush=True)
-    keep = ["date", "ticker", "sector", "steady", "baseline", "beta_l1_252"] + [f"{k}_{h}" for h in HORIZONS for k in ("hit", "xs", "ptt", "stop", "ret")]
+    keep = ["date", "ticker", "sector", "steady", "baseline", "beta_l1_252"] + [f"{k}_{h}" for h in HORIZONS for k in ("hit", "ah", "ratio", "xs", "ptt", "stop", "ret")]
     O = T[keep].copy(); log = []; imps = {}
     for h in HORIZONS:
-        y = f"hit_{h}"; O[f"raw_{h}"] = np.nan; O[f"p_{h}"] = np.nan; gi = pd.Series(0.0, index=feats)
+        y = f"{TARGET}_{h}"; O[f"raw_{h}"] = np.nan; O[f"p_{h}"] = np.nan; gi = pd.Series(0.0, index=feats)
         for Y in TEST_YEARS:
             te = (T.date >= f"{Y}-01-01") & (T.date <= f"{Y}-12-31")
             tr = (T.date < pd.Timestamp(f"{Y}-01-01") - pd.Timedelta(days=EMBARGO_DAYS)) & T[y].notna() & T.thin
