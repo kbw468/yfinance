@@ -1,0 +1,153 @@
+
+======== 21-session sleeves, beta 0.8-1.5
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.121        -0.211         0.575                  1.717         0.472                  0.000       -0.098    0.840
+all in band  0.132        -0.264         0.500                  1.657         0.500                  0.001       -0.111    1.080
+high risk    0.300        -0.387         0.775                  2.091         0.514                  0.003       -0.188    1.429
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.078        -0.241         0.321                  1.529         0.324                 -0.012       -0.076    0.806
+all in band  0.184        -0.256         0.719                  2.227         0.471                 -0.002       -0.077    1.047
+high risk    0.368        -0.321         1.144                  2.578         0.559                  0.019       -0.109    1.395
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 18.9%   median excess -0.27%   median path drawdown -4.7%   median L1 beta 0.90
+   positions, all in band : stopped at -8% intraday 31.2%   median excess -0.25%   median path drawdown -6.8%   median L1 beta 1.09
+   positions, high risk   : stopped at -8% intraday 52.8%   median excess -0.18%   median path drawdown -11.5%   median L1 beta 1.26
+
+======== 21-session sleeves, beta 1.5+
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.129        -0.388         0.332                  1.529         0.514                  0.003       -0.173    1.405
+all in band  0.214        -0.359         0.595                  1.773         0.500                  0.000       -0.162    1.635
+high risk    0.314        -0.471         0.667                  1.940         0.458                 -0.001       -0.237    2.002
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.295        -0.297         0.994                  2.562         0.441                 -0.004       -0.083    1.530
+all in band  0.443        -0.326         1.361                  2.969         0.676                  0.019       -0.124    1.897
+high risk    0.929        -0.375         2.479                  3.929         0.676                  0.026       -0.179    2.482
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 35.1%   median excess -0.00%   median path drawdown -7.8%   median L1 beta 1.61
+   positions, all in band : stopped at -8% intraday 45.6%   median excess +0.05%   median path drawdown -10.1%   median L1 beta 1.75
+   positions, high risk   : stopped at -8% intraday 56.9%   median excess +0.24%   median path drawdown -14.3%   median L1 beta 2.08
+
+======== 21-session sleeves, beta under 0.8
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.094        -0.137         0.685                  1.759         0.431                 -0.002       -0.100    0.487
+all in band  0.115        -0.145         0.795                  1.827         0.444                 -0.001       -0.085    0.618
+high risk    0.187        -0.245         0.765                  1.960         0.514                  0.001       -0.119    0.872
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.108        -0.105         1.034                  2.052         0.324                 -0.014       -0.053    0.181
+all in band  0.118        -0.139         0.852                  2.006         0.412                 -0.008       -0.067    0.388
+high risk    0.262        -0.254         1.030                  2.302         0.529                  0.007       -0.114    0.668
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 12.6%   median excess -0.35%   median path drawdown -3.9%   median L1 beta 0.43
+   positions, all in band : stopped at -8% intraday 23.3%   median excess -0.49%   median path drawdown -5.4%   median L1 beta 0.56
+   positions, high risk   : stopped at -8% intraday 38.8%   median excess -0.25%   median path drawdown -8.3%   median L1 beta 0.65
+
+======== 42-session sleeves, beta 0.8-1.5
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.097        -0.357         0.272                  1.558         0.514                  0.002       -0.145    0.857
+all in band  0.084        -0.425         0.198                  1.419         0.514                  0.001       -0.205    1.092
+high risk    0.177        -0.546         0.324                  1.657         0.528                  0.005       -0.341    1.408
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.073        -0.219         0.334                  1.531         0.294                 -0.007       -0.072    0.798
+all in band  0.161        -0.253         0.637                  2.102         0.500                 -0.002       -0.076    1.042
+high risk    0.318        -0.299         1.063                  2.439         0.618                  0.015       -0.112    1.380
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 32.6%   median excess -0.24%   median path drawdown -7.7%   median L1 beta 0.89
+   positions, all in band : stopped at -8% intraday 45.4%   median excess -0.39%   median path drawdown -10.4%   median L1 beta 1.09
+   positions, high risk   : stopped at -8% intraday 65.0%   median excess -0.34%   median path drawdown -17.0%   median L1 beta 1.26
+
+======== 42-session sleeves, beta 1.5+
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.107        -0.413         0.260                  1.439         0.528                  0.005       -0.210    1.387
+all in band  0.163        -0.457         0.357                  1.592         0.486                  0.000       -0.208    1.599
+high risk    0.211        -0.595         0.355                  1.647         0.542                  0.004       -0.281    1.923
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.271        -0.279         0.971                  2.452         0.471                 -0.004       -0.081    1.494
+all in band  0.421        -0.321         1.312                  3.010         0.676                  0.017       -0.116    1.896
+high risk    0.772        -0.368         2.097                  3.399         0.676                  0.022       -0.204    2.463
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 51.4%   median excess +0.41%   median path drawdown -11.9%   median L1 beta 1.60
+   positions, all in band : stopped at -8% intraday 58.9%   median excess +0.24%   median path drawdown -15.1%   median L1 beta 1.75
+   positions, high risk   : stopped at -8% intraday 68.0%   median excess +0.37%   median path drawdown -20.6%   median L1 beta 2.10
+
+======== 42-session sleeves, beta under 0.8
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.054        -0.396         0.136                  1.392         0.458                 -0.001       -0.158    0.532
+all in band  0.071        -0.367         0.194                  1.475         0.417                 -0.001       -0.142    0.657
+high risk    0.104        -0.429         0.243                  1.528         0.472                 -0.000       -0.224    0.882
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.079        -0.099         0.794                  1.650         0.353                 -0.013       -0.054    0.182
+all in band  0.108        -0.139         0.774                  1.907         0.412                 -0.007       -0.068    0.381
+high risk    0.202        -0.245         0.823                  2.039         0.500                  0.001       -0.112    0.677
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 25.2%   median excess -0.80%   median path drawdown -6.3%   median L1 beta 0.43
+   positions, all in band : stopped at -8% intraday 37.1%   median excess -0.88%   median path drawdown -8.3%   median L1 beta 0.56
+   positions, high risk   : stopped at -8% intraday 53.9%   median excess -0.01%   median path drawdown -12.9%   median L1 beta 0.64
+
+======== 63-session sleeves, beta 0.8-1.5
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.117        -0.346         0.339                  1.669         0.542                  0.001       -0.133    0.863
+all in band  0.113        -0.426         0.266                  1.543         0.528                  0.002       -0.206    1.100
+high risk    0.270        -0.546         0.494                  1.960         0.500                  0.003       -0.339    1.406
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.078        -0.231         0.336                  1.562         0.382                 -0.006       -0.074    0.781
+all in band  0.160        -0.251         0.635                  2.101         0.500                 -0.002       -0.075    1.037
+high risk    0.312        -0.322         0.967                  2.372         0.588                  0.014       -0.118    1.386
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 41.2%   median excess -0.59%   median path drawdown -9.6%   median L1 beta 0.89
+   positions, all in band : stopped at -8% intraday 53.0%   median excess -0.54%   median path drawdown -13.0%   median L1 beta 1.09
+   positions, high risk   : stopped at -8% intraday 71.7%   median excess -0.20%   median path drawdown -21.3%   median L1 beta 1.24
+
+======== 63-session sleeves, beta 1.5+
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.143        -0.425         0.335                  1.565         0.542                  0.005       -0.219    1.397
+all in band  0.212        -0.456         0.465                  1.745         0.500                  0.001       -0.208    1.589
+high risk    0.299        -0.595         0.502                  1.846         0.542                  0.007       -0.285    1.894
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.304        -0.277         1.099                  2.791         0.529                  0.005       -0.078    1.492
+all in band  0.422        -0.321         1.316                  3.017         0.676                  0.018       -0.114    1.892
+high risk    0.719        -0.352         2.040                  3.216         0.618                  0.016       -0.180    2.408
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 58.4%   median excess +0.62%   median path drawdown -14.9%   median L1 beta 1.61
+   positions, all in band : stopped at -8% intraday 64.9%   median excess +0.59%   median path drawdown -18.7%   median L1 beta 1.75
+   positions, high risk   : stopped at -8% intraday 73.6%   median excess +1.31%   median path drawdown -25.1%   median L1 beta 2.09
+
+======== 63-session sleeves, beta under 0.8
+-- 2018-2023
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.067        -0.365         0.184                  1.475         0.444                 -0.003       -0.122    0.546
+all in band  0.090        -0.366         0.244                  1.590         0.444                 -0.002       -0.140    0.677
+high risk    0.129        -0.405         0.318                  1.650         0.458                 -0.002       -0.178    0.897
+SPY          0.120        -0.337         0.355                  1.655         0.000                  0.000       -0.125    1.000
+-- 2024 to date
+              CAGR  max drawdown  CAGR/|maxDD|  gain-to-pain (months)  months > SPY  median monthly excess  worst month  L1 beta
+low risk     0.099        -0.097         1.020                  1.813         0.353                 -0.006       -0.052    0.188
+all in band  0.110        -0.136         0.808                  1.930         0.441                 -0.007       -0.067    0.379
+high risk    0.264        -0.212         1.249                  2.692         0.559                  0.005       -0.102    0.686
+SPY          0.210        -0.188         1.118                  3.469         0.000                  0.000       -0.056    1.000
+   positions, low risk    : stopped at -8% intraday 33.2%   median excess -1.24%   median path drawdown -8.1%   median L1 beta 0.42
+   positions, all in band : stopped at -8% intraday 45.6%   median excess -1.23%   median path drawdown -10.6%   median L1 beta 0.56
+   positions, high risk   : stopped at -8% intraday 61.4%   median excess -0.68%   median path drawdown -16.1%   median L1 beta 0.64
