@@ -79,14 +79,14 @@ TINT = "#dbe8f8"   # light blue highlight for 1Y-negative years
 LABELS = {
     "NEG_1Y": "1Y negative", "POS_1Y": "1Y positive", "NEG_1M": "1M negative", "POS_1M": "1M positive",
     "NEG1Y_NEG1M": "1Y neg + 1M neg", "NEG1Y_POS1M": "1Y neg + 1M pos", "POS1Y_NEG1M": "1Y pos + 1M neg",
-    "POS1Y_POS1M": "1Y pos + 1M pos", "Q1_1Y": "1Y bottom 20%", "Q2_1Y": "1Y 20–40%",
-    "Q3_1Y": "1Y 40–60%", "Q4_1Y": "1Y 60–80%", "Q5_1Y": "1Y top 20%",
+    "POS1Y_POS1M": "1Y pos + 1M pos", "Q1_1Y": "1Y worst 20%", "Q2_1Y": "1Y worst 20–40%",
+    "Q3_1Y": "1Y middle 20%", "Q4_1Y": "1Y best 20–40%", "Q5_1Y": "1Y best 20%",
     "NEG_1Y_SMALL": "1Y neg, low liquidity", "POS_1Y_SMALL": "1Y pos, low liquidity",
     "NEG_1Y_LARGE": "1Y neg, high liquidity", "POS_1Y_LARGE": "1Y pos, high liquidity",
     "ALL": "All names (equal weight)", "SPY": "SPY", "DEEP_LT_-30": "1Y return −30% or worse",
 }
 PAIR_LAB = {"NEG1Y_NEG1M-POS1Y_POS1M": "1Y+1M neg − 1Y+1M pos", "NEG_1Y-POS_1Y": "1Y neg − 1Y pos",
-            "NEG_1M-POS_1M": "1M neg − 1M pos", "Q1_1Y-Q5_1Y": "1Y bottom 20% − top 20%"}
+            "NEG_1M-POS_1M": "1M neg − 1M pos", "Q1_1Y-Q5_1Y": "1Y worst 20% − best 20%"}
 WIN_LAB = {"Oct1_15": "Oct 1–15", "Oct15_Dec15": "Oct 15–Dec 15", "Oct15_Dec31": "Oct 15–Dec 31",
            "Q4": "Full Q4", "Jan": "January"}
 
@@ -502,22 +502,23 @@ def top_now_table():
 
 
 def fifths_table():
-    names = {1: "Bottom 20%", 2: "20–40%", 3: "40–60%", 4: "60–80%", 5: "Top 20%"}
-    rows = [["1Y return rank (Sep 30, 2026)", "1Y return range", "Names"]]
+    names = {1: "Worst 20% (lowest 1-year returns)", 2: "Worst 20–40%", 3: "Middle 20%", 4: "Best 20–40%",
+             5: "Best 20% (highest 1-year returns)"}
+    rows = [["Group (ranked by 1-year return, Sep 30, 2026)", "1-year return range", "Stocks"]]
     for k in range(1, 6):
         q = QU[k]
         lo = "below" if k == 1 else pct(q["min"], 1, True)
         rng = f"below {pct(q['max'], 1, True)}" if k == 1 else (
             f"above {pct(q['min'], 1, True)}" if k == 5 else f"{lo} to {pct(q['max'], 1, True)}")
         rows.append([names[k], rng, f"{q['n']}"])
-    return table(rows, [170, 170, 60], zebra=True)
+    return table(rows, [230, 150, 50], zebra=True)
 
 
 def picks_table():
     a, b = CELL.loc["1Y Q2 + 1M neg"], CELL.loc["1Y Q1-Q2 + Sep below -10%"]
     c = MB["100"][(MB["100"].window == "Oct15_Dec15") & (MB["100"].group == "NEG1Y_POS1M")].iloc[0]
     n_now = {k: CANDS.basket.str.contains(k).sum() for k in "ABC"}
-    spec = [("A  1Y 20–40%, Sep down", a, n_now["A"]), ("B  1Y bottom 40%, Sep below −10%", b, n_now["B"]),
+    spec = [("A  1Y worst 20–40%, Sep down", a, n_now["A"]), ("B  1Y worst 40%, Sep below −10%", b, n_now["B"]),
             ("C  Top-100, 1Y down, Sep up", c, n_now["C"]), ("All Sep losers", CELL.loc["1M neg (all)"], None),
             ("SPY", CELL.loc["SPY"], None), ("Double winners (1Y up, Sep up)", CELL.loc["PP (all)"], None)]
     rows = [["Basket (Oct 15–Dec 15, 2018–2025)", "Names now", "Avg", "Sharpe", "Alpha", "Beta", "Up yrs", "Beat SPY",
@@ -613,8 +614,8 @@ bluf = (f"<b>The read.</b> On the 1Y sort alone, Q4 is a tie: losers and winners
         f"{frac(K['q4_1m_hit'])} years). 1Y losers get sold Oct 1–15 ({pct(K['oct_np'], 2, True)}, lagging "
         f"{frac(1 - K['oct_np_hit'])} years), then lead into mid-December. January adds nothing. In the mega-caps the same pattern shows up, smaller and noisier "
         f"(page 2).<br/><br/>"
-        f"<b>Setup:</b> basket A, stocks whose 1Y return ranks in the 20–40% band ({pct(QU[2]['min'], 1, True)} to "
-        f"{pct(QU[2]['max'], 1, True)} this year) and that fell in September. Equal weight. <b>Entry</b> Oct 15. "
+        f"<b>Setup:</b> basket A, stocks in the worst 20–40% of 1-year returns (1Y return "
+        f"{pct(QU[2]['min'], 1, True)} to {pct(QU[2]['max'], 1, True)} this year) that also fell in September. Equal weight. <b>Entry</b> Oct 15. "
         f"<b>Exit</b> Dec 15. <b>Invalidation</b>: basket trails SPY by more than "
         f"{pct(CELL.loc['1Y Q2 + 1M neg', 'worst_vs_spy'], 1)} by Dec 15, its worst {SPAN} year. Basket B for the "
         f"highest Sharpe, basket C for mega-caps. Names on page 2.")
@@ -623,19 +624,26 @@ box.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor(PANEL)
                          ("LINEBEFORE", (0, 0), (0, -1), 3, colors.HexColor(BLUE)),
                          ("TOPPADDING", (0, 0), (-1, -1), 11), ("BOTTOMPADDING", (0, 0), (-1, -1), 11),
                          ("LEFTPADDING", (0, 0), (-1, -1), 13), ("RIGHTPADDING", (0, 0), (-1, -1), 13)]))
-story += [box, Spacer(1, 12), tiles([
-    (f"Q4 Sharpe, 1M losers vs 1M winners · {SPAN}", vs(num(K["sh_n1m"]), num(K["sh_p1m"])),
-     f"1Y sort: {num(K['sh_n1y'])} vs {num(K['sh_p1y'])} · 1Y+1M: {num(K['sh_nn'])} vs {num(K['sh_pp'])}"),
-    ("Oct 1–15, 1Y losers minus winners", pct(K["oct_np"], 2, True),
-     f"t {num(K['oct_np_t'], 1, True)} · lagged {frac(1 - K['oct_np_hit'])} years · bottom vs top 20% on 1Y "
-     f"{pct(K['oct_q'], 2, True)}"),
-    ("Oct 15–Dec 15, 1Y neg + 1M neg basket",
-     f"{pct(K['nn_ret'], 1, True)} <font size=11 color='{MUTED}'>Sharpe</font> {num(K['nn_sh'])}",
-     f"1Y pos + 1M pos {pct(K['pp_ret'], 1, True)} (Sharpe {num(K['pp_sh'])}) · SPY {pct(K['spy_ret'], 1, True)} "
-     f"(Sharpe {num(K['spy_sh'])})"),
-    ("January, 1Y losers minus winners", pct(K["jan_np"], 2, True),
-     f"ahead {frac(K['jan_np_hit'])} years · Dec 15→Jan 31 loser alpha {pct(K['rb_neg_al'], 1, True)} annualized"),
-]), Spacer(1, 10), P("Findings", "h2")]
+q = QU
+key_txt = (
+    "<b>What the terms mean</b><br/>"
+    "<b>1Y</b> = a stock's total return over the 12 months ending Sep 30. "
+    "<b>1M</b> or <b>Sep</b> = its return in September alone.<br/>"
+    "<b>Quintiles (fifths)</b> measure how a stock's 1-year return ranks against every other stock. Each Sep 30, "
+    "all ~2,300 stocks are lined up from the lowest 1-year return to the highest and split into five equal groups "
+    "of ~460. <b>Worst 20%</b> = the 460 stocks with the lowest 1-year returns. <b>Worst 20–40%</b> = the next 460. "
+    "<b>Middle 20%</b>, <b>best 20–40%</b>, then <b>best 20%</b> = the 460 highest. "
+    f"This year: worst 20% = below {pct(q[1]['max'], 1, True)}; worst 20–40% = {pct(q[2]['min'], 1, True)} to "
+    f"{pct(q[2]['max'], 1, True)}; middle = {pct(q[3]['min'], 1, True)} to {pct(q[3]['max'], 1, True)}; "
+    f"best 20–40% = {pct(q[4]['min'], 1, True)} to {pct(q[4]['max'], 1, True)}; best 20% = above "
+    f"{pct(q[5]['min'], 1, True)}.<br/>"
+    "<b>NN / NP / PN / PP</b> = 1Y negative or positive, then September negative or positive "
+    "(NN = down on both, PP = up on both). <b>N−P</b> = negative group's return minus positive group's.")
+keybox = Table([[P(key_txt, "body")]], colWidths=[W])
+keybox.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.8, colors.HexColor(INK)),
+                            ("TOPPADDING", (0, 0), (-1, -1), 9), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                            ("LEFTPADDING", (0, 0), (-1, -1), 12), ("RIGHTPADDING", (0, 0), (-1, -1), 12)]))
+story += [box, Spacer(1, 10), keybox, Spacer(1, 8), P("Findings", "h2")]
 findings = [
     f"<b>1Y sort: no Q4 edge.</b> Sharpe {num(K['sh_n1y'])} vs {num(K['sh_p1y'])}; Q4 spread "
     f"{pct(K['q4_np'], 2, True)}, t {num(K['q4_np_t'], 1, True)}.",
@@ -645,7 +653,7 @@ findings = [
     f"<b>Double winners lag in Q4.</b> 1Y+1M positive Sharpe {num(K['sh_pp'])}, beat SPY in {frac(K['pp_beat'])} Q4s. "
     f"Double losers {num(K['sh_nn'])}.",
     f"<b>Oct 1–15 is the flush.</b> 1Y losers minus winners {pct(K['oct_np'], 2, True)} (t {num(K['oct_np_t'], 1, True)}), "
-    f"1Y+1M {pct(K['oct_nn'], 2, True)}, bottom vs top 20% on 1Y {pct(K['oct_q'], 2, True)}. October is also the worst "
+    f"1Y+1M {pct(K['oct_nn'], 2, True)}, worst vs best 20% on 1Y {pct(K['oct_q'], 2, True)}. October is also the worst "
     f"calendar month for the 1Y spread after SPY beta ({pct(oct_m.alpha, 2, True)}).",
     f"<b>Mid-October to mid-December is the recovery.</b> 1Y+1M neg minus pos, Oct 15–Dec 15: "
     f"{pct(K['w_nn'], 2, True)} (t {num(K['w_nn_t'], 1, True)}, positive {frac(K['w_nn_hit'])}, worst "
@@ -655,7 +663,7 @@ findings = [
     f"<b>The relative low prints in November.</b> The loser-vs-winner path bottomed in November in "
     f"{len(nov_troughs)} of {len(YEARS)} years ({', '.join(str(y) for y in nov_troughs)}).",
     f"<b>January is dead.</b> 1Y losers minus winners {pct(K['jan_np'], 2, True)}, 1Y+1M {pct(K['jan_nn'], 2, True)}. "
-    f"Dec 15 re-sort to Jan 31: 1Y losers Sharpe {num(K['rb_neg_sh'])} vs winners {num(K['rb_pos_sh'])}; 1Y top 20% "
+    f"Dec 15 re-sort to Jan 31: 1Y losers Sharpe {num(K['rb_neg_sh'])} vs winners {num(K['rb_pos_sh'])}; 1Y best 20% "
     f"{num(K['rb_q5_sh'])} beats −30%-or-worse losers {num(K['rb_deep_sh'])}.",
     f"<b>Mega-caps: same direction, not significant.</b> Among the 100 biggest names, 1Y losers lag Oct 1–15 "
     f"({pct(MK['oct'], 2, True)}, {frac(1 - MK['oct_hit'])} years) and carry Q4 alpha {pct(MK['q4_al_n'], 1, True)} vs "
@@ -669,9 +677,9 @@ na, ca = names("A")
 nb, cb = names("B")
 nc, cc = names("C")
 story += [PageBreak(), P("Q4 2026: which names", "h1"),
-          P("<b>Quintiles, in plain terms.</b> Each Sep 30 every stock's trailing 1-year return is ranked against all "
-            "the others, and the list is cut into five equal groups of about 460 names. Bottom 20% = the worst 1-year "
-            "performers, top 20% = the best. This year's cutoffs:", "body"),
+          P("<b>Quintiles = 1-year return rank.</b> All ~2,300 stocks are lined up by their 1-year return to Sep 30 "
+            "and split into five equal groups. The group tells you how bad or good a stock's last 12 months were "
+            "compared with everything else. This year's groups:", "body"),
           fifths_table(), Spacer(1, 10),
           P("<b>The three best baskets for Oct 15 → Dec 15, tested 2018–2025.</b> A has the best odds (up 7 of 8 "
             "years, mildest bad year). B has the highest Sharpe and alpha with more swing. C is the mega-cap version. "
@@ -709,8 +717,8 @@ story += [PageBreak(), P("The biggest names, year by year", "h1"),
 story += [PageBreak(), P(f"Q4 risk-adjusted returns by bucket, {SPAN}", "h1"),
           P("Buckets formed at the last September close, equal weight, buy-and-hold to Dec 31. Annualized stats pool "
             "every Q4 trading day across the years. Alpha and beta vs SPY; Sharpe and Sortino over 13-week T-bills. "
-            "Avg Q4 / Median / Beat SPY / Worst are per-year figures. 1Y 20–40% etc. = where the stock's 1Y return "
-            "ranked among all names that Sep 30.", "note"),
+            "Avg Q4 / Median / Beat SPY / Worst are per-year figures. 1Y worst 20% … best 20% = the stock's 1-year "
+            "return rank among all stocks that Sep 30 (see page 1).", "note"),
           risk_table(), Spacer(1, 6),
           P(f"Is Q4 special? Same buckets in every quarter, Q1 {START} to Q3 2026 (Q4 through {LAST})", "h2"),
           quarter_table()]
@@ -784,8 +792,8 @@ story += [PageBreak(), P("Top 100 names, Sep 30, 2026", "h1"),
           P("Sorted by market cap. Bucket codes as above; blue = 1Y negative. QTD through Oct 9, 2026.", "note"),
           top_now_table()]
 story += [PageBreak(), P("Appendix: every name in baskets A, B and C, Sep 30, 2026", "h1"),
-          P(f"All {len(CANDS):,} names, sorted by market cap. Basket A = 1Y in the 20–40% band and September down; "
-            "B = 1Y in the bottom 40% and September down more than 10%; C = top-100 name with 1Y down and September up. "
+          P(f"All {len(CANDS):,} names, sorted by market cap. Basket A = worst 20–40% of 1-year returns and September down; "
+            "B = worst 40% of 1-year returns and September down more than 10%; C = top-100 name with 1Y down and September up. "
             "QTD through Oct 9, 2026.", "note"), candidates_table()]
 
 
