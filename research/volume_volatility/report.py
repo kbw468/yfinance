@@ -1,9 +1,10 @@
 """Build the PDF findings report from the 2009-2026 sweep and backtest runs.
 
-Usage: python report.py <sweep_dir> <sweep_raw_dir> <runs_dir> <out.pdf>
+Usage: python report.py <sweep_dir> <sweep_raw_dir> <runs_dir> <out.pdf> [combo_dir]
   sweep_dir / sweep_raw_dir: sweep.py outputs (clean / --raw-volume)
   runs_dir: backtest.py outputs named w20, w50, w60, w120, w252, w20_alluniverse,
             w20_cv, w60_cv, w20_rank126, w20_rank504, w20_raw
+  combo_dir: combo.py output (adds the combinations section)
 Palette is blue / orange only (deutan-safe); every colored cell also carries its number.
 """
 import sys
@@ -233,8 +234,34 @@ def chart_yearly(yr, path):
     return y
 
 
+def chart_combo(cb, path, cfg="5/5"):
+    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.6), dpi=220, sharey=True)
+    f = cb[cb.period == "FULL"]
+    for ax, day, name in zip(axes, ("DOWN", "UP"), ("Down days", "Up days")):
+        base = f[(f.kind == "VV_ONLY_Q5") & (f.day == day)].set_index("h").loc[H, "mean"].values
+        comb = f[(f.kind == "LS_Q5") & (f.day == day) & (f.roc == cfg)].set_index("h").loc[H, "mean"].values
+        x = np.arange(len(H))
+        ax.bar(x - 0.19, base, width=0.36, color="#9ec5f4", label="Volume volatility alone", edgecolor="white")
+        ax.bar(x + 0.19, comb, width=0.36, color="#184f95", label=f"+ fast ROC {cfg}", edgecolor="white")
+        for xi, v in zip(x - 0.19, base):
+            ax.text(xi, v + 0.001, f3(v), ha="center", va="bottom", fontsize=7, color=INK2)
+        for xi, v in zip(x + 0.19, comb):
+            ax.text(xi, v + 0.001, f3(v), ha="center", va="bottom", fontsize=7, color=INK)
+        ax.set_xticks(x, [f"{h}d" for h in H])
+        ax.set_title(f"{name} — long-short, quintile corners", loc="left")
+        ax.grid(axis="y", color=RULE, linewidth=0.5)
+        ax.set_axisbelow(True)
+        for sp in ("top", "right"):
+            ax.spines[sp].set_visible(False)
+    axes[0].set_ylabel("Long − short, risk-adj.")
+    axes[0].legend(frameon=False, loc="upper left", fontsize=7.5)
+    fig.tight_layout()
+    fig.savefig(path, facecolor="white")
+    plt.close(fig)
+
+
 # ---------- report ----------
-def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
+def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf, combo_dir=None):
     sweep = pd.read_csv(Path(sweep_dir) / "sweep.csv")
     sweep_raw = pd.read_csv(Path(sweep_raw_dir) / "sweep.csv")
     R = {n: load_run(runs_dir, n) for n in ["w20", "w50", "w60", "w120", "w252", "w20_alluniverse", "w20_cv",
@@ -245,6 +272,19 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
     chart_roc_heat(sweep, tmp / "roc.png")
     chart_quintiles(ts20, tmp / "quint.png")
     yearly = chart_yearly(R["w20"]["yr"], tmp / "yearly.png")
+    cb = pd.read_csv(Path(combo_dir) / "combo.csv") if combo_dir else None
+    if cb is not None:
+        chart_combo(cb, tmp / "combo.png")
+        cq = cb[cb.kind.isin(["LS_Q5", "VV_ONLY_Q5"])].copy()
+        cq.loc[cq.kind == "VV_ONLY_Q5", "roc"] = "alone"
+        cg = cq.groupby(["roc", "period"])[["mean", "t"]].mean().unstack("period")
+        c_base = cg["mean"]["FULL"]["alone"]
+        c_best = cg["mean"]["FULL"][["5/5", "10/5", "15/5", "15/3"]].idxmax()
+        c_bsp, c_bt = cg["mean"]["FULL"][c_best], cg["t"]["FULL"][c_best]
+        c_per = [cg["t"][p][c_best] for p in PERIODS[:3]]
+        c_base_per = [cg["t"][p]["alone"] for p in PERIODS[:3]]
+        c_sp_up = sum(cg["mean"][p][c_best] > cg["mean"][p]["alone"] for p in PERIODS[:3])
+        c_t_up = sum(cg["t"][p][c_best] > cg["t"][p]["alone"] for p in PERIODS[:3])
 
     # ----- numbers used in the text -----
     vv_sc = sweep[sweep.factor == "VV"].groupby(["window", "period"]).t.mean().unstack("period")
@@ -289,6 +329,12 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         f"<b>Window: 20 sessions is the best setting over 2009–26</b> (avg t {ft(vv_sc.loc[20, 'FULL'])}; strongest of "
         f"the 15 tested, 5 to 252). Windows from 10 to 50 all work. The 60–252 windows only worked in 2022–26. 252 is "
         f"the weakest (avg t {ft(vv_sc.loc[252, 'FULL'])}).",
+        *([f"<b>Strongest combination: 20-session level + fast ROC {c_best}.</b> Long calm volume (Q1) with a "
+           f"fresh short-term jump (ROC Q5); short erratic volume (Q5) with short-term volume volatility falling "
+           f"(ROC Q1). Average long-short {f3(c_bsp)} vs {f3(c_base)} for the level alone "
+           f"({c_bsp / c_base - 1:+.0%}), t {ft(c_bt)}. Bigger spread than the level alone in {c_sp_up} of 3 "
+           f"periods; higher t in {c_t_up} of 3."]
+          if cb is not None else []),
         f"<b>Rate of change, slow version: nothing durable.</b> With the volume-volatility level held fixed, "
         f"{roc_consistent} of 180 window × lag settings stay negative (t ≤ −1) in all three periods. The best ones "
         f"worked in 2009–2022 and went flat in 2022–26.",
@@ -408,8 +454,67 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
     ])
     story += [PageBreak()]
 
+    # ----- combinations -----
+    if cb is not None:
+        story += [P("4. Combinations — 20-session level × ROC", "h1"),
+                  P("Each ROC setting is crossed with the 20-session level, by day type. The long-short takes the "
+                    "quintile corners, with each side set by the factor's sign. Level: low is long. Fast ROC (window "
+                    "≤ 15): high is long. Slower ROC: low is long. Positive = the combination works. All figures "
+                    "2009–26, same universe as the sweep."),
+                  Spacer(1, 4), Image(str(tmp / "combo.png"), width=7.0 * inch, height=2.6 * inch), Spacer(1, 4)]
+        rows = [["Signal", "Avg long−short", "vs level alone", "Avg t", "2009–16 t", "2016–22 t", "2022–26 t"]]
+        order = ["alone"] + list(cg["t"]["FULL"].drop("alone").sort_values(ascending=False).index)
+        for k in order:
+            lab = "Level alone" if k == "alone" else f"Level + ROC {k}" + (" (fast)" if int(k.split("/")[0]) <= 15 else "")
+            rows.append([lab, f3(cg["mean"]["FULL"][k]), f"{cg['mean']['FULL'][k] / c_base - 1:+.0%}",
+                         ft(cg["t"]["FULL"][k])] + [ft(cg["t"][p][k]) for p in PERIODS[:3]])
+        story += [P("Ranking, average of 8 day × horizon cells", "h2"),
+                  table(rows, [1.9 * inch, 1.0 * inch, 0.95 * inch, 0.7 * inch, 0.8 * inch, 0.8 * inch, 0.8 * inch])]
+        f = cb[cb.period == "FULL"]
+
+        def combo_fn(kind, roc=None):
+            def fn(d, h):
+                s = f[(f.kind == kind) & (f.day == d) & (f.h == h)]
+                if roc:
+                    s = s[s.roc == roc]
+                r = s.iloc[0]
+                return r["mean"], r["t"]
+            return fn
+
+        story += [Spacer(1, 6), P("Long-short by horizon, quintile corners", "h2")]
+        story += day_tables([("Level alone", combo_fn("VV_ONLY_Q5"))] +
+                            [(f"Level + ROC {k}", combo_fn("LS_Q5", k)) for k in ("5/5", "10/5", "15/5", "15/3")],
+                            "Signal")
+        corner = cb[(cb.kind == "Q5") & (cb.period == "FULL") & (cb.h == 21)]
+        n_fast = corner[corner.roc == c_best].avg_names
+        n_slow = corner[corner.roc == "50/20"].set_index(["day", "vv", "rocb"]).avg_names
+        lv = ts20[(ts20.factor == "VV") & (ts20.metric == "RAX") & (ts20.h == 21) & (ts20["rank"] == "time_series")]
+        lvl_n = lv[lv.day.isin(["UP", "DOWN"]) & lv.bucket.isin(["Q1", "Q5"])].avg_names
+        cells = cb[(cb.period == "FULL") & (cb.kind == "Q5")].copy()
+        cells["abs_t"] = cells.t.abs()
+        top = cells.sort_values("abs_t", ascending=False).head(6)
+        rows = [["Day", "Horizon", "Level", "ROC", "vs universe", "Names/day"]]
+        for _, r in top.iterrows():
+            rows.append([r.day.title(), f"{r.h}d", f"Q{int(r.vv)}", f"{r.roc} Q{int(r.rocb)}", cell(r["mean"], r.t),
+                         f"{r.avg_names:.0f}"])
+        story += [KeepTogether([P("Strongest single buckets (vs the universe)", "h2"),
+                                table(rows, [0.8 * inch, 0.8 * inch, 0.8 * inch, 1.1 * inch, 1.3 * inch, 0.9 * inch])])]
+        story += bullets([
+            f"Fast ROC is close to independent of the level. Its quintile corners hold a balanced "
+            f"{n_fast.min():.0f}–{n_fast.max():.0f} names a day, so stacking the two adds information.",
+            f"Slow ROC (50/20) is the level again: same-direction corners hold "
+            f"{n_slow.loc[('DOWN', 1, 1)]:.0f}–{n_slow.loc[('DOWN', 5, 5)]:.0f} names, opposite corners "
+            f"{n_slow.loc[('DOWN', 1, 5)]:.0f}–{n_slow.loc[('DOWN', 5, 1)]:.0f}. Its combination scores near the "
+            f"level alone and fades in 2022–26.",
+            f"Level + ROC {c_best}: bigger spread than the level alone in {c_sp_up} of 3 periods. Period t "
+            f"{', '.join(ft(x) for x in c_per)} vs {', '.join(ft(x) for x in c_base_per)}. Corners hold "
+            f"{n_fast.min():.0f}–{n_fast.max():.0f} names a day vs {lvl_n.min():.0f}–{lvl_n.max():.0f} for a level "
+            f"quintile, so t gains less than the spread. The biggest gain is on up days.",
+        ])
+        story += [PageBreak()]
+
     # ----- robustness -----
-    story += [P("4. Robustness — 20-session window, 2009–26, Q5−Q1", "h1")]
+    story += [P("5. Robustness — 20-session window, 2009–26, Q5−Q1", "h1")]
     rob = [("Baseline", R["w20"]["ts"]), ("Raw volume (no cleaning)", R["w20_raw"]["ts"]),
            ("CV of volume levels", R["w20_cv"]["ts"]), ("Rank lookback 126", R["w20_rank126"]["ts"]),
            ("Rank lookback 504", R["w20_rank504"]["ts"]), ("No history minimum", R["w20_alluniverse"]["ts"])]
@@ -436,7 +541,7 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         "It shows up across the list as a group, not as a timing signal for one name.",
     ])
 
-    story += [PageBreak(), P("5. What changed from earlier rounds", "h1")]
+    story += [PageBreak(), P("6. What changed from earlier rounds", "h1")]
     story += bullets([
         "Round 1 (2016–26, 20/10): volume volatility negative, ROC weak. Holds.",
         "Round 2 (2016–26 sweep to 60): recommended 40–60. Reversed. That result came from 2022–26. Over "
@@ -444,6 +549,8 @@ def main(sweep_dir, sweep_raw_dir, runs_dir, out_pdf):
         "Round 3 (2018–26, out-of-sample split): dropped ROC. Refined. Slow ROC with the level held fixed worked "
         "for 2009–2022 and has been flat since mid-2022. Fast ROC (5–15 / 3–5) is a separate, positive signal "
         "that holds in all three periods.",
+        "Round 5 (2009–26 combinations): the 20-session level plus fast ROC widens the spread over the level alone "
+        "in every period. Slow ROC adds little beyond the level.",
         "Fixed along the way: the risk-adjustment volatility was tied to the volume-volatility window (now fixed "
         "at 20), and bad volume prints are now cleaned. Neither changed the 20-session results.",
     ])
