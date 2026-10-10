@@ -1,4 +1,4 @@
-"""Combination test: 20-session VV level x VV_ROC (several window / lag settings), by day type.
+"""Combination test: VV level (20-session by default, --vv-win) x VV_ROC (several window / lag settings), by day type.
 
 For each ROC setting it scores:
   - the 3x3 grid of VV tercile x ROC tercile (mean RAX per cell vs the universe)
@@ -9,7 +9,7 @@ For each ROC setting it scores:
   - the single-factor long-shorts on the same names and dates: VV alone (T1-T3, Q1-Q5), ROC alone.
 All stats use Newey-West t (lag = horizon), FULL and per period, same universe and dates as sweep.py.
 
-Usage: python combo.py <bars.parquet> <out_dir> [--eval-start D] [--splits D1,D2] [--min-history N]
+Usage: python combo.py <bars.parquet> <out_dir> [--eval-start D] [--splits D1,D2] [--min-history N] [--vv-win N]
 """
 import argparse
 from pathlib import Path
@@ -49,17 +49,19 @@ def main():
     ap.add_argument("--eval-start", default="2009-01-01")
     ap.add_argument("--splits", default="2016-10-01,2022-07-01")
     ap.add_argument("--min-history", type=int, default=756)
+    ap.add_argument("--vv-win", type=int, default=VV_WIN, help="window of the VV level leg")
     a = ap.parse_args()
+    vv_win = a.vv_win
     out = Path(a.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     sw.build_base(pd.read_parquet(a.bars), a.eval_start, [x for x in a.splits.split(",") if x], a.min_history)
     G = sw.G
-    vv = G["dlv"].rolling(VV_WIN, min_periods=VV_WIN - 2).std()
+    vv = G["dlv"].rolling(vv_win, min_periods=vv_win - 2).std()
     pv = sw.ts_rank(vv)
     v3, v5 = bucket(pv, 3), bucket(pv, 5)
     rows = []
     for (w, lag) in ROC_CONFIGS:
-        base = vv if w == VV_WIN else G["dlv"].rolling(w, min_periods=max(w - 2, 3)).std()
+        base = vv if w == vv_win else G["dlv"].rolling(w, min_periods=max(w - 2, 3)).std()
         pr = sw.ts_rank(base / base.shift(lag) - 1)
         r3, r5 = bucket(pr, 3), bucket(pr, 5)
         fast = w <= 15
@@ -87,7 +89,7 @@ def main():
 
     P = G["labels"] + ["FULL"]
     lab = {p: p for p in P}
-    md = ["# VV20 x VV_ROC combinations — market-neutral RAX (Newey-West t)", "",
+    md = [f"# VV{vv_win} x VV_ROC combinations — market-neutral RAX (Newey-West t)", "",
           "Long-short = long minus short, positive = the combination works. VV low is long. Fast ROC "
           "(window <= 15) high is long; slower ROC low is long.", ""]
 
