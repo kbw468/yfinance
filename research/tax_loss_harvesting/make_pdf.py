@@ -1,8 +1,8 @@
 """Render the 2018+ Q4 tax-loss study as a PDF report (reportlab + matplotlib).
 
-usage: python make_pdf.py SINCE_JSON MEGA_JSON DASH_DIR OUT.pdf
-SINCE_JSON comes from study_since.py, MEGA_JSON from megacap.py; DASH_DIR holds live.json and screen.json
-from export_dashboard.py.
+usage: python make_pdf.py SINCE_JSON MEGA_JSON CELLS_CSV CANDIDATES_CSV QUINTILES_JSON DASH_DIR OUT.pdf
+SINCE_JSON from study_since.py, MEGA_JSON from megacap.py, CELLS_CSV from cells.py, CANDIDATES_CSV and
+QUINTILES_JSON from candidates.py; DASH_DIR holds live.json from export_dashboard.py.
 """
 import io
 import json
@@ -27,7 +27,7 @@ from reportlab.platypus import (  # noqa: E402
     Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle,
 )
 
-SINCE, MEGA, DASH, OUT = (Path(a) for a in sys.argv[1:5])
+SINCE, MEGA, CELLS, CAND, QUINT, DASH, OUT = (Path(a) for a in sys.argv[1:8])
 FONT_DIR = Path("/usr/share/fonts/truetype/crosextra")
 
 pdfmetrics.registerFont(TTFont("Sans", str(FONT_DIR / "Carlito-Regular.ttf")))
@@ -64,7 +64,10 @@ TR = pd.DataFrame(B["trough"]).set_index("year")
 ROB = pd.DataFrame(B["robust"])
 PY = {k: {int(y): v for y, v in d.items()} for k, d in B["panel_years"].items()}
 LIVE = pd.DataFrame(json.loads((DASH / "live.json").read_text())).set_index("group")
-SC = pd.DataFrame(json.loads((DASH / "screen.json").read_text()))
+CELL = pd.read_csv(CELLS)
+CELL = CELL[CELL.window == "Oct15_Dec15"].set_index("cell")
+CANDS = pd.read_csv(CAND)
+QU = {int(k): v for k, v in json.loads(QUINT.read_text()).items()}
 M = json.loads(MEGA.read_text())
 MB = {n: pd.DataFrame(M["top"][n]["buckets"]) for n in M["top"]}
 MS = {n: pd.DataFrame(M["top"][n]["spreads"]).set_index(["window", "pair"]) for n in M["top"]}
@@ -76,14 +79,14 @@ TINT = "#dbe8f8"   # light blue highlight for 1Y-negative years
 LABELS = {
     "NEG_1Y": "1Y negative", "POS_1Y": "1Y positive", "NEG_1M": "1M negative", "POS_1M": "1M positive",
     "NEG1Y_NEG1M": "1Y neg + 1M neg", "NEG1Y_POS1M": "1Y neg + 1M pos", "POS1Y_NEG1M": "1Y pos + 1M neg",
-    "POS1Y_POS1M": "1Y pos + 1M pos", "Q1_1Y": "1Y quintile 1 (worst)", "Q2_1Y": "1Y quintile 2",
-    "Q3_1Y": "1Y quintile 3", "Q4_1Y": "1Y quintile 4", "Q5_1Y": "1Y quintile 5 (best)",
+    "POS1Y_POS1M": "1Y pos + 1M pos", "Q1_1Y": "1Y bottom 20%", "Q2_1Y": "1Y 20–40%",
+    "Q3_1Y": "1Y 40–60%", "Q4_1Y": "1Y 60–80%", "Q5_1Y": "1Y top 20%",
     "NEG_1Y_SMALL": "1Y neg, low liquidity", "POS_1Y_SMALL": "1Y pos, low liquidity",
     "NEG_1Y_LARGE": "1Y neg, high liquidity", "POS_1Y_LARGE": "1Y pos, high liquidity",
     "ALL": "All names (equal weight)", "SPY": "SPY", "DEEP_LT_-30": "1Y return −30% or worse",
 }
 PAIR_LAB = {"NEG1Y_NEG1M-POS1Y_POS1M": "1Y+1M neg − 1Y+1M pos", "NEG_1Y-POS_1Y": "1Y neg − 1Y pos",
-            "NEG_1M-POS_1M": "1M neg − 1M pos", "Q1_1Y-Q5_1Y": "Worst − best 1Y quintile"}
+            "NEG_1M-POS_1M": "1M neg − 1M pos", "Q1_1Y-Q5_1Y": "1Y bottom 20% − top 20%"}
 WIN_LAB = {"Oct1_15": "Oct 1–15", "Oct15_Dec15": "Oct 15–Dec 15", "Oct15_Dec31": "Oct 15–Dec 31",
            "Q4": "Full Q4", "Jan": "January"}
 
@@ -262,8 +265,7 @@ def chart_yearly():
     spec = [(lambda y: sp("Oct1_15", "NEG_1Y-POS_1Y", f"y{y}"), "Oct 1–15: 1Y neg − 1Y pos", 1),
             (lambda y: sp("Oct15_Dec15", "NEG1Y_NEG1M-POS1Y_POS1M", f"y{y}"), "Oct 15–Dec 15: 1Y+1M neg − pos", 0),
             (lambda y: sp("Jan", "NEG_1Y-POS_1Y", f"y{y}"), "January: 1Y neg − 1Y pos", 0),
-            (lambda y: VOL[(VOL.window == "Dec21_31") & (VOL.year == y)].footprint.iloc[0],
-             "Dec 21–31 volume: losers over winners", 0)]
+            (lambda y: sp("Q4", "NEG_1M-POS_1M", f"y{y}"), "Full Q4: 1M neg − 1M pos", 1)]
     fig, axes = plt.subplots(2, 2, figsize=(7.3, 4.0))
     for ax, (fn, title, d) in zip(axes.flat, spec):
         vals = [fn(y) for y in YEARS]
@@ -297,8 +299,7 @@ def chart_calendar():
 
 # ---------------------------------------------------------------- tables
 RISK_GROUPS = ["NEG1Y_NEG1M", "NEG_1Y", "NEG_1M", "NEG1Y_POS1M", "POS1Y_NEG1M", "POS_1M", "POS_1Y", "POS1Y_POS1M",
-               "Q1_1Y", "Q2_1Y", "Q3_1Y", "Q4_1Y", "Q5_1Y", "NEG_1Y_SMALL", "POS_1Y_SMALL", "NEG_1Y_LARGE",
-               "POS_1Y_LARGE", "ALL", "SPY"]
+               "Q1_1Y", "Q2_1Y", "Q3_1Y", "Q4_1Y", "Q5_1Y", "ALL", "SPY"]
 
 
 def risk_table():
@@ -332,8 +333,7 @@ def year_table():
             ("Oct 15–Dec 15\nNN−PP", lambda y: sp("Oct15_Dec15", "NEG1Y_NEG1M-POS1Y_POS1M", f"y{y}")),
             ("Oct 15–Dec 31\n1M N−P", lambda y: sp("Oct15_Dec31", "NEG_1M-POS_1M", f"y{y}")),
             ("Dec 1–15\n1Y N−P", lambda y: PY["Dec1_15"][y]),
-            ("Jan\n1Y N−P", lambda y: sp("Jan", "NEG_1Y-POS_1Y", f"y{y}")),
-            ("Dec 21–31\nvolume", lambda y: VOL[(VOL.window == "Dec21_31") & (VOL.year == y)].footprint.iloc[0])]
+            ("Jan\n1Y N−P", lambda y: sp("Jan", "NEG_1Y-POS_1Y", f"y{y}"))]
     rows = [["Year"] + [c for c, _ in cols] + ["Loser\ntrough"]]
     data = {c: [fn(y) for y in YEARS] for c, fn in cols}
     for i, y in enumerate(YEARS):
@@ -345,7 +345,7 @@ def year_table():
                          for c, _ in cols] + [""])
     rows.append(["Positive"] + [frac((arr[c] > 0).mean()) for c, _ in cols] + [""])
     n = len(rows)
-    return table(rows, [42] + [55.5] * 8 + [39], bold_rows=[n - 3], rule_rows=[n - 3])
+    return table(rows, [44] + [62] * 7 + [47], bold_rows=[n - 3], rule_rows=[n - 3])
 
 
 def window_table(window, groups=None):
@@ -391,26 +391,25 @@ def rebound_table():
 
 def robust_table():
     order = ["Oct1_15", "Oct15_Dec15", "Oct15_Dec31", "Jan"]
-    d = ROB.copy()
+    d = ROB[ROB.floor == ROB.floor.min()].copy()
     d["o"] = d.window.map(order.index)
     d = d.sort_values(["o", "sort", "floor"], ascending=[True, False, True])
-    rows = [["Window", "Sort", "Min $ vol", "NN−PP", "t", "Positive", "NN−PP med", "1Y N−P", "t", "NN−PP ex-20",
-             "t ex-20"]]
+    rows = [["Window", "Sort", "NN−PP", "t", "Positive", "NN−PP med", "1Y N−P", "t", "NN−PP ex-20", "t ex-20"]]
     for (_, so, fl), g in d.groupby(["o", "sort", "floor"], sort=False):
         a, x = g[~g.ex2020].iloc[0], g[g.ex2020].iloc[0]
-        rows.append([WIN_LAB[a.window], "Sep 30" if so == "sep30" else "Oct 15", money(fl), pct(a.nn_pp, 2, True),
+        rows.append([WIN_LAB[a.window], "Sep 30" if so == "sep30" else "Oct 15", pct(a.nn_pp, 2, True),
                      num(a.nn_pp_t, 1, True), frac(a.nn_pp_hit), pct(a.nn_pp_med, 2, True), pct(a.n_p, 2, True),
                      num(a.n_p_t, 1, True), pct(x.nn_pp, 2, True), num(x.nn_pp_t, 1, True)])
-    return table(rows, [66, 40, 44, 46, 34, 44, 52, 46, 34, 60, 39], align_left=(0, 1), zebra=True)
+    return table(rows, [74, 48, 50, 38, 48, 58, 50, 38, 64, 57], align_left=(0, 1), zebra=True)
 
 
-def screen_table():
-    rows = [["#", "Ticker", "Company", "Sector", "Mkt cap", "$ vol/day", "1Y", "1M (Sep)", "QTD"]]
-    for i, r in enumerate(SC.itertuples(), 1):
-        name = r.company if len(str(r.company)) <= 30 else str(r.company)[:29] + "…"
-        rows.append([str(i), r.ticker, name, r.sector, money(r.mcap_m * 1e6), money(r.dollar_vol), pct(r.r12),
-                     pct(r.r1), pct(r.qtd, 1, True)])
-    return table(rows, [24, 40, 140, 104, 48, 50, 40, 42, 37], align_left=(1, 2, 3), font=7, zebra=True)
+def candidates_table():
+    rows = [["#", "Ticker", "Company", "Sector", "Mkt cap", "1Y", "Sep", "QTD", "Basket"]]
+    for i, r in enumerate(CANDS.itertuples(), 1):
+        name = r.company if len(str(r.company)) <= 32 else str(r.company)[:31] + "…"
+        rows.append([str(i), r.ticker, name, r.sector, money(r.mcap_musd * 1e6), pct(r.ret_1y_sep30), pct(r.ret_sep),
+                     pct(r.qtd_oct9, 1, True), r.basket.replace(",", "+")])
+    return table(rows, [24, 42, 150, 112, 50, 42, 42, 38, 25], align_left=(1, 2, 3), font=7, zebra=True)
 
 
 CODE = {"1Y neg + 1M neg": "NN", "1Y neg + 1M pos": "NP", "1Y pos + 1M neg": "PN", "1Y pos + 1M pos": "PP"}
@@ -488,18 +487,55 @@ def mega_agg_table():
 
 
 def top_now_table():
-    rows = [["#", "Ticker", "Company", "Sector", "Mkt cap", "$ vol/day", "1Y", "1M (Sep)", "QTD", "Bucket"]]
+    rows = [["#", "Ticker", "Company", "Sector", "Mkt cap", "1Y", "Sep", "QTD", "Bucket"]]
     style = []
-    for i, r in enumerate(TOP_NOW.itertuples(), 1):
-        name = r.Company if len(str(r.Company)) <= 26 else str(r.Company)[:25] + "…"
-        mc = getattr(r, "_4")
-        rows.append([str(i), r.ticker, name, r.Sector, money(mc * 1e6) if not bad(mc) else "—", money(r.DV), pct(r.R12),
+    d = TOP_NOW.rename(columns={"Market Cap": "mcap"}).sort_values("mcap", ascending=False)
+    for i, r in enumerate(d.itertuples(), 1):
+        name = r.Company if len(str(r.Company)) <= 30 else str(r.Company)[:29] + "…"
+        rows.append([str(i), r.ticker, name, r.Sector, money(r.mcap * 1e6) if not bad(r.mcap) else "—", pct(r.R12),
                      pct(r.R1), pct(r.QTD, 1, True), CODE[r.bucket]])
         if r.R12 < 0:
-            style.append(("BACKGROUND", (9, i), (9, i), colors.HexColor(TINT)))
-    t = table(rows, [22, 40, 118, 98, 46, 48, 42, 42, 38, 31], align_left=(1, 2, 3), font=7)
+            style.append(("BACKGROUND", (8, i), (8, i), colors.HexColor(TINT)))
+    t = table(rows, [24, 42, 140, 110, 52, 44, 42, 40, 31], align_left=(1, 2, 3), font=7)
     t.setStyle(TableStyle(style))
     return t
+
+
+def fifths_table():
+    names = {1: "Bottom 20%", 2: "20–40%", 3: "40–60%", 4: "60–80%", 5: "Top 20%"}
+    rows = [["1Y return rank (Sep 30, 2026)", "1Y return range", "Names"]]
+    for k in range(1, 6):
+        q = QU[k]
+        lo = "below" if k == 1 else pct(q["min"], 1, True)
+        rng = f"below {pct(q['max'], 1, True)}" if k == 1 else (
+            f"above {pct(q['min'], 1, True)}" if k == 5 else f"{lo} to {pct(q['max'], 1, True)}")
+        rows.append([names[k], rng, f"{q['n']}"])
+    return table(rows, [170, 170, 60], zebra=True)
+
+
+def picks_table():
+    a, b = CELL.loc["1Y Q2 + 1M neg"], CELL.loc["1Y Q1-Q2 + Sep below -10%"]
+    c = MB["100"][(MB["100"].window == "Oct15_Dec15") & (MB["100"].group == "NEG1Y_POS1M")].iloc[0]
+    n_now = {k: CANDS.basket.str.contains(k).sum() for k in "ABC"}
+    spec = [("A  1Y 20–40%, Sep down", a, n_now["A"]), ("B  1Y bottom 40%, Sep below −10%", b, n_now["B"]),
+            ("C  Top-100, 1Y down, Sep up", c, n_now["C"]), ("All Sep losers", CELL.loc["1M neg (all)"], None),
+            ("SPY", CELL.loc["SPY"], None), ("Double winners (1Y up, Sep up)", CELL.loc["PP (all)"], None)]
+    rows = [["Basket (Oct 15–Dec 15, 2018–2025)", "Names now", "Avg", "Sharpe", "Alpha", "Beta", "Up yrs", "Beat SPY",
+             "Worst vs SPY"]]
+    for lab, r, n in spec:
+        yrs = int(r["years"])
+        up = int(r["up"]) if "up" in r else int(round(r["pct_pos"] * yrs))
+        beat = int(r["beat_spy"]) if "beat_spy" in r else int(round(r["hit_vs_spy"] * yrs))
+        rows.append([lab, "" if n is None else f"{n}", pct(r["mean"], 1, True), num(r["sharpe"]),
+                     "—" if lab == "SPY" else pct(r["alpha_spy_ann"], 1, True), num(r["beta_spy"]), f"{up} of {yrs}",
+                     "—" if lab == "SPY" else f"{beat} of {yrs}",
+                     "—" if lab == "SPY" else pct(r["worst_vs_spy"], 1, True)])
+    return table(rows, [150, 44, 40, 40, 44, 34, 44, 46, 58], zebra=True, bold_rows=[1], rule_rows=[4])
+
+
+def names(code, k=40):
+    g = CANDS[CANDS.basket.str.contains(code)]
+    return ", ".join(g.ticker.head(k)), len(g)
 
 
 # ---------------------------------------------------------------- numbers used in text
@@ -577,9 +613,11 @@ bluf = (f"<b>The read.</b> On the 1Y sort alone, Q4 is a tie: losers and winners
         f"{frac(K['q4_1m_hit'])} years). 1Y losers get sold Oct 1–15 ({pct(K['oct_np'], 2, True)}, lagging "
         f"{frac(1 - K['oct_np_hit'])} years), then lead into mid-December. January adds nothing. In the mega-caps the same pattern shows up, smaller and noisier "
         f"(page 2).<br/><br/>"
-        f"<b>Setup:</b> long the 1Y-negative + 1M-negative basket (Sep 30 sort). <b>Entry</b> Oct 15. <b>Exit</b> "
-        f"Dec 15. <b>Invalidation</b>: basket minus the 1Y-positive + 1M-positive basket below "
-        f"{pct(K['w_nn_worst'], 1)} by Dec 15, the worst {SPAN} print.")
+        f"<b>Setup:</b> basket A, stocks whose 1Y return ranks in the 20–40% band ({pct(QU[2]['min'], 1, True)} to "
+        f"{pct(QU[2]['max'], 1, True)} this year) and that fell in September. Equal weight. <b>Entry</b> Oct 15. "
+        f"<b>Exit</b> Dec 15. <b>Invalidation</b>: basket trails SPY by more than "
+        f"{pct(CELL.loc['1Y Q2 + 1M neg', 'worst_vs_spy'], 1)} by Dec 15, its worst {SPAN} year. Basket B for the "
+        f"highest Sharpe, basket C for mega-caps. Names on page 2.")
 box = Table([[P(bluf, "bluf")]], colWidths=[W])
 box.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor(PANEL)),
                          ("LINEBEFORE", (0, 0), (0, -1), 3, colors.HexColor(BLUE)),
@@ -589,7 +627,7 @@ story += [box, Spacer(1, 12), tiles([
     (f"Q4 Sharpe, 1M losers vs 1M winners · {SPAN}", vs(num(K["sh_n1m"]), num(K["sh_p1m"])),
      f"1Y sort: {num(K['sh_n1y'])} vs {num(K['sh_p1y'])} · 1Y+1M: {num(K['sh_nn'])} vs {num(K['sh_pp'])}"),
     ("Oct 1–15, 1Y losers minus winners", pct(K["oct_np"], 2, True),
-     f"t {num(K['oct_np_t'], 1, True)} · lagged {frac(1 - K['oct_np_hit'])} years · worst vs best quintile "
+     f"t {num(K['oct_np_t'], 1, True)} · lagged {frac(1 - K['oct_np_hit'])} years · bottom vs top 20% on 1Y "
      f"{pct(K['oct_q'], 2, True)}"),
     ("Oct 15–Dec 15, 1Y neg + 1M neg basket",
      f"{pct(K['nn_ret'], 1, True)} <font size=11 color='{MUTED}'>Sharpe</font> {num(K['nn_sh'])}",
@@ -607,7 +645,7 @@ findings = [
     f"<b>Double winners lag in Q4.</b> 1Y+1M positive Sharpe {num(K['sh_pp'])}, beat SPY in {frac(K['pp_beat'])} Q4s. "
     f"Double losers {num(K['sh_nn'])}.",
     f"<b>Oct 1–15 is the flush.</b> 1Y losers minus winners {pct(K['oct_np'], 2, True)} (t {num(K['oct_np_t'], 1, True)}), "
-    f"1Y+1M {pct(K['oct_nn'], 2, True)}, worst vs best quintile {pct(K['oct_q'], 2, True)}. October is also the worst "
+    f"1Y+1M {pct(K['oct_nn'], 2, True)}, bottom vs top 20% on 1Y {pct(K['oct_q'], 2, True)}. October is also the worst "
     f"calendar month for the 1Y spread after SPY beta ({pct(oct_m.alpha, 2, True)}).",
     f"<b>Mid-October to mid-December is the recovery.</b> 1Y+1M neg minus pos, Oct 15–Dec 15: "
     f"{pct(K['w_nn'], 2, True)} (t {num(K['w_nn_t'], 1, True)}, positive {frac(K['w_nn_hit'])}, worst "
@@ -617,23 +655,38 @@ findings = [
     f"<b>The relative low prints in November.</b> The loser-vs-winner path bottomed in November in "
     f"{len(nov_troughs)} of {len(YEARS)} years ({', '.join(str(y) for y in nov_troughs)}).",
     f"<b>January is dead.</b> 1Y losers minus winners {pct(K['jan_np'], 2, True)}, 1Y+1M {pct(K['jan_nn'], 2, True)}. "
-    f"Dec 15 re-sort to Jan 31: 1Y losers Sharpe {num(K['rb_neg_sh'])} vs winners {num(K['rb_pos_sh'])}; best quintile "
+    f"Dec 15 re-sort to Jan 31: 1Y losers Sharpe {num(K['rb_neg_sh'])} vs winners {num(K['rb_pos_sh'])}; 1Y top 20% "
     f"{num(K['rb_q5_sh'])} beats −30%-or-worse losers {num(K['rb_deep_sh'])}.",
-    f"<b>Mega-caps: same direction, not significant.</b> Among the 100 most-traded names, 1Y losers lag Oct 1–15 "
+    f"<b>Mega-caps: same direction, not significant.</b> Among the 100 biggest names, 1Y losers lag Oct 1–15 "
     f"({pct(MK['oct'], 2, True)}, {frac(1 - MK['oct_hit'])} years) and carry Q4 alpha {pct(MK['q4_al_n'], 1, True)} vs "
     f"{pct(MK['q4_al_p'], 1, True)} for winners, with t {num(MK['q4_t'], 1, True)}. The top 50 show no effect. "
     f"Across the 20 largest names, a 1Y-negative Sep 30 led to Q4 excess vs SPY of {pct(MK['neg_xs'], 1, True)} "
     f"(beat {pct(MK['neg_beat'], 0)}) vs {pct(MK['pos_xs'], 1, True)} for 1Y-positive.",
-    f"<b>Year-end loser volume is rising.</b> Dec 21–31 loser volume over winner volume averaged "
-    f"{pct(K['vol_a'], 1, True)} in {YEARS[0]}–{YEARS[half - 1]} and {pct(K['vol_b'], 1, True)} in "
-    f"{YEARS[half]}–{YEARS[-1]}, with no matching price drag in late December.",
 ]
 story += [Paragraph(f, ST["bullet"], bulletText="•") for f in findings]
 
+na, ca = names("A")
+nb, cb = names("B")
+nc, cc = names("C")
+story += [PageBreak(), P("Q4 2026: which names", "h1"),
+          P("<b>Quintiles, in plain terms.</b> Each Sep 30 every stock's trailing 1-year return is ranked against all "
+            "the others, and the list is cut into five equal groups of about 460 names. Bottom 20% = the worst 1-year "
+            "performers, top 20% = the best. This year's cutoffs:", "body"),
+          fifths_table(), Spacer(1, 10),
+          P("<b>The three best baskets for Oct 15 → Dec 15, tested 2018–2025.</b> A has the best odds (up 7 of 8 "
+            "years, mildest bad year). B has the highest Sharpe and alpha with more swing. C is the mega-cap version. "
+            "Every name carries its basket's record; the study tests baskets, not single stocks.", "body"),
+          picks_table(), Spacer(1, 10),
+          P(f"<b>A</b> ({ca} names, largest first): {na}…", "body"),
+          P(f"<b>B</b> ({cb} names, largest first): {nb}…", "body"),
+          P(f"<b>C</b> ({cc} names): {nc}.", "body"),
+          P("172 names sit in both A and B; that overlap tested weaker than either basket alone. Full lists in the "
+            "appendix.", "note")]
 story += [PageBreak(), P(f"Mega-caps, {SPAN}", "h1"),
           P("The main study equal-weights roughly 2,000 names, so AAPL counts the same as a $2B stock. Here the same "
-            "tests run only on the 100 (and 50) most-traded names, picked fresh at each Sep 30 by 63-day median dollar "
-            "volume, so the list never uses hindsight.", "note"),
+            "tests run only on the 100 (and 50) biggest names, re-picked at each Sep 30 from data available then (past "
+            "market caps aren't in the data, so trading activity stands in for size), so the list never uses "
+            "hindsight.", "note"),
           P(f"<b>Read:</b> the Oct 1–15 flush shows up in the top 100 ({pct(MK['oct'], 2, True)}, losers lag "
             f"{frac(1 - MK['oct_hit'])} years). After that the loser edge is directional but not significant: Q4 "
             f"Sharpe {num(MK['q4_sh_n'])} vs {num(MK['q4_sh_p'])}, Oct 15–Dec 15 spread {pct(MK['w_np'], 2, True)} "
@@ -641,7 +694,7 @@ story += [PageBreak(), P(f"Mega-caps, {SPAN}", "h1"),
             f"mega-cap bucket that stands out is 1Y negative with a positive September: about {MK['np_n']:.0f} names, "
             f"Oct 15–Dec 15 {pct(MK['np_ret'], 1, True)} vs SPY {pct(MK['spy_w'], 1, True)}, beat SPY "
             f"{int(round(MK['np_beat'] * MK['np_yrs']))} of {MK['np_yrs']} years.", "body"),
-          P("Top 100 most-traded: bucket stats", "h2"), mega_bucket_table("100"),
+          P("Top 100: bucket stats", "h2"), mega_bucket_table("100"),
           P("Pair spreads, top 100 vs top 50", "h2"), mega_spread_table()]
 story += [PageBreak(), P("The biggest names, year by year", "h1"),
           P("Each cell: bucket at Sep 30 (NN = 1Y neg + 1M neg, NP = 1Y neg + 1M pos, PN = 1Y pos + 1M neg, PP = 1Y pos + "
@@ -656,8 +709,8 @@ story += [PageBreak(), P("The biggest names, year by year", "h1"),
 story += [PageBreak(), P(f"Q4 risk-adjusted returns by bucket, {SPAN}", "h1"),
           P("Buckets formed at the last September close, equal weight, buy-and-hold to Dec 31. Annualized stats pool "
             "every Q4 trading day across the years. Alpha and beta vs SPY; Sharpe and Sortino over 13-week T-bills. "
-            "Avg Q4 / Median / Beat SPY / Worst are per-year figures. Liquidity terciles use 63-day median dollar "
-            "volume at formation.", "note"),
+            "Avg Q4 / Median / Beat SPY / Worst are per-year figures. 1Y 20–40% etc. = where the stock's 1Y return "
+            "ranked among all names that Sep 30.", "note"),
           risk_table(), Spacer(1, 6),
           P(f"Is Q4 special? Same buckets in every quarter, Q1 {START} to Q3 2026 (Q4 through {LAST})", "h2"),
           quarter_table()]
@@ -673,8 +726,7 @@ story += [PageBreak(), P("Where in Q4 losers lag and lead", "h1"),
                           "dummies.", "note"), chart_calendar()])]
 
 story += [PageBreak(), P("Year by year", "h1"),
-          P("N−P = negative minus positive; NN−PP = 1Y+1M negative minus 1Y+1M positive. Volume = median Dec 21–31 "
-            "volume vs the Jun–Aug base, losers relative to winners (Nov 30 sort). Trough = day the 1Y loser-vs-winner "
+          P("N−P = negative minus positive; NN−PP = 1Y+1M negative minus 1Y+1M positive. Trough = day the 1Y loser-vs-winner "
             "path (after SPY beta) bottomed between Oct 1 and Jan 31. Jan and trough dates fall in the following January.",
             "note"),
           year_table(), Spacer(1, 10), chart_yearly()]
@@ -690,8 +742,8 @@ story += [PageBreak(), P("Pair spreads by window", "h1"),
           KeepTogether([P("Dec 15 → Jan 31 (1Y return re-sorted at Dec 15)", "h1"), rebound_table()])]
 
 story += [PageBreak(), P(f"Robustness, {SPAN}", "h1"),
-          P("Liquidity floor on 63-day median dollar volume. Oct 15 sort recomputes 1Y and 1M as of Oct 15 (point in "
-            "time). Median = spread of per-year bucket medians. Ex-20 drops 2020.", "note"),
+          P("Oct 15 sort recomputes 1Y and 1M as of Oct 15 (point in time). Median = spread of per-year bucket "
+            "medians. Ex-20 drops 2020.", "note"),
           robust_table(), Spacer(1, 12),
           P("Q4 2026 so far", "h1"),
           P("Sep 30, 2026 sort; returns Oct 1 through the Oct 9, 2026 close.", "note"),
@@ -709,12 +761,12 @@ story += [PageBreak(), P(f"Robustness, {SPAN}", "h1"),
 
 story += [PageBreak(), P("Method", "h1")]
 for t in [
-    f"<b>Universe.</b> The 2,367 tickers in the uploaded finviz list. Daily dividend- and split-adjusted closes and "
-    f"volume from Yahoo Finance via yfinance. Formation years {START}–{LAST} for the Q4 work; Q1 {START} through Q3 "
+    f"<b>Universe.</b> The 2,367 tickers in the uploaded finviz list. Daily dividend- and split-adjusted price "
+    f"data from Yahoo Finance via yfinance. Formation years {START}–{LAST} for the Q4 work; Q1 {START} through Q3 "
     f"2026 for the other-quarter comparison; Jan {START} through Sep 2026 for calendar months. "
     f"{B['n_stock_years']:,} stock-years pass the Sep 30 screen.",
     "<b>Signals.</b> Formed at the last trading day of September: 1Y = trailing 12-month total return, 1M = "
-    "September return. Eligibility: a full 12 months of history and 63-day median dollar volume of at least $1M. "
+    "September return. Eligibility: a full 12 months of history; untradeable micro-shells are screened out. "
     "Buckets are equal-weighted at formation and held without rebalancing. Daily returns are clipped to −80% / "
     "+150% to remove bad ticks.",
     "<b>Statistics.</b> Annualized return, vol, Sharpe and Sortino pool all daily returns inside the window across "
@@ -728,13 +780,13 @@ for t in [
 ]:
     story.append(P(t))
 
-story += [PageBreak(), P("Top 100 most-traded names, Sep 30, 2026", "h1"),
-          P("Sorted by 63-day median dollar volume. Bucket codes as above; blue = 1Y negative. QTD through Oct 9, 2026.",
-            "note"), top_now_table()]
-story += [PageBreak(), P("Appendix: 1Y negative and 1M negative names, Sep 30, 2026", "h1"),
-          P(f"The NN screen only: all {len(SC):,} names negative on both 1Y and September, sorted by 63-day median "
-            "dollar volume. Names in other buckets (AAPL, NVDA, GOOGL, AMZN, MSFT, META...) are in the top-100 table "
-            "above. QTD through Oct 9, 2026.", "note"), screen_table()]
+story += [PageBreak(), P("Top 100 names, Sep 30, 2026", "h1"),
+          P("Sorted by market cap. Bucket codes as above; blue = 1Y negative. QTD through Oct 9, 2026.", "note"),
+          top_now_table()]
+story += [PageBreak(), P("Appendix: every name in baskets A, B and C, Sep 30, 2026", "h1"),
+          P(f"All {len(CANDS):,} names, sorted by market cap. Basket A = 1Y in the 20–40% band and September down; "
+            "B = 1Y in the bottom 40% and September down more than 10%; C = top-100 name with 1Y down and September up. "
+            "QTD through Oct 9, 2026.", "note"), candidates_table()]
 
 
 def on_page(canvas, doc):

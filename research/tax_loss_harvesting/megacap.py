@@ -62,6 +62,7 @@ for TOPN in (100, 50):
         spy = pd.Series(Y[(wn, "SPY")]).reindex(yr.index)
         st.update({"window": wn, "group": g, "mean": yr.mean(), "median": yr.median(), "t": tstat(yr),
                    "pct_pos": (yr > 0).mean(), "hit_vs_spy": (yr > spy).mean(), "worst": yr.min(),
+                   "worst_vs_spy": (yr - spy).min(),
                    "avg_n": float(np.mean(N[(wn, g)])), "years": len(yr)})
         rows.append(st)
     sp = []
