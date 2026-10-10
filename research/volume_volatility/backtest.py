@@ -1,10 +1,10 @@
 """Volume-volatility factor backtest.
 
 Factors (measured at the close of day t, per ticker):
-  VV     = 20-session stdev of daily log volume change, ln(V_t / V_{t-1})
-  VV_ROC = VV_t / VV_{t-10} - 1   (10-session rate of change of VV)
+  VV     = N-session stdev of daily log volume change, ln(V_t / V_{t-1})   (--vv-win, default 20)
+  VV_ROC = VV_t / VV_{t-L} - 1   (L-session rate of change of VV)           (--roc-lag, default 10)
 
-Each factor is ranked against the ticker's own trailing 252-session history
+Each factor is ranked against the ticker's own trailing 252-session history (--rank-win)
 (time-series percentile, no look-ahead) and bucketed into quintiles
 (Q1 = lowest, Q5 = highest). A cross-sectional (rank vs. the universe that day)
 version is run as a robustness check.
@@ -14,16 +14,19 @@ Day type: UP if close_t > close_{t-1}, DOWN if close_t < close_{t-1}.
 Forward risk-adjusted return over h sessions (entry at close t):
   RA_h  = fwd_ret_h / (sigma20_t * sqrt(h))      (winsorized at 0.5% / 99.5%)
   RAX_h = RA_h - universe mean RA_h that date     (market-neutral risk-adjusted)
-sigma20_t is trailing 20-session stdev of daily log returns, known at t.
+sigma20_t is trailing 20-session stdev of daily log returns, known at t. It and
+the liquidity filter stay on a fixed 20-session window whatever --vv-win is.
 
 Statistics: per date, average the metric across tickers in a bucket, then
 take the time-series mean of that daily series. t-stats are Newey-West with
 lag = h to handle overlapping forward windows and cross-sectional correlation.
 
-Usage: python backtest.py <bars.parquet> <out_dir> [dlogv|cv]
-  cv swaps the VV definition to the coefficient of variation of volume levels.
+Usage: python backtest.py <bars.parquet> <out_dir> [--def dlogv|cv] [--vv-win N]
+                          [--roc-lag L] [--rank-win R] [--eval-start YYYY-MM-DD]
+  --def cv swaps the VV definition to the coefficient of variation of volume levels.
+  --eval-start drops signal dates before it, to compare settings on one sample.
 """
-import sys
+import argparse
 import warnings
 from pathlib import Path
 
@@ -35,6 +38,8 @@ VV_WIN = 20
 ROC_LAG = 10
 RANK_WIN = 252
 RANK_MIN = 126
+SIGMA_WIN = 20
+EVAL_START = None
 MIN_PRICE = 1.0
 MIN_DOLLAR_ADV = 500_000
 MIN_NAMES = 5
@@ -82,17 +87,18 @@ def build_panels(bars):
 
     ret = close.pct_change(fill_method=None)
     logret = np.log(close).diff()
-    sigma = logret.rolling(VV_WIN, min_periods=VV_WIN - 2).std()
+    sigma = logret.rolling(SIGMA_WIN, min_periods=SIGMA_WIN - 2).std()
 
     if VV_DEF == "cv":  # dispersion of volume levels: stdev / mean over the window
         roll = vol.rolling(VV_WIN, min_periods=VV_WIN - 2)
         vv = roll.std() / roll.mean()
     else:  # default: realized vol of volume, stdev of daily log volume change
         vv = np.log(vol).diff().rolling(VV_WIN, min_periods=VV_WIN - 2).std()
-    vv_roc = vv / vv.shift(ROC_LAG) - 1
+    vv_roc = (vv / vv.shift(ROC_LAG) - 1).replace([np.inf, -np.inf], np.nan)
 
-    dollar_adv = (close * vol).rolling(VV_WIN, min_periods=VV_WIN - 2).median()
+    dollar_adv = (close * vol).rolling(SIGMA_WIN, min_periods=SIGMA_WIN - 2).median()
     tradable = (close >= MIN_PRICE) & (dollar_adv >= MIN_DOLLAR_ADV) & (sigma > 0) & vol.notna()
+    in_sample = np.asarray(close.index >= pd.Timestamp(EVAL_START) if EVAL_START else np.ones(len(close), bool))
 
     ts_rank = {
         "VV": vv.rolling(RANK_WIN, min_periods=RANK_MIN).rank(pct=True),
@@ -111,10 +117,11 @@ def build_panels(bars):
         ra[h] = winsorize((f / (sigma * np.sqrt(h))).values)
         rax[h] = ra[h] - np.nanmean(ra[h], axis=1, keepdims=True)
 
+    live = tradable.values & in_sample[:, None]
     day = {
-        "ALL": tradable.values,
-        "UP": (ret > 0).values & tradable.values,
-        "DOWN": (ret < 0).values & tradable.values,
+        "ALL": live,
+        "UP": (ret > 0).values & live,
+        "DOWN": (ret < 0).values & live,
     }
     return dict(close=close, dates=close.index, tickers=close.columns, day=day,
                 ts_rank=ts_rank, xs_rank=xs_rank, fwd=fwd, ra=ra, rax=rax)
@@ -218,9 +225,7 @@ def per_ticker(P):
     return pd.DataFrame(rows)
 
 
-def main(bars_path, out_dir, vv_def="dlogv"):
-    global VV_DEF
-    VV_DEF = vv_def
+def main(bars_path, out_dir):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     bars = pd.read_parquet(bars_path)
@@ -242,4 +247,15 @@ def main(bars_path, out_dir, vv_def="dlogv"):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:])
+    ap = argparse.ArgumentParser()
+    ap.add_argument("bars")
+    ap.add_argument("out_dir")
+    ap.add_argument("--def", dest="vv_def", default="dlogv", choices=["dlogv", "cv"])
+    ap.add_argument("--vv-win", type=int, default=VV_WIN)
+    ap.add_argument("--roc-lag", type=int, default=ROC_LAG)
+    ap.add_argument("--rank-win", type=int, default=RANK_WIN)
+    ap.add_argument("--eval-start", default=None)
+    a = ap.parse_args()
+    VV_DEF, VV_WIN, ROC_LAG, EVAL_START = a.vv_def, a.vv_win, a.roc_lag, a.eval_start
+    RANK_WIN, RANK_MIN = a.rank_win, a.rank_win // 2
+    main(a.bars, a.out_dir)
