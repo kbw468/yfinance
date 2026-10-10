@@ -1,6 +1,6 @@
 """Download daily OHLCV for every ticker in the finviz screen export.
 
-Usage: python download.py <finviz.csv> <out_dir> [period]
+Usage: python download.py <finviz.csv> <out_dir> [period | YYYY-MM-DD start date]
 Writes one parquet of long-format bars (date, ticker, open, high, low, close, volume).
 Prices are split/dividend adjusted (auto_adjust=True).
 """
@@ -15,6 +15,7 @@ BATCH = 150
 
 
 def main(csv_path, out_dir, period="10y"):
+    span = {"start": period} if period[:1].isdigit() and "-" in period else {"period": period}
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     tickers = pd.read_csv(csv_path)["Ticker"].dropna().astype(str).str.strip().unique().tolist()
@@ -23,7 +24,7 @@ def main(csv_path, out_dir, period="10y"):
         chunk = tickers[i:i + BATCH]
         for attempt in range(4):
             try:
-                raw = yf.download(chunk, period=period, interval="1d", auto_adjust=True,
+                raw = yf.download(chunk, **span, interval="1d", auto_adjust=True,
                                   progress=False, threads=True, group_by="column")
                 break
             except Exception as e:  # network hiccup, back off and retry

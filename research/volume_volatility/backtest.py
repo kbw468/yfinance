@@ -22,9 +22,12 @@ take the time-series mean of that daily series. t-stats are Newey-West with
 lag = h to handle overlapping forward windows and cross-sectional correlation.
 
 Usage: python backtest.py <bars.parquet> <out_dir> [--def dlogv|cv] [--vv-win N]
-                          [--roc-lag L] [--rank-win R] [--eval-start YYYY-MM-DD]
+                          [--roc-lag L] [--rank-win R] [--eval-start YYYY-MM-DD] [--raw-volume]
+                          [--min-history N]
   --def cv swaps the VV definition to the coefficient of variation of volume levels.
   --eval-start drops signal dates before it, to compare settings on one sample.
+  --raw-volume skips bad-print removal and the daily log-volume cap.
+  --min-history only scores names with at least N sessions of data.
 """
 import argparse
 import warnings
@@ -40,6 +43,10 @@ RANK_WIN = 252
 RANK_MIN = 126
 SIGMA_WIN = 20
 EVAL_START = None
+MIN_HISTORY = 0             # sessions of data a name needs before it is scored
+CLEAN = True                # drop bad volume prints and cap daily log-volume changes
+BAD_PRINT = 0.02            # a print below 2% of the trailing 20d median volume is treated as missing
+DLV_CAP = np.log(50)        # cap |ln(V_t / V_{t-1})| at a 50x move
 MIN_PRICE = 1.0
 MIN_DOLLAR_ADV = 500_000
 MIN_NAMES = 5
@@ -79,6 +86,20 @@ def winsorize(a, lo=0.005, hi=0.995):
     return np.clip(a, ql, qh)
 
 
+def clean_volume(vol):
+    """Volume with bad prints (far below the trailing 20d median) set to NaN."""
+    if not CLEAN:
+        return vol
+    med = vol.rolling(20, min_periods=10).median().shift(1)
+    return vol.where(~(vol < BAD_PRINT * med))
+
+
+def log_volume_change(vol):
+    """Daily ln(V_t / V_{t-1}) on cleaned volume, capped at +/- DLV_CAP."""
+    dlv = np.log(clean_volume(vol)).diff()
+    return dlv.clip(-DLV_CAP, DLV_CAP) if CLEAN else dlv
+
+
 def build_panels(bars):
     close = bars.pivot(index="date", columns="ticker", values="close").sort_index()
     close = close.where(close > 0)
@@ -90,10 +111,10 @@ def build_panels(bars):
     sigma = logret.rolling(SIGMA_WIN, min_periods=SIGMA_WIN - 2).std()
 
     if VV_DEF == "cv":  # dispersion of volume levels: stdev / mean over the window
-        roll = vol.rolling(VV_WIN, min_periods=VV_WIN - 2)
+        roll = clean_volume(vol).rolling(VV_WIN, min_periods=VV_WIN - 2)
         vv = roll.std() / roll.mean()
     else:  # default: realized vol of volume, stdev of daily log volume change
-        vv = np.log(vol).diff().rolling(VV_WIN, min_periods=VV_WIN - 2).std()
+        vv = log_volume_change(vol).rolling(VV_WIN, min_periods=VV_WIN - 2).std()
     vv_roc = (vv / vv.shift(ROC_LAG) - 1).replace([np.inf, -np.inf], np.nan)
 
     dollar_adv = (close * vol).rolling(SIGMA_WIN, min_periods=SIGMA_WIN - 2).median()
@@ -117,7 +138,8 @@ def build_panels(bars):
         ra[h] = winsorize((f / (sigma * np.sqrt(h))).values)
         rax[h] = ra[h] - np.nanmean(ra[h], axis=1, keepdims=True)
 
-    live = tradable.values & in_sample[:, None]
+    seasoned = (close.notna().cumsum() >= MIN_HISTORY).values
+    live = tradable.values & seasoned & in_sample[:, None]
     day = {
         "ALL": live,
         "UP": (ret > 0).values & live,
@@ -255,7 +277,11 @@ if __name__ == "__main__":
     ap.add_argument("--roc-lag", type=int, default=ROC_LAG)
     ap.add_argument("--rank-win", type=int, default=RANK_WIN)
     ap.add_argument("--eval-start", default=None)
+    ap.add_argument("--raw-volume", action="store_true")
+    ap.add_argument("--min-history", type=int, default=0)
     a = ap.parse_args()
+    MIN_HISTORY = a.min_history
     VV_DEF, VV_WIN, ROC_LAG, EVAL_START = a.vv_def, a.vv_win, a.roc_lag, a.eval_start
+    CLEAN = not a.raw_volume
     RANK_WIN, RANK_MIN = a.rank_win, a.rank_win // 2
     main(a.bars, a.out_dir)
