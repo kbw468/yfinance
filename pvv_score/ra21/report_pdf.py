@@ -229,6 +229,80 @@ Tonight it fires on <b>{', '.join(fire.ticker)}</b>.</div>
     pdf = OUT / "RA21_REPORT.pdf"
     subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", f"file://{h}"], capture_output=True, check=True)
     print(pdf, pdf.stat().st_size)
+    summary(T, X, A, S, w, spy_state, fire, near, excl, bk, dets, stop, asof, uni)
+
+
+def summary(T, X, A, S, w, spy_state, fire, near, excl, bk, dets, stop, asof, uni):
+    """One page, plain English, actionable: what to look for, how it was traded, what to expect, tonight's names, what to skip."""
+    last = T[T.date >= T.date.drop_duplicates().nlargest(252).min()]
+    q = last.groupby("date")
+    cut = {"crash": q.mdd_126.quantile(0.2).median(), "climb": q.mean_dd_63.quantile(0.8).median(), "sector": q.xs_sec_126.quantile(0.8).median(),
+           "upcap": q.up_capture_252.quantile(0.8).median(), "rs": q.rs_off_high_252.quantile(0.8).median()}
+    yr = X.groupby(X.date.dt.year).sup_21.mean(); weak = [str(y) for y, v in yr.items() if v < 0.2]
+    rows = "".join(f"<tr><td>{r['Period']}</td><td><b>{r['V-recovered leader: CAGR / max DD / MAR'].rsplit(' / ', 1)[0]}</b></td><td>{r['SPY: CAGR / max DD / MAR'].rsplit(' / ', 1)[0]}</td></tr>" for r in reversed(bk))
+    tn = "".join(f"<tr><td><b>{r.ticker}</b></td><td>{uni.Company.get(r.ticker, '')}</td><td>{r.roc_63*100:+.0f}%</td><td>{'at its high' if abs(r.off_high_252) < 0.0005 else f'{r.off_high_252*100:.0f}% below'}</td><td>{r.roc_21*100:+.0f}%</td></tr>" for _, r in fire.iterrows())
+    d = {r[0]: r[1]["2024 on"] for r in dets}
+    css = f"""@page{{size:A4 portrait;margin:13mm 14mm}}
+body{{font-family:Helvetica,Arial,sans-serif;color:{INK};font-size:11px;line-height:1.45;background:#fff}}
+h1{{font-size:21px;margin:0}} .sub{{color:#5b6270;font-size:10px;margin:2px 0 10px 0}}
+h2{{font-size:13px;margin:13px 0 5px 0;color:{BLUE}}} h2.o{{color:{ORANGE}}}
+.box{{border-left:6px solid {BLUE};background:#eef4fb;padding:10px 13px;font-size:12.5px;line-height:1.5}}
+ol,ul{{margin:3px 0 3px 18px;padding:0}} li{{margin:3px 0}}
+table{{border-collapse:collapse;width:100%;font-size:10.5px;margin:3px 0}} th{{text-align:left;background:#f1f3f6;padding:4px 7px;border-bottom:1px solid #c9ced6}}
+td{{padding:4px 7px;border-bottom:1px solid #e6e9ee}} .two{{display:flex;gap:16px}} .two>div{{flex:1}} .small{{color:#5b6270;font-size:9.5px}}"""
+    html = f"""<!doctype html><html><head><meta charset="utf-8"><title>What to buy</title><style>{css}</style></head><body>
+<h1>What to buy: recovered leaders</h1><div class="sub">As of the {asof.date()} close. S&amp;P 500 and 400.</div>
+<div class="box">Buy stocks that <b>crashed in the last 6 months, climbed back steadily for 3 months, and now lead</b>.
+About <b>1 in 3</b> of these trades finishes the next month in the top 20% of all stocks for gain over SPY relative to the worst dip along the way.
+A typical stock does that 1 time in 5. A portfolio of them beat SPY on return for the pain in every period tested.</div>
+
+<h2>What to look for</h2>
+<ol><li><b>It crashed.</b> At some point in the last 6 months it fell {abs(cut['crash'])*100:.0f}% or more from a high. That puts it among the deepest 20% of drops in the market.</li>
+<li><b>It climbed back steadily.</b> For the last 3 months it has stayed close to its rising high, on average within {abs(cut['climb'])*100:.1f}%. The typical one is now within 3% of its 52-week high.</li>
+<li><b>It leads, any one of:</b> beating its sector by {cut['sector']*100:.0f}% or more over 6 months; relative strength vs SPY within {abs(cut['rs'])*100:.0f}% of its 1-year high; or rising {cut['upcap']:.1f}x the market on up days.</li>
+<li><b>Not</b> energy, materials or utilities.</li>
+<li>It works best when SPY is within 5% of its high: {spy_state[0]*100:.0f}% hit rate there, {spy_state[1]*100:.0f}% when SPY is further down.</li></ol>
+
+<h2>How it was traded</h2>
+<p style="margin:2px 0">Buy at the next open. Stop 8% below entry. Hold 21 trading days.</p>
+
+<div class="two"><div>
+<h2>What to expect</h2>
+<table><tr><th></th><th>These setups</th><th>Any stock</th></tr>
+<tr><td>Top 20% for gain vs worst dip, next month</td><td><b>{X.sup_21.mean()*100:.0f}%</b></td><td>20%</td></tr>
+<tr><td>Still top 20% at 2 and 3 months</td><td><b>{S.sup_42.mean()*100:.0f}% / {S.sup_63.mean()*100:.0f}%</b></td><td>20% / 20%</td></tr>
+<tr><td>Average gain over SPY in 21 days</td><td><b>{X.xs_21.mean()*100:+.1f}%</b></td><td>{abs(A.xs_21.mean())*100:.1f}%</td></tr>
+<tr><td>Trades that hit the 8% stop</td><td>{X.stopped_21.mean()*100:.0f}%</td><td>{A.stopped_21.mean()*100:.0f}%</td></tr></table>
+<p class="small">Weak years: {' and '.join(weak) if weak else 'none'}{' so far' if weak and weak[-1] == str(asof.year) else ''}.</p>
+</div><div>
+<h2>Portfolio vs SPY</h2>
+<table><tr><th>Period</th><th>These setups: per year / worst drop</th><th>SPY</th></tr>{rows}</table>
+<p class="small">About 2 names held at a time, equal weight.</p>
+</div></div>
+
+<h2>Firing tonight</h2>
+<table><tr><th>Ticker</th><th>Company</th><th>Last 3 months</th><th>52-week high</th><th>Last month</th></tr>{tn}</table>
+<p class="small">One step short: {', '.join(near.ticker)}.{(' ' + ', '.join(excl.ticker) + ' qualifies but sits in an excluded sector.') if len(excl) else ''}</p>
+
+<div class="two"><div>
+<h2 class="o">Skip</h2>
+<ul><li>The same pattern in energy, materials or utilities: {d['Same V-recovery in Energy, Materials or Utilities']*100:.0f}% hit rate since 2024.</li>
+<li>A stock that spiked, then fell back to the bottom of its 1-month range: {d['Spike, then pullback to the 21-day low']*100:.0f}% since 2024.</li>
+<li>A crash that repaired without leading: {d['Crash repaired with no leadership']*100:.0f}%.</li></ul>
+</div><div>
+<h2 class="o">Who stops you out</h2>
+<p style="margin:2px 0">The biggest daily movers, the names that stopped out most last year, and the highest-beta names hit the 8% stop about
+{float(stop['Top 20%'].str.rstrip('%').astype(float).mean()):.0f}% of the time. The calmest fifth hit it about {float(stop['Bottom 20%'].str.rstrip('%').astype(float).mean()):.0f}%.</p>
+</div></div>
+
+<h2>Tiebreakers, worth a point or two each</h2>
+<p style="margin:2px 0">A 3-year history of good runs; an earnings report due within the month; a strong record in this same month in prior years; holding up on SPY down days.</p>
+<p class="small" style="margin-top:10px">More than 170 other measures, including momentum, volume, volatility and short interest, did not change the odds.</p>
+</body></html>"""
+    h = OUT / "RA21_SUMMARY.html"; h.write_text(html)
+    pdf = OUT / "RA21_SUMMARY.pdf"
+    subprocess.run([CHROME, "--headless=new", "--no-sandbox", "--disable-gpu", "--no-pdf-header-footer", f"--print-to-pdf={pdf}", f"file://{h}"], capture_output=True, check=True)
+    print(pdf, pdf.stat().st_size, {k: round(float(v), 3) for k, v in cut.items()})
 
 
 if __name__ == "__main__":
