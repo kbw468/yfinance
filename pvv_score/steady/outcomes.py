@@ -30,9 +30,14 @@ def compute(panel: dict, stocks: list) -> dict:
             p = C.shift(-k); rm = np.fmax(rm, p); ptt = np.fmin(ptt, p / rm - 1); lo = np.fmin(lo, L.shift(-k))
         stop = lo / C - 1
         valid = end.notna()
+        lr = np.log(C).diff()
+        absum = lr.abs().rolling(h, min_periods=h).sum().shift(-h)
+        out[f"feff_{h}"] = (np.log(end) - np.log(C)) / absum                                  # forward path efficiency (feff/fup: never the trailing features eff_/up_share_)
+        out[f"fup_{h}"] = (C.pct_change(fill_method=None) > 0).astype(float).rolling(h, min_periods=h).mean().shift(-h)   # forward up-day share
         hit = ((xs > 0) & (ptt >= CAP[h]) & (stop > -STOP)).astype(float)
         out[f"ret_{h}"] = ret.where(valid); out[f"xs_{h}"] = xs.where(valid); out[f"ptt_{h}"] = ptt.where(valid)
         out[f"stop_{h}"] = stop.where(valid); out[f"hit_{h}"] = hit.where(valid)
+        out[f"feff_{h}"] = out[f"feff_{h}"].where(valid); out[f"fup_{h}"] = out[f"fup_{h}"].where(valid)
     return {k: v.astype("float32") for k, v in out.items()}
 
 
@@ -43,4 +48,15 @@ def alpha_target(T: pd.DataFrame) -> pd.DataFrame:
         T[f"ratio_{h}"] = ratio.astype("float32")
         rk = ratio.groupby(T.date).rank(pct=True)
         T[f"ah_{h}"] = ((rk >= 1 - TOP) & (T[f"xs_{h}"] > 0)).astype("float32").where(T[f"xs_{h}"].notna())
+    return T
+
+
+def smooth_target(T: pd.DataFrame) -> pd.DataFrame:
+    """THE LIST target without Gaussian statistics: for each horizon, the average of four same-day percentile ranks
+    (excess return per unit of path drawdown, path drawdown, path efficiency, up-day share), re-ranked; top quartile = 1."""
+    for h in HORIZONS:
+        ratio = T[f"xs_{h}"] / np.maximum(-T[f"ptt_{h}"], FLOOR[h])
+        parts = [ratio, T[f"ptt_{h}"], T[f"feff_{h}"], T[f"fup_{h}"]]
+        u = sum(p.groupby(T.date).rank(pct=True) for p in parts) / 4
+        T[f"smooth_{h}"] = (u.groupby(T.date).rank(pct=True) >= 0.75).astype("float32").where(T[f"xs_{h}"].notna() & T[f"feff_{h}"].notna())
     return T

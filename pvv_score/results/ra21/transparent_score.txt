@@ -1,0 +1,44 @@
+Transparent characteristics score (entrants chosen on 2015-2020 only), tested 2021 onward
+                              auc_2015_2020  sign                               plain
+gap_share_21                          0.480  -1.0         overnight share of movement
+range_comp_10_252_pctile_own          0.486  -1.0   daily range 10d vs 1y vs own year
+range_comp_10_252                     0.487  -1.0               daily range 10d vs 1y
+max_rel_21                            0.488  -1.0  biggest daily gain vs typical move
+vol_roc_21_252_pctile_own             0.489  -1.0  typical move 21d vs 1y vs own year
+bounce_21                             0.490  -1.0              bounce off the 21d low
+own_sup_rate_252                      0.508   1.0                    own_sup_rate_252
+up_share_63_pctile_own                0.510   1.0    63d share of up days vs own year
+defend_share_63_pctile_own            0.511   1.0     up on SPY down days vs own year
+earn_due_21                           0.518   1.0         report due (volume cadence)
+defend_share_63                       0.521   1.0                 up on SPY down days
+own_sup_rate_756                      0.540   1.0                    own_sup_rate_756
+
+per-date AUC for sup_21 by year: {2021: 0.501, 2022: 0.536, 2023: 0.504, 2024: 0.534, 2025: 0.512, 2026: 0.494}  mean 0.514
+
+deciles 2021 onward (10 = highest):
+     superior_21  superior_42  med_xs_21  mean_xs_21  stopped  med_beta
+dec                                                                    
+1          0.185        0.182     -0.015      -0.000    0.350     1.096
+2          0.191        0.191     -0.014      -0.001    0.334     1.058
+3          0.193        0.194     -0.013      -0.001    0.329     1.034
+4          0.195        0.196     -0.013      -0.000    0.322     1.009
+5          0.202        0.201     -0.013      -0.000    0.314     0.982
+6          0.203        0.205     -0.013      -0.000    0.313     0.959
+7          0.206        0.207     -0.012      -0.000    0.306     0.924
+8          0.202        0.204     -0.014      -0.002    0.305     0.884
+9          0.207        0.206     -0.014      -0.003    0.300     0.829
+10         0.215        0.209     -0.015      -0.005    0.296     0.733
+
+deciles 2024 onward:
+     superior_21  med_xs_21  stopped
+dec                                 
+1          0.174     -0.023    0.353
+2          0.190     -0.018    0.332
+3          0.195     -0.017    0.323
+4          0.196     -0.016    0.312
+5          0.203     -0.015    0.303
+6          0.205     -0.015    0.301
+7          0.207     -0.014    0.290
+8          0.203     -0.015    0.284
+9          0.206     -0.016    0.281
+10         0.209     -0.019    0.282

@@ -1,0 +1,61 @@
+feature,plain,window,q1,q2,q3,q4,q5
+own_sup_rate_756,own_sup_rate_756,2017-2023,0.187,0.194,0.201,0.207,0.212
+own_sup_rate_756,own_sup_rate_756,2024 onward,0.171,0.192,0.2,0.208,0.22
+new_high252_count_63,52w highs in the last 63d,2017-2023,0.22,0.2,0.191,0.199,0.202
+new_high252_count_63,52w highs in the last 63d,2024 onward,0.204,0.199,0.2,0.197,0.198
+beta_l1_252,L1 beta 252d,2017-2023,0.229,0.198,0.191,0.193,0.193
+beta_l1_252,L1 beta 252d,2024 onward,0.206,0.192,0.19,0.198,0.209
+down_capture_252,down-capture 252d,2017-2023,0.227,0.203,0.19,0.19,0.194
+down_capture_252,down-capture 252d,2024 onward,0.206,0.199,0.188,0.2,0.202
+log_dollar_vol_63,dollar volume,2017-2023,0.202,0.199,0.2,0.2,0.203
+log_dollar_vol_63,dollar volume,2024 onward,0.196,0.183,0.2,0.2,0.216
+ind_sup_rate_21,ind_sup_rate_21,2017-2023,0.208,0.202,0.198,0.199,0.196
+ind_sup_rate_21,ind_sup_rate_21,2024 onward,0.193,0.2,0.201,0.199,0.201
+up_capture_252,up-capture 252d,2017-2023,0.228,0.199,0.191,0.19,0.196
+up_capture_252,up-capture 252d,2024 onward,0.201,0.19,0.194,0.194,0.216
+days_since_high_252,sessions since 252d high,2017-2023,0.203,0.197,0.197,0.193,0.213
+days_since_high_252,sessions since 252d high,2024 onward,0.198,0.202,0.2,0.2,0.194
+earn_due_21,report due (volume cadence),2017-2023,0.191,0.197,0.201,0.205,0.212
+earn_due_21,report due (volume cadence),2024 onward,0.193,0.192,0.196,0.2,0.214
+own_stop_rate_252,own_stop_rate_252,2017-2023,0.215,0.197,0.195,0.194,0.202
+own_stop_rate_252,own_stop_rate_252,2024 onward,0.197,0.188,0.204,0.2,0.204
+log_price,share price,2017-2023,0.205,0.203,0.199,0.196,0.201
+log_price,share price,2024 onward,0.203,0.207,0.195,0.197,0.191
+own_dd_med_252,own_dd_med_252,2017-2023,0.203,0.194,0.195,0.203,0.207
+own_dd_med_252,own_dd_med_252,2024 onward,0.208,0.198,0.2,0.194,0.194
+own_sup_rate_252,own_sup_rate_252,2017-2023,0.191,0.196,0.201,0.206,0.209
+own_sup_rate_252,own_sup_rate_252,2024 onward,0.186,0.192,0.195,0.204,0.217
+ind_roc_21,industry peers' 21d return,2017-2023,0.211,0.211,0.199,0.196,0.188
+ind_roc_21,industry peers' 21d return,2024 onward,0.194,0.191,0.191,0.201,0.217
+new_high63_share_63,share of days at a 63d high,2017-2023,0.203,0.202,0.198,0.198,0.203
+new_high63_share_63,share of days at a 63d high,2024 onward,0.207,0.202,0.195,0.192,0.199
+ind_breadth_63h,industry peers near 63d highs,2017-2023,0.209,0.204,0.196,0.198,0.197
+ind_breadth_63h,industry peers near 63d highs,2024 onward,0.193,0.206,0.198,0.2,0.198
+mdd_252,252d drawdown shallowness,2017-2023,0.2,0.197,0.199,0.197,0.211
+mdd_252,252d drawdown shallowness,2024 onward,0.206,0.2,0.199,0.193,0.197
+own_marpct_med_252,own_marpct_med_252,2017-2023,0.205,0.2,0.199,0.198,0.201
+own_marpct_med_252,own_marpct_med_252,2024 onward,0.202,0.19,0.193,0.2,0.209
+mdd_126,126d drawdown shallowness,2017-2023,0.198,0.205,0.196,0.196,0.209
+mdd_126,126d drawdown shallowness,2024 onward,0.214,0.201,0.198,0.194,0.188
+si_dtc_now,si_dtc_now,2017-2023,0.202,0.202,0.197,0.198,0.204
+si_dtc_now,si_dtc_now,2024 onward,0.214,0.199,0.195,0.192,0.195
+mad_252,typical daily move 252d,2017-2023,0.214,0.198,0.193,0.199,0.2
+mad_252,typical daily move 252d,2024 onward,0.192,0.189,0.2,0.204,0.21
+gap_share_21,overnight share of movement,2017-2023,0.211,0.205,0.199,0.195,0.193
+gap_share_21,overnight share of movement,2024 onward,0.205,0.198,0.197,0.193,0.202
+mdd_63_pctile_own,63d drawdown shallowness vs own year,2017-2023,0.206,0.193,0.199,0.2,0.206
+mdd_63_pctile_own,63d drawdown shallowness vs own year,2024 onward,0.191,0.209,0.21,0.196,0.187
+lead_persist_252,days in the trailing-MAR top 20% (1y),2017-2023,0.19,0.199,0.199,0.205,0.21
+lead_persist_252,days in the trailing-MAR top 20% (1y),2024 onward,0.181,0.191,0.196,0.205,0.221
+defend_share_63,up on SPY down days,2017-2023,0.192,0.193,0.195,0.203,0.221
+defend_share_63,up on SPY down days,2024 onward,0.183,0.191,0.206,0.21,0.204
+si_dtc,si_dtc,2017-2023,0.194,0.203,0.2,0.199,0.208
+si_dtc,si_dtc,2024 onward,0.209,0.203,0.195,0.193,0.195
+worst_day_63,worst day vs typical move,2017-2023,0.199,0.201,0.204,0.199,0.201
+worst_day_63,worst day vs typical move,2024 onward,0.202,0.212,0.198,0.191,0.191
+effx_sec_252,excess-path efficiency vs sector 252d,2017-2023,0.199,0.202,0.197,0.202,0.204
+effx_sec_252,excess-path efficiency vs sector 252d,2024 onward,0.186,0.189,0.199,0.198,0.221
+ind_roc_63,industry peers' 63d return,2017-2023,0.203,0.201,0.201,0.197,0.201
+ind_roc_63,industry peers' 63d return,2024 onward,0.204,0.199,0.2,0.194,0.198
+seas_sup_share,"same window, prior years: share superior",2017-2023,0.193,0.196,0.201,0.206,0.207
+seas_sup_share,"same window, prior years: share superior",2024 onward,0.193,0.192,0.194,0.204,0.215

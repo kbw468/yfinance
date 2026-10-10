@@ -1,0 +1,6 @@
+,spy_near_high: SPY >5% below high,spy_near_high: SPY within 5% of high,vix: VIX high vs own year,vix: VIX low vs own year,vix: VIX mid,breadth: breadth high,breadth: breadth low,breadth: breadth mid,spy_21: SPY 21d down,spy_21: SPY 21d up
+si_dtc,0.5048,0.4999,0.5101,0.4956,0.4987,0.4996,0.5024,0.5013,0.5029,0.5005
+si_chg_1,0.5004,0.4996,0.4983,0.4999,0.5014,0.4984,0.4988,0.5021,0.499,0.5002
+si_chg_3,0.4996,0.501,0.5022,0.4984,0.5018,0.5002,0.5004,0.5012,0.502,0.5
+si_dtc_pctile_own,0.5108,0.5051,0.5087,0.5053,0.5064,0.5046,0.5081,0.5067,0.5094,0.5055
+si_dtc_now,0.4971,0.4951,0.5038,0.4897,0.4942,0.4926,0.4978,0.4956,0.4959,0.4955

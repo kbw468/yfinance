@@ -1,0 +1,25 @@
+Books: next open, 8% stop, 21 sessions, 10 bp round trip, 21 staggered sleeves, daily marks
+
+2017 to 2019-12-31:
+                                           CAGR  deepest drawdown  MAR (CAGR/|DD|)  pain index (mean DD)  Omega daily  Omega daily vs SPY  21d periods ahead of SPY  worst 21d period  median 21d excess  signal days with a name  median names when firing
+model top 20                              0.171            -0.108            1.588                -0.020        1.276               1.035                     0.429            -0.062             -0.002                      NaN                       NaN
+V-recovered leaders                       0.114            -0.156            0.735                -0.051        1.214               0.964                     0.314            -0.079             -0.010                    0.599                       2.0
+V-recovered leaders ex commodity/utility  0.129            -0.156            0.826                -0.053        1.239               0.981                     0.314            -0.079             -0.010                    0.585                       2.0
+every eligible name                       0.111            -0.158            0.705                -0.027        1.207               0.877                     0.371            -0.084             -0.002                      NaN                       NaN
+SPY held                                  0.148            -0.193            0.767                -0.025        1.243               0.921                     0.086            -0.091              0.000                      NaN                       NaN
+
+2021 to 2023-12-31:
+                                           CAGR  deepest drawdown  MAR (CAGR/|DD|)  pain index (mean DD)  Omega daily  Omega daily vs SPY  21d periods ahead of SPY  worst 21d period  median 21d excess  signal days with a name  median names when firing
+model top 20                              0.052            -0.155            0.336                -0.043        1.079               0.922                     0.514            -0.055              0.003                      NaN                       NaN
+V-recovered leaders                       0.106            -0.175            0.605                -0.072        1.156               0.997                     0.486            -0.072             -0.002                    0.631                       3.0
+V-recovered leaders ex commodity/utility  0.164            -0.169            0.972                -0.061        1.233               1.048                     0.543            -0.066              0.005                    0.600                       2.0
+every eligible name                       0.061            -0.192            0.318                -0.067        1.084               0.905                     0.400            -0.071             -0.005                      NaN                       NaN
+SPY held                                  0.105            -0.245            0.429                -0.078        1.118               1.004                     0.143            -0.062              0.000                      NaN                       NaN
+
+2024 to latest:
+                                           CAGR  deepest drawdown  MAR (CAGR/|DD|)  pain index (mean DD)  Omega daily  Omega daily vs SPY  21d periods ahead of SPY  worst 21d period  median 21d excess  signal days with a name  median names when firing
+model top 20                              0.104            -0.073            1.433                -0.020        1.182               0.900                     0.333            -0.038             -0.020                      NaN                       NaN
+V-recovered leaders                       0.366            -0.191            1.918                -0.060        1.368               1.121                     0.576            -0.089              0.008                    0.740                       2.0
+V-recovered leaders ex commodity/utility  0.435            -0.180            2.413                -0.052        1.450               1.173                     0.545            -0.088              0.007                    0.694                       2.0
+every eligible name                       0.098            -0.146            0.670                -0.025        1.162               0.825                     0.333            -0.069             -0.006                      NaN                       NaN
+SPY held                                  0.212            -0.188            1.128                -0.019        1.282               0.923                     0.182            -0.115              0.000                      NaN                       NaN

@@ -8,6 +8,12 @@ import numpy as np
 import pandas as pd
 
 
+STATE = ["roc_21", "roc_63", "roc_126", "xs_spy_63", "xs_spy_126", "off_high_63", "off_high_252", "mdd_63", "eff_21", "eff_63", "up_share_63",
+         "gain_pain_63", "new_high63_share_63", "mad_21", "mad_63", "vol_roc_21_252", "range_comp_10_252", "volume_roc_10_63", "volume_roc_21_252",
+         "up_volume_share_63", "pullback_volume_63", "accum_minus_dist_50", "beta_l1_63", "up_capture_63", "down_capture_63", "defend_share_63",
+         "rs_off_high_252", "close_loc_21", "gap_share_21", "log_dollar_vol_63"]
+
+
 def _days_since_max(C: pd.DataFrame, w: int) -> pd.DataFrame:
     """Sessions since the close last printed its own trailing-w maximum (= sessions since the current w-session high)."""
     at = C.ge(C.rolling(w, min_periods=w).max())
@@ -95,7 +101,7 @@ def compute(panel: dict, sector_bench: pd.DataFrame, stocks: list) -> dict:
     F["defend_share_63"] = (r > 0).astype(float).mul(sp_dn, axis=0).rolling(63, min_periods=63).sum().div(sp_dn.rolling(63, min_periods=63).sum(), axis=0)
     rsl = C.div(spy, axis=0)
     F["rs_off_high_252"] = rsl / rsl.rolling(252, min_periods=252).max() - 1
-    # own-history percentiles of the core state variables
-    for k in ("roc_63", "xs_spy_63", "off_high_252", "volume_roc_21_252", "up_capture_63"):
+    # own-history percentiles (state layer: where each name sits versus its own last year, no z-scores)
+    for k in STATE:
         F[f"{k}_pctile_own"] = F[k].rolling(252, min_periods=252).rank(pct=True)
     return {k: v.astype("float32") for k, v in F.items()}

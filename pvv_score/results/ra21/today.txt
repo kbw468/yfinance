@@ -1,0 +1,41 @@
+Superior 21-session trade candidates, 2026-10-09 close (base rate 20%). P = realised superior rate of names at this score percentile, walk-forward 2017+.
+CB     Financial          P 24.1%  beta -0.42  L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+NTNX   Technology         P 22.3%  beta 0.85  rising 21-day pairs (63d); same window, prior years: median excess; excess vs sector 126d
+WTRG   Utilities          P 22.1%  beta -0.38  L1 beta 252d; mkt_move_pctile; down-capture 252d
+PG     Consumer Defensive P 22.1%  beta -0.15  L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+TRV    Financial          P 22.1%  beta -0.16  L1 beta 252d; mkt_move_pctile; share of up opening gaps
+RSG    Industrials        P 22.1%  beta -0.47  L1 beta 252d; mkt_move_pctile; down-capture 252d
+CME    Financial          P 22.1%  beta -0.29  L1 beta 252d; upside tail vs downside tail (126d); own_sup_rate_756
+ABT    Healthcare         P 21.6%  beta -0.08  report due (volume cadence); L1 beta 252d; sessions since 252d high
+MDLZ   Consumer Defensive P 21.6%  beta -0.30  L1 beta 252d; mkt_move_pctile; up-capture 252d
+AWK    Utilities          P 21.6%  beta -0.49  L1 beta 252d; mkt_move_pctile; down-capture 252d
+AAL    Industrials        P 21.6%  beta 1.97  si_dtc_now; share price; same window, prior years: median excess
+SBRA   Real Estate        P 21.6%  beta -0.24  L1 beta 252d; mkt_move_pctile; share price
+GOOG   Communication Serv P 21.6%  beta 1.39  own_sup_rate_756; days in the trailing-MAR top 20% (1y); dollar volume
+THG    Financial          P 21.6%  beta -0.10  L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+LYB    Basic Materials    P 21.4%  beta -0.57  L1 beta 252d; ind_sup_rate_21; down-capture 252d
+MO     Consumer Defensive P 21.4%  beta -0.45  L1 beta 252d; report due (volume cadence); mkt_move_pctile
+PGR    Financial          P 21.4%  beta -0.52  L1 beta 252d; mkt_move_pctile; si_dtc_now
+PLTR   Technology         P 21.4%  beta 2.15  report due (volume cadence); closeness to 252d high vs own year; share of days at a 63d high
+KR     Consumer Defensive P 21.4%  beta -0.67  L1 beta 252d; mkt_move_pctile; share of up opening gaps
+CL     Consumer Defensive P 21.4%  beta -0.17  L1 beta 252d; mkt_move_pctile; down-capture 252d
+SNDK   Technology         P 21.4%  beta 4.53  si_dtc_now; dollar volume; excess vs sector 126d
+DGX    Healthcare         P 21.4%  beta -0.07  L1 beta 252d; own_stop_rate_252; close location in the day's range vs own year
+DINO   Energy             P 21.4%  beta -0.24  rising 21-day pairs (63d); L1 beta 252d; excess vs sector 126d
+KEX    Industrials        P 21.4%  beta 0.74  own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+COST   Consumer Defensive P 21.4%  beta -0.13  L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+RLI    Financial          P 21.4%  beta -0.44  L1 beta 252d; dollar volume; mkt_move_pctile
+RNR    Financial          P 21.4%  beta -0.43  L1 beta 252d; up-capture 252d; down-capture 252d
+MU     Technology         P 21.4%  beta 3.42  si_dtc_now; dollar volume; excess vs sector 126d
+MPC    Energy             P 21.4%  beta -0.21  rising 21-day pairs (63d); L1 beta 252d; mkt_mad_pctile
+NVT    Industrials        P 21.4%  beta 2.25  report due (volume cadence); same window, prior years: median excess; excess vs sector 126d
+NJR    Utilities          P 21.4%  beta -0.39  dollar volume; L1 beta 252d; up-capture 252d
+PSX    Energy             P 21.4%  beta -0.44  L1 beta 252d; rising 21-day pairs (63d); excess vs sector 126d
+VLO    Energy             P 21.4%  beta -0.44  L1 beta 252d; rising 21-day pairs (63d); excess vs sector 126d
+UGI    Utilities          P 21.2%  beta 0.05  report due (volume cadence); own_sup_rate_756; L1 beta 252d
+KDP    Consumer Defensive P 21.2%  beta 0.01  L1 beta 252d; sessions since 252d high; mkt_breadth_63h
+CRBG   Financial          P 21.2%  beta 1.36  rising 21-day pairs (63d); report due (volume cadence); share price
+DOW    Basic Materials    P 21.2%  beta -0.30  L1 beta 252d; mkt_move_pctile; up-capture 252d
+FIX    Industrials        P 21.2%  beta 2.64  same window, prior years: median excess; days in the trailing-MAR top 20% (1y); own_sup_rate_756
+SJM    Consumer Defensive P 21.2%  beta -0.34  L1 beta 252d; mkt_move_pctile; excess vs sector 126d
+VRSK   Industrials        P 21.2%  beta -0.37  L1 beta 252d; mkt_move_pctile; up-capture 252d

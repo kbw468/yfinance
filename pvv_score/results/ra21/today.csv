@@ -1,0 +1,893 @@
+ticker,company,sector,P_superior_21,pct,beta_l1_252,rules_firing,best_rule,drivers
+CB,Chubb Limited,Financial,0.24087956021989004,1.0,-0.42055053,0,,L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+NTNX,Nutanix Inc,Technology,0.2231107556977209,0.9988789237668162,0.8467414,0,,"rising 21-day pairs (63d); same window, prior years: median excess; excess vs sector 126d"
+WTRG,Essential Utilities Inc,Utilities,0.22119470132466884,0.9955156950672646,-0.3812075,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+PG,Procter & Gamble Co,Consumer Defensive,0.22119470132466884,0.9966367713004485,-0.14976558,0,,L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+TRV,Travelers Companies Inc,Financial,0.22119470132466884,0.9977578475336323,-0.15988097,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+RSG,Republic Services Inc,Industrials,0.22119470132466884,0.9943946188340808,-0.46509898,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+CME,CME Group Inc,Financial,0.221,0.9932735426008968,-0.29070768,0,,L1 beta 252d; upside tail vs downside tail (126d); own_sup_rate_756
+ABT,Abbott Laboratories,Healthcare,0.21568627450980393,0.9876681614349776,-0.08446591,0,,report due (volume cadence); L1 beta 252d; sessions since 252d high
+MDLZ,Mondelez International Inc,Consumer Defensive,0.21568627450980393,0.992152466367713,-0.30256528,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+AWK,American Water Works Co Inc,Utilities,0.21568627450980393,0.9910313901345291,-0.4874807,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+AAL,American Airlines Group Inc,Industrials,0.21568627450980393,0.9854260089686099,1.970336,0,,"si_dtc_now; share price; same window, prior years: median excess"
+SBRA,Sabra Healthcare REIT Inc,Real Estate,0.21568627450980393,0.9887892376681614,-0.23663199,0,,L1 beta 252d; mkt_move_pctile; share price
+GOOG,Alphabet Inc,Communication Services,0.21568627450980393,0.9899103139013453,1.385171,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); dollar volume
+THG,Hanover Insurance Group Inc,Financial,0.21568627450980393,0.9865470852017937,-0.09739398,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+LYB,LyondellBasell Industries NV,Basic Materials,0.2141672762740795,0.9820627802690582,-0.5710185,0,,L1 beta 252d; ind_sup_rate_21; down-capture 252d
+MO,Altria Group Inc,Consumer Defensive,0.2141672762740795,0.9719730941704036,-0.44523442,0,,L1 beta 252d; report due (volume cadence); mkt_move_pctile
+PGR,Progressive Corp,Financial,0.2141672762740795,0.9753363228699552,-0.51805055,0,,L1 beta 252d; mkt_move_pctile; si_dtc_now
+PLTR,Palantir Technologies Inc,Technology,0.2141672762740795,0.9663677130044843,2.1539388,3,126d drawdown shallowness bottom 20% AND 63d under-water shallowness top 20% AND up-capture 252d top 20%,report due (volume cadence); closeness to 252d high vs own year; share of days at a 63d high
+KR,Kroger Co,Consumer Defensive,0.2141672762740795,0.9652466367713004,-0.674562,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+CL,Colgate-Palmolive Co,Consumer Defensive,0.2141672762740795,0.9730941704035875,-0.17129202,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+SNDK,Sandisk Corp,Technology,0.2141672762740795,0.9697309417040358,4.526526,0,,si_dtc_now; dollar volume; excess vs sector 126d
+DGX,Quest Diagnostics Inc,Healthcare,0.2141672762740795,0.9742152466367713,-0.07156088,0,,L1 beta 252d; own_stop_rate_252; close location in the day's range vs own year
+DINO,HF Sinclair Corp,Energy,0.2141672762740795,0.9798206278026906,-0.23747663,0,,rising 21-day pairs (63d); L1 beta 252d; excess vs sector 126d
+KEX,Kirby Corp,Industrials,0.2141672762740795,0.9674887892376681,0.74111444,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+COST,Costco Wholesale Corp,Consumer Defensive,0.2141672762740795,0.9775784753363229,-0.12645304,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+RLI,RLI Corp,Financial,0.2141672762740795,0.9641255605381166,-0.4449886,0,,L1 beta 252d; dollar volume; mkt_move_pctile
+RNR,RenaissanceRe Holdings Ltd,Financial,0.2141672762740795,0.9809417040358744,-0.42887935,0,,L1 beta 252d; up-capture 252d; down-capture 252d
+MU,Micron Technology Inc,Technology,0.2141672762740795,0.968609865470852,3.4177084,0,,si_dtc_now; dollar volume; excess vs sector 126d
+MPC,Marathon Petroleum Corp,Energy,0.2141672762740795,0.9831838565022422,-0.21190935,0,,rising 21-day pairs (63d); L1 beta 252d; mkt_mad_pctile
+NVT,nVent Electric plc,Industrials,0.2141672762740795,0.984304932735426,2.2458363,0,,"report due (volume cadence); same window, prior years: median excess; excess vs sector 126d"
+NJR,New Jersey Resources Corp,Utilities,0.2141672762740795,0.9786995515695067,-0.39433753,0,,dollar volume; L1 beta 252d; up-capture 252d
+PSX,Phillips 66,Energy,0.2141672762740795,0.976457399103139,-0.435703,0,,L1 beta 252d; rising 21-day pairs (63d); excess vs sector 126d
+VLO,Valero Energy Corp,Energy,0.2141672762740795,0.9708520179372198,-0.4398944,0,,L1 beta 252d; rising 21-day pairs (63d); excess vs sector 126d
+UGI,UGI Corp,Utilities,0.2120947316972022,0.9349775784753364,0.04942286,0,,report due (volume cadence); own_sup_rate_756; L1 beta 252d
+KDP,Keurig Dr Pepper Inc,Consumer Defensive,0.2120947316972022,0.929372197309417,0.0053246226,0,,L1 beta 252d; sessions since 252d high; mkt_breadth_63h
+CRBG,Corebridge Financial Inc,Financial,0.2120947316972022,0.952914798206278,1.3595976,0,,rising 21-day pairs (63d); report due (volume cadence); share price
+DOW,Dow Inc,Basic Materials,0.2120947316972022,0.9327354260089686,-0.29795688,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+FIX,Comfort Systems USA Inc,Industrials,0.2120947316972022,0.9304932735426009,2.6444798,0,,"same window, prior years: median excess; days in the trailing-MAR top 20% (1y); own_sup_rate_756"
+SJM,J.M. Smucker Co,Consumer Defensive,0.2120947316972022,0.9618834080717489,-0.34322876,0,,L1 beta 252d; mkt_move_pctile; excess vs sector 126d
+VRSK,Verisk Analytics Inc,Industrials,0.2120947316972022,0.9360986547085202,-0.36804885,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+WM,Waste Management Inc,Industrials,0.2120947316972022,0.9540358744394619,-0.4954408,0,,L1 beta 252d; mkt_move_pctile; si_dtc_now
+AVTR,Avantor Inc,Healthcare,0.2120947316972022,0.9607623318385651,0.8801691,0,,rising 21-day pairs (63d); share price; excess vs sector 126d
+WMT,Walmart Inc,Consumer Defensive,0.2120947316972022,0.9517937219730942,-0.16768774,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+RYAN,Ryan Specialty Holdings Inc,Financial,0.2120947316972022,0.9372197309417041,-0.37848666,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+DDOG,Datadog Inc,Technology,0.2120947316972022,0.9484304932735426,1.1207445,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+INTC,Intel Corp,Technology,0.2120947316972022,0.9630044843049327,2.7489247,0,,si_dtc_now; dollar volume; excess vs sector 126d
+GATX,GATX Corp,Industrials,0.2120947316972022,0.9394618834080718,0.73926866,0,,dollar volume; report due (volume cadence); own_sup_rate_756
+COKE,Coca-Cola Consolidated Inc,Consumer Defensive,0.2120947316972022,0.9562780269058296,0.05294733,0,,L1 beta 252d; own_sup_rate_756; excess vs sector 63d
+TER,Teradyne Inc,Technology,0.2120947316972022,0.945067264573991,3.5997114,0,,"report due (volume cadence); same window, prior years: median excess; industry peers' 5d return"
+CRS,Carpenter Technology Corp,Industrials,0.2120947316972022,0.9338565022421524,1.7939464,0,,report due (volume cadence); own_sup_rate_756; si_dtc_now
+FAST,Fastenal Co,Industrials,0.2120947316972022,0.9428251121076233,0.38358796,0,,report due (volume cadence); own_sup_rate_756; excess vs sector 63d
+ED,Consolidated Edison Inc,Utilities,0.2120947316972022,0.9473094170403588,-0.5206113,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+PBF,PBF Energy Inc,Energy,0.2120947316972022,0.9495515695067265,-0.5170993,0,,L1 beta 252d; excess vs sector 126d; ind_sup_rate_21
+MLI,Mueller Industries Inc,Industrials,0.2120947316972022,0.9585201793721974,1.0471829,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+ORLY,O'Reilly Automotive Inc,Consumer Cyclical,0.2120947316972022,0.9461883408071748,-0.026498059,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+AFL,Aflac Inc,Financial,0.2120947316972022,0.9316143497757847,-0.15095773,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+AEP,American Electric Power Company Inc,Utilities,0.2120947316972022,0.9405829596412556,-0.013271545,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+POR,Portland General Electric Co,Utilities,0.2120947316972022,0.9417040358744395,-0.08707546,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+KO,Coca-Cola Co,Consumer Defensive,0.2120947316972022,0.9506726457399103,-0.36158878,0,,L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+LOPE,Grand Canyon Education Inc,Consumer Defensive,0.2120947316972022,0.9551569506726457,-0.015195588,0,,"L1 beta 252d; same window, prior years: median excess; mkt_move_pctile"
+AMD,Advanced Micro Devices Inc,Technology,0.2120947316972022,0.9596412556053812,3.169823,0,,dollar volume; excess vs sector 126d; si_dtc_now
+DOCN,DigitalOcean Holdings Inc,Technology,0.2120947316972022,0.9573991031390134,2.9902415,0,,"excess vs sector 126d; same window, prior years: median excess; report due (volume cadence)"
+WELL,Welltower Inc,Real Estate,0.2120947316972022,0.9383408071748879,-0.1165148,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+CACI,Caci International Inc,Technology,0.2120947316972022,0.9439461883408071,0.2765952,0,,report due (volume cadence); excess vs sector 63d; upside tail vs downside tail (126d)
+KNSL,Kinsale Capital Group Inc,Financial,0.21171531387445022,0.9271300448430493,-0.4198399,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+CAT,Caterpillar Inc,Industrials,0.21171531387445022,0.9282511210762332,1.8741428,0,,own_sup_rate_756; upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y)
+SWKS,Skyworks Solutions Inc,Technology,0.21118216093155942,0.9260089686098655,1.6205736,1,126d drawdown shallowness bottom 20% AND 63d under-water shallowness top 20% AND up-capture 252d top 20%,report due (volume cadence); excess vs sector 63d; volume 21d vs 252d
+MZTI,Marzetti Co,Consumer Defensive,0.20986697135395413,0.9069506726457399,-0.030147454,0,,dollar volume; L1 beta 252d; mkt_move_pctile
+ACGL,Arch Capital Group Ltd,Financial,0.20986697135395413,0.9035874439461884,-0.32596225,0,,L1 beta 252d; si_dtc_now; mkt_move_pctile
+AES,AES Corp,Utilities,0.20986697135395413,0.9080717488789237,0.24573117,0,,rising 21-day pairs (63d); share price; si_dtc_now
+LIN,Linde Plc,Basic Materials,0.20986697135395413,0.9002242152466368,0.11372873,0,,mkt_move_pctile; L1 beta 252d; si_dtc_now
+MKC,McCormick & Co Inc,Consumer Defensive,0.20986697135395413,0.9237668161434978,-0.35277107,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+MUSA,Murphy USA Inc,Consumer Cyclical,0.20986697135395413,0.9181614349775785,-0.41869077,0,,L1 beta 252d; mkt_move_pctile; report due (volume cadence)
+MAR,Marriott International Inc,Consumer Cyclical,0.20986697135395413,0.9013452914798207,0.52548355,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+AIG,American International Group Inc,Financial,0.20986697135395413,0.905829596412556,-0.084724806,0,,L1 beta 252d; mkt_move_pctile; report due (volume cadence)
+NWS,News Corp,Communication Services,0.20986697135395413,0.92152466367713,0.3631712,0,,dollar volume; mkt_breadth_63h; share of up opening gaps
+BRKR,Bruker Corp,Healthcare,0.20986697135395413,0.8890134529147982,1.320436,0,,excess vs sector 126d; share price; overnight share of movement
+CDE,Coeur Mining Inc,Basic Materials,0.20986697135395413,0.9125560538116592,3.1281998,0,,si_dtc_now; share price; daily range 21d vs 1y
+KNX,Knight-Swift Transportation Holdings Inc,Industrials,0.20986697135395413,0.9192825112107623,1.0496731,0,,industry peers' 63d return; report due (volume cadence); days in the trailing-MAR top 20% (1y)
+FFIV,F5 Inc,Technology,0.20986697135395413,0.9159192825112108,1.0411525,0,,report due (volume cadence); own_sup_rate_756; excess vs sector 126d
+DVA,DaVita Inc,Healthcare,0.20986697135395413,0.9147982062780269,0.080328055,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; own_sup_rate_756"
+SR,Spire Inc,Utilities,0.20986697135395413,0.8923766816143498,-0.14455318,0,,dollar volume; L1 beta 252d; mkt_move_pctile
+ERIE,Erie Indemnity Co,Financial,0.20986697135395413,0.9047085201793722,-0.48197383,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+EQH,Equitable Holdings Inc,Financial,0.20986697135395413,0.9204035874439462,1.3600876,0,,rising 21-day pairs (63d); report due (volume cadence); share price
+WRB,W.R. Berkley Corp,Financial,0.20986697135395413,0.8901345291479821,-0.4102306,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+ALL,Allstate Corp,Financial,0.20986697135395413,0.9103139013452914,-0.36235607,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+DOCU,DocuSign Inc,Technology,0.20986697135395413,0.9136771300448431,0.68895316,0,,rising 21-day pairs (63d); excess vs sector 126d; share of up opening gaps
+DVN,Devon Energy Corp,Energy,0.20986697135395413,0.9114349775784754,-0.64935964,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+HAE,Haemonetics Corp,Healthcare,0.20986697135395413,0.897982062780269,0.3331678,0,,"same window, prior years: median excess; excess vs sector 126d; report due (volume cadence)"
+RRC,Range Resources Corp,Energy,0.20986697135395413,0.922645739910314,-0.111557454,0,,L1 beta 252d; down-capture 252d; mkt_move_pctile
+MEDP,Medpace Holdings Inc,Healthcare,0.20986697135395413,0.9248878923766816,0.7586686,0,,"report due (volume cadence); same window, prior years: median excess; own_sup_rate_756"
+MUR,Murphy Oil Corp,Energy,0.20986697135395413,0.9024663677130045,-0.68827987,0,,L1 beta 252d; up-capture 252d; share of up opening gaps
+AMT,American Tower Corp,Real Estate,0.20986697135395413,0.8957399103139013,-0.03660007,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+AMZN,Amazon.com Inc,Consumer Cyclical,0.20986697135395413,0.8968609865470852,1.4635924,0,,dollar volume; report due (volume cadence); mkt_vix_pctile
+MRSH,Marsh,Financial,0.20986697135395413,0.8878923766816144,-0.3160068,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+TXNM,TXNM Energy Inc,Utilities,0.20986697135395413,0.8912556053811659,0.04964256,3,bounce off the 21d low bottom 20% AND price change 21d vs own year top 20% AND current up/down close streak top 20%,own_sup_rate_756; mkt_move_pctile; excess vs sector 63d
+CTAS,Cintas Corp,Industrials,0.20986697135395413,0.8934977578475336,0.006071787,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+HL,Hecla Mining Co,Basic Materials,0.20986697135395413,0.9091928251121076,2.8444417,0,,si_dtc_now; share price; daily range 21d vs 1y
+HCA,HCA Healthcare Inc,Healthcare,0.20986697135395413,0.9170403587443946,0.28281176,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+COR,Cencora Inc,Healthcare,0.20986697135395413,0.8946188340807175,-0.13048169,0,,L1 beta 252d; mkt_move_pctile; report due (volume cadence)
+HRB,H&R Block Inc,Consumer Cyclical,0.20986697135395413,0.899103139013453,-0.025531238,0,,L1 beta 252d; excess vs sector 126d; share of up opening gaps
+URI,United Rentals Inc,Industrials,0.2093155413369254,0.8632286995515696,0.8153558,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+EHC,Encompass Health Corp,Healthcare,0.2093155413369254,0.8654708520179372,-0.017683543,0,,L1 beta 252d; mkt_move_pctile; mkt_breadth_63h
+GM,General Motors Company,Consumer Cyclical,0.2093155413369254,0.8677130044843049,1.1140251,0,,"same window, prior years: median excess; own_sup_rate_756; upside tail vs downside tail (126d)"
+FOX,Fox Corp,Communication Services,0.2093155413369254,0.8688340807174888,0.22814299,0,,"own_sup_rate_756; same window, prior years: risk-adjusted rank; overnight share of movement"
+BAC,Bank Of America Corp,Financial,0.2093155413369254,0.8721973094170403,0.8237382,0,,own_sup_rate_756; upside tail vs downside tail (126d); share of up opening gaps
+LH,Labcorp Holdings Inc,Healthcare,0.2093155413369254,0.8845291479820628,0.22789568,0,,report due (volume cadence); ind_sup_rate_21; mkt_move_pctile
+LMT,Lockheed Martin Corp,Industrials,0.2093155413369254,0.8834080717488789,0.09778456,0,,mkt_move_pctile; si_dtc_now; own_sup_rate_756
+APA,APA Corp,Energy,0.2093155413369254,0.8856502242152466,-0.83707017,0,,L1 beta 252d; share of up opening gaps; excess vs sector 63d
+TSLA,Tesla Inc,Consumer Cyclical,0.2093155413369254,0.8665919282511211,2.1687834,0,,dollar volume; mkt_vix_pctile; daily range 21d vs 1y
+NFLX,Netflix Inc,Communication Services,0.2093155413369254,0.8710762331838565,0.25806385,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+CAH,Cardinal Health Inc,Healthcare,0.2093155413369254,0.8811659192825112,0.06378441,0,,own_sup_rate_756; upside tail vs downside tail (126d); mkt_move_pctile
+VTR,Ventas Inc,Real Estate,0.2093155413369254,0.875560538116592,-0.20394947,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+EQT,EQT Corp,Energy,0.2093155413369254,0.8778026905829597,0.21824217,0,,own_sup_rate_756; upside tail vs downside tail (126d); si_dtc vs own year
+SAM,Boston Beer Co Inc,Consumer Defensive,0.2093155413369254,0.8789237668161435,-0.15749413,0,,L1 beta 252d; dollar volume; up-capture 252d
+FANG,Diamondback Energy Inc,Energy,0.2093155413369254,0.8800448430493274,-0.56497097,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+SFM,Sprouts Farmers Market Inc,Consumer Defensive,0.2093155413369254,0.8867713004484304,-0.06808434,0,,L1 beta 252d; report due (volume cadence); upside tail vs downside tail (126d)
+GWW,W.W. Grainger Inc,Industrials,0.2093155413369254,0.8643497757847534,0.4887389,0,,"report due (volume cadence); same window, prior years: median excess; own_sup_rate_756"
+GOOGL,Alphabet Inc,Communication Services,0.2093155413369254,0.8822869955156951,1.3974915,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+WFC,Wells Fargo & Co,Financial,0.2093155413369254,0.8766816143497758,0.8884706,0,,report due (volume cadence); upside tail vs downside tail (126d); own_sup_rate_756
+AHR,American Healthcare REIT Inc,Real Estate,0.2093155413369254,0.8733183856502242,-0.06827778,0,,L1 beta 252d; own_sup_rate_756; upside tail vs downside tail (126d)
+FTNT,Fortinet Inc,Technology,0.2093155413369254,0.874439461883408,1.0959402,0,,excess vs sector 126d; report due (volume cadence); volume 21d vs 252d vs own year
+FCX,Freeport-McMoRan Inc,Basic Materials,0.2093155413369254,0.8699551569506726,2.433609,0,,days in the trailing-MAR top 20% (1y); excess vs sector 63d; own_sup_rate_756
+DT,Dynatrace Inc,Technology,0.20759746751082972,0.8621076233183856,0.7080143,0,,si_dtc_now; report due (volume cadence); share price
+THC,Tenet Healthcare Corp,Healthcare,0.2071902743341598,0.8609865470852018,0.40071398,0,,own_sup_rate_756; excess vs sector 63d; excess-path efficiency vs sector 63d
+HSY,Hershey Company,Consumer Defensive,0.2071902743341598,0.8587443946188341,-0.25034028,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+DPZ,Dominos Pizza Inc,Consumer Cyclical,0.2071902743341598,0.8576233183856502,0.023150552,0,,report due (volume cadence); sessions since 252d high; L1 beta 252d
+MNST,Monster Beverage Corp,Consumer Defensive,0.2071902743341598,0.8598654708520179,0.18564549,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+BMY,Bristol-Myers Squibb Co,Healthcare,0.2071902743341598,0.8542600896860987,0.20243344,0,,days in the trailing-MAR top 20% (1y); si_dtc vs own year; upside tail vs downside tail (126d)
+IQV,IQVIA Holdings Inc,Healthcare,0.2071902743341598,0.8531390134529148,0.7231272,0,,report due (volume cadence); excess vs sector 126d; excess vs sector 63d
+GAP,Gap Inc,Consumer Cyclical,0.2071902743341598,0.8497757847533632,1.0738478,0,,"same window, prior years: median excess; excess vs sector 63d; share price"
+JNJ,Johnson & Johnson,Healthcare,0.2071902743341598,0.8565022421524664,-0.22151817,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+WWD,Woodward Inc,Industrials,0.2071902743341598,0.8486547085201793,1.4279323,0,,si_dtc_now; report due (volume cadence); own_sup_rate_756
+EOG,EOG Resources Inc,Energy,0.2071902743341598,0.850896860986547,-0.6249106,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+MCK,Mckesson Corp,Healthcare,0.2071902743341598,0.8553811659192825,-0.14949492,0,,L1 beta 252d; own_sup_rate_756; mkt_move_pctile
+JKHY,Jack Henry & Associates Inc,Technology,0.2071902743341598,0.852017937219731,-0.008113368,0,,L1 beta 252d; share of up opening gaps; mkt_move_pctile
+ZBH,Zimmer Biomet Holdings Inc,Healthcare,0.20629731976365392,0.8094170403587444,0.16223836,0,,"sessions since 252d high; report due (volume cadence); same window, prior years: risk-adjusted rank"
+BKR,Baker Hughes Co,Energy,0.20629731976365392,0.8419282511210763,0.72850543,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); price change 126d vs own year
+MORN,Morningstar Inc,Financial,0.20629731976365392,0.8430493273542601,0.2378685,0,,upside tail vs downside tail (126d); sessions since 252d high; up on SPY down days
+NYT,New York Times Co,Communication Services,0.20629731976365392,0.8150224215246636,0.14262623,0,,report due (volume cadence); upside tail vs downside tail (126d); L1 beta 252d
+ABBV,Abbvie Inc,Healthcare,0.20629731976365392,0.8318385650224215,-0.12571526,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+OPCH,Option Care Health Inc,Healthcare,0.20629731976365392,0.8026905829596412,0.1456165,0,,"gap on the volume-shock day; report due (volume cadence); same window, prior years: risk-adjusted rank"
+NVDA,NVIDIA Corp,Technology,0.20629731976365392,0.8307174887892377,1.863882,0,,"dollar volume; same window, prior years: median excess; own_sup_rate_756"
+VTRS,Viatris Inc,Healthcare,0.20629731976365392,0.8352017937219731,0.67797023,0,,"share price; own_sup_rate_756; same window, prior years: risk-adjusted rank"
+MOH,Molina Healthcare Inc,Healthcare,0.20629731976365392,0.8385650224215246,-0.0463932,0,,report due (volume cadence); L1 beta 252d; own_sup_rate_756
+MA,Mastercard Incorporated,Financial,0.20629731976365392,0.804932735426009,0.21990323,0,,mkt_move_pctile; own_stop_rate_252; mkt_breadth_63h
+OVV,Ovintiv Inc,Energy,0.20629731976365392,0.8363228699551569,-0.3310188,0,,L1 beta 252d; report due (volume cadence); mkt_move_pctile
+META,Meta Platforms Inc,Communication Services,0.20629731976365392,0.844170403587444,1.1356368,0,,dollar volume; si_dtc_now; report due (volume cadence)
+ARE,Alexandria Real Estate Equities Inc,Real Estate,0.20629731976365392,0.8396860986547086,0.76220477,0,,report due (volume cadence); sessions since 252d high; overnight share of movement
+NEM,Newmont Corp,Basic Materials,0.20629731976365392,0.82847533632287,1.786033,0,,excess vs sector 63d; own_sup_rate_756; upside tail vs downside tail (126d)
+MANH,Manhattan Associates Inc,Technology,0.20629731976365392,0.8082959641255605,0.5507886,0,,report due (volume cadence); excess vs sector 126d; gap on the volume-shock day
+UHS,Universal Health Services Inc,Healthcare,0.20629731976365392,0.8060538116591929,0.29198915,0,,share of up opening gaps; upside tail vs downside tail (126d); excess vs sector 63d
+C,Citigroup Inc,Financial,0.20629731976365392,0.8408071748878924,1.4116802,0,,own_sup_rate_756; si_dtc_now; days in the trailing-MAR top 20% (1y)
+PEN,Penumbra Inc,Healthcare,0.20629731976365392,0.8251121076233184,0.14038828,0,,mkt_move_pctile; upside tail vs downside tail (126d); L1 beta 252d
+BTSG,BrightSpring Health Services Inc,Healthcare,0.20629731976365392,0.8475336322869955,1.5091488,0,,"report due (volume cadence); excess vs sector 126d; same window, prior years: median excess"
+PH,Parker-Hannifin Corp,Industrials,0.20629731976365392,0.8105381165919282,0.86315113,0,,upside tail vs downside tail (126d); own_sup_rate_756; price change 126d vs own year
+POST,Post Holdings Inc,Consumer Defensive,0.20629731976365392,0.8172645739910314,-0.28112152,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CMG,Chipotle Mexican Grill,Consumer Cyclical,0.20629731976365392,0.820627802690583,0.6255006,0,,share price; share of up opening gaps; upside tail vs downside tail (126d)
+PNC,PNC Financial Services Group Inc,Financial,0.20629731976365392,0.827354260089686,0.6329839,0,,own_sup_rate_756; upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y)
+USB,U.S. Bancorp,Financial,0.20629731976365392,0.8262331838565022,0.79655635,0,,"upside tail vs downside tail (126d); industry peers near 63d highs; same window, prior years: share superior"
+VRSN,Verisign Inc,Technology,0.20629731976365392,0.8239910313901345,0.37439045,0,,report due (volume cadence); own_sup_rate_756; closeness to 252d high vs own year
+DUK,Duke Energy Corp,Utilities,0.20629731976365392,0.8217488789237668,-0.31752127,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+TOST,Toast Inc,Technology,0.20629731976365392,0.8139013452914798,1.0670837,0,,"report due (volume cadence); same window, prior years: median excess; closeness to 252d high vs own year"
+JCI,Johnson Controls International plc,Industrials,0.20629731976365392,0.8116591928251121,1.0560572,0,,own_sup_rate_756; excess vs sector 63d; upside tail vs downside tail (126d)
+TWLO,Twilio Inc,Technology,0.20629731976365392,0.8161434977578476,1.7175066,0,,si_dtc_now; excess vs sector 126d; report due (volume cadence)
+TMUS,T-Mobile US Inc,Communication Services,0.20629731976365392,0.8228699551569507,-0.4675916,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+WTW,Willis Towers Watson Public Limited Co,Financial,0.20629731976365392,0.8071748878923767,-0.19150761,0,,L1 beta 252d; mkt_move_pctile; report due (volume cadence)
+EBAY,EBay Inc,Consumer Cyclical,0.20629731976365392,0.8127802690582959,0.7780596,0,,"report due (volume cadence); own_sup_rate_756; same window, prior years: risk-adjusted rank"
+SEIC,SEI Investments Co,Financial,0.20629731976365392,0.8295964125560538,0.5653434,0,,report due (volume cadence); 126d under-water shallowness; excess vs sector 126d
+FDX,Fedex Corp,Industrials,0.20629731976365392,0.8195067264573991,0.90661573,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+SIGI,Selective Insurance Group Inc,Financial,0.20629731976365392,0.8452914798206278,-0.17431603,0,,dollar volume; L1 beta 252d; mkt_move_pctile
+EG,Everest Group Ltd,Financial,0.20629731976365392,0.8038116591928252,-0.07879255,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+SO,Southern Company,Utilities,0.20629731976365392,0.8183856502242153,-0.28893176,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+ADM,Archer Daniels Midland Co,Consumer Defensive,0.20629731976365392,0.8329596412556054,-0.12522593,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+CVLT,Commvault Systems Inc,Technology,0.20629731976365392,0.8464125560538116,0.6944703,0,,report due (volume cadence); excess vs sector 126d; days in the trailing-MAR top 20% (1y)
+HRL,Hormel Foods Corp,Consumer Defensive,0.20629731976365392,0.8340807174887892,-0.057241898,0,,L1 beta 252d; sessions since 252d high; mkt_move_pctile
+HALO,Halozyme Therapeutics Inc,Healthcare,0.20629731976365392,0.8374439461883408,0.42517507,0,,share of up opening gaps; excess vs sector 126d; days in the trailing-MAR top 20% (1y)
+AAPL,Apple Inc,Technology,0.20597828831103257,0.7668161434977578,0.62134904,0,,"dollar volume; own_sup_rate_756; same window, prior years: share superior"
+PM,Philip Morris International Inc,Consumer Defensive,0.20597828831103257,0.7544843049327354,-0.25641453,0,,L1 beta 252d; down-capture 252d; excess vs sector 126d
+BROS,Dutch Bros Inc,Consumer Cyclical,0.20597828831103257,0.7701793721973094,1.3311911,0,,"report due (volume cadence); volume-weighted shock-day excess; same window, prior years: median excess"
+ARMK,Aramark,Industrials,0.20597828831103257,0.7914798206278026,0.45040324,0,,excess vs sector 126d; own_stop_rate_252; volume 21d vs 252d vs own year
+MDT,Medtronic Plc,Healthcare,0.20597828831103257,0.7690582959641256,0.117543824,0,,si_dtc_now; volume 21d vs 252d; L1 beta 252d
+LFUS,Littelfuse Inc,Technology,0.20597828831103257,0.781390134529148,1.6252779,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); 63d down-day vs up-day volume vs own year
+ACI,Albertsons Companies Inc,Consumer Defensive,0.20597828831103257,0.7926008968609866,-0.3682583,0,,L1 beta 252d; share price; up-capture 252d
+ZION,Zions Bancorporation N.A,Financial,0.20597828831103257,0.7533632286995515,0.9656765,0,,report due (volume cadence); own_sup_rate_756; industry peers near 63d highs
+AFG,American Financial Group Inc,Financial,0.20597828831103257,0.7522421524663677,-0.12988919,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+NWE,NorthWestern Energy Group Inc,Utilities,0.20597828831103257,0.7746636771300448,0.06270272,0,,dollar volume; L1 beta 252d; mkt_breadth_63h
+NTRS,Northern Trust Corp,Financial,0.20597828831103257,0.7567264573991032,1.1016877,0,,report due (volume cadence); own_sup_rate_756; sessions since the volume shock
+BF-B,Brown-Forman Corp,Consumer Defensive,0.20597828831103257,0.7612107623318386,0.22676419,0,,sessions since 252d high; share price; si_dtc_now
+BG,Bunge Global SA,Consumer Defensive,0.20597828831103257,0.7589686098654709,-0.117500804,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+BJ,BJ's Wholesale Club Holdings Inc,Consumer Defensive,0.20597828831103257,0.7780269058295964,-0.23653305,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CHE,Chemed Corp,Healthcare,0.20597828831103257,0.765695067264574,0.1545128,0,,mkt_move_pctile; mkt_breadth_63h; share of up opening gaps
+CHD,Church & Dwight Co Inc,Consumer Defensive,0.20597828831103257,0.7802690582959642,0.0049020136,0,,L1 beta 252d; mkt_move_pctile; mkt_breadth_63h
+PPL,PPL Corp,Utilities,0.20597828831103257,0.7825112107623319,-0.08734882,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+RTX,RTX Corp,Industrials,0.20597828831103257,0.8004484304932735,0.3183339,0,,own_sup_rate_756; upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y)
+DIS,Walt Disney Co,Communication Services,0.20597828831103257,0.7982062780269058,0.35851902,0,,own_sup_rate_756; upside tail vs downside tail (126d); overnight share of movement
+PWR,Quanta Services Inc,Industrials,0.20597828831103257,0.7511210762331838,1.7221806,0,,own_sup_rate_756; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+HBAN,Huntington Bancshares Inc,Financial,0.20597828831103257,0.7993273542600897,0.8639225,0,,si_dtc_now; share price; report due (volume cadence)
+HAL,Halliburton Co,Energy,0.20597828831103257,0.7959641255605381,0.13402164,0,,report due (volume cadence); upside tail vs downside tail (126d); industry peers near 63d highs
+PYPL,PayPal Holdings Inc,Financial,0.20597828831103257,0.7556053811659192,1.2565633,0,,report due (volume cadence); gap on the volume-shock day; share of up opening gaps
+KNF,Knife River Corp,Basic Materials,0.20597828831103257,0.7623318385650224,1.241235,0,,"same window, prior years: median excess; volume-weighted shock-day excess; report due (volume cadence)"
+TTEK,Tetra Tech Inc,Industrials,0.20597828831103257,0.7724215246636771,0.42935276,0,,share of up opening gaps; own_sup_rate_756; mkt_breadth_63h
+KEY,Keycorp,Financial,0.20597828831103257,0.757847533632287,0.8895518,0,,"same window, prior years: median excess; si_dtc_now; industry peers near 63d highs"
+SWX,Southwest Gas Holdings Inc,Utilities,0.20597828831103257,0.7869955156950673,-0.12861432,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+COLM,Columbia Sportswear Co,Consumer Cyclical,0.20597828831103257,0.7858744394618834,0.691655,0,,report due (volume cadence); dollar volume; mkt_breadth_63h
+ILMN,Illumina Inc,Healthcare,0.20597828831103257,0.8015695067264574,0.95472884,0,,rising 21-day pairs (63d); excess vs sector 126d; mkt_mad_pctile
+IBM,International Business Machines Corp,Technology,0.20597828831103257,0.773542600896861,0.9582383,0,,report due (volume cadence); sessions since the volume shock; volume-weighted shock-day excess
+HST,Host Hotels & Resorts Inc,Real Estate,0.20597828831103257,0.7769058295964125,0.7551989,0,,"days in the trailing-MAR top 20% (1y); share price; same window, prior years: share superior"
+CNC,Centene Corp,Healthcare,0.20597828831103257,0.7948430493273543,0.53810465,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+GEV,GE Vernova Inc,Industrials,0.20597828831103257,0.797085201793722,2.1306725,0,,upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y); price change 126d vs own year
+GILD,Gilead Sciences Inc,Healthcare,0.20597828831103257,0.7634529147982063,0.22236498,0,,own_sup_rate_756; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+SANM,Sanmina Corp,Technology,0.20597828831103257,0.7679372197309418,2.4541025,0,,report due (volume cadence); own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+FE,Firstenergy Corp,Utilities,0.20597828831103257,0.7791479820627802,-0.12340865,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+FLS,Flowserve Corp,Industrials,0.20597828831103257,0.7847533632286996,2.004579,0,,report due (volume cadence); excess vs sector 63d; price change 126d vs own year
+FHN,First Horizon Corp,Financial,0.20597828831103257,0.7836322869955157,0.7037239,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+DXCM,Dexcom Inc,Healthcare,0.20597828831103257,0.7645739910313901,0.69037217,0,,"same window, prior years: median excess; overnight share of movement; own_sup_rate_756"
+ELV,Elevance Health Inc,Healthcare,0.20597828831103257,0.7903587443946188,0.21023214,0,,"own_sup_rate_756; days in the trailing-MAR top 20% (1y); same window, prior years: share superior"
+ECHO,EchoStar Corp,Communication Services,0.20597828831103257,0.7713004484304933,1.5449083,0,,industry peers' 5d return; upside tail vs downside tail (126d); own_sup_rate_756
+ETR,Entergy Corp,Utilities,0.20597828831103257,0.7881165919282511,0.2082165,0,,own_sup_rate_756; upside tail vs downside tail (126d); excess-path efficiency vs sector 252d
+EVRG,Evergy Inc,Utilities,0.20597828831103257,0.7757847533632287,-0.0430069,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+ESNT,Essent Group Ltd,Financial,0.20597828831103257,0.7892376681614349,0.047134407,0,,dollar volume; own_sup_rate_756; overnight share of movement
+AVNT,Avient Corp,Basic Materials,0.20597828831103257,0.7600896860986547,1.0844287,0,,dollar volume; mkt_breadth_63h; excess vs sector 63d
+WAB,Westinghouse Air Brake Technologies Corp,Industrials,0.20597828831103257,0.7937219730941704,0.9246136,0,,own_stop_rate_252; own_sup_rate_756; excess vs sector 63d
+AR,Antero Resources Corp,Energy,0.20577855536115972,0.7387892376681614,-0.22892167,0,,"L1 beta 252d; same window, prior years: risk-adjusted rank; upside tail vs downside tail (126d)"
+VNOM,Viper Energy Inc,Energy,0.20577855536115972,0.742152466367713,-0.14848876,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+OKE,Oneok Inc,Energy,0.20577855536115972,0.7118834080717489,-0.39464748,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+MTDR,Matador Resources Co,Energy,0.20577855536115972,0.726457399103139,-0.6199637,0,,L1 beta 252d; upside tail vs downside tail (126d); mkt_move_pctile
+MRVL,Marvell Technology Inc,Technology,0.20577855536115972,0.7253363228699552,3.3705697,0,,si_dtc_now; dollar volume; excess vs sector 126d
+OHI,Omega Healthcare Investors Inc,Real Estate,0.20577855536115972,0.7096412556053812,-0.2524644,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+LVS,Las Vegas Sands Corp,Consumer Cyclical,0.20577855536115972,0.6995515695067265,0.68307817,0,,report due (volume cadence); industry peers' 63d return; industry peers near 63d highs
+OXY,Occidental Petroleum Corp,Energy,0.20577855536115972,0.7242152466367713,-0.82081705,0,,L1 beta 252d; up-capture 252d; si_dtc_now
+PCTY,Paylocity Holding Corp,Technology,0.20577855536115972,0.7477578475336323,0.11807915,0,,report due (volume cadence); excess vs sector 126d; L1 beta 252d
+BAH,Booz Allen Hamilton Holding Corp,Industrials,0.20577855536115972,0.734304932735426,0.21436013,0,,sessions since 252d high; upside tail vs downside tail (126d); excess vs sector 63d
+KMI,Kinder Morgan Inc,Energy,0.20577855536115972,0.7410313901345291,-0.12493441,0,,L1 beta 252d; own_sup_rate_756; down-capture 252d
+PPC,Pilgrim's Pride Corp,Consumer Defensive,0.20577855536115972,0.7130044843049327,0.18078582,0,,upside tail vs downside tail (126d); own_sup_rate_756; dollar volume
+JBHT,J.B. Hunt Transport Services Inc,Industrials,0.20577855536115972,0.7152466367713004,0.750632,0,,report due (volume cadence); si_dtc_now; days in the trailing-MAR top 20% (1y)
+LRCX,Lam Research Corp,Technology,0.20577855536115972,0.7488789237668162,3.2549918,0,,"industry peers' 5d return; same window, prior years: median excess; days in the trailing-MAR top 20% (1y)"
+LULU,Lululemon Athletica Inc,Consumer Cyclical,0.20577855536115972,0.702914798206278,1.1973658,0,,sessions since 252d high; volume-weighted shock-day excess; share of up opening gaps
+PNW,Pinnacle West Capital Corp,Utilities,0.20577855536115972,0.7208520179372198,-0.10805003,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+CFG,Citizens Financial Group Inc,Financial,0.20577855536115972,0.7107623318385651,1.0266248,0,,own_sup_rate_756; upside tail vs downside tail (126d); sessions since the volume shock
+CLF,Cleveland-Cliffs Inc,Basic Materials,0.20577855536115972,0.7062780269058296,2.5339622,0,,report due (volume cadence); share price; excess vs sector 126d
+TSCO,Tractor Supply Co,Consumer Cyclical,0.20577855536115972,0.718609865470852,0.3678519,0,,report due (volume cadence); upside tail vs downside tail (126d); overnight share of movement
+SCHW,Charles Schwab Corp,Financial,0.20577855536115972,0.7331838565022422,0.57960594,0,,own_sup_rate_756; upside tail vs downside tail (126d); si_dtc_now
+ENSG,Ensign Group Inc,Healthcare,0.20577855536115972,0.7006726457399103,-0.10282454,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+BRK-B,Berkshire Hathaway Inc,Financial,0.20577855536115972,0.7085201793721974,-0.06675032,0,,L1 beta 252d; own_stop_rate_252; close location in the day's range vs own year
+BRO,Brown & Brown Inc,Financial,0.20577855536115972,0.7298206278026906,-0.39265877,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CART,Maplebear Inc,Consumer Cyclical,0.20577855536115972,0.7354260089686099,0.9364622,0,,"same window, prior years: median excess; own_sup_rate_756; share price"
+MMM,3M Co,Industrials,0.20577855536115972,0.7040358744394619,0.6464965,0,,report due (volume cadence); own_sup_rate_756; excess vs sector 63d
+DOC,Healthpeak Properties Inc,Real Estate,0.20577855536115972,0.7376681614349776,0.5363408,0,,share price; own_sup_rate_756; overnight share of movement
+KRYS,Krystal Biotech Inc,Healthcare,0.20577855536115972,0.7399103139013453,0.83272004,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); excess vs sector 126d
+EXEL,Exelixis Inc,Healthcare,0.20577855536115972,0.7051569506726457,0.70264244,0,,share price; own_sup_rate_756; share of up opening gaps
+DTE,DTE Energy Co,Utilities,0.20577855536115972,0.7455156950672646,-0.021277152,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+G,Genpact Ltd,Technology,0.20577855536115972,0.7219730941704036,0.2812577,0,,own_sup_rate_756; upside tail vs downside tail (126d); down-day size vs up-day size
+MSI,Motorola Solutions Inc,Technology,0.20577855536115972,0.75,0.058742348,0,,own_sup_rate_756; mkt_move_pctile; L1 beta 252d
+ANF,Abercrombie & Fitch Co,Consumer Cyclical,0.20577855536115972,0.7309417040358744,1.1035279,0,,excess vs sector 126d; own_sup_rate_756; excess vs sector 63d
+WMB,Williams Cos Inc,Energy,0.20577855536115972,0.7286995515695067,0.024037028,0,,own_sup_rate_756; L1 beta 252d; upside tail vs downside tail (126d)
+ATI,ATI Inc,Industrials,0.20577855536115972,0.7466367713004485,1.6777126,0,,own_sup_rate_756; price change 126d vs own year; excess-path efficiency vs sector 252d
+VLY,Valley National Bancorp,Financial,0.20577855536115972,0.7073991031390134,0.9077994,0,,share price; report due (volume cadence); overnight share of movement
+RBC,RBC Bearings Inc,Industrials,0.20577855536115972,0.7432735426008968,1.156149,0,,si_dtc_now; days in the trailing-MAR top 20% (1y); own_sup_rate_756
+TMO,Thermo Fisher Scientific Inc,Healthcare,0.20577855536115972,0.7230941704035875,0.4389541,0,,rising 21-day pairs (63d); own_sup_rate_756; si_dtc_now
+SYY,Sysco Corp,Consumer Defensive,0.20577855536115972,0.7275784753363229,0.17926042,0,,mkt_move_pctile; L1 beta 252d; down-capture 63d
+T,AT&T Inc,Communication Services,0.20577855536115972,0.7443946188340808,-0.48924854,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+HWC,Hancock Whitney Corp,Financial,0.20577855536115972,0.7017937219730942,0.75664794,0,,own_sup_rate_756; share of up opening gaps; upside tail vs downside tail (126d)
+TPR,Tapestry Inc,Consumer Cyclical,0.20577855536115972,0.7197309417040358,0.9703832,0,,report due (volume cadence); upside tail vs downside tail (126d); excess return on the volume-shock day
+CMS,CMS Energy Corp,Utilities,0.20577855536115972,0.7320627802690582,-0.12777448,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+ROST,Ross Stores Inc,Consumer Cyclical,0.20577855536115972,0.7141255605381166,0.5365197,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); share of up opening gaps
+TGT,Target Corp,Consumer Defensive,0.20577855536115972,0.7174887892376681,0.32905787,1,gap on the volume-shock day bottom 20% AND excess return on the volume-shock day top 20% AND sessions since a 2.5x volume day top 20%,excess vs sector 126d; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+GHC,Graham Holdings Co,Industrials,0.20577855536115972,0.7163677130044843,0.43037367,0,,"dollar volume; upside tail vs downside tail (126d); same window, prior years: share superior"
+WMG,Warner Music Group Corp,Communication Services,0.20577855536115972,0.7365470852017937,0.39398813,0,,share price; upside tail vs downside tail (126d); up on SPY down days
+A,Agilent Technologies Inc,Healthcare,0.20530045983875286,0.6984304932735426,0.84980214,0,,si_dtc_now; excess vs sector 126d; share of up opening gaps
+ACN,Accenture plc,Technology,0.20510186900151542,0.5952914798206278,0.2042541,0,,share of up opening gaps; excess vs sector 63d; mkt_breadth_63h
+AEE,Ameren Corp,Utilities,0.20510186900151542,0.6917040358744395,-0.10591296,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+XOM,ExxonMobil Holdings Corp,Energy,0.20510186900151542,0.6547085201793722,-0.7156759,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+MTD,Mettler-Toledo International Inc,Healthcare,0.20510186900151542,0.6165919282511211,0.68460125,0,,share of up opening gaps; days in the trailing-MAR top 20% (1y); ind_sup_rate_21
+ORI,Old Republic International Corp,Financial,0.20510186900151542,0.6748878923766816,-0.17832105,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+OKTA,Okta Inc,Technology,0.20510186900151542,0.6468609865470852,1.371914,0,,excess vs sector 126d; gap on the volume-shock day; excess vs sector 63d
+OLN,Olin Corp,Basic Materials,0.20510186900151542,0.6860986547085202,0.52281207,0,,share price; report due (volume cadence); upside tail vs downside tail (126d)
+AJG,Arthur J. Gallagher & Co,Financial,0.20510186900151542,0.6928251121076233,-0.41011167,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+NNN,NNN REIT Inc,Real Estate,0.20510186900151542,0.6065022421524664,0.0014170929,0,,L1 beta 252d; si_dtc_now; mkt_move_pctile
+VZ,Verizon Communications Inc,Communication Services,0.20510186900151542,0.57847533632287,-0.25126794,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+NI,NiSource Inc,Utilities,0.20510186900151542,0.6692825112107623,0.1829686,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+NLY,Annaly Capital Management Inc,Real Estate,0.20510186900151542,0.6782511210762332,0.6593,0,,si_dtc_now; share price; own_stop_rate_252
+VOYA,Voya Financial Inc,Financial,0.20510186900151542,0.6154708520179372,0.85892135,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+APH,Amphenol Corp,Technology,0.20510186900151542,0.6771300448430493,1.7916176,0,,report due (volume cadence); own_sup_rate_756; industry peers' 5d return
+STLD,Steel Dynamics Inc,Basic Materials,0.20510186900151542,0.6603139013452914,1.1069587,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+EQIX,Equinix Inc,Real Estate,0.20510186900151542,0.5840807174887892,0.39325473,0,,days in the trailing-MAR top 20% (1y); volume 21d vs 252d vs own year; ind_sup_rate_21
+EPR,EPR Properties,Real Estate,0.20510186900151542,0.6636771300448431,0.08193694,0,,own_sup_rate_756; L1 beta 252d; mkt_move_pctile
+SLB,SLB Ltd,Energy,0.20510186900151542,0.6827354260089686,0.80590075,0,,upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y); share price
+M,Macy's Inc,Consumer Cyclical,0.20510186900151542,0.5852017937219731,1.1379231,0,,"same window, prior years: median excess; excess vs sector 126d; share price"
+EME,Emcor Group Inc,Industrials,0.20510186900151542,0.6334080717488789,1.9619838,0,,upside tail vs downside tail (126d); own_sup_rate_756; si_dtc_now
+FLR,Fluor Corp,Industrials,0.20510186900151542,0.6412556053811659,2.1235409,0,,"report due (volume cadence); same window, prior years: median excess; upside tail vs downside tail (126d)"
+FNB,F.N.B. Corp,Financial,0.20510186900151542,0.6591928251121076,0.8779522,0,,share price; report due (volume cadence); industry peers near 63d highs
+FCFS,FirstCash Holdings Inc,Financial,0.20510186900151542,0.6883408071748879,0.528563,0,,own_sup_rate_756; upside tail vs downside tail (126d); price change 126d vs own year
+PEP,PepsiCo Inc,Consumer Defensive,0.20510186900151542,0.600896860986547,-0.45181185,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CHH,Choice Hotels International Inc,Consumer Cyclical,0.20510186900151542,0.5874439461883408,0.226144,0,,upside tail vs downside tail (126d); sessions since 252d high; closeness to 252d high vs own year
+PR,Permian Resources Holdings Inc,Energy,0.20510186900151542,0.6401345291479821,-0.46545595,0,,L1 beta 252d; upside tail vs downside tail (126d); si_dtc_now
+CLH,Clean Harbors Inc,Industrials,0.20510186900151542,0.6872197309417041,0.2643045,0,,report due (volume cadence); si_dtc_now; excess vs sector 63d
+CHRD,Chord Energy Corp,Energy,0.20510186900151542,0.6681614349775785,-0.6715101,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+FHI,Federated Hermes Inc,Financial,0.20510186900151542,0.5964125560538116,0.8108768,0,,dollar volume; own_sup_rate_756; upside tail vs downside tail (126d)
+FIVE,Five Below Inc,Consumer Cyclical,0.20510186900151542,0.6838565022421524,0.9762061,0,,excess vs sector 63d; si_dtc_now; own_sup_rate_756
+ELAN,Elanco Animal Health Inc,Healthcare,0.20510186900151542,0.5807174887892377,1.1462097,0,,upside tail vs downside tail (126d); share price; down-day size vs up-day size
+EIX,Edison International,Utilities,0.20510186900151542,0.6961883408071748,-0.052845534,0,,L1 beta 252d; upside tail vs downside tail (126d); mkt_move_pctile
+SLM,SLM Corp,Financial,0.20510186900151542,0.6378923766816144,1.2016319,0,,report due (volume cadence); share price; share of up opening gaps
+FCN,FTI Consulting Inc,Industrials,0.20510186900151542,0.625560538116592,0.041496113,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+SHC,Sotera Health Co,Healthcare,0.20510186900151542,0.5896860986547086,0.8529206,0,,report due (volume cadence); dollar volume; mkt_breadth_63h
+SKYD,Skydance Corp,Communication Services,0.20510186900151542,0.5818385650224215,0.29706782,0,,share price; upside tail vs downside tail (126d); volume 21d vs 252d
+SCI,Service Corp International,Consumer Cyclical,0.20510186900151542,0.6053811659192825,-0.052106336,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CBT,Cabot Corp,Basic Materials,0.20510186900151542,0.5975336322869955,0.6753088,0,,dollar volume; report due (volume cadence); mkt_breadth_63h
+CBOE,Cboe Global Markets Inc,Financial,0.20510186900151542,0.6367713004484304,-0.2733913,0,,L1 beta 252d; share of up opening gaps; excess vs sector 63d
+BBY,Best Buy Co Inc,Consumer Cyclical,0.20510186900151542,0.6143497757847534,0.7021163,0,,excess vs sector 126d; share of up opening gaps; days in the trailing-MAR top 20% (1y)
+KVUE,Kenvue Inc,Consumer Defensive,0.20510186900151542,0.6266816143497758,0.29104927,0,,share price; upside tail vs downside tail (126d); closeness to 252d high vs own year
+STX,Seagate Technology Holdings Plc,Technology,0.20510186900151542,0.6737668161434978,2.5704324,0,,report due (volume cadence); excess-path efficiency vs sector 252d; si_dtc_now
+BNY,Bank Of New York Mellon Corp,Financial,0.20510186900151542,0.5986547085201793,0.8880568,0,,own_sup_rate_756; upside tail vs downside tail (126d); industry peers near 63d highs
+LIVN,LivaNova PLC,Healthcare,0.20510186900151542,0.5908071748878924,1.0121373,0,,report due (volume cadence); upside tail vs downside tail (126d); up-capture minus down-capture
+EXC,Exelon Corp,Utilities,0.20510186900151542,0.695067264573991,-0.23081398,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+UNM,Unum Group,Financial,0.20510186900151542,0.6188340807174888,0.43944535,0,,own_sup_rate_756; si_dtc_now; upside tail vs downside tail (126d)
+D,Dominion Energy Inc,Utilities,0.20510186900151542,0.6760089686098655,-0.113042206,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CVS,CVS Health Corp,Healthcare,0.20510186900151542,0.6457399103139013,0.17593189,0,,si_dtc_now; own_sup_rate_756; mkt_move_pctile
+DE,Deere & Co,Industrials,0.20510186900151542,0.672645739910314,0.26342645,0,,industry peers' 5d return; own_sup_rate_756; excess vs sector 63d
+ICE,Intercontinental Exchange Inc,Financial,0.20510186900151542,0.6121076233183856,0.33274725,0,,"own_sup_rate_756; same window, prior years: risk-adjusted rank; excess vs sector 63d"
+CPRT,Copart Inc,Industrials,0.20510186900151542,0.6894618834080718,0.0010155085,0,,L1 beta 252d; share of up opening gaps; mkt_move_pctile
+CROX,Crocs Inc,Consumer Cyclical,0.20510186900151542,0.5762331838565022,1.0743507,0,,own_sup_rate_756; share of up opening gaps; days in the trailing-MAR top 20% (1y)
+CRL,Charles River Laboratories International Inc,Healthcare,0.20510186900151542,0.6614349775784754,1.0633906,0,,excess vs sector 126d; own_sup_rate_756; share of up opening gaps
+KLAC,KLA Corp,Technology,0.20510186900151542,0.6502242152466368,2.9732785,0,,industry peers' 5d return; days in the trailing-MAR top 20% (1y); si_dtc_now
+ITT,ITT Inc,Industrials,0.20510186900151542,0.6804932735426009,1.3001654,0,,report due (volume cadence); upside tail vs downside tail (126d); excess vs sector 63d
+HUBB,Hubbell Inc,Industrials,0.20510186900151542,0.5997757847533632,1.298267,0,,report due (volume cadence); upside tail vs downside tail (126d); price change 126d vs own year
+HR,Healthcare Realty Trust Inc,Real Estate,0.20510186900151542,0.6031390134529148,0.14282317,0,,share price; own_sup_rate_756; mkt_move_pctile
+IVZ,Invesco Ltd,Financial,0.20510186900151542,0.6098654708520179,1.6396517,0,,share price; own_sup_rate_756; share of up opening gaps
+JEF,Jefferies Financial Group Inc,Financial,0.20510186900151542,0.5885650224215246,2.0435967,0,,days in the trailing-MAR top 20% (1y); mkt_vix_pctile; industry peers near 63d highs
+JPM,JPMorgan Chase & Co,Financial,0.20510186900151542,0.679372197309417,0.92895025,0,,"own_sup_rate_756; own_stop_rate_252; same window, prior years: share superior"
+CI,Cigna Group,Healthcare,0.20510186900151542,0.6177130044843049,0.25256777,0,,report due (volume cadence); sessions since 252d high; own_sup_rate_756
+JAZZ,Jazz Pharmaceuticals plc,Healthcare,0.20510186900151542,0.647982062780269,0.5044053,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); price change 126d vs own year
+PINS,Pinterest Inc,Communication Services,0.20510186900151542,0.6233183856502242,0.909306,0,,report due (volume cadence); ind_sup_rate_21; share price
+PEGA,Pegasystems Inc,Technology,0.20510186900151542,0.6905829596412556,1.0462663,0,,report due (volume cadence); sessions since the volume shock; own_sup_rate_756
+IRM,Iron Mountain Inc,Real Estate,0.20510186900151542,0.6278026905829597,1.0204847,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+IP,International Paper Co,Consumer Cyclical,0.20510186900151542,0.6580717488789237,1.0719144,0,,report due (volume cadence); share price; sessions since 252d high
+RGEN,Repligen Corp,Healthcare,0.20510186900151542,0.5829596412556054,1.064494,0,,excess vs sector 126d; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+RGLD,Royal Gold Inc,Basic Materials,0.20510186900151542,0.67152466367713,1.5045576,1,126d drawdown shallowness bottom 20% AND 63d under-water shallowness top 20% AND up-capture 252d top 20%,excess vs sector 63d; upside tail vs downside tail (126d); own_sup_rate_756
+QLYS,Qualys Inc,Technology,0.20510186900151542,0.5751121076233184,0.25948024,0,,excess vs sector 126d; excess vs sector 63d; share of up opening gaps
+RDDT,Reddit Inc,Communication Services,0.20510186900151542,0.6524663677130045,2.0737388,0,,report due (volume cadence); excess vs sector 126d; ind_sup_rate_21
+TKR,Timken Co,Industrials,0.20510186900151542,0.6647982062780269,1.4797072,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); excess-path efficiency vs sector 252d
+PSA,Public Storage,Real Estate,0.20510186900151542,0.6535874439461884,0.3726274,0,,report due (volume cadence); overnight share of movement; upside tail vs downside tail (126d)
+GEHC,GE HealthCare Technologies Inc,Healthcare,0.20510186900151542,0.6816143497757847,0.84000343,0,,report due (volume cadence); sessions since 252d high; upside tail vs downside tail (126d)
+DHR,Danaher Corp,Healthcare,0.20510186900151542,0.5919282511210763,0.2705168,0,,si_dtc_now; sessions since 252d high; sessions since the volume shock
+SAIC,Science Applications International Corp,Technology,0.20510186900151542,0.6390134529147982,0.5217394,0,,own_sup_rate_756; 126d under-water shallowness; share of up opening gaps
+SYF,Synchrony Financial,Financial,0.20510186900151542,0.6345291479820628,1.2065195,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+TRGP,Targa Resources Corp,Energy,0.20510186900151542,0.6042600896860987,-0.17833273,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+COP,Conoco Phillips,Energy,0.20510186900151542,0.6513452914798207,-0.66341347,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+FTI,TechnipFMC plc,Energy,0.20510186900151542,0.6625560538116592,0.5597898,0,,"upside tail vs downside tail (126d); own_sup_rate_756; same window, prior years: risk-adjusted rank"
+GEF,Greif Inc,Consumer Cyclical,0.20510186900151542,0.6076233183856502,0.5593874,0,,dollar volume; excess vs sector 63d; volume 21d vs 252d
+GPC,Genuine Parts Co,Consumer Cyclical,0.20510186900151542,0.649103139013453,0.27005848,0,,"excess vs sector 126d; share of up opening gaps; same window, prior years: share superior"
+HAS,Hasbro Inc,Consumer Cyclical,0.20510186900151542,0.6659192825112108,0.7000554,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; overnight share of movement"
+HLI,Houlihan Lokey Inc,Financial,0.20510186900151542,0.6322869955156951,0.8774021,0,,report due (volume cadence); upside tail vs downside tail (126d); share of up opening gaps
+HIG,Hartford Insurance Group Inc,Financial,0.20510186900151542,0.624439461883408,-0.1269268,0,,L1 beta 252d; mkt_move_pctile; si_dtc_now
+RGA,Reinsurance Group Of America Inc,Financial,0.20510186900151542,0.594170403587444,0.29250428,0,,own_sup_rate_756; excess vs sector 63d; mkt_move_pctile
+ROL,Rollins Inc,Consumer Cyclical,0.20510186900151542,0.6704035874439462,-0.08917602,0,,L1 beta 252d; volume 21d vs 252d; share of up opening gaps
+MRK,Merck & Co Inc,Healthcare,0.20510186900151542,0.6670403587443946,0.26482198,0,,own_stop_rate_252; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+MPWR,Monolithic Power System Inc,Technology,0.20510186900151542,0.6434977578475336,2.5189848,0,,own_sup_rate_756; price change 126d vs own year; upside tail vs downside tail (126d)
+NUE,Nucor Corp,Basic Materials,0.20510186900151542,0.6109865470852018,0.99348974,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+NWSA,News Corp,Communication Services,0.20510186900151542,0.6973094170403588,0.28694752,0,,share of up opening gaps; overnight share of movement; excess vs sector 126d
+CUZ,Cousins Properties Inc,Real Estate,0.20510186900151542,0.6311659192825112,0.6578112,0,,report due (volume cadence); dollar volume; excess vs sector 126d
+MSFT,Microsoft Corp,Technology,0.20510186900151542,0.6849775784753364,1.0307009,0,,dollar volume; share of days at a 63d high; own_sup_rate_756
+DAL,Delta Air Lines Inc,Industrials,0.20510186900151542,0.5930493273542601,1.6961529,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+FTV,Fortive Corp,Technology,0.20510186900151542,0.602017937219731,0.6493511,0,,report due (volume cadence); industry peers' 5d return; share price
+APPF,Appfolio Inc,Technology,0.20510186900151542,0.5795964125560538,0.84444845,0,,"report due (volume cadence); sessions since the volume shock; same window, prior years: risk-adjusted rank"
+BAX,Baxter International Inc,Healthcare,0.20510186900151542,0.6221973094170403,1.0123523,0,,report due (volume cadence); excess vs sector 126d; mkt_breadth_63h
+BALL,Ball Corp,Consumer Cyclical,0.20510186900151542,0.655829596412556,0.17602088,0,,industry peers near 63d highs; mkt_move_pctile; share price
+BIIB,Biogen Inc,Healthcare,0.20510186900151542,0.577354260089686,0.23861828,0,,"mkt_breadth_63h; same window, prior years: risk-adjusted rank; down-day size vs up-day size"
+ALK,Alaska Air Group Inc,Industrials,0.20510186900151542,0.6132286995515696,2.3296287,0,,share price; mkt_breadth_63h; industry peers near 63d highs
+AON,Aon Plc,Financial,0.20510186900151542,0.6199551569506726,-0.23031034,0,,L1 beta 252d; si_dtc_now; mkt_move_pctile
+AMG,Affiliated Managers Group Inc,Financial,0.20510186900151542,0.6289237668161435,1.1325724,0,,excess vs sector 126d; days in the trailing-MAR top 20% (1y); own_sup_rate_756
+BIO,Bio-Rad Laboratories Inc,Healthcare,0.20510186900151542,0.6087443946188341,0.45947582,0,,report due (volume cadence); down-day size vs up-day size; excess vs sector 63d
+WEC,WEC Energy Group Inc,Utilities,0.20510186900151542,0.6210762331838565,-0.111918494,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+WCC,Wesco International Inc,Industrials,0.20510186900151542,0.6939461883408071,2.1147015,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+ALSN,Allison Transmission Holdings Inc,Consumer Cyclical,0.20510186900151542,0.6356502242152466,1.0591121,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+ATO,Atmos Energy Corp,Utilities,0.20510186900151542,0.6569506726457399,-0.13983934,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+WST,West Pharmaceutical Services Inc,Healthcare,0.20510186900151542,0.6446188340807175,0.49304146,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+ADP,Automatic Data Processing Inc,Technology,0.20510186900151542,0.6423766816143498,0.056831725,0,,L1 beta 252d; own_sup_rate_756; mkt_breadth_63h
+USFD,US Foods Holding Corp,Consumer Defensive,0.20510186900151542,0.5863228699551569,0.16834344,0,,own_sup_rate_756; mkt_move_pctile; down-day size vs up-day size
+V,Visa Inc,Financial,0.20510186900151542,0.6300448430493274,0.25691226,0,,mkt_move_pctile; own_stop_rate_252; overnight share of movement
+UTHR,United Therapeutics Corp,Healthcare,0.20352054843432,0.5728699551569507,0.2281756,0,,upside tail vs downside tail (126d); own_sup_rate_756; overnight share of movement
+AMAT,Applied Materials Inc,Technology,0.20352054843432,0.5661434977578476,2.9208007,0,,industry peers' 5d return; si_dtc_now; days in the trailing-MAR top 20% (1y)
+AMKR,AMKOR Technology Inc,Technology,0.20352054843432,0.5695067264573991,3.4608207,0,,industry peers' 5d return; report due (volume cadence); sessions since the volume shock
+SAIA,Saia Inc,Industrials,0.20352054843432,0.5605381165919282,1.4660071,0,,industry peers near 63d highs; upside tail vs downside tail (126d); share of up opening gaps
+CNX,CNX Resources Corp,Energy,0.20352054843432,0.5639013452914798,0.054844815,0,,own_sup_rate_756; L1 beta 252d; up on SPY down days
+TJX,TJX Companies Inc,Consumer Cyclical,0.20352054843432,0.5627802690582959,-0.014463142,0,,L1 beta 252d; si_dtc_now; own_sup_rate_756
+FOXA,Fox Corp,Communication Services,0.20352054843432,0.5717488789237668,0.32881573,0,,own_sup_rate_756; overnight share of movement; excess vs sector 63d
+HPQ,HP Inc,Technology,0.20352054843432,0.5650224215246636,0.91796315,0,,excess vs sector 126d; share of up opening gaps; share price
+VFC,VF Corp,Consumer Cyclical,0.20352054843432,0.5683856502242153,1.7555403,0,,share price; report due (volume cadence); volume-weighted shock-day excess
+GBCI,Glacier Bancorp Inc,Financial,0.20352054843432,0.5616591928251121,0.8176555,0,,own_sup_rate_756; industry peers near 63d highs; upside tail vs downside tail (126d)
+CCI,Crown Castle Inc,Real Estate,0.20352054843432,0.570627802690583,0.23355284,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; closeness to 252d high vs own year"
+DUOL,Duolingo Inc,Technology,0.20352054843432,0.5672645739910314,0.7943745,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; excess vs sector 126d"
+PNFP,Pinnacle Financial Partners Inc,Financial,0.20352054843432,0.5739910313901345,0.89913285,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+NVR,NVR Inc,Consumer Cyclical,0.19977249604340946,0.5381165919282511,0.31927207,0,,"report due (volume cadence); industry peers near 63d highs; same window, prior years: risk-adjusted rank"
+HLNE,Hamilton Lane Inc,Financial,0.19977249604340946,0.5269058295964125,1.4898279,0,,report due (volume cadence); upside tail vs downside tail (126d); own_sup_rate_756
+MTB,M & T Bank Corp,Financial,0.19977249604340946,0.5347533632286996,0.71067244,0,,upside tail vs downside tail (126d); own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+NOV,NOV Inc,Energy,0.19977249604340946,0.5459641255605381,0.8770513,0,,share price; overnight share of movement; industry peers near 63d highs
+GDDY,Godaddy Inc,Technology,0.19977249604340946,0.5190582959641256,0.23731154,0,,own_sup_rate_756; mkt_breadth_63h; closeness to 252d high vs own year
+NSC,Norfolk Southern Corp,Industrials,0.19977249604340946,0.5515695067264574,0.18760513,0,,mkt_move_pctile; sessions since the volume shock; share of up opening gaps
+ATR,Aptargroup Inc,Healthcare,0.19977249604340946,0.48878923766816146,0.21746497,0,,sessions since 252d high; upside tail vs downside tail (126d); mkt_move_pctile
+VEEV,Veeva Systems Inc,Healthcare,0.19977249604340946,0.5145739910313901,0.72796303,0,,excess vs sector 126d; own_sup_rate_756; share of up opening gaps
+WFRD,Weatherford International plc,Energy,0.19977249604340946,0.5582959641255605,1.0926363,0,,"same window, prior years: median excess; overnight share of movement; days in the trailing-MAR top 20% (1y)"
+AME,Ametek Inc,Industrials,0.19977249604340946,0.4876681614349776,0.9430985,0,,si_dtc_now; upside tail vs downside tail (126d); excess vs sector 63d
+GPK,Graphic Packaging Holding Co,Consumer Cyclical,0.19977249604340946,0.4977578475336323,0.8226843,0,,share price; report due (volume cadence); sessions since 252d high
+ROIV,Roivant Sciences Ltd,Healthcare,0.19977249604340946,0.5403587443946188,0.86880976,0,,"same window, prior years: median excess; days in the trailing-MAR top 20% (1y); own_sup_rate_756"
+HLT,Hilton Worldwide Holdings Inc,Consumer Cyclical,0.19977249604340946,0.5437219730941704,0.45006436,0,,own_sup_rate_756; upside tail vs downside tail (126d); own_stop_rate_252
+INGR,Ingredion Inc,Consumer Defensive,0.19977249604340946,0.4899103139013453,0.12340924,0,,mkt_move_pctile; report due (volume cadence); sessions since 252d high
+GME,Gamestop Corp,Consumer Cyclical,0.19977249604340946,0.5033632286995515,0.6347712,0,,report due (volume cadence); overnight share of movement; 126d drawdown shallowness
+TFC,Truist Financial Corp,Financial,0.19977249604340946,0.5414798206278026,0.84860057,0,,own_sup_rate_756; upside tail vs downside tail (126d); industry peers near 63d highs
+CF,CF Industries Holdings Inc,Basic Materials,0.19977249604340946,0.5538116591928252,-1.0144005,0,,L1 beta 252d; mkt_move_pctile; share of up opening gaps
+CNP,Centerpoint Energy Inc,Utilities,0.19977249604340946,0.49551569506726456,-0.13092077,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+DD,DuPont de Nemours Inc,Basic Materials,0.19977249604340946,0.5,1.224415,0,,report due (volume cadence); upside tail vs downside tail (126d); excess-path efficiency vs sector 252d
+GL,Globe Life Inc,Financial,0.19977249604340946,0.5089686098654709,0.27200007,0,,own_sup_rate_756; sessions since the volume shock; own_stop_rate_252
+GIS,General Mills Inc,Consumer Defensive,0.19977249604340946,0.531390134529148,-0.43892834,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+IPGP,IPG Photonics Corp,Technology,0.19977249604340946,0.4966367713004484,1.9170592,0,,"dollar volume; same window, prior years: median excess; industry peers' 5d return"
+SRE,Sempra,Utilities,0.19977249604340946,0.5100896860986547,0.037399523,0,,mkt_move_pctile; L1 beta 252d; upside tail vs downside tail (126d)
+AZO,Autozone Inc,Consumer Cyclical,0.19977249604340946,0.49887892376681614,0.14373621,0,,si_dtc_now; volume 21d vs 252d; own_sup_rate_756
+AXON,Axon Enterprise Inc,Industrials,0.19977249604340946,0.5280269058295964,1.7081798,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+FERG,Ferguson Enterprises Inc,Industrials,0.19977249604340946,0.5291479820627802,1.0928191,0,,upside tail vs downside tail (126d); share of up opening gaps; own_sup_rate_756
+SIRI,Sirius XM Holdings Inc,Communication Services,0.19977249604340946,0.5358744394618834,0.36239782,0,,report due (volume cadence); share of up opening gaps; share price
+FDS,Factset Research Systems Inc,Financial,0.19977249604340946,0.5392376681614349,0.14121474,0,,sessions since 252d high; L1 beta 252d; excess vs sector 126d
+EFX,Equifax Inc,Industrials,0.19977249604340946,0.5336322869955157,0.6360694,0,,"report due (volume cadence); sessions since 252d high; same window, prior years: risk-adjusted rank"
+CRWD,Crowdstrike Holdings Inc,Technology,0.19977249604340946,0.5426008968609866,1.5603076,0,,excess vs sector 126d; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+PFE,Pfizer Inc,Healthcare,0.19977249604340946,0.523542600896861,0.31659144,0,,own_stop_rate_252; excess vs sector 63d; close location in the day's range vs own year
+ENTG,Entegris Inc,Technology,0.19977249604340946,0.5325112107623319,3.3839583,0,,industry peers' 5d return; excess vs sector 63d; upside tail vs downside tail (126d)
+FITB,Fifth Third Bancorp,Financial,0.19977249604340946,0.4943946188340807,0.91429615,0,,"own_sup_rate_756; upside tail vs downside tail (126d); same window, prior years: share superior"
+CCK,Crown Holdings Inc,Consumer Cyclical,0.19977249604340946,0.5482062780269058,0.40649393,0,,"upside tail vs downside tail (126d); same window, prior years: share superior; same window, prior years: risk-adjusted rank"
+XEL,Xcel Energy Inc,Utilities,0.19977249604340946,0.5504484304932735,0.020598443,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+VRT,Vertiv Holdings Co,Industrials,0.19977249604340946,0.5067264573991032,2.6941752,0,,own_sup_rate_756; price change 126d vs own year; si_dtc_now
+AIT,Applied Industrial Technologies Inc,Industrials,0.19977249604340946,0.5493273542600897,0.7273057,0,,report due (volume cadence); excess vs sector 63d; upside tail vs downside tail (126d)
+APG,APi Group Corp,Industrials,0.19977249604340946,0.5179372197309418,1.3968579,0,,"own_sup_rate_756; upside tail vs downside tail (126d); same window, prior years: share superior"
+APD,Air Products & Chemicals Inc,Basic Materials,0.19977249604340946,0.5246636771300448,0.08654625,0,,mkt_move_pctile; L1 beta 252d; overnight share of movement
+VNO,Vornado Realty Trust,Real Estate,0.19977249604340946,0.5112107623318386,0.9788264,0,,excess vs sector 126d; share price; industry peers near 63d highs
+AA,Alcoa Corp,Basic Materials,0.19977249604340946,0.5571748878923767,2.0579612,0,,days in the trailing-MAR top 20% (1y); own_sup_rate_756; share price
+XRAY,DENTSPLY Sirona Inc,Healthcare,0.19977249604340946,0.547085201793722,1.2249013,0,,share price; sessions since 252d high; mkt_breadth_63h
+OGE,Oge Energy Corp,Utilities,0.19977249604340946,0.5369955156950673,-0.02307246,0,,L1 beta 252d; own_stop_rate_252; mkt_move_pctile
+PCG,PG&E Corp,Utilities,0.19977249604340946,0.5526905829596412,0.013421777,0,,si_dtc_now; share price; L1 beta 252d
+PANW,Palo Alto Networks Inc,Technology,0.19977249604340946,0.5056053811659192,1.2147161,0,,excess vs sector 126d; own_sup_rate_756; volume 21d vs 252d vs own year
+KBR,KBR Inc,Industrials,0.19977249604340946,0.5257847533632287,0.668549,0,,report due (volume cadence); sessions since 252d high; share price
+UNP,Union Pacific Corp,Industrials,0.19977249604340946,0.5594170403587444,0.16088185,0,,mkt_move_pctile; L1 beta 252d; si_dtc vs own year
+MOG-A,Moog Inc,Industrials,0.19977249604340946,0.5022421524663677,1.161914,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+LLY,Lilly(Eli) & Co,Healthcare,0.19977249604340946,0.5044843049327354,0.099850535,0,,own_sup_rate_756; mkt_move_pctile; volume 21d vs 252d vs own year
+DRI,Darden Restaurants Inc,Consumer Cyclical,0.19977249604340946,0.5134529147982063,0.2662768,0,,upside tail vs downside tail (126d); mkt_move_pctile; industry peers near 63d highs
+EXPO,Exponent Inc,Industrials,0.19977249604340946,0.5201793721973094,0.5578315,0,,dollar volume; sessions since 252d high; mkt_breadth_63h
+EXPE,Expedia Group Inc,Consumer Cyclical,0.19977249604340946,0.515695067264574,0.71566784,0,,"report due (volume cadence); same window, prior years: median excess; days in the trailing-MAR top 20% (1y)"
+EXLS,ExlService Holdings Inc,Technology,0.19977249604340946,0.507847533632287,0.04632025,0,,report due (volume cadence); L1 beta 252d; excess vs sector 63d
+EWBC,East West Bancorp Inc,Financial,0.19977249604340946,0.5168161434977578,0.85647124,0,,own_sup_rate_756; industry peers near 63d highs; upside tail vs downside tail (126d)
+TXN,Texas Instruments Inc,Technology,0.19977249604340946,0.5448430493273543,1.3553718,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); own_sup_rate_756
+CHRW,C.H. Robinson Worldwide Inc,Industrials,0.19977249604340946,0.5011210762331838,0.54399776,0,,report due (volume cadence); upside tail vs downside tail (126d); own_sup_rate_756
+J,Jacobs Solutions Inc,Industrials,0.19977249604340946,0.5560538116591929,0.9183121,0,,report due (volume cadence); own_sup_rate_756; share of up opening gaps
+ISRG,Intuitive Surgical Inc,Healthcare,0.19977249604340946,0.5123318385650224,0.76986516,0,,report due (volume cadence); own_sup_rate_756; sessions since the volume shock
+ALLE,Allegion plc,Industrials,0.19977249604340946,0.554932735426009,0.38242644,0,,upside tail vs downside tail (126d); excess vs sector 63d; share of up opening gaps
+WAT,Waters Corp,Healthcare,0.19977249604340946,0.5213004484304933,0.7409327,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+VLTO,Veralto Corp,Industrials,0.19977249604340946,0.5224215246636771,0.2008867,0,,"mkt_move_pctile; sessions since 252d high; same window, prior years: risk-adjusted rank"
+CRM,Salesforce Inc,Technology,0.19977249604340946,0.492152466367713,0.832698,0,,own_sup_rate_756; sessions since 252d high; excess vs sector 63d
+PKG,Packaging Corp Of America,Consumer Cyclical,0.19977249604340946,0.49327354260089684,0.69822985,0,,report due (volume cadence); sessions since the volume shock; industry peers near 63d highs
+CMCSA,Comcast Corp,Communication Services,0.19977249604340946,0.5302690582959642,0.16116418,0,,sessions since 252d high; mkt_breadth_63h; upside tail vs downside tail (126d)
+CHWY,Chewy Inc,Consumer Cyclical,0.19977249604340946,0.4910313901345291,0.5608157,0,,"share price; same window, prior years: risk-adjusted rank; upside tail vs downside tail (126d)"
+RMD,Resmed Inc,Healthcare,0.19976942753179378,0.4742152466367713,0.38938844,0,,report due (volume cadence); down-day size vs up-day size; excess vs sector 63d
+DHI,D.R. Horton Inc,Consumer Cyclical,0.19976942753179378,0.4585201793721973,0.7831088,0,,own_sup_rate_756; industry peers near 63d highs; share of up opening gaps
+DASH,DoorDash Inc,Consumer Cyclical,0.19976942753179378,0.460762331838565,1.395221,0,,"same window, prior years: median excess; excess vs sector 126d; own_sup_rate_756"
+QCOM,Qualcomm Inc,Technology,0.19976942753179378,0.4786995515695067,2.202845,0,,report due (volume cadence); price change 10d; own_sup_rate_756
+COF,Capital One Financial Corp,Financial,0.19976942753179378,0.46860986547085204,1.3128155,0,,own_sup_rate_756; upside tail vs downside tail (126d); share of up opening gaps
+RS,Reliance Inc,Basic Materials,0.19976942753179378,0.47757847533632286,0.67655444,0,,excess vs sector 126d; days in the trailing-MAR top 20% (1y); upside tail vs downside tail (126d)
+CNO,CNO Financial Group Inc,Financial,0.19976942753179378,0.4618834080717489,0.3335787,0,,dollar volume; own_stop_rate_252; si_dtc_now
+GMED,Globus Medical Inc,Healthcare,0.19976942753179378,0.47197309417040356,0.9723394,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+BILL,BILL Holdings Inc,Technology,0.19976942753179378,0.4730941704035874,1.6088399,0,,share price; sessions since 252d high; mkt_breadth_63h
+BE,Bloom Energy Corp,Industrials,0.19976942753179378,0.4697309417040359,4.512362,0,,si_dtc_now; excess vs sector 126d; daily range 21d vs 1y
+AM,Antero Midstream Corp,Energy,0.19976942753179378,0.47533632286995514,-0.046966847,0,,"L1 beta 252d; own_sup_rate_756; same window, prior years: share superior"
+AMGN,AMGEN Inc,Healthcare,0.19976942753179378,0.48318385650224216,0.4928052,0,,own_sup_rate_756; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+TXRH,Texas Roadhouse Inc,Consumer Cyclical,0.19976942753179378,0.484304932735426,0.42908952,0,,si_dtc_now; own_sup_rate_756; share of up opening gaps
+LITE,Lumentum Holdings Inc,Technology,0.19976942753179378,0.46300448430493274,3.5751529,0,,si_dtc_now; own_sup_rate_756; daily range 21d vs 1y
+LII,Lennox International Inc,Industrials,0.19976942753179378,0.48654708520179374,1.1187496,0,,volume-weighted shock-day excess; report due (volume cadence); sessions since 252d high
+ES,Eversource Energy,Utilities,0.19976942753179378,0.47085201793721976,-0.018274631,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+CASY,Casey's General Stores Inc,Consumer Cyclical,0.19976942753179378,0.4854260089686099,-0.021232301,0,,L1 beta 252d; si_dtc_now; down-capture 252d
+STZ,Constellation Brands Inc,Consumer Defensive,0.19976942753179378,0.4674887892376682,0.08752367,0,,L1 beta 252d; upside tail vs downside tail (126d); sessions since 252d high
+DLB,Dolby Laboratories Inc,Industrials,0.19976942753179378,0.4820627802690583,0.54996765,0,,sessions since 252d high; upside tail vs downside tail (126d); up on SPY down days
+LECO,Lincoln Electric Holdings Inc,Industrials,0.19976942753179378,0.4798206278026906,1.2001798,0,,report due (volume cadence); excess vs sector 63d; 63d share of up days
+ROKU,Roku Inc,Communication Services,0.19976942753179378,0.4641255605381166,1.5148011,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+NEU,NewMarket Corp,Basic Materials,0.19976942753179378,0.476457399103139,0.6788985,0,,excess vs sector 126d; own_sup_rate_756; excess vs sector 63d
+HII,Huntington Ingalls Industries Inc,Industrials,0.19976942753179378,0.45964125560538116,0.6124864,0,,report due (volume cadence); own_sup_rate_756; si_dtc_now
+NEE,NextEra Energy Inc,Utilities,0.19976942753179378,0.4663677130044843,0.22186293,0,,own_sup_rate_756; upside tail vs downside tail (126d); mkt_move_pctile
+AIZ,Assurant Inc,Financial,0.19976942753179378,0.46524663677130046,0.22781953,0,,own_sup_rate_756; overnight share of movement; share of up opening gaps
+SUI,Sun Communities Inc,Real Estate,0.19976942753179378,0.48094170403587444,-0.043288868,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+STE,Steris Plc,Healthcare,0.1983603279344131,0.45739910313901344,0.3686505,0,,upside tail vs downside tail (126d); share of up opening gaps; si_dtc vs own year
+VC,Visteon Corp,Consumer Cyclical,0.1983603279344131,0.4562780269058296,1.1845789,0,,si_dtc vs own year; industry peers near 63d highs; 63d down-day vs up-day volume vs own year
+CVNA,Carvana Co,Consumer Cyclical,0.19815183107420922,0.4551569506726457,2.5116913,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; share price"
+OSK,Oshkosh Corp,Industrials,0.19809339150105024,0.437219730941704,1.4284346,0,,report due (volume cadence); industry peers' 5d return; sessions since the volume shock
+NBIX,Neurocrine Biosciences Inc,Healthcare,0.19809339150105024,0.43609865470852016,0.47322708,0,,report due (volume cadence); own_sup_rate_756; share of up opening gaps
+ASH,Ashland Inc,Basic Materials,0.19809339150105024,0.43385650224215244,0.960065,0,,report due (volume cadence); excess vs sector 126d; excess vs sector 63d
+EW,Edwards Lifesciences Corp,Healthcare,0.19809339150105024,0.4517937219730942,0.520284,0,,"si_dtc_now; same window, prior years: risk-adjusted rank; up on SPY down days"
+MS,Morgan Stanley,Financial,0.19809339150105024,0.4484304932735426,1.6555014,0,,own_sup_rate_756; upside tail vs downside tail (126d); excess-path efficiency vs sector 252d
+WEX,WEX Inc,Technology,0.19809339150105024,0.45067264573991034,0.5487049,0,,report due (volume cadence); overnight share of movement; own_sup_rate_756
+DTM,DT Midstream Inc,Energy,0.19809339150105024,0.45403587443946186,0.20428859,0,,own_sup_rate_756; L1 beta 252d; mkt_move_pctile
+F,Ford Motor Co,Consumer Cyclical,0.19809339150105024,0.43946188340807174,1.4123194,0,,share price; si_dtc_now; industry peers near 63d highs
+PFGC,Performance Food Group Company,Consumer Defensive,0.19809339150105024,0.4304932735426009,0.28928074,0,,"same window, prior years: share superior; volume 21d vs 252d vs own year; share of up opening gaps"
+SN,SharkNinja Inc,Consumer Cyclical,0.19809339150105024,0.4495515695067265,1.2874855,0,,excess vs sector 126d; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+STT,State Street Corp,Financial,0.19809339150105024,0.4405829596412556,1.1545615,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); excess vs sector 126d
+PODD,Insulet Corp,Healthcare,0.19809339150105024,0.4461883408071749,0.44481182,0,,report due (volume cadence); volume-weighted shock-day excess; own_sup_rate_756
+TYL,Tyler Technologies Inc,Technology,0.19809339150105024,0.4316143497757848,0.110732995,0,,up-capture 252d; sessions since 252d high; mkt_breadth_63h
+KEYS,Keysight Technologies Inc,Technology,0.19809339150105024,0.4327354260089686,1.970395,0,,si_dtc_now; days in the trailing-MAR top 20% (1y); excess vs sector 63d
+CTSH,Cognizant Technology Solutions Corp,Technology,0.19809339150105024,0.44506726457399104,0.30642626,0,,share price; share of up opening gaps; volume 21d vs 252d vs own year
+CNH,CNH Industrial NV,Industrials,0.19809339150105024,0.44730941704035876,0.98609704,0,,share price; industry peers' 5d return; overnight share of movement
+MP,MP Materials Corp,Basic Materials,0.19809339150105024,0.4428251121076233,2.708597,0,,industry peers near 63d highs; mkt_vix_pctile; share price
+ROK,Rockwell Automation Inc,Industrials,0.19809339150105024,0.4383408071748879,1.5522164,0,,"report due (volume cadence); same window, prior years: median excess; days in the trailing-MAR top 20% (1y)"
+HXL,Hexcel Corp,Industrials,0.19809339150105024,0.4439461883408072,0.999814,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); industry peers near 63d highs
+WSO,Watsco Inc,Industrials,0.19809339150105024,0.44170403587443946,1.1885622,0,,"report due (volume cadence); sessions since 252d high; same window, prior years: risk-adjusted rank"
+BKNG,Booking Holdings Inc,Consumer Cyclical,0.19809339150105024,0.4349775784753363,0.8078889,0,,own_sup_rate_756; share of up opening gaps; industry peers near 63d highs
+CVX,Chevron Corp,Energy,0.19809339150105024,0.452914798206278,-0.56311375,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+FLEX,Flex Ltd,Technology,0.1971519538045266,0.42937219730941706,3.0128913,0,,days in the trailing-MAR top 20% (1y); industry peers' 5d return; volume 21d vs 252d vs own year
+SW,Smurfit WestRock plc,Consumer Cyclical,0.19691692466460267,0.42713004484304934,1.2728275,0,,"share price; same window, prior years: median excess; upside tail vs downside tail (126d)"
+SPXC,SPX Technologies Inc,Industrials,0.19691692466460267,0.4282511210762332,1.8148806,0,,report due (volume cadence); si_dtc_now; 63d down-day vs up-day volume vs own year
+BSX,Boston Scientific Corp,Healthcare,0.19691692466460267,0.4226457399103139,0.26688,0,,report due (volume cadence); own_sup_rate_756; upside tail vs downside tail (126d)
+VMRK,Vivmark Residential,Real Estate,0.19691692466460267,0.42376681614349776,0.042334326,0,,overnight share of movement; volume 21d vs 252d; industry peers near 63d highs
+SWK,Stanley Black & Decker Inc,Industrials,0.19691692466460267,0.4260089686098655,1.4400262,0,,report due (volume cadence); excess vs sector 126d; industry peers' 5d return
+NOW,ServiceNow Inc,Technology,0.19691692466460267,0.4248878923766816,1.0387757,0,,report due (volume cadence); excess vs sector 126d; closeness to 252d high vs own year
+TDY,Teledyne Technologies Inc,Technology,0.19691639948013087,0.42152466367713004,1.0644252,0,,report due (volume cadence); 63d share of up days; volume 21d vs 252d vs own year
+NOC,Northrop Grumman Corp,Industrials,0.19683177586307785,0.4204035874439462,0.08858711,0,,upside tail vs downside tail (126d); mkt_move_pctile; own_sup_rate_756
+FBIN,Fortune Brands Innovations Inc,Industrials,0.19669360158311347,0.41143497757847536,1.3407629,0,,mkt_breadth_63h; share price; sessions since 252d high
+SLGN,Silgan Holdings Inc,Consumer Cyclical,0.19669360158311347,0.40022421524663676,0.37343997,0,,report due (volume cadence); sessions since 252d high; share price
+ELS,Equity Lifestyle Properties Inc,Real Estate,0.19669360158311347,0.4024663677130045,-0.21946302,0,,L1 beta 252d; mkt_move_pctile; up-capture 252d
+ENS,Enersys,Industrials,0.19669360158311347,0.40919282511210764,1.9478765,0,,price change 126d vs own year; days in the trailing-MAR top 20% (1y); own_sup_rate_756
+IT,Gartner Inc,Technology,0.19669360158311347,0.3957399103139013,0.22973667,0,,up on SPY down days; sessions since 252d high; excess vs sector 63d
+CPRI,Capri Holdings Ltd,Consumer Cyclical,0.19669360158311347,0.4147982062780269,1.4645914,0,,"share price; same window, prior years: median excess; share of up opening gaps"
+TDG,Transdigm Group Incorporated,Industrials,0.19669360158311347,0.39798206278026904,0.7209254,0,,own_sup_rate_756; industry peers near 63d highs; upside tail vs downside tail (126d)
+RMBS,Rambus Inc,Technology,0.19669360158311347,0.4047085201793722,3.459858,0,,report due (volume cadence); up-capture 63d vs own year; volume 21d vs 252d vs own year
+BEN,Franklin Templeton Inc,Financial,0.19669360158311347,0.4069506726457399,1.1987956,0,,report due (volume cadence); excess vs sector 126d; share price
+WTS,Watts Water Technologies Inc,Industrials,0.19669360158311347,0.3968609865470852,1.0003791,0,,upside tail vs downside tail (126d); excess vs sector 63d; own_stop_rate_252
+NFG,National Fuel Gas Co,Energy,0.19669360158311347,0.3991031390134529,-0.19404036,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+LDOS,Leidos Holdings Inc,Technology,0.19669360158311347,0.4170403587443946,0.36213514,0,,upside tail vs downside tail (126d); own_sup_rate_756; share of up opening gaps
+ESS,Essex Property Trust Inc,Real Estate,0.19669360158311347,0.40358744394618834,0.08416512,0,,"L1 beta 252d; same window, prior years: risk-adjusted rank; mkt_move_pctile"
+UPS,United Parcel Service Inc,Industrials,0.19669360158311347,0.4192825112107623,0.7825134,0,,report due (volume cadence); upside tail vs downside tail (126d); overnight share of movement
+PAG,Penske Automotive Group Inc,Consumer Cyclical,0.19669360158311347,0.40582959641255606,0.43337587,0,,excess vs sector 126d; sessions since the volume shock; industry peers near 63d highs
+XYZ,Block Inc,Technology,0.19669360158311347,0.4013452914798206,1.8232841,0,,own_sup_rate_756; mkt_breadth_63h; mkt_vix_pctile
+LYV,Live Nation Entertainment Inc,Communication Services,0.19669360158311347,0.4103139013452915,0.64017665,0,,"own_sup_rate_756; same window, prior years: share superior; up on SPY down days"
+P,Everpure Inc,Technology,0.19669360158311347,0.41816143497757846,2.4289083,0,,si_dtc_now; excess vs sector 126d; excess vs sector 63d
+LSTR,Landstar System Inc,Industrials,0.19669360158311347,0.41591928251121074,0.657813,0,,upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y); si_dtc vs own year
+MMS,Maximus Inc,Industrials,0.19669360158311347,0.4080717488789238,0.34350413,0,,"dollar volume; same window, prior years: risk-adjusted rank; mkt_breadth_63h"
+TTWO,Take-Two Interactive Software Inc,Communication Services,0.19669360158311347,0.413677130044843,0.6892104,0,,overnight share of movement; own_sup_rate_756; industry peers near 63d highs
+PEG,Public Service Enterprise Group Inc,Utilities,0.19669360158311347,0.4125560538116592,0.056310736,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+IEX,Idex Corp,Industrials,0.19602164529643265,0.3710762331838565,0.65526706,0,,report due (volume cadence); si_dtc_now; excess vs sector 63d
+IESC,IES Holdings Inc,Industrials,0.19602164529643265,0.34417040358744394,2.9923177,0,,own_sup_rate_756; upside tail vs downside tail (126d); sessions since the volume shock
+DAR,Darling Ingredients Inc,Consumer Defensive,0.19602164529643265,0.3867713004484305,0.12997323,0,,days in the trailing-MAR top 20% (1y); down-capture 252d; industry peers near 63d highs
+GLW,Corning Inc,Technology,0.19602164529643265,0.38228699551569506,3.1489937,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); volume 21d vs 252d
+RVTY,Revvity Inc,Healthcare,0.19602164529643265,0.36434977578475336,1.1213034,0,,excess vs sector 126d; excess vs sector 63d; own_sup_rate_756
+GNTX,Gentex Corp,Consumer Cyclical,0.19602164529643265,0.36995515695067266,0.8326976,0,,report due (volume cadence); sessions since 252d high; industry peers near 63d highs
+GRMN,Garmin Ltd,Technology,0.19602164529643265,0.3834080717488789,0.9036135,0,,"own_sup_rate_756; same window, prior years: share superior; position in 252d range"
+RF,Regions Financial Corp,Financial,0.19602164529643265,0.3811659192825112,0.8648233,0,,upside tail vs downside tail (126d); own_sup_rate_756; industry peers near 63d highs
+RL,Ralph Lauren Corp,Consumer Cyclical,0.19602164529643265,0.39349775784753366,1.2085583,0,,own_sup_rate_756; upside tail vs downside tail (126d); close location in the day's range vs own year
+R,Ryder System Inc,Industrials,0.19602164529643265,0.3475336322869955,1.1708491,0,,days in the trailing-MAR top 20% (1y); sessions since the volume shock; si_dtc_now
+BKH,Black Hills Corp,Utilities,0.19602164529643265,0.3430493273542601,0.08775496,0,,excess vs sector 63d; L1 beta 252d; closeness to 252d high vs own year
+APP,Applovin Corp,Communication Services,0.19602164529643265,0.3374439461883408,2.4190536,0,,report due (volume cadence); industry peers near 63d highs; mkt_vix_pctile
+WLK,Westlake Corp,Basic Materials,0.19602164529643265,0.3901345291479821,0.53743124,0,,upside tail vs downside tail (126d); share of up opening gaps; overnight share of movement
+WDC,Western Digital Corp,Technology,0.19602164529643265,0.3632286995515695,3.3047366,0,,days in the trailing-MAR top 20% (1y); price change 126d vs own year; share of up opening gaps
+BDX,Becton Dickinson & Co,Healthcare,0.19602164529643265,0.3665919282511211,0.27295136,0,,"same window, prior years: risk-adjusted rank; excess vs sector 63d; share of up opening gaps"
+BMRN,Biomarin Pharmaceutical Inc,Healthcare,0.19602164529643265,0.3329596412556054,0.34096557,0,,"same window, prior years: risk-adjusted rank; share price; share of up opening gaps"
+REGN,Regeneron Pharmaceuticals Inc,Healthcare,0.19602164529643265,0.3452914798206278,0.5882884,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); excess vs sector 63d
+RRX,Regal Rexnord Corp,Industrials,0.19602164529643265,0.3486547085201794,2.2014475,0,,report due (volume cadence); volume-weighted shock-day excess; 63d down-day vs up-day volume vs own year
+CUBE,CubeSmart,Real Estate,0.19602164529643265,0.3744394618834081,0.25532168,0,,overnight share of movement; upside tail vs downside tail (126d); mkt_move_pctile
+CTRE,CareTrust REIT Inc,Real Estate,0.19602164529643265,0.35538116591928254,-0.0049034883,0,,L1 beta 252d; own_sup_rate_756; upside tail vs downside tail (126d)
+CSL,Carlisle Companies Inc,Industrials,0.19602164529643265,0.33183856502242154,1.1844456,0,,report due (volume cadence); sessions since 252d high; upside tail vs downside tail (126d)
+CSX,CSX Corp,Industrials,0.19602164529643265,0.39461883408071746,0.44086853,0,,own_stop_rate_252; excess vs sector 126d; industry peers near 63d highs
+CXT,Crane NXT Co,Industrials,0.19602164529643265,0.3721973094170404,1.3705235,0,,dollar volume; mkt_breadth_63h; share of up opening gaps
+KMB,Kimberly-Clark Corp,Consumer Defensive,0.19602164529643265,0.3923766816143498,-0.0074590333,0,,"L1 beta 252d; mkt_move_pctile; same window, prior years: risk-adjusted rank"
+CDW,CDW Corp,Technology,0.19602164529643265,0.34080717488789236,1.0010254,0,,report due (volume cadence); sessions since 252d high; overnight share of movement
+PK,Park Hotels & Resorts Inc,Real Estate,0.19602164529643265,0.3508968609865471,0.73923826,0,,share price; excess vs sector 126d; excess vs sector 63d
+BWA,BorgWarner Inc,Consumer Cyclical,0.19602164529643265,0.3531390134529148,1.2496605,0,,"si_dtc_now; share price; same window, prior years: share superior"
+CARR,Carrier Global Corp,Industrials,0.19602164529643265,0.33856502242152464,1.0685247,0,,report due (volume cadence); sessions since 252d high; si_dtc_now
+AXP,American Express Co,Financial,0.19602164529643265,0.3845291479820628,1.0232748,0,,own_sup_rate_756; upside tail vs downside tail (126d); mkt_breadth_63h
+AVY,Avery Dennison Corp,Consumer Cyclical,0.19602164529643265,0.3890134529147982,0.3014928,0,,"report due (volume cadence); si_dtc_now; same window, prior years: share superior"
+EXR,Extra Space Storage Inc,Real Estate,0.19602164529643265,0.34977578475336324,0.33231387,0,,"upside tail vs downside tail (126d); same window, prior years: risk-adjusted rank; share of up opening gaps"
+LHX,L3Harris Technologies Inc,Industrials,0.19602164529643265,0.3688340807174888,0.30942884,0,,report due (volume cadence); own_sup_rate_756; industry peers near 63d highs
+EGP,Eastgroup Properties Inc,Real Estate,0.19602164529643265,0.3307174887892377,0.19160064,0,,own_stop_rate_252; mkt_move_pctile; price change 126d vs own year
+FIS,Fidelity National Information Services Inc,Technology,0.19602164529643265,0.37668161434977576,0.38182783,0,,report due (volume cadence); sessions since 252d high; overnight share of movement
+TTC,Toro Co,Industrials,0.19602164529643265,0.336322869955157,0.36542818,0,,upside tail vs downside tail (126d); excess vs sector 63d; industry peers near 63d highs
+KHC,Kraft Heinz Co,Consumer Defensive,0.19602164529643265,0.3598654708520179,-0.047665108,0,,L1 beta 252d; mkt_move_pctile; upside tail vs downside tail (126d)
+IDA,Idacorp Inc,Utilities,0.19602164529643265,0.3609865470852018,0.021680443,0,,L1 beta 252d; own_sup_rate_756; own_stop_rate_252
+TT,Trane Technologies plc,Industrials,0.19602164529643265,0.35201793721973096,0.98756254,0,,"upside tail vs downside tail (126d); own_sup_rate_756; same window, prior years: share superior"
+CMI,Cummins Inc,Industrials,0.19602164529643265,0.3755605381165919,1.6245227,0,,own_sup_rate_756; price change 126d vs own year; days in the trailing-MAR top 20% (1y)
+CCL,Carnival Corp Ltd,Consumer Cyclical,0.19602164529643265,0.36210762331838564,1.7749741,0,,si_dtc_now; share price; mkt_vix_pctile
+UNH,Unitedhealth Group Inc,Healthcare,0.19602164529643265,0.3576233183856502,0.4373071,0,,"own_sup_rate_756; same window, prior years: share superior; overnight share of movement"
+DLR,Digital Realty Trust Inc,Real Estate,0.19602164529643265,0.3778026905829596,0.8114385,0,,own_sup_rate_756; upside tail vs downside tail (126d); excess vs sector 63d
+ST,Sensata Technologies Holding Plc,Technology,0.19602164529643265,0.35874439461883406,2.0095465,0,,share price; upside tail vs downside tail (126d); volume 21d vs 252d vs own year
+EXPD,Expeditors International Of Washington Inc,Industrials,0.19602164529643265,0.3419282511210762,0.638864,0,,excess vs sector 126d; days in the trailing-MAR top 20% (1y); overnight share of movement
+DLTR,Dollar Tree Inc,Consumer Defensive,0.19602164529643265,0.38789237668161436,0.708024,0,,excess vs sector 126d; own_sup_rate_756; upside tail vs downside tail (126d)
+DOV,Dover Corp,Industrials,0.19602164529643265,0.3396860986547085,0.9414823,0,,report due (volume cadence); sessions since the volume shock; upside tail vs downside tail (126d)
+LAMR,Lamar Advertising Co,Real Estate,0.19602164529643265,0.3654708520179372,0.37620822,0,,"upside tail vs downside tail (126d); own_stop_rate_252; same window, prior years: share superior"
+BXP,BXP Inc,Real Estate,0.19602164529643265,0.37331838565022424,0.82972896,0,,sessions since 252d high; share price; industry peers near 63d highs
+LUV,Southwest Airlines Co,Industrials,0.19602164529643265,0.3789237668161435,1.5568563,0,,share price; days in the trailing-MAR top 20% (1y); own_sup_rate_756
+SOLV,Solventum Corp,Healthcare,0.19602164529643265,0.38004484304932734,0.6752432,0,,excess vs sector 126d; share of up opening gaps; excess vs sector 63d
+MSA,MSA Safety Inc,Industrials,0.19602164529643265,0.3542600896860987,0.8571599,0,,dollar volume; excess vs sector 63d; upside tail vs downside tail (126d)
+MTN,Vail Resorts Inc,Consumer Cyclical,0.19602164529643265,0.34641255605381166,0.58507,0,,industry peers' 63d return; overnight share of movement; upside tail vs downside tail (126d)
+MTG,MGIC Investment Corp,Financial,0.19602164529643265,0.33408071748878926,0.20288269,0,,own_sup_rate_756; overnight share of movement; share of days at a 63d high
+OGS,ONE Gas Inc,Utilities,0.19602164529643265,0.35650224215246634,-0.27647796,0,,dollar volume; L1 beta 252d; down-capture 252d
+VRTX,Vertex Pharmaceuticals Inc,Healthcare,0.19602164529643265,0.38565022421524664,0.34681007,0,,own_sup_rate_756; upside tail vs downside tail (126d); si_dtc vs own year
+WTFC,Wintrust Financial Corp,Financial,0.19602164529643265,0.3352017937219731,0.78385556,0,,report due (volume cadence); sessions since the volume shock; industry peers near 63d highs
+ARW,Arrow Electronics Inc,Technology,0.19602164529643265,0.39125560538116594,1.3301709,0,,report due (volume cadence); days in the trailing-MAR top 20% (1y); volume 21d vs 252d vs own year
+YUM,Yum Brands Inc,Consumer Cyclical,0.19602164529643265,0.36771300448430494,-0.10453209,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+TSN,Tyson Foods Inc,Consumer Defensive,0.1957150146800223,0.3295964125560538,-0.012316901,0,,L1 beta 252d; own_sup_rate_756; mkt_move_pctile
+TREX,TREX Co Inc,Industrials,0.19464066213226255,0.3015695067264574,1.1152288,0,,"sessions since 252d high; same window, prior years: risk-adjusted rank; mkt_breadth_63h"
+MET,Metlife Inc,Financial,0.19464066213226255,0.31614349775784756,0.6590009,0,,excess vs sector 126d; 126d under-water shallowness; own_stop_rate_252
+UBER,Uber Technologies Inc,Technology,0.19464066213226255,0.32623318385650224,0.7778365,0,,report due (volume cadence); overnight share of movement; sessions since 252d high
+AAON,AAON Inc,Industrials,0.19464066213226255,0.30829596412556054,1.7940136,0,,report due (volume cadence); upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y)
+TEL,TE Connectivity plc,Technology,0.19464066213226255,0.3217488789237668,1.5583681,0,,down-day size vs up-day size; upside tail vs downside tail (126d); industry peers' 5d return
+NDAQ,Nasdaq Inc,Financial,0.19464066213226255,0.30493273542600896,0.71865463,0,,own_sup_rate_756; si_dtc_now; sessions since the volume shock
+NCLH,Norwegian Cruise Line Holdings Ltd,Consumer Cyclical,0.19464066213226255,0.3116591928251121,1.9863291,0,,share price; mkt_vix_pctile; industry peers near 63d highs
+MAT,Mattel Inc,Consumer Cyclical,0.19464066213226255,0.31053811659192826,0.9399094,0,,share price; overnight share of movement; share of up opening gaps
+TNL,Travel+Leisure Co,Consumer Cyclical,0.19464066213226255,0.31390134529147984,0.88098294,0,,own_sup_rate_756; upside tail vs downside tail (126d); sessions since the volume shock
+EVR,Evercore Inc,Financial,0.19464066213226255,0.30269058295964124,1.934232,0,,report due (volume cadence); si_dtc_now; own_sup_rate_756
+ETN,Eaton Corp Plc,Industrials,0.19464066213226255,0.3183856502242152,1.7388725,0,,upside tail vs downside tail (126d); own_sup_rate_756; excess vs sector 63d
+ECL,Ecolab Inc,Basic Materials,0.19464066213226255,0.3273542600896861,0.41413397,0,,own_sup_rate_756; share of up opening gaps; upside tail vs downside tail (126d)
+COLB,Columbia Banking System Inc,Financial,0.19464066213226255,0.3239910313901345,1.0507631,0,,"upside tail vs downside tail (126d); industry peers near 63d highs; same window, prior years: share superior"
+STRL,Sterling Infrastructure Inc,Industrials,0.19464066213226255,0.3038116591928251,3.4300184,0,,sessions since the volume shock; si_dtc_now; up-capture 63d vs own year
+IRT,Independence Realty Trust Inc,Real Estate,0.19464066213226255,0.3071748878923767,0.12893093,0,,share price; mkt_move_pctile; sessions since 252d high
+PLD,Prologis Inc,Real Estate,0.19464066213226255,0.32062780269058294,0.3924335,0,,upside tail vs downside tail (126d); own_stop_rate_252; price change 126d vs own year
+DECK,Deckers Outdoor Corp,Consumer Cyclical,0.19464066213226255,0.3172645739910314,0.82847303,0,,report due (volume cadence); industry peers near 63d highs; own_sup_rate_756
+VIAV,Viavi Solutions Inc,Technology,0.19464066213226255,0.32847533632286996,2.5929928,0,,report due (volume cadence); own_sup_rate_756; share price
+APO,Apollo Global Management Inc,Financial,0.19464066213226255,0.3094170403587444,1.3823949,0,,own_sup_rate_756; sessions since the volume shock; sessions since 252d high
+HQY,Healthequity Inc,Healthcare,0.19464066213226255,0.312780269058296,0.4781765,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); mkt_move_pctile
+FND,Floor & Decor Holdings Inc,Consumer Cyclical,0.19464066213226255,0.2982062780269058,1.4888395,0,,"share price; same window, prior years: risk-adjusted rank; sessions since 252d high"
+HOG,Harley-Davidson Inc,Consumer Cyclical,0.19464066213226255,0.3150224215246637,0.86463916,0,,sessions since 252d high; share price; sessions since the volume shock
+IDXX,Idexx Laboratories Inc,Healthcare,0.19464066213226255,0.3004484304932735,0.88463324,0,,ind_sup_rate_21; overnight share of movement; up on SPY down days
+CYTK,Cytokinetics Inc,Healthcare,0.19464066213226255,0.29932735426008966,0.6767364,0,,share of up opening gaps; upside tail vs downside tail (126d); share price
+ELF,e.l.f. Beauty Inc,Consumer Defensive,0.19464066213226255,0.3195067264573991,1.1371933,0,,report due (volume cadence); excess vs sector 126d; share of up opening gaps
+JLL,Jones Lang Lasalle Inc,Real Estate,0.19464066213226255,0.32286995515695066,1.1510652,0,,si_dtc_now; own_sup_rate_756; mkt_vix_pctile
+LSCC,Lattice Semiconductor Corp,Technology,0.19464066213226255,0.3060538116591928,2.8563406,0,,"63d down-day vs up-day volume vs own year; same window, prior years: share superior; days in the trailing-MAR top 20% (1y)"
+IBKR,Interactive Brokers Group Inc,Financial,0.19464066213226255,0.3251121076233184,2.30382,0,,"mkt_vix_pctile; excess vs sector 126d; same window, prior years: share superior"
+CBSH,Commerce Bancshares Inc,Financial,0.19398355539320297,0.2522421524663677,0.3253865,0,,industry peers near 63d highs; mkt_breadth_63h; 126d under-water shallowness
+UMBF,UMB Financial Corp,Financial,0.19398355539320297,0.28699551569506726,0.8492565,0,,own_sup_rate_756; industry peers near 63d highs; upside tail vs downside tail (126d)
+BR,Broadridge Financial Solutions Inc,Technology,0.19398355539320297,0.2365470852017937,0.12383114,0,,up-capture 252d; mkt_breadth_63h; L1 beta 252d
+AXTA,Axalta Coating Systems Ltd,Basic Materials,0.19398355539320297,0.273542600896861,1.2066635,0,,share price; mkt_breadth_63h; daily range 21d vs 1y
+CAVA,Cava Group Inc,Consumer Cyclical,0.19398355539320297,0.2399103139013453,1.5345352,0,,upside tail vs downside tail (126d); share of up opening gaps; share price
+ZBRA,Zebra Technologies Corp,Technology,0.19398355539320297,0.2679372197309417,1.401514,0,,excess vs sector 126d; excess vs sector 63d; volume 21d vs 252d vs own year
+AEIS,Advanced Energy Industries Inc,Industrials,0.19398355539320297,0.218609865470852,2.6360538,0,,report due (volume cadence); price change 126d vs own year; days in the trailing-MAR top 20% (1y)
+ZTS,Zoetis Inc,Healthcare,0.19398355539320297,0.2881165919282511,0.43995705,0,,report due (volume cadence); sessions since 252d high; upside tail vs downside tail (126d)
+COO,Cooper Companies Inc,Healthcare,0.19398355539320297,0.25,0.5458518,0,,si_dtc_now; sessions since 252d high; volume 21d vs 252d
+TKO,TKO Group Holdings Inc,Communication Services,0.19398355539320297,0.2623318385650224,0.4462887,0,,"own_sup_rate_756; same window, prior years: risk-adjusted rank; up on SPY down days"
+CINF,Cincinnati Financial Corp,Financial,0.19398355539320297,0.27466367713004486,-0.012304112,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+TPL,Texas Pacific Land Corp,Energy,0.19398355539320297,0.242152466367713,0.2585309,0,,upside tail vs downside tail (126d); own_sup_rate_756; overnight share of movement
+CHDN,Churchill Downs Inc,Consumer Cyclical,0.19398355539320297,0.2948430493273543,0.44511843,0,,report due (volume cadence); overnight share of movement; sessions since 252d high
+MCD,McDonald's Corp,Consumer Cyclical,0.19398355539320297,0.2757847533632287,-0.072693445,0,,si_dtc_now; L1 beta 252d; mkt_move_pctile
+PATH,UiPath Inc,Technology,0.19398355539320297,0.2836322869955157,1.7302498,0,,share price; report due (volume cadence); sessions since the volume shock
+OMC,Omnicom Group Inc,Communication Services,0.19398355539320297,0.24327354260089687,0.3042863,0,,share of up opening gaps; upside tail vs downside tail (126d); industry peers near 63d highs
+MAA,Mid-America Apartment Communities Inc,Real Estate,0.19398355539320297,0.25112107623318386,0.001113535,0,,L1 beta 252d; mkt_move_pctile; overnight share of movement
+ONB,Old National Bancorp,Financial,0.19398355539320297,0.2825112107623318,0.8729089,0,,upside tail vs downside tail (126d); industry peers near 63d highs; share price
+UBSI,United Bankshares Inc,Financial,0.19398355539320297,0.2769058295964126,0.50048715,0,,overnight share of movement; industry peers near 63d highs; share price
+TTMI,TTM Technologies Inc,Technology,0.19398355539320297,0.21748878923766815,3.5222702,0,,si_dtc_now; report due (volume cadence); own_sup_rate_756
+TXT,Textron Inc,Industrials,0.19398355539320297,0.28139013452914796,0.6730446,0,,report due (volume cadence); upside tail vs downside tail (126d); industry peers near 63d highs
+MGM,MGM Resorts International,Consumer Cyclical,0.19398355539320297,0.2533632286995516,0.9130753,0,,volume-weighted shock-day excess; industry peers near 63d highs; price change 126d vs own year
+MIDD,Middleby Corp,Industrials,0.19398355539320297,0.23542600896860988,1.0122082,0,,upside tail vs downside tail (126d); share of up opening gaps; bounce off the 21d low
+KRC,Kilroy Realty Corp,Real Estate,0.19398355539320297,0.21973094170403587,0.84316534,0,,excess vs sector 126d; industry peers near 63d highs; share price
+BURL,Burlington Stores Inc,Consumer Cyclical,0.19398355539320297,0.26681614349775784,0.98329926,0,,upside tail vs downside tail (126d); own_sup_rate_756; si_dtc_now
+BC,Brunswick Corp,Consumer Cyclical,0.19398355539320297,0.22982062780269058,1.4115185,0,,share of up opening gaps; mkt_breadth_63h; share price
+BA,Boeing Co,Industrials,0.19398355539320297,0.2219730941704036,1.3523908,0,,si_dtc_now; report due (volume cadence); bounce off the 21d low
+PNR,Pentair plc,Industrials,0.19398355539320297,0.24439461883408073,0.9148496,0,,report due (volume cadence); upside tail vs downside tail (126d); mkt_breadth_63h
+LNTH,Lantheus Holdings Inc,Healthcare,0.19398355539320297,0.226457399103139,0.7684088,0,,own_sup_rate_756; days in the trailing-MAR top 20% (1y); 63d down-day vs up-day volume vs own year
+KKR,KKR & Co Inc,Financial,0.19398355539320297,0.23430493273542602,1.6919243,0,,own_sup_rate_756; mkt_vix_pctile; sessions since 252d high
+HUM,Humana Inc,Healthcare,0.19398355539320297,0.297085201793722,0.8902843,0,,report due (volume cadence); excess vs sector 126d; own_sup_rate_756
+COHR,Coherent Corp,Technology,0.19398355539320297,0.22309417040358745,3.8441727,0,,"si_dtc_now; same window, prior years: median excess; own_sup_rate_756"
+SSB,SouthState Bank Corp,Financial,0.19398355539320297,0.26121076233183854,0.7173828,0,,industry peers near 63d highs; mkt_move_pctile; share of up opening gaps
+SPG,Simon Property Group Inc,Real Estate,0.19398355539320297,0.26345291479820626,0.24765415,0,,"own_stop_rate_252; industry peers near 63d highs; same window, prior years: share superior"
+PLNT,Planet Fitness Inc,Consumer Cyclical,0.19398355539320297,0.265695067264574,0.59926945,0,,"report due (volume cadence); same window, prior years: median excess; overnight share of movement"
+CR,Crane Co,Industrials,0.19398355539320297,0.27802690582959644,1.4594033,0,,"same window, prior years: median excess; same window, prior years: share superior; si_dtc_now"
+CSGP,Costar Group Inc,Real Estate,0.19398355539320297,0.2701793721973094,0.351042,0,,"report due (volume cadence); industry peers near 63d highs; same window, prior years: risk-adjusted rank"
+PRI,Primerica Inc,Financial,0.19398355539320297,0.28475336322869954,0.19377966,0,,mkt_move_pctile; upside tail vs downside tail (126d); share of up opening gaps
+CRUS,Cirrus Logic Inc,Technology,0.19398355539320297,0.23318385650224216,1.062453,0,,report due (volume cadence); excess return since the shock day; price change 126d vs own year
+CPAY,Corpay Inc,Technology,0.19398355539320297,0.2556053811659193,0.8376811,0,,own_sup_rate_756; share of up opening gaps; si_dtc vs own year
+FFIN,First Financial Bankshares Inc,Financial,0.19398355539320297,0.29596412556053814,0.492013,0,,dollar volume; sessions since 252d high; mkt_breadth_63h
+FAF,First American Financial Corp,Financial,0.19398355539320297,0.2802690582959641,0.5889519,0,,own_sup_rate_756; overnight share of movement; industry peers near 63d highs
+EXE,Expand Energy Corp,Energy,0.19398355539320297,0.23766816143497757,-0.018494282,0,,L1 beta 252d; mkt_move_pctile; own_sup_rate_756
+EL,Estee Lauder Cos. Inc,Consumer Defensive,0.19398355539320297,0.26905829596412556,1.3285918,0,,excess vs sector 126d; excess vs sector 63d; days in the trailing-MAR top 20% (1y)
+SMCI,Super Micro Computer Inc,Technology,0.19398355539320297,0.23094170403587444,3.1712608,0,,report due (volume cadence); closeness to 252d high vs own year; share price
+SMTC,Semtech Corp,Technology,0.19398355539320297,0.2858744394618834,3.398542,0,,excess vs sector 126d; 126d drawdown shallowness; own_sup_rate_756
+SF,Stifel Financial Corp,Financial,0.19398355539320297,0.24663677130044842,1.1561444,0,,own_sup_rate_756; upside tail vs downside tail (126d); mkt_breadth_63h
+SGI,Somnigroup International Inc,Consumer Cyclical,0.19398355539320297,0.2645739910313901,1.3158232,0,,report due (volume cadence); share price; industry peers near 63d highs
+GGG,Graco Inc,Industrials,0.19398355539320297,0.25448430493273544,0.55462736,0,,report due (volume cadence); excess vs sector 63d; upside tail vs downside tail (126d)
+GE,GE Aerospace,Industrials,0.19398355539320297,0.27242152466367714,1.2040044,0,,upside tail vs downside tail (126d); own_sup_rate_756; industry peers near 63d highs
+HON,Honeywell International Inc,Industrials,0.19398355539320297,0.257847533632287,0.66535485,0,,"share of up opening gaps; upside tail vs downside tail (126d); same window, prior years: share superior"
+HOMB,Home Bancshares Inc,Financial,0.19398355539320297,0.24775784753363228,0.41439274,0,,share price; industry peers near 63d highs; upside tail vs downside tail (126d)
+HOOD,Robinhood Markets Inc,Financial,0.19398355539320297,0.22533632286995517,3.6242523,0,,si_dtc_now; mkt_vix_pctile; excess vs sector 126d
+FRT,Federal Realty Investment Trust,Real Estate,0.19398355539320297,0.24887892376681614,0.16532849,0,,report due (volume cadence); mkt_move_pctile; industry peers near 63d highs
+SBUX,Starbucks Corp,Consumer Cyclical,0.19398355539320297,0.24103139013452915,0.44929266,0,,report due (volume cadence); industry peers near 63d highs; upside tail vs downside tail (126d)
+FN,Fabrinet,Technology,0.19398355539320297,0.23878923766816143,3.064858,0,,si_dtc_now; own_sup_rate_756; upside tail vs downside tail (126d)
+IDCC,Interdigital Inc,Technology,0.19398355539320297,0.2914798206278027,1.4448088,1,126d drawdown shallowness bottom 20% AND 63d under-water shallowness top 20% AND up-capture 252d top 20%,excess vs sector 63d; upside tail vs downside tail (126d); si_dtc
+RBA,RB Global Inc,Industrials,0.19398355539320297,0.22869955156950672,1.0583109,0,,own_sup_rate_756; volume-weighted shock-day excess; share of up opening gaps
+ABNB,Airbnb Inc,Consumer Cyclical,0.19398355539320297,0.2600896860986547,1.1387036,0,,excess vs sector 126d; share of up opening gaps; days in the trailing-MAR top 20% (1y)
+IFF,International Flavors & Fragrances Inc,Basic Materials,0.19398355539320297,0.22085201793721973,0.6257119,0,,"excess vs sector 126d; excess vs sector 63d; same window, prior years: share superior"
+VNT,Vontier Corp,Technology,0.19398355539320297,0.289237668161435,1.1322455,0,,report due (volume cadence); mkt_breadth_63h; share price
+VVV,Valvoline Inc,Consumer Cyclical,0.19398355539320297,0.2589686098654709,0.71227294,0,,sessions since 252d high; industry peers near 63d highs; mkt_breadth_63h
+ARES,Ares Management Corp,Financial,0.19398355539320297,0.22757847533632286,1.8447713,0,,sessions since 252d high; own_sup_rate_756; mkt_vix_pctile
+XPO,XPO Inc,Industrials,0.19398355539320297,0.2937219730941704,1.2401665,0,,industry peers' 63d return; industry peers near 63d highs; price change 126d vs own year
+AVAV,AeroVironment Inc,Industrials,0.19398355539320297,0.25672645739910316,1.9512522,0,,own_sup_rate_756; industry peers near 63d highs; upside tail vs downside tail (126d)
+ANET,Arista Networks Inc,Technology,0.19398355539320297,0.27914798206278024,2.105191,0,,"same window, prior years: median excess; own_sup_rate_756; same window, prior years: risk-adjusted rank"
+ODFL,Old Dominion Freight Line Inc,Industrials,0.19398355539320297,0.2713004484304933,1.1087193,0,,"industry peers near 63d highs; upside tail vs downside tail (126d); same window, prior years: share superior"
+NOVT,Novanta Inc,Technology,0.19398355539320297,0.29035874439461884,1.9426107,0,,si_dtc vs own year; si_dtc; mkt_breadth_63h
+NRG,NRG Energy Inc,Utilities,0.19398355539320297,0.2242152466367713,1.6470637,0,,si_dtc_now; volume-weighted shock-day excess; own_sup_rate_756
+NVST,Envista Holdings Corp,Healthcare,0.19398355539320297,0.29260089686098656,1.0196875,0,,report due (volume cadence); share price; share of up opening gaps
+NXPI,NXP Semiconductors NV,Technology,0.19398355539320297,0.24551569506726456,1.5218618,0,,si_dtc_now; volume 21d vs 252d vs own year; industry peers' 5d return
+ALGN,Align Technology Inc,Healthcare,0.19398355539320297,0.2320627802690583,1.3000817,0,,sessions since 252d high; share of up opening gaps; mkt_breadth_63h
+GS,Goldman Sachs Group Inc,Financial,0.19392243102758897,0.2163677130044843,1.859284,0,,mkt_vix_pctile; own_sup_rate_756; industry peers near 63d highs
+AN,Autonation Inc,Consumer Cyclical,0.19337996439152033,0.21524663677130046,0.5656997,0,,report due (volume cadence); overnight share of movement; volume 21d vs 252d
+ALB,Albemarle Corp,Basic Materials,0.19300358931399467,0.15134529147982062,1.8466685,0,,"days in the trailing-MAR top 20% (1y); daily range 21d vs 1y; same window, prior years: share superior"
+WAL,Western Alliance Bancorp,Financial,0.19300358931399467,0.2062780269058296,1.3519747,0,,industry peers near 63d highs; upside tail vs downside tail (126d); mkt_move_pctile
+AMCR,Amcor Plc,Consumer Cyclical,0.19300358931399467,0.2141255605381166,0.7705477,0,,share price; industry peers near 63d highs; mkt_breadth_63h
+WDAY,Workday Inc,Technology,0.19300358931399467,0.19394618834080718,0.5836077,0,,excess vs sector 126d; sessions since 252d high; share of up opening gaps
+WHR,Whirlpool Corp,Consumer Cyclical,0.19300358931399467,0.13901345291479822,0.90075755,0,,report due (volume cadence); industry peers near 63d highs; volume 21d vs 252d
+WYNN,Wynn Resorts Ltd,Consumer Cyclical,0.19300358931399467,0.13228699551569506,0.64772505,0,,industry peers near 63d highs; excess return since the shock day; volume 21d vs 252d
+ALV,Autoliv Inc,Consumer Cyclical,0.19300358931399467,0.17152466367713004,1.262835,0,,report due (volume cadence); upside tail vs downside tail (126d); industry peers near 63d highs
+MOS,Mosaic Company,Basic Materials,0.19300358931399467,0.16928251121076232,0.51946974,4,price change 63d bottom 20% AND rising 21-day pairs (63d) top 20% AND 21d up-volume share bottom 20%,share price; overnight share of movement; industry peers near 63d highs
+MSM,MSC Industrial Direct Co Inc,Industrials,0.19300358931399467,0.20964125560538116,0.6990443,0,,excess vs sector 126d; 126d under-water shallowness; days in the trailing-MAR top 20% (1y)
+AMP,Ameriprise Financial Inc,Financial,0.19300358931399467,0.16031390134529147,0.9458143,0,,overnight share of movement; upside tail vs downside tail (126d); share of up opening gaps
+MSCI,MSCI Inc,Financial,0.19300358931399467,0.15807174887892378,0.36789712,0,,report due (volume cadence); si_dtc_now; sessions since the volume shock
+NXST,Nexstar Media Group Inc,Communication Services,0.19300358931399467,0.1591928251121076,0.5954239,0,,overnight share of movement; industry peers near 63d highs; share of up opening gaps
+NXT,Nextpower Inc,Technology,0.19300358931399467,0.14798206278026907,2.81103,0,,"same window, prior years: median excess; report due (volume cadence); days in the trailing-MAR top 20% (1y)"
+NTAP,Netapp Inc,Technology,0.19300358931399467,0.13789237668161436,1.4033942,0,,excess vs sector 126d; excess vs sector 63d; own_sup_rate_756
+AMH,American Homes 4 Rent,Real Estate,0.19300358931399467,0.2085201793721973,-0.02421737,0,,L1 beta 252d; mkt_move_pctile; overnight share of movement
+BLK,Blackrock Inc,Financial,0.19300358931399467,0.20515695067264575,1.2960223,0,,"down-day size vs up-day size; same window, prior years: share superior; share of up opening gaps"
+INCY,Incyte Corp,Healthcare,0.19300358931399467,0.17600896860986548,0.510025,0,,own_sup_rate_756; overnight share of movement; share of up opening gaps
+IR,Ingersoll Rand Inc,Industrials,0.19300358931399467,0.15358744394618834,1.2528906,0,,"mkt_breadth_63h; same window, prior years: share superior; daily range 21d vs 1y"
+ADI,Analog Devices Inc,Technology,0.19300358931399467,0.1311659192825112,1.5561161,0,,days in the trailing-MAR top 20% (1y); volume 21d vs 252d vs own year; industry peers' 5d return
+REG,Regency Centers Corp,Real Estate,0.19300358931399467,0.17937219730941703,-0.04086171,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+REXR,Rexford Industrial Realty Inc,Real Estate,0.19300358931399467,0.18161434977578475,0.45047146,0,,overnight share of movement; excess vs sector 63d; mkt_breadth_63h
+PVH,PVH Corp,Consumer Cyclical,0.19300358931399467,0.15695067264573992,1.087899,0,,upside tail vs downside tail (126d); own_sup_rate_756; industry peers near 63d highs
+INVH,Invitation Homes Inc,Real Estate,0.19300358931399467,0.19170403587443946,0.078234866,0,,mkt_move_pctile; sessions since 252d high; L1 beta 252d
+VST,Vistra Corp,Utilities,0.19300358931399467,0.18834080717488788,1.8064668,0,,si_dtc_now; up on SPY down days; up-capture 63d vs own year
+VMI,Valmont Industries Inc,Industrials,0.19300358931399467,0.1647982062780269,1.2483684,0,,upside tail vs downside tail (126d); si_dtc_now; excess vs sector 126d
+AVT,Avnet Inc,Technology,0.19300358931399467,0.1681614349775785,1.3186464,0,,days in the trailing-MAR top 20% (1y); overnight share of movement; worst day vs typical move
+APTV,Aptiv Plc,Consumer Cyclical,0.19300358931399467,0.1446188340807175,1.297675,0,,"industry peers near 63d highs; upside tail vs downside tail (126d); same window, prior years: share superior"
+VICR,Vicor Corp,Technology,0.19300358931399467,0.18946188340807174,3.1649792,0,,industry peers' 5d return; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+TRMB,Trimble Inc,Technology,0.19300358931399467,0.16591928251121077,1.2914476,0,,mkt_breadth_63h; industry peers' 5d return; share price
+MAS,Masco Corp,Industrials,0.19300358931399467,0.16367713004484305,0.9740549,0,,"same window, prior years: risk-adjusted rank; upside tail vs downside tail (126d); close location in the day's range vs own year"
+MCHP,Microchip Technology Inc,Technology,0.19300358931399467,0.1804932735426009,2.135422,0,,days in the trailing-MAR top 20% (1y); industry peers' 5d return; 63d down-day vs up-day volume vs own year
+IBOC,International Bancshares Corp,Financial,0.19300358931399467,0.13565022421524664,0.45688334,0,,dollar volume; mkt_move_pctile; industry peers near 63d highs
+CSCO,Cisco Systems Inc,Technology,0.19300358931399467,0.18721973094170405,1.2599242,0,,days in the trailing-MAR top 20% (1y); own_sup_rate_756; volume 21d vs 252d vs own year
+TECH,Bio-Techne Corp,Healthcare,0.19300358931399467,0.14013452914798205,0.92775875,0,,report due (volume cadence); si_dtc_now; days in the trailing-MAR top 20% (1y)
+MTSI,MACOM Technology Solutions Holdings Inc,Technology,0.19300358931399467,0.1961883408071749,2.3263676,0,,own_sup_rate_756; upside tail vs downside tail (126d); volume 21d vs 252d vs own year
+CIEN,CIENA Corp,Technology,0.19300358931399467,0.1547085201793722,3.0293107,0,,si_dtc_now; own_sup_rate_756; daily range 21d vs 1y
+CGNX,Cognex Corp,Technology,0.19300358931399467,0.1367713004484305,2.0167773,0,,share price; 63d down-day vs up-day volume vs own year; accumulation minus distribution days vs own year
+CG,Carlyle Group Inc,Financial,0.19300358931399467,0.1827354260089686,1.808739,0,,own_sup_rate_756; share price; mkt_vix_pctile
+KTOS,Kratos Defense & Security Solutions Inc,Industrials,0.19300358931399467,0.21300448430493274,2.195567,0,,report due (volume cadence); industry peers near 63d highs; share price
+PHM,PulteGroup Inc,Consumer Cyclical,0.19300358931399467,0.1625560538116592,0.86502385,0,,industry peers near 63d highs; share of up opening gaps; upside tail vs downside tail (126d)
+PFG,Principal Financial Group Inc,Financial,0.19300358931399467,0.16704035874439463,0.74342823,0,,own_stop_rate_252; 126d under-water shallowness; share of up opening gaps
+PPG,PPG Industries Inc,Basic Materials,0.19300358931399467,0.1984304932735426,0.95882946,0,,"upside tail vs downside tail (126d); same window, prior years: share superior; daily range 21d vs 1y"
+KIM,Kimco Realty Corp,Real Estate,0.19300358931399467,0.21188340807174888,0.078757174,0,,mkt_move_pctile; industry peers near 63d highs; own_stop_rate_252
+LEN,Lennar Corp,Consumer Cyclical,0.19300358931399467,0.14573991031390135,0.8136302,0,,industry peers near 63d highs; volume 21d vs 252d; sessions since 252d high
+LEA,Lear Corp,Consumer Cyclical,0.19300358931399467,0.20179372197309417,1.1710074,0,,industry peers near 63d highs; excess-path efficiency vs sector 252d; share of up opening gaps
+L,Loews Corp,Financial,0.19300358931399467,0.1491031390134529,-0.041080065,0,,mkt_move_pctile; L1 beta 252d; own_stop_rate_252
+DELL,Dell Technologies Inc,Technology,0.19300358931399467,0.2040358744394619,2.5332587,0,,si_dtc_now; excess vs sector 126d; own_sup_rate_756
+SSD,Simpson Manufacturing Co Inc,Basic Materials,0.19300358931399467,0.17376681614349776,0.7961255,0,,upside tail vs downside tail (126d); industry peers near 63d highs; daily range 21d vs 1y
+SPGI,S&P Global Inc,Financial,0.19300358931399467,0.19506726457399104,0.39885253,0,,upside tail vs downside tail (126d); share of up opening gaps; mkt_breadth_63h
+CW,Curtiss-Wright Corp,Industrials,0.19300358931399467,0.2006726457399103,1.4798836,0,,"si_dtc_now; own_sup_rate_756; same window, prior years: share superior"
+STWD,Starwood Property Trust Inc,Real Estate,0.19300358931399467,0.16143497757847533,0.42187026,0,,share price; overnight share of movement; industry peers near 63d highs
+DBX,Dropbox Inc,Technology,0.19300358931399467,0.19955156950672645,0.53688025,0,,own_sup_rate_756; share price; share of up opening gaps
+EEFT,Euronet Worldwide Inc,Technology,0.19300358931399467,0.19282511210762332,0.61884373,0,,mkt_breadth_63h; closeness to 252d high vs own year; share of up opening gaps
+FNF,Fidelity National Financial Inc,Financial,0.19300358931399467,0.18497757847533633,0.45123118,0,,own_sup_rate_756; share of up opening gaps; volume 21d vs 252d
+FLG,Flagstar Bank NA,Financial,0.19300358931399467,0.15582959641255606,0.7993276,0,,share price; industry peers near 63d highs; excess return since the shock day
+SITM,SiTime Corp,Technology,0.19300358931399467,0.17713004484304934,2.7097945,0,,"report due (volume cadence); same window, prior years: median excess; own_sup_rate_756"
+EMR,Emerson Electric Co,Industrials,0.19300358931399467,0.13340807174887892,1.586758,0,,excess vs sector 63d; own_sup_rate_756; upside tail vs downside tail (126d)
+RYN,Rayonier Inc,Real Estate,0.19300358931399467,0.20291479820627803,0.40706703,0,,report due (volume cadence); share price; upside tail vs downside tail (126d)
+SBAC,SBA Communications Corp,Real Estate,0.19300358931399467,0.1726457399103139,0.24702035,0,,overnight share of movement; sessions since 252d high; mkt_breadth_63h
+SARO,StandardAero Inc,Industrials,0.19300358931399467,0.1468609865470852,1.4068011,0,,industry peers near 63d highs; share price; mkt_vix_pctile
+GD,General Dynamics Corp,Industrials,0.19300358931399467,0.1412556053811659,0.41405332,0,,si_dtc_now; industry peers near 63d highs; upside tail vs downside tail (126d)
+HIMS,Hims & Hers Health Inc,Healthcare,0.19300358931399467,0.17825112107623317,2.9466553,2,gap on the volume-shock day bottom 20% AND excess return on the volume-shock day top 20% AND upside tail vs downside tail (126d) top 20%,report due (volume cadence); share price; excess vs sector 126d
+HD,Home Depot Inc,Consumer Cyclical,0.19300358931399467,0.19730941704035873,0.51704544,0,,si_dtc_now; sessions since 252d high; upside tail vs downside tail (126d)
+CFR,Cullen Frost Bankers Inc,Financial,0.19300358931399467,0.18385650224215247,0.34340158,0,,volume 21d vs 252d vs own year; ind_sup_rate_21; upside tail vs downside tail (126d)
+CBRE,CBRE Group Inc,Real Estate,0.19300358931399467,0.1905829596412556,1.0876333,0,,si_dtc_now; industry peers near 63d highs; upside tail vs downside tail (126d)
+AYI,Acuity Inc,Industrials,0.19300358931399467,0.14237668161434977,1.5706397,0,,si_dtc_now; upside tail vs downside tail (126d); industry peers near 63d highs
+BCO,Brink's Co,Industrials,0.19300358931399467,0.14349775784753363,0.80581725,0,,upside tail vs downside tail (126d); industry peers near 63d highs; mkt_breadth_63h
+ADSK,Autodesk Inc,Technology,0.19300358931399467,0.17488789237668162,0.667572,0,,share of up opening gaps; mkt_breadth_63h; upside tail vs downside tail (126d)
+ULTA,Ulta Beauty Inc,Consumer Cyclical,0.19300358931399467,0.21076233183856502,0.64806247,0,,down-day size vs up-day size; excess vs sector 63d; own_sup_rate_756
+ORA,Ormat Technologies Inc,Utilities,0.19300358931399467,0.13452914798206278,0.94188535,0,,own_sup_rate_756; 63d down-day vs up-day volume vs own year; bounce off the 21d low
+CMC,Commercial Metals Co,Industrials,0.19300358931399467,0.17040358744394618,1.5615592,0,,upside tail vs downside tail (126d); industry peers near 63d highs; excess vs sector 63d
+CAR,Avis Budget Group Inc,Industrials,0.19300358931399467,0.15022421524663676,1.3106736,0,,industry peers near 63d highs; overnight share of movement; share of up opening gaps
+AGCO,AGCO Corp,Industrials,0.19300358931399467,0.1860986547085202,0.7399342,0,,industry peers' 5d return; overnight share of movement; upside tail vs downside tail (126d)
+ULS,UL Solutions Inc,Industrials,0.19300358931399467,0.15246636771300448,0.5890044,0,,days in the trailing-MAR top 20% (1y); overnight share of movement; industry peers near 63d highs
+UFPI,UFP Industries Inc,Basic Materials,0.19300358931399467,0.20739910313901344,0.5834162,0,,dollar volume; mkt_breadth_63h; mkt_breadth_up21
+RCL,Royal Caribbean Group,Consumer Cyclical,0.19160197600564574,0.1210762331838565,1.4183242,0,,own_sup_rate_756; industry peers near 63d highs; mkt_vix_pctile
+ARWR,Arrowhead Pharmaceuticals Inc,Healthcare,0.19160197600564574,0.12780269058295965,1.5255129,0,,"same window, prior years: median excess; share price; days in the trailing-MAR top 20% (1y)"
+O,Realty Income Corp,Real Estate,0.19160197600564574,0.11771300448430494,6.533617e-05,0,,L1 beta 252d; mkt_move_pctile; industry peers near 63d highs
+ONTO,Onto Innovation Inc,Technology,0.19160197600564574,0.12556053811659193,3.229232,0,,industry peers' 5d return; own_sup_rate_756; industry peers near 63d highs
+CRH,CRH Plc,Basic Materials,0.19160197600564574,0.12331838565022421,1.165609,0,,own_sup_rate_756; mkt_vix_pctile; industry peers near 63d highs
+LPX,Louisiana-Pacific Corp,Industrials,0.19160197600564574,0.11883408071748879,0.9975899,0,,"report due (volume cadence); sessions since 252d high; same window, prior years: risk-adjusted rank"
+FR,First Industrial Realty Trust Inc,Real Estate,0.19160197600564574,0.1289237668161435,0.39374432,0,,own_stop_rate_252; share of up opening gaps; upside tail vs downside tail (126d)
+SMG,Scotts Miracle-Gro Company,Basic Materials,0.19160197600564574,0.12219730941704036,0.7710172,0,,mkt_breadth_63h; industry peers near 63d highs; share of up opening gaps
+CPT,Camden Property Trust,Real Estate,0.19160197600564574,0.11995515695067265,0.03998641,0,,L1 beta 252d; mkt_move_pctile; overnight share of movement
+PSN,Parsons Corp,Technology,0.19160197600564574,0.12443946188340807,1.218482,0,,share price; own_sup_rate_756; mkt_breadth_63h
+ADC,Agree Realty Corp,Real Estate,0.19160197600564574,0.1266816143497758,-0.16363482,0,,L1 beta 252d; mkt_move_pctile; down-capture 252d
+AVGO,Broadcom Inc,Technology,0.19160197600564574,0.13004484304932734,2.1703417,0,,dollar volume; own_sup_rate_756; si_dtc_now
+BHF,Brighthouse Financial Inc,Financial,0.18910022557019132,0.08295964125560538,0.20931229,0,,upside tail vs downside tail (126d); worst day vs typical move; overnight share of movement
+OC,Owens Corning,Industrials,0.18910022557019132,0.06390134529147982,1.3091967,0,,"same window, prior years: risk-adjusted rank; si_dtc_now; mkt_breadth_63h"
+AOS,A.O. Smith Corp,Industrials,0.18910022557019132,0.033632286995515695,0.72658217,0,,report due (volume cadence); upside tail vs downside tail (126d); mkt_breadth_63h
+WY,Weyerhaeuser Co,Real Estate,0.18910022557019132,0.06053811659192825,0.28166372,0,,overnight share of movement; sessions since 252d high; mkt_breadth_63h
+VAL,Valaris Ltd,Energy,0.18910022557019132,0.09080717488789238,0.6598411,0,,upside tail vs downside tail (126d); days in the trailing-MAR top 20% (1y); up on SPY down days
+WMS,Advanced Drainage Systems Inc,Industrials,0.18910022557019132,0.0773542600896861,1.3651994,0,,report due (volume cadence); bounce off the 21d low; 63d down-day vs up-day volume vs own year
+ALGM,Allegro Microsystems Inc,Technology,0.18910022557019132,0.03587443946188341,2.847885,0,,report due (volume cadence); share price; industry peers' 5d return
+WH,Wyndham Hotels & Resorts Inc,Consumer Cyclical,0.18910022557019132,0.04147982062780269,0.46664968,0,,upside tail vs downside tail (126d); mkt_breadth_63h; sessions since 252d high
+OZK,Bank OZK,Financial,0.18910022557019132,0.1109865470852018,0.7297608,0,,share of up opening gaps; upside tail vs downside tail (126d); overnight share of movement
+BSY,Bentley Systems Inc,Technology,0.18910022557019132,0.030269058295964126,0.7131449,0,,volume 21d vs 252d vs own year; mkt_breadth_63h; share price
+OLED,Universal Display Corp,Technology,0.18910022557019132,0.042600896860986545,1.5425476,0,,report due (volume cadence); mkt_breadth_63h; overnight share of movement
+ORCL,Oracle Corp,Technology,0.18910022557019132,0.08183856502242152,2.3010972,0,,si_dtc_now; daily range 21d vs 1y; own_sup_rate_756
+NDSN,Nordson Corp,Industrials,0.18910022557019132,0.02466367713004484,0.77795124,0,,own_stop_rate_252; excess vs sector 63d; excess vs sector 126d
+MTZ,Mastec Inc,Industrials,0.18910022557019132,0.02914798206278027,1.7472147,0,,volume-weighted shock-day excess; own_sup_rate_756; price change 126d vs own year
+GPN,Global Payments Inc,Technology,0.18910022557019132,0.07623318385650224,1.1172382,0,,mkt_breadth_63h; share of up opening gaps; typical daily move 252d
+RJF,Raymond James Financial Inc,Financial,0.18910022557019132,0.10426008968609865,0.8885582,0,,upside tail vs downside tail (126d); mkt_vix_pctile; volume 21d vs 252d vs own year
+ADBE,Adobe Inc,Technology,0.18910022557019132,0.026905829596412557,0.4940855,0,,sessions since 252d high; closeness to 252d high vs own year; share of up opening gaps
+YETI,YETI Holdings Inc,Consumer Cyclical,0.18910022557019132,0.043721973094170405,1.231334,0,,share price; mkt_breadth_63h; typical daily move 252d
+ASB,Associated Banc-Corp,Financial,0.18910022557019132,0.07174887892376682,0.8253096,0,,industry peers near 63d highs; share price; ind_sup_rate_21
+XYL,Xylem Inc,Industrials,0.18910022557019132,0.04596412556053812,0.9439356,0,,upside tail vs downside tail (126d); sessions since 252d high; excess return since the shock day
+ACM,AECOM,Industrials,0.18910022557019132,0.03923766816143498,1.1343977,0,,overnight share of movement; share price; mkt_breadth_63h
+PTC,PTC Inc,Technology,0.18910022557019132,0.032511210762331835,0.78754896,0,,report due (volume cadence); gap on the volume-shock day; share of up opening gaps
+INTU,Intuit Inc,Technology,0.18910022557019132,0.10986547085201794,0.349991,0,,"si_dtc_now; typical daily move 252d; same window, prior years: share superior"
+GXO,GXO Logistics Inc,Industrials,0.18910022557019132,0.07847533632286996,1.5535184,0,,report due (volume cadence); mkt_breadth_63h; share price
+MRNA,Moderna Inc,Healthcare,0.18910022557019132,0.07399103139013453,2.7796226,0,,gap on the volume-shock day; report due (volume cadence); excess vs sector 126d
+NKE,Nike Inc,Consumer Cyclical,0.18910022557019132,0.04932735426008968,0.44628653,0,,si_dtc_now; sessions since 252d high; industry peers near 63d highs
+WSM,Williams-Sonoma Inc,Consumer Cyclical,0.18910022557019132,0.03811659192825112,1.280418,0,,excess vs sector 126d; own_sup_rate_756; excess vs sector 63d
+ALLY,Ally Financial Inc,Financial,0.18910022557019132,0.09977578475336323,1.2324913,0,,upside tail vs downside tail (126d); share of up opening gaps; sessions since the volume shock
+WING,Wingstop Inc,Consumer Cyclical,0.18910022557019132,0.09417040358744394,1.377447,0,,up on SPY down days; sessions since 252d high; overnight share of movement
+DCI,Donaldson Co Inc,Industrials,0.18910022557019132,0.08968609865470852,0.9847664,0,,"upside tail vs downside tail (126d); same window, prior years: share superior; mkt_breadth_63h"
+SNPS,Synopsys Inc,Technology,0.18910022557019132,0.08071748878923767,1.891959,0,,report due (volume cadence); closeness to 252d high vs own year; excess vs sector 63d
+SON,Sonoco Products Co,Consumer Cyclical,0.18910022557019132,0.0952914798206278,0.50858456,0,,upside tail vs downside tail (126d); industry peers near 63d highs; share price
+LOW,Lowe's Cos. Inc,Consumer Cyclical,0.18910022557019132,0.1132286995515695,0.43013966,0,,industry peers near 63d highs; upside tail vs downside tail (126d); excess return since the shock day
+LNT,Alliant Energy Corp,Utilities,0.18910022557019132,0.08408071748878924,-0.043566447,0,,L1 beta 252d; own_sup_rate_756; own_stop_rate_252
+DKS,Dicks Sporting Goods Inc,Consumer Cyclical,0.18910022557019132,0.04708520179372197,0.897922,0,,own_sup_rate_756; share of up opening gaps; volume 21d vs 252d
+CNM,Core & Main Inc,Industrials,0.18910022557019132,0.10201793721973094,1.1993855,0,,mkt_breadth_63h; own_sup_rate_756; share price
+SNA,Snap-on Inc,Industrials,0.18910022557019132,0.0515695067264574,0.590139,0,,si_dtc vs own year; own_stop_rate_252; upside tail vs downside tail (126d)
+HPE,Hewlett Packard Enterprise Co,Technology,0.18910022557019132,0.03699551569506727,2.3012707,1,gap on the volume-shock day bottom 20% AND excess return on the volume-shock day top 20% AND upside tail vs downside tail (126d) top 20%,excess vs sector 126d; own_sup_rate_756; excess vs sector 63d
+FSLR,First Solar Inc,Technology,0.18910022557019132,0.05717488789237668,2.1018007,0,,report due (volume cadence); overnight share of movement; bounce off the 21d low
+HGV,Hilton Grand Vacations Inc,Consumer Cyclical,0.18910022557019132,0.06614349775784753,1.1545348,0,,"report due (volume cadence); industry peers near 63d highs; same window, prior years: share superior"
+BDC,Belden Inc,Technology,0.18910022557019132,0.06278026905829596,1.5899743,0,,upside tail vs downside tail (126d); down-day size vs up-day size; si_dtc
+BX,Blackstone Inc,Financial,0.18910022557019132,0.05829596412556054,1.483467,0,,sessions since 252d high; mkt_vix_pctile; upside tail vs downside tail (126d)
+TRU,TransUnion,Financial,0.18910022557019132,0.0930493273542601,1.03596,0,,"sessions since 252d high; same window, prior years: risk-adjusted rank; upside tail vs downside tail (126d)"
+UAL,United Airlines Holdings Inc,Industrials,0.18910022557019132,0.08632286995515695,2.1780875,0,,"mkt_vix_pctile; own_sup_rate_756; same window, prior years: median excess"
+TROW,T. Rowe Price Group Inc,Financial,0.18910022557019132,0.052690582959641255,1.0067444,0,,report due (volume cadence); mkt_breadth_63h; volume 21d vs 252d vs own year
+KRG,Kite Realty Group Trust,Real Estate,0.18910022557019132,0.11210762331838565,0.07785502,0,,upside tail vs downside tail (126d); industry peers near 63d highs; mkt_move_pctile
+CHTR,Charter Communications Inc,Communication Services,0.18910022557019132,0.06502242152466367,0.2710923,0,,industry peers' 5d return; report due (volume cadence); industry peers near 63d highs
+OLLI,Ollies Bargain Outlet Holdings Inc,Consumer Defensive,0.18910022557019132,0.09641255605381166,0.95138663,0,,upside tail vs downside tail (126d); excess-path efficiency vs sector 63d; excess vs sector 63d
+LAD,Lithia Motors Inc,Consumer Cyclical,0.18910022557019132,0.05044843049327354,0.67693174,0,,industry peers near 63d highs; overnight share of movement; upside tail vs downside tail (126d)
+SNX,TD Synnex Corp,Technology,0.18910022557019132,0.06726457399103139,1.5863814,0,,si_dtc_now; own_sup_rate_756; days in the trailing-MAR top 20% (1y)
+KD,Kyndryl Holdings Inc,Technology,0.18910022557019132,0.08856502242152467,0.6866992,0,,share price; report due (volume cadence); dollar volume
+KBH,KB Home,Consumer Cyclical,0.18910022557019132,0.10874439461883408,0.72355,0,,industry peers near 63d highs; mkt_breadth_63h; sessions since 252d high
+PII,Polaris Inc,Consumer Cyclical,0.18910022557019132,0.034753363228699555,1.2199252,0,,report due (volume cadence); industry peers' 5d return; share price
+PRU,Prudential Wealth Advisors,Financial,0.18910022557019132,0.061659192825112105,0.754061,0,,days in the trailing-MAR top 20% (1y); close location in the day's range vs own year; si_dtc vs own year
+JBL,Jabil Inc,Technology,0.18910022557019132,0.05493273542600897,2.212202,0,,si_dtc_now; own_sup_rate_756; industry peers' 5d return
+ITW,Illinois Tool Works Inc,Industrials,0.18910022557019132,0.11434977578475336,0.50081533,0,,report due (volume cadence); upside tail vs downside tail (126d); mkt_breadth_63h
+STAG,STAG Industrial Inc,Real Estate,0.18910022557019132,0.09865470852017937,0.32621083,0,,upside tail vs downside tail (126d); overnight share of movement; own_stop_rate_252
+GLPI,Gaming and Leisure Properties Inc,Real Estate,0.18910022557019132,0.10762331838565023,0.059387255,0,,mkt_move_pctile; mkt_breadth_63h; L1 beta 252d
+GNRC,Generac Holdings Inc,Industrials,0.18910022557019132,0.1031390134529148,2.0078335,0,,report due (volume cadence); si_dtc_now; days in the trailing-MAR top 20% (1y)
+RPM,RPM International Inc,Basic Materials,0.18910022557019132,0.10538116591928251,0.7782175,0,,sessions since 252d high; share of up opening gaps; mkt_breadth_63h
+GEN,Gen Digital Inc,Technology,0.18910022557019132,0.07511210762331838,1.0929111,0,,share price; overnight share of movement; volume 21d vs 252d
+H,Hyatt Hotels Corp,Consumer Cyclical,0.18910022557019132,0.05605381165919283,0.9934579,0,,"upside tail vs downside tail (126d); same window, prior years: median excess; mkt_breadth_63h"
+FICO,Fair Isaac Corp,Technology,0.18910022557019132,0.0257847533632287,1.032221,0,,report due (volume cadence); volume-weighted shock-day excess; own_sup_rate_756
+EXP,Eagle Materials Inc,Basic Materials,0.18910022557019132,0.028026905829596414,1.0315521,0,,report due (volume cadence); industry peers near 63d highs; sessions since 252d high
+DOCS,Doximity Inc,Healthcare,0.18910022557019132,0.04035874439461883,0.76033217,0,,gap on the volume-shock day; report due (volume cadence); excess vs sector 126d
+CELH,Celsius Holdings Inc,Consumer Defensive,0.18910022557019132,0.03139013452914798,0.8812886,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; share price"
+CDNS,Cadence Design Systems Inc,Technology,0.18910022557019132,0.09192825112107623,1.8787959,0,,si_dtc_now; report due (volume cadence); sessions since the volume shock
+CEG,Constellation Energy Corp,Utilities,0.18910022557019132,0.07286995515695067,1.7195872,0,,excess-path efficiency vs sector 63d; excess vs sector 63d; upside tail vs downside tail (126d)
+CLX,Clorox Co,Consumer Defensive,0.18910022557019132,0.06838565022421525,0.238146,0,,upside tail vs downside tail (126d); sessions since 252d high; share of up opening gaps
+HSIC,Henry Schein Inc,Healthcare,0.18910022557019132,0.0795964125560538,0.51406837,0,,"upside tail vs downside tail (126d); same window, prior years: risk-adjusted rank; share of up opening gaps"
+SYK,Stryker Corp,Healthcare,0.18910022557019132,0.11659192825112108,0.117112026,0,,mkt_move_pctile; mkt_breadth_63h; share of up opening gaps
+HWM,Howmet Aerospace Inc,Industrials,0.18910022557019132,0.08744394618834081,1.0582292,0,,own_sup_rate_756; industry peers near 63d highs; price change 126d vs own year
+BWXT,BWX Technologies Inc,Industrials,0.18910022557019132,0.05941704035874439,2.0992124,0,,own_sup_rate_756; mkt_vix_pctile; industry peers near 63d highs
+TEX,Terex Corp,Industrials,0.18910022557019132,0.11547085201793722,1.9931107,0,,report due (volume cadence); industry peers' 5d return; industry peers near 63d highs
+TLN,Talen Energy Corp,Utilities,0.18910022557019132,0.07062780269058296,2.3485298,0,,"excess vs sector 126d; same window, prior years: risk-adjusted rank; same window, prior years: share superior"
+TOL,Toll Brothers Inc,Consumer Cyclical,0.18910022557019132,0.04484304932735426,1.1807563,0,,industry peers near 63d highs; bounce off the 21d low; mkt_vix_pctile
+PB,Prosperity Bancshares Inc,Financial,0.18910022557019132,0.09753363228699552,0.61638504,0,,industry peers near 63d highs; upside tail vs downside tail (126d); mkt_move_pctile
+PAYX,Paychex Inc,Technology,0.18910022557019132,0.10650224215246637,0.16509934,0,,share of up opening gaps; L1 beta 252d; mkt_move_pctile
+MKSI,MKS Inc,Technology,0.18910022557019132,0.10089686098654709,2.8292205,0,,days in the trailing-MAR top 20% (1y); own_sup_rate_756; up-capture 63d vs own year
+MCO,Moody's Corp,Financial,0.18910022557019132,0.08520179372197309,0.6409588,0,,mkt_breadth_63h; share of up opening gaps; sessions since 252d high
+SYNA,Synaptics Inc,Technology,0.18910022557019132,0.06950672645739911,2.600217,0,,excess vs sector 126d; own_marpct_med_252; industry peers' 5d return
+OTIS,Otis Worldwide Corp,Industrials,0.18910022557019132,0.053811659192825115,0.30964732,0,,sessions since 252d high; overnight share of movement; upside tail vs downside tail (126d)
+PCAR,Paccar Inc,Industrials,0.18910022557019132,0.04820627802690583,0.9094701,0,,industry peers' 5d return; share of up opening gaps; industry peers near 63d highs
+THO,Thor Industries Inc,Consumer Cyclical,0.18765572037744938,0.023542600896860985,0.7845888,0,,mkt_breadth_63h; upside tail vs downside tail (126d); typical daily move 252d
+VICI,VICI Properties Inc,Real Estate,0.18609192997140267,0.017937219730941704,0.04364551,0,,mkt_move_pctile; up-capture 252d; L1 beta 252d
+WPC,W. P. Carey Inc,Real Estate,0.18609192997140267,0.01569506726457399,-0.0031107434,0,,L1 beta 252d; mkt_move_pctile; own_stop_rate_252
+VMC,Vulcan Materials Co,Basic Materials,0.18609192997140267,0.005605381165919282,0.7028067,0,,industry peers near 63d highs; price change 126d vs own year; upside tail vs downside tail (126d)
+AKAM,Akamai Technologies Inc,Technology,0.18609192997140267,0.004484304932735426,1.5559034,0,,"mkt_breadth_63h; days in the trailing-MAR top 20% (1y); same window, prior years: share superior"
+GWRE,Guidewire Software Inc,Technology,0.18609192997140267,0.008968609865470852,1.0154827,0,,own_sup_rate_756; si_dtc_now; share of up opening gaps
+RH,RH,Consumer Cyclical,0.18609192997140267,0.013452914798206279,1.9901013,0,,sessions since 252d high; mkt_vix_pctile; mkt_breadth_63h
+SHW,Sherwin-Williams Co,Basic Materials,0.18609192997140267,0.01905829596412556,0.82489395,0,,sessions since 252d high; mkt_breadth_63h; si_dtc vs own year
+COIN,Coinbase Global Inc,Financial,0.18609192997140267,0.002242152466367713,3.29504,0,,"same window, prior years: median excess; mkt_vix_pctile; own_sup_rate_756"
+DY,Dycom Industries Inc,Industrials,0.18609192997140267,0.01233183856502242,1.5824891,0,,si_dtc_now; upside tail vs downside tail (126d); own_sup_rate_756
+FOUR,Shift4 Payments Inc,Technology,0.18609192997140267,0.021300448430493273,1.3826351,0,,"report due (volume cadence); same window, prior years: risk-adjusted rank; share price"
+ESAB,ESAB Corp,Industrials,0.18609192997140267,0.0033632286995515697,1.6838137,0,,"same window, prior years: median excess; volume 21d vs 252d; industry peers near 63d highs"
+SLAB,Silicon Laboratories Inc,Technology,0.18609192997140267,0.02242152466367713,0.32068205,0,,"up-capture minus down-capture; same window, prior years: risk-adjusted rank; closeness to 252d high vs own year"
+UDR,UDR Inc,Real Estate,0.18609192997140267,0.016816143497757848,0.056334585,0,,si_dtc_now; mkt_move_pctile; industry peers near 63d highs
+DG,Dollar General Corp,Consumer Defensive,0.18609192997140267,0.014573991031390135,0.90141416,0,,overnight share of movement; si_dtc_now; volume 21d vs 252d
+ON,ON Semiconductor Corp,Technology,0.18609192997140267,0.006726457399103139,2.696637,0,,days in the trailing-MAR top 20% (1y); industry peers' 5d return; typical daily move 252d
+MLM,Martin Marietta Materials Inc,Basic Materials,0.18609192997140267,0.007847533632286996,0.86731803,0,,industry peers near 63d highs; price change 126d vs own year; excess return since the shock day
+BYD,Boyd Gaming Corp,Consumer Cyclical,0.18609192997140267,0.020179372197309416,0.46738014,0,,report due (volume cadence); industry peers' 63d return; industry peers near 63d highs
+BRX,Brixmor Property Group Inc,Real Estate,0.18609192997140267,0.011210762331838564,0.060356975,0,,own_stop_rate_252; industry peers near 63d highs; mkt_move_pctile
+BBWI,Bath & Body Works Inc,Consumer Cyclical,0.18609192997140267,0.010089686098654708,1.2615634,0,,share price; sessions since 252d high; mkt_breadth_63h
+FISV,Fiserv Inc,Technology,0.16,0.0011210762331838565,,0,,report due (volume cadence); overnight share of movement; bounce off the 21d low

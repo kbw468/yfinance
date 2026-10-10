@@ -1,0 +1,165 @@
+,model top decile,superior trades,other trades,winners minus others,plain
+beta_l1_252,0.245,0.486,0.504,-0.018,L1 beta 252d
+up_capture_252,0.251,0.488,0.504,-0.016,up-capture 252d
+down_capture_252,0.267,0.485,0.504,-0.02,down-capture 252d
+up_capture_63,0.29,0.488,0.504,-0.015,up-capture 63d
+beta_l1_63,0.291,0.485,0.504,-0.019,L1 beta 63d
+off_low_252,0.328,0.507,0.499,0.008,gain off 52w low
+defend_share_63,0.661,0.52,0.493,0.027,up on SPY down days
+new_high252_count_63,0.34,0.388,0.393,-0.004,52w highs in the last 63d
+down_capture_63,0.341,0.485,0.504,-0.019,down-capture 63d
+bounce_21,0.344,0.493,0.502,-0.009,bounce off the 21d low
+days_since_high_252,0.649,0.502,0.5,0.002,sessions since 252d high
+ind_roc_21,0.357,0.491,0.503,-0.011,industry peers' 21d return
+max5_21,0.363,0.494,0.502,-0.008,five biggest daily gains (21d)
+rs_off_high_252,0.367,0.501,0.501,-0.0,RS line vs its 52w high
+mar_trail_21,0.368,0.497,0.502,-0.005,trailing excess per drawdown 21d
+effx_spy_252,0.369,0.509,0.498,0.011,excess-path efficiency vs SPY 252d
+gap_share_21,0.37,0.489,0.503,-0.014,overnight share of movement
+rpos_21,0.372,0.497,0.501,-0.004,position in 21d range
+shock_xs_since_63,0.374,0.494,0.502,-0.008,excess return since the shock day
+roc_126,0.376,0.499,0.501,-0.002,price change 126d
+xs_spy_126,0.376,0.499,0.501,-0.002,excess vs SPY 126d
+effx_spy_21,0.378,0.496,0.502,-0.006,excess-path efficiency vs SPY 21d
+roc_10,0.38,0.494,0.502,-0.008,price change 10d
+eff_21,0.383,0.499,0.501,-0.002,21d path efficiency
+gain_pain_126,0.383,0.499,0.501,-0.002,126d gain-to-pain
+max1_21,0.383,0.494,0.502,-0.008,biggest daily gain (21d)
+on_63,0.383,0.491,0.503,-0.012,overnight return 63d
+xs_spy_252,0.383,0.508,0.499,0.009,excess vs SPY 252d
+roc_252,0.383,0.508,0.499,0.009,price change 252d
+xs_spy_21,0.384,0.496,0.502,-0.006,excess vs SPY 21d
+roc_21,0.384,0.496,0.502,-0.006,price change 21d
+eff_126,0.386,0.499,0.501,-0.002,126d path efficiency
+own_sup_rate_756,0.614,0.525,0.494,0.031,own_sup_rate_756
+ind_roc_63,0.387,0.496,0.502,-0.006,industry peers' 63d return
+rpos_252,0.387,0.507,0.499,0.007,position in 252d range
+on_21,0.387,0.491,0.503,-0.012,overnight return 21d
+mar_trail_63,0.387,0.5,0.501,-0.001,trailing excess per drawdown 63d
+rpos_63,0.39,0.502,0.501,0.001,position in 63d range
+shock_lowhold_63,0.395,0.497,0.502,-0.005,price vs the shock-day low
+rs_off_high_252_pctile_own,0.396,0.502,0.501,0.001,RS line vs its 52w high vs own year
+ind_sup_rate_21,0.396,0.496,0.502,-0.006,ind_sup_rate_21
+tail_ratio_126,0.396,0.488,0.504,-0.016,upside tail vs downside tail (126d)
+ind_breadth_63h,0.396,0.488,0.498,-0.009,industry peers near 63d highs
+days_since_high_63,0.604,0.508,0.498,0.01,sessions since 63d high
+new_high63_share_63,0.397,0.494,0.498,-0.004,share of days at a 63d high
+effx_spy_63,0.399,0.5,0.501,-0.001,excess-path efficiency vs SPY 63d
+shock_hold_63,0.402,0.498,0.501,-0.003,price vs the shock-day close
+roc_5,0.403,0.496,0.502,-0.006,price change 5d
+mom_12_1,0.404,0.506,0.499,0.007,12-month return ex last month
+roc_63,0.406,0.501,0.501,-0.0,price change 63d
+xs_spy_63,0.406,0.501,0.501,-0.0,excess vs SPY 63d
+mad_252,0.406,0.501,0.501,0.001,typical daily move 252d
+max_rel_21,0.407,0.496,0.502,-0.006,biggest daily gain vs typical move
+roc_21_pctile_own,0.408,0.498,0.501,-0.004,price change 21d vs own year
+own_marpct_med_252,0.41,0.502,0.5,0.002,own_marpct_med_252
+eff_21_pctile_own,0.411,0.499,0.501,-0.002,21d path efficiency vs own year
+earn_due_21,0.589,0.502,0.489,0.013,report due (volume cadence)
+on_pos_63,0.411,0.492,0.503,-0.011,share of up opening gaps
+gain_pain_63,0.411,0.502,0.5,0.002,63d gain-to-pain
+mad_21,0.412,0.497,0.502,-0.005,typical daily move 21d
+eff_63,0.414,0.501,0.501,0.001,63d path efficiency
+shock_age_63,0.585,0.513,0.497,0.015,sessions since the volume shock
+mad_63,0.416,0.497,0.501,-0.004,typical daily move 63d
+ind_roc_5,0.418,0.495,0.502,-0.006,industry peers' 5d return
+xs_spy_126_pctile_own,0.421,0.494,0.502,-0.008,excess vs SPY 126d vs own year
+off_high_21,0.423,0.498,0.502,-0.005,closeness to 21d high
+up_pair_21_63,0.423,0.499,0.501,-0.002,rising 21-day pairs (63d)
+roc_126_pctile_own,0.424,0.492,0.503,-0.011,price change 126d vs own year
+off_high_252_pctile_own,0.426,0.501,0.5,0.001,closeness to 252d high vs own year
+up_pair_10_63,0.426,0.501,0.501,0.0,rising 10-day pairs (63d)
+in_21,0.428,0.501,0.501,-0.0,intraday return 21d
+up_volume_share_21,0.429,0.498,0.501,-0.003,21d up-volume share
+own_stop_rate_252,0.432,0.498,0.501,-0.003,own_stop_rate_252
+off_high_63,0.433,0.5,0.501,-0.001,closeness to 63d high
+up_capture_63_pctile_own,0.436,0.489,0.503,-0.015,up-capture 63d vs own year
+off_high_252,0.437,0.504,0.5,0.004,closeness to 252d high
+off_high_63_pctile_own,0.437,0.499,0.501,-0.001,closeness to 63d high vs own year
+up_share_21,0.438,0.501,0.501,-0.001,21d share of up days
+off_high_126,0.438,0.5,0.501,-0.001,closeness to 126d high
+log_price,0.439,0.493,0.503,-0.01,share price
+own_dd_med_252,0.56,0.499,0.497,0.002,own_dd_med_252
+xs_sec_126,0.441,0.505,0.499,0.006,excess vs sector 126d
+range_comp_10_252_pctile_own,0.441,0.495,0.502,-0.007,daily range 10d vs 1y vs own year
+log_dollar_vol_63_pctile_own,0.441,0.499,0.501,-0.002,dollar volume vs own year
+effx_sec_252,0.444,0.51,0.498,0.011,excess-path efficiency vs sector 252d
+si_dtc_pctile_own,0.555,0.509,0.499,0.01,si_dtc vs own year
+effx_sec_63,0.447,0.504,0.5,0.004,excess-path efficiency vs sector 63d
+worst_day_63,0.447,0.497,0.502,-0.005,worst day vs typical move
+range_roc_21_252,0.448,0.49,0.503,-0.013,daily range 21d vs 1y
+higher_lows_6,0.449,0.511,0.51,0.0,rising 10-day lows (of 6)
+range_comp_10_252,0.45,0.491,0.503,-0.011,daily range 10d vs 1y
+down_up_move_63,0.55,0.498,0.501,-0.004,down-day size vs up-day size
+vol_roc_21_252_pctile_own,0.451,0.496,0.502,-0.006,typical move 21d vs 1y vs own year
+beta_l1_63_pctile_own,0.452,0.491,0.503,-0.012,L1 beta 63d vs own year
+up_share_126,0.453,0.507,0.5,0.007,126d share of up days
+volume_roc_21_252_pctile_own,0.455,0.488,0.504,-0.015,volume 21d vs 252d vs own year
+mad_21_pctile_own,0.456,0.494,0.502,-0.009,typical daily move 21d vs own year
+vol_pctile_own_252,0.456,0.494,0.502,-0.009,typical move vs own year
+xs_sec_63,0.456,0.504,0.5,0.004,excess vs sector 63d
+capture_spread_252,0.456,0.515,0.497,0.018,up-capture minus down-capture
+vol_roc_21_252,0.458,0.494,0.502,-0.009,typical move 21d vs 1y
+vshock_up_10,0.458,0.494,0.502,-0.008,biggest up-day volume shock (10d)
+xs_spy_63_pctile_own,0.46,0.497,0.502,-0.005,excess vs SPY 63d vs own year
+lead_persist_63,0.461,0.507,0.499,0.008,days in the trailing-MAR top 20% (63d)
+defend_share_63_pctile_own,0.538,0.505,0.499,0.005,up on SPY down days vs own year
+roc_63_pctile_own,0.463,0.497,0.501,-0.004,price change 63d vs own year
+peer_gap_21,0.537,0.499,0.501,-0.001,peers' 21d return minus own
+since_spike,0.537,0.507,0.494,0.013,sessions since a 2.5x volume day
+gap_share_21_pctile_own,0.464,0.5,0.501,-0.001,overnight share of movement vs own year
+id_12_1,0.535,0.495,0.501,-0.006,information discreteness 12-1
+mean_dd_126,0.465,0.496,0.502,-0.006,126d under-water shallowness
+new_high63_share_63_pctile_own,0.465,0.495,0.502,-0.007,share of days at a 63d high vs own year
+seas_sup_share,0.534,0.524,0.521,0.003,"same window, prior years: share superior"
+accum_minus_dist_50,0.466,0.498,0.501,-0.003,accumulation minus distribution days
+in_63,0.467,0.507,0.499,0.007,intraday return 63d
+eff_63_pctile_own,0.467,0.499,0.501,-0.003,63d path efficiency vs own year
+gain_pain_63_pctile_own,0.467,0.498,0.501,-0.003,63d gain-to-pain vs own year
+streak,0.467,0.498,0.5,-0.002,current up/down close streak
+shock_volx_63,0.531,0.504,0.5,0.004,largest volume shock (63d)
+close_loc_21,0.47,0.505,0.499,0.005,close location in the day's range
+min1_21,0.53,0.498,0.501,-0.003,worst daily loss (21d)
+up_volume_share_63,0.472,0.5,0.501,-0.001,63d up-volume share
+volume_roc_10_63_pctile_own,0.472,0.493,0.502,-0.009,volume 10d vs 63d vs own year
+rank_mom_21,0.473,0.501,0.501,0.001,63d return rank change over 21d
+volume_roc_21_252,0.474,0.49,0.503,-0.014,volume 21d vs 252d
+volume_roc_10_63,0.474,0.493,0.503,-0.01,volume 10d vs 63d
+si_dtc,0.525,0.498,0.501,-0.003,si_dtc
+close_loc_21_pctile_own,0.475,0.503,0.5,0.003,close location in the day's range vs own year
+mdd_63,0.525,0.502,0.501,0.001,63d drawdown shallowness
+shock_gap_63,0.475,0.498,0.501,-0.003,gap on the volume-shock day
+up_share_63,0.476,0.504,0.501,0.003,63d share of up days
+vol_roc_21_vs_21ago,0.477,0.496,0.502,-0.006,typical move vs a month ago
+shock_signed_63,0.478,0.498,0.501,-0.003,volume-weighted shock-day excess
+shock_xs_63,0.478,0.498,0.501,-0.003,excess return on the volume-shock day
+own_sup_rate_252,0.522,0.517,0.497,0.02,own_sup_rate_252
+mad_63_pctile_own,0.479,0.496,0.502,-0.005,typical daily move 63d vs own year
+down_capture_63_pctile_own,0.479,0.494,0.502,-0.009,down-capture 63d vs own year
+accum_minus_dist_50_pctile_own,0.479,0.495,0.502,-0.007,accumulation minus distribution days vs own year
+pullback_volume_21,0.518,0.503,0.5,0.003,21d down-day vs up-day volume
+lead_persist_252,0.515,0.519,0.496,0.024,days in the trailing-MAR top 20% (1y)
+si_chg_3,0.514,0.501,0.501,0.001,si_chg_3
+pullback_volume_63,0.513,0.504,0.499,0.005,63d down-day vs up-day volume
+vol_roc_5_63,0.488,0.497,0.502,-0.005,typical move 5d vs 63d
+mdd_252,0.512,0.501,0.501,0.001,252d drawdown shallowness
+volume_roc_5_63,0.489,0.496,0.502,-0.006,volume 5d vs 63d
+vshock_1,0.51,0.499,0.501,-0.001,today's volume vs 50d median
+sign_persist_63,0.51,0.496,0.501,-0.005,day-to-day sign repeats
+mdd_63_pctile_own,0.491,0.502,0.501,0.001,63d drawdown shallowness vs own year
+up_volume_share_63_pctile_own,0.491,0.497,0.502,-0.005,63d up-volume share vs own year
+vrank_50,0.509,0.5,0.499,0.001,today's volume vs own 50 days
+mean_dd_63,0.492,0.499,0.501,-0.002,63d under-water shallowness
+volume_pctile_own_252,0.492,0.494,0.502,-0.008,volume vs own year
+si_chg_1,0.507,0.501,0.501,-0.0,si_chg_1
+vshock_5,0.493,0.495,0.502,-0.006,5-day volume vs 50d median
+vshock_dn_10,0.507,0.497,0.502,-0.005,biggest down-day volume shock (10d)
+seas_pos,0.493,0.497,0.495,0.002,"same window, prior years: share positive"
+pullback_volume_63_pctile_own,0.507,0.506,0.499,0.006,63d down-day vs up-day volume vs own year
+mdd_21,0.494,0.498,0.501,-0.004,21d drawdown shallowness
+seas_marpct_med,0.505,0.499,0.501,-0.003,"same window, prior years: risk-adjusted rank"
+mdd_126,0.504,0.495,0.502,-0.007,126d drawdown shallowness
+log_dollar_vol_63,0.503,0.508,0.499,0.01,dollar volume
+si_dtc_now,0.503,0.493,0.502,-0.009,si_dtc_now
+up_share_63_pctile_own,0.501,0.499,0.501,-0.001,63d share of up days vs own year
+seas_xs_med,0.5,0.503,0.5,0.003,"same window, prior years: median excess"

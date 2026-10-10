@@ -23,12 +23,15 @@ def main():
     F = features.compute(panel, sb, stocks); print(f"features {len(F)} {time.time()-t0:.0f}s", file=sys.stderr, flush=True)
     Y = outcomes.compute(panel, stocks); print(f"outcomes {time.time()-t0:.0f}s", file=sys.stderr, flush=True)
     idx = E.loc[START:].stack(); idx = idx[idx].index
+    clash = set(F) & set(Y)
+    assert not clash, f"feature and outcome names collide: {sorted(clash)}"   # a collision would overwrite a trailing feature with its forward outcome
     cols = {}
     for k, v in {**F, **Y}.items():
         cols[k] = v.loc[START:].stack(future_stack=True).reindex(idx).values
     T = pd.DataFrame(cols, index=idx); T.index.names = ["date", "ticker"]; T = T.reset_index()
     T["sector"] = T.ticker.map(uni.Sector)
     T["steady"] = ((T.xs_spy_63 > 0) & (T.mdd_63 >= -0.08) & (T.off_high_63 >= -0.05)).astype("int8")
+    T = outcomes.smooth_target(T)
     feat = list(F)
     R = T.groupby("date")[feat].rank(pct=True).astype("float32"); R.columns = [f"cs_{c}" for c in feat]
     T = pd.concat([T, R], axis=1)
