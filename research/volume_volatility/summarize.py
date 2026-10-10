@@ -37,6 +37,15 @@ def spread_table(df, metric):
     return "\n".join(lines)
 
 
+def level_table(df, metric="RA"):
+    s = df[(df.metric == metric) & (df.day != "ALL") & df.bucket.isin(["Q1", "Q5", "BASE"])]
+    lines = ["| factor | day | bucket | " + " | ".join(f"{h}d" for h in H) + " |", "|---|---|---|" + "---|" * len(H)]
+    for (f, d, b), g in s.groupby(["factor", "day", "bucket"], sort=False):
+        row = [cell(g[g.h == h]["mean"].iloc[0], g[g.h == h]["t"].iloc[0]) for h in H]
+        lines.append(f"| {f} | {d} | {b} | " + " | ".join(row) + " |")
+    return "\n".join(lines)
+
+
 def breadth_table(pt):
     pt = pt[(pt.n_q5 >= 30) & (pt.n_q1 >= 30)]
     g = pt.groupby(["factor", "day", "h"]).agg(
@@ -82,12 +91,12 @@ def main(res_dir):
     c = pd.read_csv(d / "combo_vv_x_roc.csv")
 
     out = ["# Volume volatility backtest — results", "",
-           "Cells: mean (Newey-West t). RAX = market-excess forward return / (trailing 20d sigma x sqrt(h)).", ""]
+           "Cells: mean (Newey-West t). RAX = forward return / (trailing 20d sigma x sqrt(h)), minus that day's universe average (0 = in line with universe).", ""]
     for f in ["VV", "VV_ROC"]:
         for day in ["UP", "DOWN"]:
             out += [f"## {f} quintile (own-history) | {day} days | RAX", "", quintile_grid(ts, f, day), ""]
     out += ["## Q5-Q1 spread, own-history rank, RAX", "", spread_table(ts, "RAX"), ""]
-    out += ["## Q5-Q1 spread, own-history rank, raw RA (not market-adjusted)", "", spread_table(ts, "RA"), ""]
+    out += ["## Absolute RA levels (not market-adjusted; includes the 10y equity drift)", "", level_table(ts), ""]
     out += ["## Q5-Q1 spread, own-history rank, raw forward return", "", spread_table(ts, "RET"), ""]
     out += ["## Q5-Q1 spread, cross-sectional rank, RAX (robustness)", "", spread_table(xs, "RAX"), ""]
     out += ["## Per-ticker breadth (own-history quintiles, RAX)", "", breadth_table(pt), ""]

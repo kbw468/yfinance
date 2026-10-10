@@ -12,10 +12,9 @@ version is run as a robustness check.
 Day type: UP if close_t > close_{t-1}, DOWN if close_t < close_{t-1}.
 
 Forward risk-adjusted return over h sessions (entry at close t):
-  RA_h  = fwd_ret_h / (sigma20_t * sqrt(h))
-  RAX_h = (fwd_ret_h - universe mean fwd_ret_h that date) / (sigma20_t * sqrt(h))
+  RA_h  = fwd_ret_h / (sigma20_t * sqrt(h))      (winsorized at 0.5% / 99.5%)
+  RAX_h = RA_h - universe mean RA_h that date     (market-neutral risk-adjusted)
 sigma20_t is trailing 20-session stdev of daily log returns, known at t.
-RA/RAX are winsorized at 0.5% / 99.5%.
 
 Statistics: per date, average the metric across tickers in a bucket, then
 take the time-series mean of that daily series. t-stats are Newey-West with
@@ -25,6 +24,7 @@ Usage: python backtest.py <bars.parquet> <out_dir> [dlogv|cv]
   cv swaps the VV definition to the coefficient of variation of volume levels.
 """
 import sys
+import warnings
 from pathlib import Path
 
 import numpy as np
@@ -38,6 +38,7 @@ RANK_MIN = 126
 MIN_PRICE = 1.0
 MIN_DOLLAR_ADV = 500_000
 MIN_NAMES = 5
+warnings.filterwarnings("ignore", message="Mean of empty slice")
 VV_DEF = "dlogv"
 
 
@@ -75,6 +76,7 @@ def winsorize(a, lo=0.005, hi=0.995):
 
 def build_panels(bars):
     close = bars.pivot(index="date", columns="ticker", values="close").sort_index()
+    close = close.where(close > 0)
     vol = bars.pivot(index="date", columns="ticker", values="volume").reindex(close.index)
     vol = vol.where(vol > 0)
 
@@ -105,11 +107,9 @@ def build_panels(bars):
     for h in HORIZONS:
         f = close.shift(-h) / close - 1
         f = f.where(tradable)
-        x = f.sub(f.mean(axis=1), axis=0)
-        scale = sigma * np.sqrt(h)
         fwd[h] = f.values
-        ra[h] = winsorize((f / scale).values)
-        rax[h] = winsorize((x / scale).values)
+        ra[h] = winsorize((f / (sigma * np.sqrt(h))).values)
+        rax[h] = ra[h] - np.nanmean(ra[h], axis=1, keepdims=True)
 
     day = {
         "ALL": tradable.values,
