@@ -15,6 +15,7 @@ python halfmonth.py OUT
 python trade_window.py DATA OUT
 python robustness.py DATA OUT
 python export_dashboard.py OUT universe_finviz.csv DASH
+python make_pdf.py DASH results Q4_Tax_Loss_Seasonality.pdf
 ```
 
 Method: formation at the last September close; 1Y = trailing 12-month total return, 1M = September
