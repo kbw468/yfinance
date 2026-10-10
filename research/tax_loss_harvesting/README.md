@@ -1,7 +1,10 @@
 # Q4 tax-loss-harvesting seasonality study
 
 Backtest of how trailing 1Y / 1M losers vs winners behave in Q4 and around year end,
-across the 2,367-ticker list in `universe_finviz.csv`, 1999-2025, with the live Q4 2026 screen.
+across the 2,367-ticker list in `universe_finviz.csv`, with the live Q4 2026 screen.
+
+The report (`Q4_Tax_Loss_Seasonality_2018-2025.pdf`) covers Q4 2018 through Q4 2025; the full-history
+1999-2025 tables stay in `results/`.
 
 Run in order (`DATA` holds downloaded prices, `OUT` the results):
 
@@ -15,7 +18,8 @@ python halfmonth.py OUT
 python trade_window.py DATA OUT
 python robustness.py DATA OUT
 python export_dashboard.py OUT universe_finviz.csv DASH
-python make_pdf.py DASH results Q4_Tax_Loss_Seasonality.pdf
+python study_since.py DATA OUT 2018                # 2018+ tables for the report
+python make_pdf.py OUT/since_2018.json DASH Q4_Tax_Loss_Seasonality_2018-2025.pdf
 ```
 
 Method: formation at the last September close; 1Y = trailing 12-month total return, 1M = September
