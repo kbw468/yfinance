@@ -1,6 +1,8 @@
 """Render the 2018+ Q4 tax-loss study as a PDF report (reportlab + matplotlib).
 
-usage: python make_pdf.py SINCE_JSON MEGA_JSON CELLS_CSV CANDIDATES_CSV QUINTILES_JSON DASH_DIR OUT.pdf
+usage: python make_pdf.py SINCE_JSON MEGA_JSON CELLS_CSV CANDIDATES_CSV QUINTILES_JSON RANK_JSON TIERS_CSV DASH_DIR
+       OUT.pdf
+RANK_JSON from rank_strategies.py; TIERS_CSV = today's September sort with market-cap tiers.
 SINCE_JSON from study_since.py, MEGA_JSON from megacap.py, CELLS_CSV from cells.py, CANDIDATES_CSV and
 QUINTILES_JSON from candidates.py; DASH_DIR holds live.json from export_dashboard.py.
 """
@@ -27,7 +29,7 @@ from reportlab.platypus import (  # noqa: E402
     Image, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle,
 )
 
-SINCE, MEGA, CELLS, CAND, QUINT, DASH, OUT = (Path(a) for a in sys.argv[1:8])
+SINCE, MEGA, CELLS, CAND, QUINT, RANK, TIERS, DASH, OUT = (Path(a) for a in sys.argv[1:10])
 FONT_DIR = Path("/usr/share/fonts/truetype/crosextra")
 
 pdfmetrics.registerFont(TTFont("Sans", str(FONT_DIR / "Carlito-Regular.ttf")))
@@ -68,6 +70,8 @@ CELL = pd.read_csv(CELLS)
 CELL = CELL[CELL.window == "Oct15_Dec15"].set_index("cell")
 CANDS = pd.read_csv(CAND)
 QU = {int(k): v for k, v in json.loads(QUINT.read_text()).items()}
+RK = pd.DataFrame(json.loads(RANK.read_text())["rows"])
+TNOW = pd.read_csv(TIERS)
 M = json.loads(MEGA.read_text())
 MB = {n: pd.DataFrame(M["top"][n]["buckets"]) for n in M["top"]}
 MS = {n: pd.DataFrame(M["top"][n]["spreads"]).set_index(["window", "pair"]) for n in M["top"]}
@@ -539,6 +543,72 @@ def names(code, k=40):
     return ", ".join(g.ticker.head(k)), len(g)
 
 
+SHORT = {
+    "sep_ls_dec31": "Sept losers − Sept winners, Oct 15 → Dec 31", "sep_ls_q4": "Sept losers − Sept winners, full Q4",
+    "sep_ls_dec15": "Sept losers − Sept winners, Oct 15 → Dec 15",
+    "nn_pp": "Double losers − double winners, Oct 15 → Dec 15", "oct_rev": "1Y winners − 1Y losers, Oct 1–15",
+    "long_a": "Basket A vs SPY, Oct 15 → Dec 15", "long_b": "Basket B vs SPY, Oct 15 → Dec 15",
+    "long_sep": "Sept losers vs SPY, Oct 15 → Dec 15", "long_nn": "Double losers vs SPY, Oct 15 → Dec 15",
+    "long_np": "1Y losers with Sept up vs SPY, Oct 15 → Dec 15", "long_jan": "1Y losers vs SPY, Dec 15 → Jan 31"}
+TIER_LAB = {"All": "All caps", "Mega": "Mega (>$200B)", "Large": "Large ($10–200B)", "Mid": "Mid ($2–10B)",
+            "Small": "Small (<$2B)"}
+ORANGE_TINT = "#fbe1d4"
+
+
+def rk(key, tier, f):
+    r = RK[(RK.key == key) & (RK.tier == tier)]
+    return r[f].iloc[0] if len(r) else np.nan
+
+
+def ranked():
+    d = RK[RK.years >= 7].copy()
+    for c in ["t", "mean", "hit", "worst"]:
+        d["r_" + c] = d[c].rank(ascending=False)
+    d["score"] = d[["r_t", "r_mean", "r_hit", "r_worst"]].mean(axis=1)
+    return d.sort_values(["score", "t"], ascending=[True, False])
+
+
+def rank_table(n=14):
+    d = ranked().head(n)
+    rows = [["#", "Strategy", "Market cap", "Avg / yr", "t", "Positive", "Worst yr", "Names L / S"]]
+    for i, r in enumerate(d.itertuples(), 1):
+        nm = f"{r.avg_long_n:.0f}" + ("" if r.kind == "long only" else f" / {r.avg_short_n:.0f}")
+        rows.append([str(i), SHORT[r.key], TIER_LAB[r.tier], pct(r.mean, 2, True), num(r.t, 1, True),
+                     f"{int(round(r.hit * r.years))} of {int(r.years)}", pct(r.worst, 1, True), nm])
+    t = table(rows, [18, 196, 76, 46, 32, 42, 48, 67], align_left=(1, 2), zebra=True)
+    t.setStyle(TableStyle([("FONT", (0, 1), (-1, 1), "Sans-Bold", 8)]))
+    return t
+
+
+def grid_table():
+    tiers = ["All", "Mega", "Large", "Mid", "Small"]
+    order = ["sep_ls_dec31", "sep_ls_q4", "sep_ls_dec15", "nn_pp", "oct_rev", "long_b", "long_a", "long_sep",
+             "long_nn", "long_np", "long_jan"]
+    rows = [["Strategy"] + [TIER_LAB[t] for t in tiers]]
+    style = []
+    for ri, k in enumerate(order, 1):
+        line = [SHORT[k]]
+        for ci, t in enumerate(tiers, 1):
+            m, tt, yrs = rk(k, t, "mean"), rk(k, t, "t"), rk(k, t, "years")
+            if bad(m) or bad(yrs) or yrs < 4:
+                line.append("too few")
+                continue
+            line.append(f"{pct(m, 1, True)}  t {num(tt, 1, True)}")
+            if tt >= 2.5:
+                style.append(("BACKGROUND", (ci, ri), (ci, ri), colors.HexColor(TINT)))
+            elif tt <= -2.0:
+                style.append(("BACKGROUND", (ci, ri), (ci, ri), colors.HexColor(ORANGE_TINT)))
+        rows.append(line)
+    t = table(rows, [190, 67, 67, 67, 67, 67], font=7.5)
+    t.setStyle(TableStyle(style))
+    return t
+
+
+def tier_names(tier, side, k=15):
+    g = TNOW[(TNOW.tier == tier) & (TNOW.side == side)].sort_values("mcap", ascending=False)
+    return ", ".join(g.ticker.head(k)), len(g)
+
+
 # ---------------------------------------------------------------- numbers used in text
 nnpp = "NEG1Y_NEG1M-POS1Y_POS1M"
 K = {
@@ -608,17 +678,20 @@ lv = LIVE
 story = [P(f"Q4 Tax-Loss Seasonality, {SPAN}", "title"),
          P(f"2,367 tickers · {len(YEARS)} fourth quarters, {START} to {LAST} · {B['n_stock_years']:,} stock-years · "
            "live read through the Oct 9, 2026 close", "sub")]
-bluf = (f"<b>The read.</b> On the 1Y sort alone, Q4 is a tie: losers and winners land at Sharpe "
-        f"{num(K['sh_n1y'])} vs {num(K['sh_p1y'])}. The edge is in the 1M sort and the timing. September losers beat "
-        f"September winners in Q4 by {pct(K['q4_1m'], 2, True)} (t {num(K['q4_1m_t'], 1, True)}, positive "
-        f"{frac(K['q4_1m_hit'])} years). 1Y losers get sold Oct 1–15 ({pct(K['oct_np'], 2, True)}, lagging "
-        f"{frac(1 - K['oct_np_hit'])} years), then lead into mid-December. January adds nothing. In the mega-caps the same pattern shows up, smaller and noisier "
-        f"(page 2).<br/><br/>"
-        f"<b>Setup:</b> basket A, stocks in the worst 20–40% of 1-year returns (1Y return "
-        f"{pct(QU[2]['min'], 1, True)} to {pct(QU[2]['max'], 1, True)} this year) that also fell in September. Equal weight. <b>Entry</b> Oct 15. "
-        f"<b>Exit</b> Dec 15. <b>Invalidation</b>: basket trails SPY by more than "
-        f"{pct(CELL.loc['1Y Q2 + 1M neg', 'worst_vs_spy'], 1)} by Dec 15, its worst {SPAN} year. Basket B for the "
-        f"highest Sharpe, basket C for mega-caps. Names on page 2.")
+bluf = (f"<b>The read.</b> The strongest signal is the September sort run as a long/short: own the stocks that fell "
+        f"in September, short the ones that rose, Oct 15 → Dec 31. {pct(rk('sep_ls_dec31', 'All', 'mean'), 2, True)} a "
+        f"year, t {num(rk('sep_ls_dec31', 'All', 't'), 1, True)}, positive "
+        f"{frac(rk('sep_ls_dec31', 'All', 'hit'))} years, worst year {pct(rk('sep_ls_dec31', 'All', 'worst'), 1, True)}. "
+        f"By market cap it holds in large ($10–200B: full Q4 positive {frac(rk('sep_ls_q4', 'Large', 'hit'))} years), "
+        f"mid (t {num(rk('sep_ls_dec31', 'Mid', 't'), 1, True)}) and small caps "
+        f"({pct(rk('sep_ls_dec31', 'Small', 'mean'), 1, True)} a year), and fails in mega-caps over $200B, where "
+        f"September losers lagged SPY in {frac(1 - rk('long_sep', 'Mega', 'hit'))} years. Long-only baskets beat SPY on "
+        f"average, mostly through beta. On the 1Y sort alone Q4 is a tie (Sharpe {num(K['sh_n1y'])} vs "
+        f"{num(K['sh_p1y'])}); 1Y losers get sold Oct 1–15; January adds nothing.<br/><br/>"
+        f"<b>Setup:</b> long September losers, short September winners, equal weight, $200B market cap and under. "
+        f"<b>Entry</b> Oct 15. <b>Exit</b> Dec 31. <b>Invalidation</b>: spread below "
+        f"{pct(rk('sep_ls_dec31', 'All', 'worst') - 0.0005, 1)} at Dec 31, worse than any year since {START}. "
+        f"Ranking on page 2, names on page 3.")
 box = Table([[P(bluf, "bluf")]], colWidths=[W])
 box.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor(PANEL)),
                          ("LINEBEFORE", (0, 0), (0, -1), 3, colors.HexColor(BLUE)),
@@ -650,8 +723,6 @@ findings = [
     f"<b>1M sort: the clean Q4 edge.</b> September losers minus September winners {pct(K['q4_1m'], 2, True)} in Q4 "
     f"(t {num(K['q4_1m_t'], 1, True)}, positive {frac(K['q4_1m_hit'])}); Oct 15–Dec 31 {pct(K['w_1m31'], 2, True)} "
     f"(t {num(K['w_1m31_t'], 1, True)}, positive {frac(K['w_1m31_hit'])}, worst year {pct(K['w_1m31_worst'], 2, True)}).",
-    f"<b>Double winners lag in Q4.</b> 1Y+1M positive Sharpe {num(K['sh_pp'])}, beat SPY in {frac(K['pp_beat'])} Q4s. "
-    f"Double losers {num(K['sh_nn'])}.",
     f"<b>Oct 1–15 is the flush.</b> 1Y losers minus winners {pct(K['oct_np'], 2, True)} (t {num(K['oct_np_t'], 1, True)}), "
     f"1Y+1M {pct(K['oct_nn'], 2, True)}, worst vs best 20% on 1Y {pct(K['oct_q'], 2, True)}. October is also the worst "
     f"calendar month for the 1Y spread after SPY beta ({pct(oct_m.alpha, 2, True)}).",
@@ -665,25 +736,59 @@ findings = [
     f"<b>January is dead.</b> 1Y losers minus winners {pct(K['jan_np'], 2, True)}, 1Y+1M {pct(K['jan_nn'], 2, True)}. "
     f"Dec 15 re-sort to Jan 31: 1Y losers Sharpe {num(K['rb_neg_sh'])} vs winners {num(K['rb_pos_sh'])}; 1Y best 20% "
     f"{num(K['rb_q5_sh'])} beats −30%-or-worse losers {num(K['rb_deep_sh'])}.",
-    f"<b>Mega-caps: same direction, not significant.</b> Among the 100 biggest names, 1Y losers lag Oct 1–15 "
-    f"({pct(MK['oct'], 2, True)}, {frac(1 - MK['oct_hit'])} years) and carry Q4 alpha {pct(MK['q4_al_n'], 1, True)} vs "
-    f"{pct(MK['q4_al_p'], 1, True)} for winners, with t {num(MK['q4_t'], 1, True)}. The top 50 show no effect. "
-    f"Across the 20 largest names, a 1Y-negative Sep 30 led to Q4 excess vs SPY of {pct(MK['neg_xs'], 1, True)} "
-    f"(beat {pct(MK['neg_beat'], 0)}) vs {pct(MK['pos_xs'], 1, True)} for 1Y-positive.",
+    f"<b>Mega-caps over $200B: the September bounce fails.</b> September losers lagged SPY from Oct 15 to Dec 15 in "
+    f"{frac(1 - rk('long_sep', 'Mega', 'hit'))} years ({pct(rk('long_sep', 'Mega', 'mean'), 1, True)} a year, t "
+    f"{num(rk('long_sep', 'Mega', 't'), 1, True)}); the long/short is flat. "
+    f"In the top 50 names there is no loser effect at all (page 4).",
+    f"<b>Long-only edge is mostly beta.</b> Basket A beat SPY by {pct(rk('long_a', 'All', 'mean'), 1, True)} a year "
+    f"(t {num(rk('long_a', 'All', 't'), 1, True)}), basket B by {pct(rk('long_b', 'All', 'mean'), 1, True)} "
+    f"(t {num(rk('long_b', 'All', 't'), 1, True)}). The spread trades are where the signal is.",
 ]
 story += [Paragraph(f, ST["bullet"], bulletText="•") for f in findings]
 
 na, ca = names("A")
 nb, cb = names("B")
 nc, cc = names("C")
+story += [PageBreak(), P(f"Strategy ranking by market cap, {SPAN}", "h1"),
+          P("Every strategy tested in each market-cap tier. Long/short strategies are scored on the yearly long-minus-"
+            "short return; long-only on the yearly basket return minus SPY. t = average divided by its standard error "
+            "across the 8 years; higher means a steadier, stronger signal. Market cap at each Sep 30 is estimated from "
+            "today's market cap and the stock's price change since then.", "note"),
+          P("Overall ranking, top 14", "h2"),
+          P("Ranked on four factors weighted equally: signal strength (t), average return per year, positive years, "
+            "and worst year.", "note"),
+          rank_table(), Spacer(1, 10),
+          P("Every strategy in every tier (average per year and t; blue = t 2.5 or higher, orange = t −2 or lower)",
+            "h2"), grid_table(), Spacer(1, 8),
+          P(f"<b>Best by tier.</b> All caps and mid: Sept losers − Sept winners, Oct 15 → Dec 31. Large: same pair over "
+            f"the full Q4, positive {frac(rk('sep_ls_q4', 'Large', 'hit'))} years. Small: the same Oct 15 → Dec 31 pair, "
+            f"{pct(rk('sep_ls_dec31', 'Small', 'mean'), 1, True)} a year; the Oct 1–15 trade has the highest t "
+            f"({num(rk('oct_rev', 'Small', 't'), 1, True)}) but pays {pct(rk('oct_rev', 'Small', 'mean'), 1, True)} over "
+            f"two weeks. Mega: no strategy works; September losers "
+            f"lag SPY.", "body")]
+
+lg = {t: tier_names(t, "long") for t in ["Mega", "Large", "Mid", "Small"]}
+sh = {t: tier_names(t, "short") for t in ["Mega", "Large", "Mid", "Small"]}
 story += [PageBreak(), P("Q4 2026: which names", "h1"),
+          P("<b>Strategy #1 today: long September losers, short September winners</b> (Sep 30, 2026 sort, largest "
+            "first).", "body"),
+          P(f"<b>Large ($10–200B)</b>, long ({lg['Large'][1]}): {lg['Large'][0]}… "
+            f"Short ({sh['Large'][1]}): {sh['Large'][0]}…", "body"),
+          P(f"<b>Mid ($2–10B)</b>, long ({lg['Mid'][1]}): {lg['Mid'][0]}… Short ({sh['Mid'][1]}): {sh['Mid'][0]}…",
+            "body"),
+          P(f"<b>Small (&lt;$2B)</b>, long ({lg['Small'][1]}): {lg['Small'][0]}… "
+            f"Short ({sh['Small'][1]}): {sh['Small'][0]}…", "body"),
+          P(f"<b>Mega (&gt;$200B), excluded.</b> September losers ({lg['Mega'][1]}): {lg['Mega'][0]}… "
+            f"September winners ({sh['Mega'][1]}): {sh['Mega'][0]}…", "body"),
+          Spacer(1, 6),
           P("<b>Quintiles = 1-year return rank.</b> All ~2,300 stocks are lined up by their 1-year return to Sep 30 "
             "and split into five equal groups. The group tells you how bad or good a stock's last 12 months were "
             "compared with everything else. This year's groups:", "body"),
           fifths_table(), Spacer(1, 10),
           P("<b>The three best baskets for Oct 15 → Dec 15, tested 2018–2025.</b> A has the best odds (up 7 of 8 "
-            "years, mildest bad year). B has the highest Sharpe and alpha with more swing. C is the mega-cap version. "
-            "Every name carries its basket's record; the study tests baskets, not single stocks.", "body"),
+            "years, mildest bad year). B has the highest Sharpe and alpha with more swing. C held among the top 100 "
+            "but not when mega-caps are defined by market cap (page 2), so treat it as weak. Every name carries its "
+            "basket's record; the study tests baskets, not single stocks.", "body"),
           picks_table(), Spacer(1, 10),
           P(f"<b>A</b> ({ca} names, largest first): {na}…", "body"),
           P(f"<b>B</b> ({cb} names, largest first): {nb}…", "body"),

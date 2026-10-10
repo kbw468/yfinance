@@ -22,8 +22,10 @@ python study_since.py DATA OUT 2018                # 2018+ tables for the report
 python megacap.py DATA universe_finviz.csv OUT 2018 # top-100/top-50 point-in-time cut + per-name history
 python cells.py DATA OUT 2018                      # finer baskets (1Y rank x September)
 python candidates.py OUT universe_finviz.csv        # Q4 2026 names in baskets A/B/C
+python rank_strategies.py DATA universe_finviz.csv OUT 2018   # every strategy by market-cap tier
 python make_pdf.py OUT/since_2018.json OUT/megacap_2018.json OUT/cells_2018.csv \
-    OUT/q4_2026_candidates.csv OUT/quintiles_2026.json DASH Q4_Tax_Loss_Seasonality_2018-2025.pdf
+    OUT/q4_2026_candidates.csv OUT/quintiles_2026.json OUT/strategy_rank_2018.json OUT/sep_sort_2026_tiers.csv \
+    DASH Q4_Tax_Loss_Seasonality_2018-2025.pdf
 ```
 
 Method: formation at the last September close; 1Y = trailing 12-month total return, 1M = September
