@@ -21,6 +21,10 @@ EXACT = {
     "log_price": "share price", "ind_breadth_63h": "industry peers near 63d highs", "peer_gap_21": "peers' 21d return minus own",
     "seas_xs_med": "same window, prior years: median excess", "seas_pos": "same window, prior years: share positive",
     "seas_marpct_med": "same window, prior years: risk-adjusted rank", "seas_sup_share": "same window, prior years: share superior",
+    "own_sup_rate_756": "own 3-year record of superior trades", "own_sup_rate_252": "own 1-year record of superior trades",
+    "own_stop_rate_252": "own stop-out rate over the last year", "own_dd_med_252": "own typical in-trade drawdown", "own_marpct_med_252": "own median trade rank",
+    "ind_sup_rate_21": "industry peers' recent superior rate", "si_dtc": "days to cover", "si_chg_1": "short interest change, last settlement",
+    "si_chg_3": "short interest change, last three settlements", "si_dtc_pctile_own": "days to cover vs own year", "si_dtc_now": "days to cover on current volume",
 }
 PATTERNS = [
     (r"roc_(\d+)$", "price change {}d"), (r"xs_spy_(\d+)$", "excess vs SPY {}d"), (r"xs_sec_(\d+)$", "excess vs sector {}d"),

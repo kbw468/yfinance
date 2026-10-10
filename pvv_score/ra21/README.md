@@ -75,7 +75,7 @@ screen_latest.csv, screen_record.csv, today.csv.
    | V-recovered leader, ex commodity/utility | 32.4% | 30.3% | 28.4% | +0.9% | +2.7% | 32% | 1.49 |
    | Same universe | 20.0% | 20.0% | 20.0% | −0.8% | 0.0% | 28% | |
 
-   It is 5,974 completed trades on 284 names over 1,873 sessions. Lift is above 1 in 10 of 12 years: 2016 2.26, 2024 2.07, 2022 0.84, 2026 so far 0.91.
+   It is 5,974 completed trades on 283 names. Lift is above 1 in 10 of 12 years: 2016 2.26, 2024 2.07, 2022 0.84, 2026 so far 0.91.
 6. **Books.** Rules: next open, 8% stop, 21 sessions, 10 bp round trip, 21 staggered sleeves, daily marks. MAR is CAGR / |deepest drawdown|.
 
    | Period | V-recovered ex commodity/utility | SPY held | Every eligible name | Model top 20 |
