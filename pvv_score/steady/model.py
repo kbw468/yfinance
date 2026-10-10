@@ -1,6 +1,6 @@
 """Walk-forward models for hit_21 / hit_42 / hit_63 over the entire eligible universe.
 
-Inputs: raw non-Gaussian features plus their same-day cross-sectional percentile ranks (features.csv lists the raw names).
+Inputs: same-day cross-sectional percentile ranks of the non-Gaussian features (features.csv lists the raw names).
 Learner: gradient-boosted trees (rank/threshold splits, no distributional assumption), binary log loss, fixed hyperparameters.
 Walk-forward: test years 2018..2026; training = sessions ending 100 calendar days before the test year (covers the
 63-session outcome window), every 3rd session (outcome windows overlap), COVID Feb-Jun 2020 excluded.
@@ -27,9 +27,18 @@ BASE_UP = ["cs_xs_spy_63", "cs_mdd_63", "cs_off_high_63", "cs_eff_63", "cs_up_sh
 BASE_DOWN = ["cs_mad_21", "cs_down_up_move_63"]
 
 
+def _daily(df, y, s) -> float:
+    """Mean of per-date AUCs: name-selection skill only, no market timing."""
+    a = [roc_auc_score(g[y], g[s]) for _, g in df.groupby("date") if g[y].nunique() == 2 and g[s].nunique() > 1 and len(g) > 50]
+    return float(np.mean(a)) if a else np.nan
+
+
 def feature_list() -> list:
+    """Same-day cross-sectional percentile ranks only. Raw levels carry the market regime: with them a shuffled-label control
+    scored a within-date AUC of 0.39-0.46 (it learned regime, which runs against the cross-section); on ranks alone the control
+    sits at 0.48-0.50 and the real model keeps its full within-date skill (2024: 0.62 / 0.65 / 0.69 at 21 / 42 / 63 sessions)."""
     raw = pd.read_csv(D / "features.csv").iloc[:, 0].tolist()
-    return raw + [f"cs_{c}" for c in raw]
+    return [f"cs_{c}" for c in raw]
 
 
 def load(cols=None) -> pd.DataFrame:
@@ -61,8 +70,7 @@ def main():
             ok = te & O[y].notna()
             rec = {"h": h, "year": Y, "train_rows": int(tr.sum()), "test_rows": int(ok.sum()), "base_rate": O.loc[ok, y].mean() if ok.any() else np.nan}
             if ok.sum() > 1000:
-                rec.update(auc_model=roc_auc_score(O.loc[ok, y], O.loc[ok, f"raw_{h}"]), auc_baseline=roc_auc_score(O.loc[ok, y], O.loc[ok, "baseline"]),
-                           auc_steady_flag=roc_auc_score(O.loc[ok, y], O.loc[ok, "steady"]))
+                rec.update(auc_model=_daily(O.loc[ok], y, f"raw_{h}"), auc_baseline=_daily(O.loc[ok], y, "baseline"), auc_steady_flag=_daily(O.loc[ok], y, "steady"))
             log.append(rec); print({k: (round(v, 3) if isinstance(v, float) else v) for k, v in rec.items()}, f"{time.time()-t0:.0f}s", flush=True)
         imps[h] = gi / gi.sum()
         # shuffled-label control on 2024
@@ -71,7 +79,7 @@ def main():
         rng = np.random.default_rng(h)
         ys = T.loc[tr].groupby("date")[y].transform(lambda s: s.sample(frac=1, random_state=int(rng.integers(1e9))).values)
         ms = lgb.LGBMClassifier(**PARAMS).fit(T.loc[tr, feats], ys)
-        a = roc_auc_score(T.loc[te, y], ms.predict_proba(T.loc[te, feats])[:, 1])
+        a = _daily(T.loc[te, ['date', y]].assign(s=ms.predict_proba(T.loc[te, feats])[:, 1]), y, 's')
         log.append({"h": h, "year": "2024 shuffled-label control", "auc_model": a}); print(f"[{h}] shuffled control AUC {a:.3f}", flush=True)
     pd.DataFrame(log).to_csv(D / "walkforward_log.csv", index=False)
     pd.DataFrame(imps).to_csv(D / "importance.csv")
